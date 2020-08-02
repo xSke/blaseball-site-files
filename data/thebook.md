@@ -25,29 +25,29 @@
 
 ### 4. Playing the Game
 * a. The game of Blaseball should be played between two teams.
-* b. Each game should take place `at the home team's stadium |||||||||||||||||||||||.`
+* b. Each game should take place `at the home team's stadium` on the immaterial plane.
 * c. Weather: `The home team's stadium should determine the weather.` In the case that `||||||||||||||||||||`, a Solar Eclipse shall last until `||||||||||||||||||||`
 * d. There are `two positions` in Blaseball, `||||||||||||||||||||.`
 * e. When a team is on Defense, `all of the team's ||||||| will stand ||||||||| out in the field. Doesn't really matter where.`
 * f. The pitcher must throw the ball `with their hands.`
-* g. Once the ball is in play, `||| |||| || ||| |||||||||| ||||| |||||||||| the outcome of the play. ||| |||| ||||||| || |||||||||||||||| |||||||||||||| ||||||| ||||||| ||||||||| ||||||||||||||| |||||||||||||||| |||||||| |||||||| unfathomable.`
+* g. Once the ball is in play, `||| |||| || ||| |||||||||| ||||| |||||||||| the outcome of the play. ||| |||| ||||||| || ||||||||||||||||` immaterial plane `|||||||||||||| ||||||| ||||||| ||||||||| ||||||||||||||| |||||||||||||||| |||||||| |||||||| unfathomable.`
 * h. The team with the most runs will win the game.
 * i. Shame Phase: If the home team scores the winning run in the bottom of the final inning, the away team must complete the game in shame, despite being mathematically eliminated.
 * j. `||||||||||||||||||||||`
 * k. Crying in Blaseball is `||||||||||.`
 
 ### 5. `The Gods` and You
-* a. Should the Participants open the Forbidden Book, `The Discipline Era should begin||||||||||||||||||||||` suffering `upon the league. Players shall be ` banished `at the ||||||||||| ||||||||| |||| ||||||||||||||||. The Discipline Era` shall last until `the Participants have atoned.`
+* a. Should the Participants open the Forbidden Book, `The Discipline Era should begin||||||||||||||||||||||` suffering `upon the league. Players shall be ` banished `at the ||||||||||| ||||||||| |||| ||||||||||||||||.` The Discipline Era shall last until `the Participants have` atoned.
 * b. If a team wins three championships, they, and Blaseball, shall ascend.
 * c. When teams are sent to `||||||||||| |||||||||||||`, they shall return once `|||||||||||||||| |||||||||||||||||||||| |||||||||||||`
 * d. `Divine Favor`: the `||||` have an internal ranking `of favored teams. When a team wins a Divine Favor blessing, they will be` boosted to the top of the list.
-* e. If at any time, `||||||||||||||| |||||||||||||||, they may |||||||||||||||` one million Peanuts.
+* e. If at any time, `||||||||||||||| |||||||||||||||,` atone `they may |||||||||||||||` one million Peanuts.
 * f. Sunglasses `shall be |||||||||| ||||||||||||| |||||||||||||||||. They shall provide |||||||||||||| may be ||||||||||||||||||||.`
-* g. Splortsmanship, splortsmanship, `splortsmanship.`
+* g. Splortsmanship, splortsmanship, splorts`manship.`
 
 ### 6. `||||||||||||`
 * a. It is known `that the intention of the game of Blaseball |||||||||||||||||||||||| |||||||||||||||||||| |||||||||||||| |||||||||||||||||| ||||||||||| |||||||||| would be diminished.`
 * b. `|||||||`: Several entities in the `||||||||||||||` shall be chosen `||||||||||` to bring Blaseball to the people `|||||||||||||||||| ||||||||||||||||||`
 
 ### Signed,
-* `||||`,  `||||`,  `||||||||`,  `|||||||`,  `||||||||`,  `|||||||||`,  `|||||||`,  `||||`,  `||||||`,  `||||||||||`,  `||||||`,  `|||||||`,  `||||| ||||`,  `||||||| ||||||`,  `||||`,  `|||||||`,  `||`,  `||||||`,  `||| ||||||`
+* `||||`,  `||||`,  `||||||||`,  `|||||||`,  `||||||||`,  `|||||||||`,  `|||||||`,  `||||`,  `||||||`,  `||||||||||`,  `||||||`,  `|||||||`,  `||||| ||||`,  A`|||||| ||||||`,  `||||`,  N`||||||`,  `||`,  `||||||`,  M`|| ||||||`
