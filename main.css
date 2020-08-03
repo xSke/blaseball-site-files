@@ -9968,6 +9968,53 @@ input[type="number"]::-webkit-outer-spin-button {
   border: 1px solid #fff;
   border-radius: 50%;
 }
+.LoadingSpinner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.LoadingSpinner-Inline svg {
+  width: 100%;
+}
+.LoadingSpinner-Inline svg,
+.LoadingSpinner svg {
+  -webkit-animation-name: spin;
+  animation-name: spin;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.LoadingSpinner svg {
+  width: 50px;
+  height: 50px;
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
 .WeatherIcon {
   display: flex;
   margin: 0;
@@ -9984,7 +10031,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .CoinOverlay-Content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: 14px;
 }
@@ -9992,6 +10039,8 @@ input[type="number"]::-webkit-outer-spin-button {
   text-align: center;
   line-height: 18px;
   margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .CoinOverlay-Button {
   font-size: 14px;
@@ -10019,6 +10068,31 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .Navigation-FavoriteTeamEmoji:hover {
   border: 2px solid #fff;
+}
+.Navigation-Patreon {
+  position: absolute;
+  right: 120px;
+  top: 0;
+  width: 90px;
+  font-size: 12px;
+}
+.Navigation-Patreon-Inner {
+  width: 90px;
+  margin: auto;
+  text-align: center;
+  padding: 15px 0 8px 5px;
+  background: #1f1f1f;
+}
+.Navigation-Patreon-Icon {
+  width: auto;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 5px;
+  color: #aaa;
+  text-align: center;
+}
+.Navigation-Patreon-Icon:hover {
+  color: #fff;
 }
 .Navigation-Follow {
   position: absolute;
@@ -10066,12 +10140,21 @@ input[type="number"]::-webkit-outer-spin-button {
 .Navigation-Era {
   color: red;
   font-size: 20px;
+  left: 16px;
+  top: 63px;
+}
+.Navigation-Era,
+.Navigation-SubEra {
   font-family: "Lora", "Courier New", monospace, serif;
   font-weight: 700;
   text-transform: uppercase;
   position: absolute;
-  left: 16px;
-  top: 63px;
+}
+.Navigation-SubEra {
+  color: #c4aa70;
+  font-size: 16px;
+  left: 32px;
+  top: 108px;
 }
 .Navigation-Bar {
   align-items: center;
@@ -10212,6 +10295,18 @@ input[type="number"]::-webkit-outer-spin-button {
 .Navigation-Header-Era {
   margin-bottom: 20px;
 }
+.Navigation-Header-SubEra {
+  display: flex;
+  flex-direction: row;
+  background-color: #000;
+  color: #fff;
+  font-size: 60px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  margin-bottom: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  align-items: flex-end;
+}
 .Navigation-Tag {
   margin: 10px;
   padding: 5px;
@@ -10225,6 +10320,55 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .Navigation-FavoriteTeam {
   font-size: 18px;
+}
+.Peanut {
+  display: none;
+}
+.Peanut-Icon {
+  width: 12px;
+}
+.Peanut-Container {
+  position: relative;
+}
+.Peanut-Container,
+.Peanut-Line {
+  display: flex;
+  flex-direction: row;
+}
+.Peanut-Eating {
+  display: block;
+  position: absolute;
+  color: #fff;
+  bottom: 8px;
+  left: 17px;
+}
+.Peanut-Eating svg {
+  -webkit-animation-name: flyingPeanut;
+  animation-name: flyingPeanut;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+}
+@-webkit-keyframes flyingPeanut {
+  0% {
+    transform: translateY(0) scaleX(1) rotate(0);
+  }
+  to {
+    transform: translateY(-40px) scale3d(1.2, 1.2, 1.2) rotate(2turn);
+  }
+}
+@keyframes flyingPeanut {
+  0% {
+    transform: translateY(0) scaleX(1) rotate(0);
+  }
+  to {
+    transform: translateY(-40px) scale3d(1.2, 1.2, 1.2) rotate(2turn);
+  }
 }
 @media (max-width: 1080px) {
   .Navigation {
@@ -10246,17 +10390,25 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-right: 6px;
   }
   .Navigation-Header,
-  .Navigation-Header-Era {
+  .Navigation-Header-Era,
+  .Navigation-Header-SubEra {
     font-size: 20px;
   }
   .Navigation-Era {
+    left: 28px;
+    top: 30px;
+  }
+  .Navigation-Era,
+  .Navigation-SubEra {
     font-size: 14px;
     font-family: "Lora", "Courier New", monospace, serif;
     font-weight: 700;
     text-transform: uppercase;
     position: absolute;
-    left: 28px;
-    top: 30px;
+  }
+  .Navigation-SubEra {
+    left: 38px;
+    top: 70px;
   }
   .Navigation-Tag {
     font-size: 12px;
@@ -10266,7 +10418,8 @@ input[type="number"]::-webkit-outer-spin-button {
     display: flex;
   }
   .Navigation-Bar-Section--Desktop,
-  .Navigation-Follow {
+  .Navigation-Follow,
+  .Navigation-Patreon {
     display: none;
   }
 }
@@ -10433,54 +10586,6 @@ input[type="number"]::-webkit-outer-spin-button {
   .EventTicker-Group,
   .EventTicker-News {
     font-size: 12px;
-  }
-}
-.LoadingSpinner {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.LoadingSpinner-Inline svg {
-  width: 100%;
-  height: 100%;
-}
-.LoadingSpinner-Inline svg,
-.LoadingSpinner svg {
-  -webkit-animation-name: spin;
-  animation-name: spin;
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-}
-.LoadingSpinner svg {
-  width: 50px;
-  height: 50px;
-}
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  to {
-    transform: rotate(1turn);
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  to {
-    transform: rotate(1turn);
   }
 }
 .Advertisement-SiteHeader {
@@ -10858,11 +10963,21 @@ input[type="number"]::-webkit-outer-spin-button {
   align-items: center;
   flex-shrink: 0;
 }
+#root .Team-LogoLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#root .Team-Attributes {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+}
 #root .Team-Info {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #fff;
-  padding: 40px;
+  padding: 40px 40px 20px;
 }
 #root .Team-Header {
   display: flex;
@@ -10884,9 +10999,6 @@ input[type="number"]::-webkit-outer-spin-button {
 #root .Team-Slogan,
 #root .Team-Standing {
   font-family: "Lora", "Courier New", monospace, serif;
-}
-#root .Team-Slogan {
-  padding-top: 5px;
 }
 #root .Team-Section:not(:last-child) {
   margin-bottom: 10px;
@@ -10932,10 +11044,21 @@ input[type="number"]::-webkit-outer-spin-button {
     padding: 20px;
   }
 }
+.AttributeIcon {
+  margin: 0;
+  height: 32px;
+  width: 32px;
+  border-radius: 5px;
+  font-size: 24px;
+  justify-content: center;
+}
+.AttributeIcon,
 .Shop {
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+.Shop {
+  flex-direction: column;
   margin: auto;
   max-width: 600px;
 }
@@ -10963,7 +11086,7 @@ input[type="number"]::-webkit-outer-spin-button {
   flex-wrap: wrap;
   grid-gap: 10px;
   gap: 10px;
-  justify-content: center;
+  justify-content: space-between;
 }
 .Shop-Item {
   flex-direction: column;
@@ -10971,7 +11094,7 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 20px;
   background: rgba(30, 30, 30, 0.64);
   border-radius: 5px;
-  width: 48%;
+  width: 47%;
   margin: 1%;
 }
 .Shop-Item,
@@ -10997,7 +11120,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-family: "Lora", "Courier New", monospace, serif;
   font-size: 16px;
   width: 100%;
-  height: 130px;
+  height: 140px;
   text-align: center;
   padding: 10px 0;
 }
@@ -11953,22 +12076,12 @@ input[type="number"]::-webkit-outer-spin-button {
     padding: 40px 0;
   }
 }
-.TeamLogo {
-  border-radius: 50%;
-  height: 44px;
-  width: 44px;
-  font-size: 26px;
-  justify-content: center;
-}
-.TeamLogo,
-.TheBook-All {
-  display: flex;
-  align-items: center;
-}
 .TheBook-All {
   max-width: 550px;
   margin: auto;
+  display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 .TheBook-Serif {
@@ -12063,5 +12176,79 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .TheBook-Subheader {
     font-size: 18px;
+  }
+}
+.TeamLogo {
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  font-size: 26px;
+  justify-content: center;
+}
+.BigDeal-All,
+.TeamLogo {
+  display: flex;
+  align-items: center;
+}
+.BigDeal-All {
+  margin: 0 auto;
+  flex-direction: column;
+  color: #fff;
+}
+.BigDeal-Icon {
+  position: relative;
+  font-size: 40vh;
+  height: auto;
+  margin: 0;
+}
+.BigDeal-Icon-Text {
+  text-align: center;
+  font-size: 10px;
+  color: #111;
+}
+.BigDeal-Icon-Text svg,
+.BigDeal-Icon svg {
+  -webkit-animation-name: spinny;
+  animation-name: spinny;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+}
+.BigDeal-Body {
+  max-width: 550px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.BigDeal-Line,
+.BigDeal-RedLine {
+  font-size: 32px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+  margin: 0 20px;
+}
+.BigDeal-RedLine {
+  color: red;
+}
+@-webkit-keyframes spinny {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes spinny {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
   }
 }

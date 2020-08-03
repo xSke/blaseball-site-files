@@ -43,7 +43,7 @@
 * d. `Divine Favor`: the `||||` have an internal ranking `of favored teams. When a team wins a Divine Favor blessing, they will be` boosted to the top of the list.
 * e. If at any time, `||||||||||||||| |||||||||||||||,` atone `they may |||||||||||||||` one million Peanuts.
 * f. Sunglasses `shall be |||||||||| ||||||||||||| |||||||||||||||||. They shall provide |||||||||||||| may be ||||||||||||||||||||.`
-* g. Splortsmanship, splortsmanship, splorts`manship.`
+* g. Splortsmanship, splortsmanship, is DEAD.
 
 ### 6. `||||||||||||`
 * a. It is known `that the intention of the game of Blaseball |||||||||||||||||||||||| |||||||||||||||||||| |||||||||||||| |||||||||||||||||| ||||||||||| |||||||||| would be diminished.`
