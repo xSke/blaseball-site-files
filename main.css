@@ -10080,7 +10080,7 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 90px;
   margin: auto;
   text-align: center;
-  padding: 15px 0 8px 5px;
+  padding: 8px 0 8px 5px;
   background: #1f1f1f;
 }
 .Navigation-Patreon-Icon {
@@ -10883,24 +10883,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .About-List {
   margin: 20px 0;
 }
-@-webkit-keyframes floaty {
-  0% {
-    transform: translateY(10px);
-  }
-}
-@keyframes floaty {
-  0% {
-    transform: translateY(10px);
-  }
-}
-@media (max-width: 1080px) {
-  .About-Header {
-    font-size: 24px;
-  }
-  .About-Body {
-    font-size: 18px;
-  }
-}
 .Stubs-All {
   max-width: 550px;
   margin: auto;
@@ -11011,19 +10993,34 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #aaa;
   text-align: center;
 }
-#root .Player-Line {
+#root .Team-Player-Line {
   display: grid;
-  grid-template-columns: auto 100px;
+  grid-template-columns: auto 120px;
   grid-template-rows: 30px;
   align-items: center;
   margin: 0 -40px;
   padding: 0 40px;
 }
-#root .Player-Line:nth-child(odd) {
+#root .Team-Player-Line:nth-child(odd) {
   background: rgba(30, 30, 30, 0.64);
 }
-#root .Player-Header,
-#root .Player-Ratings {
+#root .Team-Player-Line:hover,
+#root .Team-Player-Line:nth-child(odd):hover {
+  background: hsla(0, 0%, 39.6%, 0.65);
+}
+#root .Team-Player-Line-Blank {
+  display: grid;
+  grid-template-columns: auto 120px;
+  grid-template-rows: 30px;
+  align-items: center;
+  margin: 0 -40px;
+  padding: 0 40px;
+}
+#root .Team-Player-Line-Blank:nth-child(odd) {
+  background: rgba(30, 30, 30, 0.64);
+}
+#root .Team-Player-Header,
+#root .Team-Player-Ratings {
   font-family: "Lora", "Courier New", monospace, serif;
   font-size: 18px;
 }
@@ -12070,7 +12067,7 @@ input[type="number"]::-webkit-outer-spin-button {
 @media (max-width: 1080px) {
   .Main {
     padding: 0 20px;
-    margin-top: 120px;
+    margin-top: 160px;
   }
   .Main-Footer {
     padding: 40px 0;
@@ -12178,21 +12175,11 @@ input[type="number"]::-webkit-outer-spin-button {
     font-size: 18px;
   }
 }
-.TeamLogo {
-  border-radius: 50%;
-  height: 44px;
-  width: 44px;
-  font-size: 26px;
-  justify-content: center;
-}
-.BigDeal-All,
-.TeamLogo {
-  display: flex;
-  align-items: center;
-}
 .BigDeal-All {
   margin: 0 auto;
+  display: flex;
   flex-direction: column;
+  align-items: center;
   color: #fff;
 }
 .BigDeal-Icon {
@@ -12250,5 +12237,325 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   to {
     transform: rotate(1turn);
+  }
+}
+#root .Player {
+  width: 500px;
+  max-width: 95%;
+  height: 640px;
+  max-height: 80vh;
+  justify-content: flex-start;
+  padding: 0;
+}
+#root .Player-Content {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#root .Player-Logo {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+#root .Player-LogoLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#root .Player-Attributes {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+}
+#root .Player-Info {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 40px 20px;
+}
+#root .Player-Info-Line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px 40px;
+}
+#root .Player-Info-Line:nth-child(2n) {
+  background: #000;
+}
+#root .Player-Info-Line-Header {
+  width: 180px;
+  font-weight: 700;
+}
+#root .Player-Info-Line-Body,
+#root .Player-Info-Line-Header {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+#root .Player-Info-Bio,
+#root .Player-Info-Stats {
+  padding: 0;
+  background: rgba(30, 30, 30, 0.64);
+}
+#root .Player-Info-Items {
+  padding: 10px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#root .Player-Info-Items-Box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  min-width: 150px;
+  height: 80px;
+  margin: 5px;
+  padding: 10px 0;
+  background: #111;
+  border-radius: 5px;
+}
+#root .Player-Info-Items-Header {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#root .Player-Info-Items-Details {
+  display: flex;
+  flex-direction: row;
+}
+#root .Player-Info-Items-Name {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+#root .Player-Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+#root .Player-Header,
+#root .Player-Name {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 24px;
+}
+#root .Player-Name-Wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+#root .Player-Standing {
+  font-size: 14px;
+}
+#root .Player-Slogan,
+#root .Player-Standing {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+#root .Player-Section:not(:last-child) {
+  margin-bottom: 10px;
+}
+#root .Player-Subheader {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #aaa;
+  text-align: center;
+}
+#root .Player-VibeLine {
+  display: flex;
+  flex-direction: row;
+}
+#root .Player-VibeLine-Arrow {
+  font-size: 22px;
+  width: 16px;
+}
+#root .Player-VibeLine-Text {
+  padding: 0 5px;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+#root .Player-Vibe-MostExcellent {
+  color: #15d400;
+}
+#root .Player-Vibe-Excellent {
+  color: #77d16d;
+}
+#root .Player-Vibe-Quality {
+  color: #b5d4b2;
+}
+#root .Player-Vibe-Neutral {
+  color: #d1d1d1;
+}
+#root .Player-Vibe-LessThanIdeal {
+  color: #d1a5a5;
+}
+#root .Player-Vibe-FarLessThanIdeal {
+  color: #d16666;
+}
+#root .Player-Vibe-Terrible {
+  color: #db3232;
+}
+#root .Player-Soulscream {
+  height: auto;
+  max-width: 240px;
+  border-radius: 5px;
+}
+#root .Player-Soulscream-Body {
+  height: auto;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-style: italic;
+  color: red;
+  word-wrap: break-word;
+}
+#root .Player-Team-Line {
+  display: flex;
+  flex-direction: row;
+}
+#root .Player-Team-Logo {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+#root .Player-Team-Name {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 18px;
+}
+@media (max-width: 1080px) {
+  #root .Player-Info-Bio,
+  #root .Player-Info-Stats {
+    padding: 10px 20px;
+    background: rgba(30, 30, 30, 0.64);
+  }
+  #root .Player-Info-Line-Header {
+    width: 120px;
+    font-size: 12px;
+  }
+  #root .Player-Info-Line-Body {
+    font-family: "Lora", "Courier New", monospace, serif;
+  }
+  #root .Player-Soulscream {
+    max-width: 160px;
+  }
+}
+.TeamLogo {
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  font-size: 26px;
+  justify-content: center;
+}
+.Hiatus-All,
+.TeamLogo {
+  display: flex;
+  align-items: center;
+}
+.Hiatus-All {
+  max-width: 550px;
+  margin: auto;
+  flex-direction: column;
+}
+.Hiatus-Serif {
+  margin-right: 4px;
+  color: #ffeb57;
+}
+.Hiatus-Highlight,
+.Hiatus-Serif {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+}
+.Hiatus-Highlight {
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 30px;
+  background: #ba7300;
+  margin: 0 6px;
+}
+.Hiatus-NoWrap {
+  white-space: nowrap;
+}
+.Hiatus-Header {
+  margin: 20px 0;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+.Hiatus-Body,
+.Hiatus-Header {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Hiatus-Body {
+  text-align: justify;
+  margin: 24px 0;
+  font-size: 18px;
+}
+.Hiatus-Body-Container {
+  margin: 20px 0;
+  padding: 0 24px;
+  background-color: rgba(30, 30, 30, 0.64);
+  border-radius: 5px;
+}
+.Hiatus-Quote {
+  text-align: center;
+  font-size: 18px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  margin-top: 24px;
+  font-style: italic;
+}
+.Hiatus-Quote :hover {
+  color: #fff4a1;
+}
+.Hiatus-QuoteAuthor {
+  font-size: 18px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  margin-bottom: 24px;
+  font-weight: 700;
+  color: #ffeb57;
+}
+.Hiatus-QuoteAuthor :hover {
+  color: #fff4a1;
+}
+.Hiatus-Button {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  height: 30px;
+  border-radius: 20px;
+  margin: 30px;
+}
+.Hiatus-Button-Text {
+  line-height: 15px;
+  margin: auto;
+  padding: 0;
+}
+.Hiatus-List {
+  margin: 20px 0;
+}
+@-webkit-keyframes floaty {
+  0% {
+    transform: translateY(10px);
+  }
+}
+@keyframes floaty {
+  0% {
+    transform: translateY(10px);
+  }
+}
+@media (max-width: 1080px) {
+  .About-Header {
+    font-size: 24px;
+  }
+  .About-Body {
+    font-size: 18px;
   }
 }
