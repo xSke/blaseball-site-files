@@ -41,7 +41,7 @@
 * b. If a team wins three championships, they, and Blaseball, shall ascend.
 * c. When teams are sent to `||||||||||| |||||||||||||`, they shall return once `|||||||||||||||| |||||||||||||||||||||| |||||||||||||`
 * d. `Divine Favor`: the `||||` have an internal ranking `of favored teams. When a team wins a Divine Favor blessing, they will be` boosted to the top of the list.
-* e. If at any time, `||||||||||||||| |||||||||||||||,` atone `they may |||||||||||||||` one million Peanuts.
+* e. ~~If at any time the Fans have angered the Blaseball Gods, they may atone by eating one million Peanuts.~~ STRIKE TWO
 * f. Sunglasses `shall be |||||||||| ||||||||||||| |||||||||||||||||. They shall provide |||||||||||||| may be ||||||||||||||||||||.`
 * g. Splortsmanship, splortsmanship, is BACK.
 

@@ -1,1 +1,67 @@
-[]
+[
+    {
+        "name": "Void",
+        "background": "#67678a",
+        "color": "#000000"
+    },
+    {
+        "name": "Sunny",
+        "background": "#db7900",
+        "color": "#fffec4"
+    },
+    {
+        "name": "Overcast",
+        "background": "#cfcfcf",
+        "color": "#737373"
+    },
+    {
+        "name": "Rainy",
+        "background": "#348e9e",
+        "color": "#0727a8"
+    },
+    {
+        "name": "Sandstorm",
+        "background": "#877652",
+        "color": "#e0dac3"
+    },
+    {
+        "name": "Snowy",
+        "background": "#68969e",
+        "color": "#ffffff"
+    },
+    {
+        "name": "Acidic",
+        "background": "#92ad58",
+        "color": "#235917"
+    },
+    {
+        "name": "Solar Eclipse",
+        "background": "#002f3b",
+        "color": "#3c6cba"
+    },
+    {
+        "name": "Glitter",
+        "background": "#ff94ff",
+        "color": "#fff98a"
+    },
+    {
+        "name": "Bloodwind",
+        "background": "#b50027",
+        "color": "#ff5cab"
+    },
+    {
+        "name": "Peanuts",
+        "background": "#c4aa70",
+        "color": "#423822"
+    },
+    {
+        "name": "Birds",
+        "background": "#45235e",
+        "color": "#8e5fad"
+    },
+    {
+        "name": "Feedback",
+        "background": "#383838",
+        "color": "#ff007b"
+    }
+]
