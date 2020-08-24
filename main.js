@@ -3955,7 +3955,7 @@
           <M.a className="Decrees-Option-Icon" />
         ) : "alternate_reality" === e ? (
           <aa.d className="Decrees-Option-Icon" />
-        ) : "shame_pit" === e ? (
+        ) : "targeted_shame" === e ? (
           <M.k className="Decrees-Option-Icon" />
         ) : "roster_shuffle" === e ? (
           <ea.a className="Decrees-Option-Icon" />
