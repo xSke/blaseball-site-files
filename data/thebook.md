@@ -42,6 +42,7 @@
 * c. When teams are sent to `||||||||||| |||||||||||||`, they shall return once `|||||||||||||||| |||||||||||||||||||||| |||||||||||||`
 * d. `Divine Favor`: the `||||` have an internal ranking `of favored teams. When a team wins a Divine Favor blessing, they will be` boosted to the top of the list.
 * e. ~~If at any time the Fans have angered the Blaseball Gods, they may atone by eating one million Peanuts.~~ STRIKE TWO
+* h. Eat The Rich: Every season, immediately before the Election, the Wealthiest 1% of Fans will have their Coins removed and distributed evenly to the other 99% of Fans.
 * f. Sunglasses `shall be |||||||||| ||||||||||||| |||||||||||||||||. They shall provide |||||||||||||| may be ||||||||||||||||||||.`
 * g. Splortsmanship, splortsmanship, is BACK.
 
@@ -50,4 +51,4 @@
 * b. `|||||||`: Several entities in the `||||||||||||||` shall be chosen `||||||||||` to bring Blaseball to the people `|||||||||||||||||| ||||||||||||||||||`
 
 ### Signed,
-* `||||`,  `||||`,  `||||||||`,  `|||||||`,  `||||||||`,  `|||||||||`,  `|||||||`,  `||||`,  `||||||`,  `||||||||||`,  `||||||`,  `|||||||`,  `||||| ||||`,  A`|||||| ||||||`,  `||||`,  N`||||||`,  `||`,  `||||||`,  M`|| ||||||`
+* `||||`,  `||||`,  `||||||||`,  `|||||||`,  `||||||||`,  `|||||||||`,  `|||||||`,  `||||`,  `||||||`,  H`||||||||||`,  `||||||`,  `|||||||`,  `||||| ||||`,  A`|||||| ||||||`,  `||||`,  N`||||||`,  `||`,  `||||||`,  M`|| ||||||`

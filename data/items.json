@@ -1,1 +1,37 @@
-[]
+[
+    {
+        "id": "FIREPROOF",
+        "name": "Fireproof Jacket",
+        "attr": "FIREPROOF"
+    },
+    {
+        "id": "GUNBLADE_A",
+        "name": "The Dial Tone",
+        "attr": "NONE"
+    },
+    {
+        "id": "GUNBLADE_B",
+        "name": "Vibe Check",
+        "attr": "NONE"
+    },
+    {
+        "id": "MUSHROOM",
+        "name": "Mushroom",
+        "attr": "NONE"
+    },
+    {
+        "id": "GRAPPLING_HOOK",
+        "name": "Grappling Hook",
+        "attr": "NONE"
+    },
+    {
+        "id": "HEADPHONES",
+        "name": "Noise-Cancelling Headphones",
+        "attr": "SOUNDPROOF"
+    },
+    {
+        "id": "ENGLAND_MEMORABILIA",
+        "name": "Bangers & Smash",
+        "attr": "NONE"
+    }
+]

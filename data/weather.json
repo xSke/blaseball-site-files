@@ -63,5 +63,10 @@
         "name": "Feedback",
         "background": "#383838",
         "color": "#ff007b"
+    },
+    {
+        "name": "Reverb",
+        "background": "#443561",
+        "color": "#61b3ff"
     }
 ]
