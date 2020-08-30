@@ -33,5 +33,10 @@
         "id": "ENGLAND_MEMORABILIA",
         "name": "Bangers & Smash",
         "attr": "NONE"
+    },
+    {
+        "id": "ARM_CANNON",
+        "name": "Literal Arm Cannon",
+        "attr": "NONE"
     }
 ]
