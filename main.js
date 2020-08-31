@@ -436,7 +436,7 @@
         T = t(3),
         O = t.n(T),
         S = t(6),
-        I = {
+        B = {
           id: "",
           email: "",
           isSignedIn: !1,
@@ -452,8 +452,8 @@
           peanuts: 10,
           squirrels: 0,
         },
-        B = { user: I, clearUser: function () {}, initUser: function () {}, setUser: function () {} },
-        w = Object(r.createContext)(B),
+        I = { user: B, clearUser: function () {}, initUser: function () {}, setUser: function () {} },
+        w = Object(r.createContext)(I),
         C = function (e) {
           var a = Object(d.a)(Object(d.a)({}, e), {}, { id: e.id, isFetching: !1, isSignedIn: !(!e || !e.email) });
           return (
@@ -469,7 +469,7 @@
         },
         k = function (e) {
           var a = e.children,
-            t = Object(r.useState)(I),
+            t = Object(r.useState)(B),
             n = Object(s.a)(t, 2),
             l = n[0],
             i = n[1],
@@ -535,7 +535,7 @@
             initUser: c,
             setUser: i,
             clearUser: function () {
-              i(I);
+              i(B);
             },
           };
           return <w.Provider value={m}>{a}</w.Provider>;
@@ -933,9 +933,9 @@
             T = b[0],
             O = b[1],
             S = Object(r.useState)(void 0),
-            I = Object(s.a)(S, 2),
-            B = I[0],
-            w = I[1],
+            B = Object(s.a)(S, 2),
+            I = B[0],
+            w = B[1],
             C = Object(r.useContext)(N.context),
             k = function (e) {
               var a = e.target.value;
@@ -960,12 +960,12 @@
                       })),
                 t && w(t);
             }, []),
-            void 0 === B)
+            void 0 === I)
           )
             return <me />;
           var L = Math.min(se.maxBetTiers[n.maxBetTier].amount, n.coins),
             G = function () {
-              return B ? (T === B.homeTeam ? B.homeOdds : B.awayOdds) : 0.5;
+              return I ? (T === I.homeTeam ? I.homeOdds : I.awayOdds) : 0.5;
             },
             D = function (e) {
               O(e);
@@ -1064,18 +1064,18 @@
                   <ie.a.Label>Pick a team:</ie.a.Label>
                   <ie.a.Group className="Bet-Form-Teams" controlId="team">
                     <P
-                      id={B.homeTeam}
-                      color={B.homeTeamColor}
+                      id={I.homeTeam}
+                      color={I.homeTeamColor}
                       modifier="Home"
-                      name={B.homeTeamNickname}
-                      odds={B.homeOdds}
+                      name={I.homeTeamNickname}
+                      odds={I.homeOdds}
                     />
                     <P
-                      id={B.awayTeam}
-                      color={B.awayTeamColor}
+                      id={I.awayTeam}
+                      color={I.awayTeamColor}
                       modifier="Away"
-                      name={B.awayTeamNickname}
-                      odds={B.awayOdds}
+                      name={I.awayTeamNickname}
+                      odds={I.awayOdds}
                     />
                   </ie.a.Group>
                   <ie.a.Group className={"Bet-Form-Amount ".concat(T ? "" : "is-hidden")} controlId="amount">
@@ -1306,8 +1306,8 @@
           })(l),
           S = "";
         O.onFirst && (S += " first"), O.onSecond && (S += " second"), O.onThird && (S += " third");
-        var I = <div className="GameWidget-Outs">{p}</div>,
-          B = Object(c.g)(),
+        var B = <div className="GameWidget-Outs">{p}</div>,
+          I = Object(c.g)(),
           w =
             h.complete || !h.started ? (
               <div />
@@ -1318,7 +1318,7 @@
                   <div className="GameWidget-PlayerStatusLabel">Pitching</div>
                   <div className="GameWidget-PlayerLineNameWrapper" style={{ background: P(A, 0.5) }}>
                     <u
-                      background={B}
+                      background={I}
                       path={"/player/".concat(l.topOfInning ? l.homePitcher : l.awayPitcher)}
                       className="GameWidget-PlayerLineName"
                     >
@@ -1332,7 +1332,7 @@
                   <div className="GameWidget-PlayerLineNameWrapper" style={{ background: P(f, 0.5) }}>
                     {l.homeBatterName || l.awayBatterName ? (
                       <u
-                        background={B}
+                        background={I}
                         path={"/player/".concat(l.topOfInning ? l.awayBatter : l.homeBatter)}
                         className="GameWidget-PlayerLineName"
                       >
@@ -1362,7 +1362,7 @@
                   </div>
                 ) : s.coins ? (
                   <Q.a className="GameWidget-Button" variant="success">
-                    <u background={B} path={"/bet/".concat(l.id)}>
+                    <u background={I} path={"/bet/".concat(l.id)}>
                       Place a Bet
                     </u>
                   </Q.a>
@@ -1555,7 +1555,7 @@
                           </div>
                         ))
                       }
-                      {I}
+                      {B}
                       {w}
                       <div className="GameWidget-Log">{l.lastUpdate}</div>
                     </o.a.Fragment>
@@ -1578,7 +1578,7 @@
                           style={{ background: P(l.awayTeamColor, 0.5) }}
                         >
                           <u
-                            background={B}
+                            background={I}
                             path={"/player/".concat(l.awayPitcher)}
                             className="GameWidget-PlayerLineName"
                           >
@@ -1592,7 +1592,7 @@
                           style={{ background: P(l.homeTeamColor, 0.5) }}
                         >
                           <u
-                            background={B}
+                            background={I}
                             path={"/player/".concat(l.homePitcher)}
                             className="GameWidget-PlayerLineName"
                           >
@@ -1664,7 +1664,7 @@
                   <div className="GameWidget-ScoreLabel GameWidget-ScoreLabel--Series">{X}</div>
                 </div>
                 <div className="GameWidget-ScoreBacking">
-                  <u background={B} path={"/team/".concat(l.awayTeam)} className="GameWidget-ScoreLine">
+                  <u background={I} path={"/team/".concat(l.awayTeam)} className="GameWidget-ScoreLine">
                     <div className="GameWidget-ScoreTeamColorBar" style={{ background: l.awayTeamColor }}>
                       {String.fromCodePoint(Number(l.awayTeamEmoji))}
                     </div>
@@ -1702,7 +1702,7 @@
                       {i.awayTeamScore}
                     </div>
                   </u>
-                  <u background={B} path={"/team/".concat(l.homeTeam)} className="GameWidget-ScoreLine">
+                  <u background={I} path={"/team/".concat(l.homeTeam)} className="GameWidget-ScoreLine">
                     <div className="GameWidget-ScoreTeamColorBar" style={{ background: l.homeTeamColor }}>
                       {String.fromCodePoint(Number(l.homeTeamEmoji))}
                     </div>
@@ -1772,8 +1772,8 @@
       }
       t(101);
       var Se = t(68),
-        Ie = t(44),
-        Be =
+        Be = t(44),
+        Ie =
           (t(102),
           function (e) {
             var a,
@@ -1797,7 +1797,7 @@
                 }, 100);
               },
               g = (
-                <Ie.a target={t.current} show={p} placement="bottom">
+                <Be.a target={t.current} show={p} placement="bottom">
                   {function (e) {
                     e.placement, e.scheduleUpdate, e.arrowProps, e.outOfBoundaries, e.show;
                     var a = Object(Se.a)(e, ["placement", "scheduleUpdate", "arrowProps", "outOfBoundaries", "show"]);
@@ -1815,7 +1815,7 @@
                       </div>
                     );
                   }}
-                </Ie.a>
+                </Be.a>
               );
             return i ? (
               <o.a.Fragment>
@@ -1902,9 +1902,9 @@
               return e.id === a.favoriteTeam;
             });
             if (T) {
-              var I = String.fromCodePoint(Number(T.emoji)),
-                B = encodeURIComponent("".concat(T.slogan || "", " ").concat(I, " #blaseball")),
-                w = "http://twitter.com/intent/tweet?text=".concat(B, "&url=https%3A%2F%2Fblaseball.com");
+              var B = String.fromCodePoint(Number(T.emoji)),
+                I = encodeURIComponent("".concat(T.slogan || "", " ").concat(B, " #blaseball")),
+                w = "http://twitter.com/intent/tweet?text=".concat(I, "&url=https%3A%2F%2Fblaseball.com");
               b = (
                 <a
                   target="_blank"
@@ -1912,25 +1912,25 @@
                   style={{ background: T.mainColor }}
                   className="Navigation-FavoriteTeamEmoji"
                 >
-                  {I}
+                  {B}
                 </a>
               );
             }
           }
           return (
             <o.a.Fragment>
-              <Be className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={v} url="/upcoming">
+              <Ie className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={v} url="/upcoming">
                 <j.C />
                  {a.coins}
-              </Be>
+              </Ie>
               {a.unlockedElection ? (
-                <Be className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={g} url="/shop">
+                <Ie className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={g} url="/shop">
                   <j.B />
                    {a.votes}
-                </Be>
+                </Ie>
               ) : null}
               <div className="Peanut-Container">
-                <Be
+                <Ie
                   className="CoinOverlay"
                   buttonClassname="Navigation-CurrencyButton"
                   content={y}
@@ -2034,7 +2034,7 @@
                   <span className="Peanut-Line">
                     <span className="Peanut-Icon">{m ? "" : <j.r />}</span> {a.peanuts}
                   </span>
-                </Be>
+                </Ie>
                 <div className={m ? "Peanut-Eating" : "Peanut"}>
                   <j.r />
                 </div>
@@ -2126,13 +2126,28 @@
         return (
           <div className="Advertisement-SiteHeader">
             This season is brought to you by{" "}
-            <a
-              className="Advertisement-SiteHeader-Callout"
-              href="http://friendsatthetable.net/bonus-episode-sports-are-just-numerology"
-              target="_blank"
-            >
-              Friends at the Table
-            </a>
+            <span className="Advertisement-SiteHeader-Callout">
+              <a href="https://zombiesrungame.com" target="_blank">
+                Zombies, Run!
+              </a>{" "}
+              (
+              <a
+                target="_blank"
+                href="https://apps.apple.com/us/app/zombies-run/id503519713?mt=8"
+                style={{ color: "#ede06d" }}
+              >
+                iPhone
+              </a>
+              ,{" "}
+              <a
+                target="_blank"
+                href="https://play.google.com/store/apps/details?id=com.sixtostart.zombiesrunclient&hl=en_GB"
+                style={{ color: "#f0dd37" }}
+              >
+                Android
+              </a>
+              )
+            </span>
           </div>
         );
       }
@@ -2333,7 +2348,7 @@
                     })}
               </ul>
             ),
-          I =
+          B =
             void 0 !==
             (null === f ||
             void 0 === f ||
@@ -2352,7 +2367,7 @@
                 ? void 0
                 : i.roundNumber
               : -1,
-          B =
+          I =
             void 0 !==
             (null === f ||
             void 0 === f ||
@@ -2371,7 +2386,7 @@
                 ? void 0
                 : u.roundNumber
               : -1,
-          w = (y() === xe.Live ? I : B) + 1;
+          w = (y() === xe.Live ? B : I) + 1;
         return (
           <div>
             <div className="DailySchedule-Header">
@@ -3135,7 +3150,7 @@
             })(E.id, null === t || void 0 === t ? void 0 : t.standings),
             b = y[1],
             T = y[0],
-            I =
+            B =
               E.permAttr.length > 0 || E.seasAttr.length > 0 || E.weekAttr.length > 0 || E.gameAttr.length > 0 ? (
                 <o.a.Fragment>
                   <div className="Team-Attributes">
@@ -3175,7 +3190,7 @@
                     </div>
                   </div>
                 </div>
-                {I}
+                {B}
                 <div className="Team-Content">
                   <div className="Team-Section">
                     <div className="Team-Subheader">Lineup</div>
@@ -3373,14 +3388,14 @@
                     i.delta &&
                     l.push({
                       id: 5,
-                      name: "Friends at the Table",
+                      name: "Zombies, Run!",
                       description:
-                        "Perfect for your next Blaseball siesta \ud83d\udecf\ufe0f. Check out the new merch!",
+                        'Zombies, Run! -- Now featuring "Home Run", an audio Blaseball experience. Play for free on iPhone and Android',
                       amount: 0,
                       toast: "Have a great time listening.",
                       available: !0,
                       handleComplete: function () {
-                        window.open("https://www.fangamer.com/collections/friends-at-the-table");
+                        window.open("https://zombiesrungame.com");
                       },
                     });
                   var s = se.maxBetTiers[Math.min(e.maxBetTier, se.maxBetTiers.length - 1)],
@@ -3908,7 +3923,7 @@
           var a = e.isActive;
           return <button className="Blessings-Option-Button">Select{a ? "ed" : ""}</button>;
         },
-        Ia = function (e) {
+        Ba = function (e) {
           var a = e.title,
             t = e.description,
             n = e.id,
@@ -3927,7 +3942,7 @@
             </div>
           );
         },
-        Ba = function () {
+        Ia = function () {
           var e = Object(r.useContext)(ba.context),
             a = Object(r.useContext)(R.context).user,
             t = Object(r.useState)(),
@@ -3967,7 +3982,7 @@
                 <div className="Blessings-Container">
                   {e.blessings.map(function (e, a) {
                     return (
-                      <Ia
+                      <Ba
                         {...Object.assign({ key: a }, e, {
                           isActive: l === e.id,
                           onSelect: function (e) {
@@ -4555,7 +4570,7 @@
         ) : (
           <o.a.Fragment>
             <at />
-            <Ba />
+            <Ia />
           </o.a.Fragment>
         );
       }
@@ -4599,11 +4614,11 @@
             var a = e.target.value;
             A(a);
           },
-          I = n.votes,
-          B = <me />;
+          B = n.votes,
+          I = <me />;
         return (
           y ||
-            (B = (
+            (I = (
               <Q.a className="Vote-Submit" type="submit" variant="success">
                 Submit
               </Q.a>
@@ -4614,7 +4629,7 @@
               <ie.a
                 className="Vote-Form"
                 onSubmit={function (e) {
-                  if ((e.preventDefault(), b(!0), f > I)) a("Max vote is ".concat(I, "!"), { appearance: "error" });
+                  if ((e.preventDefault(), b(!0), f > B)) a("Max vote is ".concat(B, "!"), { appearance: "error" });
                   else {
                     var t = { amount: f, entityId: h, voteType: u, data: N };
                     q("/api/vote", JSON.stringify(t))
@@ -4658,7 +4673,7 @@
                       type="range"
                       className="Vote-Range"
                       min={1}
-                      max={Math.min(n.votes, I)}
+                      max={Math.min(n.votes, B)}
                       value={f}
                       onChange={T}
                       step="1"
@@ -4666,14 +4681,14 @@
                     <a
                       className="Vote-Form-Inputs-Amount-MaxVote"
                       onClick={function (e) {
-                        e.preventDefault(), A(Math.min(n.votes, I));
+                        e.preventDefault(), A(Math.min(n.votes, B));
                       }}
                     >
-                      Max Vote: {I}
+                      Max Vote: {B}
                     </a>
                   </div>
                 </ie.a.Group>
-                <div className="Vote-Submit-Wrapper">{B}</div>
+                <div className="Vote-Submit-Wrapper">{I}</div>
               </ie.a>
             </J>
           )
@@ -5908,8 +5923,8 @@
               },
               [h]
             );
-          var I = { notes: h, refreshNotes: v };
-          return <gt.Provider value={I}>{a}</gt.Provider>;
+          var B = { notes: h, refreshNotes: v };
+          return <gt.Provider value={B}>{a}</gt.Provider>;
         };
       yt.context = gt;
       var bt = yt;
@@ -6120,7 +6135,7 @@
       }
       t(126);
       var St = t(67),
-        It = (function (e) {
+        Bt = (function (e) {
           var a,
             t = [];
           for (; t.length <= 2; ) (a = Math.floor(Math.random() * e.length)), t.includes(a) || t.push(a);
@@ -6307,7 +6322,7 @@
           "1298718347463258112",
           "1298714979516858368",
         ]);
-      function Bt() {
+      function It() {
         var e,
           a,
           t,
@@ -6487,7 +6502,7 @@
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
                   <wt />
-                  Thomas Dracaena hit a goundout to Edric Tosser.
+                  Thomas Dracaena hit a ground out to Edric Tosser.
                 </div>
               </div>
             </o.a.Fragment>
@@ -6501,7 +6516,7 @@
                 <div className="Bulletin-Item-Header-Title">Art Gallery</div>
               </div>
               <div className="Bulletin-Item-Contents Bulletin-Item-ImageGrid">
-                {It.map(function (e) {
+                {Bt.map(function (e) {
                   return (
                     <St.a
                       id={e}
@@ -7162,7 +7177,7 @@
                     <_e />
                   </c.a>
                   <c.a path="/bulletin">
-                    <Bt />
+                    <It />
                   </c.a>
                   <c.a path="/shop">
                     <Ea />
