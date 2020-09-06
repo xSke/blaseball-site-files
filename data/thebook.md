@@ -11,7 +11,7 @@
 * d. A season should start on a "Monday" and therefore conclude on a "Friday".
 
 ### 2. Postseasons
-* a. Each Postseason of Blaseball shall consist of 8 teams. These teams shall be the 4 best teams from each league, regardless of division. Teams will be ranked by their total wins over the season. In the case of ties, teams shall be chosen based on their `Divine Favor`. See:  `Divine Favor`
+* a. Each Postseason of Blaseball shall consist of 8 teams. These teams shall be the 4 best teams from each league, regardless of division. Teams will be ranked by their total wins over the season. In the case of ties, teams shall be chosen based on their Divine Favor. See:  Divine Favor
 * b. The Postseason should start early on a "Saturday" and conclude within the same day. If the Postseason lasts into the following day, no `||||| shall be ||||||||, and both teams shall be |||||||||| |||||||| ||||||||||||.`
 * c. Postseason rounds should be played in best 3 of 5 game series.
 * d. The home team in each Postseason game shall be `the |||||||||||, if the |||||||||||||||||||.`
@@ -40,9 +40,10 @@
 * a. Should the Participants open the Forbidden Book, `The Discipline Era should begin||||||||||||||||||||||` suffering `upon the league. Players shall be ` banished `at the ||||||||||| ||||||||| |||| ||||||||||||||||.` The Discipline Era shall last until `the Participants have` atoned.
 * b. If a team wins three championships, they, and Blaseball, shall ascend.
 * c. When teams are sent to `||||||||||| |||||||||||||`, they shall return once `|||||||||||||||| |||||||||||||||||||||| |||||||||||||`
-* d. `Divine Favor`: the `||||` have an internal ranking `of favored teams. When a team wins a Divine Favor blessing, they will be` boosted to the top of the list.
+* d. Divine Favor: the `||||` have an internal ranking `of favored teams. When a team wins a Divine Favor blessing, they will be` boosted to the top of the list.
 * e. ~~If at any time the Fans have angered the Blaseball Gods, they may atone by eating one million Peanuts.~~ STRIKE TWO
 * h. Eat The Rich: Every season, immediately before the Election, the Wealthiest 1% of Fans will have their Coins removed and distributed evenly to the other 99% of Fans.
+* i. Blood Bath: `||||| ||||||, ||||||||||| |||||| ||| ||||||||, ||| ||||| |||| |||| ||||||| ||| ||||||. ||||| |||| || |||||||||||| ||||| || |||| |||||| ||||| |||||||||||||`
 * f. Sunglasses `shall be |||||||||| ||||||||||||| |||||||||||||||||. They shall provide |||||||||||||| may be ||||||||||||||||||||.`
 * g. Splortsmanship, splortsmanship, is BACK.
 
