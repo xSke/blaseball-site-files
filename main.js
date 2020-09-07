@@ -505,8 +505,8 @@
         o = t.n(r),
         l = t(20),
         i = t.n(l),
-        s = (t(76), t(7)),
-        c = t(15),
+        c = (t(76), t(7)),
+        s = t(15),
         m = (t(47), t(77), t(13)),
         u = function (e) {
           var a = e.path,
@@ -554,7 +554,7 @@
       var b = function (e) {
         var a = e.children,
           t = Object(r.useState)({ games: void 0, leagues: void 0, temporal: void 0 }),
-          n = Object(s.a)(t, 2),
+          n = Object(c.a)(t, 2),
           l = n[0],
           i = n[1];
         return (
@@ -623,7 +623,7 @@
                 tomorrowRound: void 0,
               },
             }),
-            n = Object(s.a)(t, 2),
+            n = Object(c.a)(t, 2),
             l = n[0],
             i = n[1];
           return (
@@ -680,10 +680,10 @@
         L = function (e) {
           var a = e.children,
             t = Object(r.useState)(w),
-            n = Object(s.a)(t, 2),
+            n = Object(c.a)(t, 2),
             l = n[0],
             i = n[1],
-            c = Object(r.useCallback)(
+            s = Object(r.useCallback)(
               Object(E.a)(
                 h.a.mark(function e() {
                   return h.a.wrap(function (e) {
@@ -736,13 +736,13 @@
             );
           Object(r.useEffect)(
             function () {
-              c();
+              s();
             },
-            [c]
+            [s]
           );
           var m = {
             user: l,
-            initUser: c,
+            initUser: s,
             setUser: i,
             clearUser: function () {
               i(w);
@@ -755,9 +755,9 @@
         D = o.a.createContext([]),
         P = function (e) {
           var a = e.children,
-            t = Object(c.g)().pathname,
+            t = Object(s.g)().pathname,
             n = Object(r.useState)({}),
-            l = Object(s.a)(n, 2),
+            l = Object(c.a)(n, 2),
             i = l[0],
             m = l[1];
           return (
@@ -788,7 +788,7 @@
         };
       P.context = D;
       var M = P;
-      function W(e) {
+      function j(e) {
         var a,
           t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0.2;
         if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(e))
@@ -812,7 +812,7 @@
         }
         return a;
       }
-      function j(e, a) {
+      function W(e, a) {
         if (void 0 === e) return !1;
         for (var t = 0; t < e.attr.length; t++) if (e.attr[t] === a) return !0;
         return !1;
@@ -850,12 +850,12 @@
         e[(e.GENERIC = 1)] = "GENERIC";
       })(H || (H = {}));
       var K = function (e) {
-        var a = Object(c.f)(),
-          t = Object(c.g)(),
+        var a = Object(s.f)(),
+          t = Object(s.g)(),
           n = (t.state && t.state.background, e.isModal),
           l = e.className,
           i = e.children,
-          s = e.dismissable,
+          c = e.dismissable,
           m = e.style,
           u = Object(r.useRef)(null),
           d = function () {
@@ -885,7 +885,7 @@
         }
         var p = (
           <V.a.div style={h} className={E + (n ? "" : " Modal--Static") + (l ? " ".concat(l) : "")} ref={u}>
-            {s && n && (
+            {c && n && (
               <button
                 className="Modal-Close"
                 onClick={function () {
@@ -903,7 +903,7 @@
             <div
               className="Modal-Background"
               onClick={function (e) {
-                !s || (u && u.current && u.current.contains(e.target)) || d();
+                !c || (u && u.current && u.current.contains(e.target)) || d();
               }}
             >
               {p}
@@ -1097,11 +1097,11 @@
           })
         )).apply(this, arguments);
       }
-      function se(e) {
-        return ce.apply(this, arguments);
+      function ce(e) {
+        return se.apply(this, arguments);
       }
-      function ce() {
-        return (ce = Object(E.a)(
+      function se() {
+        return (se = Object(E.a)(
           h.a.mark(function e(a) {
             var t, n;
             return h.a.wrap(
@@ -1141,7 +1141,7 @@
             );
           }),
         Ee = function () {
-          return <div className="LoadingSpinner">{100 * Math.random() < 99 ? <J.a /> : <Y.u />}</div>;
+          return <div className="LoadingSpinner">{100 * Math.random() < 99 ? <J.a /> : <Y.v />}</div>;
         };
       t(98), t(61);
       function pe(e, a) {
@@ -1156,22 +1156,22 @@
             t = Object(r.useContext)(G.context),
             n = t.user,
             l = t.setUser,
-            i = Object(c.f)(),
+            i = Object(s.f)(),
             m = Object(r.useState)(!1),
-            u = Object(s.a)(m, 2),
+            u = Object(c.a)(m, 2),
             d = u[0],
             h = u[1],
-            E = Object(c.h)().gameId,
+            E = Object(s.h)().gameId,
             p = Object(r.useState)(1),
-            f = Object(s.a)(p, 2),
+            f = Object(c.a)(p, 2),
             v = f[0],
             A = f[1],
             g = Object(r.useState)(""),
-            y = Object(s.a)(g, 2),
+            y = Object(c.a)(g, 2),
             b = y[0],
             N = y[1],
             T = Object(r.useState)(void 0),
-            O = Object(s.a)(T, 2),
+            O = Object(c.a)(T, 2),
             S = O[0],
             w = O[1],
             C = Object(r.useContext)(I.context),
@@ -1257,13 +1257,13 @@
                 {Math.round(100 * L())}%
               </span>
             ),
-            W = <span className="Bet-Outcome-Winnings">{pe(L(), v)}</span>,
+            j = <span className="Bet-Outcome-Winnings">{pe(L(), v)}</span>,
             x = <div className="Bet-Outcome-Wrapper">Choose a team to bet on.</div>;
           return (
             b &&
               (x = (
                 <div className="Bet-Outcome-Wrapper">
-                  You'll have a {M} chance to win {W} coins.
+                  You'll have a {M} chance to win {j} coins.
                 </div>
               )),
             (
@@ -1320,7 +1320,7 @@
                     <ue.a.Label>How much do you want to wager?</ue.a.Label>
                     <div className="Bet-Form-Inputs-Amount">
                       <div className="Bet-Coin-Wrapper">
-                        <Y.J className="Bet-Coin-Icon" />
+                        <Y.K className="Bet-Coin-Icon" />
                         {n.coins}
                       </div>
                       <ue.a.Control type="number" value={v} onChange={k} />
@@ -1370,9 +1370,9 @@
           { name: "Solar Eclipse", icon: <ve.i />, background: "#002f3b", color: "#3c6cba" },
           { name: "Glitter", icon: <ve.j />, background: "#ff94ff", color: "#fff98a" },
           { name: "Blooddrain", icon: <ve.f />, background: "#52050f", color: "#ff1f3c" },
-          { name: "Peanuts", icon: <Y.u />, background: "#c4aa70", color: "#423822" },
+          { name: "Peanuts", icon: <Y.v />, background: "#c4aa70", color: "#423822" },
           { name: "Birds", icon: <Y.e />, background: "#45235e", color: "#8e5fad" },
-          { name: "Feedback", icon: <Y.q />, background: "#383838", color: "#ff007b" },
+          { name: "Feedback", icon: <Y.r />, background: "#383838", color: "#ff007b" },
           { name: "Reverb", icon: <Y.d />, background: "#443561", color: "#61b3ff" },
         ];
       function ge(e) {
@@ -1428,7 +1428,7 @@
           n,
           l = e.data,
           i = e.metaInfo,
-          s = Object(r.useContext)(G.context).user,
+          c = Object(r.useContext)(G.context).user,
           d = Object(r.useContext)(M.context),
           h = {
             started: (a = l).gameStart,
@@ -1545,7 +1545,7 @@
           S = "";
         O.onFirst && (S += " first"), O.onSecond && (S += " second"), O.onThird && (S += " third");
         var I = <div className="GameWidget-Outs">{p}</div>,
-          B = Object(c.g)(),
+          B = Object(s.g)(),
           w =
             h.complete || !h.started ? (
               <div />
@@ -1554,7 +1554,7 @@
                 <div className="GameWidget-PlayerLine">
                   <div className="GameWidget-PlayerStatusIcon GameWidget-PlayerStatusIcon--Pitching" />
                   <div className="GameWidget-PlayerStatusLabel">Pitching</div>
-                  <div className="GameWidget-PlayerLineNameWrapper" style={{ background: W(v, 0.5) }}>
+                  <div className="GameWidget-PlayerLineNameWrapper" style={{ background: j(v, 0.5) }}>
                     <u
                       background={B}
                       path={"/player/".concat(l.topOfInning ? l.homePitcher : l.awayPitcher)}
@@ -1567,7 +1567,7 @@
                 <div className="GameWidget-PlayerLine">
                   <div className="GameWidget-PlayerStatusIcon GameWidget-PlayerStatusIcon--Batting" />
                   <div className="GameWidget-PlayerStatusLabel">Batting</div>
-                  <div className="GameWidget-PlayerLineNameWrapper" style={{ background: W(f, 0.5) }}>
+                  <div className="GameWidget-PlayerLineNameWrapper" style={{ background: j(f, 0.5) }}>
                     {l.homeBatterName || l.awayBatterName ? (
                       <u
                         background={B}
@@ -1584,9 +1584,9 @@
               </div>
             ),
           C = null;
-        if (h.started && s.isSignedIn) C = null;
+        if (h.started && c.isSignedIn) C = null;
         else if (h.started) C = <div />;
-        else if (s.isSignedIn) {
+        else if (c.isSignedIn) {
           var k,
             R = d[l.id],
             L = (null === R || void 0 === R ? void 0 : R.length) || 0,
@@ -1596,9 +1596,9 @@
               <F.a className="GameWidget-Button-Centered">
                 {L > 0 ? (
                   <div className="GameWidget-UpcomingBet">
-                    <Y.J /> {L > 0 ? "".concat(D.amount, " on ").concat(k) : "No active bets"}
+                    <Y.K /> {L > 0 ? "".concat(D.amount, " on ").concat(k) : "No active bets"}
                   </div>
-                ) : s.coins ? (
+                ) : c.coins ? (
                   <U.a className="GameWidget-Button" variant="success">
                     <u background={B} path={"/bet/".concat(l.id)}>
                       Place a Bet
@@ -1621,15 +1621,15 @@
           );
         var P = null,
           x = null,
-          j = d[l.id],
-          Q = ((null === j || void 0 === j ? void 0 : j.length) || 0) > 0 ? j[0] : void 0;
+          W = d[l.id],
+          Q = ((null === W || void 0 === W ? void 0 : W.length) || 0) > 0 ? W[0] : void 0;
         if (h.started) {
           var H = void 0 !== Q ? pe(Q.odds, Q.amount) : 0;
           (P =
             void 0 !== Q && Q.entityId === l.homeTeam ? (
               <div className="GameWidget-ScoreBet">
                 <div className="GameWidget-ScoreBet-Bet">
-                  <Y.J />
+                  <Y.K />
                   <div className="GameWidget-ScoreBet-Amount">{Q.amount}</div>
                 </div>
                 <div className="GameWidget-ScoreBet-Winnings">
@@ -1642,7 +1642,7 @@
               void 0 !== Q && Q.entityId === l.awayTeam ? (
                 <div className="GameWidget-ScoreBet">
                   <div className="GameWidget-ScoreBet-Bet">
-                    <Y.J />
+                    <Y.K />
                     <div className="GameWidget-ScoreBet-Amount">{Q.amount}</div>
                   </div>
                   <div className="GameWidget-ScoreBet-Winnings">
@@ -1692,7 +1692,7 @@
                 <div className="GameWidget-Outcome-Blurb">
                   You bet{" "}
                   <span className="GameWidget-Outcome-Callout">
-                    <Y.J />
+                    <Y.K />
                      {Q.amount}
                   </span>
                    on the  
@@ -1704,7 +1704,7 @@
                     <span>
                       won{" "}
                       <span className="GameWidget-Outcome-Callout">
-                        <Y.J />
+                        <Y.K />
                          {pe(Q.odds, Q.amount)}
                       </span>
                       .
@@ -1813,7 +1813,7 @@
                       <div className="GameWidget-PlayerLine">
                         <div
                           className="GameWidget-Upcoming-Pitchers-Wrapper"
-                          style={{ background: W(l.awayTeamColor, 0.5) }}
+                          style={{ background: j(l.awayTeamColor, 0.5) }}
                         >
                           <u
                             background={B}
@@ -1827,7 +1827,7 @@
                       <div className="GameWidget-PlayerLine">
                         <div
                           className="GameWidget-Upcoming-Pitchers-Wrapper"
-                          style={{ background: W(l.homeTeamColor, 0.5) }}
+                          style={{ background: j(l.homeTeamColor, 0.5) }}
                         >
                           <u
                             background={B}
@@ -2020,11 +2020,11 @@
               n = e.content,
               l = e.children,
               i = e.url,
-              c = e.className,
+              s = e.className,
               m = e.buttonClassname,
               u = e.handleClick,
               d = Object(r.useState)(!1),
-              h = Object(s.a)(d, 2),
+              h = Object(c.a)(d, 2),
               E = h[0],
               p = h[1],
               f = function () {
@@ -2044,7 +2044,7 @@
                       <div
                         {...Object.assign({}, a, {
                           style: Object(B.a)(Object(B.a)({}, a.style), {}, { top: "12px" }),
-                          className: "Overlay ".concat(c),
+                          className: "Overlay ".concat(s),
                           onMouseOver: f,
                           onMouseOut: v,
                         })}
@@ -2083,7 +2083,7 @@
         De = function (e) {
           var a = e.children,
             t = Object(r.useState)({ leagues: [], subleagues: [], divisions: [], teams: [], players: [] }),
-            n = Object(s.a)(t, 2),
+            n = Object(c.a)(t, 2),
             l = n[0],
             i = n[1];
           return (
@@ -2108,8 +2108,8 @@
             a = e.user,
             t = (e.clearUser, e.setUser),
             n = (Object(r.useContext)(I.context), Object(r.useContext)(Pe.context)),
-            l = (Object(c.f)(), Object(r.useState)(!1)),
-            i = Object(s.a)(l, 2),
+            l = (Object(s.f)(), Object(r.useState)(!1)),
+            i = Object(c.a)(l, 2),
             m = i[0],
             d = i[1],
             p = Object(me.useToasts)().addToast,
@@ -2153,24 +2153,24 @@
               );
             }
           }
-          var k = Object(c.g)(),
+          var k = Object(s.g)(),
             R = null;
           null !== a.idol &&
             (R = (
               <u background={k} path={"/player/".concat(a.idol)} className="Navigation-IdolizedPlayer">
-                <Y.F />
+                <Y.G />
               </u>
             ));
           return (
             <o.a.Fragment>
               <div className="Navigation-User-Top">
                 <Le className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={y} url="/upcoming">
-                  <Y.J />
+                  <Y.K />
                    {a.coins}
                 </Le>
                 {a.unlockedElection ? (
                   <Le className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={b} url="/shop">
-                    <Y.I />
+                    <Y.J />
                      {a.votes}
                   </Le>
                 ) : null}
@@ -2277,11 +2277,11 @@
                     }
                   >
                     <span className="Peanut-Line">
-                      <span className="Peanut-Icon">{m ? "" : <Y.u />}</span> {a.peanuts}
+                      <span className="Peanut-Icon">{m ? "" : <Y.v />}</span> {a.peanuts}
                     </span>
                   </Le>
                   <div className={m ? "Peanut-Eating" : "Peanut"}>
-                    <Y.u />
+                    <Y.v />
                   </div>
                 </div>
               </div>
@@ -2295,15 +2295,15 @@
             </o.a.Fragment>
           );
         },
-        We = function () {
+        je = function () {
           return (
             <o.a.Fragment>
-              <je isModal={!0} path="/signup">
+              <We isModal={!0} path="/signup">
                 Signup
-              </je>
-              <je isModal={!0} path="/login">
+              </We>
+              <We isModal={!0} path="/login">
                 Login
-              </je>
+              </We>
             </o.a.Fragment>
           );
         };
@@ -2311,7 +2311,7 @@
         Object(r.useContext)(I.context);
         var a = Object(r.useContext)(G.context).user,
           t = Object(r.useState)(!1),
-          n = Object(s.a)(t, 2),
+          n = Object(c.a)(t, 2),
           l = (n[0], n[1], []);
         l.push({ text: "League", path: "/", subpaths: ["/upcoming", "/standings", "/leaderboard"] }),
           l.push({ text: "Bulletin", path: "/bulletin" }),
@@ -2320,15 +2320,15 @@
             (l.push({ text: "Shop", path: "/shop", locked: !a.unlockedShop }),
             l.push({ text: "Election", path: "/offseason", locked: !a.unlockedElection }),
             l.push({ text: "Book", path: "/thebook" }));
-        var i = a.isFetching ? null : a.isSignedIn ? <Me /> : <We />;
+        var i = a.isFetching ? null : a.isSignedIn ? <Me /> : <je />;
         return (
           <nav className="Navigation">
             <div className="Navigation-Main">
               {l.map(function (e, a) {
                 return (
-                  <je key={a} path={e.path} subpaths={e.subpaths}>
+                  <We key={a} path={e.path} subpaths={e.subpaths}>
                     {e.text} {e.locked ? <J.c /> : null}
-                  </je>
+                  </We>
                 );
               })}
             </div>
@@ -2336,14 +2336,14 @@
           </nav>
         );
       }
-      function je(e) {
+      function We(e) {
         var a = e.path,
           t = e.isModal,
           n = e.subpaths,
-          r = Object(c.g)(),
+          r = Object(s.g)(),
           l = r.pathname,
           i = !("/login" === l || "/signup" === l),
-          s =
+          c =
             l === a ||
             void 0 !==
               (null === n || void 0 === n
@@ -2355,7 +2355,7 @@
           <u
             background={i && t && r}
             path={a}
-            className={"Navigation-Button" + (s ? " Navigation-Button-Current" : "")}
+            className={"Navigation-Button" + (c ? " Navigation-Button-Current" : "")}
           >
             {e.children}
           </u>
@@ -2365,7 +2365,7 @@
         return (
           <nav className="Navigation">
             <div className="Navigation-User">
-              <We />
+              <je />
             </div>
           </nav>
         );
@@ -2412,35 +2412,13 @@
             This season is brought to you by{" "}
             <span className="Advertisement-SiteHeader-Callout">
               <a
-                href="https://zombiesrungame.com"
+                href="multitude.productions/blaseball"
                 onClick={function () {
-                  return Ye("Zombies Run (MainPage/Title");
+                  return Ye("Multitude (MainPage/Title");
                 }}
                 target="_blank"
               >
-                Zombies, Run!
-              </a>{" "}
-              (
-              <a
-                target="_blank"
-                onClick={function () {
-                  return Ye("Zombies Run (MainPage/iPhone)");
-                }}
-                href="https://search.itunes.apple.com/WebObjects/MZContentLink.woa/wa/link?mt=8&path=apps%2fzombiesrun"
-                style={{ color: "#ede06d" }}
-              >
-                iPhone
-              </a>
-              ,{" "}
-              <a
-                target="_blank"
-                onClick={function () {
-                  return Ye("Zombies Run (MainPage/Android)");
-                }}
-                href="https://play.google.com/store/apps/details?id=com.sixtostart.zombiesrunclient&hl=en_GB"
-                style={{ color: "#f0dd37" }}
-              >
-                Android
+                the Multitude Podcast Collective
               </a>
               )
             </span>
@@ -2454,20 +2432,20 @@
           <o.a.Fragment>
             <Je />
             <div className="LeagueNavigation-Nav">
-              <je path="/">Watch Live</je>
-              <je path="/upcoming">Place Bets</je>
-              <je path="/standings">Standings</je>
-              {j(e.sim, "UNLOCKED_IDOLS") ? <je path="/leaderboard">Idols</je> : null}
+              <We path="/">Watch Live</We>
+              <We path="/upcoming">Place Bets</We>
+              <We path="/standings">Standings</We>
+              {W(e.sim, "UNLOCKED_IDOLS") ? <We path="/leaderboard">Idols</We> : null}
             </div>
           </o.a.Fragment>
         );
       }
       function Ke() {
-        return j(Object(r.useContext)(I.context).sim, "UNLOCKED_IDOLS") ? (
+        return W(Object(r.useContext)(I.context).sim, "UNLOCKED_IDOLS") ? (
           <o.a.Fragment>
             <div className="LeagueNavigation-Nav">
-              <je path="/">Standings</je>
-              <je path="/leaderboard">Idols</je>
+              <We path="/">Standings</We>
+              <We path="/leaderboard">Idols</We>
             </div>
           </o.a.Fragment>
         ) : null;
@@ -2478,7 +2456,7 @@
         Ze = function (e) {
           var a = e.dateString,
             t = Object(r.useState)(),
-            n = Object(s.a)(t, 2),
+            n = Object(c.a)(t, 2),
             l = n[0],
             i = n[1];
           return (
@@ -2530,9 +2508,9 @@
       var Xe = o.a.createContext([{ id: "", place: 0 }]),
         _e = function (e) {
           var a = e.children,
-            t = Object(c.g)().pathname,
+            t = Object(s.g)().pathname,
             n = Object(r.useState)([{ id: "", place: 0 }]),
-            l = Object(s.a)(n, 2),
+            l = Object(c.a)(n, 2),
             i = l[0],
             m = l[1];
           return (
@@ -2567,9 +2545,9 @@
           a = Object(r.useContext)(Pe.context),
           t = Object(r.useContext)($e.context),
           n = Object(r.useState)([]),
-          l = Object(s.a)(n, 2),
+          l = Object(c.a)(n, 2),
           i = l[0],
-          c = l[1];
+          s = l[1];
         function m(e) {
           for (var t = 0; t < a.teams.length; t++) {
             for (var n = a.teams[t], r = 0; r < n.lineup.length; r++) if (n.lineup[r] === e.id) return n;
@@ -2593,7 +2571,7 @@
                             a.next = 6;
                             break;
                           }
-                          return (a.next = 3), se(e);
+                          return (a.next = 3), ce(e);
                         case 3:
                           if (((n = a.sent), (r = []), void 0 !== n)) {
                             for (
@@ -2611,7 +2589,7 @@
                               l--
                             )
                               o();
-                            c(
+                            s(
                               r.sort(function (e, a) {
                                 return e.place > a.place ? 1 : -1;
                               })
@@ -2683,8 +2661,8 @@
           t,
           n,
           l,
-          i = Object(c.g)(),
-          s = Object(r.useContext)(G.context).user;
+          i = Object(s.g)(),
+          c = Object(r.useContext)(G.context).user;
         return void 0 !== e.info ? (
           <u
             background={i}
@@ -2700,7 +2678,7 @@
               <div className="Leaderboard-Player-Position">{e.info.place}</div>
               {e.info.deceased ? <div className="Leaderboard-Player-Deceased-Icon" /> : null}
               <div className="Leaderboard-Player-Name">
-                {s.idol === (null === (n = e.info.player) || void 0 === n ? void 0 : n.id) ? <Y.F /> : ""}{" "}
+                {c.idol === (null === (n = e.info.player) || void 0 === n ? void 0 : n.id) ? <Y.G /> : ""}{" "}
                 {null === (l = e.info.player) || void 0 === l ? void 0 : l.name}
               </div>
             </div>
@@ -2762,17 +2740,17 @@
           return a.id === e.division;
         });
         if (void 0 === a) return null;
-        for (var t = [], n = [], l = [], i = [], s = 0; s < a.teams.length; s++) {
-          for (var c = sa(a.teams[s], e.standings), m = !1, u = 0; u < n.length; u++) {
+        for (var t = [], n = [], l = [], i = [], c = 0; c < a.teams.length; c++) {
+          for (var s = ca(a.teams[c], e.standings), m = !1, u = 0; u < n.length; u++) {
             var d = l[u];
-            if (c[0] > d) {
-              n.splice(u, 0, a.teams[s]), l.splice(u, 0, c[0]), i.splice(u, 0, c[1]), (m = !0);
+            if (s[0] > d) {
+              n.splice(u, 0, a.teams[c]), l.splice(u, 0, s[0]), i.splice(u, 0, s[1]), (m = !0);
               break;
             }
           }
-          m || (n.push(a.teams[s]), l.push(c[0]), i.push(c[1]));
+          m || (n.push(a.teams[c]), l.push(s[0]), i.push(s[1]));
         }
-        for (var h = 0; h < n.length; h++) t.push(<ca key={h} team={n[h]} wins={l[h]} losses={i[h]} />);
+        for (var h = 0; h < n.length; h++) t.push(<sa key={h} team={n[h]} wins={l[h]} losses={i[h]} />);
         return (
           <div className="Standings-Division">
             <div className="Standings-Division-Header">{a.name}</div>
@@ -2780,7 +2758,7 @@
           </div>
         );
       }
-      function sa(e, a) {
+      function ca(e, a) {
         var t = 0,
           n = 0;
         if (void 0 !== a) {
@@ -2797,8 +2775,8 @@
         }
         return [t, n];
       }
-      function ca(e) {
-        var a = Object(c.g)(),
+      function sa(e) {
+        var a = Object(s.g)(),
           t = Object(r.useContext)(Pe.context).teams.find(function (a) {
             return a.id === e.team;
           });
@@ -2829,8 +2807,8 @@
             n = Object(r.useContext)(I.context),
             l = Object(r.useContext)(G.context).user,
             i = Object(r.useContext)(M.context),
-            s = void 0 === n.schedule;
-          function c() {
+            c = void 0 === n.schedule;
+          function s() {
             switch (t) {
               case "/upcoming":
                 return ra.Upcoming;
@@ -2844,8 +2822,8 @@
           }
           if (!n.sim) return null;
           var m,
-            u = c() === ra.Upcoming ? n.tomorrowSchedule : n.schedule,
-            d = c() === ra.Live ? n.sim.day : n.sim.day + 1,
+            u = s() === ra.Upcoming ? n.tomorrowSchedule : n.schedule,
+            d = s() === ra.Live ? n.sim.day : n.sim.day + 1,
             h =
               void 0 === u ? null : (
                 <ul>
@@ -2865,11 +2843,11 @@
                           if (e.gameComplete && !a.gameComplete) return 1;
                           var r = void 0 !== i[e.id] && i[e.id].length > 0,
                             o = void 0 !== i[a.id] && i[a.id].length > 0,
-                            s = r ? i[e.id][0] : void 0,
-                            c = o ? i[a.id][0] : void 0;
+                            c = r ? i[e.id][0] : void 0,
+                            s = o ? i[a.id][0] : void 0;
                           if (r && o) {
-                            if (s.amount > c.amount) return -1;
-                            if (c.amount > s.amount) return 1;
+                            if (c.amount > s.amount) return -1;
+                            if (s.amount > c.amount) return 1;
                           } else {
                             if (r) return -1;
                             if (o) return 1;
@@ -2890,13 +2868,13 @@
               ) : (
                 <div>
                   <div className="DailySchedule-Countdown">
-                    {c() === ra.Upcoming ? <Ze dateString={x().toString()} /> : null}
+                    {s() === ra.Upcoming ? <Ze dateString={x().toString()} /> : null}
                   </div>
                   {h}
                 </div>
               ),
             p = void 0 !== n && void 0 !== n.sim ? n.sim.season : -1;
-          switch (c()) {
+          switch (s()) {
             case ra.Leaderboard:
               m = <ea />;
               break;
@@ -2905,7 +2883,7 @@
               break;
             case ra.Live:
             case ra.Upcoming:
-              m = s ? <Ee /> : E;
+              m = c ? <Ee /> : E;
           }
           return (
             <div>
@@ -2930,8 +2908,8 @@
             n,
             l,
             i,
-            s,
             c,
+            s,
             m,
             u,
             d,
@@ -3028,12 +3006,12 @@
               void 0 !==
               (null === f ||
               void 0 === f ||
-              null === (s = f.postseason) ||
-              void 0 === s ||
-              null === (c = s.tomorrowRound) ||
-              void 0 === c
+              null === (c = f.postseason) ||
+              void 0 === c ||
+              null === (s = c.tomorrowRound) ||
+              void 0 === s
                 ? void 0
-                : c.roundNumber)
+                : s.roundNumber)
                 ? null === f ||
                   void 0 === f ||
                   null === (m = f.postseason) ||
@@ -3106,13 +3084,13 @@
             });
             if (void 0 === l) return null;
             var i = void 0 !== l ? l.mainColor : "#ffffff",
-              s = void 0 !== l ? l.fullName : "",
-              c =
+              c = void 0 !== l ? l.fullName : "",
+              s =
                 void 0 !== l ? (
                   <div className="PlayoffsEnd-Body">
                     Your Champions are the{" "}
                     <span className="PlayoffsEnd-Callout" style={{ color: i }}>
-                      {s}!
+                      {c}!
                     </span>
                   </div>
                 ) : null;
@@ -3120,7 +3098,7 @@
               <div>
                 <div className="PlayoffsEnd">
                   <div className="PlayoffsEnd-Header">Season {t.sim.season + 1} is over.</div>
-                  {c}
+                  {s}
                   <div className="PlayoffsEnd-End">
                     <a href="/offseason">The Election ends soon! Go cast your Votes. The next season starts in...</a>
                   </div>
@@ -3135,12 +3113,12 @@
       t(110);
       function pa() {
         var e = Object(r.useState)([]),
-          a = Object(s.a)(e, 2),
+          a = Object(c.a)(e, 2),
           t = a[0],
           n = a[1],
           l = Object(r.useState)(!1),
-          i = Object(s.a)(l, 2),
-          c = i[0],
+          i = Object(c.a)(l, 2),
+          s = i[0],
           m = i[1];
         Object(r.useEffect)(function () {
           u();
@@ -3175,7 +3153,7 @@
           )).apply(this, arguments);
         }
         var p = "EventTicker-Group";
-        if (c) {
+        if (s) {
           for (var f = 0, v = 0; v < t.length; v++) f += t[v].length;
           var A = f / 5;
           p +=
@@ -3303,12 +3281,12 @@
         );
       }
       function Aa() {
-        var e = Object(c.g)();
+        var e = Object(s.g)();
         return (
           <div className="About-All">
             <div className="About-Header">Welcome to Blaseball.</div>
             <u background={e} path="/signup" className="About-Ticket">
-              <Y.I />
+              <Y.J />
             </u>
             <a
               href="https://www.polygon.com/features/2020/8/6/21357131/blaseball-fans-absurd-baseball-sim-the-game-band"
@@ -3384,7 +3362,7 @@
       function Ta(e) {
         switch (e.id) {
           case "EXTRA_STRIKE":
-            return <Y.p />;
+            return <Y.q />;
           case "SHAME_PIT":
             return <Y.b />;
           case "HOME_FIELD":
@@ -3392,21 +3370,21 @@
           case "FIREPROOF":
             return <Y.k />;
           case "ALTERNATE":
-            return <Y.n />;
+            return <Y.o />;
           case "SHELLED":
-            return <Y.u />;
+            return <Y.v />;
           case "SOUNDPROOF":
-            return <Y.m />;
+            return <Y.n />;
           case "REVERBERATING":
             return <Y.d />;
           case "BLOOD_THIEF":
-            return <Y.A />;
+            return <Y.B />;
           case "BLOOD_DONOR":
-            return <Y.s />;
+            return <Y.t />;
           case "BLOOD_WINNER":
-            return <Y.w />;
+            return <Y.x />;
           case "BLOOD_PITY":
-            return <Y.G />;
+            return <Y.H />;
           case "BLOOD_FAITH":
           case "BLOOD_LAW":
           case "BLOOD_CHAOS":
@@ -3557,12 +3535,12 @@
         );
       }
       var wa = function (e) {
-          var a = Object(c.h)().nickname,
+          var a = Object(s.h)().nickname,
             t = Object(r.useContext)(I.context),
             n = Object(r.useContext)(Pe.context),
-            l = Object(c.g)(),
+            l = Object(s.g)(),
             i = Object(r.useState)({ lineup: [], rotation: [], bullpen: [], bench: [] }),
-            m = Object(s.a)(i, 2),
+            m = Object(c.a)(i, 2),
             d = m[0],
             p = m[1],
             f = Object(r.useContext)(G.context).user,
@@ -3575,7 +3553,7 @@
           var A = (function () {
             var e = Object(E.a)(
               h.a.mark(function e() {
-                var a, t, n, r, o, l, i, s, c, m;
+                var a, t, n, r, o, l, i, c, s, m;
                 return h.a.wrap(function (e) {
                   for (;;)
                     switch ((e.prev = e.next)) {
@@ -3588,7 +3566,7 @@
                       case 2:
                         for (a = [], t = 0; t < v.lineup.length; t++) a.push(v.lineup[t]);
                         for (n = 0; n < v.rotation.length; n++) a.push(v.rotation[n]);
-                        return (e.next = 7), se(a);
+                        return (e.next = 7), ce(a);
                       case 7:
                         for (
                           r = e.sent,
@@ -3606,9 +3584,9 @@
                         )
                           l(i);
                         for (
-                          s = [],
-                            c = function (e) {
-                              s.push(
+                          c = [],
+                            s = function (e) {
+                              c.push(
                                 r.find(function (a) {
                                   return v.rotation[e] === a.id;
                                 })
@@ -3618,8 +3596,8 @@
                           m < v.rotation.length;
                           m++
                         )
-                          c(m);
-                        p({ lineup: o, rotation: s, bench: [], bullpen: [] });
+                          s(m);
+                        p({ lineup: o, rotation: c, bench: [], bullpen: [] });
                       case 15:
                       case "end":
                         return e.stop();
@@ -3649,7 +3627,7 @@
                         : "")
                     }
                   >
-                    {f.idol === e.id ? <Y.F /> : ""} {null === e || void 0 === e ? void 0 : e.name}
+                    {f.idol === e.id ? <Y.G /> : ""} {null === e || void 0 === e ? void 0 : e.name}
                   </div>
                   <div className="Team-Player-Vibe">
                     {Ba(e, void 0 !== (null === (a = t.sim) || void 0 === a ? void 0 : a.day) ? t.sim.day : -1)}
@@ -3680,7 +3658,7 @@
                   <div
                     className={"Team-Player-Header" + (e.permAttr.includes("SHELLED") ? " Team-Player-Shelled" : "")}
                   >
-                    {f.idol === e.id ? <Y.F /> : ""} {null === e || void 0 === e ? void 0 : e.name}
+                    {f.idol === e.id ? <Y.G /> : ""} {null === e || void 0 === e ? void 0 : e.name}
                   </div>
                   <div className="Team-Player-Vibe">
                     {Ba(e, void 0 !== (null === (a = t.sim) || void 0 === a ? void 0 : a.day) ? t.sim.day : -1)}
@@ -3781,7 +3759,7 @@
         ka = function (e) {
           var a = e.children,
             t = Object(r.useState)({ doc: void 0 }),
-            n = Object(s.a)(t, 2),
+            n = Object(c.a)(t, 2),
             l = n[0],
             i = n[1];
           return (
@@ -3805,12 +3783,12 @@
         var e,
           a = Object(me.useToasts)().addToast,
           t = Object(r.useState)(),
-          n = Object(s.a)(t, 2),
+          n = Object(c.a)(t, 2),
           l = n[0],
           i = n[1],
-          c = Object(r.useContext)(G.context),
-          m = c.user,
-          u = c.setUser,
+          s = Object(r.useContext)(G.context),
+          m = s.user,
+          u = s.setUser,
           d = Object(r.useContext)(Pe.context).teams.find(function (e) {
             return e.id === m.favoriteTeam;
           }),
@@ -3922,8 +3900,8 @@
               : m.unlockedShop
               ? (function (e, a, t, n, r, l) {
                   var i,
-                    s,
                     c,
+                    s,
                     m,
                     u,
                     d,
@@ -3943,7 +3921,7 @@
                         amount: 100,
                         toast: "Vote purchased. You now have ".concat(e.votes + 1),
                         available: !0,
-                        icon: <Y.I />,
+                        icon: <Y.J />,
                         buyUrl: "/api/buyVote",
                         userUpdate: function () {
                           a(Object(B.a)(Object(B.a)({}, e), {}, { votes: e.votes + 1, coins: e.coins - 100 }));
@@ -3957,7 +3935,7 @@
                         amount: 100,
                         available: !0,
                         toast: "Welcome, Voter! You have ".concat(e.votes, " Vote already from signing up."),
-                        icon: <Y.I />,
+                        icon: <Y.J />,
                         buyUrl: "/api/buyUnlockElection",
                         userUpdate: function () {
                           a(Object(B.a)(Object(B.a)({}, e), {}, { unlockedElection: !0, coins: e.coins - 100 }));
@@ -3965,17 +3943,31 @@
                       };
                   g &&
                     g.delta &&
-                    (c = {
+                    (s = {
                       id: 5,
-                      name: "Zombies, Run!",
-                      description:
-                        'Zombies, Run! -- Now featuring "Home Run", an audio Blaseball experience. Play for free on iPhone and Android',
+                      name: "The Multitude Podcast Collective",
+                      description: "",
+                      isSponsor: !0,
+                      sponsorText: (
+                        <o.a.Fragment>
+                          Multitude has the perfect podcast for each team. Click{" "}
+                          <a
+                            href="https://multitude.productions/blaseball"
+                            onClick={function () {
+                              return Ye("Multitude (ShopItem)");
+                            }}
+                            target="_blank"
+                            className="Shop-Item-Link"
+                          >
+                            <strong>HERE</strong>
+                          </a>{" "}
+                          to find yours!
+                        </o.a.Fragment>
+                      ),
                       amount: 0,
                       toast: "Have a great time listening.",
                       available: !0,
-                      handleComplete: function () {
-                        window.open("https://zombiesrungame.com"), Ye("Zombies Run (ShopItem)");
-                      },
+                      handleComplete: function () {},
                     });
                   var y = de.maxBetTiers[Math.min(e.maxBetTier, de.maxBetTiers.length - 1)],
                     b = de.maxBetTiers[e.maxBetTier + 1];
@@ -4049,7 +4041,7 @@
                           maxed: !0,
                           amount: 0,
                         };
-                  if (j(t, "UNLOCKED_PEANUTS") && r) {
+                  if (W(t, "UNLOCKED_PEANUTS") && r) {
                     if (
                       ((f = {
                         id: 6,
@@ -4133,7 +4125,7 @@
                     }
                   }
                   if (
-                    ((s = {
+                    ((c = {
                       id: 4,
                       name: "Beg",
                       description:
@@ -4169,21 +4161,21 @@
                     var P = de.idolStrikeoutsTiers[0],
                       M = Object.create(e.relics);
                     M.Idol_Strikeouts = 0;
-                    var W = "Adorn yourself. When your Idol strikes a batter out, you'll earn ".concat(
+                    var j = "Adorn yourself. When your Idol strikes a batter out, you'll earn ".concat(
                         P.amount,
                         " coins."
                       ),
                       x = !0;
-                    ("" != e.idol && null != e.idol) || ((W += " Go to a Player page to choose an Idol."), (x = !1)),
+                    ("" != e.idol && null != e.idol) || ((j += " Go to a Player page to choose an Idol."), (x = !1)),
                       (E = {
                         id: 14,
                         name: "Strikeout Pendant",
-                        description: W,
+                        description: j,
                         amount: P.price,
                         toast: "Coins per Idol strikeout is now ".concat(P.amount),
                         available: x,
                         buyUrl: "/api/buyRelic",
-                        icon: <Y.l />,
+                        icon: <Y.m />,
                         buyParams: { relicId: "Idol_Strikeouts" },
                         userUpdate: function () {
                           a(Object(B.a)(Object(B.a)({}, e), {}, { coins: e.coins - P.price, relics: M }));
@@ -4204,7 +4196,7 @@
                         toast: "Coins per Idol strikeout is now ".concat(D.amount),
                         available: !0,
                         buyUrl: "/api/buyRelic",
-                        icon: <Y.l />,
+                        icon: <Y.m />,
                         buyParams: { relicId: "Idol_Strikeouts" },
                         userUpdate: function () {
                           a(Object(B.a)(Object(B.a)({}, e), {}, { coins: e.coins - D.price, relics: F }));
@@ -4215,7 +4207,7 @@
                     E = {
                       id: 14,
                       name: "Strikeout Pendant",
-                      icon: <Y.l />,
+                      icon: <Y.m />,
                       description: "Adorn yourself. When your Idol strikes out a batter, you earn ".concat(
                         J,
                         " coins. You are maxed out."
@@ -4244,7 +4236,7 @@
                         toast: "Coins per Idol shutout is now ".concat(q.amount),
                         available: X,
                         buyUrl: "/api/buyRelic",
-                        icon: <Y.l />,
+                        icon: <Y.m />,
                         buyParams: { relicId: "Idol_Shutouts" },
                         userUpdate: function () {
                           a(Object(B.a)(Object(B.a)({}, e), {}, { coins: e.coins - q.price, relics: z }));
@@ -4265,7 +4257,7 @@
                         toast: "Coins per Idol shutout is now ".concat(K.amount),
                         available: !0,
                         buyUrl: "/api/buyRelic",
-                        icon: <Y.l />,
+                        icon: <Y.m />,
                         buyParams: { relicId: "Idol_Shutouts" },
                         userUpdate: function () {
                           a(Object(B.a)(Object(B.a)({}, e), {}, { coins: e.coins - K.price, relics: ee }));
@@ -4281,7 +4273,7 @@
                         " coins. You are maxed out."
                       ),
                       maxed: !0,
-                      icon: <Y.l />,
+                      icon: <Y.m />,
                       amount: 0,
                     };
                   }
@@ -4305,28 +4297,28 @@
                         toast: "Coins per Idol homer is now ".concat(re.amount),
                         available: ie,
                         buyUrl: "/api/buyRelic",
-                        icon: <Y.l />,
+                        icon: <Y.m />,
                         buyParams: { relicId: "Idol_Homers" },
                         userUpdate: function () {
                           a(Object(B.a)(Object(B.a)({}, e), {}, { coins: e.coins - re.price, relics: oe }));
                         },
                       });
                   } else if (void 0 !== ne) {
-                    var se = te.amount,
-                      ce = ne.amount,
+                    var ce = te.amount,
+                      se = ne.amount,
                       me = Object.create(e.relics);
                     (me.Idol_Homers = me.Idol_Homers + 1),
                       (h = {
                         id: 13,
                         name: "Home Run Pendant",
                         description: "Adorn yourself. When your Idol hits a Home Run, you'll earn "
-                          .concat(ce, " coins. You currently earn ")
-                          .concat(se, " coins per Home Run."),
+                          .concat(se, " coins. You currently earn ")
+                          .concat(ce, " coins per Home Run."),
                         amount: ne.price,
                         toast: "Coins per Idol home run is now ".concat(ne.amount),
                         available: !0,
                         buyUrl: "/api/buyRelic",
-                        icon: <Y.l />,
+                        icon: <Y.m />,
                         buyParams: { relicId: "Idol_Homers" },
                         userUpdate: function () {
                           a(Object(B.a)(Object(B.a)({}, e), {}, { coins: e.coins - ne.price, relics: me }));
@@ -4337,7 +4329,7 @@
                     h = {
                       id: 13,
                       name: "Home Run Pendant",
-                      icon: <Y.l />,
+                      icon: <Y.m />,
                       description: "Adorn yourself. When your Idol hits a Home Run, you earn ".concat(
                         ue,
                         " coins. You are maxed out."
@@ -4363,7 +4355,7 @@
                         toast: "Coins per Idol hit is now ".concat(pe.amount),
                         available: Ae,
                         buyUrl: "/api/buyRelic",
-                        icon: <Y.l />,
+                        icon: <Y.m />,
                         buyParams: { relicId: "Idol_Hits" },
                         userUpdate: function () {
                           a(Object(B.a)(Object(B.a)({}, e), {}, { coins: e.coins - pe.price, relics: fe }));
@@ -4384,7 +4376,7 @@
                         toast: "Coins per Idol hit is now ".concat(Ee.amount),
                         available: !0,
                         buyUrl: "/api/buyRelic",
-                        icon: <Y.l />,
+                        icon: <Y.m />,
                         buyParams: { relicId: "Idol_Hits" },
                         userUpdate: function () {
                           a(Object(B.a)(Object(B.a)({}, e), {}, { coins: e.coins - Ee.price, relics: be }));
@@ -4400,11 +4392,11 @@
                         " coins. You are maxed out."
                       ),
                       maxed: !0,
-                      icon: <Y.l />,
+                      icon: <Y.m />,
                       amount: 0,
                     };
                   }
-                  return j(t, "UNLOCKED_IDOLS") ? [c, d, E, i, h, p, m, u, s, f, v, A] : [c, i, m, u, s, f, v, A];
+                  return W(t, "UNLOCKED_IDOLS") ? [s, d, E, i, h, p, m, u, c, f, v, A] : [s, i, m, u, c, f, v, A];
                 })(m, u, p.sim, v, f, d)
               : (function (e, a) {
                   var t = [];
@@ -4434,7 +4426,15 @@
               {void 0 !== (null === f || void 0 === f ? void 0 : f.doc) ? (
                 <div className="Shop-Grid">
                   {e.map(function (e, a) {
-                    return void 0 === e ? null : (
+                    return void 0 === e ? null : e.isSponsor ? (
+                      <div className="Shop-Item Shop-Item-Sponsor" key={a}>
+                        <div className="Shop-Item-Header">
+                          {e.name}
+                          <span className="Shop-Item-Icon">{e.icon}</span>
+                        </div>
+                        <div className="Shop-Item-Body Shop-Item-Body-Sponsor">{e.sponsorText}</div>
+                      </div>
+                    ) : (
                       <div className="Shop-Item" key={a}>
                         <div className="Shop-Item-Header">
                           {e.name}
@@ -4442,7 +4442,7 @@
                         </div>
                         <div className="Shop-Item-Body">{e.description}</div>
                         <div className="Shop-Item-Checkout">
-                          <Y.J className="Shop-Item-Coins" />
+                          <Y.K className="Shop-Item-Coins" />
                           <div className="Shop-Item-Amount">
                             {(function (e) {
                               return e.maxed ? "N/A" : 0 === e.amount ? "Free" : e.amount.toString();
@@ -4499,9 +4499,9 @@
             n = a.setUser,
             l = Object(r.useContext)(Pe.context),
             i = Object(r.useState)(),
-            c = Object(s.a)(i, 2),
-            m = c[0],
-            u = c[1],
+            s = Object(c.a)(i, 2),
+            m = s[0],
+            u = s[1],
             d = (function () {
               var a = Object(E.a)(
                 h.a.mark(function a() {
@@ -4581,7 +4581,7 @@
         Da = function (e) {
           var a = Object(r.useContext)(G.context).user,
             t = Object(r.useState)(!1),
-            n = Object(s.a)(t, 2),
+            n = Object(c.a)(t, 2),
             l = n[0],
             i = n[1];
           return (
@@ -4614,19 +4614,19 @@
           (t(116),
           function (e) {
             var a = Object(r.useContext)(G.context).initUser,
-              t = Object(c.f)(),
+              t = Object(s.f)(),
               n = Object(me.useToasts)().addToast,
               l = Object(r.useState)(!1),
-              i = Object(s.a)(l, 2),
+              i = Object(c.a)(l, 2),
               m = i[0],
               u = i[1],
-              d = Object(c.g)(),
+              d = Object(s.g)(),
               h = d.state && d.state.background ? d.state.background.pathname : "",
               E = e.isModal,
               p = e.isLogin,
               f = Object(r.useRef)(null),
               v = Object(r.useRef)(null),
-              A = Object(c.h)().code;
+              A = Object(s.h)().code;
             return (
               <div className={"".concat(E ? "" : "Auth-SignupWrapper")}>
                 {!E && <Aa />}
@@ -4681,14 +4681,14 @@
             );
           }),
         Ma = (t(117), o.a.createContext({ blessings: [], decrees: [], decreesToPass: 0 })),
-        Wa = function (e) {
+        ja = function (e) {
           var a = e.children,
             t = Object(r.useState)({ blessings: [], decrees: [], decreesToPass: 0 }),
-            n = Object(s.a)(t, 2),
+            n = Object(c.a)(t, 2),
             l = n[0],
             i = n[1];
-          function c() {
-            return (c = Object(E.a)(
+          function s() {
+            return (s = Object(E.a)(
               h.a.mark(function e() {
                 var a;
                 return h.a.wrap(function (e) {
@@ -4709,15 +4709,15 @@
           return (
             Object(r.useEffect)(function () {
               !(function () {
-                c.apply(this, arguments);
+                s.apply(this, arguments);
               })();
             }, []),
             (<Ma.Provider value={l}>{a}</Ma.Provider>)
           );
         };
-      Wa.context = Ma;
+      ja.context = Ma;
       var xa,
-        ja = Wa;
+        Wa = ja;
       t(118);
       !(function (e) {
         (e[(e.DECREE = 0)] = "DECREE"), (e[(e.BONUS = 1)] = "BONUS");
@@ -4767,13 +4767,13 @@
           );
         },
         Ja = function () {
-          var e = Object(r.useContext)(ja.context),
+          var e = Object(r.useContext)(Wa.context),
             a = Object(r.useContext)(G.context).user,
             t = Object(r.useState)(),
-            n = Object(s.a)(t, 2),
+            n = Object(c.a)(t, 2),
             l = n[0],
             i = n[1],
-            m = Object(c.g)(),
+            m = Object(s.g)(),
             d = <Qa />;
           return (
             a.isFetching || !a.isSignedIn || a.favoriteTeam || (d = <Ha />),
@@ -4981,7 +4981,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function st(e, a) {
+      function ct(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -5001,54 +5001,160 @@
         }
         return r;
       }
-      var ct,
-        mt = (
+      var st = (
           <path d="M8 1c0-.552.448-1 1-1h6c.553 0 1 .448 1 1s-.447 1-1 1h-6c-.552 0-1-.448-1-1zm13 20.554c0 1.284-1.023 2.446-2.424 2.446h-13.153c-1.4 0-2.423-1.162-2.423-2.445 0-.35.076-.709.242-1.057l3.743-7.856c1.04-2.186 2.015-4.581 2.015-7.007v-1.635h2l-.006 2c-.087 2.623-1.09 5.092-1.973 7h3.682l4.377 9h1.496c.309 0 .52-.342.377-.644l-3.743-7.854c-1.046-2.197-2.12-4.791-2.21-7.502v-2h2v1.635c0 2.426.975 4.82 2.016 7.006l3.743 7.856c.165.348.241.707.241 1.057zm-12-1.054c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5 1.5.671 1.5 1.5 1.5 1.5-.671 1.5-1.5zm2-3.5c0-.553-.448-1-1-1-.553 0-1 .447-1 1s.447 1 1 1c.552 0 1-.447 1-1zm3 3c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z" />
         ),
-        ut = function (e) {
+        mt = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = st(e, ["svgRef", "title"]);
+            n = ct(e, ["svgRef", "title"]);
           return (
             <svg {...it({ width: 24, height: 24, viewBox: "0 0 24 24", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
-              {mt}
+              {st}
             </svg>
           );
         },
-        dt = o.a.forwardRef(function (e, a) {
-          return <ut {...it({ svgRef: a }, e)} />;
+        ut = o.a.forwardRef(function (e, a) {
+          return <mt {...it({ svgRef: a }, e)} />;
+        });
+      t.p;
+      function dt() {
+        return (dt =
+          Object.assign ||
+          function (e) {
+            for (var a = 1; a < arguments.length; a++) {
+              var t = arguments[a];
+              for (var n in t) Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]);
+            }
+            return e;
+          }).apply(this, arguments);
+      }
+      function ht(e, a) {
+        if (null == e) return {};
+        var t,
+          n,
+          r = (function (e, a) {
+            if (null == e) return {};
+            var t,
+              n,
+              r = {},
+              o = Object.keys(e);
+            for (n = 0; n < o.length; n++) (t = o[n]), a.indexOf(t) >= 0 || (r[t] = e[t]);
+            return r;
+          })(e, a);
+        if (Object.getOwnPropertySymbols) {
+          var o = Object.getOwnPropertySymbols(e);
+          for (n = 0; n < o.length; n++)
+            (t = o[n]), a.indexOf(t) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]));
+        }
+        return r;
+      }
+      var Et = (
+          <path
+            d="M493.7 21.59C426.6 127.6 339.2 100.6 373.6 32.06c-35.2 10.26-57.7 31.88-60.5 65.67-9.7-2.3-29.4-25.97-18.4-69.83-26.7 39.32-50.8 91.8-42.6 127.1-24 .2-64-39.7-54.5-87.89-46.5 81.29-34 172.89-25 193.79-24.9 0-63.4-70.9-64-118.9-36.72 82.1-48.45 147.1-18.33 194.3-33.05-3.8-53.82-28.3-66.86-69.6C-9.266 485.7 110.2 515 312.6 475.5c55.9-10.9 125.3-40.5 158.7-99.5-69.8 40-121.4 7.4-140.5-6.3 45.8-10.4 112.2-31.6 133.6-92-42 35.7-74.1 13.8-85.6 6.2 54.4-9.1 97.3-71.6 111-127.5-37.5 31.1-69.9 31.9-83.8 22.4 34.5-11.2 92.1-68.8 87.7-157.21zM331.5 113.8c8.7-.2 17.6 2.1 26.1 6.4 2.3 1 4.6 2.3 6.9 3.9 6.9 4.8 12.7 11 15.6 19.3l3.5 10-10 3c-18.8 5.6-29.1 16.9-37.9 32.5l-17.1-10c8.3-14.6 19.9-28.1 36.8-36.5-1.9-1.6-4.2-3.2-6.6-4.5-6.6-3.1-14.4-4.6-18.8-4.1l-2.2-19.8c1.2-.1 2.5-.2 3.7-.2zM294 186.1c9.4 0 19.8 3.5 28.8 9.1 16.8 10.7 28.5 28.9 19.7 45.3C285 379.8 197.1 433.7 91.64 443.8c99.46-49 139.16-153.9 177.46-241.5 4.8-11.4 14.2-16.1 24.9-16.2z"
+            fill="#fff"
+            fillOpacity={1}
+          />
+        ),
+        pt = function (e) {
+          var a = e.svgRef,
+            t = e.title,
+            n = ht(e, ["svgRef", "title"]);
+          return (
+            <svg {...dt({ viewBox: "0 0 512 512", ref: a }, n)}>
+              {t ? <title>{t}</title> : null}
+              {Et}
+            </svg>
+          );
+        },
+        ft = o.a.forwardRef(function (e, a) {
+          return <pt {...dt({ svgRef: a }, e)} />;
+        });
+      t.p;
+      function vt() {
+        return (vt =
+          Object.assign ||
+          function (e) {
+            for (var a = 1; a < arguments.length; a++) {
+              var t = arguments[a];
+              for (var n in t) Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]);
+            }
+            return e;
+          }).apply(this, arguments);
+      }
+      function At(e, a) {
+        if (null == e) return {};
+        var t,
+          n,
+          r = (function (e, a) {
+            if (null == e) return {};
+            var t,
+              n,
+              r = {},
+              o = Object.keys(e);
+            for (n = 0; n < o.length; n++) (t = o[n]), a.indexOf(t) >= 0 || (r[t] = e[t]);
+            return r;
+          })(e, a);
+        if (Object.getOwnPropertySymbols) {
+          var o = Object.getOwnPropertySymbols(e);
+          for (n = 0; n < o.length; n++)
+            (t = o[n]), a.indexOf(t) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]));
+        }
+        return r;
+      }
+      var gt,
+        yt = (
+          <path
+            d="M122.7 23.32l1.7 21.87-16.7 14.25 21.4 5.17 8.4 20.25L149 66.18l21.8-1.75-14.2-16.71 5.1-21.32-20.3 8.35-18.7-11.43zM464 32a16 16 0 0 0-16 16 16 16 0 0 0 16 16 16 16 0 0 0 16-16 16 16 0 0 0-16-16zM239.8 42.5a16 16 0 0 0-16 16 16 16 0 0 0 16 16 16 16 0 0 0 16-16 16 16 0 0 0-16-16zm183.9 6.84c-9.2 1.74-17.7 7.18-25.9 14.28-7.6 6.53-14.7 14.66-20.7 23.45-18.8 3.01-37.6 10.67-50.2 21.13-16.1 13.2-30.4 35.8-38.2 59.1-7.4 3.1-14.4 6.8-20.1 10.8-15.5 10.9-23.5 31.8-29.4 50-5.9 18.3-8.8 34.3-8.8 34.3l17.8 3.2s2.7-15 8.1-31.9c5.5-16.9 14.8-35.3 22.7-40.8 1.3-.9 3-1.9 4.5-2.8-.6 5.7-.6 11.4.3 16.8 1.8 11.4 8 22.3 19 28.2 7.8 4.2 16.6 3.2 24 .2 7.4-3.1 14-8.2 19.7-14.2 5.7-6 10.4-13.1 13.2-20.6 2.8-7.5 3.8-16 .2-23.9h-.1c-3.9-8.4-11.4-13.8-19.4-16.1-8-2.3-16.6-2.2-25.2-.9-1.5.2-2.9.7-4.4 1 7.4-15.8 18-30.7 27.5-38.6 6.2-5.1 16.6-10 27.7-13.6-1.4 3.8-2.5 7.6-3 11.5-1.6 10.5.7 21.9 9.1 29.7 6.1 5.6 14.3 6.5 21.5 5.3 7.1-1.2 14-4.4 20.2-8.5 6.2-4.2 11.7-9.4 15.6-15.5 3.9-6.1 6.5-13.9 4-21.7v-.1c-3.3-10.07-11.5-16.99-20.6-20.27-3.9-1.4-8-2.19-12.2-2.66 2.9-3.26 5.9-6.31 8.9-8.92 6.8-5.84 13.7-9.5 17.6-10.23l-3.4-17.68zM174.8 84.39l-15.2 9.56 34.5 55.25-56.4 2.9 26.5 57.8 16.4-7.6-15.5-33.6 60.6-3.1-50.9-81.21zm216.4 19.31c6.1-.1 11.5.6 15.5 2.1 5.4 1.9 8.1 4.3 9.5 8.8.4 1.1.2 3.3-1.9 6.6-2.2 3.4-6.1 7.2-10.5 10.2-4.5 3-9.5 5.1-13.2 5.7-3.8.7-5.5 0-6.3-.7-3.5-3.2-4.5-7.2-3.5-13.9.8-5.4 3.3-11.9 7-18.6 1.2 0 2.3-.2 3.4-.2zM94.99 123a16 16 0 0 0-16 16 16 16 0 0 0 16 16A16 16 0 0 0 111 139a16 16 0 0 0-16.01-16zm356.11 37.2l-14.4 16.6-21.8-1.8 11.4 18.8-8.5 20.2 21.4-5 16.6 14.3 1.9-21.9 18.7-11.4-20.2-8.5-5.1-21.3zm-123.5 16.5c2.9.1 5.6.5 7.7 1.1 4.3 1.2 6.6 3 8.2 6.4.9 1.9 1 5.4-.7 10-1.7 4.7-5.2 10.1-9.4 14.6s-9.3 8.1-13.5 9.8c-4.2 1.7-6.8 1.6-8.5.7h-.1c-5.8-3.2-8.6-7.8-9.7-15.2-1-6.3-.3-14.3 1.8-22.9 4.9-1.7 9.8-3.1 14.5-3.8 3.5-.5 6.7-.7 9.7-.7zm-202.4 51.9c-7.2-.2-11.7 1.5-14.5 4.3-2.8 2.8-4.5 7.3-4.3 14.5.2 7.3 2.6 16.9 7.2 27.6 9.2 21.5 27.3 47.4 51.6 71.8 24.3 24.3 50.3 42.3 71.8 51.5 10.6 4.6 20.2 7 27.5 7.2 7.3.3 11.7-1.5 14.5-4.3 2.8-2.8 4.6-7.2 4.3-14.5-.2-7.3-2.6-16.9-7.2-27.6-9.2-21.4-27.2-47.4-51.5-71.7-24.3-24.4-50.3-42.4-71.8-51.6-10.7-4.6-20.3-7-27.6-7.2zm232 31.3l-33 54-29.1-27.9-12.4 13 45.1 43.3 33.8-55.2 38.7 32.3 89.3-38.2-7-16.6-79.3 34-46.1-38.7zM93.43 272.6l-17.64 57.9c41.41 49.1 89.71 76.7 142.11 94.7l21.6-6.6c-3.1-1.1-6.4-2.4-9.7-3.8-24.4-10.4-51.7-29.6-77.3-55.3-25.7-25.7-44.9-53-55.34-77.4-1.41-3.2-2.65-6.4-3.73-9.5zm-23.82 78.2l-14.01 46c28.89 27 59 39.2 90.6 50.2l43.4-13.2c-43.2-17.6-84-43.3-119.99-83zM368 352a16 16 0 0 0-16 16 16 16 0 0 0 16 16 16 16 0 0 0 16-16 16 16 0 0 0-16-16zM49.81 415.9l-20.29 66.6 88.28-26.9c-22.77-9.1-45.78-20.7-67.99-39.7z"
+            fill="#fff"
+            fillOpacity={1}
+          />
+        ),
+        bt = function (e) {
+          var a = e.svgRef,
+            t = e.title,
+            n = At(e, ["svgRef", "title"]);
+          return (
+            <svg {...vt({ viewBox: "0 0 512 512", ref: a }, n)}>
+              {t ? <title>{t}</title> : null}
+              {yt}
+            </svg>
+          );
+        },
+        Nt = o.a.forwardRef(function (e, a) {
+          return <bt {...vt({ svgRef: a }, e)} />;
         });
       t.p;
       !(function (e) {
         (e[(e.DECREE = 0)] = "DECREE"), (e[(e.BONUS = 1)] = "BONUS");
-      })(ct || (ct = {}));
-      var ht = function () {
+      })(gt || (gt = {}));
+      var Tt = function () {
           return (
             <a href="/login">
               <U.a className="Decrees-Submit-Button">Login to Vote</U.a>
             </a>
           );
         },
-        Et = function () {
+        Ot = function () {
           return (
             <a href="/welcome">
               <U.a className="Decrees-Submit-Button">Pick a Favorite Team to Vote</U.a>
             </a>
           );
         },
-        pt = function () {
+        St = function () {
           return (
             <m.b to={{ pathname: "/shop" }}>
               <U.a className="Decrees-Submit-Button">Buy Another Vote</U.a>
             </m.b>
           );
         },
-        ft = function (e) {
+        It = function (e) {
           var a = e.isActive;
           return <button className="Decrees-Option-Button">Select{a ? "ed" : ""}</button>;
         };
-      function vt(e) {
+      function Bt(e) {
         return "forbidden_book" === e ? (
           <lt className="Decrees-Option-Icon" />
         ) : "eliminate_team" === e ? (
@@ -5056,13 +5162,13 @@
         ) : "redistribute_wealth" === e ? (
           <Za className="Decrees-Option-Icon" />
         ) : "four_for_four" === e || "fourth_strike" === e ? (
-          <Y.p className="Decrees-Option-Icon" />
+          <Y.q className="Decrees-Option-Icon" />
         ) : "peanuts" === e ? (
-          <Y.u className="Decrees-Option-Icon" />
+          <Y.v className="Decrees-Option-Icon" />
         ) : "popular_evolution" === e ? (
-          <dt className="Decrees-Option-Icon" />
+          <ut className="Decrees-Option-Icon" />
         ) : "enhanced_shame" === e ? (
-          <Y.y className="Decrees-Option-Icon" />
+          <Y.z className="Decrees-Option-Icon" />
         ) : "late_stage" === e ? (
           <Y.g className="Decrees-Option-Icon" />
         ) : "blaserunning" === e ? (
@@ -5070,38 +5176,44 @@
         ) : "eat_the_rich" === e ? (
           <Y.h className="Decrees-Option-Icon" />
         ) : "eat_the_crust" === e ? (
-          <Y.v className="Decrees-Option-Icon" />
+          <Y.w className="Decrees-Option-Icon" />
         ) : "interviews" === e ? (
-          <Y.q className="Decrees-Option-Icon" />
+          <Y.r className="Decrees-Option-Icon" />
         ) : "random_realignment" === e ? (
           <Y.a className="Decrees-Option-Icon" />
         ) : "alternate_reality" === e ? (
           <ba.e className="Decrees-Option-Icon" />
         ) : "targeted_shame" === e ? (
-          <Y.C className="Decrees-Option-Icon" />
+          <Y.D className="Decrees-Option-Icon" />
         ) : "roster_shuffle" === e ? (
           <ya.a className="Decrees-Option-Icon" />
         ) : "home_field_advantage" === e ? (
           <J.b className="Decrees-Option-Icon" />
         ) : "team_punish" === e ? (
-          <Y.L className="Decrees-Option-Icon" />
+          <Y.M className="Decrees-Option-Icon" />
         ) : "do_nothing" === e ? (
-          <Y.x className="Decrees-Option-Icon" />
+          <Y.y className="Decrees-Option-Icon" />
         ) : "confuse_good" === e ? (
-          <Y.E className="Decrees-Option-Icon" />
+          <Y.F className="Decrees-Option-Icon" />
         ) : "confuse_evil" === e ? (
-          <Y.D className="Decrees-Option-Icon" />
+          <Y.E className="Decrees-Option-Icon" />
         ) : "parallel_world" === e ? (
-          <Y.z className="Decrees-Option-Icon" />
+          <Y.A className="Decrees-Option-Icon" />
         ) : "diagonal_world" === e ? (
-          <Y.H className="Decrees-Option-Icon" />
+          <Y.I className="Decrees-Option-Icon" />
         ) : "high_filter" === e ? (
-          <Y.o className="Decrees-Option-Icon" />
+          <Y.p className="Decrees-Option-Icon" />
+        ) : "new_kids" === e ? (
+          <Y.l className="Decrees-Option-Icon" />
+        ) : "hot_sauce" === e ? (
+          <ft className="Decrees-Option-Icon" />
+        ) : "enhanced_party_time" === e ? (
+          <Nt className="Decrees-Option-Icon" />
         ) : (
           <div />
         );
       }
-      var At = function (e) {
+      var wt = function (e) {
           var a = e.title,
             t = e.description,
             n = e.id,
@@ -5114,25 +5226,25 @@
                 return l(n);
               }}
             >
-              {vt(n)}
+              {Bt(n)}
               <div className="Decrees-Option-Header">{a}</div>
               {t && <p className="Decrees-Option-Description">{t}</p>}
-              <ft isActive={r} />
+              <It isActive={r} />
             </div>
           );
         },
-        gt = function () {
-          var e = Object(r.useContext)(ja.context),
+        Ct = function () {
+          var e = Object(r.useContext)(Wa.context),
             a = Object(r.useContext)(G.context).user,
             t = Object(r.useState)(),
-            n = Object(s.a)(t, 2),
+            n = Object(c.a)(t, 2),
             l = n[0],
             i = n[1],
-            m = Object(c.g)(),
-            d = <ht />;
+            m = Object(s.g)(),
+            d = <Tt />;
           return (
-            a.isFetching || !a.isSignedIn || a.favoriteTeam || (d = <Et />),
-            a.isFetching || !a.isSignedIn || a.votes || (d = <pt />),
+            a.isFetching || !a.isSignedIn || a.favoriteTeam || (d = <Ot />),
+            a.isFetching || !a.isSignedIn || a.votes || (d = <St />),
             !a.isFetching &&
               a.isSignedIn &&
               a.favoriteTeam &&
@@ -5146,7 +5258,7 @@
                     return i(void 0);
                   }}
                 >
-                  <u background={m} path={"/vote/".concat(ct.DECREE, "/").concat(l)}>
+                  <u background={m} path={"/vote/".concat(gt.DECREE, "/").concat(l)}>
                     Submit Decree Vote
                   </u>
                 </U.a>
@@ -5161,7 +5273,7 @@
                 <div className="Decrees-Container">
                   {e.decrees.map(function (e, a) {
                     return (
-                      <At
+                      <wt
                         {...Object.assign({ key: a }, e, {
                           isActive: l === e.id,
                           onSelect: function (e) {
@@ -5178,21 +5290,21 @@
           );
         };
       t(120);
-      function yt() {
+      function kt() {
         var e = Object(r.useContext)(I.context),
           a = Object(r.useState)({ recap: void 0, blessingResults: void 0, decreeResults: void 0 }),
-          t = Object(s.a)(a, 2),
+          t = Object(c.a)(a, 2),
           n = t[0],
           l = t[1],
           i = Object(r.useState)(!1),
-          c = Object(s.a)(i, 2),
-          m = c[0],
-          u = c[1],
+          s = Object(c.a)(i, 2),
+          m = s[0],
+          u = s[1],
           d = Object(r.useContext)(Pe.context);
         function p() {
           return (p = Object(E.a)(
             h.a.mark(function a() {
-              var t, n, r, o, i, s, c;
+              var t, n, r, o, i, c, s;
               return h.a.wrap(function (a) {
                 for (;;)
                   switch ((a.prev = a.next)) {
@@ -5212,17 +5324,17 @@
                       for (
                         i = a.sent,
                           r = [],
-                          s = function (e) {
+                          c = function (e) {
                             var a = i.find(function (a) {
                               return a.id === n.bonusResults[e];
                             });
                             a && r.push(a);
                           },
-                          c = 0;
-                        c < n.bonusResults.length;
-                        c++
+                          s = 0;
+                        s < n.bonusResults.length;
+                        s++
                       )
-                        s(c);
+                        c(s);
                     case 13:
                       if (!(n.decreeResults.length > 0)) {
                         a.next = 17;
@@ -5268,7 +5380,7 @@
                         </div>
                       </div>
                       <div className="Recap-Decree-Content">
-                        <div className="Recap-Decree-Icon">{vt(e.decreeId)}</div>
+                        <div className="Recap-Decree-Icon">{Bt(e.decreeId)}</div>
                         <div className="Recap-Decree-Description">
                           {e.description.split("\n").map(function (e, a) {
                             return (
@@ -5358,12 +5470,12 @@
           </div>
         );
       }
-      function bt() {
+      function Rt() {
         var e = Object(r.useContext)(G.context).user,
           a = Object(r.useContext)(I.context);
-        return a && a.sim ? 0 === a.sim.phase ? <yt /> : e.unlockedElection ? <Nt /> : <Ot /> : null;
+        return a && a.sim ? 0 === a.sim.phase ? <kt /> : e.unlockedElection ? <Lt /> : <Dt /> : null;
       }
-      function Nt() {
+      function Lt() {
         var e,
           a = Object(r.useContext)(I.context),
           t = void 0 !== a.sim && void 0 !== a.sim.season ? a.sim.season : -1;
@@ -5380,25 +5492,25 @@
               <Ze dateString={null === (e = a.sim) || void 0 === e ? void 0 : e.nextElectionEnd} />
             </div>
             <div className="Offseason-Body">
-              <ja value={{ blessings: [], decrees: [], decreesToPass: 0 }}>
-                <Tt />
-              </ja>
+              <Wa value={{ blessings: [], decrees: [], decreesToPass: 0 }}>
+                <Gt />
+              </Wa>
             </div>
           </div>
         );
       }
-      function Tt() {
-        var e = Object(r.useContext)(ja.context);
+      function Gt() {
+        var e = Object(r.useContext)(Wa.context);
         return void 0 === e || 0 === e.blessings.length || 0 === e.decrees.length ? (
           <Ee />
         ) : (
           <o.a.Fragment>
-            <gt />
+            <Ct />
             <Ja />
           </o.a.Fragment>
         );
       }
-      function Ot() {
+      function Dt() {
         return (
           <div className="Offseason">
             <div className="Offseason-Info">
@@ -5416,21 +5528,21 @@
         );
       }
       t(121);
-      var St = function (e) {
+      var Pt = function (e) {
         var a = Object(me.useToasts)().addToast,
           t = Object(r.useContext)(G.context),
           n = t.user,
           l = t.setUser,
-          i = Object(c.f)(),
-          m = Object(c.h)(),
+          i = Object(s.f)(),
+          m = Object(s.h)(),
           u = m.voteType,
           d = m.entityId,
           p = Object(r.useState)(1),
-          f = Object(s.a)(p, 2),
+          f = Object(c.a)(p, 2),
           v = f[0],
           A = f[1],
           g = Object(r.useState)(!1),
-          y = Object(s.a)(g, 2),
+          y = Object(c.a)(g, 2),
           b = y[0],
           N = y[1],
           T = { team1: n.favoriteTeam },
@@ -5489,7 +5601,7 @@
                   <ue.a.Label>How many votes do you want to cast?</ue.a.Label>
                   <div className="Vote-Form-Inputs-Amount">
                     <div className="Vote-Ticket-Wrapper">
-                      <Y.I className="Vote-Ticket-Icon" />
+                      <Y.J className="Vote-Ticket-Icon" />
                       {n.votes}
                     </div>
                     <ue.a.Control type="number" value={v} onChange={O} />
@@ -5519,7 +5631,7 @@
         );
       };
       t(122);
-      function It(e) {
+      function Mt(e) {
         var a,
           t = e.path,
           n = Object(r.useContext)(Pe.context),
@@ -5530,14 +5642,14 @@
           return e.id === (null === (a = l.postseason.playoffs) || void 0 === a ? void 0 : a.winner);
         });
         if (void 0 === i) return null;
-        var s = void 0 !== l.sim ? l.sim.season : -1,
-          c = void 0 !== i ? i.mainColor : "#ffffff",
+        var c = void 0 !== l.sim ? l.sim.season : -1,
+          s = void 0 !== i ? i.mainColor : "#ffffff",
           m = void 0 !== i ? i.fullName : "",
           u =
             void 0 !== i ? (
               <div className="PlayoffsEnd-Body">
-                Your Season {s + 1} champions are the{" "}
-                <span className="PlayoffsEnd-Callout" style={{ color: c }}>
+                Your Season {c + 1} champions are the{" "}
+                <span className="PlayoffsEnd-Callout" style={{ color: s }}>
                   {m}!
                 </span>
               </div>
@@ -5559,7 +5671,7 @@
         );
       }
       t(123);
-      var Bt = function () {
+      var jt = function () {
           return (
             <div className="Privacy">
               <h1 className="Privacy-Header">Privacy Policy</h1>
@@ -5932,7 +6044,7 @@
             </div>
           );
         },
-        wt =
+        xt =
           (t(124),
           function () {
             return (
@@ -6457,8 +6569,8 @@
               </div>
             );
           });
-      function Ct() {
-        return (Ct =
+      function Wt() {
+        return (Wt =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -6468,7 +6580,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function kt(e, a) {
+      function Qt(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -6488,23 +6600,23 @@
         }
         return r;
       }
-      var Rt = <image id="Ball" x={87} y={75} width={784} height={911} xlinkHref="<img/png blob>" />,
-        Lt = function (e) {
+      var Ht = <image id="Ball" x={87} y={75} width={784} height={911} xlinkHref="<img/png blob>" />,
+        Ut = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = kt(e, ["svgRef", "title"]);
+            n = Qt(e, ["svgRef", "title"]);
           return (
-            <svg {...Ct({ width: 959, height: 1065, viewBox: "0 0 959 1065", ref: a }, n)}>
+            <svg {...Wt({ width: 959, height: 1065, viewBox: "0 0 959 1065", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
-              {Rt}
+              {Ht}
             </svg>
           );
         },
-        Gt = o.a.forwardRef(function (e, a) {
-          return <Lt {...Ct({ svgRef: a }, e)} />;
+        Ft = o.a.forwardRef(function (e, a) {
+          return <Ut {...Wt({ svgRef: a }, e)} />;
         }),
-        Dt = (t.p, t(125), t(30)),
-        Pt = {
+        Yt = (t.p, t(125), t(30)),
+        Jt = {
           notes: [],
           refreshNotes: (function () {
             var e = Object(E.a)(
@@ -6524,16 +6636,16 @@
             };
           })(),
         },
-        Mt = Object(r.createContext)(Pt),
-        Wt = function (e) {
+        Vt = Object(r.createContext)(Jt),
+        Kt = function (e) {
           var a = e.children,
             t = Object(r.useContext)(G.context),
             n = t.user,
             l = t.setUser,
             i = Object(r.useState)([]),
-            c = Object(s.a)(i, 2),
-            m = c[0],
-            u = c[1],
+            s = Object(c.a)(i, 2),
+            m = s[0],
+            u = s[1],
             d = Object(me.useToasts)().addToast,
             p = Object(r.useRef)(void 0),
             f = Object(r.useRef)(),
@@ -6550,7 +6662,7 @@
                                 return e.json();
                               })
                               .then(function (e) {
-                                e && u([].concat(Object(Dt.a)(m), Object(Dt.a)(e.notes)));
+                                e && u([].concat(Object(Yt.a)(m), Object(Yt.a)(e.notes)));
                               })
                               .catch(function (e) {
                                 u([]);
@@ -6580,7 +6692,7 @@
                               (function () {
                                 var e = Object(E.a)(
                                   h.a.mark(function e(t) {
-                                    var r, o, i, s, c, m, u, E, p, f, v, A, g;
+                                    var r, o, i, c, s, m, u, E, p, f, v, A, g;
                                     return h.a.wrap(function (e) {
                                       for (;;)
                                         switch ((e.prev = e.next)) {
@@ -6623,7 +6735,7 @@
                                             }
                                             return e.abrupt("return");
                                           case 11:
-                                            (s = {
+                                            (c = {
                                               id: "fave_team_win_earns",
                                               message: "You earned "
                                                 .concat(a, " coins from ")
@@ -6632,10 +6744,10 @@
                                                 .concat(r.passiveWinCount > 1 ? "wins" : "win", "."),
                                               userId: n.id,
                                             }),
-                                              d(s.message, { appearance: "info", autoDismiss: !1 });
+                                              d(c.message, { appearance: "info", autoDismiss: !1 });
                                           case 13:
                                             r.idolRewards &&
-                                              ((c = 0),
+                                              ((s = 0),
                                               (m = 0),
                                               (u = 0),
                                               (E = 0),
@@ -6646,7 +6758,7 @@
                                               r.idolRewards.forEach(function (e) {
                                                 switch (e.type) {
                                                   case ze.IdolHomer:
-                                                    c++, (m += e.amount);
+                                                    s++, (m += e.amount);
                                                     break;
                                                   case ze.IdolHit:
                                                     u++, (E += e.amount);
@@ -6683,12 +6795,12 @@
                                                     .concat(u > 1 ? u + " Hits." : "Hits."),
                                                   { appearance: "info", autoDismiss: !1 }
                                                 ),
-                                              c > 0 &&
+                                              s > 0 &&
                                                 d(
                                                   "You earned "
                                                     .concat(m, " coins from ")
                                                     .concat(g, " hitting ")
-                                                    .concat(c > 1 ? c + " Home Runs!" : " a Home Run!"),
+                                                    .concat(s > 1 ? s + " Home Runs!" : " a Home Run!"),
                                                   { appearance: "info", autoDismiss: !1 }
                                                 ));
                                           case 14:
@@ -6806,35 +6918,35 @@
               [m]
             );
           var T = { notes: m, refreshNotes: v };
-          return <Mt.Provider value={T}>{a}</Mt.Provider>;
+          return <Vt.Provider value={T}>{a}</Vt.Provider>;
         };
-      Wt.context = Mt;
-      var xt = Wt;
+      Kt.context = Vt;
+      var qt = Kt;
       t(126);
-      function jt() {
+      function zt() {
         return (
           <div className="TheBook-All">
             <div className="TheBook-Header">The Book of Blaseball</div>
             <div className="TheBook-Subheader">
               The Game of{" "}
               <span className="TheBook-Subheader-Group">
-                <Qt str="||||||||||||||||||" /> and <Qt str="|||||||||||||" />
+                <Zt str="||||||||||||||||||" /> and <Zt str="|||||||||||||" />
               </span>
             </div>
             <div className="TheBook-Subheader">Official Rulebook</div>
             <div className="TheBook-Line TheBook-Bullet">1. Seasons</div>
             <div className="TheBook-Line TheBook-SubBullet">
-              a. Each season of Blaseball shall last 99 games. In the case of <Qt str="the Ultimate ||||||||" />,
-              seasons shall <Qt str="|||||||||||||||||, or at least until the ||||||| have ||||||||." />
+              a. Each season of Blaseball shall last 99 games. In the case of <Zt str="the Ultimate ||||||||" />,
+              seasons shall <Zt str="|||||||||||||||||, or at least until the ||||||| have ||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              b. Every day of Blaseball shall last one <Qt str="|||||" /> hour.
+              b. Every day of Blaseball shall last one <Zt str="|||||" /> hour.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              c. If any games last longer than one <Qt str="|||||" /> hour, a Spillover shall occur, and all games shall
-              be delayed until the next <Qt str="|||||" /> hour. In the case of a game lasting two <Qt str="|||||" />{" "}
+              c. If any games last longer than one <Zt str="|||||" /> hour, a Spillover shall occur, and all games shall
+              be delayed until the next <Zt str="|||||" /> hour. In the case of a game lasting two <Zt str="|||||" />{" "}
               hours, the{" "}
-              <Qt str="entire season should be ||||||||| and both teams should be ||||||||| ||||||||| |||||||| |||| for |||||| |||||||||||." />
+              <Zt str="entire season should be ||||||||| and both teams should be ||||||||| ||||||||| |||||||| |||| for |||||| |||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               d. A season should start on a "Monday" and therefore conclude on a "Friday".
@@ -6848,34 +6960,34 @@
             <div className="TheBook-Line TheBook-SubBullet">
               b. The Postseason should start early on a "Saturday" and conclude within the same day. If the Postseason
               lasts into the following day, no{" "}
-              <Qt str="||||| shall be ||||||||, and both teams shall be |||||||||| |||||||| ||||||||||||." />
+              <Zt str="||||| shall be ||||||||, and both teams shall be |||||||||| |||||||| ||||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               c. Postseason rounds should be played in best 3 of 5 game series.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               d. The home team in each Postseason game shall be{" "}
-              <Qt str="the |||||||||||, if the |||||||||||||||||||." />
+              <Zt str="the |||||||||||, if the |||||||||||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-Bullet">3. Elections</div>
             <div className="TheBook-Line TheBook-SubBullet">
               a. Participants should be allowed to Vote on the rules, rosters, and other effects of the game of
               Blaseball.{" "}
-              <Qt str="The content of such Votes shall be ||||||||||||||| ||||||||||||||||||| ||||||||| entertainment" />
+              <Zt str="The content of such Votes shall be ||||||||||||||| ||||||||||||||||||| ||||||||| entertainment" />
               .
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               <span>b. Decrees will be decided by popular vote.</span>
-              <Qt str="It is understood that ||||||||||||||||| will be a ||||||||||| |||||||||||, and the others shall ||||||||||||||| ||||||||||||||| ||||||||| |||||||||||||." />
+              <Zt str="It is understood that ||||||||||||||||| will be a ||||||||||| |||||||||||, and the others shall ||||||||||||||| ||||||||||||||| ||||||||| |||||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              c. Blessings will be decided by a raffle. <Qt str="It is understood that each of these" /> should give
-              players <Qt str="||||||||||||| |||||||||||" /> control of the league. All won Blessings shall be processed
+              c. Blessings will be decided by a raffle. <Zt str="It is understood that each of these" /> should give
+              players <Zt str="||||||||||||| |||||||||||" /> control of the league. All won Blessings shall be processed
               & applied in order of the standings.{" "}
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              c. <Qt str="||||||||||||||||||" /> may occur at the end of an Election, before Decrees and Blessings are
-              processed. <Qt str="Anything can happen here" />. Good luck.
+              c. <Zt str="||||||||||||||||||" /> may occur at the end of an Election, before Decrees and Blessings are
+              processed. <Zt str="Anything can happen here" />. Good luck.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               d. Elections should end on a "Sunday," although Votes should be able to be cast on any day of the week.
@@ -6885,27 +6997,27 @@
               a. The game of Blaseball should be played between two teams.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              b. Each game should take place <Qt str="at the home team's stadium" /> on the immaterial plane.
+              b. Each game should take place <Zt str="at the home team's stadium" /> on the immaterial plane.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              c. Weather: <Qt str="The home team's stadium should determine the weather." /> In the case that{" "}
-              <Qt str="||||||||||||||||||||" />, a Solar Eclipse shall last until <Qt str="||||||||||||||||||||" />
+              c. Weather: <Zt str="The home team's stadium should determine the weather." /> In the case that{" "}
+              <Zt str="||||||||||||||||||||" />, a Solar Eclipse shall last until <Zt str="||||||||||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              d. There are <Qt str="two positions" /> in Blaseball, <Qt str="||||||||||||||||||||." />
+              d. There are <Zt str="two positions" /> in Blaseball, <Zt str="||||||||||||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               e. When a team is on Defense,{" "}
-              <Qt str="all of the team's ||||||| will stand ||||||||| out in the field. Doesn't really matter where." />
+              <Zt str="all of the team's ||||||| will stand ||||||||| out in the field. Doesn't really matter where." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              f. The pitcher must throw the ball <Qt str="with their hands." />
+              f. The pitcher must throw the ball <Zt str="with their hands." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               g. Once the ball is in play,{" "}
-              <Qt str="||| |||| || ||| |||||||||| ||||| |||||||||| the outcome of the play. ||| |||| ||||||| || ||||||||||||||||" />{" "}
+              <Zt str="||| |||| || ||| |||||||||| ||||| |||||||||| the outcome of the play. ||| |||| ||||||| || ||||||||||||||||" />{" "}
               immaterial plane{" "}
-              <Qt str="|||||||||||||| ||||||| ||||||| ||||||||| ||||||||||||||| |||||||||||||||| |||||||| |||||||| unfathomable." />
+              <Zt str="|||||||||||||| ||||||| ||||||| ||||||||| ||||||||||||||| |||||||||||||||| |||||||| |||||||| unfathomable." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">h. The team with the most runs will win the game.</div>
             <div className="TheBook-Line TheBook-SubBullet">
@@ -6913,31 +7025,31 @@
               must complete the game in shame, despite being mathematically eliminated.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              j. <Qt str="||||||||||||||||||||||" />
+              j. <Zt str="||||||||||||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              k. Crying in Blaseball is <Qt str="||||||||||." />
+              k. Crying in Blaseball is <Zt str="||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-Bullet">
-              5. <Qt str="The Gods" /> and You
+              5. <Zt str="The Gods" /> and You
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               a. Should the Participants open the Forbidden Book,{" "}
-              <Qt str="The Discipline Era should begin||||||||||||||||||||||" /> suffering{" "}
-              <Qt str="upon the league. Players shall be " /> banished{" "}
-              <Qt str="at the ||||||||||| ||||||||| |||| ||||||||||||||||." /> The Discipline Era shall last until{" "}
-              <Qt str="the Participants have" /> atoned.
+              <Zt str="The Discipline Era should begin||||||||||||||||||||||" /> suffering{" "}
+              <Zt str="upon the league. Players shall be " /> banished{" "}
+              <Zt str="at the ||||||||||| ||||||||| |||| ||||||||||||||||." /> The Discipline Era shall last until{" "}
+              <Zt str="the Participants have" /> atoned.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               b. If a team wins three championships, they, and Blaseball, shall ascend.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              c. When teams are sent to <Qt str="||||||||||| |||||||||||||" />, they shall return once{" "}
-              <Qt str="|||||||||||||||| |||||||||||||||||||||| |||||||||||||" />
+              c. When teams are sent to <Zt str="||||||||||| |||||||||||||" />, they shall return once{" "}
+              <Zt str="|||||||||||||||| |||||||||||||||||||||| |||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              d. Divine Favor: the <Qt str="||||" /> have an internal ranking{" "}
-              <Qt str="of favored teams. When a team wins a Divine Favor blessing, they will be" /> boosted to the top
+              d. Divine Favor: the <Zt str="||||" /> have an internal ranking{" "}
+              <Zt str="of favored teams. When a team wins a Divine Favor blessing, they will be" /> boosted to the top
               of the list.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
@@ -6953,39 +7065,39 @@
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               i. Blood Bath:{" "}
-              <Qt str="||||| ||||||, ||||||||||| |||||| ||| ||||||||, ||| ||||| |||| |||| ||||||| ||| ||||||. ||||| |||| || |||||||||||| ||||| || |||| |||||| ||||| |||||||||||||" />
+              <Zt str="||||| ||||||, ||||||||||| |||||| ||| ||||||||, ||| ||||| |||| |||| ||||||| ||| ||||||. ||||| |||| || |||||||||||| ||||| || |||| |||||| ||||| |||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               f. Sunglasses{" "}
-              <Qt str="shall be |||||||||| ||||||||||||| |||||||||||||||||. They shall provide |||||||||||||| may be ||||||||||||||||||||." />
+              <Zt str="shall be |||||||||| ||||||||||||| |||||||||||||||||. They shall provide |||||||||||||| may be ||||||||||||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">g. Splortsmanship, splortsmanship, is BACK.</div>
             <div className="TheBook-Line TheBook-Bullet">
-              6. <Qt str="||||||||||||" />
+              6. <Zt str="||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               a. It is known{" "}
-              <Qt str="that the intention of the game of Blaseball |||||||||||||||||||||||| |||||||||||||||||||| |||||||||||||| |||||||||||||||||| ||||||||||| |||||||||| would be diminished." />
+              <Zt str="that the intention of the game of Blaseball |||||||||||||||||||||||| |||||||||||||||||||| |||||||||||||| |||||||||||||||||| ||||||||||| |||||||||| would be diminished." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              b. <Qt str="|||||||" />: Several entities in the <Qt str="||||||||||||||" /> shall be chosen{" "}
-              <Qt str="||||||||||" /> to bring Blaseball to the people{" "}
-              <Qt str="|||||||||||||||||| ||||||||||||||||||" />
+              b. <Zt str="|||||||" />: Several entities in the <Zt str="||||||||||||||" /> shall be chosen{" "}
+              <Zt str="||||||||||" /> to bring Blaseball to the people{" "}
+              <Zt str="|||||||||||||||||| ||||||||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-Bullet">Signed,</div>
             <div className="TheBook-Line TheBook-SubBullet">
-              <Qt str="||||" />,  <Qt str="||||" />,  <Qt str="||||||||" />,  <Qt str="|||||||" />,  
-              <Qt str="||||||||" />,  <Qt str="|||||||||" />,  <Qt str="|||||||" />,  <Qt str="||||" />,  
-              <Qt str="||||||" />,  H
-              <Qt str="||||||||||" />,  <Qt str="||||||" />,  <Qt str="|||||||" />,  <Qt str="||||| ||||" />,  A
-              <Qt str="|||||| ||||||" />,  <Qt str="||||" />,  N
-              <Qt str="||||||" />,  <Qt str="||" />,  <Qt str="||||||" />,  M
-              <Qt str="|| ||||||" />
+              <Zt str="||||" />,  <Zt str="||||" />,  <Zt str="||||||||" />,  <Zt str="|||||||" />,  
+              <Zt str="||||||||" />,  <Zt str="|||||||||" />,  <Zt str="|||||||" />,  <Zt str="||||" />,  
+              <Zt str="||||||" />,  H
+              <Zt str="||||||||||" />,  <Zt str="||||||" />,  <Zt str="|||||||" />,  <Zt str="||||| ||||" />,  A
+              <Zt str="|||||| ||||||" />,  <Zt str="||||" />,  N
+              <Zt str="||||||" />,  <Zt str="||" />,  <Zt str="||||||" />,  M
+              <Zt str="|| ||||||" />
             </div>
           </div>
         );
       }
-      function Qt(e) {
+      function Zt(e) {
         var a = e.str.split(" ");
         return (
           <span className="TheBook-RedactGroup">
@@ -7002,13 +7114,13 @@
         );
       }
       t(127);
-      function Ht() {
+      function Xt() {
         var e,
           a = Object(r.useContext)(Ra.context);
         return (
           <div className="BigDeal-All">
             <div className="BigDeal-Icon">
-              <Y.u />
+              <Y.v />
             </div>
             <div className="BigDeal-Body">
               <div className="BigDeal-RedLine">
@@ -7019,9 +7131,9 @@
         );
       }
       t(128);
-      var Ut = t(68);
-      function Ft() {
-        return (Ft =
+      var _t = t(68);
+      function $t() {
+        return ($t =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -7031,7 +7143,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Yt(e, a) {
+      function en(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -7051,28 +7163,28 @@
         }
         return r;
       }
-      var Jt = (
+      var an = (
           <path
             d="M248 15c-18.1 0-33 14.88-33 33 0 18.12 14.9 33 33 33s33-14.88 33-33c0-18.12-14.9-33-33-33zm0 18c8.4 0 15 6.61 15 15s-6.6 15-15 15-15-6.61-15-15 6.6-15 15-15zM64 73c-18.12 0-33 14.88-33 33 0 18.1 14.88 33 33 33 18.12 0 33-14.9 33-33 0-18.12-14.88-33-33-33zm0 18c8.39 0 15 6.61 15 15 0 8.4-6.61 15-15 15s-15-6.6-15-15c0-8.39 6.61-15 15-15zm155.9 39.7c-22.5 0-41 18.5-41 41s18.5 41 41 41 41-18.5 41-41-18.5-41-41-41zm0 18c12.8 0 23 10.2 23 23s-10.2 23-23 23-23-10.2-23-23 10.2-23 23-23zM112 162a16 16 0 0 0-16 16 16 16 0 0 0 16 16 16 16 0 0 0 16-16 16 16 0 0 0-16-16zm223 61.4c-5 .2-10.6 2.4-20 7.1l-98.1 49.1c.1.8.1 1.6.1 2.4 0 27-22 49-49 49-11.9 0-22.7-4.2-31.2-11.3l-23.4 11.7c-8.2 4.8-14.26 8.3-18.01 12.9-3.78 4.7-6.39 11-6.39 24.4v43.1c0 10.4.59 14.7 1.18 15.7.6 1.1 3 3 11.52 7.4l78.7 39.4.3.1c16.3 9.7 36.8 8.8 56.7-1.2l199.3-98.9c9.5-5.3 13.6-9.1 15.6-12.7 2-3.7 2.7-8.7 2.7-18.1v-38.6c0-12.7.2-19.8-.8-22.4-.9-2.7-2.5-4.6-12.3-9.4v-.1l-84.8-42.4-.1-.1c-10.9-5.7-16.9-7.3-22-7.1zM168 251c-17.2 0-31 13.8-31 31s13.8 31 31 31 31-13.8 31-31-13.8-31-31-31zm246.8 34.5l7.8 16.2-154 73.8h-.1c-17 7.8-30.3 14.9-45.3 17.6-14.9 2.6-30.8-.4-49.6-11l.4.3-43.5-21.4 8-16.2 43.7 21.5.2.2c16.6 9.3 26.8 10.7 37.8 8.8 10.9-1.9 23.3-8.2 40.8-16.2l153.8-73.6z"
             fill="#fff"
             fillOpacity={1}
           />
         ),
-        Vt = function (e) {
+        tn = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = Yt(e, ["svgRef", "title"]);
+            n = en(e, ["svgRef", "title"]);
           return (
-            <svg {...Ft({ viewBox: "0 0 512 512", ref: a }, n)}>
+            <svg {...$t({ viewBox: "0 0 512 512", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
-              {Jt}
+              {an}
             </svg>
           );
         },
-        Kt = o.a.forwardRef(function (e, a) {
-          return <Vt {...Ft({ svgRef: a }, e)} />;
+        nn = o.a.forwardRef(function (e, a) {
+          return <tn {...$t({ svgRef: a }, e)} />;
         }),
-        qt =
+        rn =
           (t.p,
           (function (e) {
             var a,
@@ -7261,18 +7373,18 @@
             "1298718347463258112",
             "1298714979516858368",
           ]));
-      function zt() {
+      function on() {
         var e,
           a,
           t,
           n,
           l,
           i,
-          c,
+          s,
           m,
           u = Object(r.useContext)(I.context),
           d = Object(r.useState)([]),
-          p = Object(s.a)(d, 2),
+          p = Object(c.a)(d, 2),
           f = p[0],
           v = p[1];
         function A() {
@@ -7312,7 +7424,7 @@
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#deae00" }}>
-                  <Y.r />
+                  <Y.s />
                 </div>
                 <div className="Bulletin-Item-Header-Title">Meet the Bulletin Board!</div>
               </div>
@@ -7384,39 +7496,39 @@
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#32c775" }}>
-                  <Y.K />
+                  <Y.L />
                 </div>
                 <div className="Bulletin-Item-Header-Title">Season 4 Recap</div>
               </div>
               <div className="Bulletin-Item-Contents">
                 <div className="Bulletin-Item-Contents-Text">
-                  <Zt />
+                  <ln />
                   The Hades Tigers became the second Back-to-Back Champion in the history of Internet League Blaseball
                   with a sweep of the New York Millennials in the Internet Series.
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <Zt />
+                  <ln />
                   Feedback was deafening across the ILB as a mysterious force caused players to suddenly switch teams.
                   No one has yet been able to determine the source.
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <Zt />
+                  <ln />
                   The Wave is washing over the Bridge. Are you hearing an Echo?
                 </div>
               </div>
             </o.a.Fragment>
           )),
-          (c = (
+          (s = (
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#c23284" }}>
-                  <Y.B />
+                  <Y.C />
                 </div>
                 <div className="Bulletin-Item-Header-Title">Current Events</div>
               </div>
               <div className="Bulletin-Item-Contents Bulletin-Item-Contents-Text">
                 <div className="Bulletin-Item-Contents-Text">
-                  <Zt />
+                  <ln />
                   The community reached{" "}
                   <a href="https://www.patreon.com/blaseball" target="_blank">
                     <strong>THE FIRST PATREON GOAL</strong>
@@ -7424,16 +7536,16 @@
                   and found the 5-BLOOD BLAGONBALL!
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <Zt />
+                  <ln />
                   Sandie Turner stole THREE BASES in ONE INNING and found the 3-BLOOD BLAGONBALL!
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <Zt />
+                  <ln />
                   Waves broke over the league, resulting in SERIOUS COINAGE for the fans and leaving SIXPACK DOGWALKER
                   confused.
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <Zt />
+                  <ln />
                   Thomas Dracaena hit a ground out to Edric Tosser.
                 </div>
               </div>
@@ -7443,14 +7555,14 @@
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#1b95e0" }}>
-                  <Y.t />
+                  <Y.u />
                 </div>
                 <div className="Bulletin-Item-Header-Title">Art Gallery</div>
               </div>
               <div className="Bulletin-Item-Contents Bulletin-Item-ImageGrid">
-                {qt.map(function (e) {
+                {rn.map(function (e) {
                   return (
-                    <Ut.a
+                    <_t.a
                       id={e}
                       options={{ theme: "dark", conversation: "none", dnt: !0 }}
                       className="Bulletin-Tweet"
@@ -7460,7 +7572,7 @@
               </div>
             </o.a.Fragment>
           )),
-          (m = j(u.sim, "UNLOCKED_IDOLS") ? (
+          (m = W(u.sim, "UNLOCKED_IDOLS") ? (
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#9c2c46" }}>
@@ -7470,10 +7582,10 @@
               </div>
               <div className="Bulletin-Item-Contents">
                 <div className="Bulletin-Item-Contents-Text">
-                  BATH TIME <Kt className="Bulletin-Icon" /> BATH TIME <Kt className="Bulletin-Icon" /> BATH TIME{" "}
-                  <Kt className="Bulletin-Icon" /> BATH TIME <Kt className="Bulletin-Icon" /> BATH TIME{" "}
-                  <Kt className="Bulletin-Icon" /> BATH TIME <Kt className="Bulletin-Icon" /> BATH TIME{" "}
-                  <Kt className="Bulletin-Icon" />
+                  BATH TIME <nn className="Bulletin-Icon" /> BATH TIME <nn className="Bulletin-Icon" /> BATH TIME{" "}
+                  <nn className="Bulletin-Icon" /> BATH TIME <nn className="Bulletin-Icon" /> BATH TIME{" "}
+                  <nn className="Bulletin-Icon" /> BATH TIME <nn className="Bulletin-Icon" /> BATH TIME{" "}
+                  <nn className="Bulletin-Icon" />
                 </div>
               </div>
             </o.a.Fragment>
@@ -7498,7 +7610,7 @@
           <div className="Bulletin">
             <div className="Bulletin-Rows">
               <div className="Bulletin-Item">{t}</div>
-              <div className="Bulletin-Item Bulletin-Tall-Middle">{c}</div>
+              <div className="Bulletin-Item Bulletin-Tall-Middle">{s}</div>
               <div className="Bulletin-Item Bulletin-Tall-Right">{l}</div>
               <div className="Bulletin-Item Bulletin-Bottom-Left">{m}</div>
               <div className="Bulletin-Item Bulletin-Wide-Bottom">{i}</div>
@@ -7518,10 +7630,10 @@
           y
         );
       }
-      function Zt() {
+      function ln() {
         return <ba.f className="Bulletin-Bullet" />;
       }
-      var Xt, _t;
+      var cn, sn;
       t(129);
       !(function (e) {
         (e[(e.SingleA = 0)] = "SingleA"),
@@ -7537,7 +7649,7 @@
           (e[(e.Fire = 10)] = "Fire"),
           (e[(e.Psychic = 11)] = "Psychic"),
           (e[(e.Grass = 12)] = "Grass");
-      })(Xt || (Xt = {})),
+      })(cn || (cn = {})),
         (function (e) {
           (e[(e.Black = 0)] = "Black"),
             (e[(e.LightAndSweet = 1)] = "LightAndSweet"),
@@ -7553,22 +7665,22 @@
             (e[(e.MilkSubstitute = 11)] = "MilkSubstitute"),
             (e[(e.PlentyOfSugar = 12)] = "PlentyOfSugar"),
             (e[(e.Anything = 13)] = "Anything");
-        })(_t || (_t = {}));
-      var $t = t(39);
-      function en(e) {
+        })(sn || (sn = {}));
+      var mn = t(39);
+      function un(e) {
         for (var a = e / 0.2, t = Math.round(2 * a) / 2, n = Math.floor(t), r = Math.ceil(t), l = [], i = 0; i < n; i++)
           l.push(<ya.b />);
         return n !== r && l.push(<ya.c />), (<span>{l}</span>);
       }
-      var an = function (e) {
+      var dn = function (e) {
         var a,
           t,
           n,
-          l = Object(c.h)().id,
+          l = Object(s.h)().id,
           i = Object(r.useContext)(I.context),
           m = Object(r.useContext)(Pe.context),
           u = Object(r.useState)(void 0),
-          d = Object(s.a)(u, 2),
+          d = Object(c.a)(u, 2),
           p = d[0],
           f = d[1],
           v = Object(me.useToasts)().addToast;
@@ -7589,7 +7701,7 @@
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        return (e.next = 2), se([l]);
+                        return (e.next = 2), ce([l]);
                       case 2:
                         void 0 !== (a = e.sent) && 1 == a.length && ((t = a[0]), (n = A(t)), f({ player: t, team: n }));
                       case 4:
@@ -7609,7 +7721,7 @@
             if (void 0 === e) return "NONE";
             if (void 0 === e.bat) return "NONE";
             if ("" === e.bat) return "NONE";
-            var a = $t.collection.find(function (a) {
+            var a = mn.collection.find(function (a) {
               return a.id === e.bat;
             });
             return void 0 === a ? "NONE" : a.attr;
@@ -7618,7 +7730,7 @@
             if (void 0 === e) return "NONE";
             if (void 0 === e.armor) return "NONE";
             if ("" === e.armor) return "NONE";
-            var a = $t.collection.find(function (a) {
+            var a = mn.collection.find(function (a) {
               return a.id === e.armor;
             });
             return void 0 === a ? "NONE" : a.attr;
@@ -7761,7 +7873,7 @@
                         </div>
                         <div className="Player-Team-Name">{void 0 !== p.team ? p.team.fullName : "Null Team"}</div>
                       </div>
-                      {j(i.sim, "UNLOCKED_IDOLS") ? (
+                      {W(i.sim, "UNLOCKED_IDOLS") ? (
                         <F.a className="Player-Button">
                           {C && k !== p.player.id ? (
                             <div className="Idol-Disabled-Tooltip">
@@ -7782,11 +7894,11 @@
                                   >
                                     {"" === k || null === k ? (
                                       <o.a.Fragment>
-                                        <Y.F /> Choose Idol
+                                        <Y.G /> Choose Idol
                                       </o.a.Fragment>
                                     ) : (
                                       <o.a.Fragment>
-                                        <Y.J /> 200 New Idol
+                                        <Y.K /> 200 New Idol
                                       </o.a.Fragment>
                                     )}{" "}
                                   </U.a>
@@ -7795,18 +7907,18 @@
                             </div>
                           ) : k === p.player.id ? (
                             <div className="Player-Button-Idol-Current">
-                              <Y.F /> Your Idol
+                              <Y.G /> Your Idol
                             </div>
                           ) : (
                             <ue.a className="Player-Button-Form" onSubmit={w}>
                               <U.a className="Player-Button-Idol" type="submit" variant="success">
                                 {"" === k || null === k ? (
                                   <o.a.Fragment>
-                                    <Y.F /> Choose Idol
+                                    <Y.G /> Choose Idol
                                   </o.a.Fragment>
                                 ) : (
                                   <o.a.Fragment>
-                                    <Y.J /> 200 New Idol
+                                    <Y.K /> 200 New Idol
                                   </o.a.Fragment>
                                 )}{" "}
                               </U.a>
@@ -7893,7 +8005,7 @@
                     <div className="Player-Info-Line">
                       <div className="Player-Info-Line-Header">Batting</div>
                       <div className="Player-Ratings">
-                        {en(
+                        {un(
                           (function (e) {
                             return (
                               Math.pow(1 - e.tragicness, 0.01) *
@@ -7913,7 +8025,7 @@
                       <div className="Player-Info-Line-Header">Pitching</div>
                       <div className="Player-Ratings">
                         {(function (e) {
-                          return en(
+                          return un(
                             (function (e) {
                               return (
                                 Math.pow(e.shakespearianism, 0.1) *
@@ -7932,7 +8044,7 @@
                       <div className="Player-Info-Line-Header">Baserunning</div>
                       <div className="Player-Ratings">
                         {(function (e) {
-                          return en(
+                          return un(
                             (function (e) {
                               return (
                                 Math.pow(e.laserlikeness, 0.5) *
@@ -7950,7 +8062,7 @@
                       <div className="Player-Info-Line-Header">Defense</div>
                       <div className="Player-Ratings">
                         {(function (e) {
-                          return en(
+                          return un(
                             (function (e) {
                               return (
                                 Math.pow(e.omniscience, 0.2) *
@@ -7974,7 +8086,7 @@
                             if (void 0 === e) return "None";
                             if (void 0 === e.bat) return "None";
                             if ("" === e.bat) return "None";
-                            var a = $t.collection.find(function (a) {
+                            var a = mn.collection.find(function (a) {
                               return a.id === e.bat;
                             });
                             return void 0 === a ? "None?" : a.name;
@@ -7995,7 +8107,7 @@
                             if (void 0 === e) return "None";
                             if (void 0 === e.armor) return "None";
                             if ("" === e.armor) return "None";
-                            var a = $t.collection.find(function (a) {
+                            var a = mn.collection.find(function (a) {
                               return a.id === e.armor;
                             });
                             return void 0 === a ? "None?" : a.name;
@@ -8023,31 +8135,31 @@
                       <div className="Player-Info-Line-Body">
                         {(function (e) {
                           switch (e) {
-                            case _t.Black:
+                            case sn.Black:
                               return "Black";
-                            case _t.LightAndSweet:
+                            case sn.LightAndSweet:
                               return "Light & Sweet";
-                            case _t.Macchiato:
+                            case sn.Macchiato:
                               return "Macchiato";
-                            case _t.CreamAndSugar:
+                            case sn.CreamAndSugar:
                               return "Cream & Sugar";
-                            case _t.ColdBrew:
+                            case sn.ColdBrew:
                               return "Cold Brew";
-                            case _t.FlatWhite:
+                            case sn.FlatWhite:
                               return "Flat White";
-                            case _t.Americano:
+                            case sn.Americano:
                               return "Americano";
-                            case _t.Foam:
+                            case sn.Foam:
                               return "Heavy Foam";
-                            case _t.Latte:
+                            case sn.Latte:
                               return "Latte";
-                            case _t.Decaf:
+                            case sn.Decaf:
                               return "Decaf";
-                            case _t.MilkSubstitute:
+                            case sn.MilkSubstitute:
                               return "Milk Substitute";
-                            case _t.PlentyOfSugar:
+                            case sn.PlentyOfSugar:
                               return "Plenty of Sugar";
-                            case _t.Anything:
+                            case sn.Anything:
                               return "Anything";
                           }
                           return "Coffee?";
@@ -8059,31 +8171,31 @@
                       <div className="Player-Info-Line-Body">
                         {(function (e) {
                           switch (e) {
-                            case Xt.SingleA:
+                            case cn.SingleA:
                               return "A";
-                            case Xt.DoubleA:
+                            case cn.DoubleA:
                               return "AA";
-                            case Xt.TripleA:
+                            case cn.TripleA:
                               return "AAA";
-                            case Xt.Acid:
+                            case cn.Acid:
                               return "Acidic";
-                            case Xt.Base:
+                            case cn.Base:
                               return "Basic";
-                            case Xt.Oh:
+                            case cn.Oh:
                               return "O";
-                            case Xt.OhNo:
+                            case cn.OhNo:
                               return "O No";
-                            case Xt.Water:
+                            case cn.Water:
                               return "H\u2082O";
-                            case Xt.Electric:
+                            case cn.Electric:
                               return "Electric";
-                            case Xt.Love:
+                            case cn.Love:
                               return "Love";
-                            case Xt.Fire:
+                            case cn.Fire:
                               return "Fire";
-                            case Xt.Psychic:
+                            case cn.Psychic:
                               return "Psychic";
-                            case Xt.Grass:
+                            case cn.Grass:
                               return "Grass";
                           }
                           return "Blood?";
@@ -8107,9 +8219,9 @@
                         )
                           for (var l = 0; l < 11; l++) {
                             var i = 1 / Math.pow(10, r),
-                              s = n[l % n.length] % i,
-                              c = Math.floor((s / i) * 10);
-                            a += t[c];
+                              c = n[l % n.length] % i,
+                              s = Math.floor((c / i) * 10);
+                            a += t[s];
                           }
                         return (
                           <div className="Player-Soulscream">
@@ -8125,17 +8237,17 @@
         return <z {...Object.assign({}, e, { className: "Player" })}>{R}</z>;
       };
       t(130), t(131);
-      function tn(e) {
+      function hn(e) {
         return void 0 !== e.element ? e.element : <div className="Stubs-Header">{e.text}</div>;
       }
-      var nn = function (e) {
+      var En = function (e) {
           var a,
             t = e.path,
             n = Object(r.useContext)(I.context),
             l = void 0 !== n.sim && void 0 !== n.sim.season ? n.sim.season : -1;
           return (
             <div>
-              <tn
+              <hn
                 element={
                   <div className="Stubs-All">
                     <div className="Stubs-Header">It's the Pre-Season.</div>
@@ -8150,7 +8262,7 @@
             </div>
           );
         },
-        rn =
+        pn =
           (t(132),
           function (e) {
             var a,
@@ -8159,7 +8271,7 @@
               l = void 0 !== n.sim && void 0 !== n.sim.season ? n.sim.season : -1;
             return (
               <div>
-                <tn
+                <hn
                   element={
                     <div className="Stubs-All">
                       <div className="Stubs-Header">The Season is Over!</div>
@@ -8174,11 +8286,11 @@
               </div>
             );
           });
-      function on() {
+      function fn() {
         var e = Object(r.useContext)(G.context).user,
           a = Object(r.useContext)(Ra.context),
           t = Object(r.useState)(!1),
-          n = Object(s.a)(t, 2),
+          n = Object(c.a)(t, 2),
           l = n[0],
           i = n[1];
         return (
@@ -8188,40 +8300,40 @@
             },
             [e]
           ),
-          void 0 !== e && e.isFetching ? <sn /> : a && a.doc && a.doc.epsilon ? <cn /> : l ? <mn /> : <ln />
+          void 0 !== e && e.isFetching ? <An /> : a && a.doc && a.doc.epsilon ? <gn /> : l ? <yn /> : <vn />
         );
       }
-      function ln() {
-        var e = Object(c.g)(),
+      function vn() {
+        var e = Object(s.g)(),
           a = e.state && e.state.background;
         return (
           <div>
             <Qe />
             <div className="Main-Body-Intro">
-              <c.c location={a || e}>
-                <c.a path="/tos">
-                  <wt />
-                </c.a>
-                <c.a path="/privacy">
-                  <Bt />
-                </c.a>
-                <c.a path="/login">
+              <s.c location={a || e}>
+                <s.a path="/tos">
+                  <xt />
+                </s.a>
+                <s.a path="/privacy">
+                  <jt />
+                </s.a>
+                <s.a path="/login">
                   <Pa isLogin={!0} />
-                </c.a>
-                <c.a path="/signup/:code?">
+                </s.a>
+                <s.a path="/signup/:code?">
                   <Pa />
-                </c.a>
-                <c.a path="/">
+                </s.a>
+                <s.a path="/">
                   <Aa />
-                </c.a>
-              </c.c>
+                </s.a>
+              </s.c>
               {a && (
                 <o.a.Fragment>
-                  <c.a path="/signup" children={<Pa isModal={!0} />} />
-                  <c.a path="/login" children={<Pa isModal={!0} isLogin={!0} />} />
-                  <c.a path="/team/:nickname" children={<wa isModal={!0} />} />
-                  <c.a path="/bet/:gameId" children={<fe isModal={!0} />} />
-                  <c.a path="/vote/:voteType/:entityId" children={<St isModal={!0} />} />
+                  <s.a path="/signup" children={<Pa isModal={!0} />} />
+                  <s.a path="/login" children={<Pa isModal={!0} isLogin={!0} />} />
+                  <s.a path="/team/:nickname" children={<wa isModal={!0} />} />
+                  <s.a path="/bet/:gameId" children={<fe isModal={!0} />} />
+                  <s.a path="/vote/:voteType/:entityId" children={<Pt isModal={!0} />} />
                 </o.a.Fragment>
               )}
               <Da isModal={!0} dismissable={!1} />
@@ -8234,47 +8346,47 @@
                 <a className="Main-Footer-Link" href="/privacy">
                   Privacy Policy
                 </a>
-                <a className="Main-Footer-Link" href={un()}>
+                <a className="Main-Footer-Link" href={bn()}>
                   Advertise
                 </a>
               </div>
               <a href="https://twitter.com/thegameband" target="_blank" className="Main-Footer-Logo">
-                <Gt />
+                <Ft />
               </a>
             </footer>
           </div>
         );
       }
-      function sn() {
+      function An() {
         return (
           <div>
             <div className="Main-Body" />
           </div>
         );
       }
-      function cn() {
+      function gn() {
         return (
           <div>
             <div className="Main-Body">
-              <Ht />
+              <Xt />
             </div>
           </div>
         );
       }
-      function mn() {
+      function yn() {
         var e = Object(r.useContext)(I.context),
-          a = Object(c.g)(),
+          a = Object(s.g)(),
           t = a.state && a.state.background,
           n = function (e, a) {
             switch (e) {
               case 0:
-                return <It path={a} />;
+                return <Mt path={a} />;
               case 1:
-                return <nn path={a} />;
+                return <En path={a} />;
               case 2:
                 return <ua path={a} />;
               case 3:
-                return <rn path={a} />;
+                return <pn path={a} />;
               case 4:
                 return <da path={a} />;
               case 5:
@@ -8284,58 +8396,58 @@
             return <div />;
           };
         return (
-          <xt>
+          <qt>
             <M>
               <$e>
                 <xe state={e} />
                 <div className="Main-Body">
-                  <c.c location={t || a}>
-                    <c.a path="/tos">
-                      <wt />
-                    </c.a>
-                    <c.a path="/privacy">
-                      <Bt />
-                    </c.a>
-                    <c.a path="/about">
-                      <va />
-                    </c.a>
-                    <c.a path="/bulletin">
-                      <zt />
-                    </c.a>
-                    <c.a path="/shop">
-                      <La />
-                    </c.a>
-                    <c.a path="/thebook">
+                  <s.c location={t || a}>
+                    <s.a path="/tos">
+                      <xt />
+                    </s.a>
+                    <s.a path="/privacy">
                       <jt />
-                    </c.a>
-                    <c.a path="/offseason">
-                      <bt />
-                    </c.a>
-                    <c.a path="/login">
+                    </s.a>
+                    <s.a path="/about">
+                      <va />
+                    </s.a>
+                    <s.a path="/bulletin">
+                      <on />
+                    </s.a>
+                    <s.a path="/shop">
+                      <La />
+                    </s.a>
+                    <s.a path="/thebook">
+                      <zt />
+                    </s.a>
+                    <s.a path="/offseason">
+                      <Rt />
+                    </s.a>
+                    <s.a path="/login">
                       <Pa isLogin={!0} />
-                    </c.a>
-                    <c.a path="/signup">
+                    </s.a>
+                    <s.a path="/signup">
                       <Pa />
-                    </c.a>
-                    <c.a path="/team/:nickname">
+                    </s.a>
+                    <s.a path="/team/:nickname">
                       <wa />
-                    </c.a>
-                    <c.a path="/player/:id">
-                      <an />
-                    </c.a>
-                    <c.a path="/standings">{e.sim && n(e.sim.phase, "/standings")}</c.a>
-                    <c.a path="/leaderboard">{e.sim && n(e.sim.phase, "/leaderboard")}</c.a>
-                    <c.a path="/upcoming">{e.sim && n(e.sim.phase, "/upcoming")}</c.a>
-                    <c.a path="/">{e.sim && n(e.sim.phase, "/")}</c.a>
-                  </c.c>
+                    </s.a>
+                    <s.a path="/player/:id">
+                      <dn />
+                    </s.a>
+                    <s.a path="/standings">{e.sim && n(e.sim.phase, "/standings")}</s.a>
+                    <s.a path="/leaderboard">{e.sim && n(e.sim.phase, "/leaderboard")}</s.a>
+                    <s.a path="/upcoming">{e.sim && n(e.sim.phase, "/upcoming")}</s.a>
+                    <s.a path="/">{e.sim && n(e.sim.phase, "/")}</s.a>
+                  </s.c>
                   {t && (
                     <o.a.Fragment>
-                      <c.a path="/signup" children={<Pa isModal={!0} />} />
-                      <c.a path="/login" children={<Pa isModal={!0} isLogin={!0} />} />
-                      <c.a path="/team/:nickname" children={<wa isModal={!0} />} />
-                      <c.a path="/player/:id" children={<an isModal={!0} />} />
-                      <c.a path="/bet/:gameId" children={<fe isModal={!0} />} />
-                      <c.a path="/vote/:voteType/:entityId" children={<St isModal={!0} />} />
+                      <s.a path="/signup" children={<Pa isModal={!0} />} />
+                      <s.a path="/login" children={<Pa isModal={!0} isLogin={!0} />} />
+                      <s.a path="/team/:nickname" children={<wa isModal={!0} />} />
+                      <s.a path="/player/:id" children={<dn isModal={!0} />} />
+                      <s.a path="/bet/:gameId" children={<fe isModal={!0} />} />
+                      <s.a path="/vote/:voteType/:entityId" children={<Pt isModal={!0} />} />
                     </o.a.Fragment>
                   )}
                   <Da isModal={!0} dismissable={!1} />
@@ -8354,31 +8466,31 @@
                   </div>
                   <div className="Main-Footer-Advertise">
                     <div className="Main-Footer-Advertise-Inner">
-                      <a className="Main-Footer-Advertise-Icon" href={un()}>
+                      <a className="Main-Footer-Advertise-Icon" href={bn()}>
                         Sponsor a Season
                       </a>
                     </div>
                   </div>
                   <a href="https://twitter.com/thegameband" target="_blank" className="Main-Footer-Logo">
-                    <Gt />
+                    <Ft />
                   </a>
                 </footer>
               </$e>
             </M>
-          </xt>
+          </qt>
         );
       }
-      function un() {
+      function bn() {
         return "mailto:sponsors@thegameband.com?subject=".concat(
           encodeURIComponent("I\u2019d like to sponsor a season of Blaseball")
         );
       }
-      var dn = function () {
+      var Nn = function () {
         return (
           <div className="Main">
             <G>
               <fa />
-              <on />
+              <fn />
             </G>
           </div>
         );
@@ -8388,7 +8500,7 @@
           "[::1]" === window.location.hostname ||
           window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
       );
-      var hn = { sim: void 0, standings: void 0, season: void 0 };
+      var Tn = { sim: void 0, standings: void 0, season: void 0 };
       "serviceWorker" in navigator &&
         navigator.serviceWorker.ready
           .then(function (e) {
@@ -8401,11 +8513,11 @@
           <o.a.StrictMode>
             <me.ToastProvider autoDismiss={!0} autoDismissTimeout={3e3} placement="bottom-right">
               <T value={{}}>
-                <I value={hn}>
+                <I value={Tn}>
                   <Pe value={{}}>
                     <Ra value={{}}>
                       <m.a>
-                        <dn />
+                        <Nn />
                       </m.a>
                     </Ra>
                   </Pe>
