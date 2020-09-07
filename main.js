@@ -2372,66 +2372,63 @@
         );
       }
       t(104);
-      var He,
-        Ue,
-        Fe = t(55);
-      (null ===
-        (He = Object({
-          NODE_ENV: "production",
-          PUBLIC_URL: "",
-          WDS_SOCKET_HOST: void 0,
-          WDS_SOCKET_PATH: void 0,
-          WDS_SOCKET_PORT: void 0,
-        })) || void 0 === He
-        ? void 0
-        : He.GOOGLE_TRACKING_ID) &&
+      var He = t(55);
+      function Ue(e) {
+        var a;
+        console.log(
+          null ===
+            (a = Object({
+              NODE_ENV: "production",
+              PUBLIC_URL: "",
+              WDS_SOCKET_HOST: void 0,
+              WDS_SOCKET_PATH: void 0,
+              WDS_SOCKET_PORT: void 0,
+            })) || void 0 === a
+            ? void 0
+            : a.REACT_APP_GOOGLE_TRACKING_ID
+        ),
+          He.a.event({ category: "Sponsor Clicked", action: "".concat(e) });
+      }
+      function Fe() {
+        return (
+          <div className="Advertisement-SiteHeader">
+            This season is brought to you by{" "}
+            <span className="Advertisement-SiteHeader-Callout">
+              <a
+                href="https://www.multitude.productions/blaseball"
+                onClick={function () {
+                  return Ue("Multitude (MainPage/Title");
+                }}
+                target="_blank"
+              >
+                the Multitude Podcast Collective
+              </a>
+            </span>
+          </div>
+        );
+      }
+      (void 0 ===
         Object({
           NODE_ENV: "production",
           PUBLIC_URL: "",
           WDS_SOCKET_HOST: void 0,
           WDS_SOCKET_PATH: void 0,
           WDS_SOCKET_PORT: void 0,
-        }).CLIENT_ANALYTICS_ENABLED &&
-        Fe.a.initialize(
-          null ===
-            (Ue = Object({
-              NODE_ENV: "production",
-              PUBLIC_URL: "",
-              WDS_SOCKET_HOST: void 0,
-              WDS_SOCKET_PATH: void 0,
-              WDS_SOCKET_PORT: void 0,
-            })) || void 0 === Ue
-            ? void 0
-            : Ue.GOOGLE_TRACKING_ID
-        );
-      function Ye(e) {
-        Fe.a.event({ category: "Sponsor Clicked", action: "".concat(e) });
-      }
-      function Je() {
-        return (
-          <div className="Advertisement-SiteHeader">
-            This season is brought to you by{" "}
-            <span className="Advertisement-SiteHeader-Callout">
-              <a
-                href="multitude.productions/blaseball"
-                onClick={function () {
-                  return Ye("Multitude (MainPage/Title");
-                }}
-                target="_blank"
-              >
-                the Multitude Podcast Collective
-              </a>
-              )
-            </span>
-          </div>
-        );
-      }
+        }).REACT_APP_CLIENT_ANALYTICS_ENABLED ||
+        Object({
+          NODE_ENV: "production",
+          PUBLIC_URL: "",
+          WDS_SOCKET_HOST: void 0,
+          WDS_SOCKET_PATH: void 0,
+          WDS_SOCKET_PORT: void 0,
+        }).REACT_APP_CLIENT_ANALYTICS_ENABLED) &&
+        He.a.initialize("UA-171524925-1");
       t(105);
-      function Ve() {
+      function Ye() {
         var e = Object(r.useContext)(I.context);
         return (
           <o.a.Fragment>
-            <Je />
+            <Fe />
             <div className="LeagueNavigation-Nav">
               <We path="/">Watch Live</We>
               <We path="/upcoming">Place Bets</We>
@@ -2441,7 +2438,7 @@
           </o.a.Fragment>
         );
       }
-      function Ke() {
+      function Je() {
         return W(Object(r.useContext)(I.context).sim, "UNLOCKED_IDOLS") ? (
           <o.a.Fragment>
             <div className="LeagueNavigation-Nav">
@@ -2452,9 +2449,9 @@
         ) : null;
       }
       t(106);
-      var qe,
-        ze,
-        Ze = function (e) {
+      var Ve,
+        Ke,
+        qe = function (e) {
           var a = e.dateString,
             t = Object(r.useState)(),
             n = Object(c.a)(t, 2),
@@ -2495,7 +2492,7 @@
       t(107);
       !(function (e) {
         (e[(e.DECREE = 0)] = "DECREE"), (e[(e.BONUS = 1)] = "BONUS");
-      })(qe || (qe = {})),
+      })(Ve || (Ve = {})),
         (function (e) {
           (e[(e.Coins = 0)] = "Coins"),
             (e[(e.Peanuts = 1)] = "Peanuts"),
@@ -2505,9 +2502,9 @@
             (e[(e.IdolShutout = 5)] = "IdolShutout"),
             (e[(e.IdolHomer = 6)] = "IdolHomer"),
             (e[(e.IdolHit = 7)] = "IdolHit");
-        })(ze || (ze = {}));
-      var Xe = o.a.createContext([{ id: "", place: 0 }]),
-        _e = function (e) {
+        })(Ke || (Ke = {}));
+      var ze = o.a.createContext([{ id: "", place: 0 }]),
+        Ze = function (e) {
           var a = e.children,
             t = Object(s.g)().pathname,
             n = Object(r.useState)([{ id: "", place: 0 }]),
@@ -2536,15 +2533,15 @@
               },
               [t]
             ),
-            (<Xe.Provider value={i}>{a}</Xe.Provider>)
+            (<ze.Provider value={i}>{a}</ze.Provider>)
           );
         };
-      _e.context = Xe;
-      var $e = _e;
-      function ea() {
+      Ze.context = ze;
+      var Xe = Ze;
+      function _e() {
         var e,
           a = Object(r.useContext)(Pe.context),
-          t = Object(r.useContext)($e.context),
+          t = Object(r.useContext)(Xe.context),
           n = Object(r.useState)([]),
           l = Object(c.a)(n, 2),
           i = l[0],
@@ -2614,29 +2611,29 @@
         if (!u || !u.sim) return null;
         void 0 !== u.sim.season && u.sim.season;
         var d = (null === (e = u.sim) || void 0 === e ? void 0 : e.phase) >= 3,
-          E = i.length < 1 || void 0 === i ? <pe /> : <aa info={i} playoffs={d} />;
+          E = i.length < 1 || void 0 === i ? <pe /> : <$e info={i} playoffs={d} />;
         return <o.a.Fragment>{E}</o.a.Fragment>;
       }
-      function aa(e) {
+      function $e(e) {
         var a = [],
           t = [];
         if (void 0 === e.info || e.info.length < 1) return <pe />;
         for (var n = 0; n < e.info.length; n++)
           n < 3
-            ? a.push(<na info={e.info[n]} key={e.info[n].place} />)
-            : t.push(<na info={e.info[n]} key={e.info[n].place} />);
+            ? a.push(<aa info={e.info[n]} key={e.info[n].place} />)
+            : t.push(<aa info={e.info[n]} key={e.info[n].place} />);
         return (
           <o.a.Fragment>
             <div className="Leaderboard-Description">Go to a Player's page to choose them as your Idol.</div>
             <div className="Leaderboard-List">
               <ul className="Leaderboard-Player-Container">{a}</ul>
-              <ta playoffs={e.playoffs} />
+              <ea playoffs={e.playoffs} />
               <ul className="Leaderboard-Player-Container">{t}</ul>
             </div>
           </o.a.Fragment>
         );
       }
-      function ta(e) {
+      function ea(e) {
         return e.playoffs ? (
           <svg viewBox="0 0 650 10" className="OminousRedLine">
             {(function () {
@@ -2657,7 +2654,7 @@
           <hr className="LessOminousRedLine" />
         );
       }
-      function na(e) {
+      function aa(e) {
         var a,
           t,
           n,
@@ -2697,9 +2694,9 @@
           </u>
         ) : null;
       }
-      var ra;
+      var ta;
       t(108);
-      function oa() {
+      function na() {
         var e = Object(r.useContext)(I.context),
           a = Object(r.useContext)(Pe.context);
         if (!e || !e.sim) return null;
@@ -2712,7 +2709,7 @@
         var n = [];
         if (a)
           for (var l = 0; l < t.subleagues.length; l++)
-            n.push(<la key={l} subleague={t.subleagues[l]} standings={e.standings} />);
+            n.push(<ra key={l} subleague={t.subleagues[l]} standings={e.standings} />);
         return void 0 !== t ? (
           <div className="Standings-League">
             {t.name}
@@ -2722,13 +2719,13 @@
           <pe />
         );
       }
-      function la(e) {
+      function ra(e) {
         var a = Object(r.useContext)(Pe.context).subleagues.find(function (a) {
           return a.id === e.subleague;
         });
         if (void 0 === a) return null;
         for (var t = [], n = 0; n < a.divisions.length; n++)
-          t.push(<ia key={n} division={a.divisions[n]} standings={e.standings} />);
+          t.push(<oa key={n} division={a.divisions[n]} standings={e.standings} />);
         return (
           <div className="Standings-Subleague">
             <div className="Standings-Subleague-Header">{a.name}</div>
@@ -2736,13 +2733,13 @@
           </div>
         );
       }
-      function ia(e) {
+      function oa(e) {
         var a = Object(r.useContext)(Pe.context).divisions.find(function (a) {
           return a.id === e.division;
         });
         if (void 0 === a) return null;
         for (var t = [], n = [], l = [], i = [], c = 0; c < a.teams.length; c++) {
-          for (var s = ca(a.teams[c], e.standings), m = !1, u = 0; u < n.length; u++) {
+          for (var s = la(a.teams[c], e.standings), m = !1, u = 0; u < n.length; u++) {
             var d = l[u];
             if (s[0] > d) {
               n.splice(u, 0, a.teams[c]), l.splice(u, 0, s[0]), i.splice(u, 0, s[1]), (m = !0);
@@ -2751,7 +2748,7 @@
           }
           m || (n.push(a.teams[c]), l.push(s[0]), i.push(s[1]));
         }
-        for (var h = 0; h < n.length; h++) t.push(<sa key={h} team={n[h]} wins={l[h]} losses={i[h]} />);
+        for (var h = 0; h < n.length; h++) t.push(<ia key={h} team={n[h]} wins={l[h]} losses={i[h]} />);
         return (
           <div className="Standings-Division">
             <div className="Standings-Division-Header">{a.name}</div>
@@ -2759,7 +2756,7 @@
           </div>
         );
       }
-      function ca(e, a) {
+      function la(e, a) {
         var t = 0,
           n = 0;
         if (void 0 !== a) {
@@ -2776,7 +2773,7 @@
         }
         return [t, n];
       }
-      function sa(e) {
+      function ia(e) {
         var a = Object(s.g)(),
           t = Object(r.useContext)(Pe.context).teams.find(function (a) {
             return a.id === e.team;
@@ -2800,9 +2797,9 @@
           (e[(e.Upcoming = 1)] = "Upcoming"),
           (e[(e.Standings = 2)] = "Standings"),
           (e[(e.Leaderboard = 3)] = "Leaderboard");
-      })(ra || (ra = {}));
-      var ma,
-        ua = function (e) {
+      })(ta || (ta = {}));
+      var ca,
+        sa = function (e) {
           var a,
             t = e.path,
             n = Object(r.useContext)(I.context),
@@ -2812,19 +2809,19 @@
           function s() {
             switch (t) {
               case "/upcoming":
-                return ra.Upcoming;
+                return ta.Upcoming;
               case "/leaderboard":
-                return ra.Leaderboard;
+                return ta.Leaderboard;
               case "/standings":
-                return ra.Standings;
+                return ta.Standings;
               default:
-                return ra.Live;
+                return ta.Live;
             }
           }
           if (!n.sim) return null;
           var m,
-            u = s() === ra.Upcoming ? n.tomorrowSchedule : n.schedule,
-            d = s() === ra.Live ? n.sim.day : n.sim.day + 1,
+            u = s() === ta.Upcoming ? n.tomorrowSchedule : n.schedule,
+            d = s() === ta.Live ? n.sim.day : n.sim.day + 1,
             h =
               void 0 === u ? null : (
                 <ul>
@@ -2869,21 +2866,21 @@
               ) : (
                 <div>
                   <div className="DailySchedule-Countdown">
-                    {s() === ra.Upcoming ? <Ze dateString={x().toString()} /> : null}
+                    {s() === ta.Upcoming ? <qe dateString={x().toString()} /> : null}
                   </div>
                   {h}
                 </div>
               ),
             E = void 0 !== n && void 0 !== n.sim ? n.sim.season : -1;
           switch (s()) {
-            case ra.Leaderboard:
-              m = <ea />;
+            case ta.Leaderboard:
+              m = <_e />;
               break;
-            case ra.Standings:
-              m = <oa />;
+            case ta.Standings:
+              m = <na />;
               break;
-            case ra.Live:
-            case ra.Upcoming:
+            case ta.Live:
+            case ta.Upcoming:
               m = c ? <pe /> : p;
           }
           return (
@@ -2892,7 +2889,7 @@
                 Season<span className="DailySchedule-Number">{E + 1}</span>Day
                 <span className="DailySchedule-Number">{d + 1}</span>
               </div>
-              <Ve />
+              <Ye />
               {m}
             </div>
           );
@@ -2902,8 +2899,8 @@
           (e[(e.Upcoming = 1)] = "Upcoming"),
           (e[(e.Leaderboard = 2)] = "Leaderboard"),
           (e[(e.Standings = 3)] = "Standings");
-      })(ma || (ma = {}));
-      var da = function (e) {
+      })(ca || (ca = {}));
+      var ma = function (e) {
           var a,
             t,
             n,
@@ -2925,27 +2922,27 @@
           function y() {
             switch (E) {
               case "/upcoming":
-                return ma.Upcoming;
+                return ca.Upcoming;
               case "/leaderboard":
-                return ma.Leaderboard;
+                return ca.Leaderboard;
               case "/standings":
-                return ma.Standings;
+                return ca.Standings;
               default:
-                return ma.Live;
+                return ca.Live;
             }
           }
           function b() {
             var e, a;
-            return y() === ma.Live
+            return y() === ca.Live
               ? (null === (e = f.sim) || void 0 === e ? void 0 : e.day) || -1
               : (null === (a = f.sim) || void 0 === a ? void 0 : a.day) || 0;
           }
           if (!f.sim) return null;
           var N,
-            T = y() === ma.Live ? f.schedule : f.tomorrowSchedule,
+            T = y() === ca.Live ? f.schedule : f.tomorrowSchedule,
             O =
-              (y() === ma.Live ? f.sim.day : f.sim.day,
-              y() === ma.Live ? f.postseason.matchups : f.postseason.tomorrowMatchups),
+              (y() === ca.Live ? f.sim.day : f.sim.day,
+              y() === ca.Live ? f.postseason.matchups : f.postseason.tomorrowMatchups),
             S =
               void 0 === T || (void 0 !== T && T.length <= 0) ? null : (
                 <ul>
@@ -3022,13 +3019,13 @@
                   ? void 0
                   : u.roundNumber
                 : -1,
-            C = (y() === ma.Live ? B : w) + 1;
+            C = (y() === ca.Live ? B : w) + 1;
           switch (y()) {
-            case ma.Leaderboard:
-              N = <ea />;
+            case ca.Leaderboard:
+              N = <_e />;
               break;
-            case ma.Standings:
-              N = <oa />;
+            case ca.Standings:
+              N = <na />;
               break;
             default:
               N = g ? (
@@ -3038,7 +3035,7 @@
                   {null !== S ? (
                     <div>
                       <div className="DailySchedule-Countdown">
-                        {y() === ma.Upcoming ? <Ze dateString={x().toString()} /> : null}
+                        {y() === ca.Upcoming ? <qe dateString={x().toString()} /> : null}
                       </div>
                       <ul>{S}</ul>
                     </div>
@@ -3066,12 +3063,12 @@
                 )}
                 Day<span className="DailySchedule-Number">{b() + 1}</span>
               </div>
-              <Ve />
+              <Ye />
               {N}
             </div>
           );
         },
-        ha =
+        ua =
           (t(109),
           function (e) {
             var a = e.path,
@@ -3103,16 +3100,16 @@
                   <div className="PlayoffsEnd-End">
                     <a href="/offseason">The Election ends soon! Go cast your Votes. The next season starts in...</a>
                   </div>
-                  <Ze dateString={t.sim.nextSeasonStart} />
+                  <qe dateString={t.sim.nextSeasonStart} />
                 </div>
-                <Ke />
-                {"/leaderboard" === a ? <ea /> : <oa />}
+                <Je />
+                {"/leaderboard" === a ? <_e /> : <na />}
               </div>
             );
           }),
-        pa = t(44);
+        da = t(44);
       t(110);
-      function Ea() {
+      function ha() {
         var e = Object(r.useState)([]),
           a = Object(c.a)(e, 2),
           t = a[0],
@@ -3187,7 +3184,7 @@
         );
       }
       t(111);
-      var fa = function () {
+      var pa = function () {
         var e,
           a,
           t = Object(r.useContext)(I.context),
@@ -3221,22 +3218,22 @@
                 <div className="Header-Social-Follow">
                   <div className="Header-Social-Follow-Inner">
                     <a className="Header-Social-Follow-Icon" href="https://discord.gg/3uFgJhu" target="_blank">
-                      <pa.b />
+                      <da.b />
                     </a>
                     <a className="Header-Social-Follow-Icon" href="https://twitter.com/blaseball" target="_blank">
-                      <pa.d />
+                      <da.d />
                     </a>
                   </div>
                   <div className="Header-Social-Follow-Triangle" />
                 </div>
               </div>
             </div>
-            {(null === n || void 0 === n ? void 0 : n.isSignedIn) && <Ea />}
+            {(null === n || void 0 === n ? void 0 : n.isSignedIn) && <ha />}
           </header>
         );
       };
       t(112);
-      function va() {
+      function Ea() {
         return (
           <div className="About-All">
             <div className="About-Header">Welcome to Blaseball.</div>
@@ -3281,7 +3278,7 @@
           </div>
         );
       }
-      function Aa() {
+      function fa() {
         var e = Object(s.g)();
         return (
           <div className="About-All">
@@ -3356,11 +3353,11 @@
         );
       }
       t(113);
-      var ga,
-        ya = t(34),
-        ba = t(137),
-        Na = (t(51), t(67));
-      function Ta(e) {
+      var va,
+        Aa = t(34),
+        ga = t(137),
+        ya = (t(51), t(67));
+      function ba(e) {
         switch (e.id) {
           case "EXTRA_STRIKE":
             return <Y.q />;
@@ -3400,8 +3397,8 @@
           (e[(e.Game = 3)] = "Game"),
           (e[(e.Item = 4)] = "Item"),
           (e[(e.Armor = 5)] = "Armor");
-      })(ga || (ga = {}));
-      var Oa = {
+      })(va || (va = {}));
+      var Na = {
         id: "????",
         color: "#FFFFFF",
         background: "#FFFFFF",
@@ -3409,46 +3406,46 @@
         title: "????",
         description: "This Modification is unknown.",
       };
-      function Sa(e) {
+      function Ta(e) {
         var a = e.id,
           t = e.type,
-          n = Na.collection.find(function (e) {
+          n = ya.collection.find(function (e) {
             return e.id === a;
           });
-        void 0 === n && (n = Oa);
+        void 0 === n && (n = Na);
         var r = (function (e) {
           switch (e) {
-            case ga.Permanent:
+            case va.Permanent:
               return {
                 color: "#dbbc0b",
                 title: "Permanent",
                 description: "Permanent Modifications are never removed automatically.",
               };
-            case ga.Season:
+            case va.Season:
               return {
                 color: "#c2157a",
                 title: "Season",
                 description: "Season Modifications are removed after the Internet Series finishes.",
               };
-            case ga.Weekly:
+            case va.Weekly:
               return {
                 color: "#0a78a3",
                 title: "Weekly",
                 description: "Weekly Modifications are removed after every 9th game of the season.",
               };
-            case ga.Game:
+            case va.Game:
               return {
                 color: "#639e47",
                 title: "Game",
                 description: "Game Modifications are removed at the end of every game.",
               };
-            case ga.Armor:
+            case va.Armor:
               return {
                 color: "#bababa",
                 title: "Armor",
                 description: "Armor Modifications are removed when the player loses their Armor.",
               };
-            case ga.Item:
+            case va.Item:
               return {
                 color: "#bababa",
                 title: "Item",
@@ -3482,18 +3479,18 @@
                 className="AttributeIcon"
                 style={{ color: n.color, background: n.background, border: "2px solid ".concat(r.color) }}
               >
-                <Ta id={a} />
+                <ba id={a} />
               </div>
             </Ne.a>
           </div>
         );
       }
-      function Ia(e) {
+      function Oa(e) {
         for (var a = e / 0.2, t = Math.round(2 * a) / 2, n = Math.floor(t), r = Math.ceil(t), l = [], i = 0; i < n; i++)
-          l.push(<ya.b />);
-        return n !== r && l.push(<ya.c />), (<span>{l}</span>);
+          l.push(<Aa.b />);
+        return n !== r && l.push(<Aa.c />), (<span>{l}</span>);
       }
-      function Ba(e, a) {
+      function Sa(e, a) {
         var t = (function (e, a) {
           var t = 6 + Math.round(10 * e.buoyancy),
             n = Math.PI * ((2 / t) * a + 0.5);
@@ -3501,41 +3498,41 @@
         })(e, a);
         return t > 0.8 ? (
           <span className="Team-Player-Vibe-Line Team-Player-Vibe-MostExcellent">
-            <ba.c className="Team-Player-Vibe-Line-Arrow" />
-            <ba.c className="Team-Player-Vibe-Line-Arrow" />
-            <ba.c className="Team-Player-Vibe-Line-Arrow" />
+            <ga.c className="Team-Player-Vibe-Line-Arrow" />
+            <ga.c className="Team-Player-Vibe-Line-Arrow" />
+            <ga.c className="Team-Player-Vibe-Line-Arrow" />
           </span>
         ) : t > 0.4 ? (
           <span className="Team-Player-Vibe-Line Team-Player-Vibe-Excellent">
-            <ba.c className="Team-Player-Vibe-Line-Arrow" />
-            <ba.c className="Team-Player-Vibe-Line-Arrow" />
+            <ga.c className="Team-Player-Vibe-Line-Arrow" />
+            <ga.c className="Team-Player-Vibe-Line-Arrow" />
           </span>
         ) : t > 0.1 ? (
           <span className="Team-Player-Vibe-Line Team-Player-Vibe-Quality">
-            <ba.c className="Team-Player-Vibe-Line-Arrow" />
+            <ga.c className="Team-Player-Vibe-Line-Arrow" />
           </span>
         ) : t > -0.1 ? (
           <span className="Team-Player-Vibe-Line Team-Player-Vibe-Neutral">
-            <ba.a className="Team-Player-Vibe-Line-Arrow" />
+            <ga.a className="Team-Player-Vibe-Line-Arrow" />
           </span>
         ) : t > -0.4 ? (
           <span className="Team-Player-Vibe-Line Team-Player-Vibe-LessThanIdeal">
-            <ba.b className="Team-Player-Vibe-Line-Arrow" />
+            <ga.b className="Team-Player-Vibe-Line-Arrow" />
           </span>
         ) : t > -0.8 ? (
           <span className="Team-Player-Vibe-Line Team-Player-Vibe-FarLessThanIdeal">
-            <ba.b className="Team-Player-Vibe-Line-Arrow" />
-            <ba.b className="Team-Player-Vibe-Line-Arrow" />
+            <ga.b className="Team-Player-Vibe-Line-Arrow" />
+            <ga.b className="Team-Player-Vibe-Line-Arrow" />
           </span>
         ) : (
           <span className="Team-Player-Vibe-Line Team-Player-Vibe-Terrible">
-            <ba.b className="Team-Player-Vibe-Line-Arrow" />
-            <ba.b className="Team-Player-Vibe-Line-Arrow" />
-            <ba.b className="Team-Player-Vibe-Line-Arrow" />
+            <ga.b className="Team-Player-Vibe-Line-Arrow" />
+            <ga.b className="Team-Player-Vibe-Line-Arrow" />
+            <ga.b className="Team-Player-Vibe-Line-Arrow" />
           </span>
         );
       }
-      var wa = function (e) {
+      var Ia = function (e) {
           var a = Object(s.h)().nickname,
             t = Object(r.useContext)(I.context),
             n = Object(r.useContext)(Pe.context),
@@ -3631,10 +3628,10 @@
                     {f.idol === e.id ? <Y.F /> : ""} {null === e || void 0 === e ? void 0 : e.name}
                   </div>
                   <div className="Team-Player-Vibe">
-                    {Ba(e, void 0 !== (null === (a = t.sim) || void 0 === a ? void 0 : a.day) ? t.sim.day : -1)}
+                    {Sa(e, void 0 !== (null === (a = t.sim) || void 0 === a ? void 0 : a.day) ? t.sim.day : -1)}
                   </div>
                   <div className="Team-Player-Ratings">
-                    {Ia(
+                    {Oa(
                       (function (e) {
                         return (
                           Math.pow(1 - e.tragicness, 0.01) *
@@ -3662,10 +3659,10 @@
                     {f.idol === e.id ? <Y.F /> : ""} {null === e || void 0 === e ? void 0 : e.name}
                   </div>
                   <div className="Team-Player-Vibe">
-                    {Ba(e, void 0 !== (null === (a = t.sim) || void 0 === a ? void 0 : a.day) ? t.sim.day : -1)}
+                    {Sa(e, void 0 !== (null === (a = t.sim) || void 0 === a ? void 0 : a.day) ? t.sim.day : -1)}
                   </div>
                   <div className="Team-Player-Ratings">
-                    {Ia(
+                    {Oa(
                       (function (e) {
                         return (
                           Math.pow(e.shakespearianism, 0.1) *
@@ -3706,16 +3703,16 @@
                   <div className="Team-Attributes">
                     <div className="AttributeBar">
                       {v.permAttr.map(function (e, a) {
-                        return <Sa id={e} type={ga.Permanent} key={a} />;
+                        return <Ta id={e} type={va.Permanent} key={a} />;
                       })}
                       {v.seasAttr.map(function (e, a) {
-                        return <Sa id={e} type={ga.Season} key={a} />;
+                        return <Ta id={e} type={va.Season} key={a} />;
                       })}
                       {v.weekAttr.map(function (e, a) {
-                        return <Sa id={e} type={ga.Weekly} key={a} />;
+                        return <Ta id={e} type={va.Weekly} key={a} />;
                       })}
                       {v.gameAttr.map(function (e, a) {
-                        return <Sa id={e} type={ga.Game} key={a} />;
+                        return <Ta id={e} type={va.Game} key={a} />;
                       })}
                     </div>
                   </div>
@@ -3756,8 +3753,8 @@
             (<z {...Object.assign({}, e, { className: "Team" })}>{g}</z>)
           );
         },
-        Ca = (t(114), o.a.createContext({ doc: void 0 })),
-        ka = function (e) {
+        Ba = (t(114), o.a.createContext({ doc: void 0 })),
+        wa = function (e) {
           var a = e.children,
             t = Object(r.useState)({ doc: void 0 }),
             n = Object(c.a)(t, 2),
@@ -3775,12 +3772,12 @@
                 }
               );
             }, []),
-            (<Ca.Provider value={l}>{a}</Ca.Provider>)
+            (<Ba.Provider value={l}>{a}</Ba.Provider>)
           );
         };
-      ka.context = Ca;
-      var Ra = ka;
-      function La() {
+      wa.context = Ba;
+      var Ca = wa;
+      function ka() {
         var e,
           a = Object(me.useToasts)().addToast,
           t = Object(r.useState)(),
@@ -3794,7 +3791,7 @@
             return e.id === m.favoriteTeam;
           }),
           E = Object(r.useContext)(I.context),
-          f = Object(r.useContext)(Ra.context),
+          f = Object(r.useContext)(Ca.context),
           v = Object(r.useContext)(Pe.context);
         function A(e) {
           return g.apply(this, arguments);
@@ -3955,7 +3952,7 @@
                           <a
                             href="https://multitude.productions/blaseball"
                             onClick={function () {
-                              return Ye("Multitude (ShopItem)");
+                              return Ue("Multitude (ShopItem)");
                             }}
                             target="_blank"
                             className="Shop-Item-Link"
@@ -4494,7 +4491,7 @@
         );
       }
       t(115);
-      var Ga = function (e) {
+      var Ra = function (e) {
           var a = Object(r.useContext)(G.context),
             t = a.user,
             n = a.setUser,
@@ -4563,7 +4560,7 @@
                             <div className="Welcome-Team-Name">{e.nickname}</div>
                           </div>
                           <div className="Welcome-Team-Overlay">
-                            <pa.a />
+                            <da.a />
                           </div>
                         </div>
                       );
@@ -4579,7 +4576,7 @@
             </z>
           );
         },
-        Da = function (e) {
+        La = function (e) {
           var a = Object(r.useContext)(G.context).user,
             t = Object(r.useState)(!1),
             n = Object(c.a)(t, 2),
@@ -4590,7 +4587,7 @@
               a.isSignedIn && !a.isFetching && null === a.favoriteTeam ? i(!0) : i(!1);
             }, []),
             a && a.isSignedIn && l ? (
-              <Ga
+              <Ra
                 {...Object.assign({}, e, {
                   dismiss: Object(p.a)(
                     h.a.mark(function e() {
@@ -4611,7 +4608,7 @@
             ) : null
           );
         },
-        Pa =
+        Ga =
           (t(116),
           function (e) {
             var a = Object(r.useContext)(G.context).initUser,
@@ -4630,7 +4627,7 @@
               A = Object(s.h)().code;
             return (
               <div className={"".concat(p ? "" : "Auth-SignupWrapper")}>
-                {!p && <Aa />}
+                {!p && <fa />}
                 <z {...Object.assign({}, e, { className: "Auth" })}>
                   <header className="Auth-Header">{E ? "Login to Blaseball" : "Signup for Blaseball"}</header>
                   <form
@@ -4664,7 +4661,7 @@
                   </a>
                   <a className="Auth-SocialAuth" href={"auth/facebook?redirectUrl=".concat(h)}>
                     <div className="Auth-SocialAuth-Icon-Container">
-                      <pa.c />
+                      <da.c />
                     </div>{" "}
                     Continue with Facebook
                   </a>
@@ -4681,8 +4678,8 @@
               </div>
             );
           }),
-        Ma = (t(117), o.a.createContext({ blessings: [], decrees: [], decreesToPass: 0 })),
-        ja = function (e) {
+        Da = (t(117), o.a.createContext({ blessings: [], decrees: [], decreesToPass: 0 })),
+        Pa = function (e) {
           var a = e.children,
             t = Object(r.useState)({ blessings: [], decrees: [], decreesToPass: 0 }),
             n = Object(c.a)(t, 2),
@@ -4713,42 +4710,42 @@
                 s.apply(this, arguments);
               })();
             }, []),
-            (<Ma.Provider value={l}>{a}</Ma.Provider>)
+            (<Da.Provider value={l}>{a}</Da.Provider>)
           );
         };
-      ja.context = Ma;
-      var xa,
-        Wa = ja;
+      Pa.context = Da;
+      var Ma,
+        ja = Pa;
       t(118);
       !(function (e) {
         (e[(e.DECREE = 0)] = "DECREE"), (e[(e.BONUS = 1)] = "BONUS");
-      })(xa || (xa = {}));
-      var Qa = function () {
+      })(Ma || (Ma = {}));
+      var xa = function () {
           return (
             <a href="/login">
               <U.a className="Blessings-Submit-Button">Login to Vote</U.a>
             </a>
           );
         },
-        Ha = function () {
+        Wa = function () {
           return (
             <a href="/welcome">
               <U.a className="Blessings-Submit-Button">Pick a Favorite Team to Vote</U.a>
             </a>
           );
         },
-        Ua = function () {
+        Qa = function () {
           return (
             <a href="/shop">
               <U.a className="Blessings-Submit-Button">Buy Another Vote</U.a>
             </a>
           );
         },
-        Fa = function (e) {
+        Ha = function (e) {
           var a = e.isActive;
           return <button className="Blessings-Option-Button">Select{a ? "ed" : ""}</button>;
         },
-        Ya = function (e) {
+        Ua = function (e) {
           var a = e.title,
             t = e.description,
             n = e.id,
@@ -4763,22 +4760,22 @@
             >
               <div className="Blessings-Option-Header">{a}</div>
               <div className="Blessings-Option-Description">{t}</div>
-              <Fa isActive={r} />
+              <Ha isActive={r} />
             </div>
           );
         },
-        Ja = function () {
-          var e = Object(r.useContext)(Wa.context),
+        Fa = function () {
+          var e = Object(r.useContext)(ja.context),
             a = Object(r.useContext)(G.context).user,
             t = Object(r.useState)(),
             n = Object(c.a)(t, 2),
             l = n[0],
             i = n[1],
             m = Object(s.g)(),
-            d = <Qa />;
+            d = <xa />;
           return (
-            a.isFetching || !a.isSignedIn || a.favoriteTeam || (d = <Ha />),
-            a.isFetching || !a.isSignedIn || a.votes || (d = <Ua />),
+            a.isFetching || !a.isSignedIn || a.favoriteTeam || (d = <Wa />),
+            a.isFetching || !a.isSignedIn || a.votes || (d = <Qa />),
             !a.isFetching &&
               a.isSignedIn &&
               a.favoriteTeam &&
@@ -4792,7 +4789,7 @@
                     return i(void 0);
                   }}
                 >
-                  <u background={m} path={"/vote/".concat(xa.BONUS, "/").concat(l)}>
+                  <u background={m} path={"/vote/".concat(Ma.BONUS, "/").concat(l)}>
                     Submit Blessing Vote
                   </u>
                 </U.a>
@@ -4807,7 +4804,7 @@
                 <div className="Blessings-Container">
                   {e.blessings.map(function (e, a) {
                     return (
-                      <Ya
+                      <Ua
                         {...Object.assign({ key: a }, e, {
                           isActive: l === e.id,
                           onSelect: function (e) {
@@ -4824,8 +4821,8 @@
           );
         };
       t(119);
-      function Va() {
-        return (Va =
+      function Ya() {
+        return (Ya =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -4835,7 +4832,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Ka(e, a) {
+      function Ja(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -4855,26 +4852,26 @@
         }
         return r;
       }
-      var qa = (
+      var Va = (
           <path d="M12.164 7.165c-1.15.191-1.702 1.233-1.231 2.328.498 1.155 1.921 1.895 3.094 1.603 1.039-.257 1.519-1.252 1.069-2.295-.471-1.095-1.784-1.827-2.932-1.636zm1.484 2.998l.104.229-.219.045-.097-.219c-.226.041-.482.035-.719-.027l-.065-.387c.195.03.438.058.623.02l.125-.041c.221-.109.152-.387-.176-.453-.245-.054-.893-.014-1.135-.552-.136-.304-.035-.621.356-.766l-.108-.239.217-.045.104.229c.159-.026.345-.036.563-.017l.087.383c-.17-.021-.353-.041-.512-.008l-.06.016c-.309.082-.21.375.064.446.453.105.994.139 1.208.612.173.385-.028.648-.36.774zm10.312 1.057l-3.766-8.22c-6.178 4.004-13.007-.318-17.951 4.454l3.765 8.22c5.298-4.492 12.519-.238 17.952-4.454zm-2.803-1.852c-.375.521-.653 1.117-.819 1.741-3.593 1.094-7.891-.201-12.018 1.241-.667-.354-1.503-.576-2.189-.556l-1.135-2.487c.432-.525.772-1.325.918-2.094 3.399-1.226 7.652.155 12.198-1.401.521.346 1.13.597 1.73.721l1.315 2.835zm2.843 5.642c-6.857 3.941-12.399-1.424-19.5 5.99l-4.5-9.97 1.402-1.463 3.807 8.406-.002.007c7.445-5.595 11.195-1.176 18.109-4.563.294.648.565 1.332.684 1.593z" />
         ),
-        za = function (e) {
+        Ka = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = Ka(e, ["svgRef", "title"]);
+            n = Ja(e, ["svgRef", "title"]);
           return (
-            <svg {...Va({ viewBox: "0 0 24 24", ref: a }, n)}>
+            <svg {...Ya({ viewBox: "0 0 24 24", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
-              {qa}
+              {Va}
             </svg>
           );
         },
-        Za = o.a.forwardRef(function (e, a) {
-          return <za {...Va({ svgRef: a }, e)} />;
+        qa = o.a.forwardRef(function (e, a) {
+          return <Ka {...Ya({ svgRef: a }, e)} />;
         });
       t.p;
-      function Xa() {
-        return (Xa =
+      function za() {
+        return (za =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -4884,7 +4881,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function _a(e, a) {
+      function Za(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -4904,26 +4901,26 @@
         }
         return r;
       }
-      var $a = (
+      var Xa = (
           <path d="M7.919 17.377l-4.869-13.377h-2.05c-.266 0-.52-.105-.707-.293-.188-.187-.293-.442-.293-.707 0-.552.447-1 1-1h3.45l5.469 15.025c.841.101 1.59.5 2.139 1.088l11.258-4.097.684 1.879-11.049 4.021c.032.19.049.385.049.584 0 1.932-1.569 3.5-3.5 3.5-1.932 0-3.5-1.568-3.5-3.5 0-1.363.781-2.545 1.919-3.123zm1.581 1.811c.724 0 1.312.588 1.312 1.312 0 .724-.588 1.313-1.312 1.313-.725 0-1.313-.589-1.313-1.313s.588-1.312 1.313-1.312zm13.314-6.512l-11.418 4.156-2.736-7.518 11.418-4.156 2.736 7.518zm-8.71-3.215l-2.88 1.048 1.368 3.759 7.659-2.787-1.368-3.759-2.9 1.055.684 1.879-1.879.685-.684-1.88zm2.672-4.165l-8.458 3.078-1.927-5.296 8.457-3.078 1.928 5.296zm-3.123-2.733l-4.699 1.711.56 1.537 4.698-1.71-.559-1.538z" />
         ),
-        et = function (e) {
+        _a = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = _a(e, ["svgRef", "title"]);
+            n = Za(e, ["svgRef", "title"]);
           return (
-            <svg {...Xa({ viewBox: "0 0 24 24", ref: a }, n)}>
+            <svg {...za({ viewBox: "0 0 24 24", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
-              {$a}
+              {Xa}
             </svg>
           );
         },
-        at = o.a.forwardRef(function (e, a) {
-          return <et {...Xa({ svgRef: a }, e)} />;
+        $a = o.a.forwardRef(function (e, a) {
+          return <_a {...za({ svgRef: a }, e)} />;
         });
       t.p;
-      function tt() {
-        return (tt =
+      function et() {
+        return (et =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -4933,7 +4930,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function nt(e, a) {
+      function at(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -4953,26 +4950,26 @@
         }
         return r;
       }
-      var rt = (
+      var tt = (
           <path d="M5.495 2h16.505v-2h-17c-1.657 0-3 1.343-3 3v18c0 1.657 1.343 3 3 3h17v-20h-16.505c-1.375 0-1.375-2 0-2zm.505 4h14v6h-6c-1.104 0-2 .896-2 2s.896 2 2 2h6v6h-14v-16zm9 8c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1z" />
         ),
-        ot = function (e) {
+        nt = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = nt(e, ["svgRef", "title"]);
+            n = at(e, ["svgRef", "title"]);
           return (
-            <svg {...tt({ viewBox: "0 0 24 24", ref: a }, n)}>
+            <svg {...et({ viewBox: "0 0 24 24", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
-              {rt}
+              {tt}
             </svg>
           );
         },
-        lt = o.a.forwardRef(function (e, a) {
-          return <ot {...tt({ svgRef: a }, e)} />;
+        rt = o.a.forwardRef(function (e, a) {
+          return <nt {...et({ svgRef: a }, e)} />;
         });
       t.p;
-      function it() {
-        return (it =
+      function ot() {
+        return (ot =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -4982,7 +4979,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function ct(e, a) {
+      function lt(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -5002,26 +4999,26 @@
         }
         return r;
       }
-      var st = (
+      var it = (
           <path d="M8 1c0-.552.448-1 1-1h6c.553 0 1 .448 1 1s-.447 1-1 1h-6c-.552 0-1-.448-1-1zm13 20.554c0 1.284-1.023 2.446-2.424 2.446h-13.153c-1.4 0-2.423-1.162-2.423-2.445 0-.35.076-.709.242-1.057l3.743-7.856c1.04-2.186 2.015-4.581 2.015-7.007v-1.635h2l-.006 2c-.087 2.623-1.09 5.092-1.973 7h3.682l4.377 9h1.496c.309 0 .52-.342.377-.644l-3.743-7.854c-1.046-2.197-2.12-4.791-2.21-7.502v-2h2v1.635c0 2.426.975 4.82 2.016 7.006l3.743 7.856c.165.348.241.707.241 1.057zm-12-1.054c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5 1.5.671 1.5 1.5 1.5 1.5-.671 1.5-1.5zm2-3.5c0-.553-.448-1-1-1-.553 0-1 .447-1 1s.447 1 1 1c.552 0 1-.447 1-1zm3 3c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z" />
         ),
-        mt = function (e) {
+        ct = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = ct(e, ["svgRef", "title"]);
+            n = lt(e, ["svgRef", "title"]);
           return (
-            <svg {...it({ width: 24, height: 24, viewBox: "0 0 24 24", ref: a }, n)}>
+            <svg {...ot({ width: 24, height: 24, viewBox: "0 0 24 24", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
-              {st}
+              {it}
             </svg>
           );
         },
-        ut = o.a.forwardRef(function (e, a) {
-          return <mt {...it({ svgRef: a }, e)} />;
+        st = o.a.forwardRef(function (e, a) {
+          return <ct {...ot({ svgRef: a }, e)} />;
         });
       t.p;
-      function dt() {
-        return (dt =
+      function mt() {
+        return (mt =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -5031,7 +5028,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function ht(e, a) {
+      function ut(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -5051,30 +5048,30 @@
         }
         return r;
       }
-      var pt = (
+      var dt = (
           <path
             d="M493.7 21.59C426.6 127.6 339.2 100.6 373.6 32.06c-35.2 10.26-57.7 31.88-60.5 65.67-9.7-2.3-29.4-25.97-18.4-69.83-26.7 39.32-50.8 91.8-42.6 127.1-24 .2-64-39.7-54.5-87.89-46.5 81.29-34 172.89-25 193.79-24.9 0-63.4-70.9-64-118.9-36.72 82.1-48.45 147.1-18.33 194.3-33.05-3.8-53.82-28.3-66.86-69.6C-9.266 485.7 110.2 515 312.6 475.5c55.9-10.9 125.3-40.5 158.7-99.5-69.8 40-121.4 7.4-140.5-6.3 45.8-10.4 112.2-31.6 133.6-92-42 35.7-74.1 13.8-85.6 6.2 54.4-9.1 97.3-71.6 111-127.5-37.5 31.1-69.9 31.9-83.8 22.4 34.5-11.2 92.1-68.8 87.7-157.21zM331.5 113.8c8.7-.2 17.6 2.1 26.1 6.4 2.3 1 4.6 2.3 6.9 3.9 6.9 4.8 12.7 11 15.6 19.3l3.5 10-10 3c-18.8 5.6-29.1 16.9-37.9 32.5l-17.1-10c8.3-14.6 19.9-28.1 36.8-36.5-1.9-1.6-4.2-3.2-6.6-4.5-6.6-3.1-14.4-4.6-18.8-4.1l-2.2-19.8c1.2-.1 2.5-.2 3.7-.2zM294 186.1c9.4 0 19.8 3.5 28.8 9.1 16.8 10.7 28.5 28.9 19.7 45.3C285 379.8 197.1 433.7 91.64 443.8c99.46-49 139.16-153.9 177.46-241.5 4.8-11.4 14.2-16.1 24.9-16.2z"
             fill="#fff"
             fillOpacity={1}
           />
         ),
-        Et = function (e) {
+        ht = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = ht(e, ["svgRef", "title"]);
+            n = ut(e, ["svgRef", "title"]);
           return (
-            <svg {...dt({ viewBox: "0 0 512 512", ref: a }, n)}>
+            <svg {...mt({ viewBox: "0 0 512 512", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
-              {pt}
+              {dt}
             </svg>
           );
         },
-        ft = o.a.forwardRef(function (e, a) {
-          return <Et {...dt({ svgRef: a }, e)} />;
+        pt = o.a.forwardRef(function (e, a) {
+          return <ht {...mt({ svgRef: a }, e)} />;
         });
       t.p;
-      function vt() {
-        return (vt =
+      function Et() {
+        return (Et =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -5084,7 +5081,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function At(e, a) {
+      function ft(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -5104,70 +5101,70 @@
         }
         return r;
       }
-      var gt,
-        yt = (
+      var vt,
+        At = (
           <path
             d="M122.7 23.32l1.7 21.87-16.7 14.25 21.4 5.17 8.4 20.25L149 66.18l21.8-1.75-14.2-16.71 5.1-21.32-20.3 8.35-18.7-11.43zM464 32a16 16 0 0 0-16 16 16 16 0 0 0 16 16 16 16 0 0 0 16-16 16 16 0 0 0-16-16zM239.8 42.5a16 16 0 0 0-16 16 16 16 0 0 0 16 16 16 16 0 0 0 16-16 16 16 0 0 0-16-16zm183.9 6.84c-9.2 1.74-17.7 7.18-25.9 14.28-7.6 6.53-14.7 14.66-20.7 23.45-18.8 3.01-37.6 10.67-50.2 21.13-16.1 13.2-30.4 35.8-38.2 59.1-7.4 3.1-14.4 6.8-20.1 10.8-15.5 10.9-23.5 31.8-29.4 50-5.9 18.3-8.8 34.3-8.8 34.3l17.8 3.2s2.7-15 8.1-31.9c5.5-16.9 14.8-35.3 22.7-40.8 1.3-.9 3-1.9 4.5-2.8-.6 5.7-.6 11.4.3 16.8 1.8 11.4 8 22.3 19 28.2 7.8 4.2 16.6 3.2 24 .2 7.4-3.1 14-8.2 19.7-14.2 5.7-6 10.4-13.1 13.2-20.6 2.8-7.5 3.8-16 .2-23.9h-.1c-3.9-8.4-11.4-13.8-19.4-16.1-8-2.3-16.6-2.2-25.2-.9-1.5.2-2.9.7-4.4 1 7.4-15.8 18-30.7 27.5-38.6 6.2-5.1 16.6-10 27.7-13.6-1.4 3.8-2.5 7.6-3 11.5-1.6 10.5.7 21.9 9.1 29.7 6.1 5.6 14.3 6.5 21.5 5.3 7.1-1.2 14-4.4 20.2-8.5 6.2-4.2 11.7-9.4 15.6-15.5 3.9-6.1 6.5-13.9 4-21.7v-.1c-3.3-10.07-11.5-16.99-20.6-20.27-3.9-1.4-8-2.19-12.2-2.66 2.9-3.26 5.9-6.31 8.9-8.92 6.8-5.84 13.7-9.5 17.6-10.23l-3.4-17.68zM174.8 84.39l-15.2 9.56 34.5 55.25-56.4 2.9 26.5 57.8 16.4-7.6-15.5-33.6 60.6-3.1-50.9-81.21zm216.4 19.31c6.1-.1 11.5.6 15.5 2.1 5.4 1.9 8.1 4.3 9.5 8.8.4 1.1.2 3.3-1.9 6.6-2.2 3.4-6.1 7.2-10.5 10.2-4.5 3-9.5 5.1-13.2 5.7-3.8.7-5.5 0-6.3-.7-3.5-3.2-4.5-7.2-3.5-13.9.8-5.4 3.3-11.9 7-18.6 1.2 0 2.3-.2 3.4-.2zM94.99 123a16 16 0 0 0-16 16 16 16 0 0 0 16 16A16 16 0 0 0 111 139a16 16 0 0 0-16.01-16zm356.11 37.2l-14.4 16.6-21.8-1.8 11.4 18.8-8.5 20.2 21.4-5 16.6 14.3 1.9-21.9 18.7-11.4-20.2-8.5-5.1-21.3zm-123.5 16.5c2.9.1 5.6.5 7.7 1.1 4.3 1.2 6.6 3 8.2 6.4.9 1.9 1 5.4-.7 10-1.7 4.7-5.2 10.1-9.4 14.6s-9.3 8.1-13.5 9.8c-4.2 1.7-6.8 1.6-8.5.7h-.1c-5.8-3.2-8.6-7.8-9.7-15.2-1-6.3-.3-14.3 1.8-22.9 4.9-1.7 9.8-3.1 14.5-3.8 3.5-.5 6.7-.7 9.7-.7zm-202.4 51.9c-7.2-.2-11.7 1.5-14.5 4.3-2.8 2.8-4.5 7.3-4.3 14.5.2 7.3 2.6 16.9 7.2 27.6 9.2 21.5 27.3 47.4 51.6 71.8 24.3 24.3 50.3 42.3 71.8 51.5 10.6 4.6 20.2 7 27.5 7.2 7.3.3 11.7-1.5 14.5-4.3 2.8-2.8 4.6-7.2 4.3-14.5-.2-7.3-2.6-16.9-7.2-27.6-9.2-21.4-27.2-47.4-51.5-71.7-24.3-24.4-50.3-42.4-71.8-51.6-10.7-4.6-20.3-7-27.6-7.2zm232 31.3l-33 54-29.1-27.9-12.4 13 45.1 43.3 33.8-55.2 38.7 32.3 89.3-38.2-7-16.6-79.3 34-46.1-38.7zM93.43 272.6l-17.64 57.9c41.41 49.1 89.71 76.7 142.11 94.7l21.6-6.6c-3.1-1.1-6.4-2.4-9.7-3.8-24.4-10.4-51.7-29.6-77.3-55.3-25.7-25.7-44.9-53-55.34-77.4-1.41-3.2-2.65-6.4-3.73-9.5zm-23.82 78.2l-14.01 46c28.89 27 59 39.2 90.6 50.2l43.4-13.2c-43.2-17.6-84-43.3-119.99-83zM368 352a16 16 0 0 0-16 16 16 16 0 0 0 16 16 16 16 0 0 0 16-16 16 16 0 0 0-16-16zM49.81 415.9l-20.29 66.6 88.28-26.9c-22.77-9.1-45.78-20.7-67.99-39.7z"
             fill="#fff"
             fillOpacity={1}
           />
         ),
-        bt = function (e) {
+        gt = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = At(e, ["svgRef", "title"]);
+            n = ft(e, ["svgRef", "title"]);
           return (
-            <svg {...vt({ viewBox: "0 0 512 512", ref: a }, n)}>
+            <svg {...Et({ viewBox: "0 0 512 512", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
-              {yt}
+              {At}
             </svg>
           );
         },
-        Nt = o.a.forwardRef(function (e, a) {
-          return <bt {...vt({ svgRef: a }, e)} />;
+        yt = o.a.forwardRef(function (e, a) {
+          return <gt {...Et({ svgRef: a }, e)} />;
         });
       t.p;
       !(function (e) {
         (e[(e.DECREE = 0)] = "DECREE"), (e[(e.BONUS = 1)] = "BONUS");
-      })(gt || (gt = {}));
-      var Tt = function () {
+      })(vt || (vt = {}));
+      var bt = function () {
           return (
             <a href="/login">
               <U.a className="Decrees-Submit-Button">Login to Vote</U.a>
             </a>
           );
         },
-        Ot = function () {
+        Nt = function () {
           return (
             <a href="/welcome">
               <U.a className="Decrees-Submit-Button">Pick a Favorite Team to Vote</U.a>
             </a>
           );
         },
-        St = function () {
+        Tt = function () {
           return (
             <m.b to={{ pathname: "/shop" }}>
               <U.a className="Decrees-Submit-Button">Buy Another Vote</U.a>
             </m.b>
           );
         },
-        It = function (e) {
+        Ot = function (e) {
           var a = e.isActive;
           return <button className="Decrees-Option-Button">Select{a ? "ed" : ""}</button>;
         };
-      function Bt(e) {
+      function St(e) {
         return "forbidden_book" === e ? (
-          <lt className="Decrees-Option-Icon" />
+          <rt className="Decrees-Option-Icon" />
         ) : "eliminate_team" === e ? (
-          <at className="Decrees-Option-Icon" />
+          <$a className="Decrees-Option-Icon" />
         ) : "redistribute_wealth" === e ? (
-          <Za className="Decrees-Option-Icon" />
+          <qa className="Decrees-Option-Icon" />
         ) : "four_for_four" === e || "fourth_strike" === e ? (
           <Y.q className="Decrees-Option-Icon" />
         ) : "peanuts" === e ? (
           <Y.u className="Decrees-Option-Icon" />
         ) : "popular_evolution" === e ? (
-          <ut className="Decrees-Option-Icon" />
+          <st className="Decrees-Option-Icon" />
         ) : "enhanced_shame" === e ? (
           <Y.y className="Decrees-Option-Icon" />
         ) : "late_stage" === e ? (
@@ -5183,11 +5180,11 @@
         ) : "random_realignment" === e ? (
           <Y.a className="Decrees-Option-Icon" />
         ) : "alternate_reality" === e ? (
-          <ba.e className="Decrees-Option-Icon" />
+          <ga.e className="Decrees-Option-Icon" />
         ) : "targeted_shame" === e ? (
           <Y.C className="Decrees-Option-Icon" />
         ) : "roster_shuffle" === e ? (
-          <ya.a className="Decrees-Option-Icon" />
+          <Aa.a className="Decrees-Option-Icon" />
         ) : "home_field_advantage" === e ? (
           <J.b className="Decrees-Option-Icon" />
         ) : "team_punish" === e ? (
@@ -5207,14 +5204,14 @@
         ) : "new_kids" === e ? (
           <Y.l className="Decrees-Option-Icon" />
         ) : "hot_sauce" === e ? (
-          <ft className="Decrees-Option-Icon" />
+          <pt className="Decrees-Option-Icon" />
         ) : "enhanced_party_time" === e ? (
-          <Nt className="Decrees-Option-Icon" />
+          <yt className="Decrees-Option-Icon" />
         ) : (
           <div />
         );
       }
-      var wt = function (e) {
+      var It = function (e) {
           var a = e.title,
             t = e.description,
             n = e.id,
@@ -5227,25 +5224,25 @@
                 return l(n);
               }}
             >
-              {Bt(n)}
+              {St(n)}
               <div className="Decrees-Option-Header">{a}</div>
               {t && <p className="Decrees-Option-Description">{t}</p>}
-              <It isActive={r} />
+              <Ot isActive={r} />
             </div>
           );
         },
-        Ct = function () {
-          var e = Object(r.useContext)(Wa.context),
+        Bt = function () {
+          var e = Object(r.useContext)(ja.context),
             a = Object(r.useContext)(G.context).user,
             t = Object(r.useState)(),
             n = Object(c.a)(t, 2),
             l = n[0],
             i = n[1],
             m = Object(s.g)(),
-            d = <Tt />;
+            d = <bt />;
           return (
-            a.isFetching || !a.isSignedIn || a.favoriteTeam || (d = <Ot />),
-            a.isFetching || !a.isSignedIn || a.votes || (d = <St />),
+            a.isFetching || !a.isSignedIn || a.favoriteTeam || (d = <Nt />),
+            a.isFetching || !a.isSignedIn || a.votes || (d = <Tt />),
             !a.isFetching &&
               a.isSignedIn &&
               a.favoriteTeam &&
@@ -5259,7 +5256,7 @@
                     return i(void 0);
                   }}
                 >
-                  <u background={m} path={"/vote/".concat(gt.DECREE, "/").concat(l)}>
+                  <u background={m} path={"/vote/".concat(vt.DECREE, "/").concat(l)}>
                     Submit Decree Vote
                   </u>
                 </U.a>
@@ -5274,7 +5271,7 @@
                 <div className="Decrees-Container">
                   {e.decrees.map(function (e, a) {
                     return (
-                      <wt
+                      <It
                         {...Object.assign({ key: a }, e, {
                           isActive: l === e.id,
                           onSelect: function (e) {
@@ -5291,7 +5288,7 @@
           );
         };
       t(120);
-      function kt() {
+      function wt() {
         var e = Object(r.useContext)(I.context),
           a = Object(r.useState)({ recap: void 0, blessingResults: void 0, decreeResults: void 0 }),
           t = Object(c.a)(a, 2),
@@ -5381,7 +5378,7 @@
                         </div>
                       </div>
                       <div className="Recap-Decree-Content">
-                        <div className="Recap-Decree-Icon">{Bt(e.decreeId)}</div>
+                        <div className="Recap-Decree-Icon">{St(e.decreeId)}</div>
                         <div className="Recap-Decree-Description">
                           {e.description.split("\n").map(function (e, a) {
                             return (
@@ -5471,12 +5468,12 @@
           </div>
         );
       }
-      function Rt() {
+      function Ct() {
         var e = Object(r.useContext)(G.context).user,
           a = Object(r.useContext)(I.context);
-        return a && a.sim ? 0 === a.sim.phase ? <kt /> : e.unlockedElection ? <Lt /> : <Dt /> : null;
+        return a && a.sim ? 0 === a.sim.phase ? <wt /> : e.unlockedElection ? <kt /> : <Lt /> : null;
       }
-      function Lt() {
+      function kt() {
         var e,
           a = Object(r.useContext)(I.context),
           t = void 0 !== a.sim && void 0 !== a.sim.season ? a.sim.season : -1;
@@ -5490,28 +5487,28 @@
                 Votes are counted up and changes are made at the end of every week, between seasons of Blaseball. This
                 Election ends in...
               </div>
-              <Ze dateString={null === (e = a.sim) || void 0 === e ? void 0 : e.nextElectionEnd} />
+              <qe dateString={null === (e = a.sim) || void 0 === e ? void 0 : e.nextElectionEnd} />
             </div>
             <div className="Offseason-Body">
-              <Wa value={{ blessings: [], decrees: [], decreesToPass: 0 }}>
-                <Gt />
-              </Wa>
+              <ja value={{ blessings: [], decrees: [], decreesToPass: 0 }}>
+                <Rt />
+              </ja>
             </div>
           </div>
         );
       }
-      function Gt() {
-        var e = Object(r.useContext)(Wa.context);
+      function Rt() {
+        var e = Object(r.useContext)(ja.context);
         return void 0 === e || 0 === e.blessings.length || 0 === e.decrees.length ? (
           <pe />
         ) : (
           <o.a.Fragment>
-            <Ct />
-            <Ja />
+            <Bt />
+            <Fa />
           </o.a.Fragment>
         );
       }
-      function Dt() {
+      function Lt() {
         return (
           <div className="Offseason">
             <div className="Offseason-Info">
@@ -5529,7 +5526,7 @@
         );
       }
       t(121);
-      var Pt = function (e) {
+      var Gt = function (e) {
         var a = Object(me.useToasts)().addToast,
           t = Object(r.useContext)(G.context),
           n = t.user,
@@ -5632,7 +5629,7 @@
         );
       };
       t(122);
-      function Mt(e) {
+      function Dt(e) {
         var a,
           t = e.path,
           n = Object(r.useContext)(Pe.context),
@@ -5664,15 +5661,15 @@
                 Welcome to Blaseball. The next season is starting soon. Check the Election page for the results of last
                 season's voting.
               </div>
-              <Ze dateString={null === (a = l.sim) || void 0 === a ? void 0 : a.nextSeasonStart} />
+              <qe dateString={null === (a = l.sim) || void 0 === a ? void 0 : a.nextSeasonStart} />
             </div>
-            <Ke />
-            {"/leaderboard" === t ? <ea /> : <oa />}
+            <Je />
+            {"/leaderboard" === t ? <_e /> : <na />}
           </div>
         );
       }
       t(123);
-      var jt = function () {
+      var Pt = function () {
           return (
             <div className="Privacy">
               <h1 className="Privacy-Header">Privacy Policy</h1>
@@ -6045,7 +6042,7 @@
             </div>
           );
         },
-        xt =
+        Mt =
           (t(124),
           function () {
             return (
@@ -6570,8 +6567,8 @@
               </div>
             );
           });
-      function Wt() {
-        return (Wt =
+      function jt() {
+        return (jt =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -6581,7 +6578,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Qt(e, a) {
+      function xt(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -6601,23 +6598,23 @@
         }
         return r;
       }
-      var Ht = <image id="Ball" x={87} y={75} width={784} height={911} xlinkHref="<img/png blob>" />,
-        Ut = function (e) {
+      var Wt = <image id="Ball" x={87} y={75} width={784} height={911} xlinkHref="<img/png blob>" />,
+        Qt = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = Qt(e, ["svgRef", "title"]);
+            n = xt(e, ["svgRef", "title"]);
           return (
-            <svg {...Wt({ width: 959, height: 1065, viewBox: "0 0 959 1065", ref: a }, n)}>
+            <svg {...jt({ width: 959, height: 1065, viewBox: "0 0 959 1065", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
-              {Ht}
+              {Wt}
             </svg>
           );
         },
-        Ft = o.a.forwardRef(function (e, a) {
-          return <Ut {...Wt({ svgRef: a }, e)} />;
+        Ht = o.a.forwardRef(function (e, a) {
+          return <Qt {...jt({ svgRef: a }, e)} />;
         }),
-        Yt = (t.p, t(125), t(30)),
-        Jt = {
+        Ut = (t.p, t(125), t(30)),
+        Ft = {
           notes: [],
           refreshNotes: (function () {
             var e = Object(p.a)(
@@ -6637,8 +6634,8 @@
             };
           })(),
         },
-        Vt = Object(r.createContext)(Jt),
-        Kt = function (e) {
+        Yt = Object(r.createContext)(Ft),
+        Jt = function (e) {
           var a = e.children,
             t = Object(r.useContext)(G.context),
             n = t.user,
@@ -6663,7 +6660,7 @@
                                 return e.json();
                               })
                               .then(function (e) {
-                                e && u([].concat(Object(Yt.a)(m), Object(Yt.a)(e.notes)));
+                                e && u([].concat(Object(Ut.a)(m), Object(Ut.a)(e.notes)));
                               })
                               .catch(function (e) {
                                 u([]);
@@ -6758,16 +6755,16 @@
                                               (A = 0),
                                               r.idolRewards.forEach(function (e) {
                                                 switch (e.type) {
-                                                  case ze.IdolHomer:
+                                                  case Ke.IdolHomer:
                                                     s++, (m += e.amount);
                                                     break;
-                                                  case ze.IdolHit:
+                                                  case Ke.IdolHit:
                                                     u++, (p += e.amount);
                                                     break;
-                                                  case ze.IdolStrikeout:
+                                                  case Ke.IdolStrikeout:
                                                     E++, (f += e.amount);
                                                     break;
-                                                  case ze.IdolShutout:
+                                                  case Ke.IdolShutout:
                                                     v++, (A += e.amount);
                                                 }
                                               }),
@@ -6919,35 +6916,35 @@
               [m]
             );
           var T = { notes: m, refreshNotes: v };
-          return <Vt.Provider value={T}>{a}</Vt.Provider>;
+          return <Yt.Provider value={T}>{a}</Yt.Provider>;
         };
-      Kt.context = Vt;
-      var qt = Kt;
+      Jt.context = Yt;
+      var Vt = Jt;
       t(126);
-      function zt() {
+      function Kt() {
         return (
           <div className="TheBook-All">
             <div className="TheBook-Header">The Book of Blaseball</div>
             <div className="TheBook-Subheader">
               The Game of{" "}
               <span className="TheBook-Subheader-Group">
-                <Zt str="||||||||||||||||||" /> and <Zt str="|||||||||||||" />
+                <qt str="||||||||||||||||||" /> and <qt str="|||||||||||||" />
               </span>
             </div>
             <div className="TheBook-Subheader">Official Rulebook</div>
             <div className="TheBook-Line TheBook-Bullet">1. Seasons</div>
             <div className="TheBook-Line TheBook-SubBullet">
-              a. Each season of Blaseball shall last 99 games. In the case of <Zt str="the Ultimate ||||||||" />,
-              seasons shall <Zt str="|||||||||||||||||, or at least until the ||||||| have ||||||||." />
+              a. Each season of Blaseball shall last 99 games. In the case of <qt str="the Ultimate ||||||||" />,
+              seasons shall <qt str="|||||||||||||||||, or at least until the ||||||| have ||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              b. Every day of Blaseball shall last one <Zt str="|||||" /> hour.
+              b. Every day of Blaseball shall last one <qt str="|||||" /> hour.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              c. If any games last longer than one <Zt str="|||||" /> hour, a Spillover shall occur, and all games shall
-              be delayed until the next <Zt str="|||||" /> hour. In the case of a game lasting two <Zt str="|||||" />{" "}
+              c. If any games last longer than one <qt str="|||||" /> hour, a Spillover shall occur, and all games shall
+              be delayed until the next <qt str="|||||" /> hour. In the case of a game lasting two <qt str="|||||" />{" "}
               hours, the{" "}
-              <Zt str="entire season should be ||||||||| and both teams should be ||||||||| ||||||||| |||||||| |||| for |||||| |||||||||||." />
+              <qt str="entire season should be ||||||||| and both teams should be ||||||||| ||||||||| |||||||| |||| for |||||| |||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               d. A season should start on a "Monday" and therefore conclude on a "Friday".
@@ -6961,34 +6958,34 @@
             <div className="TheBook-Line TheBook-SubBullet">
               b. The Postseason should start early on a "Saturday" and conclude within the same day. If the Postseason
               lasts into the following day, no{" "}
-              <Zt str="||||| shall be ||||||||, and both teams shall be |||||||||| |||||||| ||||||||||||." />
+              <qt str="||||| shall be ||||||||, and both teams shall be |||||||||| |||||||| ||||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               c. Postseason rounds should be played in best 3 of 5 game series.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               d. The home team in each Postseason game shall be{" "}
-              <Zt str="the |||||||||||, if the |||||||||||||||||||." />
+              <qt str="the |||||||||||, if the |||||||||||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-Bullet">3. Elections</div>
             <div className="TheBook-Line TheBook-SubBullet">
               a. Participants should be allowed to Vote on the rules, rosters, and other effects of the game of
               Blaseball.{" "}
-              <Zt str="The content of such Votes shall be ||||||||||||||| ||||||||||||||||||| ||||||||| entertainment" />
+              <qt str="The content of such Votes shall be ||||||||||||||| ||||||||||||||||||| ||||||||| entertainment" />
               .
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               <span>b. Decrees will be decided by popular vote.</span>
-              <Zt str="It is understood that ||||||||||||||||| will be a ||||||||||| |||||||||||, and the others shall ||||||||||||||| ||||||||||||||| ||||||||| |||||||||||||." />
+              <qt str="It is understood that ||||||||||||||||| will be a ||||||||||| |||||||||||, and the others shall ||||||||||||||| ||||||||||||||| ||||||||| |||||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              c. Blessings will be decided by a raffle. <Zt str="It is understood that each of these" /> should give
-              players <Zt str="||||||||||||| |||||||||||" /> control of the league. All won Blessings shall be processed
+              c. Blessings will be decided by a raffle. <qt str="It is understood that each of these" /> should give
+              players <qt str="||||||||||||| |||||||||||" /> control of the league. All won Blessings shall be processed
               & applied in order of the standings.{" "}
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              c. <Zt str="||||||||||||||||||" /> may occur at the end of an Election, before Decrees and Blessings are
-              processed. <Zt str="Anything can happen here" />. Good luck.
+              c. <qt str="||||||||||||||||||" /> may occur at the end of an Election, before Decrees and Blessings are
+              processed. <qt str="Anything can happen here" />. Good luck.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               d. Elections should end on a "Sunday," although Votes should be able to be cast on any day of the week.
@@ -6998,27 +6995,27 @@
               a. The game of Blaseball should be played between two teams.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              b. Each game should take place <Zt str="at the home team's stadium" /> on the immaterial plane.
+              b. Each game should take place <qt str="at the home team's stadium" /> on the immaterial plane.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              c. Weather: <Zt str="The home team's stadium should determine the weather." /> In the case that{" "}
-              <Zt str="||||||||||||||||||||" />, a Solar Eclipse shall last until <Zt str="||||||||||||||||||||" />
+              c. Weather: <qt str="The home team's stadium should determine the weather." /> In the case that{" "}
+              <qt str="||||||||||||||||||||" />, a Solar Eclipse shall last until <qt str="||||||||||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              d. There are <Zt str="two positions" /> in Blaseball, <Zt str="||||||||||||||||||||." />
+              d. There are <qt str="two positions" /> in Blaseball, <qt str="||||||||||||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               e. When a team is on Defense,{" "}
-              <Zt str="all of the team's ||||||| will stand ||||||||| out in the field. Doesn't really matter where." />
+              <qt str="all of the team's ||||||| will stand ||||||||| out in the field. Doesn't really matter where." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              f. The pitcher must throw the ball <Zt str="with their hands." />
+              f. The pitcher must throw the ball <qt str="with their hands." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               g. Once the ball is in play,{" "}
-              <Zt str="||| |||| || ||| |||||||||| ||||| |||||||||| the outcome of the play. ||| |||| ||||||| || ||||||||||||||||" />{" "}
+              <qt str="||| |||| || ||| |||||||||| ||||| |||||||||| the outcome of the play. ||| |||| ||||||| || ||||||||||||||||" />{" "}
               immaterial plane{" "}
-              <Zt str="|||||||||||||| ||||||| ||||||| ||||||||| ||||||||||||||| |||||||||||||||| |||||||| |||||||| unfathomable." />
+              <qt str="|||||||||||||| ||||||| ||||||| ||||||||| ||||||||||||||| |||||||||||||||| |||||||| |||||||| unfathomable." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">h. The team with the most runs will win the game.</div>
             <div className="TheBook-Line TheBook-SubBullet">
@@ -7026,31 +7023,31 @@
               must complete the game in shame, despite being mathematically eliminated.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              j. <Zt str="||||||||||||||||||||||" />
+              j. <qt str="||||||||||||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              k. Crying in Blaseball is <Zt str="||||||||||." />
+              k. Crying in Blaseball is <qt str="||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-Bullet">
-              5. <Zt str="The Gods" /> and You
+              5. <qt str="The Gods" /> and You
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               a. Should the Participants open the Forbidden Book,{" "}
-              <Zt str="The Discipline Era should begin||||||||||||||||||||||" /> suffering{" "}
-              <Zt str="upon the league. Players shall be " /> banished{" "}
-              <Zt str="at the ||||||||||| ||||||||| |||| ||||||||||||||||." /> The Discipline Era shall last until{" "}
-              <Zt str="the Participants have" /> atoned.
+              <qt str="The Discipline Era should begin||||||||||||||||||||||" /> suffering{" "}
+              <qt str="upon the league. Players shall be " /> banished{" "}
+              <qt str="at the ||||||||||| ||||||||| |||| ||||||||||||||||." /> The Discipline Era shall last until{" "}
+              <qt str="the Participants have" /> atoned.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               b. If a team wins three championships, they, and Blaseball, shall ascend.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              c. When teams are sent to <Zt str="||||||||||| |||||||||||||" />, they shall return once{" "}
-              <Zt str="|||||||||||||||| |||||||||||||||||||||| |||||||||||||" />
+              c. When teams are sent to <qt str="||||||||||| |||||||||||||" />, they shall return once{" "}
+              <qt str="|||||||||||||||| |||||||||||||||||||||| |||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              d. Divine Favor: the <Zt str="||||" /> have an internal ranking{" "}
-              <Zt str="of favored teams. When a team wins a Divine Favor blessing, they will be" /> boosted to the top
+              d. Divine Favor: the <qt str="||||" /> have an internal ranking{" "}
+              <qt str="of favored teams. When a team wins a Divine Favor blessing, they will be" /> boosted to the top
               of the list.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
@@ -7066,39 +7063,39 @@
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               i. Blood Bath:{" "}
-              <Zt str="||||| ||||||, ||||||||||| |||||| ||| ||||||||, ||| ||||| |||| |||| ||||||| ||| ||||||. ||||| |||| || |||||||||||| ||||| || |||| |||||| ||||| |||||||||||||" />
+              <qt str="||||| ||||||, ||||||||||| |||||| ||| ||||||||, ||| ||||| |||| |||| ||||||| ||| ||||||. ||||| |||| || |||||||||||| ||||| || |||| |||||| ||||| |||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               f. Sunglasses{" "}
-              <Zt str="shall be |||||||||| ||||||||||||| |||||||||||||||||. They shall provide |||||||||||||| may be ||||||||||||||||||||." />
+              <qt str="shall be |||||||||| ||||||||||||| |||||||||||||||||. They shall provide |||||||||||||| may be ||||||||||||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">g. Splortsmanship, splortsmanship, is BACK.</div>
             <div className="TheBook-Line TheBook-Bullet">
-              6. <Zt str="||||||||||||" />
+              6. <qt str="||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               a. It is known{" "}
-              <Zt str="that the intention of the game of Blaseball |||||||||||||||||||||||| |||||||||||||||||||| |||||||||||||| |||||||||||||||||| ||||||||||| |||||||||| would be diminished." />
+              <qt str="that the intention of the game of Blaseball |||||||||||||||||||||||| |||||||||||||||||||| |||||||||||||| |||||||||||||||||| ||||||||||| |||||||||| would be diminished." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              b. <Zt str="|||||||" />: Several entities in the <Zt str="||||||||||||||" /> shall be chosen{" "}
-              <Zt str="||||||||||" /> to bring Blaseball to the people{" "}
-              <Zt str="|||||||||||||||||| ||||||||||||||||||" />
+              b. <qt str="|||||||" />: Several entities in the <qt str="||||||||||||||" /> shall be chosen{" "}
+              <qt str="||||||||||" /> to bring Blaseball to the people{" "}
+              <qt str="|||||||||||||||||| ||||||||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-Bullet">Signed,</div>
             <div className="TheBook-Line TheBook-SubBullet">
-              <Zt str="||||" />,  <Zt str="||||" />,  <Zt str="||||||||" />,  <Zt str="|||||||" />,  
-              <Zt str="||||||||" />,  <Zt str="|||||||||" />,  <Zt str="|||||||" />,  <Zt str="||||" />,  
-              <Zt str="||||||" />,  H
-              <Zt str="||||||||||" />,  <Zt str="||||||" />,  <Zt str="|||||||" />,  <Zt str="||||| ||||" />,  A
-              <Zt str="|||||| ||||||" />,  <Zt str="||||" />,  N
-              <Zt str="||||||" />,  <Zt str="||" />,  <Zt str="||||||" />,  M
-              <Zt str="|| ||||||" />
+              <qt str="||||" />,  <qt str="||||" />,  <qt str="||||||||" />,  <qt str="|||||||" />,  
+              <qt str="||||||||" />,  <qt str="|||||||||" />,  <qt str="|||||||" />,  <qt str="||||" />,  
+              <qt str="||||||" />,  H
+              <qt str="||||||||||" />,  <qt str="||||||" />,  <qt str="|||||||" />,  <qt str="||||| ||||" />,  A
+              <qt str="|||||| ||||||" />,  <qt str="||||" />,  N
+              <qt str="||||||" />,  <qt str="||" />,  <qt str="||||||" />,  M
+              <qt str="|| ||||||" />
             </div>
           </div>
         );
       }
-      function Zt(e) {
+      function qt(e) {
         var a = e.str.split(" ");
         return (
           <span className="TheBook-RedactGroup">
@@ -7115,9 +7112,9 @@
         );
       }
       t(127);
-      function Xt() {
+      function zt() {
         var e,
-          a = Object(r.useContext)(Ra.context);
+          a = Object(r.useContext)(Ca.context);
         return (
           <div className="BigDeal-All">
             <div className="BigDeal-Icon">
@@ -7132,9 +7129,9 @@
         );
       }
       t(128);
-      var _t = t(68);
-      function $t() {
-        return ($t =
+      var Zt = t(68);
+      function Xt() {
+        return (Xt =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -7144,7 +7141,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function en(e, a) {
+      function _t(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -7164,28 +7161,28 @@
         }
         return r;
       }
-      var an = (
+      var $t = (
           <path
             d="M248 15c-18.1 0-33 14.88-33 33 0 18.12 14.9 33 33 33s33-14.88 33-33c0-18.12-14.9-33-33-33zm0 18c8.4 0 15 6.61 15 15s-6.6 15-15 15-15-6.61-15-15 6.6-15 15-15zM64 73c-18.12 0-33 14.88-33 33 0 18.1 14.88 33 33 33 18.12 0 33-14.9 33-33 0-18.12-14.88-33-33-33zm0 18c8.39 0 15 6.61 15 15 0 8.4-6.61 15-15 15s-15-6.6-15-15c0-8.39 6.61-15 15-15zm155.9 39.7c-22.5 0-41 18.5-41 41s18.5 41 41 41 41-18.5 41-41-18.5-41-41-41zm0 18c12.8 0 23 10.2 23 23s-10.2 23-23 23-23-10.2-23-23 10.2-23 23-23zM112 162a16 16 0 0 0-16 16 16 16 0 0 0 16 16 16 16 0 0 0 16-16 16 16 0 0 0-16-16zm223 61.4c-5 .2-10.6 2.4-20 7.1l-98.1 49.1c.1.8.1 1.6.1 2.4 0 27-22 49-49 49-11.9 0-22.7-4.2-31.2-11.3l-23.4 11.7c-8.2 4.8-14.26 8.3-18.01 12.9-3.78 4.7-6.39 11-6.39 24.4v43.1c0 10.4.59 14.7 1.18 15.7.6 1.1 3 3 11.52 7.4l78.7 39.4.3.1c16.3 9.7 36.8 8.8 56.7-1.2l199.3-98.9c9.5-5.3 13.6-9.1 15.6-12.7 2-3.7 2.7-8.7 2.7-18.1v-38.6c0-12.7.2-19.8-.8-22.4-.9-2.7-2.5-4.6-12.3-9.4v-.1l-84.8-42.4-.1-.1c-10.9-5.7-16.9-7.3-22-7.1zM168 251c-17.2 0-31 13.8-31 31s13.8 31 31 31 31-13.8 31-31-13.8-31-31-31zm246.8 34.5l7.8 16.2-154 73.8h-.1c-17 7.8-30.3 14.9-45.3 17.6-14.9 2.6-30.8-.4-49.6-11l.4.3-43.5-21.4 8-16.2 43.7 21.5.2.2c16.6 9.3 26.8 10.7 37.8 8.8 10.9-1.9 23.3-8.2 40.8-16.2l153.8-73.6z"
             fill="#fff"
             fillOpacity={1}
           />
         ),
-        tn = function (e) {
+        en = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = en(e, ["svgRef", "title"]);
+            n = _t(e, ["svgRef", "title"]);
           return (
-            <svg {...$t({ viewBox: "0 0 512 512", ref: a }, n)}>
+            <svg {...Xt({ viewBox: "0 0 512 512", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
-              {an}
+              {$t}
             </svg>
           );
         },
-        nn = o.a.forwardRef(function (e, a) {
-          return <tn {...$t({ svgRef: a }, e)} />;
+        an = o.a.forwardRef(function (e, a) {
+          return <en {...Xt({ svgRef: a }, e)} />;
         }),
-        rn =
+        tn =
           (t.p,
           (function (e) {
             var a,
@@ -7374,7 +7371,7 @@
             "1298718347463258112",
             "1298714979516858368",
           ]));
-      function on() {
+      function nn() {
         var e,
           a,
           t,
@@ -7416,26 +7413,30 @@
             })
           )).apply(this, arguments);
         }
-        Object(r.useEffect)(function () {
-          !(function () {
-            A.apply(this, arguments);
-          })();
-        }, []),
-          (t = (
-            <o.a.Fragment>
-              <div className="Bulletin-Item-Header">
-                <div className="Bulletin-Item-Header-Icon" style={{ background: "#deae00" }}>
-                  <Y.F />
-                </div>
-                <div className="Bulletin-Item-Header-Title">IDOLS</div>
+        if (
+          (Object(r.useEffect)(function () {
+            !(function () {
+              A.apply(this, arguments);
+            })();
+          }, []),
+          void 0 === u || void 0 === u.sim)
+        )
+          return null;
+        t = (
+          <o.a.Fragment>
+            <div className="Bulletin-Item-Header">
+              <div className="Bulletin-Item-Header-Icon" style={{ background: "#deae00" }}>
+                <Y.F />
               </div>
-              <div className="Bulletin-Item-Contents">
-                <div className="Bulletin-Item-Contents-Text">
-                  Idols have been introduced to the ILB. Who will tlopp the leaderboard?
-                </div>
+              <div className="Bulletin-Item-Header-Title">IDOLS</div>
+            </div>
+            <div className="Bulletin-Item-Contents">
+              <div className="Bulletin-Item-Contents-Text">
+                Idols have been introduced to the ILB. Who will tlopp the leaderboard?
               </div>
-            </o.a.Fragment>
-          ));
+            </div>
+          </o.a.Fragment>
+        );
         var g =
           6 === (null === (e = u.sim) || void 0 === e ? void 0 : e.phase) ||
           0 === (null === (a = u.sim) || void 0 === a ? void 0 : a.phase);
@@ -7443,7 +7444,7 @@
           <o.a.Fragment>
             <div className="Bulletin-Item-Header">
               <div className="Bulletin-Item-Header-Icon" style={{ background: "#ba1111" }}>
-                <ba.d />
+                <ga.d />
               </div>
               <div className="Bulletin-Item-Header-Title">Blaseball Cares</div>
             </div>
@@ -7498,21 +7499,21 @@
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#32c775" }}>
                   <Y.K />
                 </div>
-                <div className="Bulletin-Item-Header-Title">Season 4 Recap</div>
+                <div className="Bulletin-Item-Header-Title">Season {u.sim.season} Recap</div>
               </div>
               <div className="Bulletin-Item-Contents">
                 <div className="Bulletin-Item-Contents-Text">
-                  <ln />
+                  <rn />
                   The Chicago Firefighters captured their first championship with a Game 5 win over the Breckenridge
                   Jazz Hands.
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <ln />
+                  <rn />
                   The Unlimited Tacos completed a historic Regular Season Speed Run, reaching #PARTYTIME faster than any
                   team ever before.
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <ln />
+                  <rn />
                   The High Filter Decree dunked the ILB in The Tub, restructuring the league according to past
                   performance.
                 </div>
@@ -7529,16 +7530,16 @@
               </div>
               <div className="Bulletin-Item-Contents Bulletin-Item-Contents-Text">
                 <div className="Bulletin-Item-Contents-Text">
-                  <ln />
+                  <rn />
                   Declan Suzanne ate a stray peanut, suffered a horrific allergic reaction, and somehow still managed to
                   bat in the winning run of Internet Series Game 4.
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <ln />
+                  <rn />
                   The Jazz Hands stole newly 6-starred Nagomi Mcdaniel from the Baltimore Crabs.
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <ln />
+                  <rn />
                   The Baltimore Crabs won FOUR blessings in Season 5’s Election, earning the contempt of most of the
                   league.
                 </div>
@@ -7554,9 +7555,9 @@
                 <div className="Bulletin-Item-Header-Title">Art Gallery</div>
               </div>
               <div className="Bulletin-Item-Contents Bulletin-Item-ImageGrid">
-                {rn.map(function (e) {
+                {tn.map(function (e) {
                   return (
-                    <_t.a
+                    <Zt.a
                       id={e}
                       options={{ theme: "dark", conversation: "none", dnt: !0 }}
                       className="Bulletin-Tweet"
@@ -7576,10 +7577,10 @@
               </div>
               <div className="Bulletin-Item-Contents">
                 <div className="Bulletin-Item-Contents-Text">
-                  BATH TIME <nn className="Bulletin-Icon" /> BATH TIME <nn className="Bulletin-Icon" /> BATH TIME{" "}
-                  <nn className="Bulletin-Icon" /> BATH TIME <nn className="Bulletin-Icon" /> BATH TIME{" "}
-                  <nn className="Bulletin-Icon" /> BATH TIME <nn className="Bulletin-Icon" /> BATH TIME{" "}
-                  <nn className="Bulletin-Icon" />
+                  BATH TIME <an className="Bulletin-Icon" /> BATH TIME <an className="Bulletin-Icon" /> BATH TIME{" "}
+                  <an className="Bulletin-Icon" /> BATH TIME <an className="Bulletin-Icon" /> BATH TIME{" "}
+                  <an className="Bulletin-Icon" /> BATH TIME <an className="Bulletin-Icon" /> BATH TIME{" "}
+                  <an className="Bulletin-Icon" />
                 </div>
               </div>
             </o.a.Fragment>
@@ -7624,10 +7625,10 @@
           y
         );
       }
-      function ln() {
-        return <ba.f className="Bulletin-Bullet" />;
+      function rn() {
+        return <ga.f className="Bulletin-Bullet" />;
       }
-      var cn, sn;
+      var on, ln;
       t(129);
       !(function (e) {
         (e[(e.SingleA = 0)] = "SingleA"),
@@ -7643,7 +7644,7 @@
           (e[(e.Fire = 10)] = "Fire"),
           (e[(e.Psychic = 11)] = "Psychic"),
           (e[(e.Grass = 12)] = "Grass");
-      })(cn || (cn = {})),
+      })(on || (on = {})),
         (function (e) {
           (e[(e.Black = 0)] = "Black"),
             (e[(e.LightAndSweet = 1)] = "LightAndSweet"),
@@ -7659,14 +7660,14 @@
             (e[(e.MilkSubstitute = 11)] = "MilkSubstitute"),
             (e[(e.PlentyOfSugar = 12)] = "PlentyOfSugar"),
             (e[(e.Anything = 13)] = "Anything");
-        })(sn || (sn = {}));
-      var mn = t(39);
-      function un(e) {
+        })(ln || (ln = {}));
+      var cn = t(39);
+      function sn(e) {
         for (var a = e / 0.2, t = Math.round(2 * a) / 2, n = Math.floor(t), r = Math.ceil(t), l = [], i = 0; i < n; i++)
-          l.push(<ya.b />);
-        return n !== r && l.push(<ya.c />), (<span>{l}</span>);
+          l.push(<Aa.b />);
+        return n !== r && l.push(<Aa.c />), (<span>{l}</span>);
       }
-      var dn = function (e) {
+      var mn = function (e) {
         var a,
           t,
           n,
@@ -7715,7 +7716,7 @@
             if (void 0 === e) return "NONE";
             if (void 0 === e.bat) return "NONE";
             if ("" === e.bat) return "NONE";
-            var a = mn.collection.find(function (a) {
+            var a = cn.collection.find(function (a) {
               return a.id === e.bat;
             });
             return void 0 === a ? "NONE" : a.attr;
@@ -7724,7 +7725,7 @@
             if (void 0 === e) return "NONE";
             if (void 0 === e.armor) return "NONE";
             if ("" === e.armor) return "NONE";
-            var a = mn.collection.find(function (a) {
+            var a = cn.collection.find(function (a) {
               return a.id === e.armor;
             });
             return void 0 === a ? "NONE" : a.attr;
@@ -7740,19 +7741,19 @@
               <div className="Player-Attributes">
                 <div className="AttributeBar">
                   {E.player.permAttr.map(function (e, a) {
-                    return <Sa id={e} type={ga.Permanent} key={a} />;
+                    return <Ta id={e} type={va.Permanent} key={a} />;
                   })}
                   {E.player.seasAttr.map(function (e, a) {
-                    return <Sa id={e} type={ga.Season} key={a} />;
+                    return <Ta id={e} type={va.Season} key={a} />;
                   })}
                   {E.player.weekAttr.map(function (e, a) {
-                    return <Sa id={e} type={ga.Weekly} key={a} />;
+                    return <Ta id={e} type={va.Weekly} key={a} />;
                   })}
                   {E.player.gameAttr.map(function (e, a) {
-                    return <Sa id={e} type={ga.Game} key={a} />;
+                    return <Ta id={e} type={va.Game} key={a} />;
                   })}
-                  {"NONE" !== y ? <Sa id={y} type={ga.Item} /> : null}
-                  {"NONE" !== b ? <Sa id={b} type={ga.Armor} /> : null}
+                  {"NONE" !== y ? <Ta id={y} type={va.Item} /> : null}
+                  {"NONE" !== b ? <Ta id={b} type={va.Armor} /> : null}
                 </div>
               </div>
             ) : null,
@@ -7943,54 +7944,54 @@
                         if (t > 0.8)
                           return (
                             <span className="Player-VibeLine Player-Vibe-MostExcellent">
-                              <ba.c className="Player-VibeLine-Arrow" />
-                              <ba.c className="Player-VibeLine-Arrow" />
-                              <ba.c className="Player-VibeLine-Arrow" />
+                              <ga.c className="Player-VibeLine-Arrow" />
+                              <ga.c className="Player-VibeLine-Arrow" />
+                              <ga.c className="Player-VibeLine-Arrow" />
                               <div className="Player-VibeLine-Text">Most Excellent</div>
                             </span>
                           );
                         if (t > 0.4)
                           return (
                             <span className="Player-VibeLine Player-Vibe-Excellent">
-                              <ba.c className="Player-VibeLine-Arrow" />
-                              <ba.c className="Player-VibeLine-Arrow" />
+                              <ga.c className="Player-VibeLine-Arrow" />
+                              <ga.c className="Player-VibeLine-Arrow" />
                               <div className="Player-VibeLine-Text">Excellent</div>
                             </span>
                           );
                         if (t > 0.1)
                           return (
                             <span className="Player-VibeLine Player-Vibe-Quality">
-                              <ba.c className="Player-VibeLine-Arrow" />
+                              <ga.c className="Player-VibeLine-Arrow" />
                               <div className="Player-VibeLine-Text">Quality</div>
                             </span>
                           );
                         if (t > -0.1)
                           return (
                             <span className="Player-VibeLine Player-Vibe-Neutral">
-                              <ba.a className="Player-VibeLine-Arrow" />
+                              <ga.a className="Player-VibeLine-Arrow" />
                               <div className="Player-VibeLine-Text">Neutral</div>
                             </span>
                           );
                         if (t > -0.4)
                           return (
                             <span className="Player-VibeLine Player-Vibe-LessThanIdeal">
-                              <ba.b className="Player-VibeLine-Arrow" />
+                              <ga.b className="Player-VibeLine-Arrow" />
                               <div className="Player-VibeLine-Text">Less Than Ideal</div>
                             </span>
                           );
                         if (t > -0.8)
                           return (
                             <span className="Player-VibeLine Player-Vibe-FarLessThanIdeal">
-                              <ba.b className="Player-VibeLine-Arrow" />
-                              <ba.b className="Player-VibeLine-Arrow" />
+                              <ga.b className="Player-VibeLine-Arrow" />
+                              <ga.b className="Player-VibeLine-Arrow" />
                               <div className="Player-VibeLine-Text">Far Less Than Ideal</div>
                             </span>
                           );
                         return (
                           <span className="Player-VibeLine Player-Vibe-Terrible">
-                            <ba.b className="Player-VibeLine-Arrow" />
-                            <ba.b className="Player-VibeLine-Arrow" />
-                            <ba.b className="Player-VibeLine-Arrow" />
+                            <ga.b className="Player-VibeLine-Arrow" />
+                            <ga.b className="Player-VibeLine-Arrow" />
+                            <ga.b className="Player-VibeLine-Arrow" />
                             <div className="Player-VibeLine-Text">Honestly Terrible</div>
                           </span>
                         );
@@ -7999,7 +8000,7 @@
                     <div className="Player-Info-Line">
                       <div className="Player-Info-Line-Header">Batting</div>
                       <div className="Player-Ratings">
-                        {un(
+                        {sn(
                           (function (e) {
                             return (
                               Math.pow(1 - e.tragicness, 0.01) *
@@ -8019,7 +8020,7 @@
                       <div className="Player-Info-Line-Header">Pitching</div>
                       <div className="Player-Ratings">
                         {(function (e) {
-                          return un(
+                          return sn(
                             (function (e) {
                               return (
                                 Math.pow(e.shakespearianism, 0.1) *
@@ -8038,7 +8039,7 @@
                       <div className="Player-Info-Line-Header">Baserunning</div>
                       <div className="Player-Ratings">
                         {(function (e) {
-                          return un(
+                          return sn(
                             (function (e) {
                               return (
                                 Math.pow(e.laserlikeness, 0.5) *
@@ -8056,7 +8057,7 @@
                       <div className="Player-Info-Line-Header">Defense</div>
                       <div className="Player-Ratings">
                         {(function (e) {
-                          return un(
+                          return sn(
                             (function (e) {
                               return (
                                 Math.pow(e.omniscience, 0.2) *
@@ -8080,7 +8081,7 @@
                             if (void 0 === e) return "None";
                             if (void 0 === e.bat) return "None";
                             if ("" === e.bat) return "None";
-                            var a = mn.collection.find(function (a) {
+                            var a = cn.collection.find(function (a) {
                               return a.id === e.bat;
                             });
                             return void 0 === a ? "None?" : a.name;
@@ -8101,7 +8102,7 @@
                             if (void 0 === e) return "None";
                             if (void 0 === e.armor) return "None";
                             if ("" === e.armor) return "None";
-                            var a = mn.collection.find(function (a) {
+                            var a = cn.collection.find(function (a) {
                               return a.id === e.armor;
                             });
                             return void 0 === a ? "None?" : a.name;
@@ -8129,31 +8130,31 @@
                       <div className="Player-Info-Line-Body">
                         {(function (e) {
                           switch (e) {
-                            case sn.Black:
+                            case ln.Black:
                               return "Black";
-                            case sn.LightAndSweet:
+                            case ln.LightAndSweet:
                               return "Light & Sweet";
-                            case sn.Macchiato:
+                            case ln.Macchiato:
                               return "Macchiato";
-                            case sn.CreamAndSugar:
+                            case ln.CreamAndSugar:
                               return "Cream & Sugar";
-                            case sn.ColdBrew:
+                            case ln.ColdBrew:
                               return "Cold Brew";
-                            case sn.FlatWhite:
+                            case ln.FlatWhite:
                               return "Flat White";
-                            case sn.Americano:
+                            case ln.Americano:
                               return "Americano";
-                            case sn.Foam:
+                            case ln.Foam:
                               return "Heavy Foam";
-                            case sn.Latte:
+                            case ln.Latte:
                               return "Latte";
-                            case sn.Decaf:
+                            case ln.Decaf:
                               return "Decaf";
-                            case sn.MilkSubstitute:
+                            case ln.MilkSubstitute:
                               return "Milk Substitute";
-                            case sn.PlentyOfSugar:
+                            case ln.PlentyOfSugar:
                               return "Plenty of Sugar";
-                            case sn.Anything:
+                            case ln.Anything:
                               return "Anything";
                           }
                           return "Coffee?";
@@ -8165,31 +8166,31 @@
                       <div className="Player-Info-Line-Body">
                         {(function (e) {
                           switch (e) {
-                            case cn.SingleA:
+                            case on.SingleA:
                               return "A";
-                            case cn.DoubleA:
+                            case on.DoubleA:
                               return "AA";
-                            case cn.TripleA:
+                            case on.TripleA:
                               return "AAA";
-                            case cn.Acid:
+                            case on.Acid:
                               return "Acidic";
-                            case cn.Base:
+                            case on.Base:
                               return "Basic";
-                            case cn.Oh:
+                            case on.Oh:
                               return "O";
-                            case cn.OhNo:
+                            case on.OhNo:
                               return "O No";
-                            case cn.Water:
+                            case on.Water:
                               return "H\u2082O";
-                            case cn.Electric:
+                            case on.Electric:
                               return "Electric";
-                            case cn.Love:
+                            case on.Love:
                               return "Love";
-                            case cn.Fire:
+                            case on.Fire:
                               return "Fire";
-                            case cn.Psychic:
+                            case on.Psychic:
                               return "Psychic";
-                            case cn.Grass:
+                            case on.Grass:
                               return "Grass";
                           }
                           return "Blood?";
@@ -8231,32 +8232,32 @@
         return <z {...Object.assign({}, e, { className: "Player" })}>{R}</z>;
       };
       t(130), t(131);
-      function hn(e) {
+      function un(e) {
         return void 0 !== e.element ? e.element : <div className="Stubs-Header">{e.text}</div>;
       }
-      var pn = function (e) {
+      var dn = function (e) {
           var a,
             t = e.path,
             n = Object(r.useContext)(I.context),
             l = void 0 !== n.sim && void 0 !== n.sim.season ? n.sim.season : -1;
           return (
             <div>
-              <hn
+              <un
                 element={
                   <div className="Stubs-All">
                     <div className="Stubs-Header">It's the Pre-Season.</div>
-                    <Ze dateString={null === (a = n.sim) || void 0 === a ? void 0 : a.nextPhaseTime} />
+                    <qe dateString={null === (a = n.sim) || void 0 === a ? void 0 : a.nextPhaseTime} />
                     <div className="Stubs-Body">Season {l + 1} will begin soon.</div>
                   </div>
                 }
                 text="Offseason. Check for updates on the Discord!"
               />
-              <Ke />
-              {"/leaderboard" === t ? <ea /> : <oa />}
+              <Je />
+              {"/leaderboard" === t ? <_e /> : <na />}
             </div>
           );
         },
-        En =
+        hn =
           (t(132),
           function (e) {
             var a,
@@ -8265,24 +8266,24 @@
               l = void 0 !== n.sim && void 0 !== n.sim.season ? n.sim.season : -1;
             return (
               <div>
-                <hn
+                <un
                   element={
                     <div className="Stubs-All">
                       <div className="Stubs-Header">The Season is Over!</div>
-                      <Ze dateString={null === (a = n.sim) || void 0 === a ? void 0 : a.nextPhaseTime} />
+                      <qe dateString={null === (a = n.sim) || void 0 === a ? void 0 : a.nextPhaseTime} />
                       <div className="Stubs-Body">Postseason {l + 1} will begin soon.</div>
                     </div>
                   }
                   text="Offseason. Check for updates on the Discord!"
                 />
-                <Ke />
-                {"/leaderboard" === t ? <ea /> : <oa />}
+                <Je />
+                {"/leaderboard" === t ? <_e /> : <na />}
               </div>
             );
           });
-      function fn() {
+      function pn() {
         var e = Object(r.useContext)(G.context).user,
-          a = Object(r.useContext)(Ra.context),
+          a = Object(r.useContext)(Ca.context),
           t = Object(r.useState)(!1),
           n = Object(c.a)(t, 2),
           l = n[0],
@@ -8294,10 +8295,10 @@
             },
             [e]
           ),
-          void 0 !== e && e.isFetching ? <An /> : a && a.doc && a.doc.epsilon ? <gn /> : l ? <yn /> : <vn />
+          void 0 !== e && e.isFetching ? <fn /> : a && a.doc && a.doc.epsilon ? <vn /> : l ? <An /> : <En />
         );
       }
-      function vn() {
+      function En() {
         var e = Object(s.g)(),
           a = e.state && e.state.background;
         return (
@@ -8306,31 +8307,31 @@
             <div className="Main-Body-Intro">
               <s.c location={a || e}>
                 <s.a path="/tos">
-                  <xt />
+                  <Mt />
                 </s.a>
                 <s.a path="/privacy">
-                  <jt />
+                  <Pt />
                 </s.a>
                 <s.a path="/login">
-                  <Pa isLogin={!0} />
+                  <Ga isLogin={!0} />
                 </s.a>
                 <s.a path="/signup/:code?">
-                  <Pa />
+                  <Ga />
                 </s.a>
                 <s.a path="/">
-                  <Aa />
+                  <fa />
                 </s.a>
               </s.c>
               {a && (
                 <o.a.Fragment>
-                  <s.a path="/signup" children={<Pa isModal={!0} />} />
-                  <s.a path="/login" children={<Pa isModal={!0} isLogin={!0} />} />
-                  <s.a path="/team/:nickname" children={<wa isModal={!0} />} />
+                  <s.a path="/signup" children={<Ga isModal={!0} />} />
+                  <s.a path="/login" children={<Ga isModal={!0} isLogin={!0} />} />
+                  <s.a path="/team/:nickname" children={<Ia isModal={!0} />} />
                   <s.a path="/bet/:gameId" children={<fe isModal={!0} />} />
-                  <s.a path="/vote/:voteType/:entityId" children={<Pt isModal={!0} />} />
+                  <s.a path="/vote/:voteType/:entityId" children={<Gt isModal={!0} />} />
                 </o.a.Fragment>
               )}
-              <Da isModal={!0} dismissable={!1} />
+              <La isModal={!0} dismissable={!1} />
             </div>
             <footer className="Main-Footer">
               <div className="Main-Footer-Links">
@@ -8340,94 +8341,94 @@
                 <a className="Main-Footer-Link" href="/privacy">
                   Privacy Policy
                 </a>
-                <a className="Main-Footer-Link" href={bn()}>
+                <a className="Main-Footer-Link" href={gn()}>
                   Advertise
                 </a>
               </div>
               <a href="https://twitter.com/thegameband" target="_blank" className="Main-Footer-Logo">
-                <Ft />
+                <Ht />
               </a>
             </footer>
           </div>
         );
       }
-      function An() {
+      function fn() {
         return (
           <div>
             <div className="Main-Body" />
           </div>
         );
       }
-      function gn() {
+      function vn() {
         return (
           <div>
             <div className="Main-Body">
-              <Xt />
+              <zt />
             </div>
           </div>
         );
       }
-      function yn() {
+      function An() {
         var e = Object(r.useContext)(I.context),
           a = Object(s.g)(),
           t = a.state && a.state.background,
           n = function (e, a) {
             switch (e) {
               case 0:
-                return <Mt path={a} />;
+                return <Dt path={a} />;
               case 1:
-                return <pn path={a} />;
+                return <dn path={a} />;
               case 2:
-                return <ua path={a} />;
+                return <sa path={a} />;
               case 3:
-                return <En path={a} />;
+                return <hn path={a} />;
               case 4:
-                return <da path={a} />;
+                return <ma path={a} />;
               case 5:
               case 6:
-                return <ha path={a} />;
+                return <ua path={a} />;
             }
             return <div />;
           };
         return (
-          <qt>
+          <Vt>
             <M>
-              <$e>
+              <Xe>
                 <xe state={e} />
                 <div className="Main-Body">
                   <s.c location={t || a}>
                     <s.a path="/tos">
-                      <xt />
+                      <Mt />
                     </s.a>
                     <s.a path="/privacy">
-                      <jt />
+                      <Pt />
                     </s.a>
                     <s.a path="/about">
-                      <va />
+                      <Ea />
                     </s.a>
                     <s.a path="/bulletin">
-                      <on />
+                      <nn />
                     </s.a>
                     <s.a path="/shop">
-                      <La />
+                      <ka />
                     </s.a>
                     <s.a path="/thebook">
-                      <zt />
+                      <Kt />
                     </s.a>
                     <s.a path="/offseason">
-                      <Rt />
+                      <Ct />
                     </s.a>
                     <s.a path="/login">
-                      <Pa isLogin={!0} />
+                      <Ga isLogin={!0} />
                     </s.a>
                     <s.a path="/signup">
-                      <Pa />
+                      <Ga />
                     </s.a>
                     <s.a path="/team/:nickname">
-                      <wa />
+                      <Ia />
                     </s.a>
                     <s.a path="/player/:id">
-                      <dn />
+                      <mn />
                     </s.a>
                     <s.a path="/standings">{e.sim && n(e.sim.phase, "/standings")}</s.a>
                     <s.a path="/leaderboard">{e.sim && n(e.sim.phase, "/leaderboard")}</s.a>
@@ -8436,15 +8437,15 @@
                   </s.c>
                   {t && (
                     <o.a.Fragment>
-                      <s.a path="/signup" children={<Pa isModal={!0} />} />
-                      <s.a path="/login" children={<Pa isModal={!0} isLogin={!0} />} />
-                      <s.a path="/team/:nickname" children={<wa isModal={!0} />} />
-                      <s.a path="/player/:id" children={<dn isModal={!0} />} />
+                      <s.a path="/signup" children={<Ga isModal={!0} />} />
+                      <s.a path="/login" children={<Ga isModal={!0} isLogin={!0} />} />
+                      <s.a path="/team/:nickname" children={<Ia isModal={!0} />} />
+                      <s.a path="/player/:id" children={<mn isModal={!0} />} />
                       <s.a path="/bet/:gameId" children={<fe isModal={!0} />} />
-                      <s.a path="/vote/:voteType/:entityId" children={<Pt isModal={!0} />} />
+                      <s.a path="/vote/:voteType/:entityId" children={<Gt isModal={!0} />} />
                     </o.a.Fragment>
                   )}
-                  <Da isModal={!0} dismissable={!1} />
+                  <La isModal={!0} dismissable={!1} />
                 </div>
                 <footer className="Main-Footer">
                   <div className="Main-Footer-Links">
@@ -8460,31 +8461,31 @@
                   </div>
                   <div className="Main-Footer-Advertise">
                     <div className="Main-Footer-Advertise-Inner">
-                      <a className="Main-Footer-Advertise-Icon" href={bn()}>
+                      <a className="Main-Footer-Advertise-Icon" href={gn()}>
                         Sponsor a Season
                       </a>
                     </div>
                   </div>
                   <a href="https://twitter.com/thegameband" target="_blank" className="Main-Footer-Logo">
-                    <Ft />
+                    <Ht />
                   </a>
                 </footer>
-              </$e>
+              </Xe>
             </M>
-          </qt>
+          </Vt>
         );
       }
-      function bn() {
+      function gn() {
         return "mailto:sponsors@thegameband.com?subject=".concat(
           encodeURIComponent("I\u2019d like to sponsor a season of Blaseball")
         );
       }
-      var Nn = function () {
+      var yn = function () {
         return (
           <div className="Main">
             <G>
-              <fa />
-              <fn />
+              <pa />
+              <pn />
             </G>
           </div>
         );
@@ -8494,7 +8495,7 @@
           "[::1]" === window.location.hostname ||
           window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
       );
-      var Tn = { sim: void 0, standings: void 0, season: void 0 };
+      var bn = { sim: void 0, standings: void 0, season: void 0 };
       "serviceWorker" in navigator &&
         navigator.serviceWorker.ready
           .then(function (e) {
@@ -8507,13 +8508,13 @@
           <o.a.StrictMode>
             <me.ToastProvider autoDismiss={!0} autoDismissTimeout={3e3} placement="bottom-right">
               <T value={{}}>
-                <I value={Tn}>
+                <I value={bn}>
                   <Pe value={{}}>
-                    <Ra value={{}}>
+                    <Ca value={{}}>
                       <m.a>
-                        <Nn />
+                        <yn />
                       </m.a>
-                    </Ra>
+                    </Ca>
                   </Pe>
                 </I>
               </T>
