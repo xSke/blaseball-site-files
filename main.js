@@ -1507,15 +1507,18 @@
         function b() {
           return l.homeScore > l.awayScore ? l.awayTeam : l.homeTeam;
         }
-        function N(e) {
-          return e === l.homeTeam ? l.homeTeamNickname : e === l.awayTeam ? l.awayTeamNickname : "Null Team";
+        function N() {
+          return l.homeScore > l.awayScore ? l.homeTeamNickname : l.awayTeamNickname;
         }
         function T(e) {
+          return e === l.homeTeam ? l.homeTeamNickname : e === l.awayTeam ? l.awayTeamNickname : "Null Team";
+        }
+        function O(e) {
           return e === l.homeTeam ? l.homeTeamColor : e === l.awayTeam ? l.awayTeamColor : "Null Color";
         }
         (t = A > g && l.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {}),
           (n = g > A && l.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {});
-        var O = (function (e) {
+        var S = (function (e) {
             for (
               var a = {
                   onFirst: !1,
@@ -1543,11 +1546,11 @@
             }
             return a;
           })(l),
-          S = "";
-        O.onFirst && (S += " first"), O.onSecond && (S += " second"), O.onThird && (S += " third");
-        var I = <div className="GameWidget-Outs">{E}</div>,
-          B = Object(s.g)(),
-          w =
+          I = "";
+        S.onFirst && (I += " first"), S.onSecond && (I += " second"), S.onThird && (I += " third");
+        var B = <div className="GameWidget-Outs">{E}</div>,
+          w = Object(s.g)(),
+          C =
             h.complete || !h.started ? (
               <div />
             ) : (
@@ -1557,7 +1560,7 @@
                   <div className="GameWidget-PlayerStatusLabel">Pitching</div>
                   <div className="GameWidget-PlayerLineNameWrapper" style={{ background: j(v, 0.5) }}>
                     <u
-                      background={B}
+                      background={w}
                       path={"/player/".concat(l.topOfInning ? l.homePitcher : l.awayPitcher)}
                       className="GameWidget-PlayerLineName"
                     >
@@ -1571,7 +1574,7 @@
                   <div className="GameWidget-PlayerLineNameWrapper" style={{ background: j(f, 0.5) }}>
                     {l.homeBatterName || l.awayBatterName ? (
                       <u
-                        background={B}
+                        background={w}
                         path={"/player/".concat(l.topOfInning ? l.awayBatter : l.homeBatter)}
                         className="GameWidget-PlayerLineName"
                       >
@@ -1584,24 +1587,24 @@
                 </div>
               </div>
             ),
-          C = null;
-        if (h.started && c.isSignedIn) C = null;
-        else if (h.started) C = <div />;
+          k = null;
+        if (h.started && c.isSignedIn) k = null;
+        else if (h.started) k = <div />;
         else if (c.isSignedIn) {
-          var k,
-            R = d[l.id],
-            L = (null === R || void 0 === R ? void 0 : R.length) || 0,
-            D = L > 0 ? R[0] : void 0;
-          void 0 !== D && (k = D.entityId === l.homeTeam ? l.homeTeamName : l.awayTeamName),
-            (C = (
+          var R,
+            L = d[l.id],
+            D = (null === L || void 0 === L ? void 0 : L.length) || 0,
+            P = D > 0 ? L[0] : void 0;
+          void 0 !== P && (R = P.entityId === l.homeTeam ? l.homeTeamName : l.awayTeamName),
+            (k = (
               <F.a className="GameWidget-Button-Centered">
-                {L > 0 ? (
+                {D > 0 ? (
                   <div className="GameWidget-UpcomingBet">
-                    <Y.J /> {L > 0 ? "".concat(D.amount, " on ").concat(k) : "No active bets"}
+                    <Y.J /> {D > 0 ? "".concat(P.amount, " on ").concat(R) : "No active bets"}
                   </div>
                 ) : c.coins ? (
                   <U.a className="GameWidget-Button" variant="success">
-                    <u background={B} path={"/bet/".concat(l.id)}>
+                    <u background={w} path={"/bet/".concat(l.id)}>
                       Place a Bet
                     </u>
                   </U.a>
@@ -1613,100 +1616,108 @@
               </F.a>
             ));
         } else
-          C = (
+          k = (
             <a href="/login">
               <U.a className="GameWidget-Button" variant="success">
                 Login to Play
               </U.a>
             </a>
           );
-        var P = null,
-          x = null,
-          W = d[l.id],
-          Q = ((null === W || void 0 === W ? void 0 : W.length) || 0) > 0 ? W[0] : void 0;
+        var x = null,
+          W = null,
+          Q = d[l.id],
+          H = ((null === Q || void 0 === Q ? void 0 : Q.length) || 0) > 0 ? Q[0] : void 0;
         if (h.started) {
-          var H = void 0 !== Q ? Ee(Q.odds, Q.amount) : 0;
-          (P =
-            void 0 !== Q && Q.entityId === l.homeTeam ? (
+          var J = void 0 !== H ? Ee(H.odds, H.amount) : 0;
+          (x =
+            void 0 !== H && H.entityId === l.homeTeam ? (
               <div className="GameWidget-ScoreBet">
                 <div className="GameWidget-ScoreBet-Bet">
                   <Y.J />
-                  <div className="GameWidget-ScoreBet-Amount">{Q.amount}</div>
+                  <div className="GameWidget-ScoreBet-Amount">{H.amount}</div>
                 </div>
                 <div className="GameWidget-ScoreBet-Winnings">
                   <div className="GameWidget-ScoreBet-Triangle" />
-                  {H}
+                  {J}
                 </div>
               </div>
             ) : null),
-            (x =
-              void 0 !== Q && Q.entityId === l.awayTeam ? (
+            (W =
+              void 0 !== H && H.entityId === l.awayTeam ? (
                 <div className="GameWidget-ScoreBet">
                   <div className="GameWidget-ScoreBet-Bet">
                     <Y.J />
-                    <div className="GameWidget-ScoreBet-Amount">{Q.amount}</div>
+                    <div className="GameWidget-ScoreBet-Amount">{H.amount}</div>
                   </div>
                   <div className="GameWidget-ScoreBet-Winnings">
                     <div className="GameWidget-ScoreBet-Triangle" />
-                    {H}
+                    {J}
                   </div>
                 </div>
               ) : null);
         }
-        var J,
-          V,
-          K = null;
+        var V,
+          K,
+          q,
+          z = null;
         if (h.complete) {
-          var q = y() === l.homeTeam ? l.homeOdds - l.awayOdds : l.awayOdds - l.homeOdds;
-          K = (
+          var Z = y() === l.homeTeam ? l.homeOdds - l.awayOdds : l.awayOdds - l.homeOdds;
+          z = (
             <div className="GameWidget-Outcome">
               <div className="GameWidget-Outcome-Blurb">
                 The{" "}
-                {(V = q) > 0.25
-                  ? "heavily favored"
-                  : V > 0
-                  ? "favored"
-                  : V < -0.25
-                  ? "heavy underdog"
-                  : V < 0
-                  ? "underdog"
-                  : ""}
+                {
+                  ((K = N()),
+                  (q = Z) > 0.25
+                    ? "Wild Wings" === K
+                      ? "heavily flavored"
+                      : "heavily favored"
+                    : q > 0
+                    ? "Wild Wings" === K
+                      ? "flavored"
+                      : "favored"
+                    : q < -0.25
+                    ? "heavy underdog"
+                    : q < 0
+                    ? "underdog"
+                    : "")
+                }
                  
                 <span
                   className="GameWidget-Outcome-Callout"
                   style={{ color: l.homeScore > l.awayScore ? l.homeTeamColor : l.awayTeamColor }}
                 >
-                  {l.homeScore > l.awayScore ? l.homeTeamNickname : l.awayTeamNickname}
+                  {N()}
                 </span>
                  won the game.
               </div>
               {l.shame ? (
                 <div className="GameWidget-Outcome-Blurb">
                   The  
-                  <span className="GameWidget-Outcome-Callout" style={{ color: T(b()) }}>
-                    {N(b())}
+                  <span className="GameWidget-Outcome-Callout" style={{ color: O(b()) }}>
+                    {T(b())}
                   </span>
                    were <span className="GameWidget-Outcome-Callout"> shamed!</span>
                 </div>
               ) : null}
-              {void 0 !== Q ? (
+              {void 0 !== H ? (
                 <div className="GameWidget-Outcome-Blurb">
                   You bet{" "}
                   <span className="GameWidget-Outcome-Callout">
                     <Y.J />
-                     {Q.amount}
+                     {H.amount}
                   </span>
                    on the  
-                  <span className="GameWidget-Outcome-Callout" style={{ color: T(Q.entityId) }}>
-                    {N(Q.entityId)}
+                  <span className="GameWidget-Outcome-Callout" style={{ color: O(H.entityId) }}>
+                    {T(H.entityId)}
                   </span>
                    and{" "}
-                  {y() == Q.entityId ? (
+                  {y() == H.entityId ? (
                     <span>
                       won{" "}
                       <span className="GameWidget-Outcome-Callout">
                         <Y.J />
-                         {Ee(Q.odds, Q.amount)}
+                         {Ee(H.odds, H.amount)}
                       </span>
                       .
                     </span>
@@ -1727,16 +1738,16 @@
             </div>
           );
         } else
-          K = h.started ? (
+          z = h.started ? (
             <o.a.Fragment>
               <div className="GameWidget-Display-Visual">
                 <div className="GameWidget-Display-Body">
                   {!h.complete && h.started && (
                     <o.a.Fragment>
                       {
-                        ((J = O),
+                        ((V = S),
                         (
-                          <div className={"GameWidget-Bases" + S}>
+                          <div className={"GameWidget-Bases" + I}>
                             <div id="tooltip" style={{ display: "none", position: "absolute" }} />
                             <svg viewBox="0 0 255 197" version="1.1">
                               <Ne.a
@@ -1744,7 +1755,7 @@
                                 placement="bottom"
                                 overlay={
                                   <Te.a id="tooltip-bottom">
-                                    <strong>{J.playerOnFirst}</strong>
+                                    <strong>{V.playerOnFirst}</strong>
                                   </Te.a>
                                 }
                               >
@@ -1761,7 +1772,7 @@
                                 placement="top"
                                 overlay={
                                   <Te.a id="tooltip-bottom">
-                                    <strong>{J.playerOnSecond}</strong>
+                                    <strong>{V.playerOnSecond}</strong>
                                   </Te.a>
                                 }
                               >
@@ -1778,7 +1789,7 @@
                                 placement="bottom"
                                 overlay={
                                   <Te.a id="tooltip-bottom">
-                                    <strong>{J.playerOnThird}</strong>
+                                    <strong>{V.playerOnThird}</strong>
                                   </Te.a>
                                 }
                               >
@@ -1794,8 +1805,8 @@
                           </div>
                         ))
                       }
-                      {I}
-                      {w}
+                      {B}
+                      {C}
                       <div className="GameWidget-Log">{l.lastUpdate}</div>
                     </o.a.Fragment>
                   )}
@@ -1817,7 +1828,7 @@
                           style={{ background: j(l.awayTeamColor, 0.5) }}
                         >
                           <u
-                            background={B}
+                            background={w}
                             path={"/player/".concat(l.awayPitcher)}
                             className="GameWidget-PlayerLineName"
                           >
@@ -1831,7 +1842,7 @@
                           style={{ background: j(l.homeTeamColor, 0.5) }}
                         >
                           <u
-                            background={B}
+                            background={w}
                             path={"/player/".concat(l.homePitcher)}
                             className="GameWidget-PlayerLineName"
                           >
@@ -1877,33 +1888,33 @@
                     </div>
                   </div>
                 </div>
-                <div className="GameWidget-Upcoming-BetButtons">{C}</div>
+                <div className="GameWidget-Upcoming-BetButtons">{k}</div>
               </div>
             </o.a.Fragment>
           );
-        var z = null;
+        var X = null;
         h.started &&
-          (z = (
+          (X = (
             <div className="GameWidget-Log">
               <div className="GameWidget-Log-Header">Game Log</div>
               <div className="GameWidget-Log-Content">{l.lastUpdate}</div>
-              {C}
+              {k}
             </div>
           ));
-        var Z = h.started ? "GameWidget-Full-Live" : "GameWidget-Full-Upcoming",
-          X = l.isPostseason
+        var _ = h.started ? "GameWidget-Full-Live" : "GameWidget-Full-Upcoming",
+          $ = l.isPostseason
             ? "Game ".concat(l.seriesIndex, " - Best of ").concat(l.seriesLength)
             : "Game ".concat(l.seriesIndex, " of ").concat(l.seriesLength);
         return (
           <div className={"GameWidget ".concat(h.complete ? "IsComplete" : "")}>
-            <div className={Z}>
+            <div className={_}>
               <div className="GameWidget-Header-Wrapper">
                 <div className="GameWidget-Header">
                   {p}
-                  <div className="GameWidget-ScoreLabel GameWidget-ScoreLabel--Series">{X}</div>
+                  <div className="GameWidget-ScoreLabel GameWidget-ScoreLabel--Series">{$}</div>
                 </div>
                 <div className="GameWidget-ScoreBacking">
-                  <u background={B} path={"/team/".concat(l.awayTeam)} className="GameWidget-ScoreLine">
+                  <u background={w} path={"/team/".concat(l.awayTeam)} className="GameWidget-ScoreLine">
                     <div className="GameWidget-ScoreTeamColorBar" style={{ background: l.awayTeamColor }}>
                       {String.fromCodePoint(Number(l.awayTeamEmoji))}
                     </div>
@@ -1912,7 +1923,7 @@
                         {i.awayTeamName}
                       </div>
                       <div className="GameWidget-ScoreTeamInfo">
-                        {h.started && void 0 !== Q ? (
+                        {h.started && void 0 !== H ? (
                           <div className="GameWidget-ScoreRecord-WithBet">
                             {i.awayTeamWins}-{i.awayTeamLosses}
                           </div>
@@ -1923,7 +1934,7 @@
                         )}
                         {h.started ? (
                           <span className="GameWidget-AllBetInfo">
-                            {void 0 === Q ? (
+                            {void 0 === H ? (
                               <div className="GameWidget-WinChance" style={{ color: l.awayTeamColor }}>
                                 {Math.round(100 * l.awayOdds)}%
                               </div>
@@ -1932,7 +1943,7 @@
                                 {Math.round(100 * l.awayOdds)}%
                               </div>
                             )}
-                            {x}
+                            {W}
                           </span>
                         ) : null}
                       </div>
@@ -1941,7 +1952,7 @@
                       {i.awayTeamScore}
                     </div>
                   </u>
-                  <u background={B} path={"/team/".concat(l.homeTeam)} className="GameWidget-ScoreLine">
+                  <u background={w} path={"/team/".concat(l.homeTeam)} className="GameWidget-ScoreLine">
                     <div className="GameWidget-ScoreTeamColorBar" style={{ background: l.homeTeamColor }}>
                       {String.fromCodePoint(Number(l.homeTeamEmoji))}
                     </div>
@@ -1950,7 +1961,7 @@
                         {i.homeTeamName}
                       </div>
                       <div className="GameWidget-ScoreTeamInfo">
-                        {h.started && void 0 !== Q ? (
+                        {h.started && void 0 !== H ? (
                           <div className="GameWidget-ScoreRecord-WithBet">
                             {i.homeTeamWins}-{i.homeTeamLosses}
                           </div>
@@ -1961,7 +1972,7 @@
                         )}
                         {h.started ? (
                           <span className="GameWidget-AllBetInfo">
-                            {void 0 === Q ? (
+                            {void 0 === H ? (
                               <div className="GameWidget-WinChance" style={{ color: l.homeTeamColor }}>
                                 {Math.round(100 * l.homeOdds)}%
                               </div>
@@ -1970,7 +1981,7 @@
                                 {Math.round(100 * l.homeOdds)}%
                               </div>
                             )}
-                            {P}
+                            {x}
                           </span>
                         ) : null}
                       </div>
@@ -1981,8 +1992,8 @@
                   </u>
                 </div>
               </div>
-              {K}
               {z}
+              {X}
             </div>
           </div>
         );
