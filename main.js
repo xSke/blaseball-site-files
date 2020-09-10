@@ -2091,10 +2091,17 @@
               </o.a.Fragment>
             );
           }),
-        Ge = o.a.createContext({ leagues: [], subleagues: [], divisions: [], teams: [], players: [] }),
+        Ge = o.a.createContext({ leagues: [], subleagues: [], divisions: [], teams: [], players: [], tiebreakers: [] }),
         De = function (e) {
           var a = e.children,
-            t = Object(r.useState)({ leagues: [], subleagues: [], divisions: [], teams: [], players: [] }),
+            t = Object(r.useState)({
+              leagues: [],
+              subleagues: [],
+              divisions: [],
+              teams: [],
+              players: [],
+              tiebreakers: [],
+            }),
             n = Object(c.a)(t, 2),
             l = n[0],
             i = n[1];
@@ -2710,7 +2717,7 @@
       function na() {
         var e = Object(r.useContext)(I.context),
           a = Object(r.useContext)(Pe.context);
-        if (!e || !e.sim) return null;
+        if (!e || !e.sim || !e.standings) return null;
         if (!a || !a.leagues) return null;
         var t = a.leagues.find(function (a) {
           var t;
@@ -2720,7 +2727,7 @@
         var n = [];
         if (a)
           for (var l = 0; l < t.subleagues.length; l++)
-            n.push(<ra key={l} subleague={t.subleagues[l]} standings={e.standings} />);
+            n.push(<ra key={l} league={t} subleague={t.subleagues[l]} standings={e.standings} />);
         return void 0 !== t ? (
           <div className="Standings-League">
             {t.name}
@@ -2736,7 +2743,7 @@
         });
         if (void 0 === a) return null;
         for (var t = [], n = 0; n < a.divisions.length; n++)
-          t.push(<oa key={n} division={a.divisions[n]} standings={e.standings} />);
+          t.push(<oa key={n} league={e.league} division={a.divisions[n]} standings={e.standings} />);
         return (
           <div className="Standings-Subleague">
             <div className="Standings-Subleague-Header">{a.name}</div>
@@ -2745,25 +2752,30 @@
         );
       }
       function oa(e) {
-        var a = Object(r.useContext)(Pe.context).divisions.find(function (a) {
+        var a = Object(r.useContext)(Pe.context),
+          t = a.tiebreakers.find(function (a) {
+            return a.id === e.league.tiebreakers;
+          });
+        if (void 0 === t) return null;
+        var n = a.divisions.find(function (a) {
           return a.id === e.division;
         });
-        if (void 0 === a) return null;
-        for (var t = [], n = [], l = [], i = [], c = 0; c < a.teams.length; c++) {
-          for (var s = la(a.teams[c], e.standings), m = !1, u = 0; u < n.length; u++) {
-            var d = l[u];
-            if (s[0] > d) {
-              n.splice(u, 0, a.teams[c]), l.splice(u, 0, s[0]), i.splice(u, 0, s[1]), (m = !0);
-              break;
-            }
-          }
-          m || (n.push(a.teams[c]), l.push(s[0]), i.push(s[1]));
-        }
-        for (var h = 0; h < n.length; h++) t.push(<ia key={h} team={n[h]} wins={l[h]} losses={i[h]} />);
+        if (void 0 === n) return null;
+        n.teams.sort(function (a, n) {
+          var r = la(a, e.standings),
+            o = la(n, e.standings),
+            l = t.order.indexOf(a),
+            i = t.order.indexOf(n);
+          return r[0] > o[0] ? -1 : r[0] < o[0] ? 1 : l < i ? -1 : i < l ? 1 : 0;
+        });
+        var l = n.teams.map(function (a, t) {
+          var n = la(a, e.standings);
+          return <ia key={t} team={a} wins={n[0]} losses={n[1]} />;
+        });
         return (
           <div className="Standings-Division">
-            <div className="Standings-Division-Header">{a.name}</div>
-            <ul className="Standings-Team-Container">{t}</ul>
+            <div className="Standings-Division-Header">{n.name}</div>
+            <ul className="Standings-Team-Container">{l}</ul>
           </div>
         );
       }
@@ -3744,7 +3756,23 @@
                       <div className="Team-Slogan">
                         <i>"{v.slogan}"</i>
                       </div>
-                      <div className="Team-Standing">{"( ".concat(S, " - ").concat(O, " )")}</div>
+                      <div className="Team-Standing">
+                        {"( ".concat(S, " - ").concat(O, " ) - ") +
+                          (function (e, a, t) {
+                            if (void 0 === a || void 0 === t || void 0 === a.sim) return "";
+                            var n = t.leagues.find(function (e) {
+                              var t;
+                              return e.id === (null === (t = a.sim) || void 0 === t ? void 0 : t.league);
+                            });
+                            if (void 0 === n) return "";
+                            var r = t.tiebreakers.find(function (e) {
+                              return e.id === n.tiebreakers;
+                            });
+                            if (void 0 === r) return "";
+                            var o = r.order.indexOf(e);
+                            return "Ties #".concat(o + 1);
+                          })(a, t, n)}
+                      </div>
                     </div>
                   </div>
                 </div>
