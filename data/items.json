@@ -38,5 +38,10 @@
         "id": "ARM_CANNON",
         "name": "Literal Arm Cannon",
         "attr": "NONE"
+    },
+    {
+        "id": "BIRDSONG",
+        "name": "Birdsong",
+        "attr": "NONE"
     }
 ]

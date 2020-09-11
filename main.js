@@ -269,6 +269,7 @@
           { id: "HEADPHONES", name: "Noise-Cancelling Headphones", attr: "SOUNDPROOF" },
           { id: "ENGLAND_MEMORABILIA", name: "Bangers & Smash", attr: "NONE" },
           { id: "ARM_CANNON", name: "Literal Arm Cannon", attr: "NONE" },
+          { id: "BIRDSONG", name: "Birdsong", attr: "NONE" },
         ],
       };
     },
@@ -2628,7 +2629,7 @@
         var u = Object(r.useContext)(I.context);
         if (!u || !u.sim) return null;
         void 0 !== u.sim.season && u.sim.season;
-        var d = (null === (e = u.sim) || void 0 === e ? void 0 : e.phase) >= 3,
+        var d = 7 == (null === (e = u.sim) || void 0 === e ? void 0 : e.phase),
           E = i.length < 1 || void 0 === i ? <pe /> : <$e info={i} playoffs={d} />;
         return <o.a.Fragment>{E}</o.a.Fragment>;
       }
@@ -3677,7 +3678,12 @@
               return (
                 <u background={l} path={"/player/".concat(e.id)} className="Team-Player-Line">
                   <div
-                    className={"Team-Player-Header" + (e.permAttr.includes("SHELLED") ? " Team-Player-Shelled" : "")}
+                    className={
+                      "Team-Player-Header" +
+                      (e.permAttr.includes("SHELLED")
+                        ? " Team-Player-Shelled" + (Math.floor(5 * Math.random()) + 1)
+                        : "")
+                    }
                   >
                     {f.idol === e.id ? <Y.F /> : ""} {null === e || void 0 === e ? void 0 : e.name}
                   </div>
@@ -8420,6 +8426,7 @@
               case 2:
                 return <sa path={a} />;
               case 3:
+              case 7:
                 return <hn path={a} />;
               case 4:
                 return <ma path={a} />;
