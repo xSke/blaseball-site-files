@@ -9359,11 +9359,9 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: row;
 }
-.GameWidget-WinChance {
-  margin-left: 20px;
-}
 .GameWidget-WinChance,
 .GameWidget-WinChance-WithBet {
+  margin-left: 20px;
   font-family: "Lora", "Courier New", monospace, serif;
 }
 .GameWidget-AllBetInfo,
@@ -9426,17 +9424,17 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 24px;
   font-family: "Lora", "Courier New", monospace, serif;
 }
-.GameWidget-ScoreRecord {
+.GameWidget-ScoreRecord,
+.GameWidget-ScoreRecord-WithBet {
+  display: flex;
   font-size: 16px;
+  font-family: "Lora", "Courier New", monospace, serif;
   color: #aaa;
 }
-.GameWidget-ScoreNumber,
-.GameWidget-ScoreRecord {
-  display: flex;
-  font-family: "Lora", "Courier New", monospace, serif;
-}
 .GameWidget-ScoreNumber {
+  display: flex;
   font-size: 24px;
+  font-family: "Lora", "Courier New", monospace, serif;
   align-items: center;
   justify-content: center;
   width: 46px;
@@ -9723,7 +9721,7 @@ input[type="number"]::-webkit-outer-spin-button {
   .GameWidget-ScoreBacking {
     padding: 10px 0;
   }
-  .GameWidget-ScoreRecord {
+  .GameWidget-ScoreRecord-WithBet {
     display: none;
   }
   .GameWidget-ScoreName {
@@ -10015,6 +10013,14 @@ input[type="number"]::-webkit-outer-spin-button {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
 }
+#root .Bet-Form-Amount {
+  overflow: hidden;
+  max-height: 200px;
+  transition: max-height 0.3s ease-out;
+}
+#root .Bet-Form-Amount.is-hidden {
+  max-height: 0;
+}
 #root .Bet-Form-Inputs {
   display: flex;
 }
@@ -10032,7 +10038,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 #root .Bet-Form-Inputs-Amount {
   background: rgba(30, 30, 30, 0.64);
-  height: 100%;
   display: flex;
   flex-direction: column;
   padding: 0 12px;
@@ -10057,12 +10062,14 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 12px;
   text-align: right;
   font-weight: 700;
-  color: #111;
-  background-color: hsla(0, 0%, 39.6%, 0.65);
+  color: #fff;
+  background-color: #111;
   border-radius: 20px;
+  border: 1px solid #fff;
 }
 #root .Bet-Form-Inputs-Amount-MaxBet:hover {
   background-color: #fff;
+  color: #111;
   cursor: pointer;
 }
 #root .Bet-Form-Inputs-Amount input[type="range"] {
@@ -10313,18 +10320,26 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   justify-content: space-between;
 }
-.Navigation-FavoriteTeamEmoji {
+.Navigation-FavoriteTeamEmoji,
+.Navigation-IdolizedPlayer {
   display: flex;
-  width: 40px;
+  min-width: 40px;
   height: 40px;
   border-radius: 50%;
   font-size: 22px;
   align-items: center;
   justify-content: center;
   margin-right: 10px;
+  color: #fff;
 }
-.Navigation-FavoriteTeamEmoji:hover {
+.Navigation-FavoriteTeamEmoji:hover,
+.Navigation-IdolizedPlayer:hover {
   border: 2px solid #fff;
+  color: #fff;
+}
+.Navigation-IdolizedPlayer {
+  background-color: rgba(255, 191, 0, 0.81);
+  font-size: 30px;
 }
 .Navigation-Votes {
   margin-left: 16px;
@@ -10340,20 +10355,28 @@ input[type="number"]::-webkit-outer-spin-button {
 .Navigation-Main {
   display: flex;
 }
-.Navigation-Button,
-.Navigation-User {
+.Navigation-User,
+.Navigation-User-Bottom,
+.Navigation-User-Top {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.Navigation-User-Bottom,
+.Navigation-User-Top {
+  width: 100%;
+}
 .Navigation-Button {
+  display: flex;
   font-size: 14px;
   background: #000;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   text-transform: uppercase;
   color: #fff;
   margin-right: 10px;
-  padding: 10px 16px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   border-radius: 20px;
   font-weight: 700;
@@ -10480,9 +10503,12 @@ input[type="number"]::-webkit-outer-spin-button {
     left: 0;
     width: 100%;
     padding: 5px 20px;
+    flex-direction: column;
   }
-  .Navigation-User .Navigation-FavoriteTeamEmoji {
-    margin-left: auto;
+  .Navigation-User-Bottom a:last-child {
+    position: absolute;
+    font-size: 10px;
+    right: 10px;
   }
   .react-toast-notifications__container {
     margin-bottom: 42px;
@@ -10491,6 +10517,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .Overlay {
   z-index: 2;
   display: flex;
+  justify-content: center;
   border-radius: 20px;
   border: 2px solid #fff;
   padding: 8px;
@@ -10547,12 +10574,22 @@ input[type="number"]::-webkit-outer-spin-button {
     white-space: nowrap;
   }
 }
-.Countdown {
+.LeagueNavigation-Nav {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  justify-content: center;
+}
+.Countdown,
+.LeagueNavigation-Nav {
   display: flex;
+  font-size: 24px;
   align-items: center;
+}
+.Countdown {
   color: #fff;
   font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 24px;
 }
 .Countdown-Number {
   margin: 0 8px;
@@ -10574,43 +10611,234 @@ input[type="number"]::-webkit-outer-spin-button {
     line-height: 28px;
   }
 }
-.PlayoffsEnd {
-  max-width: 550px;
-  margin: auto;
+.Leaderboard-Header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.PlayoffsEnd-Header {
-  display: flex;
+  font-family: "Lora", "Courier New", monospace, serif;
   font-weight: 700;
   font-size: 32px;
-  padding-top: 20px;
+  padding: 20px 0 10px;
+  align-items: center;
+  justify-content: center;
+}
+.Leaderboard-Header-Group {
+  white-space: nowrap;
+}
+.Leaderboard-Number {
+  margin: 0 10px;
+  background: #fff;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  color: #000;
+  padding: 0 6px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 32px;
+}
+.Leaderboard-Number:last-child {
+  margin-right: 0;
+}
+.Leaderboard-Description {
+  font-size: 16px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  text-align: center;
+  margin: 15px 0;
+  color: #aaa;
+  width: 100%;
+}
+.Leaderboard-List {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  max-width: 700px;
+  margin: auto;
+}
+.Leaderboard-Player {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 20px;
+  padding: 2px 0;
+  margin: 0 6px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-gap: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+.Leaderboard-Player:nth-child(odd) {
+  background: rgba(30, 30, 30, 0.64);
+}
+.Leaderboard-Player:hover {
+  background: hsla(0, 0%, 39.6%, 0.65);
+}
+.Leaderboard-Player-Container {
+  display: flex;
+  max-width: 600px;
+  flex-direction: column;
+}
+.Leaderboard-Player-Position {
+  font-size: 14pt;
+  margin: 5px 5px 5px 10px;
+  width: 20px;
+}
+.Leaderboard-Player-Name {
+  padding-left: 6px;
+  line-height: 1.2em;
+  display: flex;
   align-items: center;
 }
-.PlayoffsEnd-Body,
-.PlayoffsEnd-Header {
-  font-family: "Lora", "Courier New", monospace, serif;
+.Leaderboard-Player-Name svg {
+  margin-left: -5px;
+  margin-right: 5px;
+  font-size: 25px;
 }
-.PlayoffsEnd-Body {
-  margin: 24px 0;
-  font-size: 18px;
+.Leaderboard-Player-Name-Container {
+  display: flex;
+  align-items: center;
 }
-.PlayoffsEnd-Callout {
-  font-size: 24px;
-}
-.PlayoffsEnd-Callout,
-.PlayoffsEnd-End {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.PlayoffsEnd-End {
+.Leaderboard-Player-Deceased-Icon {
+  background-image: url(/static/media/player_deceased_icon.2febfc5d.svg);
+  background-repeat: no-repeat;
+  padding: 15px;
   margin: 5px;
-  font-size: 16px;
-  color: #aaa;
+  width: 25px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
 }
-@media (max-width: 768px) {
-  .GodsDay {
-    width: 100%;
+.Leaderboard-Team-Emoji {
+  font-size: 14pt;
+}
+.Leaderboard-Team-Color {
+  display: flex;
+  min-width: 30px;
+  height: 30px;
+  margin: 5px 5px 5px 10px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.Leaderboard-Team-Name {
+  padding-left: 6px;
+  padding-right: 6px;
+  line-height: 1.2em;
+}
+.Leaderboard-Team-Container {
+  display: flex;
+  align-items: center;
+}
+.Leaderboard-Shelled1:after,
+.Leaderboard-Shelled2:after,
+.Leaderboard-Shelled3:after,
+.Leaderboard-Shelled4:after,
+.Leaderboard-Shelled5:after {
+  content: "SHELLED";
+  position: absolute;
+  background-color: red;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+.Leaderboard-Shelled1:after {
+  transform: rotate(-7deg);
+  margin-top: 5px;
+  margin-left: 30px;
+}
+.Leaderboard-Shelled2:after {
+  transform: rotate(-10deg);
+  margin-top: 7px;
+  margin-left: 20px;
+}
+.Leaderboard-Shelled3:after {
+  transform: rotate(-5deg);
+  margin-top: 2px;
+  margin-left: 35px;
+}
+.Leaderboard-Shelled4:after {
+  transform: rotate(10deg);
+  margin-top: 6px;
+  margin-left: 25px;
+}
+.Leaderboard-Shelled5:after {
+  transform: rotate(5deg);
+  margin-top: 9px;
+  margin-left: 32px;
+}
+.Leaderboard-Shelled6:after {
+  transform: rotate(7deg);
+  margin-top: 3px;
+  margin-left: 28px;
+}
+.OminousRedLine {
+  width: 100%;
+  max-width: 650px;
+  height: 10px;
+  margin: 0 0 10px;
+}
+.OminousRedLine-Line {
+  -webkit-animation: f 0.5s infinite;
+  animation: f 0.5s infinite;
+  transform-origin: 50% 50%;
+}
+.LessOminousRedLine {
+  width: 100%;
+  margin: 10px 0;
+  border-top: 2px dashed;
+  border-color: red;
+}
+@-webkit-keyframes f {
+  0% {
+    transform: rotateX(180deg) translate(1px, -1px);
+    opacity: 0.95;
+  }
+  25% {
+    transform: rotateX(0deg) translate(-1px, 2px);
+    opacity: 0.96;
+  }
+  50% {
+    transform: rotateX(180deg) translate(-1px, -2px);
+    opacity: 0.99;
+  }
+  75% {
+    transform: rotateX(0deg) translate(1px, 1px);
+    opacity: 0.93;
+  }
+  to {
+    transform: rotateX(180deg) translate(-1px, 1px);
+    opacity: 0.97;
+  }
+}
+@keyframes f {
+  0% {
+    transform: rotateX(180deg) translate(1px, -1px);
+    opacity: 0.95;
+  }
+  25% {
+    transform: rotateX(0deg) translate(-1px, 2px);
+    opacity: 0.96;
+  }
+  50% {
+    transform: rotateX(180deg) translate(-1px, -2px);
+    opacity: 0.99;
+  }
+  75% {
+    transform: rotateX(0deg) translate(1px, 1px);
+    opacity: 0.93;
+  }
+  to {
+    transform: rotateX(180deg) translate(-1px, 1px);
+    opacity: 0.97;
+  }
+}
+@media (max-width: 1080px) {
+  .Leaderboard-Player-Position {
+    width: 15px;
+  }
+  .Leaderboard-Player-Name,
+  .Leaderboard-Team-Name {
+    font-size: 16px;
+    margin: 0;
   }
 }
 .Standings-League {
@@ -10715,6 +10943,40 @@ input[type="number"]::-webkit-outer-spin-button {
     font-size: 18px;
     margin: 0;
   }
+}
+.PlayoffsEnd {
+  max-width: 550px;
+  margin: auto auto 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.PlayoffsEnd-Header {
+  display: flex;
+  font-weight: 700;
+  font-size: 32px;
+  padding-top: 20px;
+  align-items: center;
+}
+.PlayoffsEnd-Body,
+.PlayoffsEnd-Header {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.PlayoffsEnd-Body {
+  margin: 24px 0;
+  font-size: 18px;
+}
+.PlayoffsEnd-Callout {
+  font-size: 24px;
+}
+.PlayoffsEnd-Callout,
+.PlayoffsEnd-End {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.PlayoffsEnd-End {
+  margin: 5px;
+  font-size: 16px;
+  color: #aaa;
 }
 .EventTicker-Display {
   width: calc(100% - 40px);
@@ -10868,7 +11130,6 @@ input[type="number"]::-webkit-outer-spin-button {
   text-transform: uppercase;
 }
 .Header-Logo-Era {
-  color: red;
   font-size: 20px;
   width: 100%;
   position: relative;
@@ -10876,7 +11137,6 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-top: -10px;
 }
 .Header-Logo-SubEra {
-  color: #ff007b;
   font-size: 16px;
   font-family: "Lora", "Courier New", monospace, serif;
   font-weight: 700;
@@ -11103,45 +11363,6 @@ input[type="number"]::-webkit-outer-spin-button {
     font-size: 18px;
   }
 }
-.Stubs-All {
-  max-width: 550px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.Stubs-Serif {
-  margin-right: 4px;
-}
-.Stubs-Highlight,
-.Stubs-Serif {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-weight: 700;
-}
-.Stubs-Highlight {
-  color: #fff;
-  padding: 2px 10px;
-  border-radius: 30px;
-  background: #ba7300;
-  margin: 0 6px;
-}
-.Stubs-Header {
-  margin: 20px 0;
-  font-size: 32px;
-  font-weight: 700;
-}
-.Stubs-Body,
-.Stubs-Header {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.Stubs-Body {
-  font-size: 18px;
-  color: #aaa;
-  padding: 20px;
-}
-.Stubs-List {
-  margin: 20px 0;
-}
 #root .Team {
   width: 500px;
   max-width: 95%;
@@ -11151,9 +11372,16 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 0;
 }
 #root .Team-Content {
-  padding: 40px;
+  padding: 20px 40px 40px;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+#root .Team-Attributes {
+  padding: 5px 40px;
+  display: flex;
+  flex-direction: row;
+  background: #111;
+  border-bottom: 1px solid #fff;
 }
 #root .Team-Logo {
   border-radius: 50%;
@@ -11170,21 +11398,17 @@ input[type="number"]::-webkit-outer-spin-button {
   flex-direction: column;
   align-items: center;
 }
-#root .Team-Attributes {
-  margin: 10px;
-  display: flex;
-  flex-direction: row;
-}
 #root .Team-Info {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #fff;
   padding: 40px 40px 20px;
+  border-bottom: 1px solid #fff;
 }
 #root .Team-Header {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
 }
 #root .Team-Name {
   font-family: "Lora", "Courier New", monospace, serif;
@@ -11197,6 +11421,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 #root .Team-Standing {
   font-size: 14px;
+  color: #aaa;
+  margin-top: 2px;
+  margin-left: 10px;
 }
 #root .Team-Slogan,
 #root .Team-Standing {
@@ -11206,9 +11433,8 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-bottom: 10px;
 }
 #root .Team-Subheader {
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  text-transform: uppercase;
-  font-size: 14px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 18px;
   margin-bottom: 10px;
   color: #aaa;
   text-align: center;
@@ -11241,7 +11467,59 @@ input[type="number"]::-webkit-outer-spin-button {
 #root .Team-Player-Line-Blank:nth-child(odd) {
   background: rgba(30, 30, 30, 0.64);
 }
-#root .Team-Player-Header,
+#root .Team-Player-Header {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#root .Team-Player-Header svg {
+  margin-left: -5px;
+  margin-right: 5px;
+  font-size: 25px;
+}
+#root .Team-Player-Shelled1:after,
+#root .Team-Player-Shelled2:after,
+#root .Team-Player-Shelled3:after,
+#root .Team-Player-Shelled4:after,
+#root .Team-Player-Shelled5:after {
+  content: "SHELLED";
+  position: absolute;
+  background-color: red;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+#root .Team-Player-Shelled1:after {
+  transform: rotate(-7deg);
+  margin-left: 1px;
+  margin-top: 1px;
+}
+#root .Team-Player-Shelled2:after {
+  transform: rotate(-10deg);
+  margin-left: 3px;
+}
+#root .Team-Player-Shelled3:after {
+  transform: rotate(-5deg);
+  margin-left: 9px;
+  margin-top: 1px;
+}
+#root .Team-Player-Shelled4:after {
+  transform: rotate(10deg);
+  margin-left: 5px;
+  margin-top: 2px;
+}
+#root .Team-Player-Shelled5:after {
+  transform: rotate(5deg);
+  margin-left: 2px;
+  margin-top: 2px;
+}
+#root .Team-Player-Shelled6:after {
+  transform: rotate(7deg);
+  margin-left: 7px;
+}
 #root .Team-Player-Vibe {
   font-family: "Lora", "Courier New", monospace, serif;
   font-size: 18px;
@@ -11298,28 +11576,63 @@ input[type="number"]::-webkit-outer-spin-button {
   #root .Team-Player-Line,
   #root .Team-Player-Line-Blank {
     padding: 5px 40px;
+    margin-top: 5px;
     grid-gap: 5px;
     gap: 5px;
     grid-template-columns: auto 50px 110px;
   }
 }
 .AttributeIcon {
+  display: flex;
   margin: 0;
   height: 32px;
   width: 32px;
   border-radius: 5px;
+  align-items: center;
   font-size: 24px;
   justify-content: center;
 }
-.AttributeIcon,
-.Shop {
+.AttributeIcon:not(:last-child) {
+  margin-right: 10px;
+}
+.AttributeSvg g {
+  fill: #000;
+}
+.AttributeBar {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  margin: 0;
+  padding: 5px;
+  border-radius: 5px;
+  background: #222;
+}
+.AttributeTooltip {
+  border: 1px solid #fff;
+  margin: 0;
+  padding: 0;
+}
+.AttributeTooltip-Container {
+  padding: 10px;
+}
+.AttributeTooltip-Header {
+  font-weight: 700;
+}
+.AttributeTooltip-Description,
+.AttributeTooltip-Header {
+  margin: 0;
+  padding: 0;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.AttributeTooltip-Divider {
+  margin: 10px 0;
+  border: 0.5px solid hsla(0, 0%, 39.6%, 0.65);
 }
 .Shop {
+  display: flex;
   flex-direction: column;
+  align-items: center;
   margin: auto;
-  max-width: 600px;
+  max-width: 100%;
 }
 .Shop-Header {
   font-weight: 700;
@@ -11345,23 +11658,29 @@ input[type="number"]::-webkit-outer-spin-button {
   flex-wrap: wrap;
   grid-gap: 10px;
   gap: 10px;
-  justify-content: space-between;
+  justify-content: center;
 }
 .Shop-Item {
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
   padding: 20px;
   background: rgba(30, 30, 30, 0.64);
   border-radius: 5px;
-  width: 47%;
-  margin: 1%;
+  width: 270px;
+  margin: 2px;
 }
-.Shop-Item,
+.Shop-Item-Sponsor {
+  padding: 30px;
+  background: rgba(62, 62, 62, 0.64);
+  justify-content: space-evenly;
+}
+.Shop-Item-Link {
+  color: #ffeb57;
+}
 .Shop-Item-Header {
   display: flex;
-  align-items: center;
-}
-.Shop-Item-Header {
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 700;
@@ -11369,6 +11688,7 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 30px;
   text-align: center;
   justify-content: center;
+  align-items: center;
   width: 100%;
 }
 .Shop-Item-Icon {
@@ -11382,6 +11702,10 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 140px;
   text-align: center;
   padding: 10px 0;
+}
+.Shop-Item-Body-Sponsor {
+  height: auto;
+  margin: auto;
 }
 .Shop-Item-Checkout {
   display: grid;
@@ -12246,7 +12570,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .GodsDay {
   max-width: 550px;
-  margin: auto;
+  margin: auto auto 20px;
   flex-direction: column;
 }
 .GodsDay,
@@ -12264,7 +12588,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-family: "Lora", "Courier New", monospace, serif;
 }
 .GodsDay-Body {
-  margin: 20px;
+  margin-bottom: 20px;
   font-size: 18px;
   text-align: center;
   color: #aaa;
@@ -12467,7 +12791,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .Main-Footer-Link {
   display: flex;
   color: #aaa;
-  margin-bottom: 16px;
   font-size: 14px;
   border: 1px solid transparent;
   border-radius: 20px;
@@ -12490,12 +12813,32 @@ input[type="number"]::-webkit-outer-spin-button {
 .Main-Footer-Logo:hover {
   opacity: 0.75;
 }
+.Main-Footer-Advertise {
+  font-size: 12px;
+  margin: 16px 0;
+}
+.Main-Footer-Advertise-Inner {
+  margin: auto;
+  text-align: center;
+  padding: 8px 10px;
+  background: #1f1f1f;
+}
+.Main-Footer-Advertise-Icon {
+  font-size: 14px;
+  font-weight: 700;
+  color: #aaa;
+  text-align: center;
+}
+.Main-Footer-Advertise-Icon:hover {
+  color: #fff;
+}
 @media (max-width: 1080px) {
   .Main {
     padding: 0 20px;
   }
   .Main-Footer {
     padding: 40px 0;
+    margin-bottom: 65px;
   }
 }
 .TheBook-All {
@@ -12664,24 +13007,173 @@ input[type="number"]::-webkit-outer-spin-button {
     transform: rotate(1turn);
   }
 }
-.TeamLogo {
-  border-radius: 50%;
-  height: 44px;
-  width: 44px;
-  font-size: 26px;
+#root .Bulletin {
+  margin: auto;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#root .Bulletin-Rows {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  width: 100%;
+  grid-gap: 20px;
+  gap: 20px;
+}
+#root .Bulletin-Serif {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+  color: #ffeb57;
+}
+#root .Bulletin-Icon {
+  width: 20px;
+  height: 20px;
+}
+#root .Bulletin-Bullet {
+  margin-right: 10px;
+}
+#root .Bulletin-Item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: rgba(30, 30, 30, 0.64);
+  border-radius: 5px;
+  width: 100%;
+  padding: 20px 20px 10px;
+}
+#root .Bulletin-Item-Header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1em;
+  margin-bottom: 20px;
+}
+#root .Bulletin-Item-Header-Icon {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  margin: 0 16px 0 0;
+  border-radius: 50%;
+  font-size: 29px;
   justify-content: center;
   align-items: center;
+  background: hsla(0, 0%, 39.6%, 0.65);
+}
+#root .Bulletin-Item-Header-Title {
+  max-width: 70%;
+}
+#root .Bulletin-Item-Contents {
+  text-align: center;
+}
+#root .Bulletin-Item-Contents-Text,
+#root .Bulletin-Item-Contents-Text-Soft {
+  text-align: justify;
+  margin-bottom: 10px;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+#root .Bulletin-Item-Contents-Text-Soft {
+  font-style: italic;
+  color: #aaa;
+}
+#root .Bulletin-Item-Contents-Image {
+  margin-bottom: 10px;
+}
+#root .Bulletin-Item-ImageGrid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  justify-items: center;
+  margin-bottom: 10px;
+}
+#root .Bulletin-Item-Columns {
+  -webkit-columns: 2;
+  column-count: 2;
+  grid-column-gap: 20px;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+}
+#root .Bulletin-Wide-Top {
+  grid-column: 1/3;
+  grid-row: 1;
+}
+#root .Bulletin-Wide-Top-Right {
+  grid-column: 2/4;
+  grid-row: 1;
+}
+#root .Bulletin-Wide-Bottom {
+  grid-column: 1/4;
+  grid-row: 3;
+}
+#root .Bulletin-Big-Left {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+#root .Bulletin-Big-Right {
+  grid-column: 2/4;
+  grid-row: 1/3;
+}
+#root .Bulletin-Bottom-Left {
+  grid-column: 1/2;
+  grid-row: 2;
+}
+#root .Bulletin-Underneath {
+  grid-column: 2;
+  grid-row: 4;
+}
+#root .Bulletin-Tall-Left {
+  grid-column: 1;
+  grid-row: 1/3;
+}
+#root .Bulletin-Tall-Middle {
+  grid-column: 2;
+  grid-row: 1/3;
+}
+#root .Bulletin-Tall-Right {
+  grid-column: 3;
+  grid-row: 1/3;
+}
+#root .Bulletin-Tweet {
+  margin: -10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 1080px) {
+  #root .Bulletin-Rows {
+    display: flex;
+    flex-direction: column;
+  }
+  #root .Bulletin-Item-Header {
+    font-size: 24px;
+  }
+  #root .Bulletin-Item-Header-Icon {
+    margin: 0 16px 0 0;
+  }
+  #root .Bulletin-Item-ImageGrid {
+    grid-template-columns: 1fr;
+  }
+  #root .Bulletin-Item-Columns {
+    -webkit-columns: auto;
+    -webkit-columns: initial;
+    columns: initial;
+  }
 }
 #root .Player {
   width: 500px;
   max-width: 95%;
-  height: 640px;
+  min-height: 640px;
   max-height: 80vh;
   justify-content: flex-start;
   padding: 0;
 }
 #root .Player-Content {
+  padding: 20px 0;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -12701,13 +13193,63 @@ input[type="number"]::-webkit-outer-spin-button {
   align-items: center;
 }
 #root .Player-Attributes {
-  margin: 10px;
+  padding: 5px 40px;
   display: flex;
   flex-direction: row;
+  background: #111;
+  border-bottom: 1px solid #fff;
+}
+#root .Player-Button {
+  font-size: 14px;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+#root .Player-Button-Form {
+  padding: 0;
+}
+#root .Player-Button-Idol {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  height: 32px;
+  display: flex;
+  border-radius: 30px;
+  white-space: nowrap;
+  align-items: center;
+  border: 1px solid #fff !important;
+  text-align: center;
+}
+#root .Player-Button-Idol:not(:first-child) {
+  border-left: none;
+}
+#root .Player-Button-Idol :first-child {
+  margin-right: 5px;
+  font-size: 20px;
+}
+#root .Player-Button-Idol:hover {
+  border: 1px solid #fff;
+}
+#root .Player-Button-Idol-Current {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  align-items: center;
+  background: rgba(255, 191, 0, 0.81);
+  white-space: nowrap;
+  border-radius: 20px;
+  height: 32px;
+  box-shadow: 0 0 10px 0 #ffbf00;
+}
+#root .Player-Button-Idol-Current :first-child {
+  margin-right: 5px;
+  font-size: 25px;
 }
 #root .Player-Info {
+  border-bottom: 1px solid #fff;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
   padding: 40px 40px 20px;
 }
 #root .Player-Info-Line {
@@ -12765,10 +13307,19 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 #root .Player-Header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 24px;
+  width: 100%;
 }
-#root .Player-Header,
+#root .Player-Header-Bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-end;
+}
 #root .Player-Name {
   font-family: "Lora", "Courier New", monospace, serif;
   font-size: 24px;
@@ -12845,7 +13396,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 #root .Player-Team-Line {
   display: flex;
-  flex-direction: row;
 }
 #root .Player-Team-Logo {
   border-radius: 50%;
@@ -12861,8 +13411,11 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 0 10px;
   display: flex;
   align-items: center;
-  font-family: "Lora", "Courier New", monospace, serif;
   font-size: 18px;
+}
+#root .Player-Team-Name,
+.Idol-Disabled-Tooltip {
+  font-family: "Lora", "Courier New", monospace, serif;
 }
 @media (max-width: 1080px) {
   #root .Player-Info-Bio,
@@ -12877,7 +13430,137 @@ input[type="number"]::-webkit-outer-spin-button {
   #root .Player-Info-Line-Body {
     font-family: "Lora", "Courier New", monospace, serif;
   }
+  #root .Player-Team-Line {
+    margin-bottom: 10px;
+  }
+  #root .Player-Header-Bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   #root .Player-Soulscream {
     max-width: 160px;
+  }
+}
+.Preseason {
+  max-width: 550px;
+  margin: auto;
+  flex-direction: column;
+}
+.Preseason,
+.Preseason-Header {
+  display: flex;
+  align-items: center;
+}
+.Preseason-Header {
+  font-weight: 700;
+  font-size: 32px;
+  padding-top: 20px;
+}
+.Preseason-Body,
+.Preseason-Header {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Preseason-Body {
+  margin: 24px 0;
+  font-size: 18px;
+}
+.Preseason-Callout {
+  font-size: 24px;
+}
+.Preseason-Callout,
+.Preseason-End {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Preseason-End {
+  margin: 5px;
+  font-size: 16px;
+  color: #aaa;
+}
+.Stubs-All {
+  max-width: 550px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Stubs-Serif {
+  margin-right: 4px;
+}
+.Stubs-Highlight,
+.Stubs-Serif {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+}
+.Stubs-Highlight {
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 30px;
+  background: #ba7300;
+  margin: 0 6px;
+}
+.Stubs-Header {
+  margin: 20px 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+.Stubs-Body,
+.Stubs-Header {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Stubs-Body {
+  font-size: 18px;
+  color: #aaa;
+  padding: 20px;
+}
+.Stubs-List {
+  margin: 20px 0;
+}
+.TeamLogo {
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  font-size: 26px;
+  justify-content: center;
+}
+.SeasonEnd,
+.TeamLogo {
+  display: flex;
+  align-items: center;
+}
+.SeasonEnd {
+  max-width: 550px;
+  margin: auto;
+  flex-direction: column;
+}
+.SeasonEnd-Header {
+  display: flex;
+  font-weight: 700;
+  font-size: 32px;
+  padding-top: 20px;
+  align-items: center;
+}
+.SeasonEnd-Body,
+.SeasonEnd-Header {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.SeasonEnd-Body {
+  margin: 24px 0;
+  font-size: 18px;
+}
+.SeasonEnd-Callout {
+  font-size: 24px;
+}
+.SeasonEnd-Callout,
+.SeasonEnd-End {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.SeasonEnd-End {
+  margin: 5px;
+  font-size: 16px;
+  color: #aaa;
+}
+@media (max-width: 768px) {
+  .GodsDay {
+    width: 100%;
   }
 }
