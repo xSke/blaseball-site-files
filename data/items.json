@@ -40,8 +40,23 @@
         "attr": "NONE"
     },
     {
+        "id": "SHRINK_RAY",
+        "name": "Shrink Ray",
+        "attr": "NONE"
+    },
+    {
+        "id": "GRAVITY_BOOTS",
+        "name": "Gravity Boots",
+        "attr": "NONE"
+    },
+    {
         "id": "BIRDSONG",
         "name": "Birdsong",
+        "attr": "NONE"
+    },
+    {
+        "id": "NIGHT_VISION_GOGGLES",
+        "name": "Night Vision Goggles",
         "attr": "NONE"
     }
 ]

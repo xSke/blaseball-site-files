@@ -8907,6 +8907,9 @@ a.text-dark:hover {
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
@@ -11159,6 +11162,26 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   margin-left: auto;
 }
+.Header-Social-Faq {
+  margin-right: 10px;
+  font-size: 12px;
+  align-items: center;
+  line-height: 14px;
+  color: #aaa;
+}
+.Header-Social-Faq-Inner {
+  margin: auto;
+  text-align: center;
+  padding: 10px 8px 9px;
+  background: #1f1f1f;
+}
+.Header-Social-Faq-Icon {
+  font-size: 18px;
+  margin: 0 5px;
+}
+.Header-Social-Faq-Icon:hover {
+  color: #fff;
+}
 .Header-Social-Patreon {
   font-size: 12px;
   margin-right: 20px;
@@ -11187,7 +11210,7 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #aaa;
 }
 .Header-Social-Follow-Inner {
-  width: 80px;
+  width: 110px;
   text-align: center;
   padding: 15px 0 5px;
   background: #1f1f1f;
@@ -11202,8 +11225,8 @@ input[type="number"]::-webkit-outer-spin-button {
 .Header-Social-Follow-Triangle {
   width: 0;
   height: 0;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
   border-top: 24px solid #1f1f1f;
 }
 @media (max-width: 1080px) {
@@ -11225,39 +11248,53 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0 5px;
     padding: 5px 5px 2px;
   }
+  .Header-Social-Faq {
+    margin-right: 5px;
+  }
+  .Header-Social-Faq-Inner {
+    padding: 6px 5px;
+  }
+  .Header-Social-Faq-Icon {
+    font-size: 12px;
+    margin: 0 3px;
+  }
   .Header-Social-Patreon {
-    margin-right: 10px;
+    margin-right: 5px;
+  }
+  .Header-Social-Patreon-Icon {
+    font-size: 12px;
   }
   .Header-Social-Patreon-Inner {
     padding: 4px 5px;
   }
+  .Header-Social-Follow {
+    margin-right: -10px;
+  }
   .Header-Social-Follow-Inner {
     padding-top: 8px;
-    width: 60px;
+    width: 78px;
   }
   .Header-Social-Follow-Icon {
     font-size: 16px;
+    margin: 0 3px;
   }
   .Header-Social-Follow-Triangle {
-    border-left-width: 30px;
-    border-right-width: 30px;
+    border-left-width: 40px;
+    border-right-width: 40px;
     border-top-width: 16px;
   }
 }
 .About-All {
-  max-width: 550px;
+  max-width: 700px;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.About-Serif {
-  margin-right: 4px;
-}
-.About-Highlight,
-.About-Serif {
   font-family: "Lora", "Courier New", monospace, serif;
+}
+.About-Serif {
   font-weight: 700;
+  margin-right: 4px;
 }
 .About-Highlight {
   color: #fff;
@@ -11265,15 +11302,17 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 30px;
   background: #ba7300;
   margin: 0 6px;
-}
-.About-Header {
-  margin: 20px 0;
-  font-size: 32px;
   font-weight: 700;
 }
-.About-Body,
 .About-Header {
-  font-family: "Lora", "Courier New", monospace, serif;
+  margin: 20px 0 0;
+  font-size: 40px;
+  font-weight: 700;
+}
+.About-Desc {
+  font-style: italic;
+  font-size: 18px;
+  margin: -5px 0 0;
 }
 .About-Body {
   text-align: justify;
@@ -11282,41 +11321,67 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .About-Body-Container {
   margin: 20px 0;
-  padding: 0 24px;
+  max-width: 550px;
+  width: 100%;
   background-color: rgba(30, 30, 30, 0.64);
   border-radius: 5px;
+  padding: 10px 30px;
+}
+.About-Body-Container-End {
+  margin-bottom: 40px;
+}
+.About-QuoteList {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr 1fr;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 10px;
+  gap: 10px;
+  grid-row-gap: 40px;
+}
+.About-QuoteList :first-child {
+  grid-column: 2;
+}
+.About-QuoteList :nth-child(2) {
+  grid-column: 1;
+  grid-row: 1;
+}
+.About-QuoteList :last-child {
+  grid-column: 2;
 }
 .About-Quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  max-width: 330px;
+}
+.About-QuoteLine {
   text-align: center;
   font-size: 18px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  margin-top: 24px;
   font-style: italic;
 }
-.About-Quote :hover {
+.About-QuoteLine :hover {
   color: #fff4a1;
 }
 .About-QuoteAuthor {
-  font-size: 18px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  margin-bottom: 24px;
-  font-weight: 700;
+  font-size: 22px;
   color: #ffeb57;
+  font-weight: 700;
+  text-align: center;
 }
 .About-QuoteAuthor :hover {
   color: #fff4a1;
 }
 .About-Ticket {
-  font-size: 72px;
-  text-align: center;
-  line-height: 0;
-  margin-bottom: 10px;
-  color: #ffeb57;
-}
-.About-Ticket :hover {
-  color: #fff4a1;
-}
-.About-Ticket svg {
+  height: 200px;
+  width: 200px;
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-image: url(/static/media/ticket.3cebc08e.png);
   -webkit-animation-name: floaty;
   animation-name: floaty;
   -webkit-animation-duration: 2s;
@@ -11333,14 +11398,18 @@ input[type="number"]::-webkit-outer-spin-button {
   align-items: center;
   color: #fff;
   font-weight: 700;
-  height: 30px;
+  padding: 10px 20px;
   border-radius: 20px;
-  margin: 30px;
+  margin: 30px 0;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
 }
 .About-Button-Text {
   line-height: 15px;
   margin: auto;
   padding: 0;
+}
+.About-Button-Bottom {
+  margin-bottom: 40px;
 }
 .About-List {
   margin: 20px 0;
@@ -11361,6 +11430,13 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .About-Body {
     font-size: 18px;
+  }
+  .About-Quote {
+    margin: 40px 0;
+  }
+  .About-QuoteList {
+    display: flex;
+    flex-direction: column;
   }
 }
 #root .Team {
@@ -13515,29 +13591,20 @@ input[type="number"]::-webkit-outer-spin-button {
 .Stubs-List {
   margin: 20px 0;
 }
-.TeamLogo {
-  border-radius: 50%;
-  height: 44px;
-  width: 44px;
-  font-size: 26px;
-  justify-content: center;
-}
-.SeasonEnd,
-.TeamLogo {
-  display: flex;
-  align-items: center;
-}
 .SeasonEnd {
   max-width: 550px;
   margin: auto;
   flex-direction: column;
 }
+.SeasonEnd,
 .SeasonEnd-Header {
   display: flex;
+  align-items: center;
+}
+.SeasonEnd-Header {
   font-weight: 700;
   font-size: 32px;
   padding-top: 20px;
-  align-items: center;
 }
 .SeasonEnd-Body,
 .SeasonEnd-Header {
@@ -13563,4 +13630,82 @@ input[type="number"]::-webkit-outer-spin-button {
   .GodsDay {
     width: 100%;
   }
+}
+.TeamLogo {
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  font-size: 26px;
+  justify-content: center;
+}
+.FAQ,
+.TeamLogo {
+  display: flex;
+  align-items: center;
+}
+.FAQ {
+  flex-direction: column;
+}
+.FAQ-Header {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: -60px;
+  padding-top: 60px;
+}
+.FAQ-Content,
+.FAQ-Header {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.FAQ-Content {
+  max-width: 650px;
+}
+.FAQ-Content-Header,
+.FAQ-Content-Subheader {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+}
+.FAQ-Content-Header {
+  margin-top: 60px;
+  border-top: 1px solid #fff;
+  padding-top: 60px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.FAQ-Content-Subheader {
+  margin-bottom: 5px;
+}
+.FAQ-Content-List {
+  margin-bottom: 20px;
+  line-height: 2em;
+}
+.FAQ-Question {
+  font-family: "Lora", "Courier New", monospace, serif;
+  line-height: 1.5em;
+  margin-bottom: 40px;
+}
+.FAQ-Question-Header {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: -70px;
+  padding-top: 70px;
+}
+.FAQ-Question-Link {
+  font-weight: 700;
+}
+.FAQ-Question-Image {
+  width: 100%;
+  margin-top: 10px;
+}
+.FAQ-Return {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  font-size: 18px;
+}
+.FAQ-Return svg {
+  margin: 5px 5px 10px;
 }
