@@ -12178,15 +12178,29 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 48px;
   width: 48px;
 }
+.Blessings-Option-Subheader {
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+.Blessings-Option-SubheaderHyperlink {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+  color: #ffeb57;
+  font-weight: 700;
+}
 .Blessings-Option-Header {
   margin-top: 10px;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
 }
 .Blessings-Option-Description {
   margin-top: 10px;
   margin-bottom: 30px;
   font-size: 0.9rem;
+  text-align: center;
 }
 .Blessings-Option-Button {
   font-size: 14px;
