@@ -514,6 +514,22 @@
             title: "Superallergic",
             description: "This player is Superallergic",
           },
+          {
+            id: "EXTRA_BASE",
+            color: "#d9d9d9",
+            textColor: "#d9d9d9",
+            background: "#4a001a",
+            title: "Fifth Base",
+            description: "This team must run five bases instead of four in order to score.",
+          },
+          {
+            id: "BLESS_OFF",
+            color: "#e0cafa",
+            textColor: "#e0cafa",
+            background: "#7d58a8",
+            title: "Bless Off",
+            description: "This team cannot win any Blessings in the upcoming Election.",
+          },
         ],
       };
     },
@@ -841,7 +857,7 @@
       L.context = C;
       var Q = L,
         G = o.a.createContext([]),
-        D = function (e) {
+        P = function (e) {
           var a = e.children,
             t = Object(c.g)().pathname,
             n = Object(r.useState)({}),
@@ -874,8 +890,8 @@
             (<G.Provider value={i}>{a}</G.Provider>)
           );
         };
-      D.context = G;
-      var P = D;
+      P.context = G;
+      var D = P;
       function W(e) {
         var a,
           t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0.2;
@@ -931,7 +947,7 @@
       var x,
         j = t(14),
         U = t(43),
-        Y = t(23),
+        Y = t(21),
         J = (t(92), t(26)),
         V = t(56);
       !(function (e) {
@@ -1229,7 +1245,7 @@
             );
           }),
         Ee = function () {
-          return <div className="LoadingSpinner">{100 * Math.random() < 99 ? <J.a /> : <Y.D />}</div>;
+          return <div className="LoadingSpinner">{100 * Math.random() < 99 ? <J.a /> : <Y.E />}</div>;
         };
       t(98), t(61);
       function pe(e, a) {
@@ -1296,7 +1312,7 @@
             G = function (e) {
               N(e);
             };
-          var D = function (e) {
+          var P = function (e) {
               var a = e.id,
                 t = e.modifier,
                 n = e.color,
@@ -1326,7 +1342,7 @@
                 </div>
               );
             },
-            P = (
+            D = (
               <span
                 style={{
                   color: (function (e) {
@@ -1351,7 +1367,7 @@
             A &&
               (F = (
                 <div className="Bet-Outcome-Wrapper">
-                  You'll have a {P} chance to win {W} coins.
+                  You'll have a {D} chance to win {W} coins.
                 </div>
               )),
             (
@@ -1389,14 +1405,14 @@
                 >
                   <ue.a.Label>Pick a team:</ue.a.Label>
                   <ue.a.Group className="Bet-Form-Teams" controlId="team">
-                    <D
+                    <P
                       id={S.homeTeam}
                       color={S.homeTeamColor}
                       modifier="Home"
                       name={S.homeTeamNickname}
                       odds={S.homeOdds}
                     />
-                    <D
+                    <P
                       id={S.awayTeam}
                       color={S.awayTeamColor}
                       modifier="Away"
@@ -1408,7 +1424,7 @@
                     <ue.a.Label>How much do you want to wager?</ue.a.Label>
                     <div className="Bet-Form-Inputs-Amount">
                       <div className="Bet-Coin-Wrapper">
-                        <Y.S className="Bet-Coin-Icon" />
+                        <Y.T className="Bet-Coin-Icon" />
                         {n.coins}
                       </div>
                       <ue.a.Control type="number" value={v} onChange={C} />
@@ -1446,7 +1462,7 @@
             )
           );
         },
-        ve = (t(100), t(22)),
+        ve = (t(100), t(23)),
         be = [
           { name: "Void", icon: <ve.e />, background: "#67678a", color: "#000000" },
           { name: "Sunny", icon: <ve.c />, background: "#db7900", color: "#fffec4" },
@@ -1458,9 +1474,9 @@
           { name: "Solar Eclipse", icon: <ve.i />, background: "#002f3b", color: "#3c6cba" },
           { name: "Glitter", icon: <ve.j />, background: "#ff94ff", color: "#fff98a" },
           { name: "Blooddrain", icon: <ve.f />, background: "#52050f", color: "#ff1f3c" },
-          { name: "Peanuts", icon: <Y.D />, background: "#c4aa70", color: "#423822" },
+          { name: "Peanuts", icon: <Y.E />, background: "#c4aa70", color: "#423822" },
           { name: "Birds", icon: <Y.g />, background: "#45235e", color: "#8e5fad" },
-          { name: "Feedback", icon: <Y.z />, background: "#383838", color: "#ff007b" },
+          { name: "Feedback", icon: <Y.A />, background: "#383838", color: "#ff007b" },
           { name: "Reverb", icon: <Y.f />, background: "#443561", color: "#61b3ff" },
         ];
       function ye(e) {
@@ -1478,7 +1494,7 @@
       function Ae(e) {
         return be[e].background;
       }
-      var Ne = t(29),
+      var Ne = t(28),
         Te = t(27);
       function we(e) {
         return e.homeScore;
@@ -1517,7 +1533,7 @@
           l = e.data,
           i = e.metaInfo,
           s = Object(r.useContext)(Q.context).user,
-          d = Object(r.useContext)(P.context),
+          d = Object(r.useContext)(D.context),
           h = {
             started: (a = l).gameStart,
             complete: a.gameComplete,
@@ -1528,6 +1544,7 @@
             balls: a.atBatBalls,
             strikes: a.atBatStrikes,
             strikesNeeded: a.topOfInning ? a.awayStrikes : a.homeStrikes,
+            bases: a.topOfInning ? a.awayBases : a.homeBases,
             weather: a.weather,
           },
           E = (function (e) {
@@ -1611,9 +1628,11 @@
                   onFirst: !1,
                   onSecond: !1,
                   onThird: !1,
+                  onFourth: !1,
                   playerOnFirst: void 0,
                   playerOnSecond: void 0,
                   playerOnThird: void 0,
+                  playerOnFourth: void 0,
                 },
                 t = 0;
               t < e.baserunnerCount;
@@ -1629,15 +1648,24 @@
                   break;
                 case 2:
                   (a.onThird = !0), (a.playerOnThird = n);
+                  break;
+                case 3:
+                  (a.onFourth = !0), (a.playerOnFourth = n);
               }
             }
             return a;
           })(l),
           I = "";
-        S.onFirst && (I += " first"), S.onSecond && (I += " second"), S.onThird && (I += " third");
-        var O = <div className="GameWidget-Outs">{p}</div>,
-          B = Object(c.g)(),
-          k =
+        S.onFirst && (I += " first"),
+          S.onSecond && (I += " second"),
+          S.onThird && (I += " third"),
+          S.onFourth && (I += " fourth");
+        var O = 0,
+          B = "0 0 255 197";
+        h.bases > 4 && ((O = 30), (B = "0 0 285 197"));
+        var k = <div className="GameWidget-Outs">{p}</div>,
+          C = Object(c.g)(),
+          R =
             h.complete || !h.started ? (
               <div />
             ) : (
@@ -1647,7 +1675,7 @@
                   <div className="GameWidget-PlayerStatusLabel">Pitching</div>
                   <div className="GameWidget-PlayerLineNameWrapper" style={{ background: W(v, 0.5) }}>
                     <u
-                      background={B}
+                      background={C}
                       path={"/player/".concat(l.topOfInning ? l.homePitcher : l.awayPitcher)}
                       className="GameWidget-PlayerLineName"
                     >
@@ -1661,7 +1689,7 @@
                   <div className="GameWidget-PlayerLineNameWrapper" style={{ background: W(f, 0.5) }}>
                     {l.homeBatterName || l.awayBatterName ? (
                       <u
-                        background={B}
+                        background={C}
                         path={"/player/".concat(l.topOfInning ? l.awayBatter : l.homeBatter)}
                         className="GameWidget-PlayerLineName"
                       >
@@ -1674,24 +1702,24 @@
                 </div>
               </div>
             ),
-          C = null;
-        if (h.started && s.isSignedIn) C = null;
-        else if (h.started) C = <div />;
+          L = null;
+        if (h.started && s.isSignedIn) L = null;
+        else if (h.started) L = <div />;
         else if (s.isSignedIn) {
-          var R,
-            L = d[l.id],
-            G = (null === L || void 0 === L ? void 0 : L.length) || 0,
-            D = G > 0 ? L[0] : void 0;
-          void 0 !== D && (R = D.entityId === l.homeTeam ? l.homeTeamName : l.awayTeamName),
-            (C = (
+          var G,
+            P = d[l.id],
+            F = (null === P || void 0 === P ? void 0 : P.length) || 0,
+            M = F > 0 ? P[0] : void 0;
+          void 0 !== M && (G = M.entityId === l.homeTeam ? l.homeTeamName : l.awayTeamName),
+            (L = (
               <U.a className="GameWidget-Button-Centered">
-                {G > 0 ? (
+                {F > 0 ? (
                   <div className="GameWidget-UpcomingBet">
-                    <Y.S /> {G > 0 ? "".concat(D.amount, " on ").concat(R) : "No active bets"}
+                    <Y.T /> {F > 0 ? "".concat(M.amount, " on ").concat(G) : "No active bets"}
                   </div>
                 ) : s.coins ? (
                   <j.a className="GameWidget-Button" variant="success">
-                    <u background={B} path={"/bet/".concat(l.id)}>
+                    <u background={C} path={"/bet/".concat(l.id)}>
                       Place a Bet
                     </u>
                   </j.a>
@@ -1703,59 +1731,59 @@
               </U.a>
             ));
         } else
-          C = (
+          L = (
             <a href="/login">
               <j.a className="GameWidget-Button" variant="success">
                 Login to Play
               </j.a>
             </a>
           );
-        var F = null,
-          M = null,
-          H = d[l.id],
-          x = ((null === H || void 0 === H ? void 0 : H.length) || 0) > 0 ? H[0] : void 0;
+        var H = null,
+          x = null,
+          J = d[l.id],
+          V = ((null === J || void 0 === J ? void 0 : J.length) || 0) > 0 ? J[0] : void 0;
         if (h.started) {
-          var J = void 0 !== x ? pe(x.odds, x.amount) : 0;
-          (F =
-            void 0 !== x && x.entityId === l.homeTeam ? (
+          var q = void 0 !== V ? pe(V.odds, V.amount) : 0;
+          (H =
+            void 0 !== V && V.entityId === l.homeTeam ? (
               <div className="GameWidget-ScoreBet">
                 <div className="GameWidget-ScoreBet-Bet">
-                  <Y.S />
-                  <div className="GameWidget-ScoreBet-Amount">{x.amount}</div>
+                  <Y.T />
+                  <div className="GameWidget-ScoreBet-Amount">{V.amount}</div>
                 </div>
                 <div className="GameWidget-ScoreBet-Winnings">
                   <div className="GameWidget-ScoreBet-Triangle" />
-                  {J}
+                  {q}
                 </div>
               </div>
             ) : null),
-            (M =
-              void 0 !== x && x.entityId === l.awayTeam ? (
+            (x =
+              void 0 !== V && V.entityId === l.awayTeam ? (
                 <div className="GameWidget-ScoreBet">
                   <div className="GameWidget-ScoreBet-Bet">
-                    <Y.S />
-                    <div className="GameWidget-ScoreBet-Amount">{x.amount}</div>
+                    <Y.T />
+                    <div className="GameWidget-ScoreBet-Amount">{V.amount}</div>
                   </div>
                   <div className="GameWidget-ScoreBet-Winnings">
                     <div className="GameWidget-ScoreBet-Triangle" />
-                    {J}
+                    {q}
                   </div>
                 </div>
               ) : null);
         }
-        var V,
-          q,
-          K,
-          z = null;
+        var K,
+          z,
+          Z,
+          X = null;
         if (h.complete) {
-          var Z = g() === l.homeTeam ? l.homeOdds - l.awayOdds : l.awayOdds - l.homeOdds;
-          z = (
+          var _ = g() === l.homeTeam ? l.homeOdds - l.awayOdds : l.awayOdds - l.homeOdds;
+          X = (
             <div className="GameWidget-Outcome">
               <div className="GameWidget-Outcome-Blurb">
                 The{" "}
                 {
-                  ((q = N()),
-                  (K = Z) > 0.25
+                  ((z = N()),
+                  (Z = _) > 0.25
                     ? (function (e) {
                         switch (e) {
                           case "Wild Wings":
@@ -1764,8 +1792,8 @@
                             return "heavily but mildly flavored";
                         }
                         return "heavily favored";
-                      })(q)
-                    : K > 0
+                      })(z)
+                    : Z > 0
                     ? (function (e) {
                         switch (e) {
                           case "Wild Wings":
@@ -1774,10 +1802,10 @@
                             return "mildly flavored";
                         }
                         return "favored";
-                      })(q)
-                    : K < -0.25
+                      })(z)
+                    : Z < -0.25
                     ? "heavy underdog"
-                    : K < 0
+                    : Z < 0
                     ? "underdog"
                     : "")
                 }
@@ -1799,24 +1827,24 @@
                    were <span className="GameWidget-Outcome-Callout"> shamed!</span>
                 </div>
               ) : null}
-              {void 0 !== x ? (
+              {void 0 !== V ? (
                 <div className="GameWidget-Outcome-Blurb">
                   You bet{" "}
                   <span className="GameWidget-Outcome-Callout">
-                    <Y.S />
-                     {x.amount}
+                    <Y.T />
+                     {V.amount}
                   </span>
                    on the  
-                  <span className="GameWidget-Outcome-Callout" style={{ color: w(x.entityId) }}>
-                    {T(x.entityId)}
+                  <span className="GameWidget-Outcome-Callout" style={{ color: w(V.entityId) }}>
+                    {T(V.entityId)}
                   </span>
                    and{" "}
-                  {g() == x.entityId ? (
+                  {g() == V.entityId ? (
                     <span>
                       won{" "}
                       <span className="GameWidget-Outcome-Callout">
-                        <Y.S />
-                         {pe(x.odds, x.amount)}
+                        <Y.T />
+                         {pe(V.odds, V.amount)}
                       </span>
                       .
                     </span>
@@ -1837,24 +1865,24 @@
             </div>
           );
         } else
-          z = h.started ? (
+          X = h.started ? (
             <o.a.Fragment>
               <div className="GameWidget-Display-Visual">
                 <div className="GameWidget-Display-Body">
                   {!h.complete && h.started && (
                     <o.a.Fragment>
                       {
-                        ((V = S),
+                        ((K = S),
                         (
                           <div className={"GameWidget-Bases" + I}>
                             <div id="tooltip" style={{ display: "none", position: "absolute" }} />
-                            <svg viewBox="0 0 255 197" version="1.1">
+                            <svg viewBox={B} version="1.1">
                               <Ne.a
                                 key="bottom-1"
                                 placement="bottom"
                                 overlay={
                                   <Te.a id="tooltip-bottom">
-                                    <strong>{V.playerOnFirst}</strong>
+                                    <strong>{K.playerOnFirst}</strong>
                                   </Te.a>
                                 }
                               >
@@ -1863,7 +1891,7 @@
                                   className="st0"
                                   transform="matrix(0.7071,-0.7071,0.7071,0.7071,-40.4706,152.625)"
                                 >
-                                  <rect x="141.95" y="105.74" width="70.31" height="70.31" />
+                                  <rect x={141.95 + O} y={105.74 + O} width="70.31" height="70.31" />
                                 </g>
                               </Ne.a>
                               <Ne.a
@@ -1871,7 +1899,7 @@
                                 placement="top"
                                 overlay={
                                   <Te.a id="tooltip-bottom">
-                                    <strong>{V.playerOnSecond}</strong>
+                                    <strong>{K.playerOnSecond}</strong>
                                   </Te.a>
                                 }
                               >
@@ -1880,7 +1908,7 @@
                                   className="st0"
                                   transform="matrix(0.7071,-0.7071,0.7071,0.7071,-16.7558,95.4764)"
                                 >
-                                  <rect x="84.83" y="48.54" width="70.31" height="70.31" />
+                                  <rect x={84.83 + O} y={48.54 + O} width="70.31" height="70.31" />
                                 </g>
                               </Ne.a>
                               <Ne.a
@@ -1888,7 +1916,7 @@
                                 placement="bottom"
                                 overlay={
                                   <Te.a id="tooltip-bottom">
-                                    <strong>{V.playerOnThird}</strong>
+                                    <strong>{K.playerOnThird}</strong>
                                   </Te.a>
                                 }
                               >
@@ -1897,15 +1925,34 @@
                                   className="st0"
                                   transform="matrix(0.7071,-0.7071,0.7071,0.7071,-74.0296,71.6061)"
                                 >
-                                  <rect x="27.38" y="105.74" width="70.31" height="70.31" />
+                                  <rect x={27.38 + O} y={105.74 + O} width="70.31" height="70.31" />
                                 </g>
                               </Ne.a>
+                              {h.bases > 4 ? (
+                                <Ne.a
+                                  key="top-2"
+                                  placement="top"
+                                  overlay={
+                                    <Te.a id="tooltip-top">
+                                      <strong>{K.playerOnFourth}</strong>
+                                    </Te.a>
+                                  }
+                                >
+                                  <g
+                                    id="base4"
+                                    className="st0"
+                                    transform="matrix(0.7071,-0.7071,0.7071,0.7071,-74.0296,71.6061)"
+                                  >
+                                    <rect x={27.38 + O} y={25.04 + O} width="70.31" height="70.31" />
+                                  </g>
+                                </Ne.a>
+                              ) : null}
                             </svg>
                           </div>
                         ))
                       }
-                      {O}
                       {k}
+                      {R}
                       <div className="GameWidget-Log">{l.lastUpdate}</div>
                     </o.a.Fragment>
                   )}
@@ -1927,7 +1974,7 @@
                           style={{ background: W(l.awayTeamColor, 0.5) }}
                         >
                           <u
-                            background={B}
+                            background={C}
                             path={"/player/".concat(l.awayPitcher)}
                             className="GameWidget-PlayerLineName"
                           >
@@ -1941,7 +1988,7 @@
                           style={{ background: W(l.homeTeamColor, 0.5) }}
                         >
                           <u
-                            background={B}
+                            background={C}
                             path={"/player/".concat(l.homePitcher)}
                             className="GameWidget-PlayerLineName"
                           >
@@ -1987,33 +2034,33 @@
                     </div>
                   </div>
                 </div>
-                <div className="GameWidget-Upcoming-BetButtons">{C}</div>
+                <div className="GameWidget-Upcoming-BetButtons">{L}</div>
               </div>
             </o.a.Fragment>
           );
-        var X = null;
+        var $ = null;
         h.started &&
-          (X = (
+          ($ = (
             <div className="GameWidget-Log">
               <div className="GameWidget-Log-Header">Game Log</div>
               <div className="GameWidget-Log-Content">{l.lastUpdate}</div>
-              {C}
+              {L}
             </div>
           ));
-        var _ = h.started ? "GameWidget-Full-Live" : "GameWidget-Full-Upcoming",
-          $ = l.isPostseason
+        var ee = h.started ? "GameWidget-Full-Live" : "GameWidget-Full-Upcoming",
+          ae = l.isPostseason
             ? "Game ".concat(l.seriesIndex, " - Best of ").concat(l.seriesLength)
             : "Game ".concat(l.seriesIndex, " of ").concat(l.seriesLength);
         return (
           <div className={"GameWidget ".concat(h.complete ? "IsComplete" : "")}>
-            <div className={_}>
+            <div className={ee}>
               <div className="GameWidget-Header-Wrapper">
                 <div className="GameWidget-Header">
                   {E}
-                  <div className="GameWidget-ScoreLabel GameWidget-ScoreLabel--Series">{$}</div>
+                  <div className="GameWidget-ScoreLabel GameWidget-ScoreLabel--Series">{ae}</div>
                 </div>
                 <div className="GameWidget-ScoreBacking">
-                  <u background={B} path={"/team/".concat(l.awayTeam)} className="GameWidget-ScoreLine">
+                  <u background={C} path={"/team/".concat(l.awayTeam)} className="GameWidget-ScoreLine">
                     <div className="GameWidget-ScoreTeamColorBar" style={{ background: l.awayTeamColor }}>
                       {String.fromCodePoint(Number(l.awayTeamEmoji))}
                     </div>
@@ -2022,7 +2069,7 @@
                         {i.awayTeamName}
                       </div>
                       <div className="GameWidget-ScoreTeamInfo">
-                        {h.started && void 0 !== x ? (
+                        {h.started && void 0 !== V ? (
                           <div className="GameWidget-ScoreRecord-WithBet">
                             {i.awayTeamWins}-{i.awayTeamLosses}
                           </div>
@@ -2033,7 +2080,7 @@
                         )}
                         {h.started ? (
                           <span className="GameWidget-AllBetInfo">
-                            {void 0 === x ? (
+                            {void 0 === V ? (
                               <div className="GameWidget-WinChance" style={{ color: l.awayTeamColor }}>
                                 {Math.round(100 * l.awayOdds)}%
                               </div>
@@ -2042,7 +2089,7 @@
                                 {Math.round(100 * l.awayOdds)}%
                               </div>
                             )}
-                            {M}
+                            {x}
                           </span>
                         ) : null}
                       </div>
@@ -2051,7 +2098,7 @@
                       {i.awayTeamScore}
                     </div>
                   </u>
-                  <u background={B} path={"/team/".concat(l.homeTeam)} className="GameWidget-ScoreLine">
+                  <u background={C} path={"/team/".concat(l.homeTeam)} className="GameWidget-ScoreLine">
                     <div className="GameWidget-ScoreTeamColorBar" style={{ background: l.homeTeamColor }}>
                       {String.fromCodePoint(Number(l.homeTeamEmoji))}
                     </div>
@@ -2060,7 +2107,7 @@
                         {i.homeTeamName}
                       </div>
                       <div className="GameWidget-ScoreTeamInfo">
-                        {h.started && void 0 !== x ? (
+                        {h.started && void 0 !== V ? (
                           <div className="GameWidget-ScoreRecord-WithBet">
                             {i.homeTeamWins}-{i.homeTeamLosses}
                           </div>
@@ -2071,7 +2118,7 @@
                         )}
                         {h.started ? (
                           <span className="GameWidget-AllBetInfo">
-                            {void 0 === x ? (
+                            {void 0 === V ? (
                               <div className="GameWidget-WinChance" style={{ color: l.homeTeamColor }}>
                                 {Math.round(100 * l.homeOdds)}%
                               </div>
@@ -2080,7 +2127,7 @@
                                 {Math.round(100 * l.homeOdds)}%
                               </div>
                             )}
-                            {F}
+                            {H}
                           </span>
                         ) : null}
                       </div>
@@ -2091,8 +2138,8 @@
                   </u>
                 </div>
               </div>
-              {z}
               {X}
+              {$}
             </div>
           </div>
         );
@@ -2221,12 +2268,12 @@
           );
         };
       Ge.context = Qe;
-      var De = Ge,
-        Pe = function () {
+      var Pe = Ge,
+        De = function () {
           var e = Object(r.useContext)(Q.context),
             a = e.user,
             t = (e.clearUser, e.setUser),
-            n = (Object(r.useContext)(I.context), Object(r.useContext)(De.context)),
+            n = (Object(r.useContext)(I.context), Object(r.useContext)(Pe.context)),
             l = (Object(c.f)(), Object(r.useState)(!1)),
             i = Object(s.a)(l, 2),
             m = i[0],
@@ -2277,19 +2324,19 @@
           null !== a.idol &&
             (R = (
               <u background={C} path={"/player/".concat(a.idol)} className="Navigation-IdolizedPlayer">
-                <Y.O />
+                <Y.P />
               </u>
             ));
           return (
             <o.a.Fragment>
               <div className="Navigation-User-Top">
                 <Le className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={g} url="/upcoming">
-                  <Y.S />
+                  <Y.T />
                    {a.coins}
                 </Le>
                 {a.unlockedElection ? (
                   <Le className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={A} url="/shop">
-                    <Y.R />
+                    <Y.S />
                      {a.votes}
                   </Le>
                 ) : null}
@@ -2396,11 +2443,11 @@
                     }
                   >
                     <span className="Peanut-Line">
-                      <span className="Peanut-Icon">{m ? "" : <Y.D />}</span> {a.peanuts}
+                      <span className="Peanut-Icon">{m ? "" : <Y.E />}</span> {a.peanuts}
                     </span>
                   </Le>
                   <div className={m ? "Peanut-Eating" : "Peanut"}>
-                    <Y.D />
+                    <Y.E />
                   </div>
                 </div>
               </div>
@@ -2439,7 +2486,7 @@
             (l.push({ text: "Shop", path: "/shop", locked: !a.unlockedShop }),
             l.push({ text: "Election", path: "/offseason", locked: !a.unlockedElection }),
             l.push({ text: "Book", path: "/thebook" }));
-        var i = a.isFetching ? null : a.isSignedIn ? <Pe /> : <We />;
+        var i = a.isFetching ? null : a.isSignedIn ? <De /> : <We />;
         return (
           <nav className="Navigation">
             <div className="Navigation-Main">
@@ -2661,7 +2708,7 @@
           a,
           t,
           n,
-          l = Object(r.useContext)(De.context),
+          l = Object(r.useContext)(Pe.context),
           i = Object(r.useContext)(Xe.context),
           c = Object(r.useState)([]),
           m = Object(s.a)(c, 2),
@@ -2805,7 +2852,7 @@
               <div className="Leaderboard-Player-Position">{e.info.place}</div>
               {e.info.deceased ? <div className="Leaderboard-Player-Deceased-Icon" /> : null}
               <div className="Leaderboard-Player-Name">
-                {s.idol === (null === (n = e.info.player) || void 0 === n ? void 0 : n.id) ? <Y.O /> : ""}{" "}
+                {s.idol === (null === (n = e.info.player) || void 0 === n ? void 0 : n.id) ? <Y.P /> : ""}{" "}
                 {null === (l = e.info.player) || void 0 === l ? void 0 : l.name}
               </div>
             </div>
@@ -2827,7 +2874,7 @@
       t(108);
       function na() {
         var e = Object(r.useContext)(I.context),
-          a = Object(r.useContext)(De.context);
+          a = Object(r.useContext)(Pe.context);
         if (!e || !e.sim || !e.standings) return null;
         if (!a || !a.leagues) return null;
         var t = a.leagues.find(function (a) {
@@ -2849,7 +2896,7 @@
         );
       }
       function ra(e) {
-        var a = Object(r.useContext)(De.context).subleagues.find(function (a) {
+        var a = Object(r.useContext)(Pe.context).subleagues.find(function (a) {
           return a.id === e.subleague;
         });
         if (void 0 === a) return null;
@@ -2863,7 +2910,7 @@
         );
       }
       function oa(e) {
-        var a = Object(r.useContext)(De.context),
+        var a = Object(r.useContext)(Pe.context),
           t = a.tiebreakers.find(function (a) {
             return a.id === e.league.tiebreakers;
           });
@@ -2909,7 +2956,7 @@
       }
       function ia(e) {
         var a = Object(c.g)(),
-          t = Object(r.useContext)(De.context).teams.find(function (a) {
+          t = Object(r.useContext)(Pe.context).teams.find(function (a) {
             return a.id === e.team;
           });
         return void 0 === t ? null : (
@@ -2938,7 +2985,7 @@
             t = e.path,
             n = Object(r.useContext)(I.context),
             l = Object(r.useContext)(Q.context).user,
-            i = Object(r.useContext)(P.context),
+            i = Object(r.useContext)(D.context),
             s = void 0 === n.schedule;
           function c() {
             switch (t) {
@@ -3050,7 +3097,7 @@
             p = e.path,
             f = Object(r.useContext)(I.context),
             v = Object(r.useContext)(Q.context).user,
-            b = Object(r.useContext)(P.context),
+            b = Object(r.useContext)(D.context),
             y = void 0 === f.schedule;
           if (void 0 === f.postseason.playoffs) return null;
           function g() {
@@ -3207,7 +3254,7 @@
           function (e) {
             var a = e.path,
               t = Object(r.useContext)(I.context),
-              n = Object(r.useContext)(De.context);
+              n = Object(r.useContext)(Pe.context);
             if (void 0 === t || void 0 === t.sim || void 0 === n) return null;
             if (void 0 === t.postseason || void 0 === t.postseason.playoffs) return null;
             var l = n.teams.find(function (e) {
@@ -3521,7 +3568,7 @@
       function Aa(e) {
         switch (e.id) {
           case "EXTRA_STRIKE":
-            return <Y.y />;
+            return <Y.z />;
           case "SHAME_PIT":
             return <Y.b />;
           case "HOME_FIELD":
@@ -3529,22 +3576,22 @@
           case "FIREPROOF":
             return <Y.o />;
           case "ALTERNATE":
-            return <Y.v />;
+            return <Y.w />;
           case "SHELLED":
           case "SUPERALLERGIC":
-            return <Y.D />;
+            return <Y.E />;
           case "SOUNDPROOF":
-            return <Y.u />;
+            return <Y.v />;
           case "REVERBERATING":
             return <Y.f />;
           case "BLOOD_THIEF":
-            return <Y.J />;
+            return <Y.K />;
           case "BLOOD_DONOR":
-            return <Y.A />;
+            return <Y.B />;
           case "BLOOD_WINNER":
-            return <Y.F />;
+            return <Y.G />;
           case "BLOOD_PITY":
-            return <Y.P />;
+            return <Y.Q />;
           case "BLOOD_FAITH":
           case "BLOOD_LAW":
           case "BLOOD_CHAOS":
@@ -3554,17 +3601,21 @@
           case "DEBT":
             return <Y.d />;
           case "MARKED":
-            return <Y.V />;
+            return <Y.W />;
           case "PARTY_TIME":
-            return <Y.C />;
+            return <Y.D />;
           case "LIFE_OF_PARTY":
-            return <Y.r />;
+            return <Y.s />;
           case "INWARD":
-            return <Y.w />;
+            return <Y.x />;
           case "FIRST_BORN":
             return <Y.m />;
           case "HONEY_ROASTED":
             return <Y.j />;
+          case "EXTRA_BASE":
+            return <Y.u />;
+          case "BLESS_OFF":
+            return <Y.t />;
         }
         return null;
       }
@@ -3713,7 +3764,7 @@
       var Ia = function (e) {
           var a = Object(c.h)().nickname,
             t = Object(r.useContext)(I.context),
-            n = Object(r.useContext)(De.context),
+            n = Object(r.useContext)(Pe.context),
             l = Object(c.g)(),
             i = Object(r.useState)({ lineup: [], rotation: [], bullpen: [], bench: [] }),
             m = Object(s.a)(i, 2),
@@ -3803,7 +3854,7 @@
                         : "")
                     }
                   >
-                    {f.idol === e.id ? <Y.O /> : ""} {null === e || void 0 === e ? void 0 : e.name}
+                    {f.idol === e.id ? <Y.P /> : ""} {null === e || void 0 === e ? void 0 : e.name}
                   </div>
                   <div className="Team-Player-Vibe">
                     {Sa(e, void 0 !== (null === (a = t.sim) || void 0 === a ? void 0 : a.day) ? t.sim.day : -1)}
@@ -3839,7 +3890,7 @@
                         : "")
                     }
                   >
-                    {f.idol === e.id ? <Y.O /> : ""} {null === e || void 0 === e ? void 0 : e.name}
+                    {f.idol === e.id ? <Y.P /> : ""} {null === e || void 0 === e ? void 0 : e.name}
                   </div>
                   <div className="Team-Player-Vibe">
                     {Sa(e, void 0 !== (null === (a = t.sim) || void 0 === a ? void 0 : a.day) ? t.sim.day : -1)}
@@ -3986,12 +4037,12 @@
           c = Object(r.useContext)(Q.context),
           m = c.user,
           u = c.setUser,
-          d = Object(r.useContext)(De.context).teams.find(function (e) {
+          d = Object(r.useContext)(Pe.context).teams.find(function (e) {
             return e.id === m.favoriteTeam;
           }),
           p = Object(r.useContext)(I.context),
           f = Object(r.useContext)(ka.context),
-          v = Object(r.useContext)(De.context);
+          v = Object(r.useContext)(Pe.context);
         function b(e) {
           return y.apply(this, arguments);
         }
@@ -4118,7 +4169,7 @@
                         amount: 100,
                         toast: "Vote purchased. You now have ".concat(e.votes + 1),
                         available: !0,
-                        icon: <Y.R />,
+                        icon: <Y.S />,
                         buyUrl: "/api/buyVote",
                         userUpdate: function () {
                           a(Object(O.a)(Object(O.a)({}, e), {}, { votes: e.votes + 1, coins: e.coins - 100 }));
@@ -4132,7 +4183,7 @@
                         amount: 100,
                         available: !0,
                         toast: "Welcome, Voter! You have ".concat(e.votes, " Vote already from signing up."),
-                        icon: <Y.R />,
+                        icon: <Y.S />,
                         buyUrl: "/api/buyUnlockElection",
                         userUpdate: function () {
                           a(Object(O.a)(Object(O.a)({}, e), {}, { unlockedElection: !0, coins: e.coins - 100 }));
@@ -4355,11 +4406,11 @@
                   var Q = de.idolStrikeoutsTiers[Math.min(e.relics.Idol_Strikeouts, de.idolStrikeoutsTiers.length - 1)],
                     G = de.idolStrikeoutsTiers[e.relics.Idol_Strikeouts + 1];
                   if (void 0 === e.relics.Idol_Strikeouts) {
-                    var D = de.idolStrikeoutsTiers[0],
-                      P = Object.create(e.relics);
-                    P.Idol_Strikeouts = 0;
+                    var P = de.idolStrikeoutsTiers[0],
+                      D = Object.create(e.relics);
+                    D.Idol_Strikeouts = 0;
                     var W = "Adorn yourself. When your Idol strikes a batter out, you'll earn ".concat(
-                        D.amount,
+                        P.amount,
                         " coins."
                       ),
                       F = !0;
@@ -4368,14 +4419,14 @@
                         id: 14,
                         name: "Strikeout Pendant",
                         description: W,
-                        amount: D.price,
-                        toast: "Coins per Idol strikeout is now ".concat(D.amount),
+                        amount: P.price,
+                        toast: "Coins per Idol strikeout is now ".concat(P.amount),
                         available: F,
                         buyUrl: "/api/buyRelic",
                         icon: <Y.q />,
                         buyParams: { relicId: "Idol_Strikeouts" },
                         userUpdate: function () {
-                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - D.price, relics: P }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - P.price, relics: D }));
                         },
                       });
                   } else if (void 0 !== G) {
@@ -4639,7 +4690,7 @@
                         </div>
                         <div className="Shop-Item-Body">{e.description}</div>
                         <div className="Shop-Item-Checkout">
-                          <Y.S className="Shop-Item-Coins" />
+                          <Y.T className="Shop-Item-Coins" />
                           <div className="Shop-Item-Amount">
                             {(function (e) {
                               return e.maxed ? "N/A" : 0 === e.amount ? "Free" : e.amount.toString();
@@ -4694,7 +4745,7 @@
           var a = Object(r.useContext)(Q.context),
             t = a.user,
             n = a.setUser,
-            l = Object(r.useContext)(De.context),
+            l = Object(r.useContext)(Pe.context),
             i = Object(r.useState)(),
             c = Object(s.a)(i, 2),
             m = c[0],
@@ -4878,7 +4929,7 @@
             );
           }),
         Ga = (t(117), o.a.createContext({ blessings: [], decrees: [], decreesToPass: 0 })),
-        Da = function (e) {
+        Pa = function (e) {
           var a = e.children,
             t = Object(r.useState)({ blessings: [], decrees: [], decreesToPass: 0 }),
             n = Object(s.a)(t, 2),
@@ -4912,13 +4963,13 @@
             (<Ga.Provider value={l}>{a}</Ga.Provider>)
           );
         };
-      Da.context = Ga;
-      var Pa,
-        Wa = Da;
+      Pa.context = Ga;
+      var Da,
+        Wa = Pa;
       t(118);
       !(function (e) {
         (e[(e.DECREE = 0)] = "DECREE"), (e[(e.BONUS = 1)] = "BONUS");
-      })(Pa || (Pa = {}));
+      })(Da || (Da = {}));
       var Fa = function () {
           return (
             <a href="/login">
@@ -5013,7 +5064,7 @@
                     return i(void 0);
                   }}
                 >
-                  <u background={m} path={"/vote/".concat(Pa.BONUS, "/").concat(l)}>
+                  <u background={m} path={"/vote/".concat(Da.BONUS, "/").concat(l)}>
                     Submit Blessing Vote
                   </u>
                 </j.a>
@@ -5437,13 +5488,13 @@
         ) : "redistribute_wealth" === e ? (
           <za className="Decrees-Option-Icon" />
         ) : "four_for_four" === e || "fourth_strike" === e ? (
-          <Y.y className="Decrees-Option-Icon" />
+          <Y.z className="Decrees-Option-Icon" />
         ) : "peanuts" === e ? (
-          <Y.D className="Decrees-Option-Icon" />
+          <Y.E className="Decrees-Option-Icon" />
         ) : "popular_evolution" === e ? (
           <mt className="Decrees-Option-Icon" />
         ) : "enhanced_shame" === e ? (
-          <Y.H className="Decrees-Option-Icon" />
+          <Y.I className="Decrees-Option-Icon" />
         ) : "late_stage" === e ? (
           <Y.i className="Decrees-Option-Icon" />
         ) : "blaserunning" === e ? (
@@ -5451,33 +5502,33 @@
         ) : "eat_the_rich" === e ? (
           <Y.k className="Decrees-Option-Icon" />
         ) : "eat_the_crust" === e ? (
-          <Y.E className="Decrees-Option-Icon" />
+          <Y.F className="Decrees-Option-Icon" />
         ) : "interviews" === e ? (
-          <Y.z className="Decrees-Option-Icon" />
+          <Y.A className="Decrees-Option-Icon" />
         ) : "random_realignment" === e ? (
           <Y.a className="Decrees-Option-Icon" />
         ) : "alternate_reality" === e ? (
           <ya.e className="Decrees-Option-Icon" />
         ) : "targeted_shame" === e ? (
-          <Y.L className="Decrees-Option-Icon" />
+          <Y.M className="Decrees-Option-Icon" />
         ) : "roster_shuffle" === e ? (
           <ba.a className="Decrees-Option-Icon" />
         ) : "home_field_advantage" === e ? (
           <J.b className="Decrees-Option-Icon" />
         ) : "team_punish" === e ? (
-          <Y.U className="Decrees-Option-Icon" />
+          <Y.V className="Decrees-Option-Icon" />
         ) : "do_nothing" === e ? (
-          <Y.G className="Decrees-Option-Icon" />
+          <Y.H className="Decrees-Option-Icon" />
         ) : "confuse_good" === e ? (
-          <Y.N className="Decrees-Option-Icon" />
+          <Y.O className="Decrees-Option-Icon" />
         ) : "confuse_evil" === e ? (
-          <Y.M className="Decrees-Option-Icon" />
+          <Y.N className="Decrees-Option-Icon" />
         ) : "parallel_world" === e ? (
-          <Y.I className="Decrees-Option-Icon" />
+          <Y.J className="Decrees-Option-Icon" />
         ) : "diagonal_world" === e ? (
-          <Y.Q className="Decrees-Option-Icon" />
+          <Y.R className="Decrees-Option-Icon" />
         ) : "high_filter" === e ? (
-          <Y.x className="Decrees-Option-Icon" />
+          <Y.y className="Decrees-Option-Icon" />
         ) : "new_kids" === e ? (
           <Y.p className="Decrees-Option-Icon" />
         ) : "hot_sauce" === e ? (
@@ -5485,11 +5536,11 @@
         ) : "enhanced_party_time" === e ? (
           <gt className="Decrees-Option-Icon" />
         ) : "fifth_base" === e ? (
-          <Y.t className="Decrees-Option-Icon" />
+          <Y.u className="Decrees-Option-Icon" />
         ) : "walk_in_the_park" === e ? (
           <It className="Decrees-Option-Icon" />
         ) : "bless_off" === e ? (
-          <Y.s className="Decrees-Option-Icon" />
+          <Y.t className="Decrees-Option-Icon" />
         ) : (
           <div />
         );
@@ -5581,7 +5632,7 @@
           c = Object(s.a)(i, 2),
           m = c[0],
           u = c[1],
-          d = Object(r.useContext)(De.context);
+          d = Object(r.useContext)(Pe.context);
         function p() {
           return (p = Object(E.a)(
             h.a.mark(function a() {
@@ -5751,12 +5802,12 @@
           </div>
         );
       }
-      function Dt() {
+      function Pt() {
         var e = Object(r.useContext)(Q.context).user,
           a = Object(r.useContext)(I.context);
-        return a && a.sim ? 0 === a.sim.phase ? <Gt /> : e.unlockedElection ? <Pt /> : <Ft /> : null;
+        return a && a.sim ? 0 === a.sim.phase ? <Gt /> : e.unlockedElection ? <Dt /> : <Ft /> : null;
       }
-      function Pt() {
+      function Dt() {
         var e,
           a = Object(r.useContext)(I.context),
           t = void 0 !== a.sim && void 0 !== a.sim.season ? a.sim.season : -1;
@@ -5882,7 +5933,7 @@
                   <ue.a.Label>How many votes do you want to cast?</ue.a.Label>
                   <div className="Vote-Form-Inputs-Amount">
                     <div className="Vote-Ticket-Wrapper">
-                      <Y.R className="Vote-Ticket-Icon" />
+                      <Y.S className="Vote-Ticket-Icon" />
                       {n.votes}
                     </div>
                     <ue.a.Control type="number" value={v} onChange={w} />
@@ -5915,7 +5966,7 @@
       function Ht(e) {
         var a,
           t = e.path,
-          n = Object(r.useContext)(De.context),
+          n = Object(r.useContext)(Pe.context),
           l = Object(r.useContext)(I.context);
         if (void 0 === n || void 0 === l) return null;
         var i = n.teams.find(function (e) {
@@ -7397,14 +7448,33 @@
       t(127);
       function an() {
         var e,
-          a = Object(r.useContext)(ka.context);
-        return (
+          a = Object(r.useContext)(ka.context),
+          t = (null === a || void 0 === a ? void 0 : a.doc)
+            ? (function (e) {
+                switch (e.gamma) {
+                  case 0:
+                    return "One";
+                  case 1:
+                    return "Two";
+                }
+                return;
+              })(a.doc)
+            : void 0;
+        return void 0 === t ? null : (
           <div className="BigDeal-All">
-            <div className="BigDeal-Icon">
-              <Y.D />
+            <div className={"BigDeal-Icon BigDeal-Icon-" + t}>
+              {(function (e) {
+                switch (e) {
+                  case "One":
+                    return <Y.E />;
+                  case "Two":
+                    return <Y.r />;
+                }
+                return;
+              })(t)}
             </div>
             <div className="BigDeal-Body">
-              <div className="BigDeal-RedLine">
+              <div className={"BigDeal-RedLine BigDeal-RedLine-" + t}>
                 {null === a || void 0 === a || null === (e = a.doc) || void 0 === e ? void 0 : e.zeta}
               </div>
             </div>
@@ -7521,7 +7591,7 @@
           <o.a.Fragment>
             <div className="Bulletin-Item-Header">
               <div className="Bulletin-Item-Header-Icon" style={{ background: "#deae00" }}>
-                <Y.O />
+                <Y.P />
               </div>
               <div className="Bulletin-Item-Header-Title">IDOLS</div>
             </div>
@@ -7590,7 +7660,7 @@
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#32c775" }}>
-                  <Y.T />
+                  <Y.U />
                 </div>
                 <div className="Bulletin-Item-Header-Title">Season {u.sim.season} Recap</div>
               </div>
@@ -7617,7 +7687,7 @@
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#c23284" }}>
-                  <Y.K />
+                  <Y.L />
                 </div>
                 <div className="Bulletin-Item-Header-Title">Current Events</div>
               </div>
@@ -7644,7 +7714,7 @@
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#1b95e0" }}>
-                  <Y.B />
+                  <Y.C />
                 </div>
                 <div className="Bulletin-Item-Header-Title">Art Gallery</div>
               </div>
@@ -8061,7 +8131,7 @@
           n,
           l = Object(c.h)().id,
           i = Object(r.useContext)(I.context),
-          m = Object(r.useContext)(De.context),
+          m = Object(r.useContext)(Pe.context),
           u = Object(r.useState)(void 0),
           d = Object(s.a)(u, 2),
           p = d[0],
@@ -8277,11 +8347,11 @@
                                   >
                                     {"" === C || null === C ? (
                                       <o.a.Fragment>
-                                        <Y.O /> Choose Idol
+                                        <Y.P /> Choose Idol
                                       </o.a.Fragment>
                                     ) : (
                                       <o.a.Fragment>
-                                        <Y.S /> 200 New Idol
+                                        <Y.T /> 200 New Idol
                                       </o.a.Fragment>
                                     )}{" "}
                                   </j.a>
@@ -8290,18 +8360,18 @@
                             </div>
                           ) : C === p.player.id ? (
                             <div className="Player-Button-Idol-Current">
-                              <Y.O /> Your Idol
+                              <Y.P /> Your Idol
                             </div>
                           ) : (
                             <ue.a className="Player-Button-Form" onSubmit={B}>
                               <j.a className="Player-Button-Idol" type="submit" variant="success">
                                 {"" === C || null === C ? (
                                   <o.a.Fragment>
-                                    <Y.O /> Choose Idol
+                                    <Y.P /> Choose Idol
                                   </o.a.Fragment>
                                 ) : (
                                   <o.a.Fragment>
-                                    <Y.S /> 200 New Idol
+                                    <Y.T /> 200 New Idol
                                   </o.a.Fragment>
                                 )}{" "}
                               </j.a>
@@ -9911,7 +9981,7 @@
           };
         return (
           <_t>
-            <P>
+            <D>
               <Xe>
                 <Fe state={e} />
                 <div className="Main-Body">
@@ -9938,7 +10008,7 @@
                       <$t />
                     </c.a>
                     <c.a path="/offseason">
-                      <Dt />
+                      <Pt />
                     </c.a>
                     <c.a path="/login">
                       <Qa isLogin={!0} />
@@ -9993,7 +10063,7 @@
                   </a>
                 </footer>
               </Xe>
-            </P>
+            </D>
           </_t>
         );
       }
@@ -10031,13 +10101,13 @@
             <me.ToastProvider autoDismiss={!0} autoDismissTimeout={3e3} placement="bottom-right">
               <T value={{}}>
                 <I value={Bn}>
-                  <De value={{}}>
+                  <Pe value={{}}>
                     <ka value={{}}>
                       <m.a>
                         <On />
                       </m.a>
                     </ka>
-                  </De>
+                  </Pe>
                 </I>
               </T>
             </me.ToastProvider>

@@ -9478,6 +9478,7 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-right: 10px;
 }
 .GameWidget-Bases.first #base1,
+.GameWidget-Bases.fourth #base4,
 .GameWidget-Bases.second #base2,
 .GameWidget-Bases.third #base3 {
   fill: #fff;
@@ -11382,8 +11383,8 @@ input[type="number"]::-webkit-outer-spin-button {
   background-position: 50%;
   background-repeat: no-repeat;
   background-image: url(/static/media/ticket.3cebc08e.png);
-  -webkit-animation-name: floaty;
-  animation-name: floaty;
+  -webkit-animation-name: floaty-ticket;
+  animation-name: floaty-ticket;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
@@ -11414,12 +11415,12 @@ input[type="number"]::-webkit-outer-spin-button {
 .About-List {
   margin: 20px 0;
 }
-@-webkit-keyframes floaty {
+@-webkit-keyframes floaty-ticket {
   0% {
     transform: translateY(10px);
   }
 }
-@keyframes floaty {
+@keyframes floaty-ticket {
   0% {
     transform: translateY(10px);
   }
@@ -13042,7 +13043,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .BigDeal-Icon {
   position: relative;
-  font-size: 40vh;
   height: auto;
   margin: 0;
 }
@@ -13051,8 +13051,12 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 10px;
   color: #111;
 }
-.BigDeal-Icon-Text svg,
-.BigDeal-Icon svg {
+.BigDeal-Icon-One {
+  font-size: 40vh;
+  line-height: 0;
+  height: 48vh;
+}
+.BigDeal-Icon-One svg {
   -webkit-animation-name: spinny;
   animation-name: spinny;
   -webkit-animation-duration: 10s;
@@ -13064,12 +13068,31 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-animation-direction: normal;
   animation-direction: normal;
 }
+.BigDeal-Icon-Two {
+  font-size: 90vh;
+  line-height: 0;
+  position: relative;
+  height: 68vh;
+  top: -200px;
+}
+.BigDeal-Icon-Two svg {
+  -webkit-animation-name: floaty;
+  animation-name: floaty;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
+}
 .BigDeal-Body {
   max-width: 550px;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .BigDeal-Line,
 .BigDeal-RedLine {
@@ -13078,8 +13101,12 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: 700;
   margin: 0 20px;
 }
-.BigDeal-RedLine {
+.BigDeal-RedLine-One {
   color: red;
+}
+.BigDeal-RedLine-Two {
+  color: #5988ff;
+  text-shadow: 0 0 20px #5988ff;
 }
 @-webkit-keyframes spinny {
   0% {
@@ -13095,6 +13122,21 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   to {
     transform: rotate(1turn);
+  }
+}
+@-webkit-keyframes floaty {
+  0% {
+    transform: translateY(-80px);
+  }
+}
+@keyframes floaty {
+  0% {
+    transform: translateY(-80px);
+  }
+}
+@media (max-width: 1080px) {
+  .BigDeal-RedLine {
+    font-size: 24px;
   }
 }
 #root .Bulletin {
