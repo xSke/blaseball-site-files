@@ -40,7 +40,7 @@
 * a. Should the Participants open the Forbidden Book, `The Discipline Era should begin||||||||||||||||||||||` suffering `upon the league. Players shall be ` banished `at the ||||||||||| ||||||||| |||| ||||||||||||||||.` The Discipline Era shall last until `the Participants have` atoned.
 * b. If a team wins three championships, they, and Blaseball, shall ascend.
 * c. When teams are sent to `||||||||||| |||||||||||||`, they shall return once `|||||||||||||||| |||||||||||||||||||||| |||||||||||||`
-* d. Divine Favor: the `||||` have an internal ranking `of favored teams. When a team wins a Divine Favor blessing, they will be` boosted to the top of the list.
+* d. Divine Favor: the `||||` have an internal ranking of favored teams. The list is decided `|||||||||` each season, and determines all standings tiebreakers.
 * e. ~~If at any time the Fans have angered the Blaseball Gods, they may atone by eating one million Peanuts.~~ STRIKE TWO
 * h. Eat The Rich: Every season, immediately before the Election, the Wealthiest 1% of Fans will have their Coins removed and distributed evenly to the other 99% of Fans.
 * i. Blood Bath: `||||| ||||||, ||||||||||| |||||| ||| ||||||||, ||| ||||| |||| |||| ||||||| ||| ||||||. ||||| |||| || |||||||||||| ||||| || |||| |||||| ||||| |||||||||||||`
@@ -50,6 +50,7 @@
 ### 6. `||||||||||||`
 * a. It is known `that the intention of the game of Blaseball |||||||||||||||||||||||| |||||||||||||||||||| |||||||||||||| |||||||||||||||||| ||||||||||| |||||||||| would be diminished.`
 * b. `|||||||`: Several entities in the `||||||||||||||` shall be chosen `||||||||||` to bring Blaseball to the people `|||||||||||||||||| ||||||||||||||||||`
+* c. It is known that the majority of the icons on the site are sourced from Game-Icons.net. `||||||||` thank the authors immensely. Individual author credits coming soon.
 
 ### Signed,
 * `||||`,  `||||`,  `||||||||`,  `|||||||`,  `||||||||`,  `|||||||||`,  `|||||||`,  `||||`,  `||||||`,  H`||||||||||`,  `||||||`,  `|||||||`,  `||||| ||||`,  A`|||||| ||||||`,  `||||`,  N`||||||`,  `||`,  `||||||`,  M`|| ||||||`

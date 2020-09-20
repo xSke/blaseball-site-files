@@ -10323,6 +10323,7 @@ input[type="number"]::-webkit-outer-spin-button {
   z-index: 2;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .Navigation-FavoriteTeamEmoji,
 .Navigation-IdolizedPlayer {
@@ -10357,7 +10358,46 @@ input[type="number"]::-webkit-outer-spin-button {
   background: #fff;
 }
 .Navigation-Main {
+  display: grid;
+  grid-auto-flow: column;
+}
+.Navigation-Animation-enter {
+  opacity: 0;
+}
+.Navigation-Animation-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.35s, transform 0.35s;
+}
+.Navigation-Animation-exit {
+  opacity: 1;
+}
+.Navigation-Animation-exit-active {
+  opacity: 0;
+  transition: opacity 0.35s, transform 0.35s;
+}
+.Navigation-Dropdown {
+  position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Navigation-Dropdown-Content {
+  position: absolute;
+  top: 35px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background: #000;
+  z-index: 1;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.Navigation-Dropdown-Content a {
+  margin-right: 0;
+  margin-bottom: 5px;
 }
 .Navigation-User,
 .Navigation-User-Bottom,
@@ -10384,7 +10424,7 @@ input[type="number"]::-webkit-outer-spin-button {
   text-decoration: none;
   border-radius: 20px;
   font-weight: 700;
-  border: 2px solid transparent;
+  border: 2px solid transparent !important;
   white-space: nowrap;
   height: 40px;
 }
@@ -10401,6 +10441,20 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .Navigation-Button-Current:hover {
   color: #000;
+}
+.Navigation-Button-Content:focus {
+  outline: none;
+}
+.Navigation-Button-Blue {
+  box-shadow: 0 0 5px 3px #5988ff;
+  background-color: #5988ff;
+}
+.Navigation-Toggle {
+  display: none;
+}
+.Navigation-Toggle svg {
+  width: 20px;
+  height: 20px;
 }
 .Navigation-CurrencyButton {
   display: flex;
@@ -10467,6 +10521,9 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-animation-direction: normal;
   animation-direction: normal;
 }
+button:focus-visible {
+  outline: 5px auto -webkit-focus-ring-color;
+}
 @-webkit-keyframes flyingPeanut {
   0% {
     transform: translateY(0) scaleX(1) rotate(0);
@@ -10486,33 +10543,77 @@ input[type="number"]::-webkit-outer-spin-button {
 @media (max-width: 1080px) {
   .Navigation {
     width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px 0;
   }
   .Navigation-Votes {
     margin-left: 6px;
+  }
+  .Navigation-Toggle {
+    display: block;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+  .Navigation-Dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .Navigation-Dropdown-Content {
+    position: static;
+    top: auto;
+    display: inherit;
+    flex-direction: inherit;
+    align-items: center;
+    padding: 0;
+    background: none;
+    z-index: 0;
+    margin-right: 0;
+    margin-top: 5px;
+  }
+  .Navigation-Dropdown-Content a {
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: auto;
   }
   .Navigation-Button {
     padding: 5px 8px;
     font-size: 12px;
     height: 32px;
-    margin-right: 6px;
+    margin-right: 0;
   }
   .Navigation-Main {
-    justify-content: center;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: none;
+    grid-row-gap: 5px;
     width: 100%;
+    padding-top: 10px;
   }
-  .Navigation-User {
+  .Navigation-Top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Navigation-User-Top {
     background-color: #000;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 5px 20px;
-    flex-direction: column;
+    padding: 10px 20px;
   }
-  .Navigation-User-Bottom a:last-child {
-    position: absolute;
-    font-size: 10px;
-    right: 10px;
+  .Navigation-User-Top svg:only-of-type {
+    width: 14px;
+  }
+  .Navigation-User-Bottom {
+    justify-content: flex-end;
+  }
+  .Peanut-Icon {
+    margin-right: 5px;
   }
   .react-toast-notifications__container {
     margin-bottom: 42px;
@@ -10535,6 +10636,11 @@ input[type="number"]::-webkit-outer-spin-button {
   top: calc(-1px - 0.5rem);
   left: 50%;
   transform: translateX(-50%);
+}
+.Overlay-Arrow-Bottom {
+  top: auto;
+  bottom: calc(-1px - 0.5rem);
+  transform: translateX(-50%) rotate(180deg);
 }
 .Overlay-Arrow:after,
 .Overlay-Arrow:before {
@@ -10640,6 +10746,12 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .Leaderboard-Number:last-child {
   margin-right: 0;
+}
+.Leaderboard-Icon {
+  margin-left: -40px;
+  width: 40px;
+  color: #ff007b;
+  font-size: 24px;
 }
 .Leaderboard-Description {
   font-size: 16px;
@@ -11283,6 +11395,139 @@ input[type="number"]::-webkit-outer-spin-button {
     border-left-width: 40px;
     border-right-width: 40px;
     border-top-width: 16px;
+  }
+}
+.HallOfFlame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  max-width: 100%;
+}
+.HallOfFlame-Header {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  padding-top: 20px;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  line-height: 1.2em;
+  justify-content: center;
+  color: #5988ff;
+  text-shadow: 0 0 20px #5988ff;
+}
+.HallOfFlame-Header-Group {
+  white-space: nowrap;
+}
+.HallOfFlame-Header-Deceased-Icon {
+  background-image: url(/static/media/player_deceased_icon-blue.abaaf02a.svg);
+  background-repeat: no-repeat;
+  padding: 15px;
+  margin: 0 10px;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
+.HallOfFlame-Header-Deceased-Icon-Flipped {
+  transform: scaleX(-1);
+}
+.HallOfFlame-Number {
+  margin: 0 10px;
+  background: #fff;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  color: #000;
+  padding: 0 6px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 32px;
+}
+.HallOfFlame-Number:last-child {
+  margin-right: 0;
+}
+.HallOfFlame-Description {
+  font-size: 16px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  text-align: center;
+  margin: 15px 0;
+  color: #aaa;
+  width: 100%;
+}
+.HallOfFlame-List {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0;
+  width: 100%;
+  margin: auto;
+}
+.HallOfFlame-Player {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 20px;
+  padding: 5px;
+  margin: 0 6px;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.HallOfFlame-Player:nth-child(odd) {
+  background: rgba(30, 30, 30, 0.64);
+}
+.HallOfFlame-Player:hover {
+  background: hsla(0, 0%, 39.6%, 0.65);
+}
+.HallOfFlame-Player-Container {
+  display: flex;
+  max-width: 550px;
+  flex-direction: column;
+  margin: 0 5px;
+}
+.HallOfFlame-Player-Position,
+.HallOfFlame-Player-Tributes {
+  font-size: 14pt;
+  margin: 5px 5px 5px 10px;
+  min-width: 30px;
+  color: #5988ff;
+  text-shadow: 0 0 8px #5988ff;
+}
+.HallOfFlame-Player-Tributes {
+  width: auto;
+  text-align: right;
+}
+.HallOfFlame-Player-Name {
+  padding-left: 6px;
+  line-height: 1.2em;
+  display: flex;
+  align-items: center;
+}
+.HallOfFlame-Player-Name svg {
+  margin-left: -5px;
+  margin-right: 5px;
+  font-size: 25px;
+}
+.HallOfFlame-Player-Name-Container {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1080px) {
+  .HallOfFlame-Header-Deceased-Icon {
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+  }
+  .HallOfFlame-List {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .HallOfFlame-Player-Name {
+    font-size: 16px;
+    margin: 0;
   }
 }
 .About-All {
@@ -13324,15 +13569,32 @@ input[type="number"]::-webkit-outer-spin-button {
   flex-direction: column;
   align-items: center;
 }
-#root .Player-Attributes {
+#root .Player-Attributes,
+#root .Player-Status {
   padding: 5px 40px;
   display: flex;
   flex-direction: row;
   background: #111;
   border-bottom: 1px solid #fff;
 }
+#root .Player-Status {
+  padding: 15px 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+#root .Player-Status-Line {
+  display: flex;
+}
+#root .Player-Status-Name {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 18px;
+}
 #root .Player-Button {
   font-size: 14px;
+  display: flex;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
 }
 #root .Player-Button-Form {
@@ -13375,6 +13637,26 @@ input[type="number"]::-webkit-outer-spin-button {
 #root .Player-Button-Idol-Current :first-child {
   margin-right: 5px;
   font-size: 25px;
+}
+#root .Player-Button-Tribute {
+  color: #fff;
+  border: 1px solid #fff !important;
+  font-size: 14px;
+  background-color: #ba7300;
+  height: 32px;
+  font-weight: 700;
+  align-items: center;
+  display: flex;
+  border-radius: 30px;
+  white-space: nowrap;
+  text-align: center;
+}
+#root .Player-Button-Tribute:not(:first-child) {
+  border-left: none;
+}
+#root .Player-Button-Tribute :first-child {
+  margin-right: 5px;
+  font-size: 18px;
 }
 #root .Player-Info {
   border-bottom: 1px solid #fff;
@@ -13450,7 +13732,7 @@ input[type="number"]::-webkit-outer-spin-button {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  align-items: flex-end;
+  align-items: center;
 }
 #root .Player-Name {
   font-family: "Lora", "Courier New", monospace, serif;
@@ -13543,9 +13825,15 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 0 10px;
   display: flex;
   align-items: center;
+  font-family: "Lora", "Courier New", monospace, serif;
   font-size: 18px;
 }
-#root .Player-Team-Name,
+#root .Player-Deceased-Icon {
+  background-image: url(/static/media/player_deceased_icon.2febfc5d.svg);
+  background-repeat: no-repeat;
+  min-width: 30px;
+  height: 30px;
+}
 .Idol-Disabled-Tooltip {
   font-family: "Lora", "Courier New", monospace, serif;
 }
