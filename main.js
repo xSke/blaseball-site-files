@@ -3657,46 +3657,44 @@
       var ya = ba;
       function ga() {
         Object(r.useContext)(Ge.context);
-        var e,
-          a,
-          t = Object(r.useContext)(ya.context),
-          n = Object(r.useState)([]),
-          l = Object(s.a)(n, 2),
-          i = l[0],
-          c = l[1];
+        var e = Object(r.useContext)(ya.context),
+          a = Object(r.useState)([]),
+          t = Object(s.a)(a, 2),
+          n = t[0],
+          l = t[1];
         Object(r.useEffect)(
           function () {
-            for (var e = [], a = 0; a <= t.length - 1; a++) e.push(t[a].id);
+            for (var a = [], t = 0; t <= e.length - 1; t++) a.push(e[t].id);
             (function () {
-              var a = Object(E.a)(
-                h.a.mark(function a() {
-                  var n, r, o, l;
-                  return h.a.wrap(function (a) {
+              var t = Object(E.a)(
+                h.a.mark(function t() {
+                  var n, r, o, i;
+                  return h.a.wrap(function (t) {
                     for (;;)
-                      switch ((a.prev = a.next)) {
+                      switch ((t.prev = t.next)) {
                         case 0:
-                          if (!(e.length > 0)) {
-                            a.next = 6;
+                          if (!(a.length > 0)) {
+                            t.next = 6;
                             break;
                           }
-                          return (a.next = 3), ce(e);
+                          return (t.next = 3), ce(a);
                         case 3:
-                          if (((n = a.sent), (r = []), void 0 !== n)) {
+                          if (((n = t.sent), (r = []), void 0 !== n)) {
                             for (
                               o = function () {
-                                var e = n[l],
-                                  a = t.find(function (a) {
-                                    return a.id === e.id;
+                                var a = n[i],
+                                  t = e.find(function (e) {
+                                    return e.id === a.id;
                                   });
-                                void 0 === a && (a = { id: "", peanuts: 0, place: 0 }),
-                                  r.push({ player: e, peanuts: a.peanuts, place: a.place });
+                                void 0 === t && (t = { id: "", peanuts: 0, place: 0 }),
+                                  r.push({ player: a, peanuts: t.peanuts, place: t.place });
                               },
-                                l = n.length - 1;
-                              l >= 0;
-                              l--
+                                i = n.length - 1;
+                              i >= 0;
+                              i--
                             )
                               o();
-                            c(
+                            l(
                               r.sort(function (e, a) {
                                 return e.place > a.place ? 1 : -1;
                               })
@@ -3704,25 +3702,22 @@
                           }
                         case 6:
                         case "end":
-                          return a.stop();
+                          return t.stop();
                       }
-                  }, a);
+                  }, t);
                 })
               );
               return function () {
-                return a.apply(this, arguments);
+                return t.apply(this, arguments);
               };
             })()();
           },
-          [t]
+          [e]
         );
-        var m = Object(r.useContext)(I.context);
-        if (!m || !m.sim) return null;
-        void 0 !== m.sim.season && m.sim.season;
-        var u =
-            6 === (null === (e = m.sim) || void 0 === e ? void 0 : e.phase) ||
-            0 === (null === (a = m.sim) || void 0 === a ? void 0 : a.phase),
-          d = i.length < 1 || void 0 === i ? <pe /> : <Aa info={i} seasonEnd={u} />;
+        var i = Object(r.useContext)(I.context);
+        if (!i || !i.sim) return null;
+        void 0 !== i.sim.season && i.sim.season;
+        var c = n.length < 1 || void 0 === n ? <pe /> : <Aa info={n} seasonEnd={!1} />;
         return (
           <div className="HallOfFlame">
             <div className="HallOfFlame-Header">
@@ -3730,7 +3725,7 @@
               <div className="HallOfFlame-Header-Deceased-Icon HallOfFlame-Header-Deceased-Icon-Flipped" />
             </div>
             <div className="HallOfFlame-Description">Pay tribute.</div>
-            {d}
+            {c}
           </div>
         );
       }
