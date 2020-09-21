@@ -482,9 +482,9 @@
             id: "DEBT",
             color: "#ff1f3c",
             textColor: "#ff1f3c",
-            background: "#1b1c80",
-            title: "Debted",
-            description: "This player must fulfill a Debt.",
+            background: "#363738",
+            title: "Refinanced Debt",
+            description: "This player must fulfill a ⓓⓔⓑⓣ.",
           },
           {
             id: "SPICY",
