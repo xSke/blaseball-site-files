@@ -382,7 +382,7 @@
             background: "#52050f",
             title: "Blood Donor",
             description:
-              "In the Blood Bath each season, this team will donate Stars to a division opponent that finished behind them in the standings.",
+              "In the Blood Bath, this team will donate Stars to a division opponent that finished behind them in the standings.",
           },
           {
             id: "BLOOD_THIEF",
@@ -391,7 +391,7 @@
             background: "#52050f",
             title: "Blood Thief",
             description:
-              "In the Blood Bath each season, this team will steal Stars from a division opponent that finished ahead of them in the standings.",
+              "In the Blood Bath, this team will steal Stars from a division opponent that finished ahead of them in the standings.",
           },
           {
             id: "BLOOD_PITY",
@@ -400,7 +400,7 @@
             background: "#52050f",
             title: "Blood Pity",
             description:
-              "In the Blood Bath each season, this team must give Stars to the team that finished last in their division.",
+              "In the Blood Bath, this team must give Stars to the team that finished last in their division.",
           },
           {
             id: "BLOOD_WINNER",
@@ -409,7 +409,7 @@
             background: "#52050f",
             title: "Blood Winner",
             description:
-              "In the Blood Bath each season, this team must give Stars to the team that finished first in their division.",
+              "In the Blood Bath, this team must give Stars to the team that finished first in their division.",
           },
           {
             id: "BLOOD_FAITH",
@@ -417,7 +417,7 @@
             textColor: "#ff1f3c",
             background: "#52050f",
             title: "Blood Faith",
-            description: "In the Blood Bath each season, this player will receive a small boost to a random stat.",
+            description: "In the Blood Bath, this player will receive a small boost to a random stat.",
           },
           {
             id: "BLOOD_LAW",
@@ -426,7 +426,7 @@
             background: "#52050f",
             title: "Blood Law",
             description:
-              "In the Blood Bath each season, this team will gain or lose Stars depending on how low or high they finish in their division.",
+              "In the Blood Bath, this team will gain or lose Stars depending on how low or high they finish in their division.",
           },
           {
             id: "BLOOD_CHAOS",
@@ -434,8 +434,7 @@
             textColor: "#ff1f3c",
             background: "#52050f",
             title: "Blood Chaos",
-            description:
-              "In the Blood Bath each season, each player on this team will gain or lose a random amount of Stars.",
+            description: "In the Blood Bath, each player on this team will gain or lose a random amount of Stars.",
           },
           {
             id: "RETURNED",
@@ -974,7 +973,7 @@
           );
         throw new Error("Bad Hex");
       }
-      function M() {
+      function x() {
         var e = [0],
           a = new Date();
         if ((a.setMinutes(a.getMinutes() + 1, 0, 0), 0 == e.length)) return a;
@@ -988,12 +987,12 @@
         }
         return a;
       }
-      function H(e, a) {
+      function M(e, a) {
         if (void 0 === e) return !1;
         for (var t = 0; t < e.attr.length; t++) if (e.attr[t] === a) return !0;
         return !1;
       }
-      function x(e, a) {
+      function H(e, a) {
         var t = a.leagues[0];
         if (void 0 === t) return !1;
         var n = !1;
@@ -1317,7 +1316,7 @@
             );
           }),
         pe = function () {
-          return <div className="LoadingSpinner">{100 * Math.random() < 99 ? <V.a /> : <J.M />}</div>;
+          return <div className="LoadingSpinner">{100 * Math.random() < 99 ? <V.a /> : <J.P />}</div>;
         };
       t(99), t(62);
       function fe(e, a) {
@@ -1496,7 +1495,7 @@
                     <de.a.Label>How much do you want to wager?</de.a.Label>
                     <div className="Bet-Form-Inputs-Amount">
                       <div className="Bet-Coin-Wrapper">
-                        <J.db className="Bet-Coin-Icon" />
+                        <J.hb className="Bet-Coin-Icon" />
                         {n.coins}
                       </div>
                       <de.a.Control type="number" value={v} onChange={C} />
@@ -1546,9 +1545,9 @@
           { name: "Solar Eclipse", icon: <be.i />, background: "#002f3b", color: "#3c6cba" },
           { name: "Glitter", icon: <be.j />, background: "#ff94ff", color: "#fff98a" },
           { name: "Blooddrain", icon: <be.f />, background: "#52050f", color: "#ff1f3c" },
-          { name: "Peanuts", icon: <J.M />, background: "#c4aa70", color: "#423822" },
+          { name: "Peanuts", icon: <J.P />, background: "#c4aa70", color: "#423822" },
           { name: "Birds", icon: <J.g />, background: "#45235e", color: "#8e5fad" },
-          { name: "Feedback", icon: <J.I />, background: "#383838", color: "#ff007b" },
+          { name: "Feedback", icon: <J.L />, background: "#383838", color: "#ff007b" },
           { name: "Reverb", icon: <J.f />, background: "#443561", color: "#61b3ff" },
         ];
       function ge(e) {
@@ -1781,13 +1780,13 @@
           var D,
             P = d[l.id],
             F = (null === P || void 0 === P ? void 0 : P.length) || 0,
-            M = F > 0 ? P[0] : void 0;
-          void 0 !== M && (D = M.entityId === l.homeTeam ? l.homeTeamName : l.awayTeamName),
+            x = F > 0 ? P[0] : void 0;
+          void 0 !== x && (D = x.entityId === l.homeTeam ? l.homeTeamName : l.awayTeamName),
             (R = (
               <Y.a className="GameWidget-Button-Centered">
                 {F > 0 ? (
                   <div className="GameWidget-UpcomingBet">
-                    <J.db /> {F > 0 ? "".concat(M.amount, " on ").concat(D) : "No active bets"}
+                    <J.hb /> {F > 0 ? "".concat(x.amount, " on ").concat(D) : "No active bets"}
                   </div>
                 ) : s.coins ? (
                   <U.a className="GameWidget-Button" variant="success">
@@ -1810,17 +1809,17 @@
               </U.a>
             </a>
           );
-        var H = null,
-          x = null,
+        var M = null,
+          H = null,
           j = d[l.id],
           V = ((null === j || void 0 === j ? void 0 : j.length) || 0) > 0 ? j[0] : void 0;
         if (h.started) {
           var K = void 0 !== V ? fe(V.odds, V.amount) : 0;
-          (H =
+          (M =
             void 0 !== V && V.entityId === l.homeTeam ? (
               <div className="GameWidget-ScoreBet">
                 <div className="GameWidget-ScoreBet-Bet">
-                  <J.db />
+                  <J.hb />
                   <div className="GameWidget-ScoreBet-Amount">{V.amount}</div>
                 </div>
                 <div className="GameWidget-ScoreBet-Winnings">
@@ -1829,11 +1828,11 @@
                 </div>
               </div>
             ) : null),
-            (x =
+            (H =
               void 0 !== V && V.entityId === l.awayTeam ? (
                 <div className="GameWidget-ScoreBet">
                   <div className="GameWidget-ScoreBet-Bet">
-                    <J.db />
+                    <J.hb />
                     <div className="GameWidget-ScoreBet-Amount">{V.amount}</div>
                   </div>
                   <div className="GameWidget-ScoreBet-Winnings">
@@ -1903,7 +1902,7 @@
                 <div className="GameWidget-Outcome-Blurb">
                   You bet{" "}
                   <span className="GameWidget-Outcome-Callout">
-                    <J.db />
+                    <J.hb />
                      {V.amount}
                   </span>
                    on the  
@@ -1915,7 +1914,7 @@
                     <span>
                       won{" "}
                       <span className="GameWidget-Outcome-Callout">
-                        <J.db />
+                        <J.hb />
                          {fe(V.odds, V.amount)}
                       </span>
                       .
@@ -2161,7 +2160,7 @@
                                 {Math.round(100 * l.awayOdds)}%
                               </div>
                             )}
-                            {x}
+                            {H}
                           </span>
                         ) : null}
                       </div>
@@ -2199,7 +2198,7 @@
                                 {Math.round(100 * l.homeOdds)}%
                               </div>
                             )}
-                            {H}
+                            {M}
                           </span>
                         ) : null}
                       </div>
@@ -2438,19 +2437,19 @@
           null !== a.idol &&
             (L = (
               <u background={C} path={"/player/".concat(a.idol)} className="Navigation-IdolizedPlayer">
-                <J.Y />
+                <J.cb />
               </u>
             ));
           return (
             <o.a.Fragment>
               <div className="Navigation-User-Top">
                 <Qe className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={g} url="/upcoming">
-                  <J.db />
+                  <J.hb />
                    {a.coins}
                 </Qe>
                 {a.unlockedElection ? (
                   <Qe className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={A} url="/shop">
-                    <J.cb />
+                    <J.gb />
                      {a.votes}
                   </Qe>
                 ) : null}
@@ -2557,11 +2556,11 @@
                     }
                   >
                     <span className="Peanut-Line">
-                      <span className="Peanut-Icon">{m ? "" : <J.M />}</span> {a.peanuts}
+                      <span className="Peanut-Icon">{m ? "" : <J.P />}</span> {a.peanuts}
                     </span>
                   </Qe>
                   <div className={m ? "Peanut-Eating" : "Peanut"}>
-                    <J.M />
+                    <J.P />
                   </div>
                 </div>
               </div>
@@ -2575,19 +2574,19 @@
             </o.a.Fragment>
           );
         },
-        Me = function () {
+        xe = function () {
           return (
             <o.a.Fragment>
-              <xe isModal={!0} path="/signup">
+              <He isModal={!0} path="/signup">
                 Signup
-              </xe>
-              <xe isModal={!0} path="/login">
+              </He>
+              <He isModal={!0} path="/login">
                 Login
-              </xe>
+              </He>
             </o.a.Fragment>
           );
         };
-      function He(e) {
+      function Me(e) {
         var a = Object(r.useContext)(I.context),
           t = Object(r.useContext)(Q.context).user,
           n = Object(r.useState)(!1),
@@ -2632,8 +2631,8 @@
           t &&
             t.isSignedIn &&
             (T.push({ text: "Book", path: "/thebook" }),
-            H(a.sim, "UNLOCKED_HALL") && T.push({ text: "The Hall", path: "/thehall", glow: !0 }));
-        var w = t.isFetching ? null : t.isSignedIn ? <We /> : <Me />;
+            M(a.sim, "UNLOCKED_HALL") && T.push({ text: "The Hall", path: "/thehall", glow: !0 }));
+        var w = t.isFetching ? null : t.isSignedIn ? <We /> : <xe />;
         return (
           <nav className="Navigation" ref={y}>
             <div className="Navigation-Top Navigation-Toggle">
@@ -2643,7 +2642,7 @@
                 }}
                 className="Navigation-Button"
               >
-                <J.y />
+                <J.A />
               </button>
               {w}
             </div>
@@ -2651,9 +2650,9 @@
               <div className="Navigation-Main">
                 {N.map(function (e, a) {
                   return (
-                    <xe key={a} path={e.path} subpaths={e.subpaths}>
+                    <He key={a} path={e.path} subpaths={e.subpaths}>
                       {e.text} {e.locked ? <V.c /> : null}
-                    </xe>
+                    </He>
                   );
                 })}
                 <div className="Navigation-Dropdown" ref={b}>
@@ -2671,9 +2670,9 @@
                       {i &&
                         T.map(function (e, a) {
                           return (
-                            <xe key={a} path={e.path} glow={e.glow}>
+                            <He key={a} path={e.path} glow={e.glow}>
                               {e.text}
-                            </xe>
+                            </He>
                           );
                         })}
                     </div>
@@ -2685,7 +2684,7 @@
           </nav>
         );
       }
-      function xe(e) {
+      function He(e) {
         var a = e.path,
           t = e.isModal,
           n = e.subpaths,
@@ -2717,7 +2716,7 @@
         return (
           <nav className="Navigation">
             <div className="Navigation-User">
-              <Me />
+              <xe />
             </div>
           </nav>
         );
@@ -2746,13 +2745,13 @@
             This season is brought to you by{" "}
             <span className="Advertisement-SiteHeader-Callout">
               <a
-                href="https://www.multitude.productions/blaseball"
+                href="http://limitedrungames.com/blaseball"
                 onClick={function () {
-                  return Ye("Multitude (MainPage/Title");
+                  return Ye("Limited Run (MainPage/Title");
                 }}
                 target="_blank"
               >
-                the Multitude Podcast Collective
+                Limited Run Games
               </a>
             </span>
           </div>
@@ -2781,20 +2780,20 @@
           <o.a.Fragment>
             <Je />
             <div className="LeagueNavigation-Nav">
-              <xe path="/">Watch Live</xe>
-              <xe path="/upcoming">Place Bets</xe>
-              <xe path="/standings">Standings</xe>
-              {H(e.sim, "UNLOCKED_IDOLS") ? <xe path="/leaderboard">Idols</xe> : null}
+              <He path="/">Watch Live</He>
+              <He path="/upcoming">Place Bets</He>
+              <He path="/standings">Standings</He>
+              {M(e.sim, "UNLOCKED_IDOLS") ? <He path="/leaderboard">Idols</He> : null}
             </div>
           </o.a.Fragment>
         );
       }
       function Ke() {
-        return H(Object(r.useContext)(I.context).sim, "UNLOCKED_IDOLS") ? (
+        return M(Object(r.useContext)(I.context).sim, "UNLOCKED_IDOLS") ? (
           <o.a.Fragment>
             <div className="LeagueNavigation-Nav">
-              <xe path="/">Standings</xe>
-              <xe path="/leaderboard">Idols</xe>
+              <He path="/">Standings</He>
+              <He path="/leaderboard">Idols</He>
             </div>
           </o.a.Fragment>
         ) : null;
@@ -3035,11 +3034,11 @@
             }
           >
             <div className="Leaderboard-Player-Name-Container">
-              {e.showIcons && [6, 11, 18].includes(e.info.place) ? <J.I className="Leaderboard-Icon" /> : null}
+              {e.showIcons && [6, 11, 18].includes(e.info.place) ? <J.L className="Leaderboard-Icon" /> : null}
               <div className="Leaderboard-Player-Position">{e.info.place}</div>
               {e.info.deceased ? <div className="Leaderboard-Player-Deceased-Icon" /> : null}
               <div className="Leaderboard-Player-Name">
-                {s.idol === (null === (n = e.info.player) || void 0 === n ? void 0 : n.id) ? <J.Y /> : ""}{" "}
+                {s.idol === (null === (n = e.info.player) || void 0 === n ? void 0 : n.id) ? <J.cb /> : ""}{" "}
                 {null === (l = e.info.player) || void 0 === l ? void 0 : l.name}
               </div>
             </div>
@@ -3235,7 +3234,7 @@
               ) : (
                 <div>
                   <div className="DailySchedule-Countdown">
-                    {c() === ra.Upcoming ? <Ze dateString={M().toString()} /> : null}
+                    {c() === ra.Upcoming ? <Ze dateString={x().toString()} /> : null}
                   </div>
                   {h}
                 </div>
@@ -3404,7 +3403,7 @@
                   {null !== O ? (
                     <div>
                       <div className="DailySchedule-Countdown">
-                        {g() === ma.Upcoming ? <Ze dateString={M().toString()} /> : null}
+                        {g() === ma.Upcoming ? <Ze dateString={x().toString()} /> : null}
                       </div>
                       <ul>{O}</ul>
                     </div>
@@ -3778,7 +3777,7 @@
             <div className="HallOfFlame-Player-Name-Container">
               <div className="HallOfFlame-Player-Position">{e.info.place}</div>
               <div className="HallOfFlame-Player-Name">
-                {i.idol === (null === (t = e.info.player) || void 0 === t ? void 0 : t.id) ? <J.Y /> : ""}{" "}
+                {i.idol === (null === (t = e.info.player) || void 0 === t ? void 0 : t.id) ? <J.cb /> : ""}{" "}
                 {null === (n = e.info.player) || void 0 === n ? void 0 : n.name}
               </div>
             </div>
@@ -3926,30 +3925,30 @@
       function ka(e) {
         switch (e.id) {
           case "EXTRA_STRIKE":
-            return <J.H />;
+            return <J.K />;
           case "SHAME_PIT":
             return <J.b />;
           case "HOME_FIELD":
             return <V.b />;
           case "FIREPROOF":
-            return <J.s />;
+            return <J.u />;
           case "ALTERNATE":
-            return <J.D />;
+            return <J.F />;
           case "SHELLED":
           case "SUPERALLERGIC":
-            return <J.M />;
+            return <J.P />;
           case "SOUNDPROOF":
-            return <J.C />;
+            return <J.E />;
           case "REVERBERATING":
             return <J.f />;
           case "BLOOD_THIEF":
-            return <J.S />;
+            return <J.V />;
           case "BLOOD_DONOR":
-            return <J.J />;
+            return <J.M />;
           case "BLOOD_WINNER":
-            return <J.O />;
+            return <J.R />;
           case "BLOOD_PITY":
-            return <J.ab />;
+            return <J.eb />;
           case "BLOOD_FAITH":
           case "BLOOD_LAW":
           case "BLOOD_CHAOS":
@@ -3959,39 +3958,39 @@
           case "DEBT":
             return <J.d />;
           case "MARKED":
-            return <J.gb />;
+            return <J.kb />;
           case "PARTY_TIME":
-            return <J.L />;
+            return <J.O />;
           case "LIFE_OF_PARTY":
-            return <J.x />;
-          case "INWARD":
-            return <J.E />;
-          case "FIRST_BORN":
-            return <J.p />;
-          case "HONEY_ROASTED":
-            return <J.m />;
-          case "EXTRA_BASE":
-            return <J.B />;
-          case "BLESS_OFF":
             return <J.z />;
-          case "NON_IDOLIZED":
+          case "INWARD":
             return <J.G />;
+          case "FIRST_BORN":
+            return <J.r />;
+          case "HONEY_ROASTED":
+            return <J.o />;
+          case "EXTRA_BASE":
+            return <J.D />;
+          case "BLESS_OFF":
+            return <J.B />;
+          case "NON_IDOLIZED":
+            return <J.J />;
           case "GRAVITY":
             return <J.i />;
           case "SPICY":
-            return <J.k />;
+            return <J.m />;
           case "ELECTRIC":
-            return <J.q />;
+            return <J.s />;
           case "DOUBLE_PAYOUTS":
-            return <J.Z />;
+            return <J.db />;
           case "FIRE_PROTECTOR":
-            return <J.t />;
+            return <J.v />;
           case "ON_FIRE":
-            return <J.U />;
+            return <J.Y />;
           case "HEATING_UP":
-            return <J.A />;
+            return <J.C />;
           case "FLICKERING":
-            return <J.j />;
+            return <J.l />;
         }
         return null;
       }
@@ -4230,7 +4229,7 @@
                         : "")
                     }
                   >
-                    {f.idol === e.id ? <J.Y /> : ""} {null === e || void 0 === e ? void 0 : e.name}
+                    {f.idol === e.id ? <J.cb /> : ""} {null === e || void 0 === e ? void 0 : e.name}
                   </div>
                   <div className="Team-Player-Vibe">
                     {Qa(e, void 0 !== (null === (a = t.sim) || void 0 === a ? void 0 : a.day) ? t.sim.day : -1)}
@@ -4266,7 +4265,7 @@
                         : "")
                     }
                   >
-                    {f.idol === e.id ? <J.Y /> : ""} {null === e || void 0 === e ? void 0 : e.name}
+                    {f.idol === e.id ? <J.cb /> : ""} {null === e || void 0 === e ? void 0 : e.name}
                   </div>
                   <div className="Team-Player-Vibe">
                     {Qa(e, void 0 !== (null === (a = t.sim) || void 0 === a ? void 0 : a.day) ? t.sim.day : -1)}
@@ -4545,7 +4544,7 @@
                         amount: 100,
                         toast: "Vote purchased. You now have ".concat(e.votes + 1),
                         available: !0,
-                        icon: <J.cb />,
+                        icon: <J.gb />,
                         buyUrl: "/api/buyVote",
                         userUpdate: function () {
                           a(Object(S.a)(Object(S.a)({}, e), {}, { votes: e.votes + 1, coins: e.coins - 100 }));
@@ -4559,7 +4558,7 @@
                         amount: 100,
                         available: !0,
                         toast: "Welcome, Voter! You have ".concat(e.votes, " Vote already from signing up."),
-                        icon: <J.cb />,
+                        icon: <J.gb />,
                         buyUrl: "/api/buyUnlockElection",
                         userUpdate: function () {
                           a(Object(S.a)(Object(S.a)({}, e), {}, { unlockedElection: !0, coins: e.coins - 100 }));
@@ -4569,27 +4568,27 @@
                     y.delta &&
                     (c = {
                       id: 5,
-                      name: "The Multitude Podcast Collective",
+                      name: "Limited Run Games",
                       description: "",
                       isSponsor: !0,
                       sponsorText: (
                         <o.a.Fragment>
-                          Multitude has the perfect podcast for each team. Click{" "}
+                          Buy your favorite games in physical format. Shantae available now! Doom 64 coming Sep 25 at
+                          10am ET...{" "}
                           <a
-                            href="https://multitude.productions/blaseball"
+                            href="http://limitedrungames.com/blaseball"
                             onClick={function () {
-                              return Ye("Multitude (ShopItem)");
+                              return Ye("Limited Run (ShopItem)");
                             }}
                             target="_blank"
                             className="Shop-Item-Link"
                           >
-                            <strong>HERE</strong>
-                          </a>{" "}
-                          to find yours!
+                            <strong>Visit the Site</strong>
+                          </a>
                         </o.a.Fragment>
                       ),
                       amount: 0,
-                      toast: "Have a great time listening.",
+                      toast: "",
                       available: !0,
                       handleComplete: function () {},
                     });
@@ -4665,7 +4664,7 @@
                           maxed: !0,
                           amount: 0,
                         };
-                  if (H(t, "UNLOCKED_PEANUTS") && r) {
+                  if (M(t, "UNLOCKED_PEANUTS") && r) {
                     if (
                       ((f = {
                         id: 6,
@@ -4764,7 +4763,7 @@
                     }),
                     l)
                   ) {
-                    var R = x(e.favoriteTeam, n) ? 2e3 : 0;
+                    var R = H(e.favoriteTeam, n) ? 2e3 : 0;
                     b = {
                       id: 3,
                       name: "Fair Weather Flute",
@@ -4799,14 +4798,14 @@
                         toast: "Coins per Idol strikeout is now ".concat(P.amount),
                         available: W,
                         buyUrl: "/api/buyRelic",
-                        icon: <J.v />,
+                        icon: <J.x />,
                         buyParams: { relicId: "Idol_Strikeouts" },
                         userUpdate: function () {
                           a(Object(S.a)(Object(S.a)({}, e), {}, { coins: e.coins - P.price, relics: G }));
                         },
                       });
                   } else if (void 0 !== D) {
-                    var M = Q.amount,
+                    var x = Q.amount,
                       j = D.amount,
                       U = Object.create(e.relics);
                     (U.Idol_Strikeouts = U.Idol_Strikeouts + 1),
@@ -4815,12 +4814,12 @@
                         name: "Strikeout Pendant",
                         description: "Adorn yourself. When your Idol strikes a Batter out, you'll earn "
                           .concat(j, " coins. You currently earn ")
-                          .concat(M, " coins per Strikeout."),
+                          .concat(x, " coins per Strikeout."),
                         amount: D.price,
                         toast: "Coins per Idol strikeout is now ".concat(D.amount),
                         available: !0,
                         buyUrl: "/api/buyRelic",
-                        icon: <J.v />,
+                        icon: <J.x />,
                         buyParams: { relicId: "Idol_Strikeouts" },
                         userUpdate: function () {
                           a(Object(S.a)(Object(S.a)({}, e), {}, { coins: e.coins - D.price, relics: U }));
@@ -4831,7 +4830,7 @@
                     E = {
                       id: 14,
                       name: "Strikeout Pendant",
-                      icon: <J.v />,
+                      icon: <J.x />,
                       description: "Adorn yourself. When your Idol strikes out a batter, you earn ".concat(
                         Y,
                         " coins. You are maxed out."
@@ -4860,7 +4859,7 @@
                         toast: "Coins per Idol shutout is now ".concat(q.amount),
                         available: X,
                         buyUrl: "/api/buyRelic",
-                        icon: <J.v />,
+                        icon: <J.x />,
                         buyParams: { relicId: "Idol_Shutouts" },
                         userUpdate: function () {
                           a(Object(S.a)(Object(S.a)({}, e), {}, { coins: e.coins - q.price, relics: z }));
@@ -4881,7 +4880,7 @@
                         toast: "Coins per Idol shutout is now ".concat(K.amount),
                         available: !0,
                         buyUrl: "/api/buyRelic",
-                        icon: <J.v />,
+                        icon: <J.x />,
                         buyParams: { relicId: "Idol_Shutouts" },
                         userUpdate: function () {
                           a(Object(S.a)(Object(S.a)({}, e), {}, { coins: e.coins - K.price, relics: ee }));
@@ -4897,7 +4896,7 @@
                         " coins. You are maxed out."
                       ),
                       maxed: !0,
-                      icon: <J.v />,
+                      icon: <J.x />,
                       amount: 0,
                     };
                   }
@@ -4921,7 +4920,7 @@
                         toast: "Coins per Idol homer is now ".concat(re.amount),
                         available: ie,
                         buyUrl: "/api/buyRelic",
-                        icon: <J.v />,
+                        icon: <J.x />,
                         buyParams: { relicId: "Idol_Homers" },
                         userUpdate: function () {
                           a(Object(S.a)(Object(S.a)({}, e), {}, { coins: e.coins - re.price, relics: oe }));
@@ -4942,7 +4941,7 @@
                         toast: "Coins per Idol home run is now ".concat(ne.amount),
                         available: !0,
                         buyUrl: "/api/buyRelic",
-                        icon: <J.v />,
+                        icon: <J.x />,
                         buyParams: { relicId: "Idol_Homers" },
                         userUpdate: function () {
                           a(Object(S.a)(Object(S.a)({}, e), {}, { coins: e.coins - ne.price, relics: me }));
@@ -4953,7 +4952,7 @@
                     h = {
                       id: 13,
                       name: "Home Run Pendant",
-                      icon: <J.v />,
+                      icon: <J.x />,
                       description: "Adorn yourself. When your Idol hits a Home Run, you earn ".concat(
                         ue,
                         " coins. You are maxed out."
@@ -4979,7 +4978,7 @@
                         toast: "Coins per Idol hit is now ".concat(pe.amount),
                         available: be,
                         buyUrl: "/api/buyRelic",
-                        icon: <J.v />,
+                        icon: <J.x />,
                         buyParams: { relicId: "Idol_Hits" },
                         userUpdate: function () {
                           a(Object(S.a)(Object(S.a)({}, e), {}, { coins: e.coins - pe.price, relics: fe }));
@@ -5000,7 +4999,7 @@
                         toast: "Coins per Idol hit is now ".concat(Ee.amount),
                         available: !0,
                         buyUrl: "/api/buyRelic",
-                        icon: <J.v />,
+                        icon: <J.x />,
                         buyParams: { relicId: "Idol_Hits" },
                         userUpdate: function () {
                           a(Object(S.a)(Object(S.a)({}, e), {}, { coins: e.coins - Ee.price, relics: Ae }));
@@ -5016,11 +5015,11 @@
                         " coins. You are maxed out."
                       ),
                       maxed: !0,
-                      icon: <J.v />,
+                      icon: <J.x />,
                       amount: 0,
                     };
                   }
-                  return H(t, "UNLOCKED_IDOLS") ? [c, d, E, i, h, p, m, u, s, f, v, b] : [c, i, m, u, s, f, v, b];
+                  return M(t, "UNLOCKED_IDOLS") ? [c, d, E, i, h, p, m, u, s, f, v, b] : [c, i, m, u, s, f, v, b];
                 })(m, u, p.sim, v, f, d)
               : (function (e, a) {
                   var t = [];
@@ -5066,7 +5065,7 @@
                         </div>
                         <div className="Shop-Item-Body">{e.description}</div>
                         <div className="Shop-Item-Checkout">
-                          <J.db className="Shop-Item-Coins" />
+                          <J.hb className="Shop-Item-Coins" />
                           <div className="Shop-Item-Amount">
                             {(function (e) {
                               return e.maxed ? "N/A" : 0 === e.amount ? "Free" : e.amount.toString();
@@ -5117,7 +5116,7 @@
         );
       }
       t(117);
-      var Ma = function (e) {
+      var xa = function (e) {
           var a = Object(r.useContext)(Q.context),
             t = a.user,
             n = a.setUser,
@@ -5168,7 +5167,7 @@
                       return t < n ? -1 : t > n ? 1 : 0;
                     })
                     .map(function (e, a) {
-                      if (!1 === x(e.id, l)) return null;
+                      if (!1 === H(e.id, l)) return null;
                       var t = m === e.id;
                       return (
                         <div
@@ -5202,7 +5201,7 @@
             </Z>
           );
         },
-        Ha = function (e) {
+        Ma = function (e) {
           var a = Object(r.useContext)(Q.context).user,
             t = Object(r.useState)(!1),
             n = Object(s.a)(t, 2),
@@ -5213,7 +5212,7 @@
               a.isSignedIn && !a.isFetching && null === a.favoriteTeam ? i(!0) : i(!1);
             }, []),
             a && a.isSignedIn && l ? (
-              <Ma
+              <xa
                 {...Object.assign({}, e, {
                   dismiss: Object(E.a)(
                     h.a.mark(function e() {
@@ -5234,7 +5233,7 @@
             ) : null
           );
         },
-        xa =
+        Ha =
           (t(118),
           function (e) {
             var a = Object(r.useContext)(Q.context).initUser,
@@ -5856,7 +5855,7 @@
           var a = e.isActive;
           return <button className="Decrees-Option-Button">Select{a ? "ed" : ""}</button>;
         };
-      function Mt(e) {
+      function xt(e) {
         return "forbidden_book" === e ? (
           <ht className="Decrees-Option-Icon" />
         ) : "eliminate_team" === e ? (
@@ -5864,64 +5863,70 @@
         ) : "redistribute_wealth" === e ? (
           <nt className="Decrees-Option-Icon" />
         ) : "four_for_four" === e || "fourth_strike" === e ? (
-          <J.H className="Decrees-Option-Icon" />
+          <J.K className="Decrees-Option-Icon" />
         ) : "peanuts" === e ? (
-          <J.M className="Decrees-Option-Icon" />
+          <J.P className="Decrees-Option-Icon" />
         ) : "popular_evolution" === e ? (
           <bt className="Decrees-Option-Icon" />
         ) : "enhanced_shame" === e ? (
-          <J.Q className="Decrees-Option-Icon" />
+          <J.T className="Decrees-Option-Icon" />
         ) : "late_stage" === e ? (
-          <J.l className="Decrees-Option-Icon" />
-        ) : "blaserunning" === e ? (
-          <J.r className="Decrees-Option-Icon" />
-        ) : "eat_the_rich" === e ? (
           <J.n className="Decrees-Option-Icon" />
+        ) : "blaserunning" === e ? (
+          <J.t className="Decrees-Option-Icon" />
+        ) : "eat_the_rich" === e ? (
+          <J.p className="Decrees-Option-Icon" />
         ) : "eat_the_crust" === e ? (
-          <J.N className="Decrees-Option-Icon" />
+          <J.Q className="Decrees-Option-Icon" />
         ) : "interviews" === e ? (
-          <J.I className="Decrees-Option-Icon" />
+          <J.L className="Decrees-Option-Icon" />
         ) : "random_realignment" === e ? (
           <J.a className="Decrees-Option-Icon" />
         ) : "alternate_reality" === e ? (
           <Sa.e className="Decrees-Option-Icon" />
         ) : "targeted_shame" === e ? (
-          <J.V className="Decrees-Option-Icon" />
+          <J.Z className="Decrees-Option-Icon" />
         ) : "roster_shuffle" === e ? (
           <Ia.a className="Decrees-Option-Icon" />
         ) : "home_field_advantage" === e ? (
           <V.b className="Decrees-Option-Icon" />
         ) : "team_punish" === e ? (
-          <J.fb className="Decrees-Option-Icon" />
+          <J.jb className="Decrees-Option-Icon" />
         ) : "do_nothing" === e ? (
-          <J.P className="Decrees-Option-Icon" />
+          <J.S className="Decrees-Option-Icon" />
         ) : "confuse_good" === e ? (
-          <J.X className="Decrees-Option-Icon" />
-        ) : "confuse_evil" === e ? (
-          <J.W className="Decrees-Option-Icon" />
-        ) : "parallel_world" === e ? (
-          <J.R className="Decrees-Option-Icon" />
-        ) : "diagonal_world" === e ? (
           <J.bb className="Decrees-Option-Icon" />
+        ) : "confuse_evil" === e ? (
+          <J.ab className="Decrees-Option-Icon" />
+        ) : "parallel_world" === e ? (
+          <J.U className="Decrees-Option-Icon" />
+        ) : "diagonal_world" === e ? (
+          <J.fb className="Decrees-Option-Icon" />
         ) : "high_filter" === e ? (
-          <J.F className="Decrees-Option-Icon" />
+          <J.I className="Decrees-Option-Icon" />
         ) : "new_kids" === e ? (
-          <J.u className="Decrees-Option-Icon" />
+          <J.w className="Decrees-Option-Icon" />
         ) : "hot_sauce" === e ? (
           <Tt className="Decrees-Option-Icon" />
         ) : "enhanced_party_time" === e ? (
           <Bt className="Decrees-Option-Icon" />
         ) : "fifth_base" === e ? (
-          <J.B className="Decrees-Option-Icon" />
+          <J.D className="Decrees-Option-Icon" />
         ) : "walk_in_the_park" === e ? (
           <Dt className="Decrees-Option-Icon" />
         ) : "bless_off" === e ? (
-          <J.z className="Decrees-Option-Icon" />
+          <J.B className="Decrees-Option-Icon" />
+        ) : "wild_cards" === e ? (
+          <J.k className="Decrees-Option-Icon" />
+        ) : "relief" === e ? (
+          <J.X className="Decrees-Option-Icon" />
+        ) : "double_jumps" === e ? (
+          <J.H className="Decrees-Option-Icon" />
         ) : (
           <div />
         );
       }
-      var Ht = function (e) {
+      var Mt = function (e) {
           var a = e.title,
             t = e.description,
             n = e.id,
@@ -5934,14 +5939,14 @@
                 return l(n);
               }}
             >
-              {Mt(n)}
+              {xt(n)}
               <div className="Decrees-Option-Header">{a}</div>
               {t && <p className="Decrees-Option-Description">{t}</p>}
               <Wt isActive={r} />
             </div>
           );
         },
-        xt = function () {
+        Ht = function () {
           var e = Object(r.useContext)(Ja.context),
             a = Object(r.useContext)(Q.context).user,
             t = Object(r.useState)(),
@@ -5981,7 +5986,7 @@
                 <div className="Decrees-Container">
                   {e.decrees.map(function (e, a) {
                     return (
-                      <Ht
+                      <Mt
                         {...Object.assign({ key: a }, e, {
                           isActive: l === e.id,
                           onSelect: function (e) {
@@ -6088,7 +6093,7 @@
                         </div>
                       </div>
                       <div className="Recap-Decree-Content">
-                        <div className="Recap-Decree-Icon">{Mt(e.decreeId)}</div>
+                        <div className="Recap-Decree-Icon">{xt(e.decreeId)}</div>
                         <div className="Recap-Decree-Description">
                           {e.description.split("\n").map(function (e, a) {
                             return (
@@ -6213,7 +6218,7 @@
           <pe />
         ) : (
           <o.a.Fragment>
-            <xt />
+            <Ht />
             <_a />
           </o.a.Fragment>
         );
@@ -6309,7 +6314,7 @@
                   <de.a.Label>How many votes do you want to cast?</de.a.Label>
                   <div className="Vote-Form-Inputs-Amount">
                     <div className="Vote-Ticket-Wrapper">
-                      <J.cb className="Vote-Ticket-Icon" />
+                      <J.gb className="Vote-Ticket-Icon" />
                       {n.votes}
                     </div>
                     <de.a.Control type="number" value={v} onChange={w} />
@@ -7846,9 +7851,9 @@
               {(function (e) {
                 switch (e) {
                   case "One":
-                    return <J.M />;
+                    return <J.P />;
                   case "Two":
-                    return <J.w />;
+                    return <J.y />;
                 }
                 return;
               })(t)}
@@ -7917,15 +7922,13 @@
         t = (
           <o.a.Fragment>
             <div className="Bulletin-Item-Header">
-              <div className="Bulletin-Item-Header-Icon" style={{ background: "#deae00" }}>
-                <J.Y />
+              <div className="Bulletin-Item-Header-Icon" style={{ background: "#5988ff" }}>
+                <J.j />
               </div>
-              <div className="Bulletin-Item-Header-Title">IDOLS</div>
+              <div className="Bulletin-Item-Header-Title">HALL OF FLAME</div>
             </div>
             <div className="Bulletin-Item-Contents">
-              <div className="Bulletin-Item-Contents-Text">
-                No Half Measures. CONSOLATION PRIZE: BATH TIME POSTPONED
-              </div>
+              <div className="Bulletin-Item-Contents-Text">Visit your loved ones. Pay tribute.</div>
             </div>
           </o.a.Fragment>
         );
@@ -7983,25 +7986,25 @@
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#32c775" }}>
-                  <J.eb />
+                  <J.ib />
                 </div>
                 <div className="Bulletin-Item-Header-Title">Season {u.sim.season} Recap</div>
               </div>
               <div className="Bulletin-Item-Contents">
                 <div className="Bulletin-Item-Contents-Text">
                   <En />
-                  Time for Crab! The Baltimore Crabs dominated the league with a record of 80-19 and clawed their way to
-                  their first Internet Series title.
+                  The formerly Mild-mannered Wings from Mexico City tapped into their Wild side and shocked the world,
+                  claiming their first Internet Series title!
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
                   <En />
-                  The Seattle Garages captured their first Mild League Championship, sweeping the first two rounds of
-                  the Postseason before finally being swept themselves in the Internet Series.
+                  The ILB was rocked by a massive debt crisis that saw countless fan favorites cashed in as payment for
+                  necromancy!
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
                   <En />
-                  Fans committed Idolatry in Season 6, idolizing their favorite players and receiving Coinage in
-                  exchange for their worship.
+                  The Unlimited Tacos offered up their entire pitching rotation in Snackrifice! In response, the Front
+                  Office simply noted “Play must continue.”
                 </div>
               </div>
             </o.a.Fragment>
@@ -8010,25 +8013,25 @@
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#c23284" }}>
-                  <J.T />
+                  <J.W />
                 </div>
                 <div className="Bulletin-Item-Header-Title">Current Events</div>
               </div>
               <div className="Bulletin-Item-Contents Bulletin-Item-Contents-Text">
                 <div className="Bulletin-Item-Contents-Text">
                   <En />
-                  The dead don’t rest! Jaylen Hotdogfingers has Returned to the ILB! But the Ledger must be Balanced.
-                  Mike Townsend was Credited to the Shadows!
+                  Another landmark on the road to making Blaseball sustainable -- The Front Office reached their second
+                  Patreon Goal!
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
                   <En />
-                  In a landslide Election, fans voted for Enhanced Party Time! Biscayne Bay has alighted. Invitations
-                  are in the mail! The Party will rage.
+                  The Microphone appears to have offered Jaylen Hotdogfingers a deal! What could our reality-shaping
+                  Microphone Mason have in mind!
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
                   <En />
-                  The Shelled One called STRIKE THREE! Stars Jessica Telephone and Nagomi Mcdaniel have been SHELLED. Is
-                  a Fourth Strike looming?
+                  The Hall Monitor has offered fans the chance to visit the Hall of Flame. The price of admission?
+                  Peanuts, which it seems to think are eggs!
                 </div>
               </div>
             </o.a.Fragment>
@@ -8037,7 +8040,7 @@
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#1b95e0" }}>
-                  <J.K />
+                  <J.N />
                 </div>
                 <div className="Bulletin-Item-Header-Title">Art Gallery</div>
               </div>
@@ -8054,11 +8057,11 @@
               </div>
             </o.a.Fragment>
           )),
-          (m = H(u.sim, "UNLOCKED_HALL") ? (
+          (m = M(u.sim, "UNLOCKED_HALL") ? (
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#9c2c46" }}>
-                  <J.o />
+                  <J.q />
                 </div>
                 <div className="Bulletin-Item-Header-Title">Echo</div>
               </div>
@@ -8072,7 +8075,7 @@
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#9c2c46" }}>
-                  <J.o />
+                  <J.q />
                 </div>
                 <div className="Bulletin-Item-Header-Title">Echo</div>
               </div>
@@ -8590,7 +8593,7 @@
             };
           })(),
           R =
-            H(null === i || void 0 === i ? void 0 : i.sim, "UNLOCKED_HALL") &&
+            M(null === i || void 0 === i ? void 0 : i.sim, "UNLOCKED_HALL") &&
             void 0 !== (null === p || void 0 === p ? void 0 : p.player) &&
             p.player.deceased ? (
               <div className="Player-Status">
@@ -8604,7 +8607,7 @@
                   <Y.a className="Player-Button">
                     <de.a className="Player-Button-Form" onSubmit={L}>
                       <U.a className="Player-Button-Tribute" type="submit" variant="warning">
-                        <J.M /> Pay Tribute
+                        <J.P /> Pay Tribute
                       </U.a>
                     </de.a>
                   </Y.a>
@@ -8737,8 +8740,8 @@
               });
             return n && n.attr === a && (t = !0), r && r.attr === a && (t = !0), t;
           })(null === p || void 0 === p ? void 0 : p.player, "NON_IDOLIZED"),
-          M = y.idol,
-          x =
+          x = y.idol,
+          H =
             void 0 === (null === p || void 0 === p ? void 0 : p.player) ? (
               <pe />
             ) : (
@@ -8758,9 +8761,9 @@
                         </div>
                         <div className="Player-Team-Name">{void 0 !== p.team ? p.team.fullName : "Null Team"}</div>
                       </div>
-                      {H(i.sim, "UNLOCKED_IDOLS") ? (
+                      {M(i.sim, "UNLOCKED_IDOLS") ? (
                         <Y.a className="Player-Button">
-                          {(G || W) && M !== p.player.id ? (
+                          {(G || W) && x !== p.player.id ? (
                             <div className="Idol-Disabled-Tooltip">
                               <Te.a
                                 placement="right"
@@ -8779,33 +8782,33 @@
                                     className="Player-Button-Idol"
                                     variant="dark"
                                   >
-                                    {"" === M || null === M ? (
+                                    {"" === x || null === x ? (
                                       <o.a.Fragment>
-                                        <J.Y /> Choose Idol
+                                        <J.cb /> Choose Idol
                                       </o.a.Fragment>
                                     ) : (
                                       <o.a.Fragment>
-                                        <J.db /> 200 New Idol
+                                        <J.hb /> 200 New Idol
                                       </o.a.Fragment>
                                     )}{" "}
                                   </U.a>
                                 </span>
                               </Te.a>
                             </div>
-                          ) : M === p.player.id ? (
+                          ) : x === p.player.id ? (
                             <div className="Player-Button-Idol-Current">
-                              <J.Y /> Your Idol
+                              <J.cb /> Your Idol
                             </div>
                           ) : (
                             <de.a className="Player-Button-Form" onSubmit={P}>
                               <U.a className="Player-Button-Idol" type="submit" variant="success">
-                                {"" === M || null === M ? (
+                                {"" === x || null === x ? (
                                   <o.a.Fragment>
-                                    <J.Y /> Choose Idol
+                                    <J.cb /> Choose Idol
                                   </o.a.Fragment>
                                 ) : (
                                   <o.a.Fragment>
-                                    <J.db /> 200 New Idol
+                                    <J.hb /> 200 New Idol
                                   </o.a.Fragment>
                                 )}{" "}
                               </U.a>
@@ -9122,7 +9125,7 @@
                 </div>
               </o.a.Fragment>
             );
-        return <Z {...Object.assign({}, e, { className: "Player" })}>{x}</Z>;
+        return <Z {...Object.assign({}, e, { className: "Player" })}>{H}</Z>;
       };
       t(132), t(133);
       function yn(e) {
@@ -10311,10 +10314,10 @@
                   <zt />
                 </c.a>
                 <c.a path="/login">
-                  <xa isLogin={!0} />
+                  <Ha isLogin={!0} />
                 </c.a>
                 <c.a path="/signup/:code?">
-                  <xa />
+                  <Ha />
                 </c.a>
                 <c.a path="/faq">
                   <Nn />
@@ -10325,14 +10328,14 @@
               </c.c>
               {a && (
                 <o.a.Fragment>
-                  <c.a path="/signup" children={<xa isModal={!0} />} />
-                  <c.a path="/login" children={<xa isModal={!0} isLogin={!0} />} />
+                  <c.a path="/signup" children={<Ha isModal={!0} />} />
+                  <c.a path="/login" children={<Ha isModal={!0} isLogin={!0} />} />
                   <c.a path="/team/:nickname" children={<Da isModal={!0} />} />
                   <c.a path="/bet/:gameId" children={<ve isModal={!0} />} />
                   <c.a path="/vote/:voteType/:entityId" children={<Kt isModal={!0} />} />
                 </o.a.Fragment>
               )}
-              <Ha isModal={!0} dismissable={!1} />
+              <Ma isModal={!0} dismissable={!1} />
             </div>
             <footer className="Main-Footer">
               <div className="Main-Footer-Links">
@@ -10404,7 +10407,7 @@
             <G>
               <$e>
                 <ya>
-                  <He state={e} />
+                  <Me state={e} />
                   <div className="Main-Body">
                     <c.c location={t || a}>
                       <c.a path="/tos">
@@ -10432,10 +10435,10 @@
                         <Ut />
                       </c.a>
                       <c.a path="/login">
-                        <xa isLogin={!0} />
+                        <Ha isLogin={!0} />
                       </c.a>
                       <c.a path="/signup">
-                        <xa />
+                        <Ha />
                       </c.a>
                       <c.a path="/team/:nickname">
                         <Da />
@@ -10443,7 +10446,7 @@
                       <c.a path="/player/:id">
                         <bn />
                       </c.a>
-                      {H(e.sim, "UNLOCKED_HALL") ? (
+                      {M(e.sim, "UNLOCKED_HALL") ? (
                         <c.a path="/thehall">
                           <ga />
                         </c.a>
@@ -10455,15 +10458,15 @@
                     </c.c>
                     {t && (
                       <o.a.Fragment>
-                        <c.a path="/signup" children={<xa isModal={!0} />} />
-                        <c.a path="/login" children={<xa isModal={!0} isLogin={!0} />} />
+                        <c.a path="/signup" children={<Ha isModal={!0} />} />
+                        <c.a path="/login" children={<Ha isModal={!0} isLogin={!0} />} />
                         <c.a path="/team/:nickname" children={<Da isModal={!0} />} />
                         <c.a path="/player/:id" children={<bn isModal={!0} />} />
                         <c.a path="/bet/:gameId" children={<ve isModal={!0} />} />
                         <c.a path="/vote/:voteType/:entityId" children={<Kt isModal={!0} />} />
                       </o.a.Fragment>
                     )}
-                    <Ha isModal={!0} dismissable={!1} />
+                    <Ma isModal={!0} dismissable={!1} />
                   </div>
                   <footer className="Main-Footer">
                     <div className="Main-Footer-Links">
