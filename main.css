@@ -12044,14 +12044,15 @@ button:focus-visible {
 }
 .Shop-Item-ButtonContainer {
   height: 30px;
-}
-.Shop-Item-Button,
-.Shop-Item-ButtonContainer {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.Shop-Item-Button {
+.Shop-Item-Button,
+.Shop-Item-Modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
   height: 100%;
@@ -12061,6 +12062,11 @@ button:focus-visible {
   border-radius: 20px;
   white-space: nowrap;
   line-height: 15px;
+}
+.Shop-Item-Modal {
+  border: 1px solid #fff;
+  cursor: pointer;
+  background-color: #28a745;
 }
 .Shop-Item-Amount {
   text-align: left;
@@ -12090,6 +12096,182 @@ button:focus-visible {
 @media (max-width: 1080px) {
   .Shop {
     width: 100%;
+  }
+}
+#root .BatchBuy {
+  display: flex;
+  color: #fff;
+  width: 460px;
+  max-width: 95vw;
+  max-height: 80vh;
+  justify-content: flex-start;
+  padding: 40px 20px 20px;
+}
+#root .BatchBuy-Header {
+  font-size: 24px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+  padding-bottom: 12px;
+  text-align: center;
+}
+#root .BatchBuy-Type {
+  padding: 10px 0;
+}
+#root .BatchBuy-Type-Name {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#root .BatchBuy-Form {
+  padding: 10px 0;
+}
+#root .BatchBuy-Form-Teams {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+#root .BatchBuy-Form-Teams-Label {
+  background-color: #000;
+  border: 3px solid hsla(0, 0%, 39.6%, 0.65);
+  height: 50px;
+  border-radius: 25px;
+  margin-left: -25px;
+  margin-right: -25px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #fff;
+  white-space: nowrap;
+  padding: 5px;
+}
+#root .BatchBuy-Form-Inputs {
+  display: flex;
+}
+#root .BatchBuy-Form-Inputs-Amount {
+  background: rgba(30, 30, 30, 0.64);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+#root .BatchBuy-Form-Inputs-Amount-Icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  font-size: 20px;
+  display: flex;
+  padding: 12px;
+}
+#root .BatchBuy-Form-Inputs-Amount-MaxBatchBuy {
+  position: absolute;
+  bottom: 14px;
+  right: 10px;
+  padding: 3px 10px;
+  font-size: 12px;
+  text-align: right;
+  font-weight: 700;
+  color: #111;
+  background-color: hsla(0, 0%, 39.6%, 0.65);
+  border-radius: 20px;
+}
+#root .BatchBuy-Form-Inputs-Amount-MaxBatchBuy:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+#root .BatchBuy-Form-Inputs-Amount input[type="range"] {
+  height: 50px;
+  width: calc(100% - 105px);
+  display: flex;
+  align-items: center;
+  margin: 0;
+  position: relative;
+}
+#root .BatchBuy-Form-Inputs-Amount input[type="number"] {
+  font-weight: 700;
+  outline: none;
+  height: 100%;
+  font-size: 40px;
+  display: flex;
+  text-align: center;
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+#root .BatchBuy-Form-Inputs-Amount input[type="number"]:active,
+#root .BatchBuy-Form-Inputs-Amount input[type="number"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+#root .BatchBuy-Input {
+  color: #fff;
+}
+#root .BatchBuy-Ticket-Wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px 12px;
+  opacity: 0.6;
+}
+#root .BatchBuy-Ticket-Icon {
+  padding-right: 5px;
+  width: 20px;
+}
+#root .BatchBuy-Submit {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 20px;
+}
+#root .BatchBuy-Submit-Wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+#root .BatchBuy-Outcome-Wrapper {
+  padding: 6px 0;
+  text-align: center;
+}
+#root .BatchBuy-Outcome-Team {
+  font-size: 20px;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+#root .BatchBuy-Outcome-Winnings {
+  font-size: 24px;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+#root .BatchBuy label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+#root .BatchBuy label:not(:first-child) {
+  margin-top: 12px;
+}
+#root .BatchBuy select {
+  background: rgba(30, 30, 30, 0.64);
+  color: #fff;
+  border: none;
+  margin-top: 12px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 8px;
+}
+@media (max-width: 1080px) {
+  #root .BatchBuy-Outcome-Wrapper {
+    font-size: 14px;
+  }
+  #root .BatchBuy-Outcome-Winnings {
+    font-size: 18px;
   }
 }
 .Welcome {
@@ -12738,6 +12920,170 @@ button:focus-visible {
   }
   .Recap-Header {
     font-size: 24px;
+  }
+}
+#root .Tribute {
+  display: flex;
+  color: #fff;
+  width: 460px;
+  max-width: 95vw;
+  max-height: 80vh;
+  justify-content: flex-start;
+  padding: 40px 20px 20px;
+}
+#root .Tribute-Header {
+  font-size: 24px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+  padding-bottom: 12px;
+  text-align: center;
+}
+#root .Tribute-Type {
+  padding: 10px 0;
+}
+#root .Tribute-Type-Name {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#root .Tribute-Form {
+  padding: 10px 0;
+}
+#root .Tribute-Form-Teams {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+#root .Tribute-Form-Teams-Label {
+  background-color: #000;
+  border: 3px solid hsla(0, 0%, 39.6%, 0.65);
+  height: 50px;
+  border-radius: 25px;
+  margin-left: -25px;
+  margin-right: -25px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #fff;
+  white-space: nowrap;
+  padding: 5px;
+}
+#root .Tribute-Form-Inputs {
+  display: flex;
+}
+#root .Tribute-Form-Inputs-Amount {
+  background: rgba(30, 30, 30, 0.64);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+#root .Tribute-Form-Inputs-Amount-Icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  font-size: 20px;
+  display: flex;
+  padding: 12px;
+}
+#root .Tribute-Form-Inputs-Amount-MaxTribute {
+  position: absolute;
+  bottom: 14px;
+  right: 10px;
+  padding: 3px 10px;
+  font-size: 12px;
+  text-align: right;
+  font-weight: 700;
+  color: #111;
+  background-color: hsla(0, 0%, 39.6%, 0.65);
+  border-radius: 20px;
+}
+#root .Tribute-Form-Inputs-Amount-MaxTribute:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+#root .Tribute-Form-Inputs-Amount input[type="range"] {
+  height: 50px;
+  width: calc(100% - 105px);
+  display: flex;
+  align-items: center;
+  margin: 0;
+  position: relative;
+}
+#root .Tribute-Form-Inputs-Amount input[type="number"] {
+  font-weight: 700;
+  outline: none;
+  height: 100%;
+  font-size: 40px;
+  display: flex;
+  text-align: center;
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+#root .Tribute-Form-Inputs-Amount input[type="number"]:active,
+#root .Tribute-Form-Inputs-Amount input[type="number"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+#root .Tribute-Input {
+  color: #fff;
+}
+#root .Tribute-Ticket-Wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px 12px;
+  opacity: 0.6;
+}
+#root .Tribute-Ticket-Icon {
+  padding-right: 5px;
+  width: 20px;
+}
+#root .Tribute-Submit {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 20px;
+}
+#root .Tribute-Submit-Wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+#root .Tribute label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+#root .Tribute label:not(:first-child) {
+  margin-top: 12px;
+}
+#root .Tribute select {
+  background: rgba(30, 30, 30, 0.64);
+  color: #fff;
+  border: none;
+  margin-top: 12px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 8px;
+}
+@media (max-width: 1080px) {
+  #root .Tribute-Outcome-Wrapper {
+    font-size: 14px;
+  }
+  #root .Tribute-Outcome-Winnings {
+    font-size: 18px;
   }
 }
 #root .Vote {
@@ -13650,6 +13996,7 @@ button:focus-visible {
   border-radius: 30px;
   white-space: nowrap;
   text-align: center;
+  padding: 12px;
 }
 #root .Player-Button-Tribute:not(:first-child) {
   border-left: none;
