@@ -593,6 +593,14 @@
             description: "This player will protect their team from incinerations.",
           },
           {
+            id: "RECEIVER",
+            color: "#ff007b",
+            textColor: "#ff007b",
+            background: "#383838",
+            title: "Receiver",
+            description: "This player is a Receiver.",
+          },
+          {
             id: "FLICKERING",
             color: "#ff007b",
             textColor: "#ff007b",
@@ -4020,6 +4028,8 @@
             return <J.Y />;
           case "HEATING_UP":
             return <J.C />;
+          case "RECEIVER":
+            return <J.L />;
           case "FLICKERING":
             return <J.l />;
         }
