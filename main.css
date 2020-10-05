@@ -10685,21 +10685,28 @@ button:focus-visible {
   }
 }
 .LeagueNavigation-Nav {
+  display: flex;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+  font-size: 24px;
   padding-bottom: 20px;
+  align-items: center;
   justify-content: center;
 }
-.Countdown,
-.LeagueNavigation-Nav {
-  display: flex;
-  font-size: 24px;
-  align-items: center;
+@media (max-width: 768px) {
+  .LeagueNavigation-Nav {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .Countdown {
+  display: flex;
+  align-items: center;
   color: #fff;
   font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 24px;
 }
 .Countdown-Number {
   margin: 0 8px;
@@ -10747,11 +10754,18 @@ button:focus-visible {
 .Leaderboard-Number:last-child {
   margin-right: 0;
 }
-.Leaderboard-Icon {
-  margin-left: -40px;
-  width: 40px;
-  color: #ff007b;
+.Leaderboard-Icon-Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: right;
+  justify-content: flex-end;
   font-size: 24px;
+}
+.Leaderboard-Icon-Microphone {
+  color: #ff007b;
+}
+.Leaderboard-Icon-Monitor {
+  color: #5988ff;
 }
 .Leaderboard-Description {
   font-size: 16px;
@@ -10780,17 +10794,32 @@ button:focus-visible {
   grid-gap: 5px;
   border-radius: 5px;
   position: relative;
+  grid-column: 2/3;
 }
-.Leaderboard-Player:nth-child(odd) {
+.Leaderboard-Player-Wrapper {
+  width: 100%;
+  align-items: center;
+}
+.Leaderboard-Player-Wrapper:nth-child(odd) > a {
   background: rgba(30, 30, 30, 0.64);
 }
+.Leaderboard-Player-Wrapper-WithIcon {
+  display: grid;
+  grid-template-columns: auto 600px;
+  grid-gap: 5px;
+  gap: 5px;
+}
 .Leaderboard-Player:hover {
-  background: hsla(0, 0%, 39.6%, 0.65);
+  background: hsla(0, 0%, 39.6%, 0.65) !important;
 }
 .Leaderboard-Player-Container {
-  display: flex;
   max-width: 600px;
+  display: flex;
   flex-direction: column;
+}
+.Leaderboard-Player-Container-WithIcon {
+  max-width: 660px;
+  margin-left: -58px;
 }
 .Leaderboard-Player-Position {
   font-size: 14pt;
@@ -10948,10 +10977,22 @@ button:focus-visible {
   }
 }
 @media (max-width: 1080px) {
+  .Leaderboard-Icon-Wrapper {
+    font-size: 18px;
+  }
   .Leaderboard-Player-Position {
     width: 15px;
   }
-  .Leaderboard-Player-Name,
+  .Leaderboard-Player-Name {
+    font-size: 16px;
+    margin: 0;
+  }
+  .Leaderboard-Player-Wrapper {
+    grid-template-columns: 36px auto;
+  }
+  .Leaderboard-Player-Container {
+    margin: 0 0 0 -40px;
+  }
   .Leaderboard-Team-Name {
     font-size: 16px;
     margin: 0;
@@ -11058,6 +11099,186 @@ button:focus-visible {
   .Standings-Team {
     font-size: 18px;
     margin: 0;
+  }
+}
+.PlayoffSetup {
+  max-width: 700px;
+  margin: auto auto 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.PlayoffSetup-Navigation {
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+.PlayoffSetup-Navigation,
+.PlayoffSetup-Navigation-Button {
+  display: flex;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+}
+.PlayoffSetup-Navigation-Button {
+  font-size: 14px;
+  background: #000;
+  color: #fff;
+  margin-right: 10px;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 2px solid transparent !important;
+  white-space: nowrap;
+  height: 40px;
+}
+.PlayoffSetup-Navigation-Button:hover {
+  border: 2px solid #fff;
+  color: #fff;
+}
+.PlayoffSetup-Navigation-Button-Current {
+  background-color: #fff;
+  color: #000;
+}
+.PlayoffSetup-Navigation-Button-Current:hover {
+  color: #000;
+}
+.PlayoffSetup-Navigation-Button-Content:focus {
+  outline: none;
+}
+.PlayoffSetup-Matchup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  padding: 0 10px 0 0;
+  background: rgba(30, 30, 30, 0.64);
+}
+.PlayoffSetup-Matchup:nth-child(2n) {
+  margin-bottom: 20px;
+}
+.PlayoffSetup-Versus {
+  margin: 0 15px;
+}
+.PlayoffSetup-Bye,
+.PlayoffSetup-Versus {
+  color: hsla(0, 0%, 39.6%, 0.65);
+  font-style: italic;
+}
+.PlayoffSetup-Bye {
+  margin-left: 10px;
+}
+.PlayoffSetup-Seed {
+  justify-content: center;
+  width: 30px;
+}
+.PlayoffSetup-MatchupTeam,
+.PlayoffSetup-Seed {
+  display: flex;
+  align-items: center;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.PlayoffSetup-MatchupTeam {
+  font-size: 20px;
+  height: 50px;
+}
+.PlayoffSetup-MatchupTeam-Icon {
+  border-radius: 50%;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.PlayoffSetup-MatchupTeam-Group {
+  justify-content: space-between;
+}
+.PlayoffSetup-MatchupTeam-Group,
+.PlayoffSetup-MatchupTeam-Info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.PlayoffSetup-MatchupTeam-Wins,
+.PlayoffSetup-MatchupTeam-WinsComplete {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 18px;
+}
+.PlayoffSetup-MatchupTeam-WinsComplete {
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.PlayoffSetup-Header {
+  display: flex;
+  font-size: 32px;
+  padding-top: 20px;
+  align-items: center;
+}
+.PlayoffSetup-Header,
+.PlayoffSetup-Subheader {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+}
+.PlayoffSetup-Subheader {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.PlayoffSetup-MatchupGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  width: 400px;
+}
+.PlayoffSetup-Body {
+  display: flex;
+  flex-direction: row;
+}
+.PlayoffSetup-Callout {
+  font-size: 24px;
+}
+.PlayoffSetup-Callout,
+.PlayoffSetup-End {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.PlayoffSetup-End {
+  margin: 5px;
+  font-size: 16px;
+  color: #aaa;
+}
+@media (max-width: 768px) {
+  .PlayoffSetup {
+    width: 100%;
+  }
+  .PlayoffSetup-Body {
+    flex-direction: column;
+    width: 100%;
+  }
+  .PlayoffSetup-MatchupGroup {
+    width: 100%;
+    margin: 0;
+  }
+  .PlayoffSetup-MatchupTeam-Location {
+    display: none;
+  }
+  .PlayoffSetup-Navigation {
+    flex-wrap: wrap;
+  }
+  .PlayoffSetup-Navigation-Button {
+    padding: 5px 8px;
+    font-size: 12px;
+    height: 32px;
+    margin-right: 0;
   }
 }
 .PlayoffsEnd {
@@ -11498,6 +11719,9 @@ button:focus-visible {
 .HallOfFlame-Player-Tributes {
   width: auto;
   text-align: right;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 13pt;
 }
 .HallOfFlame-Player-Name {
   padding-left: 6px;
@@ -14244,7 +14468,7 @@ button:focus-visible {
   color: #aaa;
 }
 .Stubs-All {
-  max-width: 550px;
+  max-width: 700px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -14282,59 +14506,9 @@ button:focus-visible {
 .Stubs-List {
   margin: 20px 0;
 }
-.SeasonEnd {
-  max-width: 550px;
-  margin: auto;
-  flex-direction: column;
-}
-.SeasonEnd,
-.SeasonEnd-Header {
-  display: flex;
-  align-items: center;
-}
-.SeasonEnd-Header {
-  font-weight: 700;
-  font-size: 32px;
-  padding-top: 20px;
-}
-.SeasonEnd-Body,
-.SeasonEnd-Header {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.SeasonEnd-Body {
-  margin: 24px 0;
-  font-size: 18px;
-}
-.SeasonEnd-Callout {
-  font-size: 24px;
-}
-.SeasonEnd-Callout,
-.SeasonEnd-End {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.SeasonEnd-End {
-  margin: 5px;
-  font-size: 16px;
-  color: #aaa;
-}
-@media (max-width: 768px) {
-  .GodsDay {
-    width: 100%;
-  }
-}
-.TeamLogo {
-  border-radius: 50%;
-  height: 44px;
-  width: 44px;
-  font-size: 26px;
-  justify-content: center;
-}
-.FAQ,
-.TeamLogo {
-  display: flex;
-  align-items: center;
-}
 .FAQ {
+  display: flex;
+  align-items: center;
   flex-direction: column;
 }
 .FAQ-Header {
@@ -14399,4 +14573,53 @@ button:focus-visible {
 }
 .FAQ-Return svg {
   margin: 5px 5px 10px;
+}
+.TeamLogo {
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  font-size: 26px;
+  justify-content: center;
+}
+.SeasonEnd,
+.TeamLogo {
+  display: flex;
+  align-items: center;
+}
+.SeasonEnd {
+  max-width: 550px;
+  margin: auto;
+  flex-direction: column;
+}
+.SeasonEnd-Header {
+  display: flex;
+  font-weight: 700;
+  font-size: 32px;
+  padding-top: 20px;
+  align-items: center;
+}
+.SeasonEnd-Body,
+.SeasonEnd-Header {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.SeasonEnd-Body {
+  margin: 24px 0;
+  font-size: 18px;
+}
+.SeasonEnd-Callout {
+  font-size: 24px;
+}
+.SeasonEnd-Callout,
+.SeasonEnd-End {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.SeasonEnd-End {
+  margin: 5px;
+  font-size: 16px;
+  color: #aaa;
+}
+@media (max-width: 768px) {
+  .GodsDay {
+    width: 100%;
+  }
 }
