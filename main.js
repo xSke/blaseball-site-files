@@ -1836,7 +1836,11 @@
           return e === l.homeTeam ? l.homeTeamNickname : e === l.awayTeam ? l.awayTeamNickname : "Null Team";
         }
         function w(e) {
-          return e === l.homeTeam ? l.homeTeamColor : e === l.awayTeam ? l.awayTeamColor : "Null Color";
+          return e === l.homeTeam
+            ? l.homeTeamSecondaryColor
+            : e === l.awayTeam
+            ? l.awayTeamSecondaryColor
+            : "Null Color";
         }
         (t = v > y && l.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {}),
           (n = y > v && l.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {});
