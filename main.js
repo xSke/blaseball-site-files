@@ -744,7 +744,7 @@
     ,
     ,
     function (e, a, t) {
-      e.exports = t(140);
+      e.exports = t(141);
     },
     ,
     ,
@@ -776,6 +776,7 @@
     ,
     function (e, a, t) {},
     ,
+    function (e, a, t) {},
     function (e, a, t) {},
     function (e, a, t) {},
     function (e, a, t) {},
@@ -4319,7 +4320,7 @@
       t(116);
       var Ra,
         La = t(35),
-        Qa = t(144),
+        Qa = t(145),
         Pa = (t(53), t(69));
       function Ga(e) {
         switch (e.id) {
@@ -8027,9 +8028,42 @@
         },
         mn = o.a.forwardRef(function (e, a) {
           return <cn {...on({ svgRef: a }, e)} />;
-        }),
-        un = (t.p, t(130), t(31)),
-        dn = {
+        });
+      t.p, t(130), t(131), t(132);
+      function un(e) {
+        return void 0 !== e.element ? e.element : <div className="Stubs-Header">{e.text}</div>;
+      }
+      var dn = function (e) {
+          var a,
+            t = e.path,
+            n = Object(r.useContext)(O.context),
+            l = (void 0 !== n.sim && void 0 !== n.sim.season && n.sim.season, null);
+          switch (t) {
+            case "/leaderboard":
+              l = <ta />;
+              break;
+            case "/":
+              l = <la />;
+          }
+          return (
+            <div>
+              <un
+                element={
+                  <div className="Stubs-All">
+                    <div className="Stubs-Header">The Season is Over!</div>
+                    <_e dateString={null === (a = n.sim) || void 0 === a ? void 0 : a.nextPhaseTime} />
+                    <div className="Stubs-Body">The Wild Card teams will be chosen soon.</div>
+                  </div>
+                }
+                text="Offseason. Check for updates on the Discord!"
+              />
+              <qe />
+              {l}
+            </div>
+          );
+        },
+        hn = t(31),
+        En = {
           notes: [],
           refreshNotes: (function () {
             var e = Object(E.a)(
@@ -8049,8 +8083,8 @@
             };
           })(),
         },
-        hn = Object(r.createContext)(dn),
-        En = function (e) {
+        pn = Object(r.createContext)(En),
+        fn = function (e) {
           var a = e.children,
             t = Object(r.useContext)(Q.context),
             n = t.user,
@@ -8075,7 +8109,7 @@
                                 return e.json();
                               })
                               .then(function (e) {
-                                e && u([].concat(Object(un.a)(m), Object(un.a)(e.notes)));
+                                e && u([].concat(Object(hn.a)(m), Object(hn.a)(e.notes)));
                               })
                               .catch(function (e) {
                                 u([]);
@@ -8331,35 +8365,35 @@
               [m]
             );
           var T = { notes: m, refreshNotes: b };
-          return <hn.Provider value={T}>{a}</hn.Provider>;
+          return <pn.Provider value={T}>{a}</pn.Provider>;
         };
-      En.context = hn;
-      var pn = En;
-      t(131);
-      function fn() {
+      fn.context = pn;
+      var bn = fn;
+      t(133);
+      function vn() {
         return (
           <div className="TheBook-All">
             <div className="TheBook-Header">The Book of Blaseball</div>
             <div className="TheBook-Subheader">
               The Game of{" "}
               <span className="TheBook-Subheader-Group">
-                <bn str="||||||||||||||||||" /> and <bn str="|||||||||||||" />
+                <yn str="||||||||||||||||||" /> and <yn str="|||||||||||||" />
               </span>
             </div>
             <div className="TheBook-Subheader">Official Rulebook</div>
             <div className="TheBook-Line TheBook-Bullet">1. Seasons</div>
             <div className="TheBook-Line TheBook-SubBullet">
-              a. Each season of Blaseball shall last 99 games. In the case of <bn str="the Ultimate ||||||||" />,
-              seasons shall <bn str="|||||||||||||||||, or at least until the ||||||| have ||||||||." />
+              a. Each season of Blaseball shall last 99 games. In the case of <yn str="the Ultimate ||||||||" />,
+              seasons shall <yn str="|||||||||||||||||, or at least until the ||||||| have ||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              b. Every day of Blaseball shall last one <bn str="|||||" /> hour.
+              b. Every day of Blaseball shall last one <yn str="|||||" /> hour.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              c. If any games last longer than one <bn str="|||||" /> hour, a Spillover shall occur, and all games shall
-              be delayed until the next <bn str="|||||" /> hour. In the case of a game lasting two <bn str="|||||" />{" "}
+              c. If any games last longer than one <yn str="|||||" /> hour, a Spillover shall occur, and all games shall
+              be delayed until the next <yn str="|||||" /> hour. In the case of a game lasting two <yn str="|||||" />{" "}
               hours, the{" "}
-              <bn str="entire season should be ||||||||| and both teams should be ||||||||| ||||||||| |||||||| |||| for |||||| |||||||||||." />
+              <yn str="entire season should be ||||||||| and both teams should be ||||||||| ||||||||| |||||||| |||| for |||||| |||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               d. A season should start on a "Monday" and therefore conclude on a "Friday".
@@ -8392,86 +8426,86 @@
             <div className="TheBook-Line TheBook-SubBullet">g. All other Postseason series shall be best 3 of 5.</div>
             <div className="TheBook-Line TheBook-SubBullet">
               h. The home team in each Postseason game shall be{" "}
-              <bn str="the |||||||||||, if the |||||||||||||||||||." />
+              <yn str="the |||||||||||, if the |||||||||||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               i. The Wild Card Round should take place shortly after the end of the regular season. One full{" "}
-              <bn str="|||||" /> hour shall be skipped, and then the Round shall begin at the top of the next available{" "}
-              <bn str="|||||" /> hour.
+              <yn str="|||||" /> hour shall be skipped, and then the Round shall begin at the top of the next available{" "}
+              <yn str="|||||" /> hour.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               j. The Postseason shall continue early on a "Saturday" and conclude within the same day. If the Postseason
               lasts into the following day, no{" "}
-              <bn str="||||| shall be ||||||||, and both teams shall be |||||||||| |||||||| ||||||||||||." />
+              <yn str="||||| shall be ||||||||, and both teams shall be |||||||||| |||||||| ||||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-Bullet">3. Elections</div>
             <div className="TheBook-Line TheBook-SubBullet">
               a. Participants should be allowed to Vote on the rules, rosters, and other effects of the game of
               Blaseball.{" "}
-              <bn str="The content of such Votes shall be ||||||||||||||| ||||||||||||||||||| ||||||||| entertainment" />
+              <yn str="The content of such Votes shall be ||||||||||||||| ||||||||||||||||||| ||||||||| entertainment" />
               .
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               <span>b. Decrees will be decided by popular vote.</span>
-              <bn str="It is understood that ||||||||||||||||| will be a ||||||||||| |||||||||||, and the others shall ||||||||||||||| ||||||||||||||| ||||||||| |||||||||||||." />
+              <yn str="It is understood that ||||||||||||||||| will be a ||||||||||| |||||||||||, and the others shall ||||||||||||||| ||||||||||||||| ||||||||| |||||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              c. Blessings will be decided by a raffle. <bn str="It is understood that each of these" /> should give
-              players <bn str="||||||||||||| |||||||||||" /> control of the league. All won Blessings shall be processed
+              c. Blessings will be decided by a raffle. <yn str="It is understood that each of these" /> should give
+              players <yn str="||||||||||||| |||||||||||" /> control of the league. All won Blessings shall be processed
               & applied in order of the standings.{" "}
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              c. <bn str="||||||||||||||||||" /> may occur at the end of an Election, before Decrees and Blessings are
-              processed. <bn str="Anything can happen here" />. Good luck.
+              c. <yn str="||||||||||||||||||" /> may occur at the end of an Election, before Decrees and Blessings are
+              processed. <yn str="Anything can happen here" />. Good luck.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               d. Elections should end on a "Sunday," although Votes should be able to be cast on any day of the week.
             </div>
             <div className="TheBook-Line TheBook-Bullet">4. Teams</div>
             <div className="TheBook-Line TheBook-SubBullet">
-              a. Teams are a <bn str="|||||||||| || players" /> bound by <bn str="| |||||| |||||||||| |||| ||||||" />.
+              a. Teams are a <yn str="|||||||||| || players" /> bound by <yn str="| |||||| |||||||||| |||| ||||||" />.
               Names, colors, icons, and slogans are{" "}
-              <bn str="||||||||||| |||||||||||| || ||| |||| |||||| || ||||| |||||||||||||" /> in order for the Fans{" "}
-              <bn str="to find them palatable." />
+              <yn str="||||||||||| |||||||||||| || ||| |||| |||||| || ||||| |||||||||||||" /> in order for the Fans{" "}
+              <yn str="to find them palatable." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              b. A Team's roster is built of four sections: Lineup, Rotation, <bn str="Bench" />, and{" "}
-              <bn str="Bullpen" />. The Lineup and Rotation make up a Team's Active Roster, and the <bn str="Bench" />{" "}
-              and <bn str="Bullpen" /> make up a Team's Shadows. A Team's Shadows cannot be accessed unless directly
+              b. A Team's roster is built of four sections: Lineup, Rotation, <yn str="Bench" />, and{" "}
+              <yn str="Bullpen" />. The Lineup and Rotation make up a Team's Active Roster, and the <yn str="Bench" />{" "}
+              and <yn str="Bullpen" /> make up a Team's Shadows. A Team's Shadows cannot be accessed unless directly
               specified, or through direct selection from a public interface.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              c. Teams may choose <bn str="|| |||| ||||| ||||| || ||||||||, a |||||| |||||" /> to contain and represent
-              their <bn str="||||||" />. The Fans may shape <bn str="|||| |||||| as they" /> uncover and decipher{" "}
-              <bn str="their ||||' ||||||." />
+              c. Teams may choose <yn str="|| |||| ||||| ||||| || ||||||||, a |||||| |||||" /> to contain and represent
+              their <yn str="||||||" />. The Fans may shape <yn str="|||| |||||| as they" /> uncover and decipher{" "}
+              <yn str="their ||||' ||||||." />
             </div>
             <div className="TheBook-Line TheBook-Bullet">5. Playing the Game</div>
             <div className="TheBook-Line TheBook-SubBullet">
               a. The game of Blaseball should be played between two teams.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              b. Each game should take place <bn str="at the home team's stadium" /> on the immaterial plane.
+              b. Each game should take place <yn str="at the home team's stadium" /> on the immaterial plane.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              c. Weather: <bn str="The home team's stadium should determine the weather." /> In the case that{" "}
-              <bn str="||||||||||||||||||||" />, a Solar Eclipse shall last until <bn str="||||||||||||||||||||" />
+              c. Weather: <yn str="The home team's stadium should determine the weather." /> In the case that{" "}
+              <yn str="||||||||||||||||||||" />, a Solar Eclipse shall last until <yn str="||||||||||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              d. There are <bn str="two positions" /> in Blaseball, <bn str="||||||||||||||||||||." />
+              d. There are <yn str="two positions" /> in Blaseball, <yn str="||||||||||||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               e. When a team is on Defense,{" "}
-              <bn str="all of the team's ||||||| will stand ||||||||| out in the field. Doesn't really matter where." />
+              <yn str="all of the team's ||||||| will stand ||||||||| out in the field. Doesn't really matter where." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              f. The pitcher must throw the ball <bn str="with their hands." />, unless{" "}
-              <bn str="that doesn't make sense." />
+              f. The pitcher must throw the ball <yn str="with their hands." />, unless{" "}
+              <yn str="that doesn't make sense." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               g. Once the ball is in play,{" "}
-              <bn str="||| |||| || ||| |||||||||| ||||| |||||||||| the outcome of the play. ||| |||| ||||||| || ||||||||||||||||" />{" "}
+              <yn str="||| |||| || ||| |||||||||| ||||| |||||||||| the outcome of the play. ||| |||| ||||||| || ||||||||||||||||" />{" "}
               immaterial plane{" "}
-              <bn str="|||||||||||||| ||||||| ||||||| ||||||||| ||||||||||||||| |||||||||||||||| |||||||| |||||||| unfathomable." />
+              <yn str="|||||||||||||| ||||||| ||||||| ||||||||| ||||||||||||||| |||||||||||||||| |||||||| |||||||| unfathomable." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">h. The team with the most runs will win the game.</div>
             <div className="TheBook-Line TheBook-SubBullet">
@@ -8479,31 +8513,31 @@
               must complete the game in shame, despite being mathematically eliminated.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              j. <bn str="||||||||||||||||||||||" />
+              j. <yn str="||||||||||||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              k. Crying in Blaseball is <bn str="||||||||||." />
+              k. Crying in Blaseball is <yn str="||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-Bullet">
-              6. <bn str="The Gods" /> and You
+              6. <yn str="The Gods" /> and You
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               a. Should the Participants open the Forbidden Book,{" "}
-              <bn str="The Discipline Era should begin||||||||||||||||||||||" /> suffering{" "}
-              <bn str="upon the league. Players shall be " /> banished{" "}
-              <bn str="at the ||||||||||| ||||||||| |||| ||||||||||||||||." /> The Discipline Era shall last until{" "}
-              <bn str="the Participants have" /> atoned.
+              <yn str="The Discipline Era should begin||||||||||||||||||||||" /> suffering{" "}
+              <yn str="upon the league. Players shall be " /> banished{" "}
+              <yn str="at the ||||||||||| ||||||||| |||| ||||||||||||||||." /> The Discipline Era shall last until{" "}
+              <yn str="the Participants have" /> atoned.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               b. If a team wins three championships, they, and Blaseball, shall ascend.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              c. When teams are sent to <bn str="||||||||||| |||||||||||||" />, they shall return once{" "}
-              <bn str="|||||||||||||||| |||||||||||||||||||||| |||||||||||||" />
+              c. When teams are sent to <yn str="||||||||||| |||||||||||||" />, they shall return once{" "}
+              <yn str="|||||||||||||||| |||||||||||||||||||||| |||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              d. Divine Favor: the <bn str="||||" /> have an internal ranking of favored teams. The list is decided{" "}
-              <bn str="|||||||||" /> each season, and determines all standings tiebreakers.
+              d. Divine Favor: the <yn str="||||" /> have an internal ranking of favored teams. The list is decided{" "}
+              <yn str="|||||||||" /> each season, and determines all standings tiebreakers.
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               e.{" "}
@@ -8518,44 +8552,44 @@
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               i. Blood Bath:{" "}
-              <bn str="||||| ||||||, ||||||||||| |||||| ||| ||||||||, ||| ||||| |||| |||| ||||||| ||| ||||||. ||||| |||| || |||||||||||| ||||| || |||| |||||| ||||| |||||||||||||" />
+              <yn str="||||| ||||||, ||||||||||| |||||| ||| ||||||||, ||| ||||| |||| |||| ||||||| ||| ||||||. ||||| |||| || |||||||||||| ||||| || |||| |||||| ||||| |||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               f. Sunglasses{" "}
-              <bn str="shall be |||||||||| ||||||||||||| |||||||||||||||||. They shall provide |||||||||||||| may be ||||||||||||||||||||." />
+              <yn str="shall be |||||||||| ||||||||||||| |||||||||||||||||. They shall provide |||||||||||||| may be ||||||||||||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">g. Splortsmanship, splortsmanship, is BACK.</div>
             <div className="TheBook-Line TheBook-Bullet">
-              7. <bn str="||||||||||||" />
+              7. <yn str="||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               a. It is known{" "}
-              <bn str="that the intention of the game of Blaseball |||||||||||||||||||||||| |||||||||||||||||||| |||||||||||||| |||||||||||||||||| ||||||||||| |||||||||| would be diminished." />
+              <yn str="that the intention of the game of Blaseball |||||||||||||||||||||||| |||||||||||||||||||| |||||||||||||| |||||||||||||||||| ||||||||||| |||||||||| would be diminished." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              b. <bn str="|||||||" />: Several entities in the <bn str="||||||||||||||" /> shall be chosen{" "}
-              <bn str="||||||||||" /> to bring Blaseball to the people{" "}
-              <bn str="|||||||||||||||||| ||||||||||||||||||" />
+              b. <yn str="|||||||" />: Several entities in the <yn str="||||||||||||||" /> shall be chosen{" "}
+              <yn str="||||||||||" /> to bring Blaseball to the people{" "}
+              <yn str="|||||||||||||||||| ||||||||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               c. It is known that the majority of the icons on the site are sourced from{" "}
-              <a href="https://game-icons.net">Game-Icons.net</a>. <bn str="||||||||" /> thank the authors immensely.
+              <a href="https://game-icons.net">Game-Icons.net</a>. <yn str="||||||||" /> thank the authors immensely.
               Individual author credits coming soon.
             </div>
             <div className="TheBook-Line TheBook-Bullet">Signed,</div>
             <div className="TheBook-Line TheBook-SubBullet">
-              <bn str="||||" />,  <bn str="||||" />,  <bn str="||||||||" />,  <bn str="|||||||" />,  
-              <bn str="||||||||" />,  <bn str="|||||||||" />,  <bn str="|||||||" />,  <bn str="||||" />,  
-              <bn str="||||||" />,  H
-              <bn str="||||||||||" />,  <bn str="||||||" />,  <bn str="|||||||" />,  <bn str="||||| ||||" />,  A
-              <bn str="|||||| ||||||" />,  <bn str="||||" />,  N
-              <bn str="||||||" />,  <bn str="||" />,  <bn str="||||||" />,  M
-              <bn str="|| ||||||" />
+              <yn str="||||" />,  <yn str="||||" />,  <yn str="||||||||" />,  <yn str="|||||||" />,  
+              <yn str="||||||||" />,  <yn str="|||||||||" />,  <yn str="|||||||" />,  <yn str="||||" />,  
+              <yn str="||||||" />,  H
+              <yn str="||||||||||" />,  <yn str="||||||" />,  <yn str="|||||||" />,  <yn str="||||| ||||" />,  A
+              <yn str="|||||| ||||||" />,  <yn str="||||" />,  N
+              <yn str="||||||" />,  <yn str="||" />,  <yn str="||||||" />,  M
+              <yn str="|| ||||||" />
             </div>
           </div>
         );
       }
-      function bn(e) {
+      function yn(e) {
         var a = e.str.split(" ");
         return (
           <span className="TheBook-RedactGroup">
@@ -8571,8 +8605,8 @@
           </span>
         );
       }
-      t(132);
-      function vn() {
+      t(134);
+      function gn() {
         var e,
           a = Object(r.useContext)(Ua.context),
           t = (null === a || void 0 === a ? void 0 : a.doc)
@@ -8607,9 +8641,9 @@
           </div>
         );
       }
-      t(133);
-      var yn = t(70);
-      function gn() {
+      t(135);
+      var An = t(70);
+      function Nn() {
         var e,
           a,
           t,
@@ -8757,18 +8791,18 @@
               </div>
               <div className="Bulletin-Item-Contents">
                 <div className="Bulletin-Item-Contents-Text">
-                  <Nn />
+                  <wn />
                   The Baltimore Crabs are TWO-TIME Champions! The cantankerous crustaceans defeated the Hades Tigers 3
                   games to 1 to claim their second Internet Series title in three seasons.
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <Nn />
+                  <wn />
                   The ILB now finds itself in a three-way race for Ascension, as the Crabs, Tigers and Pies jockey to be
                   the first team to win three titles and subsequently “go up or climb,” or “rise through the air,” as
                   the commissioner suggested / pulled from the dictionary.
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <Nn />
+                  <wn />
                   Debt Trading had the league Flickering in Season 8, as Jaylen Hotdogfingers appears to have Refinanced
                   in a mysterious deal with the Microphone.
                 </div>
@@ -8785,22 +8819,22 @@
               </div>
               <div className="Bulletin-Item-Contents Bulletin-Item-Contents-Text">
                 <div className="Bulletin-Item-Contents-Text">
-                  <Nn />
+                  <wn />
                   The Microphone appears to have transformed both NaN and Sixpack Dogwalker into some sort of cosmic
                   Receivers capable of broadcasting its messages to the league. What we know so far: The Mic is claiming
                   to be Wyatt Mason. And it supposedly has a plan.
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <Nn />
+                  <wn />
                   In a landslide Election, fans voted to draw Wild Cards, expanding the Postseason field.
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <Nn />
+                  <wn />
                   The Monitor continues to be enthralled with the Peanut. The squid also seems to have taken interest in
                   the shelled Idols.
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <Nn />
+                  <wn />
                   After fans offered 100 million peanuts in tribute to the dead, the Peanut called STRIKE 4. The Shelled
                   One claims to be on its way.
                 </div>
@@ -8816,9 +8850,9 @@
                 <div className="Bulletin-Item-Header-Title">Art Gallery</div>
               </div>
               <div className="Bulletin-Item-Contents Bulletin-Item-ImageGrid">
-                {An.map(function (e) {
+                {Tn.map(function (e) {
                   return (
-                    <yn.a
+                    <An.a
                       id={e}
                       options={{ theme: "dark", conversation: "none", dnt: !0 }}
                       className="Bulletin-Tweet"
@@ -8889,7 +8923,7 @@
           g
         );
       }
-      var An = (function (e) {
+      var Tn = (function (e) {
         var a,
           t = [];
         for (; t.length <= 2; ) (a = Math.floor(Math.random() * e.length)), t.includes(a) || t.push(a);
@@ -9221,11 +9255,11 @@
         "1301342212551249920",
         "1307365350556798979",
       ]);
-      function Nn() {
+      function wn() {
         return <Qa.f className="Bulletin-Bullet" />;
       }
-      var Tn, wn;
-      t(134);
+      var Sn, On;
+      t(136);
       !(function (e) {
         (e[(e.SingleA = 0)] = "SingleA"),
           (e[(e.TripleA = 1)] = "TripleA"),
@@ -9240,7 +9274,7 @@
           (e[(e.Fire = 10)] = "Fire"),
           (e[(e.Psychic = 11)] = "Psychic"),
           (e[(e.Grass = 12)] = "Grass");
-      })(Tn || (Tn = {})),
+      })(Sn || (Sn = {})),
         (function (e) {
           (e[(e.Black = 0)] = "Black"),
             (e[(e.LightAndSweet = 1)] = "LightAndSweet"),
@@ -9256,648 +9290,651 @@
             (e[(e.MilkSubstitute = 11)] = "MilkSubstitute"),
             (e[(e.PlentyOfSugar = 12)] = "PlentyOfSugar"),
             (e[(e.Anything = 13)] = "Anything");
-        })(wn || (wn = {}));
-      function Sn(e) {
+        })(On || (On = {}));
+      function In(e) {
         for (var a = e / 0.2, t = Math.round(2 * a) / 2, n = Math.floor(t), r = Math.ceil(t), l = [], i = 0; i < n; i++)
           l.push(<La.b />);
         return n !== r && l.push(<La.c />), (<span>{l}</span>);
       }
-      var On = function (e) {
-        var a,
-          t,
-          n,
-          l = Object(c.h)().id,
-          i = Object(r.useContext)(O.context),
-          m = Object(r.useContext)(De.context),
-          d = Object(r.useState)(void 0),
-          p = Object(s.a)(d, 2),
-          f = p[0],
-          b = p[1],
-          v = Object(ue.useToasts)().addToast,
-          y = Object(r.useContext)(Q.context),
-          g = y.user,
-          A = y.setUser,
-          N = Object(r.useState)(!1),
-          T = Object(s.a)(N, 2),
-          w = T[0],
-          S = (T[1], Object(r.useState)(1)),
-          B = Object(s.a)(S, 2);
-        B[0], B[1];
-        function k(e) {
-          for (var a = 0; a < m.teams.length; a++) {
-            for (var t = m.teams[a], n = 0; n < t.lineup.length; n++) if (t.lineup[n] === e.id) return t;
-            for (var r = 0; r < t.rotation.length; r++) if (t.rotation[r] === e.id) return t;
-            for (var o = 0; o < t.bench.length; o++) if (t.bench[o] === e.id) return t;
-            for (var l = 0; l < t.bullpen.length; l++) if (t.bullpen[l] === e.id) return t;
+      var Bn = function (e) {
+          var a,
+            t,
+            n,
+            l = Object(c.h)().id,
+            i = Object(r.useContext)(O.context),
+            m = Object(r.useContext)(De.context),
+            d = Object(r.useState)(void 0),
+            p = Object(s.a)(d, 2),
+            f = p[0],
+            b = p[1],
+            v = Object(ue.useToasts)().addToast,
+            y = Object(r.useContext)(Q.context),
+            g = y.user,
+            A = y.setUser,
+            N = Object(r.useState)(!1),
+            T = Object(s.a)(N, 2),
+            w = T[0],
+            S = (T[1], Object(r.useState)(1)),
+            B = Object(s.a)(S, 2);
+          B[0], B[1];
+          function k(e) {
+            for (var a = 0; a < m.teams.length; a++) {
+              for (var t = m.teams[a], n = 0; n < t.lineup.length; n++) if (t.lineup[n] === e.id) return t;
+              for (var r = 0; r < t.rotation.length; r++) if (t.rotation[r] === e.id) return t;
+              for (var o = 0; o < t.bench.length; o++) if (t.bench[o] === e.id) return t;
+              for (var l = 0; l < t.bullpen.length; l++) if (t.bullpen[l] === e.id) return t;
+            }
           }
-        }
-        Object(r.useEffect)(function () {
-          (function () {
-            var e = Object(E.a)(
-              h.a.mark(function e() {
-                var a, t, n;
-                return h.a.wrap(function (e) {
-                  for (;;)
-                    switch ((e.prev = e.next)) {
-                      case 0:
-                        return (e.next = 2), ce([l]);
-                      case 2:
-                        void 0 !== (a = e.sent) && 1 == a.length && ((t = a[0]), (n = k(t)), b({ player: t, team: n }));
-                      case 4:
-                      case "end":
-                        return e.stop();
-                    }
-                }, e);
-              })
-            );
-            return function () {
-              return e.apply(this, arguments);
-            };
-          })()();
-        }, []);
-        var C,
-          R = (function (e) {
-            if (void 0 === e) return "NONE";
-            if (void 0 === e.bat) return "NONE";
-            if ("" === e.bat) return "NONE";
-            var a = M.collection.find(function (a) {
-              return a.id === e.bat;
-            });
-            return void 0 === a ? "NONE" : a.attr;
-          })(null === f || void 0 === f ? void 0 : f.player),
-          L = (function (e) {
-            if (void 0 === e) return "NONE";
-            if (void 0 === e.armor) return "NONE";
-            if ("" === e.armor) return "NONE";
-            var a = M.collection.find(function (a) {
-              return a.id === e.armor;
-            });
-            return void 0 === a ? "NONE" : a.attr;
-          })(null === f || void 0 === f ? void 0 : f.player),
-          P = Object(c.g)(),
-          G =
-            x(null === i || void 0 === i ? void 0 : i.sim, "UNLOCKED_HALL") &&
-            void 0 !== (null === f || void 0 === f ? void 0 : f.player) &&
-            f.player.deceased ? (
-              <div className="Player-Status">
-                <div className="Player-Status-Line">
-                  <div className="Player-Deceased-Icon" />
-                  <div className="Player-Status-Name">Deceased</div>
-                </div>
-                {w ? (
-                  <Ee />
-                ) : (
-                  <u
-                    className="Player-Button-Tribute"
-                    background={P}
-                    path={"/tribute/".concat(null === f || void 0 === f ? void 0 : f.player.id)}
-                  >
-                    <J.W /> Pay Tribute
-                  </u>
-                )}
-              </div>
-            ) : null,
-          D =
-            void 0 !== (null === f || void 0 === f ? void 0 : f.player) &&
-            (f.player.permAttr.length > 0 ||
-              f.player.seasAttr.length > 0 ||
-              f.player.weekAttr.length > 0 ||
-              f.player.gameAttr.length > 0 ||
-              "NONE" !== R ||
-              "NONE" !== L) ? (
-              <div className="Player-Attributes">
-                <div className="AttributeBar">
-                  {f.player.permAttr.map(function (e, a) {
-                    return <Ma id={e} type={Ra.Permanent} key={a} />;
-                  })}
-                  {f.player.seasAttr.map(function (e, a) {
-                    return <Ma id={e} type={Ra.Season} key={a} />;
-                  })}
-                  {f.player.weekAttr.map(function (e, a) {
-                    return <Ma id={e} type={Ra.Weekly} key={a} />;
-                  })}
-                  {f.player.gameAttr.map(function (e, a) {
-                    return <Ma id={e} type={Ra.Game} key={a} />;
-                  })}
-                  {"NONE" !== R ? <Ma id={R} type={Ra.Item} /> : null}
-                  {"NONE" !== L ? <Ma id={L} type={Ra.Armor} /> : null}
-                </div>
-              </div>
-            ) : null,
-          W = (function () {
-            var e = Object(E.a)(
-              h.a.mark(function e(a) {
-                return h.a.wrap(function (e) {
-                  for (;;)
-                    switch ((e.prev = e.next)) {
-                      case 0:
-                        if ((a.preventDefault(), !f || !f.player || f.player.id === g.idol)) {
-                          e.next = 10;
-                          break;
-                        }
-                        if (!(g.coins < 200) || ("" === g.idol && null === g.idol)) {
-                          e.next = 6;
-                          break;
-                        }
-                        v("Not enough coins", { appearance: "error" }), (e.next = 8);
-                        break;
-                      case 6:
-                        return (
-                          (e.next = 8),
-                          _(
-                            "/api/chooseIdol",
-                            JSON.stringify({ playerId: f.player.id, playerName: f.player.name })
-                          ).then(
-                            (function () {
-                              var e = Object(E.a)(
-                                h.a.mark(function e(a) {
-                                  return h.a.wrap(function (e) {
-                                    for (;;)
-                                      switch ((e.prev = e.next)) {
-                                        case 0:
-                                          a.ok && a.status && 200 === a.status && f && f.player
-                                            ? (!1,
-                                              "" === g.idol || null === g.idol
-                                                ? (A(Object(I.a)(Object(I.a)({}, g), {}, { idol: f.player.id })), !0)
-                                                : g.coins >= 200 &&
-                                                  (A(
-                                                    Object(I.a)(
-                                                      Object(I.a)({}, g),
-                                                      {},
-                                                      { coins: g.coins - 200, idol: f.player.id }
-                                                    )
-                                                  ),
-                                                  !0),
-                                              v(f.player.name + " is now your idol.", { appearance: "success" }))
-                                            : a.json().then(function (e) {
-                                                v(e.message || "Error", { appearance: "error" });
-                                              });
-                                        case 1:
-                                        case "end":
-                                          return e.stop();
-                                      }
-                                  }, e);
-                                })
-                              );
-                              return function (a) {
-                                return e.apply(this, arguments);
-                              };
-                            })()
-                          )
-                        );
-                      case 8:
-                        e.next = 11;
-                        break;
-                      case 10:
-                        v("Insufficient coins!", { appearance: "error" });
-                      case 11:
-                      case "end":
-                        return e.stop();
-                    }
-                }, e);
-              })
-            );
-            return function (a) {
-              return e.apply(this, arguments);
-            };
-          })(),
-          F = !1;
-        (2 !== (null === (a = i.sim) || void 0 === a ? void 0 : a.phase) &&
-          4 !== (null === (t = i.sim) || void 0 === t ? void 0 : t.phase)) ||
-          null === i ||
-          void 0 === i ||
-          null === (C = i.schedule) ||
-          void 0 === C ||
-          C.forEach(function (e) {
-            e.gameComplete || (F = !0);
-          });
-        var j = (function (e, a) {
-            if (void 0 === e) return !1;
-            var t =
-                e.permAttr.includes(a) || e.seasAttr.includes(a) || e.weekAttr.includes(a) || e.gameAttr.includes(a),
-              n = M.collection.find(function (a) {
+          Object(r.useEffect)(function () {
+            (function () {
+              var e = Object(E.a)(
+                h.a.mark(function e() {
+                  var a, t, n;
+                  return h.a.wrap(function (e) {
+                    for (;;)
+                      switch ((e.prev = e.next)) {
+                        case 0:
+                          return (e.next = 2), ce([l]);
+                        case 2:
+                          void 0 !== (a = e.sent) &&
+                            1 == a.length &&
+                            ((t = a[0]), (n = k(t)), b({ player: t, team: n }));
+                        case 4:
+                        case "end":
+                          return e.stop();
+                      }
+                  }, e);
+                })
+              );
+              return function () {
+                return e.apply(this, arguments);
+              };
+            })()();
+          }, []);
+          var C,
+            R = (function (e) {
+              if (void 0 === e) return "NONE";
+              if (void 0 === e.bat) return "NONE";
+              if ("" === e.bat) return "NONE";
+              var a = M.collection.find(function (a) {
                 return a.id === e.bat;
-              }),
-              r = M.collection.find(function (a) {
+              });
+              return void 0 === a ? "NONE" : a.attr;
+            })(null === f || void 0 === f ? void 0 : f.player),
+            L = (function (e) {
+              if (void 0 === e) return "NONE";
+              if (void 0 === e.armor) return "NONE";
+              if ("" === e.armor) return "NONE";
+              var a = M.collection.find(function (a) {
                 return a.id === e.armor;
               });
-            return n && n.attr === a && (t = !0), r && r.attr === a && (t = !0), t;
-          })(null === f || void 0 === f ? void 0 : f.player, "NON_IDOLIZED"),
-          H = g.idol,
-          V =
-            void 0 === (null === f || void 0 === f ? void 0 : f.player) ? (
-              <pe />
-            ) : (
-              <o.a.Fragment>
-                <div className="Player-Info">
-                  <div className="Player-Header">
-                    <div className="Player-Header-Name">{f.player.name}</div>
-                    <div className="Player-Header-Bottom">
-                      <div className="Player-Team-Line">
-                        <div
-                          className="Player-Team-Logo"
-                          style={{ background: void 0 !== f.team ? f.team.mainColor : "#999999" }}
-                        >
-                          <div className="Player-Team-Emoji">
-                            {String.fromCodePoint(Number(void 0 !== f.team ? f.team.emoji : "0x2753"))}
-                          </div>
-                        </div>
-                        <div className="Player-Team-Name">{void 0 !== f.team ? f.team.fullName : "Null Team"}</div>
-                      </div>
-                      {x(i.sim, "UNLOCKED_IDOLS") ? (
-                        <Y.a className="Player-Button">
-                          {(F || j) && H !== f.player.id ? (
-                            <div className="Idol-Disabled-Tooltip">
-                              <Te.a
-                                placement="right"
-                                overlay={
-                                  <we.a id="tooltip-disabled" className="Idol-Disabled-Tooltip">
-                                    {F
-                                      ? "You can't choose an Idol while games are active."
-                                      : "This player cannot be Idolized."}
-                                  </we.a>
-                                }
-                              >
-                                <span className="d-inline-block">
-                                  <U.a
-                                    disabled={!0}
-                                    style={{ pointerEvents: "none" }}
-                                    className="Player-Button-Idol"
-                                    variant="dark"
-                                  >
-                                    {"" === H || null === H ? (
-                                      <o.a.Fragment>
-                                        <J.qb /> Choose Idol
-                                      </o.a.Fragment>
-                                    ) : (
-                                      <o.a.Fragment>
-                                        <J.vb /> 200 New Idol
-                                      </o.a.Fragment>
-                                    )}{" "}
-                                  </U.a>
-                                </span>
-                              </Te.a>
-                            </div>
-                          ) : H === f.player.id ? (
-                            <div className="Player-Button-Idol-Current">
-                              <J.qb /> Your Idol
-                            </div>
-                          ) : (
-                            <de.a className="Player-Button-Form" onSubmit={W}>
-                              <U.a className="Player-Button-Idol" type="submit" variant="success">
-                                {"" === H || null === H ? (
-                                  <o.a.Fragment>
-                                    <J.qb /> Choose Idol
-                                  </o.a.Fragment>
-                                ) : (
-                                  <o.a.Fragment>
-                                    <J.vb /> 200 New Idol
-                                  </o.a.Fragment>
-                                )}{" "}
-                              </U.a>
-                            </de.a>
-                          )}
-                        </Y.a>
-                      ) : (
-                        <div />
-                      )}
-                    </div>
+              return void 0 === a ? "NONE" : a.attr;
+            })(null === f || void 0 === f ? void 0 : f.player),
+            P = Object(c.g)(),
+            G =
+              x(null === i || void 0 === i ? void 0 : i.sim, "UNLOCKED_HALL") &&
+              void 0 !== (null === f || void 0 === f ? void 0 : f.player) &&
+              f.player.deceased ? (
+                <div className="Player-Status">
+                  <div className="Player-Status-Line">
+                    <div className="Player-Deceased-Icon" />
+                    <div className="Player-Status-Name">Deceased</div>
+                  </div>
+                  {w ? (
+                    <Ee />
+                  ) : (
+                    <u
+                      className="Player-Button-Tribute"
+                      background={P}
+                      path={"/tribute/".concat(null === f || void 0 === f ? void 0 : f.player.id)}
+                    >
+                      <J.W /> Pay Tribute
+                    </u>
+                  )}
+                </div>
+              ) : null,
+            D =
+              void 0 !== (null === f || void 0 === f ? void 0 : f.player) &&
+              (f.player.permAttr.length > 0 ||
+                f.player.seasAttr.length > 0 ||
+                f.player.weekAttr.length > 0 ||
+                f.player.gameAttr.length > 0 ||
+                "NONE" !== R ||
+                "NONE" !== L) ? (
+                <div className="Player-Attributes">
+                  <div className="AttributeBar">
+                    {f.player.permAttr.map(function (e, a) {
+                      return <Ma id={e} type={Ra.Permanent} key={a} />;
+                    })}
+                    {f.player.seasAttr.map(function (e, a) {
+                      return <Ma id={e} type={Ra.Season} key={a} />;
+                    })}
+                    {f.player.weekAttr.map(function (e, a) {
+                      return <Ma id={e} type={Ra.Weekly} key={a} />;
+                    })}
+                    {f.player.gameAttr.map(function (e, a) {
+                      return <Ma id={e} type={Ra.Game} key={a} />;
+                    })}
+                    {"NONE" !== R ? <Ma id={R} type={Ra.Item} /> : null}
+                    {"NONE" !== L ? <Ma id={L} type={Ra.Armor} /> : null}
                   </div>
                 </div>
-                {G}
-                {D}
-                <div className="Player-Content">
-                  <ul className="Player-Info-Stats">
-                    <div className="Player-Info-Line">
-                      <div className="Player-Info-Line-Header">Current Vibe</div>
-                      {(function (e, a) {
-                        var t = (function (e, a) {
-                          var t = 6 + Math.round(10 * e.buoyancy),
-                            n = Math.PI * ((2 / t) * a + 0.5);
+              ) : null,
+            W = (function () {
+              var e = Object(E.a)(
+                h.a.mark(function e(a) {
+                  return h.a.wrap(function (e) {
+                    for (;;)
+                      switch ((e.prev = e.next)) {
+                        case 0:
+                          if ((a.preventDefault(), !f || !f.player || f.player.id === g.idol)) {
+                            e.next = 10;
+                            break;
+                          }
+                          if (!(g.coins < 200) || ("" === g.idol && null === g.idol)) {
+                            e.next = 6;
+                            break;
+                          }
+                          v("Not enough coins", { appearance: "error" }), (e.next = 8);
+                          break;
+                        case 6:
                           return (
-                            0.5 * (e.pressurization + e.cinnamon) * Math.sin(n) -
-                            0.5 * e.pressurization +
-                            0.5 * e.cinnamon
+                            (e.next = 8),
+                            _(
+                              "/api/chooseIdol",
+                              JSON.stringify({ playerId: f.player.id, playerName: f.player.name })
+                            ).then(
+                              (function () {
+                                var e = Object(E.a)(
+                                  h.a.mark(function e(a) {
+                                    return h.a.wrap(function (e) {
+                                      for (;;)
+                                        switch ((e.prev = e.next)) {
+                                          case 0:
+                                            a.ok && a.status && 200 === a.status && f && f.player
+                                              ? (!1,
+                                                "" === g.idol || null === g.idol
+                                                  ? (A(Object(I.a)(Object(I.a)({}, g), {}, { idol: f.player.id })), !0)
+                                                  : g.coins >= 200 &&
+                                                    (A(
+                                                      Object(I.a)(
+                                                        Object(I.a)({}, g),
+                                                        {},
+                                                        { coins: g.coins - 200, idol: f.player.id }
+                                                      )
+                                                    ),
+                                                    !0),
+                                                v(f.player.name + " is now your idol.", { appearance: "success" }))
+                                              : a.json().then(function (e) {
+                                                  v(e.message || "Error", { appearance: "error" });
+                                                });
+                                          case 1:
+                                          case "end":
+                                            return e.stop();
+                                        }
+                                    }, e);
+                                  })
+                                );
+                                return function (a) {
+                                  return e.apply(this, arguments);
+                                };
+                              })()
+                            )
                           );
-                        })(e, a);
-                        if (t > 0.8)
-                          return (
-                            <span className="Player-VibeLine Player-Vibe-MostExcellent">
-                              <Qa.c className="Player-VibeLine-Arrow" />
-                              <Qa.c className="Player-VibeLine-Arrow" />
-                              <Qa.c className="Player-VibeLine-Arrow" />
-                              <div className="Player-VibeLine-Text">Most Excellent</div>
-                            </span>
-                          );
-                        if (t > 0.4)
-                          return (
-                            <span className="Player-VibeLine Player-Vibe-Excellent">
-                              <Qa.c className="Player-VibeLine-Arrow" />
-                              <Qa.c className="Player-VibeLine-Arrow" />
-                              <div className="Player-VibeLine-Text">Excellent</div>
-                            </span>
-                          );
-                        if (t > 0.1)
-                          return (
-                            <span className="Player-VibeLine Player-Vibe-Quality">
-                              <Qa.c className="Player-VibeLine-Arrow" />
-                              <div className="Player-VibeLine-Text">Quality</div>
-                            </span>
-                          );
-                        if (t > -0.1)
-                          return (
-                            <span className="Player-VibeLine Player-Vibe-Neutral">
-                              <Qa.a className="Player-VibeLine-Arrow" />
-                              <div className="Player-VibeLine-Text">Neutral</div>
-                            </span>
-                          );
-                        if (t > -0.4)
-                          return (
-                            <span className="Player-VibeLine Player-Vibe-LessThanIdeal">
-                              <Qa.b className="Player-VibeLine-Arrow" />
-                              <div className="Player-VibeLine-Text">Less Than Ideal</div>
-                            </span>
-                          );
-                        if (t > -0.8)
-                          return (
-                            <span className="Player-VibeLine Player-Vibe-FarLessThanIdeal">
-                              <Qa.b className="Player-VibeLine-Arrow" />
-                              <Qa.b className="Player-VibeLine-Arrow" />
-                              <div className="Player-VibeLine-Text">Far Less Than Ideal</div>
-                            </span>
-                          );
-                        return (
-                          <span className="Player-VibeLine Player-Vibe-Terrible">
-                            <Qa.b className="Player-VibeLine-Arrow" />
-                            <Qa.b className="Player-VibeLine-Arrow" />
-                            <Qa.b className="Player-VibeLine-Arrow" />
-                            <div className="Player-VibeLine-Text">Honestly Terrible</div>
-                          </span>
-                        );
-                      })(f.player, void 0 !== (null === (n = i.sim) || void 0 === n ? void 0 : n.day) ? i.sim.day : -1)}
-                    </div>
-                    <div className="Player-Info-Line">
-                      <div className="Player-Info-Line-Header">Batting</div>
-                      <div className="Player-Ratings">
-                        {Sn(
-                          (function (e) {
-                            return (
-                              Math.pow(1 - e.tragicness, 0.01) *
-                              Math.pow(e.buoyancy, 0) *
-                              Math.pow(e.thwackability, 0.35) *
-                              Math.pow(e.moxie, 0.075) *
-                              Math.pow(e.divinity, 0.35) *
-                              Math.pow(e.musclitude, 0.075) *
-                              Math.pow(1 - e.patheticism, 0.05) *
-                              Math.pow(e.martyrdom, 0.02)
-                            );
-                          })(f.player)
+                        case 8:
+                          e.next = 11;
+                          break;
+                        case 10:
+                          v("Insufficient coins!", { appearance: "error" });
+                        case 11:
+                        case "end":
+                          return e.stop();
+                      }
+                  }, e);
+                })
+              );
+              return function (a) {
+                return e.apply(this, arguments);
+              };
+            })(),
+            F = !1;
+          (2 !== (null === (a = i.sim) || void 0 === a ? void 0 : a.phase) &&
+            4 !== (null === (t = i.sim) || void 0 === t ? void 0 : t.phase)) ||
+            null === i ||
+            void 0 === i ||
+            null === (C = i.schedule) ||
+            void 0 === C ||
+            C.forEach(function (e) {
+              e.gameComplete || (F = !0);
+            });
+          var j = (function (e, a) {
+              if (void 0 === e) return !1;
+              var t =
+                  e.permAttr.includes(a) || e.seasAttr.includes(a) || e.weekAttr.includes(a) || e.gameAttr.includes(a),
+                n = M.collection.find(function (a) {
+                  return a.id === e.bat;
+                }),
+                r = M.collection.find(function (a) {
+                  return a.id === e.armor;
+                });
+              return n && n.attr === a && (t = !0), r && r.attr === a && (t = !0), t;
+            })(null === f || void 0 === f ? void 0 : f.player, "NON_IDOLIZED"),
+            H = g.idol,
+            V =
+              void 0 === (null === f || void 0 === f ? void 0 : f.player) ? (
+                <pe />
+              ) : (
+                <o.a.Fragment>
+                  <div className="Player-Info">
+                    <div className="Player-Header">
+                      <div className="Player-Header-Name">{f.player.name}</div>
+                      <div className="Player-Header-Bottom">
+                        <div className="Player-Team-Line">
+                          <div
+                            className="Player-Team-Logo"
+                            style={{ background: void 0 !== f.team ? f.team.mainColor : "#999999" }}
+                          >
+                            <div className="Player-Team-Emoji">
+                              {String.fromCodePoint(Number(void 0 !== f.team ? f.team.emoji : "0x2753"))}
+                            </div>
+                          </div>
+                          <div className="Player-Team-Name">{void 0 !== f.team ? f.team.fullName : "Null Team"}</div>
+                        </div>
+                        {x(i.sim, "UNLOCKED_IDOLS") ? (
+                          <Y.a className="Player-Button">
+                            {(F || j) && H !== f.player.id ? (
+                              <div className="Idol-Disabled-Tooltip">
+                                <Te.a
+                                  placement="right"
+                                  overlay={
+                                    <we.a id="tooltip-disabled" className="Idol-Disabled-Tooltip">
+                                      {F
+                                        ? "You can't choose an Idol while games are active."
+                                        : "This player cannot be Idolized."}
+                                    </we.a>
+                                  }
+                                >
+                                  <span className="d-inline-block">
+                                    <U.a
+                                      disabled={!0}
+                                      style={{ pointerEvents: "none" }}
+                                      className="Player-Button-Idol"
+                                      variant="dark"
+                                    >
+                                      {"" === H || null === H ? (
+                                        <o.a.Fragment>
+                                          <J.qb /> Choose Idol
+                                        </o.a.Fragment>
+                                      ) : (
+                                        <o.a.Fragment>
+                                          <J.vb /> 200 New Idol
+                                        </o.a.Fragment>
+                                      )}{" "}
+                                    </U.a>
+                                  </span>
+                                </Te.a>
+                              </div>
+                            ) : H === f.player.id ? (
+                              <div className="Player-Button-Idol-Current">
+                                <J.qb /> Your Idol
+                              </div>
+                            ) : (
+                              <de.a className="Player-Button-Form" onSubmit={W}>
+                                <U.a className="Player-Button-Idol" type="submit" variant="success">
+                                  {"" === H || null === H ? (
+                                    <o.a.Fragment>
+                                      <J.qb /> Choose Idol
+                                    </o.a.Fragment>
+                                  ) : (
+                                    <o.a.Fragment>
+                                      <J.vb /> 200 New Idol
+                                    </o.a.Fragment>
+                                  )}{" "}
+                                </U.a>
+                              </de.a>
+                            )}
+                          </Y.a>
+                        ) : (
+                          <div />
                         )}
                       </div>
                     </div>
-                    <div className="Player-Info-Line">
-                      <div className="Player-Info-Line-Header">Pitching</div>
-                      <div className="Player-Ratings">
-                        {(function (e) {
-                          return Sn(
-                            (function (e) {
-                              return (
-                                Math.pow(e.shakespearianism, 0.1) *
-                                Math.pow(e.suppression, 0) *
-                                Math.pow(e.unthwackability, 0.5) *
-                                Math.pow(e.coldness, 0.025) *
-                                Math.pow(e.overpowerment, 0.15) *
-                                Math.pow(e.ruthlessness, 0.4)
-                              );
-                            })(e)
-                          );
-                        })(f.player)}
-                      </div>
-                    </div>
-                    <div className="Player-Info-Line">
-                      <div className="Player-Info-Line-Header">Baserunning</div>
-                      <div className="Player-Ratings">
-                        {(function (e) {
-                          return Sn(
-                            (function (e) {
-                              return (
-                                Math.pow(e.laserlikeness, 0.5) *
-                                Math.pow(e.continuation, 0.1) *
-                                Math.pow(e.baseThirst, 0.1) *
-                                Math.pow(e.indulgence, 0.1) *
-                                Math.pow(e.groundFriction, 0.1)
-                              );
-                            })(e)
-                          );
-                        })(f.player)}
-                      </div>
-                    </div>
-                    <div className="Player-Info-Line">
-                      <div className="Player-Info-Line-Header">Defense</div>
-                      <div className="Player-Ratings">
-                        {(function (e) {
-                          return Sn(
-                            (function (e) {
-                              return (
-                                Math.pow(e.omniscience, 0.2) *
-                                Math.pow(e.tenaciousness, 0.2) *
-                                Math.pow(e.watchfulness, 0.1) *
-                                Math.pow(e.anticapitalism, 0.1) *
-                                Math.pow(e.chasiness, 0.1)
-                              );
-                            })(e)
-                          );
-                        })(f.player)}
-                      </div>
-                    </div>
-                  </ul>
-                  <div className="Player-Info-Items">
-                    <div className="Player-Info-Items-Box">
-                      <div className="Player-Info-Items-Header">Item</div>
-                      <div className="Player-Info-Items-Details">
-                        <div className="Player-Info-Items-Name">
-                          {(function (e) {
-                            if (void 0 === e) return "None";
-                            if (void 0 === e.bat) return "None";
-                            if ("" === e.bat) return "None";
-                            var a = M.collection.find(function (a) {
-                              return a.id === e.bat;
-                            });
-                            return void 0 === a ? "None?" : a.name;
-                          })(f.player)}
-                        </div>
-                        <div className="Player-Info-Items-Icon">
-                          {(function (e) {
-                            return void 0 === e || void 0 === e.bat || e.bat, null;
-                          })(f.player)}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="Player-Info-Items-Box">
-                      <div className="Player-Info-Items-Header">Armor</div>
-                      <div className="Player-Info-Items-Details">
-                        <div className="Player-Info-Items-Name">
-                          {(function (e) {
-                            if (void 0 === e) return "None";
-                            if (void 0 === e.armor) return "None";
-                            if ("" === e.armor) return "None";
-                            var a = M.collection.find(function (a) {
-                              return a.id === e.armor;
-                            });
-                            return void 0 === a ? "None?" : a.name;
-                          })(f.player)}
-                        </div>
-                        <div className="Player-Info-Items-Icon">
-                          {(function (e) {
-                            return void 0 === e || void 0 === e.armor || e.armor, null;
-                          })(f.player)}
-                        </div>
-                      </div>
-                    </div>
                   </div>
-                  <ul className="Player-Info-Bio">
-                    <div className="Player-Info-Line">
-                      <div className="Player-Info-Line-Header">Evolution</div>
-                      <div className="Player-Info-Line-Body">Base</div>
-                    </div>
-                    <div className="Player-Info-Line">
-                      <div className="Player-Info-Line-Header">Pregame Ritual</div>
-                      <div className="Player-Info-Line-Body">{f.player.ritual}</div>
-                    </div>
-                    <div className="Player-Info-Line">
-                      <div className="Player-Info-Line-Header">Coffee Style</div>
-                      <div className="Player-Info-Line-Body">
-                        {(function (e) {
-                          switch (e) {
-                            case wn.Black:
-                              return "Black";
-                            case wn.LightAndSweet:
-                              return "Light & Sweet";
-                            case wn.Macchiato:
-                              return "Macchiato";
-                            case wn.CreamAndSugar:
-                              return "Cream & Sugar";
-                            case wn.ColdBrew:
-                              return "Cold Brew";
-                            case wn.FlatWhite:
-                              return "Flat White";
-                            case wn.Americano:
-                              return "Americano";
-                            case wn.Foam:
-                              return "Heavy Foam";
-                            case wn.Latte:
-                              return "Latte";
-                            case wn.Decaf:
-                              return "Decaf";
-                            case wn.MilkSubstitute:
-                              return "Milk Substitute";
-                            case wn.PlentyOfSugar:
-                              return "Plenty of Sugar";
-                            case wn.Anything:
-                              return "Anything";
-                          }
-                          return "Coffee?";
-                        })(f.player.coffee)}
+                  {G}
+                  {D}
+                  <div className="Player-Content">
+                    <ul className="Player-Info-Stats">
+                      <div className="Player-Info-Line">
+                        <div className="Player-Info-Line-Header">Current Vibe</div>
+                        {(function (e, a) {
+                          var t = (function (e, a) {
+                            var t = 6 + Math.round(10 * e.buoyancy),
+                              n = Math.PI * ((2 / t) * a + 0.5);
+                            return (
+                              0.5 * (e.pressurization + e.cinnamon) * Math.sin(n) -
+                              0.5 * e.pressurization +
+                              0.5 * e.cinnamon
+                            );
+                          })(e, a);
+                          if (t > 0.8)
+                            return (
+                              <span className="Player-VibeLine Player-Vibe-MostExcellent">
+                                <Qa.c className="Player-VibeLine-Arrow" />
+                                <Qa.c className="Player-VibeLine-Arrow" />
+                                <Qa.c className="Player-VibeLine-Arrow" />
+                                <div className="Player-VibeLine-Text">Most Excellent</div>
+                              </span>
+                            );
+                          if (t > 0.4)
+                            return (
+                              <span className="Player-VibeLine Player-Vibe-Excellent">
+                                <Qa.c className="Player-VibeLine-Arrow" />
+                                <Qa.c className="Player-VibeLine-Arrow" />
+                                <div className="Player-VibeLine-Text">Excellent</div>
+                              </span>
+                            );
+                          if (t > 0.1)
+                            return (
+                              <span className="Player-VibeLine Player-Vibe-Quality">
+                                <Qa.c className="Player-VibeLine-Arrow" />
+                                <div className="Player-VibeLine-Text">Quality</div>
+                              </span>
+                            );
+                          if (t > -0.1)
+                            return (
+                              <span className="Player-VibeLine Player-Vibe-Neutral">
+                                <Qa.a className="Player-VibeLine-Arrow" />
+                                <div className="Player-VibeLine-Text">Neutral</div>
+                              </span>
+                            );
+                          if (t > -0.4)
+                            return (
+                              <span className="Player-VibeLine Player-Vibe-LessThanIdeal">
+                                <Qa.b className="Player-VibeLine-Arrow" />
+                                <div className="Player-VibeLine-Text">Less Than Ideal</div>
+                              </span>
+                            );
+                          if (t > -0.8)
+                            return (
+                              <span className="Player-VibeLine Player-Vibe-FarLessThanIdeal">
+                                <Qa.b className="Player-VibeLine-Arrow" />
+                                <Qa.b className="Player-VibeLine-Arrow" />
+                                <div className="Player-VibeLine-Text">Far Less Than Ideal</div>
+                              </span>
+                            );
+                          return (
+                            <span className="Player-VibeLine Player-Vibe-Terrible">
+                              <Qa.b className="Player-VibeLine-Arrow" />
+                              <Qa.b className="Player-VibeLine-Arrow" />
+                              <Qa.b className="Player-VibeLine-Arrow" />
+                              <div className="Player-VibeLine-Text">Honestly Terrible</div>
+                            </span>
+                          );
+                        })(
+                          f.player,
+                          void 0 !== (null === (n = i.sim) || void 0 === n ? void 0 : n.day) ? i.sim.day : -1
+                        )}
                       </div>
-                    </div>
-                    <div className="Player-Info-Line">
-                      <div className="Player-Info-Line-Header">Blood Type</div>
-                      <div className="Player-Info-Line-Body">
-                        {(function (e) {
-                          switch (e) {
-                            case Tn.SingleA:
-                              return "A";
-                            case Tn.DoubleA:
-                              return "AA";
-                            case Tn.TripleA:
-                              return "AAA";
-                            case Tn.Acid:
-                              return "Acidic";
-                            case Tn.Base:
-                              return "Basic";
-                            case Tn.Oh:
-                              return "O";
-                            case Tn.OhNo:
-                              return "O No";
-                            case Tn.Water:
-                              return "H\u2082O";
-                            case Tn.Electric:
-                              return "Electric";
-                            case Tn.Love:
-                              return "Love";
-                            case Tn.Fire:
-                              return "Fire";
-                            case Tn.Psychic:
-                              return "Psychic";
-                            case Tn.Grass:
-                              return "Grass";
-                          }
-                          return "Blood?";
-                        })(f.player.blood)}
+                      <div className="Player-Info-Line">
+                        <div className="Player-Info-Line-Header">Batting</div>
+                        <div className="Player-Ratings">
+                          {In(
+                            (function (e) {
+                              return (
+                                Math.pow(1 - e.tragicness, 0.01) *
+                                Math.pow(e.buoyancy, 0) *
+                                Math.pow(e.thwackability, 0.35) *
+                                Math.pow(e.moxie, 0.075) *
+                                Math.pow(e.divinity, 0.35) *
+                                Math.pow(e.musclitude, 0.075) *
+                                Math.pow(1 - e.patheticism, 0.05) *
+                                Math.pow(e.martyrdom, 0.02)
+                              );
+                            })(f.player)
+                          )}
+                        </div>
                       </div>
-                    </div>
-                    <div className="Player-Info-Line">
-                      <div className="Player-Info-Line-Header">Fate</div>
-                      <div className="Player-Info-Line-Body">{f.player.fate}</div>
-                    </div>
-                    <div className="Player-Info-Line">
-                      <div className="Player-Info-Line-Header">Soulscream</div>
-                      {(function (e) {
-                        for (
-                          var a = "",
-                            t = ["A", "E", "I", "O", "U", "X", "H", "A", "E", "I"],
-                            n = [e.pressurization, e.divinity, e.tragicness, e.shakespearianism, e.ruthlessness],
-                            r = 0;
-                          r < e.soul;
-                          r++
-                        )
-                          for (var l = 0; l < 11; l++) {
-                            var i = 1 / Math.pow(10, r),
-                              s = n[l % n.length] % i,
-                              c = Math.floor((s / i) * 10);
-                            a += t[c];
-                          }
-                        return (
-                          <div className="Player-Soulscream">
-                            <div className="Player-Soulscream-Body">{a}</div>
+                      <div className="Player-Info-Line">
+                        <div className="Player-Info-Line-Header">Pitching</div>
+                        <div className="Player-Ratings">
+                          {(function (e) {
+                            return In(
+                              (function (e) {
+                                return (
+                                  Math.pow(e.shakespearianism, 0.1) *
+                                  Math.pow(e.suppression, 0) *
+                                  Math.pow(e.unthwackability, 0.5) *
+                                  Math.pow(e.coldness, 0.025) *
+                                  Math.pow(e.overpowerment, 0.15) *
+                                  Math.pow(e.ruthlessness, 0.4)
+                                );
+                              })(e)
+                            );
+                          })(f.player)}
+                        </div>
+                      </div>
+                      <div className="Player-Info-Line">
+                        <div className="Player-Info-Line-Header">Baserunning</div>
+                        <div className="Player-Ratings">
+                          {(function (e) {
+                            return In(
+                              (function (e) {
+                                return (
+                                  Math.pow(e.laserlikeness, 0.5) *
+                                  Math.pow(e.continuation, 0.1) *
+                                  Math.pow(e.baseThirst, 0.1) *
+                                  Math.pow(e.indulgence, 0.1) *
+                                  Math.pow(e.groundFriction, 0.1)
+                                );
+                              })(e)
+                            );
+                          })(f.player)}
+                        </div>
+                      </div>
+                      <div className="Player-Info-Line">
+                        <div className="Player-Info-Line-Header">Defense</div>
+                        <div className="Player-Ratings">
+                          {(function (e) {
+                            return In(
+                              (function (e) {
+                                return (
+                                  Math.pow(e.omniscience, 0.2) *
+                                  Math.pow(e.tenaciousness, 0.2) *
+                                  Math.pow(e.watchfulness, 0.1) *
+                                  Math.pow(e.anticapitalism, 0.1) *
+                                  Math.pow(e.chasiness, 0.1)
+                                );
+                              })(e)
+                            );
+                          })(f.player)}
+                        </div>
+                      </div>
+                    </ul>
+                    <div className="Player-Info-Items">
+                      <div className="Player-Info-Items-Box">
+                        <div className="Player-Info-Items-Header">Item</div>
+                        <div className="Player-Info-Items-Details">
+                          <div className="Player-Info-Items-Name">
+                            {(function (e) {
+                              if (void 0 === e) return "None";
+                              if (void 0 === e.bat) return "None";
+                              if ("" === e.bat) return "None";
+                              var a = M.collection.find(function (a) {
+                                return a.id === e.bat;
+                              });
+                              return void 0 === a ? "None?" : a.name;
+                            })(f.player)}
                           </div>
-                        );
-                      })(f.player)}
+                          <div className="Player-Info-Items-Icon">
+                            {(function (e) {
+                              return void 0 === e || void 0 === e.bat || e.bat, null;
+                            })(f.player)}
+                          </div>
+                        </div>
+                      </div>
+                      <div className="Player-Info-Items-Box">
+                        <div className="Player-Info-Items-Header">Armor</div>
+                        <div className="Player-Info-Items-Details">
+                          <div className="Player-Info-Items-Name">
+                            {(function (e) {
+                              if (void 0 === e) return "None";
+                              if (void 0 === e.armor) return "None";
+                              if ("" === e.armor) return "None";
+                              var a = M.collection.find(function (a) {
+                                return a.id === e.armor;
+                              });
+                              return void 0 === a ? "None?" : a.name;
+                            })(f.player)}
+                          </div>
+                          <div className="Player-Info-Items-Icon">
+                            {(function (e) {
+                              return void 0 === e || void 0 === e.armor || e.armor, null;
+                            })(f.player)}
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </ul>
-                </div>
-              </o.a.Fragment>
-            );
-        return <Z {...Object.assign({}, e, { className: "Player" })}>{V}</Z>;
-      };
-      t(135), t(136);
-      function In(e) {
-        return void 0 !== e.element ? e.element : <div className="Stubs-Header">{e.text}</div>;
-      }
-      var Bn = function (e) {
-          var a,
-            t = e.path,
-            n = Object(r.useContext)(O.context),
-            l = void 0 !== n.sim && void 0 !== n.sim.season ? n.sim.season : -1;
-          return (
-            <div>
-              <In
-                element={
-                  <div className="Stubs-All">
-                    <div className="Stubs-Header">It's the Pre-Season.</div>
-                    <_e dateString={null === (a = n.sim) || void 0 === a ? void 0 : a.nextPhaseTime} />
-                    <div className="Stubs-Body">Season {l + 1} will begin soon.</div>
+                    <ul className="Player-Info-Bio">
+                      <div className="Player-Info-Line">
+                        <div className="Player-Info-Line-Header">Evolution</div>
+                        <div className="Player-Info-Line-Body">Base</div>
+                      </div>
+                      <div className="Player-Info-Line">
+                        <div className="Player-Info-Line-Header">Pregame Ritual</div>
+                        <div className="Player-Info-Line-Body">{f.player.ritual}</div>
+                      </div>
+                      <div className="Player-Info-Line">
+                        <div className="Player-Info-Line-Header">Coffee Style</div>
+                        <div className="Player-Info-Line-Body">
+                          {(function (e) {
+                            switch (e) {
+                              case On.Black:
+                                return "Black";
+                              case On.LightAndSweet:
+                                return "Light & Sweet";
+                              case On.Macchiato:
+                                return "Macchiato";
+                              case On.CreamAndSugar:
+                                return "Cream & Sugar";
+                              case On.ColdBrew:
+                                return "Cold Brew";
+                              case On.FlatWhite:
+                                return "Flat White";
+                              case On.Americano:
+                                return "Americano";
+                              case On.Foam:
+                                return "Heavy Foam";
+                              case On.Latte:
+                                return "Latte";
+                              case On.Decaf:
+                                return "Decaf";
+                              case On.MilkSubstitute:
+                                return "Milk Substitute";
+                              case On.PlentyOfSugar:
+                                return "Plenty of Sugar";
+                              case On.Anything:
+                                return "Anything";
+                            }
+                            return "Coffee?";
+                          })(f.player.coffee)}
+                        </div>
+                      </div>
+                      <div className="Player-Info-Line">
+                        <div className="Player-Info-Line-Header">Blood Type</div>
+                        <div className="Player-Info-Line-Body">
+                          {(function (e) {
+                            switch (e) {
+                              case Sn.SingleA:
+                                return "A";
+                              case Sn.DoubleA:
+                                return "AA";
+                              case Sn.TripleA:
+                                return "AAA";
+                              case Sn.Acid:
+                                return "Acidic";
+                              case Sn.Base:
+                                return "Basic";
+                              case Sn.Oh:
+                                return "O";
+                              case Sn.OhNo:
+                                return "O No";
+                              case Sn.Water:
+                                return "H\u2082O";
+                              case Sn.Electric:
+                                return "Electric";
+                              case Sn.Love:
+                                return "Love";
+                              case Sn.Fire:
+                                return "Fire";
+                              case Sn.Psychic:
+                                return "Psychic";
+                              case Sn.Grass:
+                                return "Grass";
+                            }
+                            return "Blood?";
+                          })(f.player.blood)}
+                        </div>
+                      </div>
+                      <div className="Player-Info-Line">
+                        <div className="Player-Info-Line-Header">Fate</div>
+                        <div className="Player-Info-Line-Body">{f.player.fate}</div>
+                      </div>
+                      <div className="Player-Info-Line">
+                        <div className="Player-Info-Line-Header">Soulscream</div>
+                        {(function (e) {
+                          for (
+                            var a = "",
+                              t = ["A", "E", "I", "O", "U", "X", "H", "A", "E", "I"],
+                              n = [e.pressurization, e.divinity, e.tragicness, e.shakespearianism, e.ruthlessness],
+                              r = 0;
+                            r < e.soul;
+                            r++
+                          )
+                            for (var l = 0; l < 11; l++) {
+                              var i = 1 / Math.pow(10, r),
+                                s = n[l % n.length] % i,
+                                c = Math.floor((s / i) * 10);
+                              a += t[c];
+                            }
+                          return (
+                            <div className="Player-Soulscream">
+                              <div className="Player-Soulscream-Body">{a}</div>
+                            </div>
+                          );
+                        })(f.player)}
+                      </div>
+                    </ul>
                   </div>
-                }
-                text="Offseason. Check for updates on the Discord!"
-              />
-              <qe />
-              {"/leaderboard" === t ? <ta /> : <la />}
-            </div>
-          );
+                </o.a.Fragment>
+              );
+          return <Z {...Object.assign({}, e, { className: "Player" })}>{V}</Z>;
         },
         kn =
           (t(137),
+          function (e) {
+            var a,
+              t = e.path,
+              n = Object(r.useContext)(O.context),
+              l = void 0 !== n.sim && void 0 !== n.sim.season ? n.sim.season : -1;
+            return (
+              <div>
+                <un
+                  element={
+                    <div className="Stubs-All">
+                      <div className="Stubs-Header">It's the Pre-Season.</div>
+                      <_e dateString={null === (a = n.sim) || void 0 === a ? void 0 : a.nextPhaseTime} />
+                      <div className="Stubs-Body">Season {l + 1} will begin soon.</div>
+                    </div>
+                  }
+                  text="Offseason. Check for updates on the Discord!"
+                />
+                <qe />
+                {"/leaderboard" === t ? <ta /> : <la />}
+              </div>
+            );
+          }),
+        Cn =
+          (t(138),
           function (e) {
             var a,
               t = e.path,
@@ -9916,7 +9953,7 @@
             }
             return (
               <div>
-                <In
+                <un
                   element={
                     <div className="Stubs-All">
                       <div className="Stubs-Header">The Season is Over!</div>
@@ -9931,8 +9968,8 @@
               </div>
             );
           }),
-        Cn =
-          (t(138),
+        Rn =
+          (t(139),
           function () {
             var e = (
                 <o.a.Fragment>
@@ -11036,8 +11073,8 @@
               </div>
             );
           }),
-        Rn =
-          (t(139),
+        Ln =
+          (t(140),
           function (e) {
             var a,
               t = e.path,
@@ -11056,7 +11093,7 @@
             }
             return (
               <div>
-                <In
+                <un
                   element={
                     <div className="Stubs-All">
                       <div className="Stubs-Header">Wild Card Evening</div>
@@ -11073,7 +11110,7 @@
               </div>
             );
           });
-      function Ln() {
+      function Qn() {
         var e = Object(r.useContext)(Q.context).user,
           a = Object(r.useContext)(Ua.context),
           t = Object(r.useState)(!1),
@@ -11087,10 +11124,10 @@
             },
             [e]
           ),
-          void 0 !== e && e.isFetching ? <Pn /> : a && a.doc && a.doc.epsilon ? <Gn /> : l ? <Dn /> : <Qn />
+          void 0 !== e && e.isFetching ? <Gn /> : a && a.doc && a.doc.epsilon ? <Dn /> : l ? <Mn /> : <Pn />
         );
       }
-      function Qn() {
+      function Pn() {
         var e = Object(c.g)(),
           a = e.state && e.state.background;
         return (
@@ -11111,7 +11148,7 @@
                   <Ka />
                 </c.a>
                 <c.a path="/faq">
-                  <Cn />
+                  <Rn />
                 </c.a>
                 <c.a path="/">
                   <Ca />
@@ -11144,7 +11181,7 @@
               </div>
               <div className="Main-Footer-Advertise">
                 <div className="Main-Footer-Advertise-Inner">
-                  <a className="Main-Footer-Advertise-Icon" href={Mn()}>
+                  <a className="Main-Footer-Advertise-Icon" href={Wn()}>
                     Become a Sponsor
                   </a>
                 </div>
@@ -11156,23 +11193,23 @@
           </div>
         );
       }
-      function Pn() {
+      function Gn() {
         return (
           <div>
             <div className="Main-Body" />
           </div>
         );
       }
-      function Gn() {
+      function Dn() {
         return (
           <div>
             <div className="Main-Body">
-              <vn />
+              <gn />
             </div>
           </div>
         );
       }
-      function Dn() {
+      function Mn() {
         var e = Object(r.useContext)(O.context),
           a = Object(c.g)(),
           t = a.state && a.state.background,
@@ -11181,14 +11218,15 @@
               case 0:
                 return <tn path={a} />;
               case 1:
-                return <Bn path={a} />;
+                return <kn path={a} />;
               case 2:
                 return <ua path={a} />;
               case 3:
+                return <Cn path={a} />;
               case 7:
-                return <kn path={a} />;
+                return <dn path={a} />;
               case 11:
-                return <Rn path={a} />;
+                return <Ln path={a} />;
               case 4:
               case 10:
                 return <va path={a} />;
@@ -11199,7 +11237,7 @@
             return <div />;
           };
         return (
-          <pn>
+          <bn>
             <D>
               <aa>
                 <Sa>
@@ -11216,16 +11254,16 @@
                         <ka />
                       </c.a>
                       <c.a path="/bulletin">
-                        <gn />
+                        <Nn />
                       </c.a>
                       <c.a path="/faq">
-                        <Cn />
+                        <Rn />
                       </c.a>
                       <c.a path="/shop">
                         <Ya />
                       </c.a>
                       <c.a path="/thebook">
-                        <fn />
+                        <vn />
                       </c.a>
                       <c.a path="/offseason">
                         <Zt />
@@ -11240,7 +11278,7 @@
                         <xa />
                       </c.a>
                       <c.a path="/player/:id">
-                        <On />
+                        <Bn />
                       </c.a>
                       {x(e.sim, "UNLOCKED_HALL") ? (
                         <c.a path="/thehall">
@@ -11258,7 +11296,7 @@
                         <c.a path="/signup" children={<Ka isModal={!0} />} />
                         <c.a path="/login" children={<Ka isModal={!0} isLogin={!0} />} />
                         <c.a path="/team/:nickname" children={<xa isModal={!0} />} />
-                        <c.a path="/player/:id" children={<On isModal={!0} />} />
+                        <c.a path="/player/:id" children={<Bn isModal={!0} />} />
                         <c.a path="/bet/:gameId" children={<be isModal={!0} />} />
                         <c.a path="/vote/:voteType/:entityId" children={<an isModal={!0} />} />
                         <c.a path="/tribute/:entityId" children={<en isModal={!0} />} />
@@ -11281,7 +11319,7 @@
                     </div>
                     <div className="Main-Footer-Advertise">
                       <div className="Main-Footer-Advertise-Inner">
-                        <a className="Main-Footer-Advertise-Icon" href={Mn()}>
+                        <a className="Main-Footer-Advertise-Icon" href={Wn()}>
                           Become a Sponsor
                         </a>
                       </div>
@@ -11293,20 +11331,20 @@
                 </Sa>
               </aa>
             </D>
-          </pn>
+          </bn>
         );
       }
-      function Mn() {
+      function Wn() {
         return "mailto:sponsors@thegameband.com?subject=".concat(
           encodeURIComponent("I\u2019d like to sponsor a season of Blaseball")
         );
       }
-      var Wn = function () {
+      var Fn = function () {
         return (
           <div className="Main">
             <Q>
               <Na />
-              <Ln />
+              <Qn />
             </Q>
           </div>
         );
@@ -11316,7 +11354,7 @@
           "[::1]" === window.location.hostname ||
           window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
       );
-      var Fn = { sim: void 0, standings: void 0, season: void 0 };
+      var xn = { sim: void 0, standings: void 0, season: void 0 };
       "serviceWorker" in navigator &&
         navigator.serviceWorker.ready
           .then(function (e) {
@@ -11329,11 +11367,11 @@
           <o.a.StrictMode>
             <ue.ToastProvider autoDismiss={!0} autoDismissTimeout={3e3} placement="bottom-right">
               <T value={{}}>
-                <O value={Fn}>
+                <O value={xn}>
                   <De value={{}}>
                     <Ua value={{}}>
                       <m.a>
-                        <Wn />
+                        <Fn />
                       </m.a>
                     </Ua>
                   </De>

@@ -13747,6 +13747,79 @@ button:focus-visible {
     margin-bottom: 65px;
   }
 }
+.IdolResults {
+  max-width: 550px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.IdolResults-Header {
+  display: flex;
+  font-weight: 700;
+  font-size: 32px;
+  padding-top: 20px;
+  align-items: center;
+}
+.IdolResults-Body,
+.IdolResults-Header {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.IdolResults-Body {
+  margin: 24px 0;
+  font-size: 18px;
+}
+.IdolResults-Callout {
+  font-size: 24px;
+}
+.IdolResults-Callout,
+.IdolResults-End {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.IdolResults-End {
+  margin: 5px;
+  font-size: 16px;
+  color: #aaa;
+}
+.Stubs-All {
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Stubs-Serif {
+  margin-right: 4px;
+}
+.Stubs-Highlight,
+.Stubs-Serif {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+}
+.Stubs-Highlight {
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 30px;
+  background: #ba7300;
+  margin: 0 6px;
+}
+.Stubs-Header {
+  margin: 20px 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+.Stubs-Body,
+.Stubs-Header {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Stubs-Body {
+  font-size: 18px;
+  color: #aaa;
+  padding: 20px;
+}
+.Stubs-List {
+  margin: 20px 0;
+}
 .TheBook-All {
   max-width: 550px;
   margin: auto;
@@ -14466,45 +14539,6 @@ button:focus-visible {
   margin: 5px;
   font-size: 16px;
   color: #aaa;
-}
-.Stubs-All {
-  max-width: 700px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.Stubs-Serif {
-  margin-right: 4px;
-}
-.Stubs-Highlight,
-.Stubs-Serif {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-weight: 700;
-}
-.Stubs-Highlight {
-  color: #fff;
-  padding: 2px 10px;
-  border-radius: 30px;
-  background: #ba7300;
-  margin: 0 6px;
-}
-.Stubs-Header {
-  margin: 20px 0;
-  font-size: 32px;
-  font-weight: 700;
-}
-.Stubs-Body,
-.Stubs-Header {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.Stubs-Body {
-  font-size: 18px;
-  color: #aaa;
-  padding: 20px;
-}
-.Stubs-List {
-  margin: 20px 0;
 }
 .FAQ {
   display: flex;
