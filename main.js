@@ -9300,26 +9300,27 @@
           var a,
             t,
             n,
-            l = Object(c.h)().id,
-            i = Object(r.useContext)(O.context),
-            m = Object(r.useContext)(De.context),
-            d = Object(r.useState)(void 0),
-            p = Object(s.a)(d, 2),
-            f = p[0],
-            b = p[1],
-            v = Object(ue.useToasts)().addToast,
-            y = Object(r.useContext)(Q.context),
-            g = y.user,
-            A = y.setUser,
-            N = Object(r.useState)(!1),
-            T = Object(s.a)(N, 2),
-            w = T[0],
-            S = (T[1], Object(r.useState)(1)),
-            B = Object(s.a)(S, 2);
-          B[0], B[1];
-          function k(e) {
-            for (var a = 0; a < m.teams.length; a++) {
-              for (var t = m.teams[a], n = 0; n < t.lineup.length; n++) if (t.lineup[n] === e.id) return t;
+            l,
+            i = Object(c.h)().id,
+            m = Object(r.useContext)(O.context),
+            d = Object(r.useContext)(De.context),
+            p = Object(r.useState)(void 0),
+            f = Object(s.a)(p, 2),
+            b = f[0],
+            v = f[1],
+            y = Object(ue.useToasts)().addToast,
+            g = Object(r.useContext)(Q.context),
+            A = g.user,
+            N = g.setUser,
+            T = Object(r.useState)(!1),
+            w = Object(s.a)(T, 2),
+            S = w[0],
+            B = (w[1], Object(r.useState)(1)),
+            k = Object(s.a)(B, 2);
+          k[0], k[1];
+          function C(e) {
+            for (var a = 0; a < d.teams.length; a++) {
+              for (var t = d.teams[a], n = 0; n < t.lineup.length; n++) if (t.lineup[n] === e.id) return t;
               for (var r = 0; r < t.rotation.length; r++) if (t.rotation[r] === e.id) return t;
               for (var o = 0; o < t.bench.length; o++) if (t.bench[o] === e.id) return t;
               for (var l = 0; l < t.bullpen.length; l++) if (t.bullpen[l] === e.id) return t;
@@ -9334,11 +9335,11 @@
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          return (e.next = 2), ce([l]);
+                          return (e.next = 2), ce([i]);
                         case 2:
                           void 0 !== (a = e.sent) &&
                             1 == a.length &&
-                            ((t = a[0]), (n = k(t)), b({ player: t, team: n }));
+                            ((t = a[0]), (n = C(t)), v({ player: t, team: n }));
                         case 4:
                         case "end":
                           return e.stop();
@@ -9351,8 +9352,8 @@
               };
             })()();
           }, []);
-          var C,
-            R = (function (e) {
+          var R,
+            L = (function (e) {
               if (void 0 === e) return "NONE";
               if (void 0 === e.bat) return "NONE";
               if ("" === e.bat) return "NONE";
@@ -9360,8 +9361,8 @@
                 return a.id === e.bat;
               });
               return void 0 === a ? "NONE" : a.attr;
-            })(null === f || void 0 === f ? void 0 : f.player),
-            L = (function (e) {
+            })(null === b || void 0 === b ? void 0 : b.player),
+            P = (function (e) {
               if (void 0 === e) return "NONE";
               if (void 0 === e.armor) return "NONE";
               if ("" === e.armor) return "NONE";
@@ -9369,80 +9370,80 @@
                 return a.id === e.armor;
               });
               return void 0 === a ? "NONE" : a.attr;
-            })(null === f || void 0 === f ? void 0 : f.player),
-            P = Object(c.g)(),
-            G =
-              x(null === i || void 0 === i ? void 0 : i.sim, "UNLOCKED_HALL") &&
-              void 0 !== (null === f || void 0 === f ? void 0 : f.player) &&
-              f.player.deceased ? (
+            })(null === b || void 0 === b ? void 0 : b.player),
+            G = Object(c.g)(),
+            D =
+              x(null === m || void 0 === m ? void 0 : m.sim, "UNLOCKED_HALL") &&
+              void 0 !== (null === b || void 0 === b ? void 0 : b.player) &&
+              b.player.deceased ? (
                 <div className="Player-Status">
                   <div className="Player-Status-Line">
                     <div className="Player-Deceased-Icon" />
                     <div className="Player-Status-Name">Deceased</div>
                   </div>
-                  {w ? (
+                  {S ? (
                     <Ee />
                   ) : (
                     <u
                       className="Player-Button-Tribute"
-                      background={P}
-                      path={"/tribute/".concat(null === f || void 0 === f ? void 0 : f.player.id)}
+                      background={G}
+                      path={"/tribute/".concat(null === b || void 0 === b ? void 0 : b.player.id)}
                     >
                       <J.W /> Pay Tribute
                     </u>
                   )}
                 </div>
               ) : null,
-            D =
-              void 0 !== (null === f || void 0 === f ? void 0 : f.player) &&
-              (f.player.permAttr.length > 0 ||
-                f.player.seasAttr.length > 0 ||
-                f.player.weekAttr.length > 0 ||
-                f.player.gameAttr.length > 0 ||
-                "NONE" !== R ||
-                "NONE" !== L) ? (
+            W =
+              void 0 !== (null === b || void 0 === b ? void 0 : b.player) &&
+              (b.player.permAttr.length > 0 ||
+                b.player.seasAttr.length > 0 ||
+                b.player.weekAttr.length > 0 ||
+                b.player.gameAttr.length > 0 ||
+                "NONE" !== L ||
+                "NONE" !== P) ? (
                 <div className="Player-Attributes">
                   <div className="AttributeBar">
-                    {f.player.permAttr.map(function (e, a) {
+                    {b.player.permAttr.map(function (e, a) {
                       return <Ma id={e} type={Ra.Permanent} key={a} />;
                     })}
-                    {f.player.seasAttr.map(function (e, a) {
+                    {b.player.seasAttr.map(function (e, a) {
                       return <Ma id={e} type={Ra.Season} key={a} />;
                     })}
-                    {f.player.weekAttr.map(function (e, a) {
+                    {b.player.weekAttr.map(function (e, a) {
                       return <Ma id={e} type={Ra.Weekly} key={a} />;
                     })}
-                    {f.player.gameAttr.map(function (e, a) {
+                    {b.player.gameAttr.map(function (e, a) {
                       return <Ma id={e} type={Ra.Game} key={a} />;
                     })}
-                    {"NONE" !== R ? <Ma id={R} type={Ra.Item} /> : null}
-                    {"NONE" !== L ? <Ma id={L} type={Ra.Armor} /> : null}
+                    {"NONE" !== L ? <Ma id={L} type={Ra.Item} /> : null}
+                    {"NONE" !== P ? <Ma id={P} type={Ra.Armor} /> : null}
                   </div>
                 </div>
               ) : null,
-            W = (function () {
+            F = (function () {
               var e = Object(E.a)(
                 h.a.mark(function e(a) {
                   return h.a.wrap(function (e) {
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          if ((a.preventDefault(), !f || !f.player || f.player.id === g.idol)) {
+                          if ((a.preventDefault(), !b || !b.player || b.player.id === A.idol)) {
                             e.next = 10;
                             break;
                           }
-                          if (!(g.coins < 200) || ("" === g.idol && null === g.idol)) {
+                          if (!(A.coins < 200) || ("" === A.idol && null === A.idol)) {
                             e.next = 6;
                             break;
                           }
-                          v("Not enough coins", { appearance: "error" }), (e.next = 8);
+                          y("Not enough coins", { appearance: "error" }), (e.next = 8);
                           break;
                         case 6:
                           return (
                             (e.next = 8),
                             _(
                               "/api/chooseIdol",
-                              JSON.stringify({ playerId: f.player.id, playerName: f.player.name })
+                              JSON.stringify({ playerId: b.player.id, playerName: b.player.name })
                             ).then(
                               (function () {
                                 var e = Object(E.a)(
@@ -9451,22 +9452,22 @@
                                       for (;;)
                                         switch ((e.prev = e.next)) {
                                           case 0:
-                                            a.ok && a.status && 200 === a.status && f && f.player
+                                            a.ok && a.status && 200 === a.status && b && b.player
                                               ? (!1,
-                                                "" === g.idol || null === g.idol
-                                                  ? (A(Object(I.a)(Object(I.a)({}, g), {}, { idol: f.player.id })), !0)
-                                                  : g.coins >= 200 &&
-                                                    (A(
+                                                "" === A.idol || null === A.idol
+                                                  ? (N(Object(I.a)(Object(I.a)({}, A), {}, { idol: b.player.id })), !0)
+                                                  : A.coins >= 200 &&
+                                                    (N(
                                                       Object(I.a)(
-                                                        Object(I.a)({}, g),
+                                                        Object(I.a)({}, A),
                                                         {},
-                                                        { coins: g.coins - 200, idol: f.player.id }
+                                                        { coins: A.coins - 200, idol: b.player.id }
                                                       )
                                                     ),
                                                     !0),
-                                                v(f.player.name + " is now your idol.", { appearance: "success" }))
+                                                y(b.player.name + " is now your idol.", { appearance: "success" }))
                                               : a.json().then(function (e) {
-                                                  v(e.message || "Error", { appearance: "error" });
+                                                  y(e.message || "Error", { appearance: "error" });
                                                 });
                                           case 1:
                                           case "end":
@@ -9485,7 +9486,7 @@
                           e.next = 11;
                           break;
                         case 10:
-                          v("Insufficient coins!", { appearance: "error" });
+                          y("Insufficient coins!", { appearance: "error" });
                         case 11:
                         case "end":
                           return e.stop();
@@ -9497,17 +9498,18 @@
                 return e.apply(this, arguments);
               };
             })(),
-            F = !1;
-          (2 !== (null === (a = i.sim) || void 0 === a ? void 0 : a.phase) &&
-            4 !== (null === (t = i.sim) || void 0 === t ? void 0 : t.phase)) ||
-            null === i ||
-            void 0 === i ||
-            null === (C = i.schedule) ||
-            void 0 === C ||
-            C.forEach(function (e) {
-              e.gameComplete || (F = !0);
+            j = !1;
+          (2 !== (null === (a = m.sim) || void 0 === a ? void 0 : a.phase) &&
+            4 !== (null === (t = m.sim) || void 0 === t ? void 0 : t.phase) &&
+            10 !== (null === (n = m.sim) || void 0 === n ? void 0 : n.phase)) ||
+            null === m ||
+            void 0 === m ||
+            null === (R = m.schedule) ||
+            void 0 === R ||
+            R.forEach(function (e) {
+              e.gameComplete || (j = !0);
             });
-          var j = (function (e, a) {
+          var H = (function (e, a) {
               if (void 0 === e) return !1;
               var t =
                   e.permAttr.includes(a) || e.seasAttr.includes(a) || e.weekAttr.includes(a) || e.gameAttr.includes(a),
@@ -9518,37 +9520,37 @@
                   return a.id === e.armor;
                 });
               return n && n.attr === a && (t = !0), r && r.attr === a && (t = !0), t;
-            })(null === f || void 0 === f ? void 0 : f.player, "NON_IDOLIZED"),
-            H = g.idol,
-            V =
-              void 0 === (null === f || void 0 === f ? void 0 : f.player) ? (
+            })(null === b || void 0 === b ? void 0 : b.player, "NON_IDOLIZED"),
+            V = A.idol,
+            q =
+              void 0 === (null === b || void 0 === b ? void 0 : b.player) ? (
                 <pe />
               ) : (
                 <o.a.Fragment>
                   <div className="Player-Info">
                     <div className="Player-Header">
-                      <div className="Player-Header-Name">{f.player.name}</div>
+                      <div className="Player-Header-Name">{b.player.name}</div>
                       <div className="Player-Header-Bottom">
                         <div className="Player-Team-Line">
                           <div
                             className="Player-Team-Logo"
-                            style={{ background: void 0 !== f.team ? f.team.mainColor : "#999999" }}
+                            style={{ background: void 0 !== b.team ? b.team.mainColor : "#999999" }}
                           >
                             <div className="Player-Team-Emoji">
-                              {String.fromCodePoint(Number(void 0 !== f.team ? f.team.emoji : "0x2753"))}
+                              {String.fromCodePoint(Number(void 0 !== b.team ? b.team.emoji : "0x2753"))}
                             </div>
                           </div>
-                          <div className="Player-Team-Name">{void 0 !== f.team ? f.team.fullName : "Null Team"}</div>
+                          <div className="Player-Team-Name">{void 0 !== b.team ? b.team.fullName : "Null Team"}</div>
                         </div>
-                        {x(i.sim, "UNLOCKED_IDOLS") ? (
+                        {x(m.sim, "UNLOCKED_IDOLS") ? (
                           <Y.a className="Player-Button">
-                            {(F || j) && H !== f.player.id ? (
+                            {(j || H) && V !== b.player.id ? (
                               <div className="Idol-Disabled-Tooltip">
                                 <Te.a
                                   placement="right"
                                   overlay={
                                     <we.a id="tooltip-disabled" className="Idol-Disabled-Tooltip">
-                                      {F
+                                      {j
                                         ? "You can't choose an Idol while games are active."
                                         : "This player cannot be Idolized."}
                                     </we.a>
@@ -9561,7 +9563,7 @@
                                       className="Player-Button-Idol"
                                       variant="dark"
                                     >
-                                      {"" === H || null === H ? (
+                                      {"" === V || null === V ? (
                                         <o.a.Fragment>
                                           <J.qb /> Choose Idol
                                         </o.a.Fragment>
@@ -9574,14 +9576,14 @@
                                   </span>
                                 </Te.a>
                               </div>
-                            ) : H === f.player.id ? (
+                            ) : V === b.player.id ? (
                               <div className="Player-Button-Idol-Current">
                                 <J.qb /> Your Idol
                               </div>
                             ) : (
-                              <de.a className="Player-Button-Form" onSubmit={W}>
+                              <de.a className="Player-Button-Form" onSubmit={F}>
                                 <U.a className="Player-Button-Idol" type="submit" variant="success">
-                                  {"" === H || null === H ? (
+                                  {"" === V || null === V ? (
                                     <o.a.Fragment>
                                       <J.qb /> Choose Idol
                                     </o.a.Fragment>
@@ -9600,8 +9602,8 @@
                       </div>
                     </div>
                   </div>
-                  {G}
                   {D}
+                  {W}
                   <div className="Player-Content">
                     <ul className="Player-Info-Stats">
                       <div className="Player-Info-Line">
@@ -9671,8 +9673,8 @@
                             </span>
                           );
                         })(
-                          f.player,
-                          void 0 !== (null === (n = i.sim) || void 0 === n ? void 0 : n.day) ? i.sim.day : -1
+                          b.player,
+                          void 0 !== (null === (l = m.sim) || void 0 === l ? void 0 : l.day) ? m.sim.day : -1
                         )}
                       </div>
                       <div className="Player-Info-Line">
@@ -9690,7 +9692,7 @@
                                 Math.pow(1 - e.patheticism, 0.05) *
                                 Math.pow(e.martyrdom, 0.02)
                               );
-                            })(f.player)
+                            })(b.player)
                           )}
                         </div>
                       </div>
@@ -9710,7 +9712,7 @@
                                 );
                               })(e)
                             );
-                          })(f.player)}
+                          })(b.player)}
                         </div>
                       </div>
                       <div className="Player-Info-Line">
@@ -9728,7 +9730,7 @@
                                 );
                               })(e)
                             );
-                          })(f.player)}
+                          })(b.player)}
                         </div>
                       </div>
                       <div className="Player-Info-Line">
@@ -9746,7 +9748,7 @@
                                 );
                               })(e)
                             );
-                          })(f.player)}
+                          })(b.player)}
                         </div>
                       </div>
                     </ul>
@@ -9763,12 +9765,12 @@
                                 return a.id === e.bat;
                               });
                               return void 0 === a ? "None?" : a.name;
-                            })(f.player)}
+                            })(b.player)}
                           </div>
                           <div className="Player-Info-Items-Icon">
                             {(function (e) {
                               return void 0 === e || void 0 === e.bat || e.bat, null;
-                            })(f.player)}
+                            })(b.player)}
                           </div>
                         </div>
                       </div>
@@ -9784,12 +9786,12 @@
                                 return a.id === e.armor;
                               });
                               return void 0 === a ? "None?" : a.name;
-                            })(f.player)}
+                            })(b.player)}
                           </div>
                           <div className="Player-Info-Items-Icon">
                             {(function (e) {
                               return void 0 === e || void 0 === e.armor || e.armor, null;
-                            })(f.player)}
+                            })(b.player)}
                           </div>
                         </div>
                       </div>
@@ -9801,7 +9803,7 @@
                       </div>
                       <div className="Player-Info-Line">
                         <div className="Player-Info-Line-Header">Pregame Ritual</div>
-                        <div className="Player-Info-Line-Body">{f.player.ritual}</div>
+                        <div className="Player-Info-Line-Body">{b.player.ritual}</div>
                       </div>
                       <div className="Player-Info-Line">
                         <div className="Player-Info-Line-Header">Coffee Style</div>
@@ -9836,7 +9838,7 @@
                                 return "Anything";
                             }
                             return "Coffee?";
-                          })(f.player.coffee)}
+                          })(b.player.coffee)}
                         </div>
                       </div>
                       <div className="Player-Info-Line">
@@ -9872,12 +9874,12 @@
                                 return "Grass";
                             }
                             return "Blood?";
-                          })(f.player.blood)}
+                          })(b.player.blood)}
                         </div>
                       </div>
                       <div className="Player-Info-Line">
                         <div className="Player-Info-Line-Header">Fate</div>
-                        <div className="Player-Info-Line-Body">{f.player.fate}</div>
+                        <div className="Player-Info-Line-Body">{b.player.fate}</div>
                       </div>
                       <div className="Player-Info-Line">
                         <div className="Player-Info-Line-Header">Soulscream</div>
@@ -9901,13 +9903,13 @@
                               <div className="Player-Soulscream-Body">{a}</div>
                             </div>
                           );
-                        })(f.player)}
+                        })(b.player)}
                       </div>
                     </ul>
                   </div>
                 </o.a.Fragment>
               );
-          return <Z {...Object.assign({}, e, { className: "Player" })}>{V}</Z>;
+          return <Z {...Object.assign({}, e, { className: "Player" })}>{q}</Z>;
         },
         kn =
           (t(137),
