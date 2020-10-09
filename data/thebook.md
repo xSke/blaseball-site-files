@@ -11,10 +11,17 @@
 * d. A season should start on a "Monday" and therefore conclude on a "Friday".
 
 ### 2. Postseasons
-* a. Each Postseason of Blaseball shall consist of 8 teams. These teams shall be the 4 best teams from each league, regardless of division. Teams will be ranked by their total wins over the season. In the case of ties, teams shall be chosen based on their Divine Favor. See:  Divine Favor
-* b. The Postseason should start early on a "Saturday" and conclude within the same day. If the Postseason lasts into the following day, no `||||| shall be ||||||||, and both teams shall be |||||||||| |||||||| ||||||||||||.`
-* c. Postseason rounds should be played in best 3 of 5 game series.
-* d. The home team in each Postseason game shall be `the |||||||||||, if the |||||||||||||||||||.`
+* AMENDMENT. As per the Wild Card Decree, the Postseason has been Amended as follows:
+* a. Each Postseason of Blaseball shall consist of 10 teams.
+* b. The 2 Division Winners from each Sub-League will receive a Postseason Birth.
+* c. The next 2 Runnerups from each Sub-League will receive a Postseason Birth based on regular season standings, regardless of Division.
+* d. At the end of the regular season, 1 Wild Card will be drawn at random from each Sub-League and will be removed from Party Time to receive a Postseason Birth.
+* e. Following the Wild Card draw, all Postseason teams will be seeded 1-5 in their Sub-League according to regular season standings.
+* f. The 4 and 5 Seeds shall play in the Wild Card Round, a best 2 of 3 game series.
+* g. All other Postseason series shall be best 3 of 5.
+* h. The home team in each Postseason game shall be `the |||||||||||, if the |||||||||||||||||||.`
+* i. The Wild Card Round should take place shortly after the end of the regular season. One full `|||||` hour shall be skipped, and then the Round shall begin at the top of the next available `|||||` hour.
+* j. The Postseason shall continue early on a "Saturday" and conclude within the same day. If the Postseason lasts into the following day, no `||||| shall be ||||||||, and both teams shall be |||||||||| |||||||| ||||||||||||.`
 
 ### 3. Elections
 * a. Participants should be allowed to Vote on the rules, rosters, and other effects of the game of Blaseball. `The content of such Votes shall be ||||||||||||||| ||||||||||||||||||| ||||||||| entertainment`.
@@ -23,20 +30,25 @@
 * c. `||||||||||||||||||` may occur at the end of an Election, before Decrees and Blessings are processed. `Anything can happen here`. Good luck.
 * d. Elections should end on a "Sunday," although Votes should be able to be cast on any day of the week.
 
-### 4. Playing the Game
+### 4. Teams
+* a. Teams are a `|||||||||| || players` bound by `| |||||| |||||||||| |||| ||||||`. Names, colors, icons, and slogans are `||||||||||| |||||||||||| || ||| |||| |||||| || ||||| |||||||||||||` in order for the Fans `to find them palatable.`
+* b. A Team's roster is built of four sections: Lineup, Rotation, `Bench`, and `Bullpen`. The Lineup and Rotation make up a Team's Active Roster, and the `Bench` and `Bullpen` make up a Team's Shadows. A Team's Shadows cannot be accessed unless directly specified, or through direct selection from a public interface.
+* c. Teams may choose `|| |||| ||||| ||||| || ||||||||, a |||||| |||||` to contain and represent their `||||||`. The Fans may shape `|||| |||||| as they` uncover and decipher `their ||||' ||||||.`
+
+### 5. Playing the Game
 * a. The game of Blaseball should be played between two teams.
 * b. Each game should take place `at the home team's stadium` on the immaterial plane.
 * c. Weather: `The home team's stadium should determine the weather.` In the case that `||||||||||||||||||||`, a Solar Eclipse shall last until `||||||||||||||||||||`
 * d. There are `two positions` in Blaseball, `||||||||||||||||||||.`
 * e. When a team is on Defense, `all of the team's ||||||| will stand ||||||||| out in the field. Doesn't really matter where.`
-* f. The pitcher must throw the ball `with their hands.`
+* f. The pitcher must throw the ball `with their hands.`, unless `that doesn't make sense.`
 * g. Once the ball is in play, `||| |||| || ||| |||||||||| ||||| |||||||||| the outcome of the play. ||| |||| ||||||| || ||||||||||||||||` immaterial plane `|||||||||||||| ||||||| ||||||| ||||||||| ||||||||||||||| |||||||||||||||| |||||||| |||||||| unfathomable.`
 * h. The team with the most runs will win the game.
 * i. Shame Phase: If the home team scores the winning run in the bottom of the final inning, the away team must complete the game in shame, despite being mathematically eliminated.
 * j. `||||||||||||||||||||||`
 * k. Crying in Blaseball is `||||||||||.`
 
-### 5. `The Gods` and You
+### 6. `The Gods` and You
 * a. Should the Participants open the Forbidden Book, `The Discipline Era should begin||||||||||||||||||||||` suffering `upon the league. Players shall be ` banished `at the ||||||||||| ||||||||| |||| ||||||||||||||||.` The Discipline Era shall last until `the Participants have` atoned.
 * b. If a team wins three championships, they, and Blaseball, shall ascend.
 * c. When teams are sent to `||||||||||| |||||||||||||`, they shall return once `|||||||||||||||| |||||||||||||||||||||| |||||||||||||`
@@ -47,7 +59,7 @@
 * f. Sunglasses `shall be |||||||||| ||||||||||||| |||||||||||||||||. They shall provide |||||||||||||| may be ||||||||||||||||||||.`
 * g. Splortsmanship, splortsmanship, is BACK.
 
-### 6. `||||||||||||`
+### 7. `||||||||||||`
 * a. It is known `that the intention of the game of Blaseball |||||||||||||||||||||||| |||||||||||||||||||| |||||||||||||| |||||||||||||||||| ||||||||||| |||||||||| would be diminished.`
 * b. `|||||||`: Several entities in the `||||||||||||||` shall be chosen `||||||||||` to bring Blaseball to the people `|||||||||||||||||| ||||||||||||||||||`
 * c. It is known that the majority of the icons on the site are sourced from Game-Icons.net. `||||||||` thank the authors immensely. Individual author credits coming soon.

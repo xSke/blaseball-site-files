@@ -672,7 +672,7 @@
             textColor: "#5988ff",
             background: "#163073",
             title: "Squiddish",
-            description: "",
+            description: "This player is a wee bit Squiddish.",
           },
           {
             id: "CRUNCHY",
@@ -680,7 +680,7 @@
             textColor: "#f5eb5d",
             background: "#de8123",
             title: "Crunchy",
-            description: "",
+            description: "This player is very Crunchy.",
           },
           {
             id: "REPEATING",
@@ -696,7 +696,7 @@
             textColor: "#d16f6f",
             background: "#2e2f33",
             title: "Subjection",
-            description: "",
+            description: "This player has been Subjected to the control of a great Power.",
           },
           {
             id: "LIBERATED",
@@ -1625,14 +1625,14 @@
                   <de.a.Group className="Bet-Form-Teams" controlId="team">
                     <G
                       id={S.homeTeam}
-                      color={S.homeTeamColor}
+                      color={S.homeTeamSecondaryColor}
                       modifier="Home"
                       name={S.homeTeamNickname}
                       odds={S.homeOdds}
                     />
                     <G
                       id={S.awayTeam}
-                      color={S.awayTeamColor}
+                      color={S.awayTeamSecondaryColor}
                       modifier="Away"
                       name={S.awayTeamNickname}
                       odds={S.awayOdds}
@@ -3525,81 +3525,53 @@
         );
       }
       function Ea(e, a) {
-        var t = Object(r.useContext)(De.context);
+        var t = Object(r.useContext)(De.context),
+          n = Object(c.g)();
         return void 0 === t
           ? null
           : null === a || void 0 === a
           ? void 0
-          : a.map(function (a, n) {
-              var r = a.homeTeam
+          : a.map(function (a, r) {
+              var l = a.homeTeam
                   ? t.teams.find(function (e) {
                       return e.id === a.homeTeam;
                     })
                   : void 0,
-                l = a.awayTeam
+                i = a.awayTeam
                   ? t.teams.find(function (e) {
                       return e.id === a.awayTeam;
                     })
                   : void 0;
-              if (void 0 === r && void 0 === l) return null;
-              var i = null !== a.homeSeed ? a.homeSeed : void 0,
-                s = null !== a.awaySeed ? a.awaySeed : void 0;
-              return void 0 === l ? (
-                <div className="PlayoffSetup-Matchup" key={n}>
-                  <div className="PlayoffSetup-MatchupTeam-Group">
+              if (void 0 === l && void 0 === i) return null;
+              var s = null !== a.homeSeed ? a.homeSeed : void 0,
+                c = null !== a.awaySeed ? a.awaySeed : void 0;
+              return void 0 === i && l ? (
+                <div className="PlayoffSetup-Matchup" key={r}>
+                  <u background={n} path={"/team/".concat(l.id)} className="PlayoffSetup-MatchupTeam-Group">
                     <div className="PlayoffSetup-MatchupTeam-Info">
-                      {void 0 !== i ? <div className="PlayoffSetup-Seed">{i + 1}</div> : null}
-                      {r ? (
-                        <div className="PlayoffSetup-MatchupTeam-Icon" style={{ background: r.mainColor }}>
-                          {String.fromCodePoint(Number(r.emoji))}
+                      {void 0 !== s ? <div className="PlayoffSetup-Seed">{s + 1}</div> : null}
+                      {l ? (
+                        <div className="PlayoffSetup-MatchupTeam-Icon" style={{ background: l.mainColor }}>
+                          {String.fromCodePoint(Number(l.emoji))}
                         </div>
                       ) : null}
                       <div className="PlayoffSetup-MatchupTeam">
-                        <div className="PlayoffSetup-MatchupTeam-Location">
-                          {null === r || void 0 === r ? void 0 : r.location} 
-                        </div>
-                        <div className="PlayoffSetup-MatchupTeam-Nickname">
-                          {null === r || void 0 === r ? void 0 : r.nickname}
-                        </div>
+                        <div className="PlayoffSetup-MatchupTeam-Location">{l.location} </div>
+                        <div className="PlayoffSetup-MatchupTeam-Nickname">{l.nickname}</div>
                       </div>
                     </div>
                     <div className="PlayoffSetup-MatchupTeam-Info">
                       <div className="PlayoffSetup-Bye">idling...</div>
                     </div>
-                  </div>
+                  </u>
                 </div>
               ) : (
-                <div className="PlayoffSetup-Matchup" key={n}>
-                  <div className="PlayoffSetup-MatchupTeam-Group">
-                    <div className="PlayoffSetup-MatchupTeam-Info">
-                      {void 0 !== i ? <div className="PlayoffSetup-Seed">{i + 1}</div> : null}
-                      {r ? (
-                        <div className="PlayoffSetup-MatchupTeam-Icon" style={{ background: r.mainColor }}>
-                          {String.fromCodePoint(Number(r.emoji))}
-                        </div>
-                      ) : null}
-                      {r ? (
-                        <div className="PlayoffSetup-MatchupTeam">
-                          <div className="PlayoffSetup-MatchupTeam-Location">{r.location} </div>
-                          <div className="PlayoffSetup-MatchupTeam-Nickname">{r.nickname}</div>
-                        </div>
-                      ) : (
-                        <div className="PlayoffSetup-Bye">idling...</div>
-                      )}
-                    </div>
-                    <div className="PlayoffSetup-MatchupTeam-Info">
-                      <div
-                        className={
-                          a.homeWins === pa(e)
-                            ? "PlayoffSetup-MatchupTeam-WinsComplete"
-                            : "PlayoffSetup-MatchupTeam-Wins"
-                        }
-                      >
-                        {a.homeWins}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="PlayoffSetup-MatchupTeam-Group">
+                <div className="PlayoffSetup-Matchup" key={r}>
+                  <u
+                    background={n}
+                    path={"/team/".concat(null === l || void 0 === l ? void 0 : l.id)}
+                    className="PlayoffSetup-MatchupTeam-Group"
+                  >
                     <div className="PlayoffSetup-MatchupTeam-Info">
                       {void 0 !== s ? <div className="PlayoffSetup-Seed">{s + 1}</div> : null}
                       {l ? (
@@ -3619,6 +3591,39 @@
                     <div className="PlayoffSetup-MatchupTeam-Info">
                       <div
                         className={
+                          a.homeWins === pa(e)
+                            ? "PlayoffSetup-MatchupTeam-WinsComplete"
+                            : "PlayoffSetup-MatchupTeam-Wins"
+                        }
+                      >
+                        {a.homeWins}
+                      </div>
+                    </div>
+                  </u>
+                  <u
+                    background={n}
+                    path={"/team/".concat(null === i || void 0 === i ? void 0 : i.id)}
+                    className="PlayoffSetup-MatchupTeam-Group"
+                  >
+                    <div className="PlayoffSetup-MatchupTeam-Info">
+                      {void 0 !== c ? <div className="PlayoffSetup-Seed">{c + 1}</div> : null}
+                      {i ? (
+                        <div className="PlayoffSetup-MatchupTeam-Icon" style={{ background: i.mainColor }}>
+                          {String.fromCodePoint(Number(i.emoji))}
+                        </div>
+                      ) : null}
+                      {i ? (
+                        <div className="PlayoffSetup-MatchupTeam">
+                          <div className="PlayoffSetup-MatchupTeam-Location">{i.location} </div>
+                          <div className="PlayoffSetup-MatchupTeam-Nickname">{i.nickname}</div>
+                        </div>
+                      ) : (
+                        <div className="PlayoffSetup-Bye">idling...</div>
+                      )}
+                    </div>
+                    <div className="PlayoffSetup-MatchupTeam-Info">
+                      <div
+                        className={
                           a.awayWins === pa(e)
                             ? "PlayoffSetup-MatchupTeam-WinsComplete"
                             : "PlayoffSetup-MatchupTeam-Wins"
@@ -3627,7 +3632,7 @@
                         {a.awayWins}
                       </div>
                     </div>
-                  </div>
+                  </u>
                 </div>
               );
             });
@@ -3843,7 +3848,7 @@
               return e.id === (null === (a = t.postseason.playoffs) || void 0 === a ? void 0 : a.winner);
             });
             if (void 0 === l) return null;
-            var i = void 0 !== l ? l.mainColor : "#ffffff",
+            var i = void 0 !== l ? l.secondaryColor : "#ffffff",
               s = void 0 !== l ? l.fullName : "",
               c =
                 void 0 !== l ? (
@@ -7051,7 +7056,7 @@
         });
         if (void 0 === i) return null;
         var s = void 0 !== l.sim ? l.sim.season : -1,
-          c = void 0 !== i ? i.mainColor : "#ffffff",
+          c = void 0 !== i ? i.secondaryColor : "#ffffff",
           m = void 0 !== i ? i.fullName : "",
           u =
             void 0 !== i ? (
@@ -8361,21 +8366,43 @@
             </div>
             <div className="TheBook-Line TheBook-Bullet">2. Postseasons</div>
             <div className="TheBook-Line TheBook-SubBullet">
-              a. Each Postseason of Blaseball shall consist of 8 teams. These teams shall be the 4 best teams from each
-              league, regardless of division. Teams will be ranked by their total wins over the season. In the case of
-              ties, teams shall be chosen based on their Divine Favor. <i>See: </i> Divine Favor
+              AMENDMENT. As per the Wild Card Decree, the Postseason has been Amended as follows:
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              b. The Postseason should start early on a "Saturday" and conclude within the same day. If the Postseason
+              a. Each Postseason of Blaseball shall consist of 10 teams.
+            </div>
+            <div className="TheBook-Line TheBook-SubBullet">
+              b. The 2 Division Winners from each Sub-League will receive a Postseason Birth.
+            </div>
+            <div className="TheBook-Line TheBook-SubBullet">
+              c. The next 2 Runnerups from each Sub-League will receive a Postseason Birth based on regular season
+              standings, regardless of Division.
+            </div>
+            <div className="TheBook-Line TheBook-SubBullet">
+              d. At the end of the regular season, 1 Wild Card will be drawn at random from each Sub-League and will be
+              removed from Party Time to receive a Postseason Birth.
+            </div>
+            <div className="TheBook-Line TheBook-SubBullet">
+              e. Following the Wild Card draw, all Postseason teams will be seeded 1-5 in their Sub-League according to
+              regular season standings.
+            </div>
+            <div className="TheBook-Line TheBook-SubBullet">
+              f. The 4 and 5 Seeds shall play in the Wild Card Round, a best 2 of 3 game series.
+            </div>
+            <div className="TheBook-Line TheBook-SubBullet">g. All other Postseason series shall be best 3 of 5.</div>
+            <div className="TheBook-Line TheBook-SubBullet">
+              h. The home team in each Postseason game shall be{" "}
+              <bn str="the |||||||||||, if the |||||||||||||||||||." />
+            </div>
+            <div className="TheBook-Line TheBook-SubBullet">
+              i. The Wild Card Round should take place shortly after the end of the regular season. One full{" "}
+              <bn str="|||||" /> hour shall be skipped, and then the Round shall begin at the top of the next available{" "}
+              <bn str="|||||" /> hour.
+            </div>
+            <div className="TheBook-Line TheBook-SubBullet">
+              j. The Postseason shall continue early on a "Saturday" and conclude within the same day. If the Postseason
               lasts into the following day, no{" "}
               <bn str="||||| shall be ||||||||, and both teams shall be |||||||||| |||||||| ||||||||||||." />
-            </div>
-            <div className="TheBook-Line TheBook-SubBullet">
-              c. Postseason rounds should be played in best 3 of 5 game series.
-            </div>
-            <div className="TheBook-Line TheBook-SubBullet">
-              d. The home team in each Postseason game shall be{" "}
-              <bn str="the |||||||||||, if the |||||||||||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-Bullet">3. Elections</div>
             <div className="TheBook-Line TheBook-SubBullet">
@@ -8400,7 +8427,25 @@
             <div className="TheBook-Line TheBook-SubBullet">
               d. Elections should end on a "Sunday," although Votes should be able to be cast on any day of the week.
             </div>
-            <div className="TheBook-Line TheBook-Bullet">4. Playing the Game</div>
+            <div className="TheBook-Line TheBook-Bullet">4. Teams</div>
+            <div className="TheBook-Line TheBook-SubBullet">
+              a. Teams are a <bn str="|||||||||| || players" /> bound by <bn str="| |||||| |||||||||| |||| ||||||" />.
+              Names, colors, icons, and slogans are{" "}
+              <bn str="||||||||||| |||||||||||| || ||| |||| |||||| || ||||| |||||||||||||" /> in order for the Fans{" "}
+              <bn str="to find them palatable." />
+            </div>
+            <div className="TheBook-Line TheBook-SubBullet">
+              b. A Team's roster is built of four sections: Lineup, Rotation, <bn str="Bench" />, and{" "}
+              <bn str="Bullpen" />. The Lineup and Rotation make up a Team's Active Roster, and the <bn str="Bench" />{" "}
+              and <bn str="Bullpen" /> make up a Team's Shadows. A Team's Shadows cannot be accessed unless directly
+              specified, or through direct selection from a public interface.
+            </div>
+            <div className="TheBook-Line TheBook-SubBullet">
+              c. Teams may choose <bn str="|| |||| ||||| ||||| || ||||||||, a |||||| |||||" /> to contain and represent
+              their <bn str="||||||" />. The Fans may shape <bn str="|||| |||||| as they" /> uncover and decipher{" "}
+              <bn str="their ||||' ||||||." />
+            </div>
+            <div className="TheBook-Line TheBook-Bullet">5. Playing the Game</div>
             <div className="TheBook-Line TheBook-SubBullet">
               a. The game of Blaseball should be played between two teams.
             </div>
@@ -8419,7 +8464,8 @@
               <bn str="all of the team's ||||||| will stand ||||||||| out in the field. Doesn't really matter where." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
-              f. The pitcher must throw the ball <bn str="with their hands." />
+              f. The pitcher must throw the ball <bn str="with their hands." />, unless{" "}
+              <bn str="that doesn't make sense." />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               g. Once the ball is in play,{" "}
@@ -8439,7 +8485,7 @@
               k. Crying in Blaseball is <bn str="||||||||||." />
             </div>
             <div className="TheBook-Line TheBook-Bullet">
-              5. <bn str="The Gods" /> and You
+              6. <bn str="The Gods" /> and You
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               a. Should the Participants open the Forbidden Book,{" "}
@@ -8480,7 +8526,7 @@
             </div>
             <div className="TheBook-Line TheBook-SubBullet">g. Splortsmanship, splortsmanship, is BACK.</div>
             <div className="TheBook-Line TheBook-Bullet">
-              6. <bn str="||||||||||||" />
+              7. <bn str="||||||||||||" />
             </div>
             <div className="TheBook-Line TheBook-SubBullet">
               a. It is known{" "}
