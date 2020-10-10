@@ -9042,6 +9042,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .DailySchedule-Number:last-child {
   margin-right: 0;
 }
+.DailySchedule-Number-Red {
+  background-color: red;
+}
 .DailySchedule-Body {
   margin: 5px;
   font-family: "Lora", "Courier New", monospace, serif;
@@ -9602,12 +9605,6 @@ input[type="number"]::-webkit-outer-spin-button {
   line-height: 20px;
   padding: 0 12px;
   border-radius: 5px;
-}
-.st0 {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 4;
-  stroke-miterlimit: 10;
 }
 @media (max-width: 1080px) {
   .GameWidget {
@@ -13928,6 +13925,7 @@ button:focus-visible {
   flex-direction: column;
   align-items: center;
   color: #fff;
+  height: 50vh;
 }
 .BigDeal-Icon {
   position: relative;
@@ -13988,6 +13986,10 @@ button:focus-visible {
   font-family: "Lora", "Courier New", monospace, serif;
   font-weight: 700;
   margin: 0 20px;
+}
+.BigDeal-RedLine-None {
+  color: #fff;
+  font-style: italic;
 }
 .BigDeal-RedLine-One {
   color: red;
@@ -14608,29 +14610,20 @@ button:focus-visible {
 .FAQ-Return svg {
   margin: 5px 5px 10px;
 }
-.TeamLogo {
-  border-radius: 50%;
-  height: 44px;
-  width: 44px;
-  font-size: 26px;
-  justify-content: center;
-}
-.SeasonEnd,
-.TeamLogo {
-  display: flex;
-  align-items: center;
-}
 .SeasonEnd {
   max-width: 550px;
   margin: auto;
   flex-direction: column;
 }
+.SeasonEnd,
 .SeasonEnd-Header {
   display: flex;
+  align-items: center;
+}
+.SeasonEnd-Header {
   font-weight: 700;
   font-size: 32px;
   padding-top: 20px;
-  align-items: center;
 }
 .SeasonEnd-Body,
 .SeasonEnd-Header {
@@ -14655,5 +14648,1004 @@ button:focus-visible {
 @media (max-width: 768px) {
   .GodsDay {
     width: 100%;
+  }
+}
+.TeamLogo {
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  font-size: 26px;
+}
+.BossFightWidget,
+.TeamLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.BossFightWidget {
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+.BossFightWidget-Container {
+  width: 100%;
+}
+.BossFightWidget-Weather {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.BossFightWidget-Weather-Feedback {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(/static/media/microphone.20fbca42.png);
+  background-size: 100px;
+  -webkit-animation: scrollLeftTop 5s linear infinite;
+  animation: scrollLeftTop 5s linear infinite;
+}
+.BossFightWidget-Weather-Reverb {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(/static/media/big-wave.56bea94d.png);
+  background-size: 130px;
+  -webkit-animation: scrollRight 3s linear infinite;
+  animation: scrollRight 3s linear infinite;
+}
+.BossFightWidget-Weather-Peanuts {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/static/media/peanut.959714e3.png);
+  background-size: 75px;
+  -webkit-animation: scrollDown 3s linear infinite;
+  animation: scrollDown 3s linear infinite;
+}
+.BossFightWidget-Weather-Birds {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(/static/media/bird-claw.2a18ca38.png);
+  background-size: 100px;
+  -webkit-animation: scrollRightTop 5s linear infinite;
+  animation: scrollRightTop 5s linear infinite;
+}
+.BossFightWidget-Weather-Blooddrain {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(/static/media/raining.29414524.png);
+  background-size: 100px;
+  -webkit-animation: scrollRightBottom 5s linear infinite;
+  animation: scrollRightBottom 5s linear infinite;
+}
+.BossFightWidget-Weather-SolarEclipse {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/static/media/spiky-eclipse.3e054d93.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  -webkit-animation: sizeChange 15s linear infinite;
+  animation: sizeChange 15s linear infinite;
+}
+.BossFightWidget-Enemy {
+  display: flex;
+  flex-direction: column;
+  margin: 85px 0 20px;
+  align-items: center;
+  opacity: 1;
+}
+.BossFightWidget-Enemy-Icon {
+  position: relative;
+  height: auto;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.BossFightWidget-Enemy-Icon svg {
+  -webkit-animation-name: spinny;
+  animation-name: spinny;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+  height: 40vh;
+  width: 40vh;
+}
+.BossFightWidget-Enemy-Body {
+  max-width: 550px;
+  margin: 40px 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.BossFightWidget-Enemy-RedLine {
+  text-align: center;
+  height: 50px;
+  font-size: 32px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+  margin: 10px 20px 0;
+  color: red;
+}
+.BossFightWidget-Names {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 15px;
+}
+.BossFightWidget-Names-Wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 10px 20px;
+  background: #111;
+  width: 100%;
+}
+.BossFightWidget-Names-Spirit {
+  margin-top: 5px;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+}
+.BossFightWidget-SpiritBar {
+  background-color: rgba(30, 30, 30, 0.64);
+  border-radius: 50px;
+  height: 1rem;
+  font-size: 0.75rem;
+}
+.BossFightWidget-Button {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  height: 32px;
+  display: flex;
+  border-radius: 30px;
+  white-space: nowrap;
+  align-items: center;
+  border: 1px solid #fff !important;
+}
+.BossFightWidget-Button:not(:first-child) {
+  border-left: none;
+}
+.BossFightWidget-Button:hover {
+  border: 1px solid #fff;
+}
+.BossFightWidget-Button-Wrapper {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  align-items: center;
+  flex-direction: row;
+}
+.BossFightWidget-Full-Live {
+  display: grid;
+  grid-gap: 10px;
+  gap: 10px;
+  width: 100%;
+}
+.BossFightWidget-Full-Upcoming {
+  display: grid;
+  grid-template-columns: 38% calc(32% - 20px) 30%;
+  grid-gap: 10px;
+  gap: 10px;
+}
+.BossFightWidget-Display,
+.BossFightWidget-Display-Visual {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #111;
+  overflow: hidden;
+}
+.BossFightWidget-Display-Body {
+  display: grid;
+  padding: 10px;
+  grid-gap: 10px;
+  gap: 10px;
+  grid-template-columns: 120px auto;
+}
+.BossFightWidget-Display-Body .BossFightWidget-Bases {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.BossFightWidget-Display-Body .BossFightWidget-Outs {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.BossFightWidget-Display-Body .BossFightWidget-AtBat {
+  justify-content: center;
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.BossFightWidget-Display-Body .BossFightWidget-Log {
+  display: none;
+}
+.BossFightWidget-Outcome {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #111;
+  overflow: hidden;
+  padding: 5px;
+}
+.BossFightWidget-Outcome-Blurb {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  height: 100%;
+  padding: 10px 0;
+}
+.BossFightWidget-Outcome-Callout {
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: -2px;
+  white-space: nowrap;
+}
+.BossFightWidget-Header {
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: rgba(30, 30, 30, 0.64);
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.BossFightWidget-Header-Wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #111;
+  align-self: stretch;
+  padding-bottom: 10px;
+}
+.BossFightWidget-ScoreBacking {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px 0 10px 10px;
+}
+.BossFightWidget-ScoreLine {
+  display: grid;
+  grid-template-columns: 60px auto 25%;
+  grid-gap: 10px;
+  gap: 10px;
+  width: 100%;
+  margin: 5px 0;
+  align-items: center;
+}
+.BossFightWidget-SpiritDamage {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  align-self: flex-end;
+  line-height: 1.4em;
+  overflow-wrap: break-word;
+}
+.BossFightWidget-ScoreTeamColorBar {
+  display: flex;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 29px;
+  justify-content: center;
+  align-items: center;
+  line-height: 1em;
+}
+.BossFightWidget-ScoreTeam {
+  display: flex;
+  flex-direction: column;
+}
+.BossFightWidget-ScoreTeamInfo {
+  display: flex;
+  flex-direction: row;
+}
+.BossFightWidget-WinChance,
+.BossFightWidget-WinChance-WithBet {
+  margin-left: 20px;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.BossFightWidget-ScoreName {
+  font-size: 20px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  line-height: 1em;
+}
+.BossFightWidget-ScoreName-Shake-Small {
+  -webkit-animation: shake-small 8s none;
+  animation: shake-small 8s none;
+}
+.BossFightWidget-ScoreName-Shake-Medium {
+  -webkit-animation: shake-medium 8s none;
+  animation: shake-medium 8s none;
+}
+.BossFightWidget-ScoreName-Shake-Large {
+  -webkit-animation: shake-large 8s none;
+  animation: shake-large 8s none;
+}
+.BossFightWidget-ScoreRecord,
+.BossFightWidget-ScoreRecord-WithBet {
+  display: flex;
+  font-size: 16px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  color: #aaa;
+}
+.BossFightWidget-ScoreNumber {
+  display: flex;
+  font-size: 24px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.BossFightWidget-StatusBar {
+  display: flex;
+  flex-direction: row;
+  height: 32px;
+}
+.BossFightWidget-Status {
+  display: flex;
+  padding: 0 8px;
+  height: 100%;
+  border-radius: 5px;
+  align-items: center;
+}
+.BossFightWidget-Status--Live {
+  background: green;
+}
+.BossFightWidget-Status--Complete {
+  background: red;
+}
+.BossFightWidget-Status--Upcoming {
+  background: #9a9531;
+}
+.BossFightWidget-Status--Shame {
+  background: #800878;
+}
+.BossFightWidget-ScoreLabel {
+  padding: 8px;
+}
+.BossFightWidget-Bases {
+  display: flex;
+  width: 110px;
+  margin-right: 10px;
+}
+.BossFightWidget-Bases.first #base1,
+.BossFightWidget-Bases.second #base2,
+.BossFightWidget-Bases.third #base3 {
+  fill: #fff;
+}
+.BossFightWidget-Bases svg {
+  height: 100%;
+  width: 100%;
+}
+.BossFightWidget-Outs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 auto;
+}
+.BossFightWidget-Outs-Label {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  width: 60px;
+}
+.BossFightWidget-Outs-DotList {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10px;
+}
+.BossFightWidget-Outs-Dots {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 32px;
+  height: 52px;
+  color: #fff;
+}
+.BossFightWidget-Outs-Row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 24px;
+}
+.BossFightWidget-Log {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #111;
+  border-radius: 5px;
+  overflow: hidden;
+  min-height: 135px;
+}
+.BossFightWidget-Log-Container {
+  width: 100%;
+  margin-top: 10px;
+  align-items: stretch;
+  display: grid;
+  grid-template-columns: 35% auto;
+  grid-gap: 10px;
+  gap: 10px;
+}
+.BossFightWidget-Log-Header {
+  width: 100%;
+  height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: rgba(30, 30, 30, 0.64);
+}
+.BossFightWidget-Log-Content {
+  padding: 10px;
+  overflow-y: scroll;
+  height: 100%;
+  min-height: 50px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  align-self: stretch;
+  border-radius: 5px;
+}
+.BossFightWidget-Log-Damage {
+  margin-top: 10px;
+}
+.BossFightWidget-Log-Damage-Large-Heal,
+.BossFightWidget-Log-Damage-Large-Hurt,
+.BossFightWidget-Log-Damage-Medium-Heal,
+.BossFightWidget-Log-Damage-Medium-Hurt,
+.BossFightWidget-Log-Damage-Small-Heal,
+.BossFightWidget-Log-Damage-Small-Hurt {
+  line-height: 20px;
+  white-space: nowrap;
+  margin-right: 5px;
+}
+.BossFightWidget-Log-Damage-Large-Heal,
+.BossFightWidget-Log-Damage-Large-Hurt {
+  font-size: 26px;
+}
+.BossFightWidget-Log-Damage-Medium-Heal,
+.BossFightWidget-Log-Damage-Medium-Hurt {
+  font-size: 24px;
+}
+.BossFightWidget-Log-Damage-Small-Heal,
+.BossFightWidget-Log-Damage-Small-Hurt {
+  font-size: 20px;
+}
+.BossFightWidget-Log-Damage-Large-Hurt {
+  color: red;
+}
+.BossFightWidget-Log-Damage-Medium-Hurt {
+  color: #ff7007;
+}
+.BossFightWidget-Log-Damage-Small-Hurt {
+  color: #ffc107;
+}
+.BossFightWidget-Log-Damage-Large-Heal {
+  color: #02ff00;
+}
+.BossFightWidget-Log-Damage-Medium-Heal {
+  color: #7cff2c;
+}
+.BossFightWidget-Log-Damage-Small-Heal {
+  color: #cbff32;
+}
+.BossFightWidget-Loading {
+  width: 100%;
+  height: 160px;
+  background-color: #000;
+  margin: 0 0 20px;
+}
+.BossFightWidget-AtBat {
+  display: flex;
+  flex-direction: column;
+}
+.BossFightWidget-PlayerLine {
+  display: flex;
+  line-height: 32px;
+  align-items: center;
+  justify-content: space-between;
+}
+.BossFightWidget-PlayerStatusLabel {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.BossFightWidget-PlayerStatusIcon {
+  height: 32px;
+  width: 32px;
+  flex-shrink: 0;
+  margin-right: 10px;
+  display: none;
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.BossFightWidget-PlayerStatusIcon--Pitching {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAG0mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjAtMDQtMjdUMDE6NDc6MDItMDc6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmE0M2JhMTNkLTdhMDgtNDY4ZC04NmRjLTczYzU1OWI0OWQzNSIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjc3MDY0YWNmLTY2ODUtZTU0NC1iZjZhLWJlMGYxNjFhZGI5ZSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjExMmQ1MzYzLWY2ODEtNDM3NS1iZmIwLTY4ODNhZjljZjI0NSI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6MTEyZDUzNjMtZjY4MS00Mzc1LWJmYjAtNjg4M2FmOWNmMjQ1IiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAxOjQ3OjAyLTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZjAxMDU0YzgtM2I2OC00MDBjLWFiMmYtYmQwM2QxNmQ0NjdkIiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAxOjUzOjQ1LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YTQzYmExM2QtN2EwOC00NjhkLTg2ZGMtNzNjNTU5YjQ5ZDM1IiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBl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);
+}
+.BossFightWidget-PlayerStatusIcon--Batting {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFIGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjAtMDQtMjdUMDE6NDc6MzktMDc6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIwLTA0LTI3VDAxOjUyOjI2LTA3OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTA0LTI3VDAxOjUyOjI2LTA3OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmU4ZDlhZmI3LWIz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);
+}
+.BossFightWidget-PlayerLineLabel {
+  font-size: 14px;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.BossFightWidget-PlayerLineNameWrapper {
+  font-size: 14px;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  line-height: 20px;
+  padding: 0 12px;
+  border-radius: 5px;
+}
+.st0 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+}
+@-webkit-keyframes shake-small {
+  0% {
+    transform: translate(2px);
+  }
+  1% {
+    transform: translate(-2px);
+  }
+  2% {
+    transform: translate(2px);
+  }
+  3% {
+    transform: translate(-2px);
+  }
+  4% {
+    transform: translate(2px);
+  }
+  5% {
+    transform: translate(-2px);
+  }
+  6% {
+    transform: translate(0);
+  }
+}
+@keyframes shake-small {
+  0% {
+    transform: translate(2px);
+  }
+  1% {
+    transform: translate(-2px);
+  }
+  2% {
+    transform: translate(2px);
+  }
+  3% {
+    transform: translate(-2px);
+  }
+  4% {
+    transform: translate(2px);
+  }
+  5% {
+    transform: translate(-2px);
+  }
+  6% {
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes shake-medium {
+  0% {
+    transform: translate(4px);
+  }
+  1% {
+    transform: translate(-4px);
+  }
+  2% {
+    transform: translate(4px);
+  }
+  3% {
+    transform: translate(-4px);
+  }
+  4% {
+    transform: translate(4px);
+  }
+  5% {
+    transform: translate(-4px);
+  }
+  6% {
+    transform: translate(0);
+  }
+}
+@keyframes shake-medium {
+  0% {
+    transform: translate(4px);
+  }
+  1% {
+    transform: translate(-4px);
+  }
+  2% {
+    transform: translate(4px);
+  }
+  3% {
+    transform: translate(-4px);
+  }
+  4% {
+    transform: translate(4px);
+  }
+  5% {
+    transform: translate(-4px);
+  }
+  6% {
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes shake-large {
+  0% {
+    transform: translate(6px);
+  }
+  1% {
+    transform: translate(-6px);
+  }
+  2% {
+    transform: translate(6px);
+  }
+  3% {
+    transform: translate(-6px);
+  }
+  4% {
+    transform: translate(6px);
+  }
+  5% {
+    transform: translate(-6px);
+  }
+  6% {
+    transform: translate(0);
+  }
+}
+@keyframes shake-large {
+  0% {
+    transform: translate(6px);
+  }
+  1% {
+    transform: translate(-6px);
+  }
+  2% {
+    transform: translate(6px);
+  }
+  3% {
+    transform: translate(-6px);
+  }
+  4% {
+    transform: translate(6px);
+  }
+  5% {
+    transform: translate(-6px);
+  }
+  6% {
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes scrollRightBottom {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px 100px;
+  }
+}
+@keyframes scrollRightBottom {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px 100px;
+  }
+}
+@-webkit-keyframes scrollDown {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 75px;
+  }
+}
+@keyframes scrollDown {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 75px;
+  }
+}
+@-webkit-keyframes sizeChange {
+  0% {
+    background-size: 50%;
+  }
+  50% {
+    background-size: 75%;
+  }
+  to {
+    background-size: 50%;
+  }
+}
+@keyframes sizeChange {
+  0% {
+    background-size: 50%;
+  }
+  50% {
+    background-size: 75%;
+  }
+  to {
+    background-size: 50%;
+  }
+}
+@-webkit-keyframes scrollRight {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 130px 0;
+  }
+}
+@keyframes scrollRight {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 130px 0;
+  }
+}
+@-webkit-keyframes scrollRightTop {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px -100px;
+  }
+}
+@keyframes scrollRightTop {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px -100px;
+  }
+}
+@-webkit-keyframes scrollLeftTop {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100px -100px;
+  }
+}
+@keyframes scrollLeftTop {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100px -100px;
+  }
+}
+@media (max-width: 1080px) {
+  .BossFightWidget {
+    border-radius: 5px;
+    width: 95%;
+  }
+  .BossFightWidget-Container {
+    background: #111;
+  }
+  .BossFightWidget-Enemy svg {
+    height: 30vh;
+    width: 30vh;
+  }
+  .BossFightWidget-SpiritDamage {
+    font-size: 12px;
+  }
+  .BossFightWidget-SpiritBar {
+    font-size: 0.7rem;
+    height: 0.75rem;
+  }
+  .BossFightWidget-Full-Live {
+    grid-template-columns: 100%;
+    grid-gap: 0;
+    gap: 0;
+  }
+  .BossFightWidget-Full-Upcoming {
+    grid-template-columns: 40% auto;
+  }
+  .BossFightWidget-Display-Visual {
+    margin: 0;
+    grid-row: 2/4;
+    flex-direction: column;
+    padding: 0 10px 10px;
+    background: transparent;
+  }
+  .BossFightWidget-Display-Body {
+    padding: 0;
+    width: 100%;
+  }
+  .BossFightWidget-Display-Body .BossFightWidget-Bases {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .BossFightWidget-Display-Body .BossFightWidget-Outs {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .BossFightWidget-Display-Body .BossFightWidget-AtBat {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .BossFightWidget-Display-Body .BossFightWidget-Log {
+    display: block;
+    min-height: 92px;
+    background-color: rgba(30, 30, 30, 0.64);
+    padding: 5px 10px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 14px;
+  }
+  .BossFightWidget-Outcome {
+    grid-column: 1/3;
+    background-color: rgba(30, 30, 30, 0.64);
+    border-radius: 0;
+  }
+  .BossFightWidget-Upcoming-Info {
+    grid-column: 1/3;
+    margin-left: 0;
+    background-color: transparent;
+  }
+  .BossFightWidget-Upcoming-Odds {
+    grid-template-columns: 100%;
+  }
+  .BossFightWidget-Upcoming-OddsTeam {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .BossFightWidget-Upcoming-Favorites-Team {
+    font-size: 14px;
+  }
+  .BossFightWidget-Upcoming-Favorites-Percentage {
+    font-size: 18px;
+  }
+  .BossFightWidget-Upcoming-Full {
+    grid-column: 1/3;
+    grid-gap: 10px;
+    gap: 10px;
+    grid-template-columns: 100%;
+  }
+  .BossFightWidget-Upcoming-Header {
+    display: none;
+  }
+  .BossFightWidget-Upcoming-Body {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .BossFightWidget-Upcoming-Body
+    .BossFightWidget-PlayerLine
+    + .BossFightWidget-PlayerLine {
+    margin-left: 10px;
+  }
+  .BossFightWidget-Upcoming-Label {
+    display: none;
+  }
+  .BossFightWidget-Upcoming-Icon {
+    display: block;
+    margin-left: 20px;
+  }
+  .BossFightWidget-Header {
+    border-radius: 0;
+  }
+  .BossFightWidget-Header-Wrapper {
+    grid-column: 1/3;
+  }
+  .BossFightWidget-WinChance-WithBet {
+    margin: 0;
+  }
+  .BossFightWidget-ScoreBacking {
+    padding: 10px;
+  }
+  .BossFightWidget-ScoreRecord-WithBet {
+    display: none;
+  }
+  .BossFightWidget-ScoreName {
+    font-size: 16px;
+  }
+  .BossFightWidget-ScoreNumber {
+    margin: 0 8px 0 0;
+  }
+  .BossFightWidget-ScoreLine {
+    grid-template-columns: 40px auto 54px;
+    grid-gap: 5px;
+    gap: 5px;
+  }
+  .BossFightWidget-ScoreLabel--Series + .BossFightWidget-ScoreLabel--Score {
+    display: none;
+  }
+  .BossFightWidget-ScoreTeamColorBar {
+    width: 35px;
+    height: 35px;
+    font-size: 22px;
+  }
+  .BossFightWidget-AtBat {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .BossFightWidget-Outs {
+    justify-content: flex-start;
+  }
+  .BossFightWidget-Outs-Label {
+    font-size: 12px;
+  }
+  .BossFightWidget-Outs-DotList {
+    align-items: flex-start;
+    height: 85%;
+  }
+  .BossFightWidget-Outs-Dots {
+    font-size: 24px;
+    line-height: 14px;
+  }
+  .BossFightWidget-Log {
+    display: none;
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  .BossFightWidget-Log-Header {
+    display: none;
+  }
+  .BossFightWidget-Log-Container {
+    display: block;
+  }
+  .BossFightWidget-Log-Content {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .BossFightWidget-Log-Damage-Large-Heal,
+  .BossFightWidget-Log-Damage-Large-Hurt {
+    font-size: 20px;
+  }
+  .BossFightWidget-Log-Damage-Medium-Heal,
+  .BossFightWidget-Log-Damage-Medium-Hurt {
+    font-size: 18px;
+  }
+  .BossFightWidget-Log-Damage-Small-Heal,
+  .BossFightWidget-Log-Damage-Small-Hurt {
+    font-size: 16px;
+  }
+  .BossFightWidget-PlayerLine {
+    justify-content: flex-start;
+  }
+  .BossFightWidget-PlayerStatusLabel {
+    display: none;
+  }
+  .BossFightWidget-PlayerStatusIcon {
+    display: block;
+  }
+  .BossFightWidget-PlayerLineName {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 2px 0;
+  }
+  .BossFightWidget.IsComplete .BossFightWidget-Log {
+    display: none;
   }
 }
