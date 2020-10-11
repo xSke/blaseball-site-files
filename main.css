@@ -11984,7 +11984,7 @@ button:focus-visible {
 }
 #root .Team-Player-Line {
   display: grid;
-  grid-template-columns: auto 120px 120px;
+  grid-template-columns: auto 100px 140px;
   grid-template-rows: 30px;
   align-items: center;
   margin: 0 -40px;
@@ -12000,7 +12000,7 @@ button:focus-visible {
 }
 #root .Team-Player-Line-Blank {
   display: grid;
-  grid-template-columns: auto 120px 120px;
+  grid-template-columns: auto 100px 140px;
   grid-template-rows: 30px;
   align-items: center;
   margin: 0 -40px;
