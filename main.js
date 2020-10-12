@@ -936,8 +936,8 @@
         },
         d = t(3),
         h = t.n(d),
-        E = t(6),
-        p =
+        p = t(6),
+        E =
           (null ===
             (n = Object({
               NODE_ENV: "production",
@@ -975,7 +975,7 @@
           i = n[1];
         return (
           Object(r.useEffect)(function () {
-            var e = new EventSource(p + "streamData");
+            var e = new EventSource(E + "streamData");
             y(e, i),
               (e.onmessage = function (e) {
                 var a = JSON.parse(e.data).value,
@@ -983,13 +983,13 @@
                 i(t), v.dispatch(t);
               });
             setInterval(
-              Object(E.a)(
+              Object(p.a)(
                 h.a.mark(function a() {
                   return h.a.wrap(function (a) {
                     for (;;)
                       switch ((a.prev = a.next)) {
                         case 0:
-                          e.close(), y((e = new EventSource(p + "streamData")), i);
+                          e.close(), y((e = new EventSource(E + "streamData")), i);
                         case 3:
                         case "end":
                           return a.stop();
@@ -1009,7 +1009,7 @@
       A.context = g;
       var N,
         T = A,
-        w = o.a.createContext({
+        S = o.a.createContext({
           sim: void 0,
           standings: void 0,
           season: void 0,
@@ -1025,7 +1025,7 @@
             tomorrowRound: void 0,
           },
         }),
-        S = function (e) {
+        w = function (e) {
           var a = e.children,
             t = Object(r.useState)({
               sim: void 0,
@@ -1058,12 +1058,12 @@
                 }
               );
             }, []),
-            (<w.Provider value={l}>{a}</w.Provider>)
+            (<S.Provider value={l}>{a}</S.Provider>)
           );
         };
-      S.context = w;
-      var O = S,
-        B = t(7),
+      w.context = S;
+      var B = w,
+        O = t(7),
         I = {
           id: "",
           email: "",
@@ -1085,7 +1085,7 @@
         k = { user: I, clearUser: function () {}, initUser: function () {}, setUser: function () {} },
         C = Object(r.createContext)(k),
         R = function (e) {
-          var a = Object(B.a)(Object(B.a)({}, e), {}, { id: e.id, isFetching: !1, isSignedIn: !(!e || !e.email) });
+          var a = Object(O.a)(Object(O.a)({}, e), {}, { id: e.id, isFetching: !1, isSignedIn: !(!e || !e.email) });
           return (
             a.votes || (a.votes = 0),
             void 0 === a.maxBetTier && (a.maxBetTier = 0),
@@ -1104,7 +1104,7 @@
             l = n[0],
             i = n[1],
             c = Object(r.useCallback)(
-              Object(E.a)(
+              Object(p.a)(
                 h.a.mark(function e() {
                   return h.a.wrap(function (e) {
                     for (;;)
@@ -1118,7 +1118,7 @@
                               })
                               .then(
                                 (function () {
-                                  var e = Object(E.a)(
+                                  var e = Object(p.a)(
                                     h.a.mark(function e(a) {
                                       var t;
                                       return h.a.wrap(function (e) {
@@ -1139,7 +1139,7 @@
                                 })()
                               )
                               .catch(function (e) {
-                                var a = Object(B.a)(Object(B.a)({}, l), {}, { isFetching: !1 });
+                                var a = Object(O.a)(Object(O.a)({}, l), {}, { isFetching: !1 });
                                 i(a), console.log(e);
                               })
                           );
@@ -1172,8 +1172,8 @@
         };
       L.context = C;
       var F = L,
-        Q = o.a.createContext([]),
-        P = function (e) {
+        D = o.a.createContext([]),
+        Q = function (e) {
           var a = e.children,
             t = Object(c.g)().pathname,
             n = Object(r.useState)({}),
@@ -1203,11 +1203,11 @@
               },
               [t]
             ),
-            (<Q.Provider value={i}>{a}</Q.Provider>)
+            (<D.Provider value={i}>{a}</D.Provider>)
           );
         };
-      P.context = Q;
-      var D = P,
+      Q.context = D;
+      var P = Q,
         W = t(30);
       function G(e) {
         var a,
@@ -1219,7 +1219,7 @@
           );
         throw new Error("Bad Hex");
       }
-      function M() {
+      function x() {
         var e = [0],
           a = new Date();
         if ((a.setMinutes(a.getMinutes() + 1, 0, 0), 0 == e.length)) return a;
@@ -1233,7 +1233,7 @@
         }
         return a;
       }
-      function x(e, a) {
+      function M(e, a) {
         if (void 0 === e) return !1;
         for (var t = 0; t < e.attr.length; t++) if (e.attr[t] === a) return !0;
         return !1;
@@ -1304,13 +1304,13 @@
             transform: n ? "translate(-50%, -50%)" : "none",
             from: { opacity: 0, transform: n ? "translate(-50%, -40%)" : "none" },
           }),
-          E = "Modal";
+          p = "Modal";
         switch (m) {
           case U.GENERIC:
-            E += " Modal--Generic";
+            p += " Modal--Generic";
         }
-        var p = (
-          <q.a.div style={h} className={E + (n ? "" : " Modal--Static") + (l ? " ".concat(l) : "")} ref={u}>
+        var E = (
+          <q.a.div style={h} className={p + (n ? "" : " Modal--Static") + (l ? " ".concat(l) : "")} ref={u}>
             {s && n && (
               <button
                 className="Modal-Close"
@@ -1332,11 +1332,11 @@
                 !s || (u && u.current && u.current.contains(e.target)) || d();
               }}
             >
-              {p}
+              {E}
             </div>
           );
         }
-        return p;
+        return E;
       };
       z.defaultProps = { dismissable: !0, style: U.GENERIC };
       var Z,
@@ -1370,7 +1370,7 @@
         return ae.apply(this, arguments);
       }
       function ae() {
-        return (ae = Object(E.a)(
+        return (ae = Object(p.a)(
           h.a.mark(function e() {
             var a, t;
             return h.a.wrap(
@@ -1401,7 +1401,7 @@
         return ne.apply(this, arguments);
       }
       function ne() {
-        return (ne = Object(E.a)(
+        return (ne = Object(p.a)(
           h.a.mark(function e() {
             var a, t;
             return h.a.wrap(
@@ -1432,7 +1432,7 @@
         return oe.apply(this, arguments);
       }
       function oe() {
-        return (oe = Object(E.a)(
+        return (oe = Object(p.a)(
           h.a.mark(function e(a) {
             var t, n;
             return h.a.wrap(
@@ -1465,7 +1465,7 @@
         return ie.apply(this, arguments);
       }
       function ie() {
-        return (ie = Object(E.a)(
+        return (ie = Object(p.a)(
           h.a.mark(function e(a) {
             var t, n;
             return h.a.wrap(
@@ -1496,7 +1496,7 @@
         return ce.apply(this, arguments);
       }
       function ce() {
-        return (ce = Object(E.a)(
+        return (ce = Object(p.a)(
           h.a.mark(function e(a) {
             var t, n;
             return h.a.wrap(
@@ -1527,7 +1527,7 @@
         return ue.apply(this, arguments);
       }
       function ue() {
-        return (ue = Object(E.a)(
+        return (ue = Object(p.a)(
           h.a.mark(function e(a) {
             var t, n;
             return h.a.wrap(
@@ -1556,8 +1556,8 @@
       }
       var de = t(18),
         he = t(13),
-        Ee = t(14),
-        pe =
+        pe = t(14),
+        Ee =
           (t(99),
           function () {
             return (
@@ -1567,7 +1567,7 @@
             );
           }),
         fe = function () {
-          return <div className="LoadingSpinner">{100 * Math.random() < 99 ? <K.a /> : <V.cb />}</div>;
+          return <div className="LoadingSpinner">{100 * Math.random() < 99 ? <K.a /> : <V.eb />}</div>;
         };
       t(100), t(43);
       function be(e, a) {
@@ -1587,9 +1587,9 @@
             u = Object(s.a)(m, 2),
             d = u[0],
             h = u[1],
-            E = Object(c.h)().gameId,
-            p = Object(r.useState)(0),
-            f = Object(s.a)(p, 2),
+            p = Object(c.h)().gameId,
+            E = Object(r.useState)(0),
+            f = Object(s.a)(E, 2),
             b = f[0],
             v = f[1],
             g = Object(r.useState)(""),
@@ -1597,10 +1597,10 @@
             A = y[0],
             N = y[1],
             T = Object(r.useState)(void 0),
-            w = Object(s.a)(T, 2),
-            S = w[0],
-            I = w[1],
-            k = Object(r.useContext)(O.context),
+            S = Object(s.a)(T, 2),
+            w = S[0],
+            I = S[1],
+            k = Object(r.useContext)(B.context),
             C = function (e) {
               var a = e.target.value;
               v(a);
@@ -1613,28 +1613,28 @@
                   null === (e = k.schedule) || void 0 === e
                     ? void 0
                     : e.find(function (e) {
-                        return E === e.id;
+                        return p === e.id;
                       });
               void 0 === t &&
                 (t =
                   null === (a = k.tomorrowSchedule) || void 0 === a
                     ? void 0
                     : a.find(function (e) {
-                        return E === e.id;
+                        return p === e.id;
                       })),
                 t && I(t);
             }, []),
-            void 0 === S)
+            void 0 === w)
           )
             return <fe />;
-          var R = Math.min(Ee.maxBetTiers[n.maxBetTier].amount, n.coins),
+          var R = Math.min(pe.maxBetTiers[n.maxBetTier].amount, n.coins),
             L = function () {
-              return S ? (A === S.homeTeam ? S.homeOdds : S.awayOdds) : 0.5;
+              return w ? (A === w.homeTeam ? w.homeOdds : w.awayOdds) : 0.5;
             },
-            Q = function (e) {
+            D = function (e) {
               N(e);
             };
-          var P = function (e) {
+          var Q = function (e) {
               var a = e.id,
                 t = e.modifier,
                 n = e.color,
@@ -1647,10 +1647,10 @@
                     .concat(t, " ")
                     .concat(A === a ? "is-selected" : A ? "is-not-selected" : "")}
                   onClick={function (e) {
-                    return Q(a);
+                    return D(a);
                   }}
                   onKeyDown={function (e) {
-                    return "Enter" === e.key ? Q(a) : null;
+                    return "Enter" === e.key ? D(a) : null;
                   }}
                   style={i}
                   tabIndex={0}
@@ -1664,7 +1664,7 @@
                 </div>
               );
             },
-            D = (
+            P = (
               <span
                 style={{
                   color: (function (e) {
@@ -1689,7 +1689,7 @@
             A &&
               (G = (
                 <div className="Bet-Outcome-Wrapper">
-                  You'll have a {D} chance to win {W} coins.
+                  You'll have a {P} chance to win {W} coins.
                 </div>
               )),
             (
@@ -1707,16 +1707,16 @@
                         (null === (t = k.tomorrowSchedule) || void 0 === t
                           ? void 0
                           : t.find(function (e) {
-                              return E === e.id;
+                              return p === e.id;
                             }))
                       )
                         return a("Game has already started.", { appearance: "error" }), void i.goBack();
                       h(!0);
-                      var r = { gameId: E, amount: b, userId: n.id, entityId: A, type: "winner" };
+                      var r = { gameId: p, amount: b, userId: n.id, entityId: A, type: "winner" };
                       $("/api/bet", JSON.stringify(r)).then(function (e) {
                         h(!1),
                           e.ok && e.status && 200 === e.status
-                            ? (l(Object(B.a)(Object(B.a)({}, n), {}, { coins: n.coins - b })),
+                            ? (l(Object(O.a)(Object(O.a)({}, n), {}, { coins: n.coins - b })),
                               a("Bet Placed", { appearance: "success" }),
                               i.goBack())
                             : e.json().then(function (e) {
@@ -1728,26 +1728,26 @@
                 >
                   <he.a.Label>Pick a team:</he.a.Label>
                   <he.a.Group className="Bet-Form-Teams" controlId="team">
-                    <P
-                      id={S.homeTeam}
-                      color={S.homeTeamSecondaryColor}
+                    <Q
+                      id={w.homeTeam}
+                      color={w.homeTeamSecondaryColor}
                       modifier="Home"
-                      name={S.homeTeamNickname}
-                      odds={S.homeOdds}
+                      name={w.homeTeamNickname}
+                      odds={w.homeOdds}
                     />
-                    <P
-                      id={S.awayTeam}
-                      color={S.awayTeamSecondaryColor}
+                    <Q
+                      id={w.awayTeam}
+                      color={w.awayTeamSecondaryColor}
                       modifier="Away"
-                      name={S.awayTeamNickname}
-                      odds={S.awayOdds}
+                      name={w.awayTeamNickname}
+                      odds={w.awayOdds}
                     />
                   </he.a.Group>
                   <he.a.Group className={"Bet-Form-Amount ".concat(A ? "" : "is-hidden")} controlId="amount">
                     <he.a.Label>How much do you want to wager?</he.a.Label>
                     <div className="Bet-Form-Inputs-Amount">
                       <div className="Bet-Coin-Wrapper">
-                        <V.Eb className="Bet-Coin-Icon" />
+                        <V.Gb className="Bet-Coin-Icon" />
                         {n.coins}
                       </div>
                       <he.a.Control type="number" value={b} onChange={C} />
@@ -1797,16 +1797,16 @@
           { name: "Solar Eclipse", icon: <ge.i />, background: "#002f3b", color: "#3c6cba" },
           { name: "Glitter", icon: <ge.j />, background: "#ff94ff", color: "#fff98a" },
           { name: "Blooddrain", icon: <ge.f />, background: "#52050f", color: "#ff1f3c" },
-          { name: "Peanuts", icon: <V.cb />, background: "#c4aa70", color: "#423822" },
+          { name: "Peanuts", icon: <V.eb />, background: "#c4aa70", color: "#423822" },
           { name: "Birds", icon: <V.g />, background: "#45235e", color: "#8e5fad" },
-          { name: "Feedback", icon: <V.X />, background: "#383838", color: "#ff007b" },
+          { name: "Feedback", icon: <V.Y />, background: "#383838", color: "#ff007b" },
           { name: "Reverb", icon: <V.f />, background: "#443561", color: "#61b3ff" },
         ];
       function Ae(e) {
         var a = e.type,
           t = ye[a].icon;
         return (
-          <div className="WeatherIcon" style={{ color: Te(a), background: we(a) }}>
+          <div className="WeatherIcon" style={{ color: Te(a), background: Se(a) }}>
             {t}
           </div>
         );
@@ -1817,19 +1817,19 @@
       function Te(e) {
         return ye[e].color;
       }
-      function we(e) {
+      function Se(e) {
         return ye[e].background;
       }
-      var Se = t(25),
-        Oe = t(22);
-      function Be(e) {
+      var we = t(25),
+        Be = t(22);
+      function Oe(e) {
         return e.homeScore;
       }
       function Ie(e) {
         return e.awayScore;
       }
       function ke(e) {
-        var a = Object(r.useContext)(O.context),
+        var a = Object(r.useContext)(B.context),
           t = (function (e, a) {
             var t = 0,
               n = 0,
@@ -1843,7 +1843,7 @@
               homeTeamName: e.homeTeamNickname,
               homeTeamWins: void 0 === t ? "" : t.toString(),
               homeTeamLosses: void 0 === n ? "" : n.toString(),
-              homeTeamScore: Be(e).toString(),
+              homeTeamScore: Oe(e).toString(),
               awayTeamName: e.awayTeamNickname,
               awayTeamWins: void 0 === r ? "" : r.toString(),
               awayTeamLosses: void 0 === o ? "" : o.toString(),
@@ -1859,7 +1859,7 @@
           l = e.data,
           i = e.metaInfo,
           s = Object(r.useContext)(F.context).user,
-          d = Object(r.useContext)(D.context),
+          d = Object(r.useContext)(P.context),
           h = {
             started: (a = l).gameStart,
             complete: a.gameComplete,
@@ -1873,7 +1873,7 @@
             bases: a.topOfInning ? a.awayBases : a.homeBases,
             weather: a.weather,
           },
-          E = (function (e) {
+          p = (function (e) {
             var a, t;
             if (e.complete) (t = "Complete"), (a = "Final" + (e.inning <= 9 ? "" : " (".concat(e.inning + 1, ")")));
             else if (e.started)
@@ -1891,7 +1891,7 @@
               </div>
             );
           })(h),
-          p = (function (e) {
+          E = (function (e) {
             for (var a = [], t = 0; t < 3; t++)
               a.push(
                 <div className="GameWidget-Outs-Dots" key={t}>
@@ -1929,7 +1929,7 @@
           })(h),
           f = l.topOfInning ? l.awayTeamColor : l.homeTeamColor,
           b = l.topOfInning ? l.homeTeamColor : l.awayTeamColor,
-          v = Be(l),
+          v = Oe(l),
           g = Ie(l);
         function y() {
           return l.homeScore > l.awayScore ? l.homeTeam : l.awayTeam;
@@ -1943,7 +1943,7 @@
         function T(e) {
           return e === l.homeTeam ? l.homeTeamNickname : e === l.awayTeam ? l.awayTeamNickname : "Null Team";
         }
-        function w(e) {
+        function S(e) {
           return e === l.homeTeam
             ? l.homeTeamSecondaryColor
             : e === l.awayTeam
@@ -1952,7 +1952,7 @@
         }
         (t = v > g && l.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {}),
           (n = g > v && l.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {});
-        var S = (function (e) {
+        var w = (function (e) {
             for (
               var a = {
                   onFirst: !1,
@@ -1985,15 +1985,15 @@
             }
             return a;
           })(l),
-          O = "";
-        S.onFirst && (O += " first"),
-          S.onSecond && (O += " second"),
-          S.onThird && (O += " third"),
-          S.onFourth && (O += " fourth");
-        var B = 0,
+          B = "";
+        w.onFirst && (B += " first"),
+          w.onSecond && (B += " second"),
+          w.onThird && (B += " third"),
+          w.onFourth && (B += " fourth");
+        var O = 0,
           I = "0 0 255 197";
-        h.bases > 4 && ((B = 30), (I = "0 0 285 197"));
-        var k = <div className="GameWidget-Outs">{p}</div>,
+        h.bases > 4 && ((O = 30), (I = "0 0 285 197"));
+        var k = <div className="GameWidget-Outs">{E}</div>,
           C = Object(c.g)(),
           R =
             h.complete || !h.started ? (
@@ -2036,16 +2036,16 @@
         if (h.started && s.isSignedIn) L = null;
         else if (h.started) L = <div />;
         else if (s.isSignedIn) {
-          var Q,
-            P = d[l.id],
-            W = (null === P || void 0 === P ? void 0 : P.length) || 0,
-            M = W > 0 ? P[0] : void 0;
-          void 0 !== M && (Q = M.entityId === l.homeTeam ? l.homeTeamName : l.awayTeamName),
+          var D,
+            Q = d[l.id],
+            W = (null === Q || void 0 === Q ? void 0 : Q.length) || 0,
+            x = W > 0 ? Q[0] : void 0;
+          void 0 !== x && (D = x.entityId === l.homeTeam ? l.homeTeamName : l.awayTeamName),
             (L = (
               <J.a className="GameWidget-Button-Centered">
                 {W > 0 ? (
                   <div className="GameWidget-UpcomingBet">
-                    <V.Eb /> {W > 0 ? "".concat(M.amount, " on ").concat(Q) : "No active bets"}
+                    <V.Gb /> {W > 0 ? "".concat(x.amount, " on ").concat(D) : "No active bets"}
                   </div>
                 ) : s.coins ? (
                   <Y.a className="GameWidget-Button" variant="success">
@@ -2068,17 +2068,17 @@
               </Y.a>
             </a>
           );
-        var x = null,
+        var M = null,
           j = null,
           H = d[l.id],
           U = ((null === H || void 0 === H ? void 0 : H.length) || 0) > 0 ? H[0] : void 0;
         if (h.started) {
           var K = void 0 !== U ? be(U.odds, U.amount) : 0;
-          (x =
+          (M =
             void 0 !== U && U.entityId === l.homeTeam ? (
               <div className="GameWidget-ScoreBet">
                 <div className="GameWidget-ScoreBet-Bet">
-                  <V.Eb />
+                  <V.Gb />
                   <div className="GameWidget-ScoreBet-Amount">{U.amount}</div>
                 </div>
                 <div className="GameWidget-ScoreBet-Winnings">
@@ -2091,7 +2091,7 @@
               void 0 !== U && U.entityId === l.awayTeam ? (
                 <div className="GameWidget-ScoreBet">
                   <div className="GameWidget-ScoreBet-Bet">
-                    <V.Eb />
+                    <V.Gb />
                     <div className="GameWidget-ScoreBet-Amount">{U.amount}</div>
                   </div>
                   <div className="GameWidget-ScoreBet-Winnings">
@@ -2151,7 +2151,7 @@
               {l.shame ? (
                 <div className="GameWidget-Outcome-Blurb">
                   The  
-                  <span className="GameWidget-Outcome-Callout" style={{ color: w(A()) }}>
+                  <span className="GameWidget-Outcome-Callout" style={{ color: S(A()) }}>
                     {T(A())}
                   </span>
                    were <span className="GameWidget-Outcome-Callout"> shamed!</span>
@@ -2161,11 +2161,11 @@
                 <div className="GameWidget-Outcome-Blurb">
                   You bet{" "}
                   <span className="GameWidget-Outcome-Callout">
-                    <V.Eb />
+                    <V.Gb />
                      {U.amount}
                   </span>
                    on the  
-                  <span className="GameWidget-Outcome-Callout" style={{ color: w(U.entityId) }}>
+                  <span className="GameWidget-Outcome-Callout" style={{ color: S(U.entityId) }}>
                     {T(U.entityId)}
                   </span>
                    and{" "}
@@ -2173,7 +2173,7 @@
                     <span>
                       won{" "}
                       <span className="GameWidget-Outcome-Callout">
-                        <V.Eb />
+                        <V.Gb />
                          {be(U.odds, U.amount)}
                       </span>
                       .
@@ -2202,18 +2202,18 @@
                   {!h.complete && h.started && (
                     <o.a.Fragment>
                       {
-                        ((q = S),
+                        ((q = w),
                         (
-                          <div className={"GameWidget-Bases" + O}>
+                          <div className={"GameWidget-Bases" + B}>
                             <div id="tooltip" style={{ display: "none", position: "absolute" }} />
                             <svg viewBox={I} version="1.1">
-                              <Se.a
+                              <we.a
                                 key="bottom-1"
                                 placement="bottom"
                                 overlay={
-                                  <Oe.a id="tooltip-bottom">
+                                  <Be.a id="tooltip-bottom">
                                     <strong>{q.playerOnFirst}</strong>
-                                  </Oe.a>
+                                  </Be.a>
                                 }
                               >
                                 <g
@@ -2221,16 +2221,16 @@
                                   className="st0"
                                   transform="matrix(0.7071,-0.7071,0.7071,0.7071,-40.4706,152.625)"
                                 >
-                                  <rect x={141.95 + B} y={105.74 + B} width="70.31" height="70.31" />
+                                  <rect x={141.95 + O} y={105.74 + O} width="70.31" height="70.31" />
                                 </g>
-                              </Se.a>
-                              <Se.a
+                              </we.a>
+                              <we.a
                                 key="top"
                                 placement="top"
                                 overlay={
-                                  <Oe.a id="tooltip-bottom">
+                                  <Be.a id="tooltip-bottom">
                                     <strong>{q.playerOnSecond}</strong>
-                                  </Oe.a>
+                                  </Be.a>
                                 }
                               >
                                 <g
@@ -2238,16 +2238,16 @@
                                   className="st0"
                                   transform="matrix(0.7071,-0.7071,0.7071,0.7071,-16.7558,95.4764)"
                                 >
-                                  <rect x={84.83 + B} y={48.54 + B} width="70.31" height="70.31" />
+                                  <rect x={84.83 + O} y={48.54 + O} width="70.31" height="70.31" />
                                 </g>
-                              </Se.a>
-                              <Se.a
+                              </we.a>
+                              <we.a
                                 key="bottom-2"
                                 placement="bottom"
                                 overlay={
-                                  <Oe.a id="tooltip-bottom">
+                                  <Be.a id="tooltip-bottom">
                                     <strong>{q.playerOnThird}</strong>
-                                  </Oe.a>
+                                  </Be.a>
                                 }
                               >
                                 <g
@@ -2255,17 +2255,17 @@
                                   className="st0"
                                   transform="matrix(0.7071,-0.7071,0.7071,0.7071,-74.0296,71.6061)"
                                 >
-                                  <rect x={27.38 + B} y={105.74 + B} width="70.31" height="70.31" />
+                                  <rect x={27.38 + O} y={105.74 + O} width="70.31" height="70.31" />
                                 </g>
-                              </Se.a>
+                              </we.a>
                               {h.bases > 4 ? (
-                                <Se.a
+                                <we.a
                                   key="top-2"
                                   placement="top"
                                   overlay={
-                                    <Oe.a id="tooltip-top">
+                                    <Be.a id="tooltip-top">
                                       <strong>{q.playerOnFourth}</strong>
-                                    </Oe.a>
+                                    </Be.a>
                                   }
                                 >
                                   <g
@@ -2273,9 +2273,9 @@
                                     className="st0"
                                     transform="matrix(0.7071,-0.7071,0.7071,0.7071,-74.0296,71.6061)"
                                   >
-                                    <rect x={27.38 + B} y={25.04 + B} width="70.31" height="70.31" />
+                                    <rect x={27.38 + O} y={25.04 + O} width="70.31" height="70.31" />
                                   </g>
-                                </Se.a>
+                                </we.a>
                               ) : null}
                             </svg>
                           </div>
@@ -2386,7 +2386,7 @@
             <div className={ee}>
               <div className="GameWidget-Header-Wrapper">
                 <div className="GameWidget-Header">
-                  {E}
+                  {p}
                   <div className="GameWidget-ScoreLabel GameWidget-ScoreLabel--Series">{ae}</div>
                 </div>
                 <div className="GameWidget-ScoreBacking">
@@ -2457,7 +2457,7 @@
                                 {Math.round(100 * l.homeOdds)}%
                               </div>
                             )}
-                            {x}
+                            {M}
                           </span>
                         ) : null}
                       </div>
@@ -2488,7 +2488,7 @@
             homeTeamName: e.homeTeamNickname,
             homeTeamWins: void 0 === t ? "" : r ? t.homeWins : t.awayWins,
             homeTeamLosses: void 0 === t ? "" : r ? t.awayWins : t.homeWins,
-            homeTeamScore: Be(e).toString(),
+            homeTeamScore: Oe(e).toString(),
             awayTeamName: e.awayTeamNickname,
             awayTeamWins: void 0 === t ? "" : r ? t.awayWins : t.homeWins,
             awayTeamLosses: void 0 === t ? "" : r ? t.homeWins : t.awayWins,
@@ -2500,8 +2500,8 @@
       t(104);
       var Le,
         Fe = t(58),
-        Qe = t(40),
-        Pe =
+        De = t(40),
+        Qe =
           (t(105),
           function (e) {
             var a = Object(r.useRef)(null),
@@ -2514,9 +2514,9 @@
               u = Object(r.useState)(!1),
               d = Object(s.a)(u, 2),
               h = d[0],
-              E = d[1],
-              p = Object(r.useState)(!1),
-              f = Object(s.a)(p, 2),
+              p = d[1],
+              E = Object(r.useState)(!1),
+              f = Object(s.a)(E, 2),
               b = f[0],
               v = f[1];
             Object(r.useEffect)(function () {
@@ -2534,22 +2534,22 @@
                 e.matches ? v(!0) : v(!1);
               },
               A = function () {
-                clearTimeout(g), E(!0);
+                clearTimeout(g), p(!0);
               },
               N = function () {
                 g = setTimeout(function () {
-                  E(!1);
+                  p(!1);
                 }, 100);
               },
               T = (
-                <Qe.a target={a.current} show={h} placement="bottom">
+                <De.a target={a.current} show={h} placement="bottom">
                   {function (e) {
                     e.placement, e.scheduleUpdate, e.arrowProps, e.outOfBoundaries, e.show;
                     var a = Object(Fe.a)(e, ["placement", "scheduleUpdate", "arrowProps", "outOfBoundaries", "show"]);
                     return (
                       <div
                         {...Object.assign({}, a, {
-                          style: Object(B.a)(Object(B.a)({}, a.style), {}, { top: "12px" }),
+                          style: Object(O.a)(Object(O.a)({}, a.style), {}, { top: "12px" }),
                           className: "Overlay ".concat(i),
                           onMouseOver: A,
                           onMouseOut: N,
@@ -2560,19 +2560,19 @@
                       </div>
                     );
                   }}
-                </Qe.a>
+                </De.a>
               );
             return (
               b &&
                 (T = (
-                  <Qe.a target={a.current} show={h} placement="top">
+                  <De.a target={a.current} show={h} placement="top">
                     {function (e) {
                       e.placement, e.scheduleUpdate, e.arrowProps, e.outOfBoundaries, e.show;
                       var a = Object(Fe.a)(e, ["placement", "scheduleUpdate", "arrowProps", "outOfBoundaries", "show"]);
                       return (
                         <div
                           {...Object.assign({}, a, {
-                            style: Object(B.a)(Object(B.a)({}, a.style), {}, { bottom: "12px" }),
+                            style: Object(O.a)(Object(O.a)({}, a.style), {}, { bottom: "12px" }),
                             className: "Overlay ".concat(i),
                             onMouseOver: A,
                             onMouseOut: N,
@@ -2583,7 +2583,7 @@
                         </div>
                       );
                     }}
-                  </Qe.a>
+                  </De.a>
                 )),
               l ? (
                 <o.a.Fragment>
@@ -2609,7 +2609,7 @@
               )
             );
           }),
-        De = o.a.createContext({ leagues: [], subleagues: [], divisions: [], teams: [], players: [], tiebreakers: [] }),
+        Pe = o.a.createContext({ leagues: [], subleagues: [], divisions: [], teams: [], players: [], tiebreakers: [] }),
         We = function (e) {
           var a = e.children,
             t = Object(r.useState)({
@@ -2635,22 +2635,22 @@
                 }
               );
             }, []),
-            (<De.Provider value={l}>{a}</De.Provider>)
+            (<Pe.Provider value={l}>{a}</Pe.Provider>)
           );
         };
-      We.context = De;
+      We.context = Pe;
       var Ge = We,
-        Me = t(65),
-        xe = function () {
+        xe = t(65),
+        Me = function () {
           var e = Object(r.useContext)(F.context),
             a = e.user,
             t = (e.clearUser, e.setUser),
-            n = (Object(r.useContext)(O.context), Object(r.useContext)(Ge.context)),
+            n = (Object(r.useContext)(B.context), Object(r.useContext)(Ge.context)),
             l = (Object(c.f)(), Object(r.useState)(!1)),
             i = Object(s.a)(l, 2),
             m = i[0],
             d = i[1],
-            p = Object(de.useToasts)().addToast,
+            E = Object(de.useToasts)().addToast,
             f = ["PEANUTS", "EVERYONE LOVES PEANUTS", "CRACK IT OPEN", "CRACK IT OPEN NOW"],
             b = ["SO GOOD", "YUMMY", "SO GREAT"],
             v = Object(r.useRef)(Math.floor(Math.random() * f.length)),
@@ -2672,21 +2672,21 @@
             ),
             T = null;
           if (null !== a.favoriteTeam) {
-            var w = n.teams.find(function (e) {
+            var S = n.teams.find(function (e) {
               return e.id === a.favoriteTeam;
             });
-            if (w) {
-              var S = H(w),
-                I = encodeURIComponent("".concat(w.slogan || "", " ").concat(S, " #blaseball")),
+            if (S) {
+              var w = H(S),
+                I = encodeURIComponent("".concat(S.slogan || "", " ").concat(w, " #blaseball")),
                 k = "http://twitter.com/intent/tweet?text=".concat(I, "&url=https%3A%2F%2Fblaseball.com");
               T = (
                 <a
                   target="_blank"
                   href={k}
-                  style={{ background: w.mainColor }}
+                  style={{ background: S.mainColor }}
                   className="Navigation-FavoriteTeamEmoji"
                 >
-                  {S}
+                  {w}
                 </a>
               );
             }
@@ -2696,24 +2696,24 @@
           null !== a.idol &&
             (R = (
               <u background={C} path={"/player/".concat(a.idol)} className="Navigation-IdolizedPlayer">
-                <V.yb />
+                <V.zb />
               </u>
             ));
           return (
             <o.a.Fragment>
               <div className="Navigation-User-Top">
-                <Pe className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={y} url="/upcoming">
-                  <V.Eb />
+                <Qe className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={y} url="/upcoming">
+                  <V.Gb />
                    {a.coins}
-                </Pe>
+                </Qe>
                 {a.unlockedElection ? (
-                  <Pe className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={A} url="/shop">
-                    <V.Db />
+                  <Qe className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={A} url="/shop">
+                    <V.Eb />
                      {a.votes}
-                  </Pe>
+                  </Qe>
                 ) : null}
                 <div className="Peanut-Container">
-                  <Pe
+                  <Qe
                     className="CoinOverlay"
                     buttonClassname="Navigation-CurrencyButton"
                     content={N}
@@ -2722,7 +2722,7 @@
                         ? void 0
                         : function () {
                             (function () {
-                              var e = Object(E.a)(
+                              var e = Object(p.a)(
                                 h.a.mark(function e() {
                                   var n, r, o;
                                   return h.a.wrap(function (e) {
@@ -2742,7 +2742,7 @@
                                             (e.next = 7),
                                             $("/api/eatADangPeanut", JSON.stringify({ amount: o }))
                                               .then(
-                                                Object(E.a)(
+                                                Object(p.a)(
                                                   h.a.mark(function e() {
                                                     return h.a.wrap(function (e) {
                                                       for (;;)
@@ -2763,23 +2763,23 @@
                                                 )
                                               )
                                               .catch(function (e) {
-                                                p(e, { appearance: "error" });
+                                                E(e, { appearance: "error" });
                                               })
                                               .finally(
-                                                Object(E.a)(
+                                                Object(p.a)(
                                                   h.a.mark(function e() {
                                                     return h.a.wrap(function (e) {
                                                       for (;;)
                                                         switch ((e.prev = e.next)) {
                                                           case 0:
                                                             t(
-                                                              Object(B.a)(
-                                                                Object(B.a)({}, a),
+                                                              Object(O.a)(
+                                                                Object(O.a)({}, a),
                                                                 {},
                                                                 { peanuts: a.peanuts - o }
                                                               )
                                                             ),
-                                                              p(
+                                                              E(
                                                                 "You consumed "
                                                                   .concat(o, " Peanut")
                                                                   .concat(o > 1 ? "s" : "", "."),
@@ -2799,7 +2799,7 @@
                                           e.next = 10;
                                           break;
                                         case 9:
-                                          p("You have no peanuts.", { appearance: "error" });
+                                          E("You have no peanuts.", { appearance: "error" });
                                         case 10:
                                         case "end":
                                           return e.stop();
@@ -2815,11 +2815,11 @@
                     }
                   >
                     <span className="Peanut-Line">
-                      <span className="Peanut-Icon">{m ? "" : <V.cb />}</span> {a.peanuts}
+                      <span className="Peanut-Icon">{m ? "" : <V.eb />}</span> {a.peanuts}
                     </span>
-                  </Pe>
+                  </Qe>
                   <div className={m ? "Peanut-Eating" : "Peanut"}>
-                    <V.cb />
+                    <V.eb />
                   </div>
                 </div>
               </div>
@@ -2849,16 +2849,16 @@
         var a,
           t,
           n,
-          l = Object(r.useContext)(O.context),
+          l = Object(r.useContext)(B.context),
           i = Object(r.useContext)(F.context).user,
           c = Object(r.useState)(!1),
           m = Object(s.a)(c, 2),
           u = m[0],
           d = m[1],
           h = Object(r.useState)(!1),
-          E = Object(s.a)(h, 2),
-          p = E[0],
-          f = E[1],
+          p = Object(s.a)(h, 2),
+          E = p[0],
+          f = p[1],
           b = Object(r.useState)(!1),
           v = Object(s.a)(b, 2),
           g = v[0],
@@ -2870,49 +2870,49 @@
           return (
             e.addListener(T),
             T(e),
-            document.addEventListener("click", w, !1),
+            document.addEventListener("click", S, !1),
             function () {
-              e.removeListener(T), document.removeEventListener("click", w, !1);
+              e.removeListener(T), document.removeEventListener("click", S, !1);
             }
           );
         }, []);
         var T = function (e) {
             e.matches ? f(!0) : f(!1);
           },
-          w = function (e) {
+          S = function (e) {
             A.current && !A.current.contains(e.target) && d(!1), N.current && !N.current.contains(e.target) && y(!1);
           },
-          S = [],
-          B = [];
+          w = [],
+          O = [];
         9 !== (null === (a = l.sim) || void 0 === a ? void 0 : a.phase)
-          ? (S.push({
+          ? (w.push({
               text: "League",
               path: "/",
               subpaths: ["/upcoming", "/standings", "/leaderboard", "/postseason"],
             }),
             i &&
               i.isSignedIn &&
-              (x(l.sim, "WILD_CARDS") ||
-                x(l.sim, "DOUBLE_JUMPS") ||
-                (S.push({ text: "Shop", path: "/shop", locked: !i.unlockedShop }),
-                B.push({ text: "Bulletin", path: "/bulletin" })),
-              S.push({ text: "Election", path: "/offseason", locked: !i.unlockedElection })),
+              (M(l.sim, "WILD_CARDS") ||
+                M(l.sim, "DOUBLE_JUMPS") ||
+                (w.push({ text: "Shop", path: "/shop", locked: !i.unlockedShop }),
+                O.push({ text: "Bulletin", path: "/bulletin" })),
+              w.push({ text: "Election", path: "/offseason", locked: !i.unlockedElection })),
             i &&
               i.isSignedIn &&
-              ((x(l.sim, "WILD_CARDS") || x(l.sim, "DOUBLE_JUMPS")) &&
-                (S.push({ text: "Bulletin", path: "/bulletin" }),
-                B.push({ text: "Shop", path: "/shop", locked: !i.unlockedShop })),
-              B.push({ text: "Book", path: "/thebook" }),
-              x(l.sim, "UNLOCKED_HALL") && B.push({ text: "The Hall", path: "/thehall", glow: !0 })))
-          : S.push({ text: "League", path: "/" });
+              ((M(l.sim, "WILD_CARDS") || M(l.sim, "DOUBLE_JUMPS")) &&
+                (w.push({ text: "Bulletin", path: "/bulletin" }),
+                O.push({ text: "Shop", path: "/shop", locked: !i.unlockedShop })),
+              O.push({ text: "Book", path: "/thebook" }),
+              M(l.sim, "UNLOCKED_HALL") && O.push({ text: "The Hall", path: "/thehall", glow: !0 })))
+          : w.push({ text: "League", path: "/" });
         var I = function () {
             d(!u);
           },
-          k = i.isFetching ? null : i.isSignedIn ? <xe /> : <je />,
+          k = i.isFetching ? null : i.isSignedIn ? <Me /> : <je />,
           C = (
-            <Me.a in={g} timeout={350} classNames="Navigation-Animation" unmountOnExit={!0}>
+            <xe.a in={g} timeout={350} classNames="Navigation-Animation" unmountOnExit={!0}>
               <div className="Navigation-Main">
-                {S.map(function (e, a) {
+                {w.map(function (e, a) {
                   return (
                     <Ue key={a} path={e.path} subpaths={e.subpaths}>
                       {e.text} {e.locked ? <K.c /> : null}
@@ -2924,10 +2924,10 @@
                     <button onClick={I} type="button" className="Navigation-Button">
                       More <K.f />
                     </button>
-                    <Me.a in={u} timeout={350} classNames="Navigation-Animation" unmountOnExit={!0}>
+                    <xe.a in={u} timeout={350} classNames="Navigation-Animation" unmountOnExit={!0}>
                       <div className="Navigation-Dropdown-Content" style={u ? { display: "flex" } : {}}>
                         {u &&
-                          B.map(function (e, a) {
+                          O.map(function (e, a) {
                             return (
                               <Ue key={a} path={e.path} glow={e.glow}>
                                 {e.text}
@@ -2935,15 +2935,15 @@
                             );
                           })}
                       </div>
-                    </Me.a>
+                    </xe.a>
                   </div>
                 ) : null}
               </div>
-            </Me.a>
+            </xe.a>
           ),
           R = (
             <div className="Navigation-Main">
-              {S.map(function (e, a) {
+              {w.map(function (e, a) {
                 return (
                   <Ue key={a} path={e.path} subpaths={e.subpaths}>
                     {e.text} {e.locked ? <K.c /> : null}
@@ -2955,10 +2955,10 @@
                   <button onClick={I} type="button" className="Navigation-Button">
                     More <K.f />
                   </button>
-                  <Me.a in={u} timeout={350} classNames="Navigation-Animation" unmountOnExit={!0}>
+                  <xe.a in={u} timeout={350} classNames="Navigation-Animation" unmountOnExit={!0}>
                     <div className="Navigation-Dropdown-Content" style={u ? { display: "flex" } : {}}>
                       {u &&
-                        B.map(function (e, a) {
+                        O.map(function (e, a) {
                           return (
                             <Ue key={a} path={e.path} glow={e.glow}>
                               {e.text}
@@ -2966,7 +2966,7 @@
                           );
                         })}
                     </div>
-                  </Me.a>
+                  </xe.a>
                 </div>
               ) : null}
             </div>
@@ -2980,12 +2980,12 @@
                 }}
                 className="Navigation-Button"
               >
-                <V.I />
+                <V.J />
               </button>
               {k}
             </div>
-            {p ? C : R}
-            {p ? null : <div className="Navigation-User">{k}</div>}
+            {E ? C : R}
+            {E ? null : <div className="Navigation-User">{k}</div>}
           </nav>
         );
       }
@@ -3050,13 +3050,24 @@
             This season is brought to you by{" "}
             <span className="Advertisement-SiteHeader-Callout">
               <a
-                href="https://apps.apple.com/us/app/holovista/id1474114304"
+                href="http://patreon.com/strangescaffold"
                 onClick={function () {
-                  return Ve("HoloVista (MainPage/Title)");
+                  return Ve("Airport Dogs (MainPage/Title)");
                 }}
                 target="_blank"
               >
-                HoloVista
+                An Airport for Aliens
+              </a>
+            </span>{" "}
+            <span className="Advertisement-SiteHeader-Callout">
+              <a
+                href="http://patreon.com/strangescaffold"
+                onClick={function () {
+                  return Ve("Airport Dogs (MainPage/Title)");
+                }}
+                target="_blank"
+              >
+                Currently Run by Dogs
               </a>
             </span>
           </div>
@@ -3081,7 +3092,7 @@
       t(107);
       function qe() {
         var e,
-          a = Object(r.useContext)(O.context);
+          a = Object(r.useContext)(B.context);
         return (
           <o.a.Fragment>
             <Ke />
@@ -3091,7 +3102,7 @@
                   <Ue path="/">Watch Live</Ue>
                   <Ue path="/upcoming">Place Bets</Ue>
                   <Ue path="/standings">Standings</Ue>
-                  {x(a.sim, "UNLOCKED_IDOLS") ? <Ue path="/leaderboard">Idols</Ue> : null}
+                  {M(a.sim, "UNLOCKED_IDOLS") ? <Ue path="/leaderboard">Idols</Ue> : null}
                 </o.a.Fragment>
               ) : null}
             </div>
@@ -3099,7 +3110,7 @@
         );
       }
       function ze() {
-        return x(Object(r.useContext)(O.context).sim, "UNLOCKED_IDOLS") ? (
+        return M(Object(r.useContext)(B.context).sim, "UNLOCKED_IDOLS") ? (
           <o.a.Fragment>
             <div className="LeagueNavigation-Nav">
               <Ue path="/">Standings</Ue>
@@ -3109,7 +3120,7 @@
         ) : null;
       }
       function Ze() {
-        Object(r.useContext)(O.context);
+        Object(r.useContext)(B.context);
         return (
           <o.a.Fragment>
             <Ke />
@@ -3124,7 +3135,7 @@
         );
       }
       function Xe() {
-        Object(r.useContext)(O.context);
+        Object(r.useContext)(B.context);
         return (
           <o.a.Fragment>
             <div className="LeagueNavigation-Nav">
@@ -3271,7 +3282,7 @@
           m = Object(s.a)(c, 2),
           u = m[0],
           d = m[1];
-        function p(e) {
+        function E(e) {
           for (var a = 0; a < l.teams.length; a++) {
             for (var t = l.teams[a], n = 0; n < t.lineup.length; n++) if (t.lineup[n] === e.id) return t;
             for (var r = 0; r < t.rotation.length; r++) if (t.rotation[r] === e.id) return t;
@@ -3283,7 +3294,7 @@
           function () {
             for (var e = [], a = 0; a <= i.length - 1; a++) e.push(i[a].id);
             (function () {
-              var a = Object(E.a)(
+              var a = Object(p.a)(
                 h.a.mark(function a() {
                   var t, n, r, o;
                   return h.a.wrap(function (a) {
@@ -3300,7 +3311,7 @@
                             for (
                               r = function () {
                                 var e = t[o],
-                                  a = p(e),
+                                  a = E(e),
                                   r = i.find(function (a) {
                                     return a.id === e.id;
                                   });
@@ -3332,7 +3343,7 @@
           },
           [i]
         );
-        var f = Object(r.useContext)(O.context);
+        var f = Object(r.useContext)(B.context);
         if (!f || !f.sim) return null;
         void 0 !== f.sim.season && f.sim.season;
         var b = 7 == (null === (e = f.sim) || void 0 === e ? void 0 : e.phase),
@@ -3378,8 +3389,11 @@
         return void 0 !== e.info ? (
           <div className={"Leaderboard-Player-Wrapper" + (e.showIcons ? " Leaderboard-Player-Wrapper-WithIcon" : "")}>
             <div className="Leaderboard-Icon-Wrapper">
-              {e.showIcons && [].includes(e.info.place) ? <V.X className="Leaderboard-Icon-Microphone" /> : null}
-              {e.showIcons && e.monitor ? <V.G className="Leaderboard-Icon-Monitor" /> : null}
+              {e.showIcons && [14].includes(e.info.place) ? <V.Y className="Leaderboard-Icon-Microphone" /> : null}
+              {e.showIcons && [6, 15].includes(e.info.place) ? <ge.i className="Leaderboard-Icon-Eclipse" /> : null}
+              {e.showIcons && [9, 18].includes(e.info.place) ? <ge.f className="Leaderboard-Icon-Blood" /> : null}
+              {e.showIcons && [3, 12].includes(e.info.place) ? <V.g className="Leaderboard-Icon-Birds" /> : null}
+              {e.showIcons && e.monitor ? <V.H className="Leaderboard-Icon-Monitor" /> : null}
             </div>
             <u
               background={i}
@@ -3395,7 +3409,7 @@
                 <div className="Leaderboard-Player-Position">{e.info.place}</div>
                 {e.info.deceased ? <div className="Leaderboard-Player-Deceased-Icon" /> : null}
                 <div className="Leaderboard-Player-Name">
-                  {s.idol === (null === (n = e.info.player) || void 0 === n ? void 0 : n.id) ? <V.yb /> : ""}{" "}
+                  {s.idol === (null === (n = e.info.player) || void 0 === n ? void 0 : n.id) ? <V.zb /> : ""}{" "}
                   {null === (l = e.info.player) || void 0 === l ? void 0 : l.name}
                 </div>
               </div>
@@ -3417,7 +3431,7 @@
       var sa;
       t(110);
       function ca() {
-        var e = Object(r.useContext)(O.context),
+        var e = Object(r.useContext)(B.context),
           a = Object(r.useContext)(Ge.context);
         if (!e || !e.sim || !e.standings) return null;
         if (!a || !a.leagues) return null;
@@ -3524,12 +3538,12 @@
           (e[(e.Standings = 3)] = "Standings"),
           (e[(e.Leaderboard = 4)] = "Leaderboard");
       })(sa || (sa = {}));
-      var Ea = function (e) {
+      var pa = function (e) {
         var a,
           t = e.path,
-          n = Object(r.useContext)(O.context),
+          n = Object(r.useContext)(B.context),
           l = Object(r.useContext)(F.context).user,
-          i = Object(r.useContext)(D.context),
+          i = Object(r.useContext)(P.context),
           s = void 0 === n.schedule;
         function c() {
           switch (t) {
@@ -3585,18 +3599,18 @@
                     })}
               </ul>
             ),
-          E =
+          p =
             void 0 === u || (void 0 !== u && u.length <= 0) ? (
               <div className="DailySchedule-Body">There are no season games scheduled for Day {d + 1}.</div>
             ) : (
               <div>
                 <div className="DailySchedule-Countdown">
-                  {c() === sa.Upcoming ? <aa dateString={M().toString()} /> : null}
+                  {c() === sa.Upcoming ? <aa dateString={x().toString()} /> : null}
                 </div>
                 {h}
               </div>
             ),
-          p = void 0 !== n && void 0 !== n.sim ? n.sim.season : -1;
+          E = void 0 !== n && void 0 !== n.sim ? n.sim.season : -1;
         switch (c()) {
           case sa.Leaderboard:
             m = <oa />;
@@ -3606,12 +3620,12 @@
             break;
           case sa.Live:
           case sa.Upcoming:
-            m = s ? <fe /> : E;
+            m = s ? <fe /> : p;
         }
         return (
           <div>
             <div className="DailySchedule-Header">
-              Season<span className="DailySchedule-Number">{p + 1}</span>Day
+              Season<span className="DailySchedule-Number">{E + 1}</span>Day
               <span className="DailySchedule-Number">{d + 1}</span>
             </div>
             <qe />
@@ -3620,8 +3634,8 @@
         );
       };
       t(111);
-      function pa(e) {
-        var a = Object(r.useContext)(O.context),
+      function Ea(e) {
+        var a = Object(r.useContext)(B.context),
           t = a.postseason.round,
           n = a.postseason.allRounds;
         if (void 0 === n || void 0 === t) return null;
@@ -3650,7 +3664,7 @@
         );
       }
       function fa(e) {
-        var a = Object(r.useContext)(O.context),
+        var a = Object(r.useContext)(B.context),
           t = a.postseason.allRounds,
           n = a.postseason.allMatchups;
         if (void 0 === t || void 0 === n) return null;
@@ -3801,7 +3815,7 @@
       }
       var ga,
         ya = function () {
-          var e = Object(r.useContext)(O.context),
+          var e = Object(r.useContext)(B.context),
             a = Object(r.useState)(e.postseason.round ? e.postseason.round.roundNumber : 0),
             t = Object(s.a)(a, 2),
             n = t[0],
@@ -3811,7 +3825,7 @@
             : (e.sim && e.sim.season,
               (
                 <div className="PlayoffSetup">
-                  <pa index={n} setIndex={l} />
+                  <Ea index={n} setIndex={l} />
                   <fa roundNumber={n} />
                 </div>
               ));
@@ -3835,15 +3849,15 @@
             u,
             d,
             h,
-            E,
-            p = e.path,
-            f = Object(r.useContext)(O.context),
+            p,
+            E = e.path,
+            f = Object(r.useContext)(B.context),
             b = Object(r.useContext)(F.context).user,
-            v = Object(r.useContext)(D.context),
+            v = Object(r.useContext)(P.context),
             g = void 0 === f.schedule;
           if (void 0 === f.postseason.playoffs) return null;
           function y() {
-            switch (p) {
+            switch (E) {
               case "/upcoming":
                 return ga.Upcoming;
               case "/leaderboard":
@@ -3865,8 +3879,8 @@
           if (!f.sim) return null;
           var N,
             T = y() === ga.Live ? f.schedule : f.tomorrowSchedule,
-            w = y() === ga.Live ? f.postseason.matchups : f.postseason.tomorrowMatchups,
-            S =
+            S = y() === ga.Live ? f.postseason.matchups : f.postseason.tomorrowMatchups,
+            w =
               void 0 === T || (void 0 !== T && T.length <= 0) ? null : (
                 <ul>
                   {null ===
@@ -3900,11 +3914,11 @@
                     })(T)) || void 0 === a
                     ? void 0
                     : a.map(function (e, a) {
-                        return <Re key={a} data={e} matchups={w} />;
+                        return <Re key={a} data={e} matchups={S} />;
                       })}
                 </ul>
               ),
-            B =
+            O =
               void 0 !==
               (null === f ||
               void 0 === f ||
@@ -3942,7 +3956,7 @@
                   ? void 0
                   : u.roundNumber
                 : -1,
-            k = (y() === ga.Live ? B : I) + 1;
+            k = (y() === ga.Live ? O : I) + 1;
           switch (y()) {
             case ga.Postseason:
               N = <ya />;
@@ -3958,12 +3972,12 @@
                 <fe />
               ) : (
                 <div>
-                  {null !== S ? (
+                  {null !== w ? (
                     <div>
                       <div className="DailySchedule-Countdown">
-                        {y() === ga.Upcoming ? <aa dateString={M().toString()} /> : null}
+                        {y() === ga.Upcoming ? <aa dateString={x().toString()} /> : null}
                       </div>
-                      <ul>{S}</ul>
+                      <ul>{w}</ul>
                     </div>
                   ) : (
                     <div className="DailySchedule-Body">
@@ -3984,7 +3998,7 @@
                     "Postseason Round"
                   )}
                 </div>
-                {(null === (E = f.postseason.round) || void 0 === E ? void 0 : E.special) ? null : (
+                {(null === (p = f.postseason.round) || void 0 === p ? void 0 : p.special) ? null : (
                   <span className="DailySchedule-Number">{k}</span>
                 )}
                 Day<span className="DailySchedule-Number">{A() + 1}</span>
@@ -3998,7 +4012,7 @@
           (t(112),
           function (e) {
             var a = e.path,
-              t = Object(r.useContext)(O.context),
+              t = Object(r.useContext)(B.context),
               n = Object(r.useContext)(Ge.context);
             if (void 0 === t || void 0 === t.sim || void 0 === n) return null;
             if (void 0 === t.postseason || void 0 === t.postseason.playoffs) return null;
@@ -4035,7 +4049,7 @@
           }),
         Ta = t(48);
       t(113);
-      function wa() {
+      function Sa() {
         var e = Object(r.useState)([]),
           a = Object(s.a)(e, 2),
           t = a[0],
@@ -4051,7 +4065,7 @@
           return d.apply(this, arguments);
         }
         function d() {
-          return (d = Object(E.a)(
+          return (d = Object(p.a)(
             h.a.mark(function e() {
               var a, t, r;
               return h.a.wrap(function (e) {
@@ -4076,11 +4090,11 @@
             })
           )).apply(this, arguments);
         }
-        var p = "EventTicker-Group";
+        var E = "EventTicker-Group";
         if (c) {
           for (var f = 0, b = 0; b < t.length; b++) f += t[b].length;
           var v = f / 5;
-          p +=
+          E +=
             v > 300
               ? " EventTicker-Group-Animating-300"
               : v > 240
@@ -4096,7 +4110,7 @@
             <div className="EventTicker-News">News:</div>
             <div className="EventTicker-Scroll">
               <div
-                className={p}
+                className={E}
                 onAnimationEnd={function () {
                   m(!1), u();
                 }}
@@ -4110,10 +4124,10 @@
         );
       }
       t(114);
-      var Sa = function () {
+      var wa = function () {
           var e,
             a,
-            t = Object(r.useContext)(O.context),
+            t = Object(r.useContext)(B.context),
             n = Object(r.useContext)(F.context).user;
           return (
             <header className="Header">
@@ -4173,12 +4187,12 @@
                   </div>
                 </div>
               </div>
-              {(null === n || void 0 === n ? void 0 : n.isSignedIn) && <wa />}
+              {(null === n || void 0 === n ? void 0 : n.isSignedIn) && <Sa />}
             </header>
           );
         },
-        Oa = (t(115), o.a.createContext([{ id: "", peanuts: 0, place: 0 }])),
-        Ba = function (e) {
+        Ba = (t(115), o.a.createContext([{ id: "", peanuts: 0, place: 0 }])),
+        Oa = function (e) {
           var a = e.children,
             t = Object(c.g)().pathname,
             n = Object(r.useState)([]),
@@ -4207,11 +4221,11 @@
               },
               [t]
             ),
-            (<Oa.Provider value={i}>{a}</Oa.Provider>)
+            (<Ba.Provider value={i}>{a}</Ba.Provider>)
           );
         };
-      Ba.context = Oa;
-      var Ia = Ba;
+      Oa.context = Ba;
+      var Ia = Oa;
       function ka() {
         Object(r.useContext)(Ge.context);
         var e = Object(r.useContext)(Ia.context),
@@ -4223,7 +4237,7 @@
           function () {
             for (var a = [], t = 0; t <= e.length - 1; t++) a.push(e[t].id);
             (function () {
-              var t = Object(E.a)(
+              var t = Object(p.a)(
                 h.a.mark(function t() {
                   var n, r, o, i;
                   return h.a.wrap(function (t) {
@@ -4271,10 +4285,11 @@
           },
           [e]
         );
-        var i = Object(r.useContext)(O.context);
+        var i = Object(r.useContext)(B.context);
         if (!i || !i.sim) return null;
         void 0 !== i.sim.season && i.sim.season;
-        var c = n.length < 1 || void 0 === n ? <fe /> : <Ca info={n} seasonEnd={!1} />;
+        var c = 0 !== i.sim.phase,
+          m = n.length < 1 || void 0 === n ? <fe /> : <Ca info={n} showLine={c} />;
         return (
           <div className="HallOfFlame">
             <div className="HallOfFlame-Header">
@@ -4282,7 +4297,7 @@
               <div className="HallOfFlame-Header-Deceased-Icon HallOfFlame-Header-Deceased-Icon-Flipped" />
             </div>
             <div className="HallOfFlame-Description">Pay tribute.</div>
-            {c}
+            {m}
           </div>
         );
       }
@@ -4291,12 +4306,12 @@
           t = [];
         if (void 0 === e.info || e.info.length < 1) return <fe />;
         for (var n = 0; n < e.info.length; n++)
-          e.seasonEnd
+          e.showLine
             ? n < 14
               ? a.push(<Ra info={e.info[n]} key={e.info[n].place} glow={!0} />)
               : t.push(<Ra info={e.info[n]} key={e.info[n].place} />)
             : a.push(<Ra info={e.info[n]} key={e.info[n].place} />);
-        return e.seasonEnd ? (
+        return e.showLine ? (
           <div className="HallOfFlame-List">
             <ul className="HallOfFlame-Player-Container">
               {a}
@@ -4335,7 +4350,7 @@
             <div className="HallOfFlame-Player-Name-Container">
               <div className="HallOfFlame-Player-Position">{e.info.place}</div>
               <div className="HallOfFlame-Player-Name">
-                {i.idol === (null === (t = e.info.player) || void 0 === t ? void 0 : t.id) ? <V.yb /> : ""}{" "}
+                {i.idol === (null === (t = e.info.player) || void 0 === t ? void 0 : t.id) ? <V.zb /> : ""}{" "}
                 {null === (n = e.info.player) || void 0 === n ? void 0 : n.name}
               </div>
             </div>
@@ -4476,38 +4491,38 @@
         );
       }
       t(117);
-      var Qa,
-        Pa = t(35),
-        Da = t(147),
+      var Da,
+        Qa = t(35),
+        Pa = t(147),
         Wa = (t(53), t(70));
       function Ga(e) {
         switch (e.id) {
           case "EXTRA_STRIKE":
-            return <V.W />;
+            return <V.X />;
           case "SHAME_PIT":
             return <V.b />;
           case "HOME_FIELD":
-            return <V.N />;
+            return <V.O />;
           case "FIREPROOF":
-            return <V.A />;
+            return <V.B />;
           case "ALTERNATE":
-            return <V.P />;
+            return <V.Q />;
           case "SHELLED":
           case "SUPERALLERGIC":
           case "SUPERYUMMY":
-            return <V.cb />;
+            return <V.eb />;
           case "SOUNDPROOF":
-            return <V.O />;
+            return <V.P />;
           case "REVERBERATING":
             return <V.f />;
           case "BLOOD_THIEF":
-            return <V.jb />;
+            return <V.lb />;
           case "BLOOD_DONOR":
-            return <V.Y />;
+            return <V.ab />;
           case "BLOOD_WINNER":
-            return <V.eb />;
+            return <V.gb />;
           case "BLOOD_PITY":
-            return <V.Bb />;
+            return <V.Cb />;
           case "BLOOD_FAITH":
           case "BLOOD_LAW":
           case "BLOOD_CHAOS":
@@ -4519,88 +4534,88 @@
           case "DEBT_TWO":
             return <V.d />;
           case "MARKED":
-            return <V.Hb />;
+            return <V.Jb />;
           case "PARTY_TIME":
-            return <V.bb />;
+            return <V.db />;
           case "LIFE_OF_PARTY":
-            return <V.H />;
+            return <V.I />;
           case "INWARD":
-            return <V.Q />;
+            return <V.R />;
           case "FIRST_BORN":
-            return <V.w />;
+            return <V.x />;
           case "HONEY_ROASTED":
-            return <V.q />;
+            return <V.r />;
           case "EXTRA_BASE":
-            return <V.L />;
+            return <V.M />;
           case "BLESS_OFF":
-            return <V.J />;
+            return <V.K />;
           case "NON_IDOLIZED":
-            return <V.U />;
+            return <V.V />;
           case "GRAVITY":
             return <V.j />;
           case "SPICY":
-            return <V.n />;
+            return <V.o />;
           case "ELECTRIC":
-            return <V.x />;
+            return <V.y />;
           case "DOUBLE_PAYOUTS":
-            return <V.Ab />;
+            return <V.Bb />;
           case "FIRE_PROTECTOR":
-            return <V.B />;
+            return <V.C />;
           case "ON_FIRE":
-            return <V.rb />;
+            return <V.sb />;
           case "HEATING_UP":
-            return <V.K />;
+            return <V.L />;
           case "RECEIVER":
-            return <V.X />;
+            return <V.Y />;
           case "FLICKERING":
           case "FLIICKERRRIIING":
-            return <V.m />;
+            return <V.n />;
           case "AFFINITY_FOR_CROWS":
           case "CURSE_OF_CROWS":
           case "FRIEND_OF_CROWS":
             return <V.h />;
           case "BASE_INSTINCTS":
-            return <V.ob />;
-          case "STABLE":
-            return <V.xb />;
-          case "GROWTH":
-            return <V.M />;
-          case "REPEATING":
-            return <V.r />;
-          case "CRUNCHY":
-            return <V.o />;
-          case "SQUIDDISH":
-            return <V.G />;
-          case "SUBJECTION":
-            return <V.wb />;
-          case "LIBERATED":
-            return <V.lb />;
-          case "FIRE_EATER":
-            return <V.y />;
-          case "MAGMATIC":
-            return <V.gb />;
-          case "LOYALTY":
-            return <V.nb />;
-          case "SABOTEUR":
-            return <V.tb />;
-          case "PITY":
-            return <V.F />;
-          case "GOD":
-            return <V.Z />;
-          case "PEANUT_RAIN":
-            return <V.D />;
-          case "DESTRUCTION":
-            return <V.t />;
-          case "FLINCH":
-            return <V.zb />;
-          case "WILD":
             return <V.qb />;
-          case "LOVE":
+          case "STABLE":
+            return <V.yb />;
+          case "GROWTH":
+            return <V.N />;
+          case "REPEATING":
             return <V.s />;
+          case "CRUNCHY":
+            return <V.p />;
+          case "SQUIDDISH":
+            return <V.H />;
+          case "SUBJECTION":
+            return <V.xb />;
+          case "LIBERATED":
+            return <V.nb />;
+          case "FIRE_EATER":
+            return <V.z />;
+          case "MAGMATIC":
+            return <V.ib />;
+          case "LOYALTY":
+            return <V.pb />;
+          case "SABOTEUR":
+            return <V.ub />;
+          case "PITY":
+            return <V.G />;
+          case "GOD":
+            return <V.bb />;
+          case "PEANUT_RAIN":
+            return <V.E />;
+          case "DESTRUCTION":
+            return <V.u />;
+          case "FLINCH":
+            return <V.Ab />;
+          case "WILD":
+            return <V.rb />;
+          case "LOVE":
+            return <V.t />;
           case "SIPHON":
-            return <V.S />;
+            return <V.T />;
           case "CREDIT_TO_THE_TEAM":
-            return <V.V />;
+            return <V.W />;
         }
         return null;
       }
@@ -4611,8 +4626,8 @@
           (e[(e.Game = 3)] = "Game"),
           (e[(e.Item = 4)] = "Item"),
           (e[(e.Armor = 5)] = "Armor");
-      })(Qa || (Qa = {}));
-      var Ma = {
+      })(Da || (Da = {}));
+      var xa = {
         id: "????",
         color: "#FFFFFF",
         background: "#FFFFFF",
@@ -4620,46 +4635,46 @@
         title: "????",
         description: "This Modification is unknown.",
       };
-      function xa(e) {
+      function Ma(e) {
         var a = e.id,
           t = e.type,
           n = Wa.collection.find(function (e) {
             return e.id === a;
           });
-        void 0 === n && (n = Ma);
+        void 0 === n && (n = xa);
         var r = (function (e) {
           switch (e) {
-            case Qa.Permanent:
+            case Da.Permanent:
               return {
                 color: "#dbbc0b",
                 title: "Permanent",
                 description: "Permanent Modifications are never removed automatically.",
               };
-            case Qa.Season:
+            case Da.Season:
               return {
                 color: "#c2157a",
                 title: "Season",
                 description: "Season Modifications are removed after the Internet Series finishes.",
               };
-            case Qa.Weekly:
+            case Da.Weekly:
               return {
                 color: "#0a78a3",
                 title: "Weekly",
                 description: "Weekly Modifications are removed after every 9th game of the season.",
               };
-            case Qa.Game:
+            case Da.Game:
               return {
                 color: "#639e47",
                 title: "Game",
                 description: "Game Modifications are removed at the end of every game.",
               };
-            case Qa.Armor:
+            case Da.Armor:
               return {
                 color: "#bababa",
                 title: "Armor",
                 description: "Armor Modifications are removed when the player loses their Armor.",
               };
-            case Qa.Item:
+            case Da.Item:
               return {
                 color: "#bababa",
                 title: "Item",
@@ -4670,11 +4685,11 @@
         })(t);
         return (
           <div className="AttributeIcon">
-            <Se.a
+            <we.a
               key="bottom-1"
               placement="bottom-start"
               overlay={
-                <Oe.a id="tooltip" className="AttributeTooltip">
+                <Be.a id="tooltip" className="AttributeTooltip">
                   <div className="AttributeTooltip-Container">
                     <div className="AttributeTooltip-Header" style={{ color: n.textColor }}>
                       {n.title}
@@ -4686,7 +4701,7 @@
                     </div>
                     <div className="AttributeTooltip-Description">{r.description}</div>
                   </div>
-                </Oe.a>
+                </Be.a>
               }
             >
               <div
@@ -4695,14 +4710,14 @@
               >
                 <Ga id={a} />
               </div>
-            </Se.a>
+            </we.a>
           </div>
         );
       }
       function ja(e) {
         for (var a = e / 0.2, t = Math.round(2 * a) / 2, n = Math.floor(t), r = Math.ceil(t), l = [], i = 0; i < n; i++)
-          l.push(<Pa.b />);
-        return n !== r && l.push(<Pa.c />), (<span>{l}</span>);
+          l.push(<Qa.b />);
+        return n !== r && l.push(<Qa.c />), (<span>{l}</span>);
       }
       function Ha(e, a) {
         var t = (function (e, a) {
@@ -4712,49 +4727,49 @@
         })(e, a);
         return t > 0.8 ? (
           <span className="Team-Player-Vibe-Line Team-Player-Vibe-MostExcellent">
-            <Da.c className="Team-Player-Vibe-Line-Arrow" />
-            <Da.c className="Team-Player-Vibe-Line-Arrow" />
-            <Da.c className="Team-Player-Vibe-Line-Arrow" />
+            <Pa.c className="Team-Player-Vibe-Line-Arrow" />
+            <Pa.c className="Team-Player-Vibe-Line-Arrow" />
+            <Pa.c className="Team-Player-Vibe-Line-Arrow" />
           </span>
         ) : t > 0.4 ? (
           <span className="Team-Player-Vibe-Line Team-Player-Vibe-Excellent">
-            <Da.c className="Team-Player-Vibe-Line-Arrow" />
-            <Da.c className="Team-Player-Vibe-Line-Arrow" />
+            <Pa.c className="Team-Player-Vibe-Line-Arrow" />
+            <Pa.c className="Team-Player-Vibe-Line-Arrow" />
           </span>
         ) : t > 0.1 ? (
           <span className="Team-Player-Vibe-Line Team-Player-Vibe-Quality">
-            <Da.c className="Team-Player-Vibe-Line-Arrow" />
+            <Pa.c className="Team-Player-Vibe-Line-Arrow" />
           </span>
         ) : t > -0.1 ? (
           <span className="Team-Player-Vibe-Line Team-Player-Vibe-Neutral">
-            <Da.a className="Team-Player-Vibe-Line-Arrow" />
+            <Pa.a className="Team-Player-Vibe-Line-Arrow" />
           </span>
         ) : t > -0.4 ? (
           <span className="Team-Player-Vibe-Line Team-Player-Vibe-LessThanIdeal">
-            <Da.b className="Team-Player-Vibe-Line-Arrow" />
+            <Pa.b className="Team-Player-Vibe-Line-Arrow" />
           </span>
         ) : t > -0.8 ? (
           <span className="Team-Player-Vibe-Line Team-Player-Vibe-FarLessThanIdeal">
-            <Da.b className="Team-Player-Vibe-Line-Arrow" />
-            <Da.b className="Team-Player-Vibe-Line-Arrow" />
+            <Pa.b className="Team-Player-Vibe-Line-Arrow" />
+            <Pa.b className="Team-Player-Vibe-Line-Arrow" />
           </span>
         ) : (
           <span className="Team-Player-Vibe-Line Team-Player-Vibe-Terrible">
-            <Da.b className="Team-Player-Vibe-Line-Arrow" />
-            <Da.b className="Team-Player-Vibe-Line-Arrow" />
-            <Da.b className="Team-Player-Vibe-Line-Arrow" />
+            <Pa.b className="Team-Player-Vibe-Line-Arrow" />
+            <Pa.b className="Team-Player-Vibe-Line-Arrow" />
+            <Pa.b className="Team-Player-Vibe-Line-Arrow" />
           </span>
         );
       }
       var Ua = function (e) {
           var a = Object(c.h)().nickname,
-            t = Object(r.useContext)(O.context),
+            t = Object(r.useContext)(B.context),
             n = Object(r.useContext)(Ge.context),
             l = Object(c.g)(),
             i = Object(r.useState)({ lineup: [], rotation: [], bullpen: [], bench: [] }),
             m = Object(s.a)(i, 2),
             d = m[0],
-            p = m[1],
+            E = m[1],
             f = Object(r.useContext)(F.context).user,
             b = n.teams.find(function (e) {
               return e.id === a;
@@ -4764,7 +4779,7 @@
             g();
           }, []);
           var g = (function () {
-            var e = Object(E.a)(
+            var e = Object(p.a)(
               h.a.mark(function e() {
                 var a, t, n, r, o, l, i, s, c, m;
                 return h.a.wrap(function (e) {
@@ -4810,7 +4825,7 @@
                           m++
                         )
                           c(m);
-                        p({ lineup: o, rotation: s, bench: [], bullpen: [] });
+                        E({ lineup: o, rotation: s, bench: [], bullpen: [] });
                       case 15:
                       case "end":
                         return e.stop();
@@ -4839,7 +4854,7 @@
                         : "")
                     }
                   >
-                    {f.idol === e.id ? <V.yb /> : ""} {null === e || void 0 === e ? void 0 : e.name}
+                    {f.idol === e.id ? <V.zb /> : ""} {null === e || void 0 === e ? void 0 : e.name}
                   </div>
                   <div className="Team-Player-Vibe">
                     {Ha(e, void 0 !== (null === (a = t.sim) || void 0 === a ? void 0 : a.day) ? t.sim.day : -1)}
@@ -4875,7 +4890,7 @@
                         : "")
                     }
                   >
-                    {f.idol === e.id ? <V.yb /> : ""} {null === e || void 0 === e ? void 0 : e.name}
+                    {f.idol === e.id ? <V.zb /> : ""} {null === e || void 0 === e ? void 0 : e.name}
                   </div>
                   <div className="Team-Player-Vibe">
                     {Ha(e, void 0 !== (null === (a = t.sim) || void 0 === a ? void 0 : a.day) ? t.sim.day : -1)}
@@ -4914,24 +4929,24 @@
               }
               return [t, n];
             })(b.id, null === t || void 0 === t ? void 0 : t.standings),
-            w = T[1],
-            S = T[0],
-            B =
+            S = T[1],
+            w = T[0],
+            O =
               b.permAttr.length > 0 || b.seasAttr.length > 0 || b.weekAttr.length > 0 || b.gameAttr.length > 0 ? (
                 <o.a.Fragment>
                   <div className="Team-Attributes">
                     <div className="AttributeBar">
                       {b.permAttr.map(function (e, a) {
-                        return <xa id={e} type={Qa.Permanent} key={a} />;
+                        return <Ma id={e} type={Da.Permanent} key={a} />;
                       })}
                       {b.seasAttr.map(function (e, a) {
-                        return <xa id={e} type={Qa.Season} key={a} />;
+                        return <Ma id={e} type={Da.Season} key={a} />;
                       })}
                       {b.weekAttr.map(function (e, a) {
-                        return <xa id={e} type={Qa.Weekly} key={a} />;
+                        return <Ma id={e} type={Da.Weekly} key={a} />;
                       })}
                       {b.gameAttr.map(function (e, a) {
-                        return <xa id={e} type={Qa.Game} key={a} />;
+                        return <Ma id={e} type={Da.Game} key={a} />;
                       })}
                     </div>
                   </div>
@@ -4939,7 +4954,7 @@
               ) : null,
             I = v ? (
               <div className="Team-Standing">
-                {"( ".concat(S, " - ").concat(w, " ) - ") +
+                {"( ".concat(w, " - ").concat(S, " ) - ") +
                   (function (e, a, t) {
                     if (void 0 === a || void 0 === t || void 0 === a.sim) return "";
                     var n = t.leagues.find(function (e) {
@@ -4975,7 +4990,7 @@
                     </div>
                   </div>
                 </div>
-                {B}
+                {O}
                 <div className="Team-Content">
                   <div className="Team-Section">
                     <div className="Team-Subheader">Lineup</div>
@@ -5024,11 +5039,11 @@
           i = n[1],
           m = Object(r.useContext)(F.context),
           d = m.user,
-          p = m.setUser,
+          E = m.setUser,
           f = Object(r.useContext)(Ge.context).teams.find(function (e) {
             return e.id === d.favoriteTeam;
           }),
-          b = Object(r.useContext)(O.context),
+          b = Object(r.useContext)(B.context),
           v = Object(r.useContext)(Va.context),
           g = Object(r.useContext)(Ge.context),
           y = Object(c.g)();
@@ -5036,7 +5051,7 @@
           return N.apply(this, arguments);
         }
         function N() {
-          return (N = Object(E.a)(
+          return (N = Object(p.a)(
             h.a.mark(function e(t) {
               return h.a.wrap(function (e) {
                 for (;;)
@@ -5055,7 +5070,7 @@
                         $(t.buyUrl, JSON.stringify(t.buyParams))
                           .then(
                             (function () {
-                              var e = Object(E.a)(
+                              var e = Object(p.a)(
                                 h.a.mark(function e(n) {
                                   return h.a.wrap(function (e) {
                                     for (;;)
@@ -5090,7 +5105,7 @@
                             a(e, { appearance: "error" });
                           })
                           .finally(
-                            Object(E.a)(
+                            Object(p.a)(
                               h.a.mark(function e() {
                                 return h.a.wrap(function (e) {
                                   for (;;)
@@ -5127,7 +5142,7 @@
         function T(e) {
           i({ purchaseItem: e });
         }
-        function w(e) {
+        function S(e) {
           return e.maxed ? "Maxed Out" : e.available ? (0 === e.amount ? "Get" : "Buy") : "Unavailable";
         }
         return (
@@ -5143,8 +5158,8 @@
                     u,
                     d,
                     h,
-                    E,
                     p,
+                    E,
                     f,
                     b,
                     v,
@@ -5157,7 +5172,7 @@
                           "Each Vote can be spent in the Election to boost your team or bring important change to Blaseball.",
                         amount: 100,
                         available: !0,
-                        icon: <V.Db />,
+                        icon: <V.Eb />,
                         buyUrl: "/buy/vote",
                         handleComplete: function () {},
                         modal: !0,
@@ -5170,32 +5185,31 @@
                         amount: 100,
                         available: !0,
                         toast: "Welcome, Voter! You have ".concat(e.votes, " Vote already from signing up."),
-                        icon: <V.Db />,
+                        icon: <V.Eb />,
                         buyUrl: "/api/buyUnlockElection",
                         userUpdate: function () {
-                          a(Object(B.a)(Object(B.a)({}, e), {}, { unlockedElection: !0, coins: e.coins - 100 }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { unlockedElection: !0, coins: e.coins - 100 }));
                         },
                       };
                   g &&
                     g.delta &&
                     (c = {
                       id: 5,
-                      name: "HoloVista",
+                      name: "Bribe Dog's Bartering Stick",
                       description: "",
                       isSponsor: !0,
                       sponsorText: (
                         <o.a.Fragment>
-                          Explore a dreamlike mansion, photograph mysterious spaces, confront your deepest secrets, and
-                          confess them online.{" "}
+                          If there's anything Bribe Dog believes in, it's blatant, enthusiastic corruption.{" "}
                           <a
-                            href="https://apps.apple.com/us/app/holovista/id1474114304"
+                            href="http://patreon.com/strangescaffold"
                             onClick={function () {
-                              return Ve("HoloVista (ShopItem)");
+                              return Ve("Airport Dogs (ShopItem)");
                             }}
                             target="_blank"
                             className="Shop-Item-Link"
                           >
-                            <strong>Available for $4.99</strong>
+                            <strong>What?</strong>
                           </a>
                         </o.a.Fragment>
                       ),
@@ -5204,11 +5218,11 @@
                       available: !0,
                       handleComplete: function () {},
                     });
-                  var y = Ee.maxBetTiers[Math.min(e.maxBetTier, Ee.maxBetTiers.length - 1)],
-                    A = Ee.maxBetTiers[e.maxBetTier + 1];
+                  var y = pe.maxBetTiers[Math.min(e.maxBetTier, pe.maxBetTiers.length - 1)],
+                    A = pe.maxBetTiers[e.maxBetTier + 1];
                   if (void 0 !== A) {
                     var N = y.amount,
-                      T = Ee.maxBetTiers[e.maxBetTier + 1].amount;
+                      T = pe.maxBetTiers[e.maxBetTier + 1].amount;
                     m = {
                       id: 1,
                       name: "High Roller Snake Oil",
@@ -5221,8 +5235,8 @@
                       buyUrl: "/api/buyIncreaseMaxBet",
                       userUpdate: function () {
                         a(
-                          Object(B.a)(
-                            Object(B.a)({}, e),
+                          Object(O.a)(
+                            Object(O.a)({}, e),
                             {},
                             { maxBetTier: e.maxBetTier + 1, coins: e.coins - A.price }
                           )
@@ -5230,38 +5244,38 @@
                       },
                     };
                   } else {
-                    var w = y.amount;
+                    var S = y.amount;
                     m = {
                       id: 1,
                       name: "High Roller Snake Oil",
                       description: "This invigorating oil allows you to place larger wagers on each game. Your current limit is ".concat(
-                        w,
+                        S,
                         ", you are maxed out."
                       ),
                       maxed: !0,
                       amount: 0,
                     };
                   }
-                  var S = Ee.teamWinCoinTiers[Math.min(e.dailyCoinsTier, Ee.teamWinCoinTiers.length - 1)],
-                    O = Ee.teamWinCoinTiers[e.dailyCoinsTier + 1];
+                  var w = pe.teamWinCoinTiers[Math.min(e.dailyCoinsTier, pe.teamWinCoinTiers.length - 1)],
+                    B = pe.teamWinCoinTiers[e.dailyCoinsTier + 1];
                   u =
-                    void 0 !== O
+                    void 0 !== B
                       ? {
                           id: 2,
                           name: "Passive Income Potion",
                           description: "This potion will boost the coins you earn when your team wins. Your current income per win is "
-                            .concat(S.amount, ", it would increase to ")
-                            .concat(O.amount, "."),
-                          amount: O.price,
-                          toast: "Coins per win is now ".concat(O.amount),
+                            .concat(w.amount, ", it would increase to ")
+                            .concat(B.amount, "."),
+                          amount: B.price,
+                          toast: "Coins per win is now ".concat(B.amount),
                           available: !0,
                           buyUrl: "/api/buyIncreaseDailyCoins",
                           userUpdate: function () {
                             a(
-                              Object(B.a)(
-                                Object(B.a)({}, e),
+                              Object(O.a)(
+                                Object(O.a)({}, e),
                                 {},
-                                { dailyCoinsTier: e.dailyCoinsTier + 1, coins: e.coins - O.price }
+                                { dailyCoinsTier: e.dailyCoinsTier + 1, coins: e.coins - B.price }
                               )
                             );
                           },
@@ -5270,13 +5284,13 @@
                           id: 2,
                           name: "Passive Income Potion",
                           description: "This potion will boost the coins you earn when your team wins. Your current income per win is ".concat(
-                            S.amount,
+                            w.amount,
                             ", you are maxed out."
                           ),
                           maxed: !0,
                           amount: 0,
                         };
-                  if (x(t, "UNLOCKED_PEANUTS") && r) {
+                  if (M(t, "UNLOCKED_PEANUTS") && r) {
                     if (
                       ((f = {
                         id: 6,
@@ -5299,8 +5313,8 @@
                         buyUrl: "/api/buyADangPeanut",
                         userUpdate: function () {
                           a(
-                            Object(B.a)(
-                              Object(B.a)({}, e),
+                            Object(O.a)(
+                              Object(O.a)({}, e),
                               {},
                               { peanuts: e.peanuts + g.alpha, coins: e.coins - g.alpha }
                             )
@@ -5336,8 +5350,8 @@
                               buyUrl: "/api/buyADangSquirrel",
                               userUpdate: function () {
                                 a(
-                                  Object(B.a)(
-                                    Object(B.a)({}, e),
+                                  Object(O.a)(
+                                    Object(O.a)({}, e),
                                     {},
                                     { squirrels: e.squirrels + 1, coins: e.coins - C }
                                   )
@@ -5370,7 +5384,7 @@
                       available: 0 === e.coins,
                       buyUrl: "/api/logBeg",
                       userUpdate: function (t) {
-                        t && (console.log(t), a(Object(B.a)(Object(B.a)({}, e), {}, { coins: e.coins + t.amount })));
+                        t && (console.log(t), a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins + t.amount })));
                       },
                     }),
                     l)
@@ -5386,63 +5400,63 @@
                       available: !0,
                       buyUrl: "/api/buyUpdateFavoriteTeam",
                       userUpdate: function () {
-                        a(Object(B.a)(Object(B.a)({}, e), {}, { favoriteTeam: null, coins: e.coins - L }));
+                        a(Object(O.a)(Object(O.a)({}, e), {}, { favoriteTeam: null, coins: e.coins - L }));
                       },
                     };
                   }
-                  var F = Ee.idolStrikeoutsTiers[Math.min(e.relics.Idol_Strikeouts, Ee.idolStrikeoutsTiers.length - 1)],
-                    Q = Ee.idolStrikeoutsTiers[e.relics.Idol_Strikeouts + 1];
+                  var F = pe.idolStrikeoutsTiers[Math.min(e.relics.Idol_Strikeouts, pe.idolStrikeoutsTiers.length - 1)],
+                    D = pe.idolStrikeoutsTiers[e.relics.Idol_Strikeouts + 1];
                   if (void 0 === e.relics.Idol_Strikeouts) {
-                    var P = Ee.idolStrikeoutsTiers[0],
-                      D = Object.create(e.relics);
-                    D.Idol_Strikeouts = 0;
+                    var Q = pe.idolStrikeoutsTiers[0],
+                      P = Object.create(e.relics);
+                    P.Idol_Strikeouts = 0;
                     var W = "Adorn yourself. When your Idol strikes a batter out, you'll earn ".concat(
-                        P.amount,
+                        Q.amount,
                         " coins."
                       ),
                       G = !0;
                     ("" != e.idol && null != e.idol) || ((W += " Go to a Player page to choose an Idol."), (G = !1)),
-                      (E = {
+                      (p = {
                         id: 14,
                         name: "Strikeout Pendant",
                         description: W,
-                        amount: P.price,
-                        toast: "Coins per Idol strikeout is now ".concat(P.amount),
+                        amount: Q.price,
+                        toast: "Coins per Idol strikeout is now ".concat(Q.amount),
                         available: G,
                         buyUrl: "/api/buyRelic",
-                        icon: <V.E />,
+                        icon: <V.F />,
                         buyParams: { relicId: "Idol_Strikeouts" },
                         userUpdate: function () {
-                          a(Object(B.a)(Object(B.a)({}, e), {}, { coins: e.coins - P.price, relics: D }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - Q.price, relics: P }));
                         },
                       });
-                  } else if (void 0 !== Q) {
-                    var M = F.amount,
-                      H = Q.amount,
+                  } else if (void 0 !== D) {
+                    var x = F.amount,
+                      H = D.amount,
                       U = Object.create(e.relics);
                     (U.Idol_Strikeouts = U.Idol_Strikeouts + 1),
-                      (E = {
+                      (p = {
                         id: 14,
                         name: "Strikeout Pendant",
                         description: "Adorn yourself. When your Idol strikes a Batter out, you'll earn "
                           .concat(H, " coins. You currently earn ")
-                          .concat(M, " coins per Strikeout."),
-                        amount: Q.price,
-                        toast: "Coins per Idol strikeout is now ".concat(Q.amount),
+                          .concat(x, " coins per Strikeout."),
+                        amount: D.price,
+                        toast: "Coins per Idol strikeout is now ".concat(D.amount),
                         available: !0,
                         buyUrl: "/api/buyRelic",
-                        icon: <V.E />,
+                        icon: <V.F />,
                         buyParams: { relicId: "Idol_Strikeouts" },
                         userUpdate: function () {
-                          a(Object(B.a)(Object(B.a)({}, e), {}, { coins: e.coins - Q.price, relics: U }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - D.price, relics: U }));
                         },
                       });
                   } else {
                     var Y = F.amount;
-                    E = {
+                    p = {
                       id: 14,
                       name: "Strikeout Pendant",
-                      icon: <V.E />,
+                      icon: <V.F />,
                       description: "Adorn yourself. When your Idol strikes out a batter, you earn ".concat(
                         Y,
                         " coins. You are maxed out."
@@ -5451,10 +5465,10 @@
                       amount: 0,
                     };
                   }
-                  var J = Ee.idolShutoutsTiers[Math.min(e.relics.Idol_Shutouts, Ee.idolShutoutsTiers.length - 1)],
-                    K = Ee.idolShutoutsTiers[e.relics.Idol_Shutouts + 1];
+                  var J = pe.idolShutoutsTiers[Math.min(e.relics.Idol_Shutouts, pe.idolShutoutsTiers.length - 1)],
+                    K = pe.idolShutoutsTiers[e.relics.Idol_Shutouts + 1];
                   if (void 0 === e.relics.Idol_Shutouts) {
-                    var q = Ee.idolShutoutsTiers[0],
+                    var q = pe.idolShutoutsTiers[0],
                       z = Object.create(e.relics);
                     z.Idol_Shutouts = 0;
                     var Z = "Adorn yourself. When your Idol pitches a Shutout, you'll earn ".concat(
@@ -5463,7 +5477,7 @@
                       ),
                       X = !0;
                     ("" != e.idol && null != e.idol) || ((Z += " Go to a Player page to choose an Idol."), (X = !1)),
-                      (p = {
+                      (E = {
                         id: 12,
                         name: "Shutout Pendant",
                         description: Z,
@@ -5471,10 +5485,10 @@
                         toast: "Coins per Idol shutout is now ".concat(q.amount),
                         available: X,
                         buyUrl: "/api/buyRelic",
-                        icon: <V.E />,
+                        icon: <V.F />,
                         buyParams: { relicId: "Idol_Shutouts" },
                         userUpdate: function () {
-                          a(Object(B.a)(Object(B.a)({}, e), {}, { coins: e.coins - q.price, relics: z }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - q.price, relics: z }));
                         },
                       });
                   } else if (void 0 !== K) {
@@ -5482,7 +5496,7 @@
                       $ = K.amount,
                       ee = Object.create(e.relics);
                     (ee.Idol_Shutouts = ee.Idol_Shutouts + 1),
-                      (p = {
+                      (E = {
                         id: 12,
                         name: "Shutout Pendant",
                         description: "Adorn yourself. When your Idol pitches a Shutout, you'll earn "
@@ -5492,15 +5506,15 @@
                         toast: "Coins per Idol shutout is now ".concat(K.amount),
                         available: !0,
                         buyUrl: "/api/buyRelic",
-                        icon: <V.E />,
+                        icon: <V.F />,
                         buyParams: { relicId: "Idol_Shutouts" },
                         userUpdate: function () {
-                          a(Object(B.a)(Object(B.a)({}, e), {}, { coins: e.coins - K.price, relics: ee }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - K.price, relics: ee }));
                         },
                       });
                   } else {
                     var ae = J.amount;
-                    p = {
+                    E = {
                       id: 12,
                       name: "Shutout Pendant",
                       description: "Adorn yourself. When your Idol pitches a Shutout, you earn ".concat(
@@ -5508,14 +5522,14 @@
                         " coins. You are maxed out."
                       ),
                       maxed: !0,
-                      icon: <V.E />,
+                      icon: <V.F />,
                       amount: 0,
                     };
                   }
-                  var te = Ee.idolHomersTiers[Math.min(e.relics.Idol_Homers, Ee.idolHomersTiers.length - 1)],
-                    ne = Ee.idolHomersTiers[e.relics.Idol_Homers + 1];
+                  var te = pe.idolHomersTiers[Math.min(e.relics.Idol_Homers, pe.idolHomersTiers.length - 1)],
+                    ne = pe.idolHomersTiers[e.relics.Idol_Homers + 1];
                   if (void 0 === e.relics.Idol_Homers) {
-                    var re = Ee.idolHomersTiers[0],
+                    var re = pe.idolHomersTiers[0],
                       oe = Object.create(e.relics);
                     oe.Idol_Homers = 0;
                     var le = "Adorn yourself. When your Idol hits a Home Run, you'll earn ".concat(
@@ -5532,10 +5546,10 @@
                         toast: "Coins per Idol homer is now ".concat(re.amount),
                         available: ie,
                         buyUrl: "/api/buyRelic",
-                        icon: <V.E />,
+                        icon: <V.F />,
                         buyParams: { relicId: "Idol_Homers" },
                         userUpdate: function () {
-                          a(Object(B.a)(Object(B.a)({}, e), {}, { coins: e.coins - re.price, relics: oe }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - re.price, relics: oe }));
                         },
                       });
                   } else if (void 0 !== ne) {
@@ -5553,10 +5567,10 @@
                         toast: "Coins per Idol home run is now ".concat(ne.amount),
                         available: !0,
                         buyUrl: "/api/buyRelic",
-                        icon: <V.E />,
+                        icon: <V.F />,
                         buyParams: { relicId: "Idol_Homers" },
                         userUpdate: function () {
-                          a(Object(B.a)(Object(B.a)({}, e), {}, { coins: e.coins - ne.price, relics: me }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - ne.price, relics: me }));
                         },
                       });
                   } else {
@@ -5564,7 +5578,7 @@
                     h = {
                       id: 13,
                       name: "Home Run Pendant",
-                      icon: <V.E />,
+                      icon: <V.F />,
                       description: "Adorn yourself. When your Idol hits a Home Run, you earn ".concat(
                         ue,
                         " coins. You are maxed out."
@@ -5573,27 +5587,27 @@
                       amount: 0,
                     };
                   }
-                  var de = Ee.idolHitsTiers[Math.min(e.relics.Idol_Hits, Ee.idolHitsTiers.length - 1)],
-                    he = Ee.idolHitsTiers[e.relics.Idol_Hits + 1];
+                  var de = pe.idolHitsTiers[Math.min(e.relics.Idol_Hits, pe.idolHitsTiers.length - 1)],
+                    he = pe.idolHitsTiers[e.relics.Idol_Hits + 1];
                   if (void 0 === e.relics.Idol_Hits) {
-                    var pe = Ee.idolHitsTiers[0],
+                    var Ee = pe.idolHitsTiers[0],
                       fe = Object.create(e.relics);
                     fe.Idol_Hits = 0;
-                    var be = "Adorn yourself. When your Idol gets a Hit, you'll earn ".concat(pe.amount, " coins."),
+                    var be = "Adorn yourself. When your Idol gets a Hit, you'll earn ".concat(Ee.amount, " coins."),
                       ve = !0;
                     ("" != e.idol && null != e.idol) || ((be += " Go to a Player page to choose an Idol."), (ve = !1)),
                       (d = {
                         id: 11,
                         name: "Hits Pendant",
                         description: be,
-                        amount: pe.price,
-                        toast: "Coins per Idol hit is now ".concat(pe.amount),
+                        amount: Ee.price,
+                        toast: "Coins per Idol hit is now ".concat(Ee.amount),
                         available: ve,
                         buyUrl: "/api/buyRelic",
-                        icon: <V.E />,
+                        icon: <V.F />,
                         buyParams: { relicId: "Idol_Hits" },
                         userUpdate: function () {
-                          a(Object(B.a)(Object(B.a)({}, e), {}, { coins: e.coins - pe.price, relics: fe }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - Ee.price, relics: fe }));
                         },
                       });
                   } else if (void 0 !== he) {
@@ -5611,10 +5625,10 @@
                         toast: "Coins per Idol hit is now ".concat(he.amount),
                         available: !0,
                         buyUrl: "/api/buyRelic",
-                        icon: <V.E />,
+                        icon: <V.F />,
                         buyParams: { relicId: "Idol_Hits" },
                         userUpdate: function () {
-                          a(Object(B.a)(Object(B.a)({}, e), {}, { coins: e.coins - he.price, relics: Ae }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - he.price, relics: Ae }));
                         },
                       });
                   } else {
@@ -5627,12 +5641,12 @@
                         " coins. You are maxed out."
                       ),
                       maxed: !0,
-                      icon: <V.E />,
+                      icon: <V.F />,
                       amount: 0,
                     };
                   }
-                  return x(t, "UNLOCKED_IDOLS") ? [c, d, E, i, h, p, m, u, s, f, b, v] : [c, i, m, u, s, f, b, v];
-                })(d, p, b.sim, g, v, f)
+                  return M(t, "UNLOCKED_IDOLS") ? [c, d, p, i, h, E, m, u, s, f, b, v] : [c, i, m, u, s, f, b, v];
+                })(d, E, b.sim, g, v, f)
               : (function (e, a) {
                   var t = [];
                   return (
@@ -5645,12 +5659,12 @@
                       available: !0,
                       buyUrl: "/api/buyUnlockShop",
                       userUpdate: function () {
-                        a(Object(B.a)(Object(B.a)({}, e), {}, { unlockedShop: !0, coins: e.coins - 20 }));
+                        a(Object(O.a)(Object(O.a)({}, e), {}, { unlockedShop: !0, coins: e.coins - 20 }));
                       },
                     }),
                     t
                   );
-                })(d, p)),
+                })(d, E)),
           (
             <div className="Shop">
               <div className="Shop-Header">Shop</div>
@@ -5677,7 +5691,7 @@
                         </div>
                         <div className="Shop-Item-Body">{e.description}</div>
                         <div className="Shop-Item-Checkout">
-                          <V.Eb className="Shop-Item-Coins" />
+                          <V.Gb className="Shop-Item-Coins" />
                           <div className="Shop-Item-Amount">
                             {(function (e) {
                               return e.maxed ? "N/A" : 0 === e.amount ? "Free" : e.amount.toString();
@@ -5685,7 +5699,7 @@
                           </div>
                           <div className="Shop-Item-ButtonContainer">
                             {l && l.purchaseItem && l.purchaseItem.id === e.id ? (
-                              <pe />
+                              <Ee />
                             ) : (
                               (function (e) {
                                 return !e.available || e.maxed ? (
@@ -5698,11 +5712,11 @@
                                       A(e);
                                     }}
                                   >
-                                    {w(e)}
+                                    {S(e)}
                                   </Y.a>
                                 ) : e.modal && void 0 !== e.buyUrl ? (
                                   <u className="Shop-Item-Button Shop-Item-Modal" background={y} path={e.buyUrl}>
-                                    {w(e)}
+                                    {S(e)}
                                   </u>
                                 ) : (
                                   <Y.a
@@ -5713,7 +5727,7 @@
                                       A(e);
                                     }}
                                   >
-                                    {w(e)}
+                                    {S(e)}
                                   </Y.a>
                                 );
                               })(e)
@@ -5741,7 +5755,7 @@
             m = Object(c.h)().itemName,
             u = Object(r.useState)(0),
             d = Object(s.a)(u, 2),
-            p = d[0],
+            E = d[0],
             f = d[1],
             b = Object(r.useState)(!1),
             v = Object(s.a)(b, 2),
@@ -5763,7 +5777,7 @@
                 Buy
               </Y.a>
             ));
-          var w = Math.floor(n.coins / N);
+          var S = Math.floor(n.coins / N);
           return (
             <X {...Object.assign({}, e, { className: "BatchBuy" })}>
               <div className="BatchBuy-Header">Buy Votes</div>
@@ -5771,23 +5785,23 @@
                 className="BatchBuy-Form"
                 onSubmit={function (e) {
                   e.preventDefault(),
-                    p > n.coins
+                    E > n.coins
                       ? a("Insufficent coins", { appearance: "error" })
-                      : p < 1
+                      : E < 1
                       ? a("Invalid input", { appearance: "error" })
                       : (y(!0),
-                        $("/api/buyVote", JSON.stringify({ amount: p }))
+                        $("/api/buyVote", JSON.stringify({ amount: E }))
                           .then(function (e) {
                             e.status && 200 === e.status && e.ok
-                              ? (l(Object(B.a)(Object(B.a)({}, n), {}, { votes: n.votes + p, coins: n.coins - p * N })),
-                                a("Vote".concat(p > 1 ? "s" : "", " Bought"), { appearance: "success" }),
+                              ? (l(Object(O.a)(Object(O.a)({}, n), {}, { votes: n.votes + E, coins: n.coins - E * N })),
+                                a("Vote".concat(E > 1 ? "s" : "", " Bought"), { appearance: "success" }),
                                 i.goBack())
                               : e.json().then(function (e) {
                                   a(e.error || "Error", { appearance: "error" });
                                 });
                           })
                           .finally(
-                            Object(E.a)(
+                            Object(p.a)(
                               h.a.mark(function e() {
                                 return h.a.wrap(function (e) {
                                   for (;;)
@@ -5808,31 +5822,31 @@
                   <he.a.Label>How many votes do you want to buy?</he.a.Label>
                   <div className="BatchBuy-Form-Inputs-Amount">
                     <div className="BatchBuy-Ticket-Wrapper">
-                      <V.Db className="BatchBuy-Ticket-Icon" />
+                      <V.Eb className="BatchBuy-Ticket-Icon" />
                       {n.votes}
                     </div>
-                    <he.a.Control type="number" value={p} onChange={A} />
+                    <he.a.Control type="number" value={E} onChange={A} />
                     <he.a.Control
                       type="range"
                       className="BatchBuy-Range"
                       min={1}
-                      max={w}
-                      value={p}
+                      max={S}
+                      value={E}
                       onChange={A}
                       step="1"
                     />
                     <a
                       className="BatchBuy-Form-Inputs-Amount-MaxBatchBuy"
                       onClick={function (e) {
-                        e.preventDefault(), f(w);
+                        e.preventDefault(), f(S);
                       }}
                     >
-                      Max: {w}
+                      Max: {S}
                     </a>
                   </div>
                   <div className="Bet-Outcome-Wrapper">
-                    Buy <span className="Bet-Outcome-Winnings">{p}</span> vote{p > 1 ? "s" : ""} for{" "}
-                    <span className="Bet-Outcome-Winnings">{p * N}</span> coins.
+                    Buy <span className="Bet-Outcome-Winnings">{E}</span> vote{E > 1 ? "s" : ""} for{" "}
+                    <span className="Bet-Outcome-Winnings">{E * N}</span> coins.
                   </div>
                 </he.a.Group>
                 <div className="BatchBuy-Submit-Wrapper">{T}</div>
@@ -5852,7 +5866,7 @@
               m = c[0],
               u = c[1],
               d = (function () {
-                var a = Object(E.a)(
+                var a = Object(p.a)(
                   h.a.mark(function a() {
                     return h.a.wrap(function (a) {
                       for (;;)
@@ -5864,7 +5878,7 @@
                                 e.status &&
                                   200 === e.status &&
                                   e.ok &&
-                                  n(Object(B.a)(Object(B.a)({}, t), {}, { favoriteTeam: m }));
+                                  n(Object(O.a)(Object(O.a)({}, t), {}, { favoriteTeam: m }));
                               })
                             );
                           case 2:
@@ -5940,7 +5954,7 @@
             a && a.isSignedIn && l ? (
               <za
                 {...Object.assign({}, e, {
-                  dismiss: Object(E.a)(
+                  dismiss: Object(p.a)(
                     h.a.mark(function e() {
                       return h.a.wrap(function (e) {
                         for (;;)
@@ -5971,24 +5985,24 @@
               u = i[1],
               d = Object(c.g)(),
               h = d.state && d.state.background ? d.state.background.pathname : "",
-              E = e.isModal,
-              p = e.isLogin,
+              p = e.isModal,
+              E = e.isLogin,
               f = Object(r.useRef)(null),
               b = Object(r.useRef)(null),
               v = Object(c.h)().code;
             return (
-              <div className={"".concat(E ? "" : "Auth-SignupWrapper")}>
-                {!E && <Fa />}
+              <div className={"".concat(p ? "" : "Auth-SignupWrapper")}>
+                {!p && <Fa />}
                 <X {...Object.assign({}, e, { className: "Auth" })}>
-                  <header className="Auth-Header">{p ? "Login to Blaseball" : "Signup for Blaseball"}</header>
+                  <header className="Auth-Header">{E ? "Login to Blaseball" : "Signup for Blaseball"}</header>
                   <form
                     onSubmit={function (e) {
                       e.preventDefault(), u(!0);
-                      var r = { username: f.current.value, password: b.current.value, code: v, isLogin: p };
+                      var r = { username: f.current.value, password: b.current.value, code: v, isLogin: E };
                       $("/auth/local", JSON.stringify(r)).then(function (e) {
                         u(!1),
                           e.ok && e.status && 200 === e.status
-                            ? (p || n("Account Created", { appearance: "success" }), a(), t.push("/"))
+                            ? (E || n("Account Created", { appearance: "success" }), a(), t.push("/"))
                             : e.json().then(function (e) {
                                 n(e.error || "Error", { appearance: "error" });
                               });
@@ -6022,8 +6036,8 @@
                     </div>
                     Continue with Google
                   </a>
-                  <a className="Auth-CTA" href={p ? "/signup" : "/login"}>
-                    {p ? "Not on Blaseball yet? Signup" : "Already a member? Log in"}
+                  <a className="Auth-CTA" href={E ? "/signup" : "/login"}>
+                    {E ? "Not on Blaseball yet? Signup" : "Already a member? Log in"}
                   </a>
                 </X>
               </div>
@@ -6037,7 +6051,7 @@
             l = n[0],
             i = n[1];
           function c() {
-            return (c = Object(E.a)(
+            return (c = Object(p.a)(
               h.a.mark(function e() {
                 var a;
                 return h.a.wrap(function (e) {
@@ -6246,8 +6260,8 @@
           return <dt {...ct({ svgRef: a }, e)} />;
         });
       t.p;
-      function Et() {
-        return (Et =
+      function pt() {
+        return (pt =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -6257,7 +6271,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function pt(e, a) {
+      function Et(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -6283,16 +6297,16 @@
         bt = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = pt(e, ["svgRef", "title"]);
+            n = Et(e, ["svgRef", "title"]);
           return (
-            <svg {...Et({ viewBox: "0 0 24 24", ref: a }, n)}>
+            <svg {...pt({ viewBox: "0 0 24 24", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
               {ft}
             </svg>
           );
         },
         vt = o.a.forwardRef(function (e, a) {
-          return <bt {...Et({ svgRef: a }, e)} />;
+          return <bt {...pt({ svgRef: a }, e)} />;
         });
       t.p;
       function gt() {
@@ -6344,8 +6358,8 @@
           return <Nt {...gt({ svgRef: a }, e)} />;
         });
       t.p;
-      function wt() {
-        return (wt =
+      function St() {
+        return (St =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -6355,7 +6369,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function St(e, a) {
+      function wt(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -6375,22 +6389,22 @@
         }
         return r;
       }
-      var Ot = (
+      var Bt = (
           <path d="M8 1c0-.552.448-1 1-1h6c.553 0 1 .448 1 1s-.447 1-1 1h-6c-.552 0-1-.448-1-1zm13 20.554c0 1.284-1.023 2.446-2.424 2.446h-13.153c-1.4 0-2.423-1.162-2.423-2.445 0-.35.076-.709.242-1.057l3.743-7.856c1.04-2.186 2.015-4.581 2.015-7.007v-1.635h2l-.006 2c-.087 2.623-1.09 5.092-1.973 7h3.682l4.377 9h1.496c.309 0 .52-.342.377-.644l-3.743-7.854c-1.046-2.197-2.12-4.791-2.21-7.502v-2h2v1.635c0 2.426.975 4.82 2.016 7.006l3.743 7.856c.165.348.241.707.241 1.057zm-12-1.054c0-.829-.671-1.5-1.5-1.5s-1.5.671-1.5 1.5.671 1.5 1.5 1.5 1.5-.671 1.5-1.5zm2-3.5c0-.553-.448-1-1-1-.553 0-1 .447-1 1s.447 1 1 1c.552 0 1-.447 1-1zm3 3c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1z" />
         ),
-        Bt = function (e) {
+        Ot = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = St(e, ["svgRef", "title"]);
+            n = wt(e, ["svgRef", "title"]);
           return (
-            <svg {...wt({ width: 24, height: 24, viewBox: "0 0 24 24", ref: a }, n)}>
+            <svg {...St({ width: 24, height: 24, viewBox: "0 0 24 24", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
-              {Ot}
+              {Bt}
             </svg>
           );
         },
         It = o.a.forwardRef(function (e, a) {
-          return <Bt {...wt({ svgRef: a }, e)} />;
+          return <Ot {...St({ svgRef: a }, e)} />;
         });
       t.p;
       function kt() {
@@ -6446,8 +6460,8 @@
           return <Lt {...kt({ svgRef: a }, e)} />;
         });
       t.p;
-      function Qt() {
-        return (Qt =
+      function Dt() {
+        return (Dt =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -6457,7 +6471,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Pt(e, a) {
+      function Qt(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -6477,7 +6491,7 @@
         }
         return r;
       }
-      var Dt = (
+      var Pt = (
           <path
             d="M122.7 23.32l1.7 21.87-16.7 14.25 21.4 5.17 8.4 20.25L149 66.18l21.8-1.75-14.2-16.71 5.1-21.32-20.3 8.35-18.7-11.43zM464 32a16 16 0 0 0-16 16 16 16 0 0 0 16 16 16 16 0 0 0 16-16 16 16 0 0 0-16-16zM239.8 42.5a16 16 0 0 0-16 16 16 16 0 0 0 16 16 16 16 0 0 0 16-16 16 16 0 0 0-16-16zm183.9 6.84c-9.2 1.74-17.7 7.18-25.9 14.28-7.6 6.53-14.7 14.66-20.7 23.45-18.8 3.01-37.6 10.67-50.2 21.13-16.1 13.2-30.4 35.8-38.2 59.1-7.4 3.1-14.4 6.8-20.1 10.8-15.5 10.9-23.5 31.8-29.4 50-5.9 18.3-8.8 34.3-8.8 34.3l17.8 3.2s2.7-15 8.1-31.9c5.5-16.9 14.8-35.3 22.7-40.8 1.3-.9 3-1.9 4.5-2.8-.6 5.7-.6 11.4.3 16.8 1.8 11.4 8 22.3 19 28.2 7.8 4.2 16.6 3.2 24 .2 7.4-3.1 14-8.2 19.7-14.2 5.7-6 10.4-13.1 13.2-20.6 2.8-7.5 3.8-16 .2-23.9h-.1c-3.9-8.4-11.4-13.8-19.4-16.1-8-2.3-16.6-2.2-25.2-.9-1.5.2-2.9.7-4.4 1 7.4-15.8 18-30.7 27.5-38.6 6.2-5.1 16.6-10 27.7-13.6-1.4 3.8-2.5 7.6-3 11.5-1.6 10.5.7 21.9 9.1 29.7 6.1 5.6 14.3 6.5 21.5 5.3 7.1-1.2 14-4.4 20.2-8.5 6.2-4.2 11.7-9.4 15.6-15.5 3.9-6.1 6.5-13.9 4-21.7v-.1c-3.3-10.07-11.5-16.99-20.6-20.27-3.9-1.4-8-2.19-12.2-2.66 2.9-3.26 5.9-6.31 8.9-8.92 6.8-5.84 13.7-9.5 17.6-10.23l-3.4-17.68zM174.8 84.39l-15.2 9.56 34.5 55.25-56.4 2.9 26.5 57.8 16.4-7.6-15.5-33.6 60.6-3.1-50.9-81.21zm216.4 19.31c6.1-.1 11.5.6 15.5 2.1 5.4 1.9 8.1 4.3 9.5 8.8.4 1.1.2 3.3-1.9 6.6-2.2 3.4-6.1 7.2-10.5 10.2-4.5 3-9.5 5.1-13.2 5.7-3.8.7-5.5 0-6.3-.7-3.5-3.2-4.5-7.2-3.5-13.9.8-5.4 3.3-11.9 7-18.6 1.2 0 2.3-.2 3.4-.2zM94.99 123a16 16 0 0 0-16 16 16 16 0 0 0 16 16A16 16 0 0 0 111 139a16 16 0 0 0-16.01-16zm356.11 37.2l-14.4 16.6-21.8-1.8 11.4 18.8-8.5 20.2 21.4-5 16.6 14.3 1.9-21.9 18.7-11.4-20.2-8.5-5.1-21.3zm-123.5 16.5c2.9.1 5.6.5 7.7 1.1 4.3 1.2 6.6 3 8.2 6.4.9 1.9 1 5.4-.7 10-1.7 4.7-5.2 10.1-9.4 14.6s-9.3 8.1-13.5 9.8c-4.2 1.7-6.8 1.6-8.5.7h-.1c-5.8-3.2-8.6-7.8-9.7-15.2-1-6.3-.3-14.3 1.8-22.9 4.9-1.7 9.8-3.1 14.5-3.8 3.5-.5 6.7-.7 9.7-.7zm-202.4 51.9c-7.2-.2-11.7 1.5-14.5 4.3-2.8 2.8-4.5 7.3-4.3 14.5.2 7.3 2.6 16.9 7.2 27.6 9.2 21.5 27.3 47.4 51.6 71.8 24.3 24.3 50.3 42.3 71.8 51.5 10.6 4.6 20.2 7 27.5 7.2 7.3.3 11.7-1.5 14.5-4.3 2.8-2.8 4.6-7.2 4.3-14.5-.2-7.3-2.6-16.9-7.2-27.6-9.2-21.4-27.2-47.4-51.5-71.7-24.3-24.4-50.3-42.4-71.8-51.6-10.7-4.6-20.3-7-27.6-7.2zm232 31.3l-33 54-29.1-27.9-12.4 13 45.1 43.3 33.8-55.2 38.7 32.3 89.3-38.2-7-16.6-79.3 34-46.1-38.7zM93.43 272.6l-17.64 57.9c41.41 49.1 89.71 76.7 142.11 94.7l21.6-6.6c-3.1-1.1-6.4-2.4-9.7-3.8-24.4-10.4-51.7-29.6-77.3-55.3-25.7-25.7-44.9-53-55.34-77.4-1.41-3.2-2.65-6.4-3.73-9.5zm-23.82 78.2l-14.01 46c28.89 27 59 39.2 90.6 50.2l43.4-13.2c-43.2-17.6-84-43.3-119.99-83zM368 352a16 16 0 0 0-16 16 16 16 0 0 0 16 16 16 16 0 0 0 16-16 16 16 0 0 0-16-16zM49.81 415.9l-20.29 66.6 88.28-26.9c-22.77-9.1-45.78-20.7-67.99-39.7z"
             fill="#fff"
@@ -6487,20 +6501,20 @@
         Wt = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = Pt(e, ["svgRef", "title"]);
+            n = Qt(e, ["svgRef", "title"]);
           return (
-            <svg {...Qt({ viewBox: "0 0 512 512", ref: a }, n)}>
+            <svg {...Dt({ viewBox: "0 0 512 512", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
-              {Dt}
+              {Pt}
             </svg>
           );
         },
         Gt = o.a.forwardRef(function (e, a) {
-          return <Wt {...Qt({ svgRef: a }, e)} />;
+          return <Wt {...Dt({ svgRef: a }, e)} />;
         });
       t.p;
-      function Mt() {
-        return (Mt =
+      function xt() {
+        return (xt =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -6510,7 +6524,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function xt(e, a) {
+      function Mt(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -6541,16 +6555,16 @@
         Ut = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = xt(e, ["svgRef", "title"]);
+            n = Mt(e, ["svgRef", "title"]);
           return (
-            <svg {...Mt({ viewBox: "0 0 512 512", ref: a }, n)}>
+            <svg {...xt({ viewBox: "0 0 512 512", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
               {Ht}
             </svg>
           );
         },
         Yt = o.a.forwardRef(function (e, a) {
-          return <Ut {...Mt({ svgRef: a }, e)} />;
+          return <Ut {...xt({ svgRef: a }, e)} />;
         });
       t.p;
       !(function (e) {
@@ -6589,69 +6603,69 @@
         ) : "redistribute_wealth" === e ? (
           <ht className="Decrees-Option-Icon" />
         ) : "four_for_four" === e || "fourth_strike" === e ? (
-          <V.W className="Decrees-Option-Icon" />
+          <V.X className="Decrees-Option-Icon" />
         ) : "peanuts" === e ? (
-          <V.cb className="Decrees-Option-Icon" />
+          <V.eb className="Decrees-Option-Icon" />
         ) : "popular_evolution" === e ? (
           <It className="Decrees-Option-Icon" />
         ) : "enhanced_shame" === e ? (
-          <V.hb className="Decrees-Option-Icon" />
+          <V.jb className="Decrees-Option-Icon" />
         ) : "late_stage" === e ? (
-          <V.p className="Decrees-Option-Icon" />
+          <V.q className="Decrees-Option-Icon" />
         ) : "blaserunning" === e ? (
-          <V.z className="Decrees-Option-Icon" />
+          <V.A className="Decrees-Option-Icon" />
         ) : "eat_the_rich" === e ? (
-          <V.u className="Decrees-Option-Icon" />
+          <V.v className="Decrees-Option-Icon" />
         ) : "eat_the_crust" === e ? (
-          <V.db className="Decrees-Option-Icon" />
+          <V.fb className="Decrees-Option-Icon" />
         ) : "interviews" === e ? (
-          <V.X className="Decrees-Option-Icon" />
+          <V.Y className="Decrees-Option-Icon" />
         ) : "random_realignment" === e ? (
           <V.a className="Decrees-Option-Icon" />
         ) : "alternate_reality" === e ? (
-          <Da.e className="Decrees-Option-Icon" />
+          <Pa.e className="Decrees-Option-Icon" />
         ) : "targeted_shame" === e ? (
-          <V.sb className="Decrees-Option-Icon" />
+          <V.tb className="Decrees-Option-Icon" />
         ) : "roster_shuffle" === e ? (
-          <Pa.a className="Decrees-Option-Icon" />
+          <Qa.a className="Decrees-Option-Icon" />
         ) : "home_field_advantage" === e ? (
           <K.b className="Decrees-Option-Icon" />
         ) : "team_punish" === e ? (
-          <V.Gb className="Decrees-Option-Icon" />
+          <V.Ib className="Decrees-Option-Icon" />
         ) : "do_nothing" === e ? (
-          <V.fb className="Decrees-Option-Icon" />
+          <V.hb className="Decrees-Option-Icon" />
         ) : "confuse_good" === e ? (
-          <V.vb className="Decrees-Option-Icon" />
+          <V.wb className="Decrees-Option-Icon" />
         ) : "confuse_evil" === e ? (
-          <V.ub className="Decrees-Option-Icon" />
+          <V.vb className="Decrees-Option-Icon" />
         ) : "parallel_world" === e ? (
-          <V.ib className="Decrees-Option-Icon" />
+          <V.kb className="Decrees-Option-Icon" />
         ) : "diagonal_world" === e ? (
-          <V.Cb className="Decrees-Option-Icon" />
+          <V.Db className="Decrees-Option-Icon" />
         ) : "high_filter" === e ? (
-          <V.T className="Decrees-Option-Icon" />
+          <V.U className="Decrees-Option-Icon" />
         ) : "new_kids" === e ? (
-          <V.C className="Decrees-Option-Icon" />
+          <V.D className="Decrees-Option-Icon" />
         ) : "hot_sauce" === e ? (
           <Ft className="Decrees-Option-Icon" />
         ) : "enhanced_party_time" === e ? (
           <Gt className="Decrees-Option-Icon" />
         ) : "fifth_base" === e ? (
-          <V.L className="Decrees-Option-Icon" />
+          <V.M className="Decrees-Option-Icon" />
         ) : "walk_in_the_park" === e ? (
           <Yt className="Decrees-Option-Icon" />
         ) : "bless_off" === e ? (
-          <V.J className="Decrees-Option-Icon" />
+          <V.K className="Decrees-Option-Icon" />
         ) : "wild_cards" === e ? (
           <V.l className="Decrees-Option-Icon" />
         ) : "relief" === e ? (
-          <V.mb className="Decrees-Option-Icon" />
+          <V.ob className="Decrees-Option-Icon" />
         ) : "double_jumps" === e ? (
-          <V.R className="Decrees-Option-Icon" />
+          <V.S className="Decrees-Option-Icon" />
         ) : "forecast_birds" === e ? (
           <V.g className="Decrees-Option-Icon" />
         ) : "forecast_peanuts" === e ? (
-          <V.cb className="Decrees-Option-Icon" />
+          <V.eb className="Decrees-Option-Icon" />
         ) : "forecast_eclipse" === e ? (
           <ge.i className="Decrees-Option-Icon" />
         ) : "forecast_blooddrain" === e ? (
@@ -6659,7 +6673,13 @@
         ) : "forecast_reverb" === e ? (
           <V.f className="Decrees-Option-Icon" />
         ) : "forecast_feedback" === e ? (
-          <V.X className="Decrees-Option-Icon" />
+          <V.Y className="Decrees-Option-Icon" />
+        ) : "tactical_nuke" === e ? (
+          <V.Z className="Decrees-Option-Icon" />
+        ) : "eliminator" === e ? (
+          <V.m className="Decrees-Option-Icon" />
+        ) : "self_destruct" === e ? (
+          <V.Fb className="Decrees-Option-Icon" />
         ) : (
           <div />
         );
@@ -6742,7 +6762,7 @@
         };
       t(125);
       function _t() {
-        var e = Object(r.useContext)(O.context),
+        var e = Object(r.useContext)(B.context),
           a = Object(r.useState)({ recap: void 0, blessingResults: void 0, decreeResults: void 0 }),
           t = Object(s.a)(a, 2),
           n = t[0],
@@ -6752,8 +6772,8 @@
           m = c[0],
           u = c[1],
           d = Object(r.useContext)(Ge.context);
-        function p() {
-          return (p = Object(E.a)(
+        function E() {
+          return (E = Object(p.a)(
             h.a.mark(function a() {
               var t, n, r, o, i, s, c;
               return h.a.wrap(function (a) {
@@ -6808,7 +6828,7 @@
           (Object(r.useEffect)(function () {
             u(!0),
               (function () {
-                return p.apply(this, arguments);
+                return E.apply(this, arguments);
               })().then(function () {
                 u(!1);
               });
@@ -6923,12 +6943,12 @@
       }
       function $t() {
         var e = Object(r.useContext)(F.context).user,
-          a = Object(r.useContext)(O.context);
+          a = Object(r.useContext)(B.context);
         return a && a.sim ? 0 === a.sim.phase ? <_t /> : e.unlockedElection ? <en /> : <tn /> : null;
       }
       function en() {
         var e,
-          a = Object(r.useContext)(O.context),
+          a = Object(r.useContext)(B.context),
           t = void 0 !== a.sim && void 0 !== a.sim.season ? a.sim.season : -1;
         return (
           <div className="Offseason">
@@ -6988,7 +7008,7 @@
             m = Object(c.h)().entityId,
             u = Object(r.useState)(0),
             d = Object(s.a)(u, 2),
-            p = d[0],
+            E = d[0],
             f = d[1],
             b = Object(r.useState)(!1),
             v = Object(s.a)(b, 2),
@@ -6999,13 +7019,13 @@
               f(a);
             },
             N = (function () {
-              var e = Object(E.a)(
+              var e = Object(p.a)(
                 h.a.mark(function e(t) {
                   return h.a.wrap(function (e) {
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          if ((t.preventDefault(), !(n.peanuts < p))) {
+                          if ((t.preventDefault(), !(n.peanuts < E))) {
                             e.next = 5;
                             break;
                           }
@@ -7013,7 +7033,7 @@
                         case 4:
                           return e.abrupt("return");
                         case 5:
-                          if (!(p < 1)) {
+                          if (!(E < 1)) {
                             e.next = 9;
                             break;
                           }
@@ -7024,10 +7044,10 @@
                           return (
                             y(!0),
                             (e.next = 12),
-                            $("/api/payTribute", JSON.stringify({ playerId: m, amount: p }))
+                            $("/api/payTribute", JSON.stringify({ playerId: m, amount: E }))
                               .then(
                                 (function () {
-                                  var e = Object(E.a)(
+                                  var e = Object(p.a)(
                                     h.a.mark(function e(t) {
                                       return h.a.wrap(function (e) {
                                         for (;;)
@@ -7041,9 +7061,9 @@
                                               );
                                             case 2:
                                               t.ok && t.status && 200 === t.status
-                                                ? (l(Object(B.a)(Object(B.a)({}, n), {}, { peanuts: n.peanuts - p })),
+                                                ? (l(Object(O.a)(Object(O.a)({}, n), {}, { peanuts: n.peanuts - E })),
                                                   a(
-                                                    "YOU OFFER ".concat(p > 1 ? "PEANUTS" : "A PEANUT", " IN TRIBUTE"),
+                                                    "YOU OFFER ".concat(E > 1 ? "PEANUTS" : "A PEANUT", " IN TRIBUTE"),
                                                     { appearance: "warning" }
                                                   ),
                                                   i.goBack())
@@ -7093,16 +7113,16 @@
                     <he.a.Label>How many peanuts will you offer?</he.a.Label>
                     <div className="Tribute-Form-Inputs-Amount">
                       <div className="Tribute-Ticket-Wrapper">
-                        <V.cb className="Tribute-Ticket-Icon" />
+                        <V.eb className="Tribute-Ticket-Icon" />
                         {n.peanuts}
                       </div>
-                      <he.a.Control type="number" value={p} onChange={A} />
+                      <he.a.Control type="number" value={E} onChange={A} />
                       <he.a.Control
                         type="range"
                         className="Tribute-Range"
                         min={1}
                         max={Math.min(n.peanuts)}
-                        value={p}
+                        value={E}
                         onChange={A}
                         step="1"
                       />
@@ -7133,8 +7153,8 @@
               m = Object(c.h)(),
               u = m.voteType,
               d = m.entityId,
-              p = Object(r.useState)(1),
-              f = Object(s.a)(p, 2),
+              E = Object(r.useState)(1),
+              f = Object(s.a)(E, 2),
               b = f[0],
               v = f[1],
               g = Object(r.useState)(!1),
@@ -7142,15 +7162,15 @@
               A = y[0],
               N = y[1],
               T = { team1: n.favoriteTeam },
-              w = function (e) {
+              S = function (e) {
                 var a = e.target.value;
                 v(a);
               },
-              S = n.votes,
-              O = <fe />;
+              w = n.votes,
+              B = <fe />;
             return (
               A ||
-                (O = (
+                (B = (
                   <Y.a className="Vote-Submit" type="submit" variant="success">
                     Submit
                   </Y.a>
@@ -7161,13 +7181,13 @@
                   <he.a
                     className="Vote-Form"
                     onSubmit={function (e) {
-                      if ((e.preventDefault(), N(!0), b > S)) a("Max vote is ".concat(S, "!"), { appearance: "error" });
+                      if ((e.preventDefault(), N(!0), b > w)) a("Max vote is ".concat(w, "!"), { appearance: "error" });
                       else {
                         var t = { amount: b, entityId: d, voteType: u, data: T };
                         $("/api/vote", JSON.stringify(t))
                           .then(function (e) {
                             e.status && 200 === e.status && e.ok
-                              ? (l(Object(B.a)(Object(B.a)({}, n), {}, { votes: n.votes - b })),
+                              ? (l(Object(O.a)(Object(O.a)({}, n), {}, { votes: n.votes - b })),
                                 a("Vote Placed", { appearance: "success" }),
                                 i.goBack())
                               : e.json().then(function (e) {
@@ -7175,7 +7195,7 @@
                                 });
                           })
                           .finally(
-                            Object(E.a)(
+                            Object(p.a)(
                               h.a.mark(function e() {
                                 return h.a.wrap(function (e) {
                                   for (;;)
@@ -7197,30 +7217,30 @@
                       <he.a.Label>How many votes do you want to cast?</he.a.Label>
                       <div className="Vote-Form-Inputs-Amount">
                         <div className="Vote-Ticket-Wrapper">
-                          <V.Db className="Vote-Ticket-Icon" />
+                          <V.Eb className="Vote-Ticket-Icon" />
                           {n.votes}
                         </div>
-                        <he.a.Control type="number" value={b} onChange={w} />
+                        <he.a.Control type="number" value={b} onChange={S} />
                         <he.a.Control
                           type="range"
                           className="Vote-Range"
                           min={1}
-                          max={Math.min(n.votes, S)}
+                          max={Math.min(n.votes, w)}
                           value={b}
-                          onChange={w}
+                          onChange={S}
                           step="1"
                         />
                         <a
                           className="Vote-Form-Inputs-Amount-MaxVote"
                           onClick={function (e) {
-                            e.preventDefault(), v(Math.min(n.votes, S));
+                            e.preventDefault(), v(Math.min(n.votes, w));
                           }}
                         >
-                          Max Vote: {S}
+                          Max Vote: {w}
                         </a>
                       </div>
                     </he.a.Group>
-                    <div className="Vote-Submit-Wrapper">{O}</div>
+                    <div className="Vote-Submit-Wrapper">{B}</div>
                   </he.a>
                 </X>
               )
@@ -7231,7 +7251,7 @@
         var a,
           t = e.path,
           n = Object(r.useContext)(Ge.context),
-          l = Object(r.useContext)(O.context);
+          l = Object(r.useContext)(B.context);
         if (void 0 === n || void 0 === l) return null;
         var i = n.teams.find(function (e) {
           var a;
@@ -8212,13 +8232,13 @@
           return <dn {...cn({ svgRef: a }, e)} />;
         });
       t.p, t(131), t(132), t(133);
-      function En(e) {
+      function pn(e) {
         return void 0 !== e.element ? e.element : <div className="Stubs-Header">{e.text}</div>;
       }
-      var pn = function (e) {
+      var En = function (e) {
           var a,
             t = e.path,
-            n = Object(r.useContext)(O.context),
+            n = Object(r.useContext)(B.context),
             l = (void 0 !== n.sim && void 0 !== n.sim.season && n.sim.season, null);
           switch (t) {
             case "/leaderboard":
@@ -8229,7 +8249,7 @@
           }
           return (
             <div>
-              <En
+              <pn
                 element={
                   <div className="Stubs-All">
                     <div className="Stubs-Header">The Season is Over!</div>
@@ -8248,7 +8268,7 @@
         bn = {
           notes: [],
           refreshNotes: (function () {
-            var e = Object(E.a)(
+            var e = Object(p.a)(
               h.a.mark(function e() {
                 return h.a.wrap(function (e) {
                   for (;;)
@@ -8276,10 +8296,10 @@
             m = c[0],
             u = c[1],
             d = Object(de.useToasts)().addToast,
-            p = Object(r.useRef)(void 0),
+            E = Object(r.useRef)(void 0),
             f = Object(r.useRef)(),
             b = Object(r.useCallback)(
-              Object(E.a)(
+              Object(p.a)(
                 h.a.mark(function e() {
                   return h.a.wrap(function (e) {
                     for (;;)
@@ -8308,7 +8328,7 @@
               []
             ),
             v = Object(r.useCallback)(
-              Object(E.a)(
+              Object(p.a)(
                 h.a.mark(function e() {
                   var a;
                   return h.a.wrap(function (e) {
@@ -8319,9 +8339,9 @@
                             (a = 0),
                             fetch("/api/getUserRewards", { credentials: "include" }).then(
                               (function () {
-                                var e = Object(E.a)(
+                                var e = Object(p.a)(
                                   h.a.mark(function e(t) {
-                                    var r, o, i, s, c, m, u, E, p, f, b, v, g;
+                                    var r, o, i, s, c, m, u, p, E, f, b, v, g;
                                     return h.a.wrap(function (e) {
                                       for (;;)
                                         switch ((e.prev = e.next)) {
@@ -8338,8 +8358,8 @@
                                             }
                                             if (
                                               (l(
-                                                Object(B.a)(
-                                                  Object(B.a)({}, n),
+                                                Object(O.a)(
+                                                  Object(O.a)({}, n),
                                                   {},
                                                   { coins: r.coins, peanuts: r.peanuts, votes: r.votes }
                                                 )
@@ -8379,8 +8399,8 @@
                                               ((c = 0),
                                               (m = 0),
                                               (u = 0),
-                                              (E = 0),
                                               (p = 0),
+                                              (E = 0),
                                               (f = 0),
                                               (b = 0),
                                               (v = 0),
@@ -8390,22 +8410,22 @@
                                                     c++, (m += e.amount);
                                                     break;
                                                   case $e.IdolHit:
-                                                    u++, (E += e.amount);
+                                                    u++, (p += e.amount);
                                                     break;
                                                   case $e.IdolStrikeout:
-                                                    p++, (f += e.amount);
+                                                    E++, (f += e.amount);
                                                     break;
                                                   case $e.IdolShutout:
                                                     b++, (v += e.amount);
                                                 }
                                               }),
                                               (g = r.idolName) || (g = "your Idol"),
-                                              p > 0 &&
+                                              E > 0 &&
                                                 d(
                                                   "You earned "
                                                     .concat(f, " coins from ")
                                                     .concat(g, " pitching ")
-                                                    .concat(p > 1 ? p + " Strikeouts" : "a Strikeout"),
+                                                    .concat(E > 1 ? E + " Strikeouts" : "a Strikeout"),
                                                   { appearance: "info", autoDismiss: !1 }
                                                 ),
                                               b > 0 &&
@@ -8419,7 +8439,7 @@
                                               u > 0 &&
                                                 d(
                                                   "You earned "
-                                                    .concat(E, " coins from ")
+                                                    .concat(p, " coins from ")
                                                     .concat(g, " getting ")
                                                     .concat(u > 1 ? u + " Hits." : "Hits."),
                                                   { appearance: "info", autoDismiss: !1 }
@@ -8458,15 +8478,15 @@
           Object(r.useEffect)(
             function () {
               g() && (void 0 !== f.current && clearTimeout(f.current), (f.current = setTimeout(A, 5e3))),
-                (p.current = N);
+                (E.current = N);
             },
             [N]
           );
           var g = function () {
               var e,
                 a,
-                t = null === (e = p.current) || void 0 === e ? void 0 : e.sim,
-                n = null === (a = p.current) || void 0 === a ? void 0 : a.schedule,
+                t = null === (e = E.current) || void 0 === e ? void 0 : e.sim,
+                n = null === (a = E.current) || void 0 === a ? void 0 : a.schedule,
                 r = null === N || void 0 === N ? void 0 : N.sim,
                 o = null === N || void 0 === N ? void 0 : N.schedule;
               if (void 0 === r || void 0 === o || void 0 === t || void 0 === n) return !1;
@@ -8484,7 +8504,7 @@
               );
             },
             y = (function () {
-              var e = Object(E.a)(
+              var e = Object(p.a)(
                 h.a.mark(function e() {
                   var a;
                   return h.a.wrap(function (e) {
@@ -8511,7 +8531,7 @@
               };
             })(),
             A = (function () {
-              var e = Object(E.a)(
+              var e = Object(p.a)(
                 h.a.mark(function e() {
                   return h.a.wrap(function (e) {
                     for (;;)
@@ -8808,9 +8828,9 @@
         var n = (function (e) {
           switch (e) {
             case "One":
-              return <V.cb />;
+              return <V.eb />;
             case "Two":
-              return <V.G />;
+              return <V.H />;
           }
           return null;
         })(t);
@@ -8826,8 +8846,8 @@
         );
       }
       t(136);
-      var wn = t(71);
-      function Sn() {
+      var Sn = t(71);
+      function wn() {
         var e,
           a,
           t,
@@ -8835,13 +8855,13 @@
           l,
           i,
           c,
-          m = Object(r.useContext)(O.context),
+          m = Object(r.useContext)(B.context),
           u = Object(r.useState)([]),
           d = Object(s.a)(u, 2),
-          p = d[0],
+          E = d[0],
           f = d[1];
         function b() {
-          return (b = Object(E.a)(
+          return (b = Object(p.a)(
             h.a.mark(function e() {
               var a, t, n;
               return h.a.wrap(function (e) {
@@ -8877,7 +8897,7 @@
           void 0 === m || void 0 === m.sim)
         )
           return null;
-        x(m.sim, "DOUBLE_JUMPS") || x(m.sim, "WILD_CARDS") ? (o.a.Fragment, V.yb) : (o.a.Fragment, V.k);
+        M(m.sim, "DOUBLE_JUMPS") || M(m.sim, "WILD_CARDS") ? (o.a.Fragment, V.zb) : (o.a.Fragment, V.k);
         var v =
           6 === (null === (e = m.sim) || void 0 === e ? void 0 : e.phase) ||
           0 === (null === (a = m.sim) || void 0 === a ? void 0 : a.phase);
@@ -8885,7 +8905,7 @@
           <o.a.Fragment>
             <div className="Bulletin-Item-Header">
               <div className="Bulletin-Item-Header-Icon" style={{ background: "#ba1111" }}>
-                <Da.d />
+                <Pa.d />
               </div>
               <div className="Bulletin-Item-Header-Title">Blaseball Cares</div>
             </div>
@@ -8947,33 +8967,32 @@
         )),
           o.a.Fragment,
           V.e,
-          p.map(function (e) {
+          E.map(function (e) {
             return <div className="Bulletin-Item-Contents-Text">{e}</div>;
           }),
           (n = (
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#32c775" }}>
-                  <V.Fb />
+                  <V.Hb />
                 </div>
                 <div className="Bulletin-Item-Header-Title">Season {m.sim.season} Recap</div>
               </div>
               <div className="Bulletin-Item-Contents">
                 <div className="Bulletin-Item-Contents-Text">
-                  <Bn />
-                  The Baltimore Crabs are TWO-TIME Champions! The cantankerous crustaceans defeated the Hades Tigers 3
-                  games to 1 to claim their second Internet Series title in three seasons.
+                  <On />
+                  The Charleston Shoe Thieves became the first team in ILB history to rally back from a 2-game deficit
+                  in the Internet Series and snatch their first title! Stu Trololol’s three-run homer in the bottom of
+                  the ninth Shamed the Baltimore Crabs, stealing any hope of ascension!
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <Bn />
-                  The ILB now finds itself in a three-way race for Ascension, as the Crabs, Tigers and Pies jockey to be
-                  the first team to win three titles and subsequently “go up or climb,” or “rise through the air,” as
-                  the commissioner suggested / pulled from the dictionary.
+                  <On />
+                  The Shoe Thieves again made history by becoming the first team to fight god.
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <Bn />
-                  Debt Trading had the league Flickering in Season 8, as Jaylen Hotdogfingers appears to have Refinanced
-                  in a mysterious deal with the Microphone.
+                  <On />
+                  Wyatt initiated Phase 2 of the Plan, restructuring Jaylen’s Debt and encouraging players around the
+                  league to Repeat history, filling out paradoxical scoresheets for the numbers nerds.
                 </div>
               </div>
             </o.a.Fragment>
@@ -8982,30 +9001,25 @@
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#c23284" }}>
-                  <V.kb />
+                  <V.mb />
                 </div>
                 <div className="Bulletin-Item-Header-Title">Current Events</div>
               </div>
               <div className="Bulletin-Item-Contents Bulletin-Item-Contents-Text">
                 <div className="Bulletin-Item-Contents-Text">
-                  <Bn />
-                  The Microphone appears to have transformed both NaN and Sixpack Dogwalker into some sort of cosmic
-                  Receivers capable of broadcasting its messages to the league. What we know so far: The Mic is claiming
-                  to be Wyatt Mason. And it supposedly has a plan.
+                  <On />
+                  The Monitor’s hunger grew in Season 9. The cephalopod attempted to snack on Canada Moist Talker
+                  PolkaDot Patterson, but found the taste unappealing. The squid demands a real meal.
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <Bn />
-                  In a landslide Election, fans voted to draw Wild Cards, expanding the Postseason field.
+                  <On />
+                  The ILB issued a Severe Storm Warning for the Immaterial Plane after satellites detected multiple
+                  fronts moving into the area. Fans have been advised to seek shelter as the Forecast predicts 99 Days
+                  of Murmurations, Blooddrain and Solar Eclipse.
                 </div>
                 <div className="Bulletin-Item-Contents-Text">
-                  <Bn />
-                  The Monitor continues to be enthralled with the Peanut. The squid also seems to have taken interest in
-                  the shelled Idols.
-                </div>
-                <div className="Bulletin-Item-Contents-Text">
-                  <Bn />
-                  After fans offered 100 million peanuts in tribute to the dead, the Peanut called STRIKE 4. The Shelled
-                  One claims to be on its way.
+                  <On />
+                  EMERGENCY ALERT! THE SHELLED ONE HAS ARRIVED. BOW BEFORE ITS PODS.
                 </div>
               </div>
             </o.a.Fragment>
@@ -9014,14 +9028,14 @@
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#1b95e0" }}>
-                  <V.ab />
+                  <V.cb />
                 </div>
                 <div className="Bulletin-Item-Header-Title">Art Gallery</div>
               </div>
               <div className="Bulletin-Item-Contents Bulletin-Item-ImageGrid">
-                {On.map(function (e) {
+                {Bn.map(function (e) {
                   return (
-                    <wn.a
+                    <Sn.a
                       id={e}
                       options={{ theme: "dark", conversation: "none", dnt: !0 }}
                       className="Bulletin-Tweet"
@@ -9036,20 +9050,17 @@
               <o.a.Fragment>
                 <div className="Bulletin-Item-Header">
                   <div className="Bulletin-Item-Header-Icon" style={{ background: "#9c2c46" }}>
-                    <V.v />
+                    <V.w />
                   </div>
                   <div className="Bulletin-Item-Header-Title">Echo</div>
                 </div>
                 <div className="Bulletin-Item-Contents">
                   <div className="Bulletin-Item-Contents-Text">
-                    <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT{" "}
-                    <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT{" "}
-                    <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT{" "}
-                    <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT{" "}
-                    <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT{" "}
-                    <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT{" "}
-                    <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT{" "}
-                    <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT <V.pb /> EMERGENCY ALERT <V.pb />
+                    BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT
+                    BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT
+                    BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT
+                    BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT
+                    BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT BACKDRAFT
                   </div>
                 </div>
               </o.a.Fragment>
@@ -9057,7 +9068,7 @@
               <o.a.Fragment>
                 <div className="Bulletin-Item-Header">
                   <div className="Bulletin-Item-Header-Icon" style={{ background: "#9c2c46" }}>
-                    <V.v />
+                    <V.w />
                   </div>
                   <div className="Bulletin-Item-Header-Title">Echo</div>
                 </div>
@@ -9075,9 +9086,9 @@
         var g = (
           <div className="Bulletin">
             <div className="Bulletin-Rows">
+              <div className="Bulletin-Item Bulletin-Tall-Left">{c}</div>
               <div className="Bulletin-Item Bulletin-Tall-Middle">{i}</div>
               <div className="Bulletin-Item Bulletin-Tall-Right">{n}</div>
-              <div className="Bulletin-Item Bulletin-Tall-Left">{c}</div>
               <div className="Bulletin-Item Bulletin-Wide-Bottom">{l}</div>
             </div>
           </div>
@@ -9094,7 +9105,7 @@
           g
         );
       }
-      var On = (function (e) {
+      var Bn = (function (e) {
         var a,
           t = [];
         for (; t.length <= 2; ) (a = Math.floor(Math.random() * e.length)), t.includes(a) || t.push(a);
@@ -9426,8 +9437,8 @@
         "1301342212551249920",
         "1307365350556798979",
       ]);
-      function Bn() {
-        return <Da.f className="Bulletin-Bullet" />;
+      function On() {
+        return <Pa.f className="Bulletin-Bullet" />;
       }
       var In, kn;
       t(137);
@@ -9464,8 +9475,8 @@
         })(kn || (kn = {}));
       function Cn(e) {
         for (var a = e / 0.2, t = Math.round(2 * a) / 2, n = Math.floor(t), r = Math.ceil(t), l = [], i = 0; i < n; i++)
-          l.push(<Pa.b />);
-        return n !== r && l.push(<Pa.c />), (<span>{l}</span>);
+          l.push(<Qa.b />);
+        return n !== r && l.push(<Qa.c />), (<span>{l}</span>);
       }
       var Rn = function (e) {
           var a,
@@ -9473,10 +9484,10 @@
             n,
             l,
             i = Object(c.h)().id,
-            m = Object(r.useContext)(O.context),
+            m = Object(r.useContext)(B.context),
             d = Object(r.useContext)(Ge.context),
-            p = Object(r.useState)(void 0),
-            f = Object(s.a)(p, 2),
+            E = Object(r.useState)(void 0),
+            f = Object(s.a)(E, 2),
             b = f[0],
             v = f[1],
             g = Object(de.useToasts)().addToast,
@@ -9484,9 +9495,9 @@
             A = y.user,
             N = y.setUser,
             T = Object(r.useState)(!1),
-            w = Object(s.a)(T, 2),
-            S = w[0],
-            I = (w[1], Object(r.useState)(1)),
+            S = Object(s.a)(T, 2),
+            w = S[0],
+            I = (S[1], Object(r.useState)(1)),
             k = Object(s.a)(I, 2);
           k[0], k[1];
           function C(e) {
@@ -9499,7 +9510,7 @@
           }
           Object(r.useEffect)(function () {
             (function () {
-              var e = Object(E.a)(
+              var e = Object(p.a)(
                 h.a.mark(function e() {
                   var a, t, n;
                   return h.a.wrap(function (e) {
@@ -9533,7 +9544,7 @@
               });
               return void 0 === a ? "NONE" : a.attr;
             })(null === b || void 0 === b ? void 0 : b.player),
-            Q = (function (e) {
+            D = (function (e) {
               if (void 0 === e) return "NONE";
               if (void 0 === e.armor) return "NONE";
               if ("" === e.armor) return "NONE";
@@ -9542,9 +9553,9 @@
               });
               return void 0 === a ? "NONE" : a.attr;
             })(null === b || void 0 === b ? void 0 : b.player),
-            P = Object(c.g)(),
-            D =
-              x(null === m || void 0 === m ? void 0 : m.sim, "UNLOCKED_HALL") &&
+            Q = Object(c.g)(),
+            P =
+              M(null === m || void 0 === m ? void 0 : m.sim, "UNLOCKED_HALL") &&
               void 0 !== (null === b || void 0 === b ? void 0 : b.player) &&
               b.player.deceased ? (
                 <div className="Player-Status">
@@ -9552,15 +9563,15 @@
                     <div className="Player-Deceased-Icon" />
                     <div className="Player-Status-Name">Deceased</div>
                   </div>
-                  {S ? (
-                    <pe />
+                  {w ? (
+                    <Ee />
                   ) : (
                     <u
                       className="Player-Button-Tribute"
-                      background={P}
+                      background={Q}
                       path={"/tribute/".concat(null === b || void 0 === b ? void 0 : b.player.id)}
                     >
-                      <V.cb /> Pay Tribute
+                      <V.eb /> Pay Tribute
                     </u>
                   )}
                 </div>
@@ -9572,28 +9583,28 @@
                 b.player.weekAttr.length > 0 ||
                 b.player.gameAttr.length > 0 ||
                 "NONE" !== L ||
-                "NONE" !== Q) ? (
+                "NONE" !== D) ? (
                 <div className="Player-Attributes">
                   <div className="AttributeBar">
                     {b.player.permAttr.map(function (e, a) {
-                      return <xa id={e} type={Qa.Permanent} key={a} />;
+                      return <Ma id={e} type={Da.Permanent} key={a} />;
                     })}
                     {b.player.seasAttr.map(function (e, a) {
-                      return <xa id={e} type={Qa.Season} key={a} />;
+                      return <Ma id={e} type={Da.Season} key={a} />;
                     })}
                     {b.player.weekAttr.map(function (e, a) {
-                      return <xa id={e} type={Qa.Weekly} key={a} />;
+                      return <Ma id={e} type={Da.Weekly} key={a} />;
                     })}
                     {b.player.gameAttr.map(function (e, a) {
-                      return <xa id={e} type={Qa.Game} key={a} />;
+                      return <Ma id={e} type={Da.Game} key={a} />;
                     })}
-                    {"NONE" !== L ? <xa id={L} type={Qa.Item} /> : null}
-                    {"NONE" !== Q ? <xa id={Q} type={Qa.Armor} /> : null}
+                    {"NONE" !== L ? <Ma id={L} type={Da.Item} /> : null}
+                    {"NONE" !== D ? <Ma id={D} type={Da.Armor} /> : null}
                   </div>
                 </div>
               ) : null,
-            M = (function () {
-              var e = Object(E.a)(
+            x = (function () {
+              var e = Object(p.a)(
                 h.a.mark(function e(a) {
                   return h.a.wrap(function (e) {
                     for (;;)
@@ -9617,7 +9628,7 @@
                               JSON.stringify({ playerId: b.player.id, playerName: b.player.name })
                             ).then(
                               (function () {
-                                var e = Object(E.a)(
+                                var e = Object(p.a)(
                                   h.a.mark(function e(a) {
                                     return h.a.wrap(function (e) {
                                       for (;;)
@@ -9626,11 +9637,11 @@
                                             a.ok && a.status && 200 === a.status && b && b.player
                                               ? (!1,
                                                 "" === A.idol || null === A.idol
-                                                  ? (N(Object(B.a)(Object(B.a)({}, A), {}, { idol: b.player.id })), !0)
+                                                  ? (N(Object(O.a)(Object(O.a)({}, A), {}, { idol: b.player.id })), !0)
                                                   : A.coins >= 200 &&
                                                     (N(
-                                                      Object(B.a)(
-                                                        Object(B.a)({}, A),
+                                                      Object(O.a)(
+                                                        Object(O.a)({}, A),
                                                         {},
                                                         { coins: A.coins - 200, idol: b.player.id }
                                                       )
@@ -9711,18 +9722,18 @@
                           </div>
                           <div className="Player-Team-Name">{void 0 !== b.team ? b.team.fullName : "Null Team"}</div>
                         </div>
-                        {x(m.sim, "UNLOCKED_IDOLS") ? (
+                        {M(m.sim, "UNLOCKED_IDOLS") ? (
                           <J.a className="Player-Button">
                             {(j || U) && K !== b.player.id ? (
                               <div className="Idol-Disabled-Tooltip">
-                                <Se.a
+                                <we.a
                                   placement="right"
                                   overlay={
-                                    <Oe.a id="tooltip-disabled" className="Idol-Disabled-Tooltip">
+                                    <Be.a id="tooltip-disabled" className="Idol-Disabled-Tooltip">
                                       {j
                                         ? "You can't choose an Idol while games are active."
                                         : "This player cannot be Idolized."}
-                                    </Oe.a>
+                                    </Be.a>
                                   }
                                 >
                                   <span className="d-inline-block">
@@ -9734,31 +9745,31 @@
                                     >
                                       {"" === K || null === K ? (
                                         <o.a.Fragment>
-                                          <V.yb /> Choose Idol
+                                          <V.zb /> Choose Idol
                                         </o.a.Fragment>
                                       ) : (
                                         <o.a.Fragment>
-                                          <V.Eb /> 200 New Idol
+                                          <V.Gb /> 200 New Idol
                                         </o.a.Fragment>
                                       )}{" "}
                                     </Y.a>
                                   </span>
-                                </Se.a>
+                                </we.a>
                               </div>
                             ) : K === b.player.id ? (
                               <div className="Player-Button-Idol-Current">
-                                <V.yb /> Your Idol
+                                <V.zb /> Your Idol
                               </div>
                             ) : (
-                              <he.a className="Player-Button-Form" onSubmit={M}>
+                              <he.a className="Player-Button-Form" onSubmit={x}>
                                 <Y.a className="Player-Button-Idol" type="submit" variant="success">
                                   {"" === K || null === K ? (
                                     <o.a.Fragment>
-                                      <V.yb /> Choose Idol
+                                      <V.zb /> Choose Idol
                                     </o.a.Fragment>
                                   ) : (
                                     <o.a.Fragment>
-                                      <V.Eb /> 200 New Idol
+                                      <V.Gb /> 200 New Idol
                                     </o.a.Fragment>
                                   )}{" "}
                                 </Y.a>
@@ -9771,7 +9782,7 @@
                       </div>
                     </div>
                   </div>
-                  {D}
+                  {P}
                   {G}
                   <div className="Player-Content">
                     <ul className="Player-Info-Stats">
@@ -9790,54 +9801,54 @@
                           if (t > 0.8)
                             return (
                               <span className="Player-VibeLine Player-Vibe-MostExcellent">
-                                <Da.c className="Player-VibeLine-Arrow" />
-                                <Da.c className="Player-VibeLine-Arrow" />
-                                <Da.c className="Player-VibeLine-Arrow" />
+                                <Pa.c className="Player-VibeLine-Arrow" />
+                                <Pa.c className="Player-VibeLine-Arrow" />
+                                <Pa.c className="Player-VibeLine-Arrow" />
                                 <div className="Player-VibeLine-Text">Most Excellent</div>
                               </span>
                             );
                           if (t > 0.4)
                             return (
                               <span className="Player-VibeLine Player-Vibe-Excellent">
-                                <Da.c className="Player-VibeLine-Arrow" />
-                                <Da.c className="Player-VibeLine-Arrow" />
+                                <Pa.c className="Player-VibeLine-Arrow" />
+                                <Pa.c className="Player-VibeLine-Arrow" />
                                 <div className="Player-VibeLine-Text">Excellent</div>
                               </span>
                             );
                           if (t > 0.1)
                             return (
                               <span className="Player-VibeLine Player-Vibe-Quality">
-                                <Da.c className="Player-VibeLine-Arrow" />
+                                <Pa.c className="Player-VibeLine-Arrow" />
                                 <div className="Player-VibeLine-Text">Quality</div>
                               </span>
                             );
                           if (t > -0.1)
                             return (
                               <span className="Player-VibeLine Player-Vibe-Neutral">
-                                <Da.a className="Player-VibeLine-Arrow" />
+                                <Pa.a className="Player-VibeLine-Arrow" />
                                 <div className="Player-VibeLine-Text">Neutral</div>
                               </span>
                             );
                           if (t > -0.4)
                             return (
                               <span className="Player-VibeLine Player-Vibe-LessThanIdeal">
-                                <Da.b className="Player-VibeLine-Arrow" />
+                                <Pa.b className="Player-VibeLine-Arrow" />
                                 <div className="Player-VibeLine-Text">Less Than Ideal</div>
                               </span>
                             );
                           if (t > -0.8)
                             return (
                               <span className="Player-VibeLine Player-Vibe-FarLessThanIdeal">
-                                <Da.b className="Player-VibeLine-Arrow" />
-                                <Da.b className="Player-VibeLine-Arrow" />
+                                <Pa.b className="Player-VibeLine-Arrow" />
+                                <Pa.b className="Player-VibeLine-Arrow" />
                                 <div className="Player-VibeLine-Text">Far Less Than Ideal</div>
                               </span>
                             );
                           return (
                             <span className="Player-VibeLine Player-Vibe-Terrible">
-                              <Da.b className="Player-VibeLine-Arrow" />
-                              <Da.b className="Player-VibeLine-Arrow" />
-                              <Da.b className="Player-VibeLine-Arrow" />
+                              <Pa.b className="Player-VibeLine-Arrow" />
+                              <Pa.b className="Player-VibeLine-Arrow" />
+                              <Pa.b className="Player-VibeLine-Arrow" />
                               <div className="Player-VibeLine-Text">Honestly Terrible</div>
                             </span>
                           );
@@ -10085,11 +10096,11 @@
           function (e) {
             var a,
               t = e.path,
-              n = Object(r.useContext)(O.context),
+              n = Object(r.useContext)(B.context),
               l = void 0 !== n.sim && void 0 !== n.sim.season ? n.sim.season : -1;
             return (
               <div>
-                <En
+                <pn
                   element={
                     <div className="Stubs-All">
                       <div className="Stubs-Header">It's the Pre-Season.</div>
@@ -10109,7 +10120,7 @@
           function (e) {
             var a,
               t = e.path,
-              n = Object(r.useContext)(O.context),
+              n = Object(r.useContext)(B.context),
               l = void 0 !== n.sim && void 0 !== n.sim.season ? n.sim.season : -1,
               i = null;
             switch (t) {
@@ -10124,7 +10135,7 @@
             }
             return (
               <div>
-                <En
+                <pn
                   element={
                     <div className="Stubs-All">
                       <div className="Stubs-Header">The Season is Over!</div>
@@ -10139,7 +10150,7 @@
               </div>
             );
           }),
-        Qn =
+        Dn =
           (t(140),
           function () {
             var e = (
@@ -11244,12 +11255,12 @@
               </div>
             );
           }),
-        Pn =
+        Qn =
           (t(141),
           function (e) {
             var a,
               t = e.path,
-              n = Object(r.useContext)(O.context),
+              n = Object(r.useContext)(B.context),
               l = void 0 !== n.sim && void 0 !== n.sim.season ? n.sim.season : -1,
               i = null;
             switch (t) {
@@ -11264,7 +11275,7 @@
             }
             return (
               <div>
-                <En
+                <pn
                   element={
                     <div className="Stubs-All">
                       <div className="Stubs-Header">Wild Card Evening</div>
@@ -11281,7 +11292,7 @@
               </div>
             );
           }),
-        Dn = (t(142), t(59));
+        Pn = (t(142), t(59));
       function Wn(e, a) {
         var t = (e / a) * 100;
         return e >= 1e3 && t < 8 ? 8 : e >= 100 && t < 6 ? 6 : e >= 10 && t < 4 ? 4 : t < 2.5 ? 2.5 : t;
@@ -11289,7 +11300,7 @@
       function Gn(e) {
         return e > 70 ? "success" : e > 20 ? "warning" : "danger";
       }
-      function Mn(e, a) {
+      function xn(e, a) {
         var t = 0,
           n = {
             Steal: 0,
@@ -11449,7 +11460,7 @@
           )
         );
       }
-      function xn(e) {
+      function Mn(e) {
         return <jn data={e.data} />;
       }
       function jn(e) {
@@ -11458,7 +11469,7 @@
           n = e.data,
           l =
             (Object(r.useContext)(F.context).user,
-            Object(r.useContext)(D.context),
+            Object(r.useContext)(P.context),
             {
               started: (t = n).gameStart,
               complete: t.gameComplete,
@@ -11525,9 +11536,9 @@
           })(l),
           d = Object(r.useContext)(Va.context),
           h = Object(r.useState)([]),
-          E = Object(s.a)(h, 2),
-          p = E[0],
-          f = E[1],
+          p = Object(s.a)(h, 2),
+          E = p[0],
+          f = p[1],
           b = Object(r.useState)(""),
           v = Object(s.a)(b, 2),
           g = v[0],
@@ -11535,7 +11546,7 @@
           A = Object(r.useState)(""),
           N = Object(s.a)(A, 2),
           T = N[0],
-          w = N[1];
+          S = N[1];
         Object(r.useEffect)(
           function () {
             var e = JSON.parse(n.damageResults);
@@ -11562,14 +11573,14 @@
               )
                 n.awayTeam === e[l].teamTarget && (a = Math.max(a, r(e[l].dmg))),
                   n.homeTeam === e[l].teamTarget && (t = Math.max(t, r(e[l].dmg)));
-              w(o(a)), y(o(t));
+              S(o(a)), y(o(t));
             }
           },
           [n.damageResults]
         );
-        var S = n.topOfInning ? n.awayTeamColor : n.homeTeamColor,
-          O = n.topOfInning ? n.homeTeamColor : n.awayTeamColor,
-          B = (function (e) {
+        var w = n.topOfInning ? n.awayTeamColor : n.homeTeamColor,
+          B = n.topOfInning ? n.homeTeamColor : n.awayTeamColor,
+          O = (function (e) {
             return e.homeScore;
           })(n),
           I = (function (e) {
@@ -11581,7 +11592,7 @@
         function C() {
           return n.homeScore > n.awayScore ? n.homeTeamNickname : n.awayTeamNickname;
         }
-        B > I && n.gameComplete, I > B && n.gameComplete;
+        O > I && n.gameComplete, I > O && n.gameComplete;
         var R = (function (e) {
             for (
               var a = {
@@ -11617,11 +11628,11 @@
           })(n),
           L = "";
         R.onFirst && (L += " first"), R.onSecond && (L += " second"), R.onThird && (L += " third");
-        var Q,
-          P,
+        var D,
+          Q,
           W,
-          M,
-          x = <div className="BossFightWidget-Outs">{m}</div>,
+          x,
+          M = <div className="BossFightWidget-Outs">{m}</div>,
           j = Object(c.g)(),
           H =
             l.complete || !l.started ? (
@@ -11631,7 +11642,7 @@
                 <div className="BossFightWidget-PlayerLine">
                   <div className="BossFightWidget-PlayerStatusIcon BossFightWidget-PlayerStatusIcon--Pitching" />
                   <div className="BossFightWidget-PlayerStatusLabel">Pitching</div>
-                  <div className="BossFightWidget-PlayerLineNameWrapper" style={{ background: G(O, 0.5) }}>
+                  <div className="BossFightWidget-PlayerLineNameWrapper" style={{ background: G(B, 0.5) }}>
                     <u
                       background={j}
                       path={"/player/".concat(n.topOfInning ? n.homePitcher : n.awayPitcher)}
@@ -11644,7 +11655,7 @@
                 <div className="BossFightWidget-PlayerLine">
                   <div className="BossFightWidget-PlayerStatusIcon BossFightWidget-PlayerStatusIcon--Batting" />
                   <div className="BossFightWidget-PlayerStatusLabel">Batting</div>
-                  <div className="BossFightWidget-PlayerLineNameWrapper" style={{ background: G(S, 0.5) }}>
+                  <div className="BossFightWidget-PlayerLineNameWrapper" style={{ background: G(w, 0.5) }}>
                     {n.homeBatterName || n.awayBatterName ? (
                       <u
                         background={j}
@@ -11676,7 +11687,7 @@
                 The{" "}
                 {
                   ((W = C()),
-                  (M = K) > 0.25
+                  (x = K) > 0.25
                     ? (function (e) {
                         switch (e) {
                           case "Wild Wings":
@@ -11686,7 +11697,7 @@
                         }
                         return "heavily favored";
                       })(W)
-                    : M > 0
+                    : x > 0
                     ? (function (e) {
                         switch (e) {
                           case "Wild Wings":
@@ -11696,9 +11707,9 @@
                         }
                         return "favored";
                       })(W)
-                    : M < -0.25
+                    : x < -0.25
                     ? "heavy underdog"
-                    : M < 0
+                    : x < 0
                     ? "underdog"
                     : "")
                 }
@@ -11718,10 +11729,10 @@
                     className="BossFightWidget-Outcome-Callout"
                     style={{
                       color:
-                        ((P = k()),
-                        P === n.homeTeam
+                        ((Q = k()),
+                        Q === n.homeTeam
                           ? n.homeTeamSecondaryColor
-                          : P === n.awayTeam
+                          : Q === n.awayTeam
                           ? n.awayTeamSecondaryColor
                           : "Null Color"),
                     }}
@@ -11755,18 +11766,18 @@
                 {!l.complete && l.started && (
                   <o.a.Fragment>
                     {
-                      ((Q = R),
+                      ((D = R),
                       (
                         <div className={"BossFightWidget-Bases" + L}>
                           <div id="tooltip" style={{ display: "none", position: "absolute" }} />
                           <svg viewBox="0 0 255 197" version="1.1">
-                            <Se.a
+                            <we.a
                               key="bottom-1"
                               placement="bottom"
                               overlay={
-                                <Oe.a id="tooltip-bottom">
-                                  <strong>{Q.playerOnFirst}</strong>
-                                </Oe.a>
+                                <Be.a id="tooltip-bottom">
+                                  <strong>{D.playerOnFirst}</strong>
+                                </Be.a>
                               }
                             >
                               <g
@@ -11776,14 +11787,14 @@
                               >
                                 <rect x="141.95" y="105.74" width="70.31" height="70.31" />
                               </g>
-                            </Se.a>
-                            <Se.a
+                            </we.a>
+                            <we.a
                               key="top"
                               placement="top"
                               overlay={
-                                <Oe.a id="tooltip-bottom">
-                                  <strong>{Q.playerOnSecond}</strong>
-                                </Oe.a>
+                                <Be.a id="tooltip-bottom">
+                                  <strong>{D.playerOnSecond}</strong>
+                                </Be.a>
                               }
                             >
                               <g
@@ -11793,14 +11804,14 @@
                               >
                                 <rect x="84.83" y="48.54" width="70.31" height="70.31" />
                               </g>
-                            </Se.a>
-                            <Se.a
+                            </we.a>
+                            <we.a
                               key="bottom-2"
                               placement="bottom"
                               overlay={
-                                <Oe.a id="tooltip-bottom">
-                                  <strong>{Q.playerOnThird}</strong>
-                                </Oe.a>
+                                <Be.a id="tooltip-bottom">
+                                  <strong>{D.playerOnThird}</strong>
+                                </Be.a>
                               }
                             >
                               <g
@@ -11810,12 +11821,12 @@
                               >
                                 <rect x="27.38" y="105.74" width="70.31" height="70.31" />
                               </g>
-                            </Se.a>
+                            </we.a>
                           </svg>
                         </div>
                       ))
                     }
-                    {x}
+                    {M}
                     {H}
                     <div className="BossFightWidget-Log">{n.lastUpdate}</div>
                   </o.a.Fragment>
@@ -11861,7 +11872,7 @@
             <div className={"BossFightWidget-Weather" + te}>
               <div className="BossFightWidget-Enemy">
                 <div className="BossFightWidget-Enemy-Icon">
-                  <V.cb />
+                  <V.eb />
                 </div>
                 <div className="BossFightWidget-Enemy-Body">
                   <div className="BossFightWidget-Enemy-RedLine">
@@ -11882,11 +11893,11 @@
                     <div className="BossFightWidget-ScoreTeam">
                       {ee}
                       <div className="BossFightWidget-Names-Spirit">
-                        <Dn.a now={Z} label={n.awayHp} variant={Gn(Z)} className="BossFightWidget-SpiritBar" />
+                        <Pn.a now={Z} label={n.awayHp} variant={Gn(Z)} className="BossFightWidget-SpiritBar" />
                       </div>
                     </div>
                     <div className="BossFightWidget-SpiritDamage">
-                      {null !== n.damageResults && "" !== n.damageResults ? Mn(p, n.awayTeam) : null}
+                      {null !== n.damageResults && "" !== n.damageResults ? xn(E, n.awayTeam) : null}
                     </div>
                   </u>
                 </div>
@@ -11896,11 +11907,11 @@
                     <div className="BossFightWidget-ScoreTeam">
                       {_}
                       <div className="BossFightWidget-Names-Spirit">
-                        <Dn.a now={z} label={n.homeHp} variant={Gn(z)} className="BossFightWidget-SpiritBar" />
+                        <Pn.a now={z} label={n.homeHp} variant={Gn(z)} className="BossFightWidget-SpiritBar" />
                       </div>
                     </div>
                     <div className="BossFightWidget-SpiritDamage">
-                      {null !== n.damageResults && "" !== n.damageResults ? Mn(p, n.homeTeam) : null}
+                      {null !== n.damageResults && "" !== n.damageResults ? xn(E, n.homeTeam) : null}
                     </div>
                   </u>
                 </div>
@@ -11946,9 +11957,9 @@
       })(Yn || (Yn = {}));
       var Vn = function (e) {
         e.path;
-        var a = Object(r.useContext)(O.context),
+        var a = Object(r.useContext)(B.context),
           t = Object(r.useContext)(Jn.context),
-          n = (Object(r.useContext)(F.context).user, Object(r.useContext)(D.context), void 0 === a.schedule);
+          n = (Object(r.useContext)(F.context).user, Object(r.useContext)(P.context), void 0 === a.schedule);
         if (!a.sim) return null;
         var l = a.schedule,
           i = t.bossFights,
@@ -11956,7 +11967,7 @@
             void 0 == i ? null : (
               <ul>
                 {i.map(function (e) {
-                  return <xn data={e} />;
+                  return <Mn data={e} />;
                 })}
               </ul>
             ),
@@ -12017,7 +12028,7 @@
                   <Xa />
                 </c.a>
                 <c.a path="/faq">
-                  <Qn />
+                  <Dn />
                 </c.a>
                 <c.a path="/">
                   <Fa />
@@ -12079,7 +12090,7 @@
         );
       }
       function Xn() {
-        var e = Object(r.useContext)(O.context),
+        var e = Object(r.useContext)(B.context),
           a = Object(c.g)(),
           t = a.state && a.state.background,
           n = function (e, a) {
@@ -12089,13 +12100,13 @@
               case 1:
                 return <Ln path={a} />;
               case 2:
-                return <Ea path={a} />;
+                return <pa path={a} />;
               case 3:
                 return <Fn path={a} />;
               case 7:
-                return <pn path={a} />;
+                return <En path={a} />;
               case 11:
-                return <Pn path={a} />;
+                return <Qn path={a} />;
               case 4:
               case 10:
                 return <Aa path={a} />;
@@ -12109,7 +12120,7 @@
           };
         return (
           <yn>
-            <D>
+            <P>
               <ra>
                 <Ia>
                   <He state={e} />
@@ -12125,10 +12136,10 @@
                         <La />
                       </c.a>
                       <c.a path="/bulletin">
-                        <Sn />
+                        <wn />
                       </c.a>
                       <c.a path="/faq">
-                        <Qn />
+                        <Dn />
                       </c.a>
                       <c.a path="/shop">
                         <Ka />
@@ -12151,7 +12162,7 @@
                       <c.a path="/player/:id">
                         <Rn />
                       </c.a>
-                      {x(e.sim, "UNLOCKED_HALL") ? (
+                      {M(e.sim, "UNLOCKED_HALL") ? (
                         <c.a path="/thehall">
                           <ka />
                         </c.a>
@@ -12201,7 +12212,7 @@
                   </footer>
                 </Ia>
               </ra>
-            </D>
+            </P>
           </yn>
         );
       }
@@ -12214,7 +12225,7 @@
         return (
           <div className="Main">
             <F>
-              <Sa />
+              <wa />
               <Kn />
             </F>
           </div>
@@ -12238,7 +12249,7 @@
           <o.a.StrictMode>
             <de.ToastProvider autoDismiss={!0} autoDismissTimeout={3e3} placement="bottom-right">
               <T value={{}}>
-                <O value={er}>
+                <B value={er}>
                   <Ge value={{}}>
                     <Va value={{}}>
                       <Jn value={{}}>
@@ -12248,7 +12259,7 @@
                       </Jn>
                     </Va>
                   </Ge>
-                </O>
+                </B>
               </T>
             </de.ToastProvider>
           </o.a.StrictMode>,

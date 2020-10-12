@@ -10764,6 +10764,15 @@ button:focus-visible {
 .Leaderboard-Icon-Monitor {
   color: #5988ff;
 }
+.Leaderboard-Icon-Eclipse {
+  color: #3c6cba;
+}
+.Leaderboard-Icon-Birds {
+  color: #8e5fad;
+}
+.Leaderboard-Icon-Blood {
+  color: #ff1f3c;
+}
 .Leaderboard-Description {
   font-size: 16px;
   font-family: "Lora", "Courier New", monospace, serif;
