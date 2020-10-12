@@ -1567,7 +1567,7 @@
             );
           }),
         fe = function () {
-          return <div className="LoadingSpinner">{100 * Math.random() < 99 ? <K.a /> : <V.eb />}</div>;
+          return <div className="LoadingSpinner">{100 * Math.random() < 99 ? <K.a /> : <V.db />}</div>;
         };
       t(100), t(43);
       function be(e, a) {
@@ -1747,7 +1747,7 @@
                     <he.a.Label>How much do you want to wager?</he.a.Label>
                     <div className="Bet-Form-Inputs-Amount">
                       <div className="Bet-Coin-Wrapper">
-                        <V.Gb className="Bet-Coin-Icon" />
+                        <V.Fb className="Bet-Coin-Icon" />
                         {n.coins}
                       </div>
                       <he.a.Control type="number" value={b} onChange={C} />
@@ -1797,7 +1797,7 @@
           { name: "Solar Eclipse", icon: <ge.i />, background: "#002f3b", color: "#3c6cba" },
           { name: "Glitter", icon: <ge.j />, background: "#ff94ff", color: "#fff98a" },
           { name: "Blooddrain", icon: <ge.f />, background: "#52050f", color: "#ff1f3c" },
-          { name: "Peanuts", icon: <V.eb />, background: "#c4aa70", color: "#423822" },
+          { name: "Peanuts", icon: <V.db />, background: "#c4aa70", color: "#423822" },
           { name: "Birds", icon: <V.g />, background: "#45235e", color: "#8e5fad" },
           { name: "Feedback", icon: <V.Y />, background: "#383838", color: "#ff007b" },
           { name: "Reverb", icon: <V.f />, background: "#443561", color: "#61b3ff" },
@@ -2045,7 +2045,7 @@
               <J.a className="GameWidget-Button-Centered">
                 {W > 0 ? (
                   <div className="GameWidget-UpcomingBet">
-                    <V.Gb /> {W > 0 ? "".concat(x.amount, " on ").concat(D) : "No active bets"}
+                    <V.Fb /> {W > 0 ? "".concat(x.amount, " on ").concat(D) : "No active bets"}
                   </div>
                 ) : s.coins ? (
                   <Y.a className="GameWidget-Button" variant="success">
@@ -2078,7 +2078,7 @@
             void 0 !== U && U.entityId === l.homeTeam ? (
               <div className="GameWidget-ScoreBet">
                 <div className="GameWidget-ScoreBet-Bet">
-                  <V.Gb />
+                  <V.Fb />
                   <div className="GameWidget-ScoreBet-Amount">{U.amount}</div>
                 </div>
                 <div className="GameWidget-ScoreBet-Winnings">
@@ -2091,7 +2091,7 @@
               void 0 !== U && U.entityId === l.awayTeam ? (
                 <div className="GameWidget-ScoreBet">
                   <div className="GameWidget-ScoreBet-Bet">
-                    <V.Gb />
+                    <V.Fb />
                     <div className="GameWidget-ScoreBet-Amount">{U.amount}</div>
                   </div>
                   <div className="GameWidget-ScoreBet-Winnings">
@@ -2161,7 +2161,7 @@
                 <div className="GameWidget-Outcome-Blurb">
                   You bet{" "}
                   <span className="GameWidget-Outcome-Callout">
-                    <V.Gb />
+                    <V.Fb />
                      {U.amount}
                   </span>
                    on the  
@@ -2173,7 +2173,7 @@
                     <span>
                       won{" "}
                       <span className="GameWidget-Outcome-Callout">
-                        <V.Gb />
+                        <V.Fb />
                          {be(U.odds, U.amount)}
                       </span>
                       .
@@ -2696,19 +2696,19 @@
           null !== a.idol &&
             (R = (
               <u background={C} path={"/player/".concat(a.idol)} className="Navigation-IdolizedPlayer">
-                <V.zb />
+                <V.yb />
               </u>
             ));
           return (
             <o.a.Fragment>
               <div className="Navigation-User-Top">
                 <Qe className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={y} url="/upcoming">
-                  <V.Gb />
+                  <V.Fb />
                    {a.coins}
                 </Qe>
                 {a.unlockedElection ? (
                   <Qe className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={A} url="/shop">
-                    <V.Eb />
+                    <V.Db />
                      {a.votes}
                   </Qe>
                 ) : null}
@@ -2815,11 +2815,11 @@
                     }
                   >
                     <span className="Peanut-Line">
-                      <span className="Peanut-Icon">{m ? "" : <V.eb />}</span> {a.peanuts}
+                      <span className="Peanut-Icon">{m ? "" : <V.db />}</span> {a.peanuts}
                     </span>
                   </Qe>
                   <div className={m ? "Peanut-Eating" : "Peanut"}>
-                    <V.eb />
+                    <V.db />
                   </div>
                 </div>
               </div>
@@ -3409,7 +3409,7 @@
                 <div className="Leaderboard-Player-Position">{e.info.place}</div>
                 {e.info.deceased ? <div className="Leaderboard-Player-Deceased-Icon" /> : null}
                 <div className="Leaderboard-Player-Name">
-                  {s.idol === (null === (n = e.info.player) || void 0 === n ? void 0 : n.id) ? <V.zb /> : ""}{" "}
+                  {s.idol === (null === (n = e.info.player) || void 0 === n ? void 0 : n.id) ? <V.yb /> : ""}{" "}
                   {null === (l = e.info.player) || void 0 === l ? void 0 : l.name}
                 </div>
               </div>
@@ -4350,7 +4350,7 @@
             <div className="HallOfFlame-Player-Name-Container">
               <div className="HallOfFlame-Player-Position">{e.info.place}</div>
               <div className="HallOfFlame-Player-Name">
-                {i.idol === (null === (t = e.info.player) || void 0 === t ? void 0 : t.id) ? <V.zb /> : ""}{" "}
+                {i.idol === (null === (t = e.info.player) || void 0 === t ? void 0 : t.id) ? <V.yb /> : ""}{" "}
                 {null === (n = e.info.player) || void 0 === n ? void 0 : n.name}
               </div>
             </div>
@@ -4510,19 +4510,19 @@
           case "SHELLED":
           case "SUPERALLERGIC":
           case "SUPERYUMMY":
-            return <V.eb />;
+            return <V.db />;
           case "SOUNDPROOF":
             return <V.P />;
           case "REVERBERATING":
             return <V.f />;
           case "BLOOD_THIEF":
-            return <V.lb />;
+            return <V.kb />;
           case "BLOOD_DONOR":
-            return <V.ab />;
+            return <V.Z />;
           case "BLOOD_WINNER":
-            return <V.gb />;
+            return <V.fb />;
           case "BLOOD_PITY":
-            return <V.Cb />;
+            return <V.Bb />;
           case "BLOOD_FAITH":
           case "BLOOD_LAW":
           case "BLOOD_CHAOS":
@@ -4536,7 +4536,7 @@
           case "MARKED":
             return <V.Jb />;
           case "PARTY_TIME":
-            return <V.db />;
+            return <V.cb />;
           case "LIFE_OF_PARTY":
             return <V.I />;
           case "INWARD":
@@ -4558,11 +4558,11 @@
           case "ELECTRIC":
             return <V.y />;
           case "DOUBLE_PAYOUTS":
-            return <V.Bb />;
+            return <V.Ab />;
           case "FIRE_PROTECTOR":
             return <V.C />;
           case "ON_FIRE":
-            return <V.sb />;
+            return <V.rb />;
           case "HEATING_UP":
             return <V.L />;
           case "RECEIVER":
@@ -4575,9 +4575,9 @@
           case "FRIEND_OF_CROWS":
             return <V.h />;
           case "BASE_INSTINCTS":
-            return <V.qb />;
+            return <V.pb />;
           case "STABLE":
-            return <V.yb />;
+            return <V.xb />;
           case "GROWTH":
             return <V.N />;
           case "REPEATING":
@@ -4587,29 +4587,29 @@
           case "SQUIDDISH":
             return <V.H />;
           case "SUBJECTION":
-            return <V.xb />;
+            return <V.wb />;
           case "LIBERATED":
-            return <V.nb />;
+            return <V.mb />;
           case "FIRE_EATER":
             return <V.z />;
           case "MAGMATIC":
-            return <V.ib />;
+            return <V.hb />;
           case "LOYALTY":
-            return <V.pb />;
+            return <V.ob />;
           case "SABOTEUR":
-            return <V.ub />;
+            return <V.tb />;
           case "PITY":
             return <V.G />;
           case "GOD":
-            return <V.bb />;
+            return <V.ab />;
           case "PEANUT_RAIN":
             return <V.E />;
           case "DESTRUCTION":
             return <V.u />;
           case "FLINCH":
-            return <V.Ab />;
+            return <V.zb />;
           case "WILD":
-            return <V.rb />;
+            return <V.qb />;
           case "LOVE":
             return <V.t />;
           case "SIPHON":
@@ -4854,7 +4854,7 @@
                         : "")
                     }
                   >
-                    {f.idol === e.id ? <V.zb /> : ""} {null === e || void 0 === e ? void 0 : e.name}
+                    {f.idol === e.id ? <V.yb /> : ""} {null === e || void 0 === e ? void 0 : e.name}
                   </div>
                   <div className="Team-Player-Vibe">
                     {Ha(e, void 0 !== (null === (a = t.sim) || void 0 === a ? void 0 : a.day) ? t.sim.day : -1)}
@@ -4890,7 +4890,7 @@
                         : "")
                     }
                   >
-                    {f.idol === e.id ? <V.zb /> : ""} {null === e || void 0 === e ? void 0 : e.name}
+                    {f.idol === e.id ? <V.yb /> : ""} {null === e || void 0 === e ? void 0 : e.name}
                   </div>
                   <div className="Team-Player-Vibe">
                     {Ha(e, void 0 !== (null === (a = t.sim) || void 0 === a ? void 0 : a.day) ? t.sim.day : -1)}
@@ -5172,7 +5172,7 @@
                           "Each Vote can be spent in the Election to boost your team or bring important change to Blaseball.",
                         amount: 100,
                         available: !0,
-                        icon: <V.Eb />,
+                        icon: <V.Db />,
                         buyUrl: "/buy/vote",
                         handleComplete: function () {},
                         modal: !0,
@@ -5185,7 +5185,7 @@
                         amount: 100,
                         available: !0,
                         toast: "Welcome, Voter! You have ".concat(e.votes, " Vote already from signing up."),
-                        icon: <V.Eb />,
+                        icon: <V.Db />,
                         buyUrl: "/api/buyUnlockElection",
                         userUpdate: function () {
                           a(Object(O.a)(Object(O.a)({}, e), {}, { unlockedElection: !0, coins: e.coins - 100 }));
@@ -5691,7 +5691,7 @@
                         </div>
                         <div className="Shop-Item-Body">{e.description}</div>
                         <div className="Shop-Item-Checkout">
-                          <V.Gb className="Shop-Item-Coins" />
+                          <V.Fb className="Shop-Item-Coins" />
                           <div className="Shop-Item-Amount">
                             {(function (e) {
                               return e.maxed ? "N/A" : 0 === e.amount ? "Free" : e.amount.toString();
@@ -5822,7 +5822,7 @@
                   <he.a.Label>How many votes do you want to buy?</he.a.Label>
                   <div className="BatchBuy-Form-Inputs-Amount">
                     <div className="BatchBuy-Ticket-Wrapper">
-                      <V.Eb className="BatchBuy-Ticket-Icon" />
+                      <V.Db className="BatchBuy-Ticket-Icon" />
                       {n.votes}
                     </div>
                     <he.a.Control type="number" value={E} onChange={A} />
@@ -6605,11 +6605,11 @@
         ) : "four_for_four" === e || "fourth_strike" === e ? (
           <V.X className="Decrees-Option-Icon" />
         ) : "peanuts" === e ? (
-          <V.eb className="Decrees-Option-Icon" />
+          <V.db className="Decrees-Option-Icon" />
         ) : "popular_evolution" === e ? (
           <It className="Decrees-Option-Icon" />
         ) : "enhanced_shame" === e ? (
-          <V.jb className="Decrees-Option-Icon" />
+          <V.ib className="Decrees-Option-Icon" />
         ) : "late_stage" === e ? (
           <V.q className="Decrees-Option-Icon" />
         ) : "blaserunning" === e ? (
@@ -6617,7 +6617,7 @@
         ) : "eat_the_rich" === e ? (
           <V.v className="Decrees-Option-Icon" />
         ) : "eat_the_crust" === e ? (
-          <V.fb className="Decrees-Option-Icon" />
+          <V.eb className="Decrees-Option-Icon" />
         ) : "interviews" === e ? (
           <V.Y className="Decrees-Option-Icon" />
         ) : "random_realignment" === e ? (
@@ -6625,7 +6625,7 @@
         ) : "alternate_reality" === e ? (
           <Pa.e className="Decrees-Option-Icon" />
         ) : "targeted_shame" === e ? (
-          <V.tb className="Decrees-Option-Icon" />
+          <V.sb className="Decrees-Option-Icon" />
         ) : "roster_shuffle" === e ? (
           <Qa.a className="Decrees-Option-Icon" />
         ) : "home_field_advantage" === e ? (
@@ -6633,15 +6633,15 @@
         ) : "team_punish" === e ? (
           <V.Ib className="Decrees-Option-Icon" />
         ) : "do_nothing" === e ? (
-          <V.hb className="Decrees-Option-Icon" />
+          <V.gb className="Decrees-Option-Icon" />
         ) : "confuse_good" === e ? (
-          <V.wb className="Decrees-Option-Icon" />
-        ) : "confuse_evil" === e ? (
           <V.vb className="Decrees-Option-Icon" />
+        ) : "confuse_evil" === e ? (
+          <V.ub className="Decrees-Option-Icon" />
         ) : "parallel_world" === e ? (
-          <V.kb className="Decrees-Option-Icon" />
+          <V.jb className="Decrees-Option-Icon" />
         ) : "diagonal_world" === e ? (
-          <V.Db className="Decrees-Option-Icon" />
+          <V.Cb className="Decrees-Option-Icon" />
         ) : "high_filter" === e ? (
           <V.U className="Decrees-Option-Icon" />
         ) : "new_kids" === e ? (
@@ -6659,13 +6659,13 @@
         ) : "wild_cards" === e ? (
           <V.l className="Decrees-Option-Icon" />
         ) : "relief" === e ? (
-          <V.ob className="Decrees-Option-Icon" />
+          <V.nb className="Decrees-Option-Icon" />
         ) : "double_jumps" === e ? (
           <V.S className="Decrees-Option-Icon" />
         ) : "forecast_birds" === e ? (
           <V.g className="Decrees-Option-Icon" />
         ) : "forecast_peanuts" === e ? (
-          <V.eb className="Decrees-Option-Icon" />
+          <V.db className="Decrees-Option-Icon" />
         ) : "forecast_eclipse" === e ? (
           <ge.i className="Decrees-Option-Icon" />
         ) : "forecast_blooddrain" === e ? (
@@ -6675,11 +6675,11 @@
         ) : "forecast_feedback" === e ? (
           <V.Y className="Decrees-Option-Icon" />
         ) : "tactical_nuke" === e ? (
-          <V.Z className="Decrees-Option-Icon" />
+          <V.Gb className="Decrees-Option-Icon" />
         ) : "eliminator" === e ? (
           <V.m className="Decrees-Option-Icon" />
         ) : "self_destruct" === e ? (
-          <V.Fb className="Decrees-Option-Icon" />
+          <V.Eb className="Decrees-Option-Icon" />
         ) : (
           <div />
         );
@@ -7113,7 +7113,7 @@
                     <he.a.Label>How many peanuts will you offer?</he.a.Label>
                     <div className="Tribute-Form-Inputs-Amount">
                       <div className="Tribute-Ticket-Wrapper">
-                        <V.eb className="Tribute-Ticket-Icon" />
+                        <V.db className="Tribute-Ticket-Icon" />
                         {n.peanuts}
                       </div>
                       <he.a.Control type="number" value={E} onChange={A} />
@@ -7217,7 +7217,7 @@
                       <he.a.Label>How many votes do you want to cast?</he.a.Label>
                       <div className="Vote-Form-Inputs-Amount">
                         <div className="Vote-Ticket-Wrapper">
-                          <V.Eb className="Vote-Ticket-Icon" />
+                          <V.Db className="Vote-Ticket-Icon" />
                           {n.votes}
                         </div>
                         <he.a.Control type="number" value={b} onChange={S} />
@@ -8828,7 +8828,7 @@
         var n = (function (e) {
           switch (e) {
             case "One":
-              return <V.eb />;
+              return <V.db />;
             case "Two":
               return <V.H />;
           }
@@ -8897,7 +8897,7 @@
           void 0 === m || void 0 === m.sim)
         )
           return null;
-        M(m.sim, "DOUBLE_JUMPS") || M(m.sim, "WILD_CARDS") ? (o.a.Fragment, V.zb) : (o.a.Fragment, V.k);
+        M(m.sim, "DOUBLE_JUMPS") || M(m.sim, "WILD_CARDS") ? (o.a.Fragment, V.yb) : (o.a.Fragment, V.k);
         var v =
           6 === (null === (e = m.sim) || void 0 === e ? void 0 : e.phase) ||
           0 === (null === (a = m.sim) || void 0 === a ? void 0 : a.phase);
@@ -9001,7 +9001,7 @@
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#c23284" }}>
-                  <V.mb />
+                  <V.lb />
                 </div>
                 <div className="Bulletin-Item-Header-Title">Current Events</div>
               </div>
@@ -9028,7 +9028,7 @@
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#1b95e0" }}>
-                  <V.cb />
+                  <V.bb />
                 </div>
                 <div className="Bulletin-Item-Header-Title">Art Gallery</div>
               </div>
@@ -9571,7 +9571,7 @@
                       background={Q}
                       path={"/tribute/".concat(null === b || void 0 === b ? void 0 : b.player.id)}
                     >
-                      <V.eb /> Pay Tribute
+                      <V.db /> Pay Tribute
                     </u>
                   )}
                 </div>
@@ -9745,11 +9745,11 @@
                                     >
                                       {"" === K || null === K ? (
                                         <o.a.Fragment>
-                                          <V.zb /> Choose Idol
+                                          <V.yb /> Choose Idol
                                         </o.a.Fragment>
                                       ) : (
                                         <o.a.Fragment>
-                                          <V.Gb /> 200 New Idol
+                                          <V.Fb /> 200 New Idol
                                         </o.a.Fragment>
                                       )}{" "}
                                     </Y.a>
@@ -9758,18 +9758,18 @@
                               </div>
                             ) : K === b.player.id ? (
                               <div className="Player-Button-Idol-Current">
-                                <V.zb /> Your Idol
+                                <V.yb /> Your Idol
                               </div>
                             ) : (
                               <he.a className="Player-Button-Form" onSubmit={x}>
                                 <Y.a className="Player-Button-Idol" type="submit" variant="success">
                                   {"" === K || null === K ? (
                                     <o.a.Fragment>
-                                      <V.zb /> Choose Idol
+                                      <V.yb /> Choose Idol
                                     </o.a.Fragment>
                                   ) : (
                                     <o.a.Fragment>
-                                      <V.Gb /> 200 New Idol
+                                      <V.Fb /> 200 New Idol
                                     </o.a.Fragment>
                                   )}{" "}
                                 </Y.a>
@@ -11872,7 +11872,7 @@
             <div className={"BossFightWidget-Weather" + te}>
               <div className="BossFightWidget-Enemy">
                 <div className="BossFightWidget-Enemy-Icon">
-                  <V.eb />
+                  <V.db />
                 </div>
                 <div className="BossFightWidget-Enemy-Body">
                   <div className="BossFightWidget-Enemy-RedLine">
