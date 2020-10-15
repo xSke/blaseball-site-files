@@ -10765,13 +10765,20 @@ button:focus-visible {
   color: #5988ff;
 }
 .Leaderboard-Icon-Eclipse {
-  color: #3c6cba;
+  color: #2f5491;
 }
 .Leaderboard-Icon-Birds {
   color: #8e5fad;
 }
 .Leaderboard-Icon-Blood {
   color: #ff1f3c;
+}
+.Leaderboard-Icon-False {
+  color: #4a4a4a;
+}
+.Leaderboard-Icon-Confirmed {
+  color: #5988ff;
+  text-shadow: 0 0 10px #5988ff;
 }
 .Leaderboard-Description {
   font-size: 16px;
