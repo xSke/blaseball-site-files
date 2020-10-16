@@ -11123,7 +11123,7 @@ button:focus-visible {
 }
 .PlayoffSetup-Navigation {
   font-size: 24px;
-  padding-bottom: 20px;
+  margin-bottom: 40px;
 }
 .PlayoffSetup-Navigation,
 .PlayoffSetup-Navigation-Button {
@@ -11172,6 +11172,10 @@ button:focus-visible {
 }
 .PlayoffSetup-Matchup:nth-child(2n) {
   margin-bottom: 20px;
+}
+.PlayoffSetup-Matchup-Divine {
+  max-width: 450px;
+  margin: 20px 0 30px;
 }
 .PlayoffSetup-Versus {
   margin: 0 15px;

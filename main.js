@@ -3830,19 +3830,45 @@
       var ga,
         ya = function () {
           var e = Object(r.useContext)(B.context),
-            a = Object(r.useState)(e.postseason.round ? e.postseason.round.roundNumber : 0),
-            t = Object(s.a)(a, 2),
-            n = t[0],
-            l = t[1];
-          return void 0 === e || void 0 === e.postseason.round
-            ? null
-            : (e.sim && e.sim.season,
-              (
-                <div className="PlayoffSetup">
-                  <fa index={n} setIndex={l} />
-                  <Ea roundNumber={n} />
-                </div>
-              ));
+            a = Object(r.useContext)(Ge.context),
+            t = Object(c.g)(),
+            n = Object(r.useState)(e.postseason.round ? e.postseason.round.roundNumber : 0),
+            l = Object(s.a)(n, 2),
+            i = l[0],
+            m = l[1];
+          if (void 0 === e) return null;
+          if (void 0 === e.postseason.round) return null;
+          e.sim && e.sim.season;
+          var d = a.teams.filter(function (e) {
+            return "PODS" === e.nickname;
+          })[0];
+          return (
+            <div className="PlayoffSetup">
+              <div
+                className="PlayoffSetup-Matchup PlayoffSetup-Matchup-Divine"
+                key={i}
+                style={{ boxShadow: "0 0 15px 5px ".concat(d.mainColor) }}
+              >
+                <u background={t} path={"/team/".concat(d.id)} className="PlayoffSetup-MatchupTeam-Group">
+                  <div className="PlayoffSetup-MatchupTeam-Info">
+                    <div className="PlayoffSetup-Seed">X</div>
+                    <div className="PlayoffSetup-MatchupTeam-Icon" style={{ background: d.mainColor }}>
+                      {String.fromCodePoint(Number(d.emoji))}
+                    </div>
+                    <div className="PlayoffSetup-MatchupTeam">
+                      <div className="PlayoffSetup-MatchupTeam-Location">{d.location} </div>
+                      <div className="PlayoffSetup-MatchupTeam-Nickname">{d.nickname}</div>
+                    </div>
+                  </div>
+                  <div className="PlayoffSetup-MatchupTeam-Info">
+                    <div className="PlayoffSetup-Bye">idling...</div>
+                  </div>
+                </u>
+              </div>
+              <fa index={i} setIndex={m} />
+              <Ea roundNumber={i} />
+            </div>
+          );
         };
       !(function (e) {
         (e[(e.Live = 0)] = "Live"),
