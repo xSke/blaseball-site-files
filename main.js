@@ -825,8 +825,7 @@
             textColor: "#80fffb",
             background: "#383838",
             title: "Fliickerrriiing",
-            description:
-              "Fliickerrriiing players have a much much higher chance of being Feedbacked to their opponent.",
+            description: "Fliickerrriiing players are Flickering a lot.",
           },
           {
             id: "FRIEND_OF_CROWS",
