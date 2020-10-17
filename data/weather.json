@@ -5,9 +5,9 @@
         "color": "#000000"
     },
     {
-        "name": "Sunny",
-        "background": "#db7900",
-        "color": "#fffec4"
+        "name": "Sun 2",
+        "background": "#fdff9c",
+        "color": "#ff3c00"
     },
     {
         "name": "Overcast",
@@ -68,5 +68,10 @@
         "name": "Reverb",
         "background": "#443561",
         "color": "#61b3ff"
+    },
+    {
+        "name": "Black Hole",
+        "background": "#000000",
+        "color": "#00374a"
     }
 ]

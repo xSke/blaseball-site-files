@@ -73,5 +73,10 @@
         "id": "INKY_BLAGONBALL",
         "name": "The 2-Blood Blagonball",
         "attr": "NONE"
+    },
+    {
+        "id": "AN_ACTUAL_AIRPLANE",
+        "name": "An Actual Airplane",
+        "attr": "BLASERUNNING"
     }
 ]

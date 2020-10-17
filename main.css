@@ -9143,6 +9143,7 @@ input[type="number"]::-webkit-outer-spin-button {
   overflow: hidden;
 }
 .GameWidget-Display-Body {
+  margin: auto;
   display: grid;
   padding: 10px;
   grid-gap: 10px;
@@ -9505,9 +9506,10 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 60px;
 }
 .GameWidget-Outs-DotList {
+  width: 60px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   margin-left: 10px;
 }
@@ -9552,6 +9554,13 @@ input[type="number"]::-webkit-outer-spin-button {
   font-family: "Lora", "Courier New", monospace, serif;
   align-self: stretch;
   border-radius: 5px;
+}
+.GameWidget-Log-PlayCount {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 14px;
+  color: hsla(0, 0%, 39.6%, 0.65);
 }
 .GameWidget-Loading {
   width: 100%;
@@ -9774,6 +9783,9 @@ input[type="number"]::-webkit-outer-spin-button {
   .GameWidget-Log-Content {
     font-size: 14px;
     margin-bottom: 0;
+  }
+  .GameWidget-Log-Line {
+    margin: 0;
   }
   .GameWidget-PlayerLine {
     justify-content: flex-start;
@@ -13992,6 +14004,22 @@ button:focus-visible {
   animation-timing-function: ease-in-out;
   animation-direction: alternate-reverse;
 }
+.BigDeal-Icon-Three {
+  font-size: 40vh;
+  line-height: 0;
+  height: 48vh;
+  width: 100%;
+  display: flex;
+}
+.BigDeal-Equity {
+  background: url(/static/media/Equity.7cde27ee.png);
+  width: 60%;
+  height: 60%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  margin: auto;
+}
 .BigDeal-Body {
   max-width: 550px;
   margin: auto;
@@ -14017,6 +14045,11 @@ button:focus-visible {
 .BigDeal-RedLine-Two {
   color: #5988ff;
   text-shadow: 0 0 20px #5988ff;
+}
+.BigDeal-RedLine-Three {
+  color: #ffbe00;
+  line-height: 1.2em;
+  font-size: 48px;
 }
 @-webkit-keyframes spinny {
   0% {
@@ -14047,6 +14080,10 @@ button:focus-visible {
 @media (max-width: 1080px) {
   .BigDeal-RedLine {
     font-size: 24px;
+  }
+  .BigDeal-RedLine-Three {
+    font-size: 36px;
+    line-height: 1.2em;
   }
 }
 #root .Bulletin {
@@ -14689,10 +14726,14 @@ button:focus-visible {
 }
 .BossFightWidget-Container {
   width: 100%;
+  z-index: 2;
 }
 .BossFightWidget-Weather {
   width: 100%;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .BossFightWidget-Weather-Feedback {
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
@@ -14737,12 +14778,19 @@ button:focus-visible {
   -webkit-animation: sizeChange 15s linear infinite;
   animation: sizeChange 15s linear infinite;
 }
+.BossFightWidget-UnknownEntity {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
 .BossFightWidget-Enemy {
   display: flex;
   flex-direction: column;
   margin: 85px 0 20px;
   align-items: center;
   opacity: 1;
+  z-index: 2;
 }
 .BossFightWidget-Enemy-Icon {
   position: relative;
@@ -14809,6 +14857,10 @@ button:focus-visible {
   border-radius: 50px;
   height: 1rem;
   font-size: 0.75rem;
+}
+.BossFightWidget-SpiritBar .progress-bar {
+  overflow: visible;
+  padding-left: 5px;
 }
 .BossFightWidget-Button {
   color: #fff;
