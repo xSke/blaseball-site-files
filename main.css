@@ -14503,13 +14503,19 @@ button:focus-visible {
   border-radius: 5px;
 }
 #root .Player-Soulscream-Body {
+  color: red;
+}
+#root .Player-Soulscream-Body,
+#root .Player-Soulscream-Released {
   height: auto;
   font-size: 16px;
   font-weight: 700;
   font-family: "Lora", "Courier New", monospace, serif;
   font-style: italic;
-  color: red;
   word-wrap: break-word;
+}
+#root .Player-Soulscream-Released {
+  color: #5988ff;
 }
 #root .Player-Team-Line {
   display: flex;
