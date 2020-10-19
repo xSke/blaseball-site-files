@@ -10670,13 +10670,14 @@ button:focus-visible {
 }
 .Advertisement-SiteHeader {
   display: flex;
+  flex-direction: column;
   font-family: "Lora", "Courier New", monospace, serif;
   font-size: 14px;
   font-weight: 400;
   color: #aaa;
   padding: 0 20px 20px;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: flex-end;
+  align-items: center;
 }
 .Advertisement-SiteHeader-Callout {
   padding: 0 5px;
@@ -11481,7 +11482,6 @@ button:focus-visible {
 .Header-Logo {
   display: flex;
   flex-direction: row;
-  background-color: #000;
   color: #fff;
   font-size: 60px;
   align-items: flex-end;
@@ -12281,6 +12281,8 @@ button:focus-visible {
 .Shop-Item-Body-Sponsor {
   height: auto;
   margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 .Shop-Item-Checkout {
   display: grid;
@@ -13704,12 +13706,12 @@ button:focus-visible {
 .Main-Body,
 .Main-Body-Intro {
   flex-grow: 1;
-  background-color: #000;
   justify-content: left;
   align-items: start;
   color: #fff;
 }
 .Main-Body-Intro {
+  background-color: #000;
   margin-top: 0;
 }
 .Main-Footer {
@@ -14146,6 +14148,41 @@ button:focus-visible {
 #root .Bulletin-Item-Header-Title {
   max-width: 70%;
 }
+#root .Bulletin-Item-Telescope-Contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+#root .Bulletin-Item-Telescope-Team {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#root .Bulletin-Item-Telescope-Logo {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+#root .Bulletin-Item-Telescope-LogoLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#root .Bulletin-Item-Telescope-Name {
+  margin-left: 10px;
+}
+#root .Bulletin-Item-Telescope-Name,
+#root .Bulletin-Item-Telescope-Record {
+  font-size: 18px;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
 #root .Bulletin-Item-Contents {
   text-align: center;
 }
@@ -14196,6 +14233,10 @@ button:focus-visible {
 #root .Bulletin-Big-Right {
   grid-column: 2/4;
   grid-row: 1/3;
+}
+#root .Bulletin-Top-Left {
+  grid-column: 1/2;
+  grid-row: 1;
 }
 #root .Bulletin-Bottom-Left {
   grid-column: 1/2;
