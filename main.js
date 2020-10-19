@@ -6429,8 +6429,7 @@
               <div className="Blessings">
                 <h2 className="Blessings-Header">Blessings</h2>
                 <p className="Blessings-Description">
-                  Each Blessing will be rewarded to a randomly selected player. Vote for Blessings for chances to win
-                  them for your team.
+                  Each Blessing will be rewarded to a randomly selected Fan. Pick a card for your Team.
                 </p>
                 <div className="Blessings-Container">
                   {e.blessings.map(function (e, a) {
