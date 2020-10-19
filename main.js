@@ -3577,9 +3577,9 @@
           l,
           i = Object(c.g)(),
           s = Object(r.useContext)(P.context).user,
-          m = [3, 12],
-          d = [6, 15],
-          h = [9, 18],
+          m = [],
+          d = [],
+          h = [],
           p =
             e.showIcons &&
             e.info.deceased &&
@@ -3587,7 +3587,7 @@
         return void 0 !== e.info ? (
           <div className={"Leaderboard-Player-Wrapper" + (e.showIcons ? " Leaderboard-Player-Wrapper-WithIcon" : "")}>
             <div className="Leaderboard-Icon-Wrapper">
-              {e.showIcons && [14].includes(e.info.place) ? <q.cb className="Leaderboard-Icon-Microphone" /> : null}
+              {e.showIcons && [].includes(e.info.place) ? <q.cb className="Leaderboard-Icon-Microphone" /> : null}
               {e.showIcons && d.includes(e.info.place) ? (
                 <Te.i className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Eclipse"} />
               ) : null}
