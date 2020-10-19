@@ -13679,6 +13679,11 @@ button:focus-visible {
   height: 100%;
   min-height: 100vh;
   padding: 0 calc(50% - 512px);
+  background-image: url(/static/media/eyes1.eaf7608f.gif),
+    url(/static/media/eyes2.e1d8a261.gif), url(/static/media/eyes3.cca031ee.gif),
+    url(/static/media/eyes4.7cacb8ce.gif), url(/static/media/eyes5.c62b1f96.gif);
+  background-position: 28% 6%, 89% 34%, 39% 95%, 81% 79%, 69% 0;
+  background-repeat: no-repeat;
 }
 .Main-Ad-Banner {
   height: 90px;

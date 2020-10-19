@@ -3247,7 +3247,7 @@
               Presented by{" "}
               <span className="Advertisement-SiteHeader-Callout">
                 <a
-                  href="http://wherecardsfall.com/"
+                  href="https://store.steampowered.com/app/589450/Where_Cards_Fall/"
                   onClick={function () {
                     return $e("WCF (MainPage/Title)");
                   }}
@@ -5443,14 +5443,14 @@
                             A spatial puzzle game where you build houses of cards to bring formative memories to life.
                           </span>{" "}
                           <a
-                            href="http://wherecardsfall.com/"
+                            href="https://store.steampowered.com/app/589450/Where_Cards_Fall/"
                             onClick={function () {
                               return $e("WCF (ShopItem)");
                             }}
                             target="_blank"
                             className="Shop-Item-Link"
                           >
-                            <strong>Learn More</strong>
+                            <strong>Wishlist on Steam</strong>
                           </a>
                         </div>
                       ),
