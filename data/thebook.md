@@ -9,25 +9,29 @@
 * b. Every day of Blaseball shall last one `|||||` hour.
 * c. If any games last longer than one `|||||` hour, a Spillover shall occur, and all games shall be delayed until the next `|||||` hour. In the case of a game lasting two `|||||` hours, the `entire season should be ||||||||| and both teams should be ||||||||| ||||||||| |||||||| |||| for |||||| |||||||||||.`
 * d. A season should start on a "Monday" and therefore conclude on a "Friday".
+* e. The Standings of a season of Blaseball shall be decided by two factors: Wins and Divine Favor. `Nothing else matters`. The Team with the higher number of Wins shall be considered higher in the Standings. If two Teams are tied, the tie-breaker will be decided by their positions on the Divine Favor list.
+* f. Party Time: A Team will enter Party Time if receiving 1 Win per remaining game would not land them in the Postseason.
 
 ### 2. Postseasons
 * AMENDMENT. As per the Wild Card Decree, the Postseason has been Amended as follows:
 * a. Each Postseason of Blaseball shall consist of 10 teams.
 * b. The 2 Division Winners from each Sub-League will receive a Postseason Birth.
 * c. The next 2 Runnerups from each Sub-League will receive a Postseason Birth based on regular season standings, regardless of Division.
-* d. At the end of the regular season, 1 Wild Card will be drawn at random from each Sub-League and will be removed from Party Time to receive a Postseason Birth.
-* e. Following the Wild Card draw, all Postseason teams will be seeded 1-5 in their Sub-League according to regular season standings.
-* f. The 4 and 5 Seeds shall play in the Wild Card Round, a best 2 of 3 game series.
-* g. All other Postseason series shall be best 3 of 5.
-* h. The home team in each Postseason game shall be `the |||||||||||, if the |||||||||||||||||||.`
-* i. The Wild Card Round should take place shortly after the end of the regular season. One full `|||||` hour shall be skipped, and then the Round shall begin at the top of the next available `|||||` hour.
-* j. The Postseason shall continue early on a "Saturday" and conclude within the same day. If the Postseason lasts into the following day, no `||||| shall be ||||||||, and both teams shall be |||||||||| |||||||| ||||||||||||.`
+* d. At the end of the regular season, 1 Wild Card will be drawn at random from the remaining teams in each Sub-League to receive a Postseason Birth.
+* e. All Postseason teams will be removed from Party Time, if applicable.
+* f. Following the Wild Card draw, all Postseason teams will be seeded 1-5 in their Sub-League according to regular season standings.
+* g. The 4 and 5 Seeds shall play in the Wild Card Round, a 2-Win series.
+* h. All other Postseason series shall be 3-Win series.
+* i. Postseason series are decided when, at the conclusion of a game, a Team has reached the specified Win count, and has more Wins than their opponent.
+* j. The home team in each Postseason game shall be `the |||||||||||, if the |||||||||||||||||||.`
+* k. The first two Rounds should begin after the end of the regular season. One full `|||||` hour shall be skipped, and then the Wild Card Round shall begin at the top of the next available `|||||` hour.
+* l. The Postseason shall continue early on a "Saturday" and conclude within the same day. If the Postseason lasts into the following day, no `||||| shall be ||||||||, and both teams shall be |||||||||| |||||||| ||||||||||||.`
 
 ### 3. Elections
 * a. Participants should be allowed to Vote on the rules, rosters, and other effects of the game of Blaseball. `The content of such Votes shall be ||||||||||||||| ||||||||||||||||||| ||||||||| entertainment`.
 * b. Decrees will be decided by popular vote.`It is understood that ||||||||||||||||| will be a ||||||||||| |||||||||||, and the others shall ||||||||||||||| ||||||||||||||| ||||||||| |||||||||||||.`
 * c. Blessings will be decided by a raffle. `It is understood that each of these` should give players `||||||||||||| |||||||||||` control of the league. All won Blessings shall be processed & applied in order of the standings. 
-* c. `||||||||||||||||||` may occur at the end of an Election, before Decrees and Blessings are processed. `Anything can happen here`. Good luck.
+* c. End of Season Events may occur at the end of an Election, before Decrees and Blessings are processed. `Anything can happen here`. Good luck.
 * d. Elections should end on a "Sunday," although Votes should be able to be cast on any day of the week.
 
 ### 4. Teams
