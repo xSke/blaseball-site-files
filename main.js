@@ -3970,7 +3970,7 @@
                     <div className="PlayoffSetup-MatchupTeam-Info">
                       <div
                         className={
-                          e.homeWins >= e.gamesNeeded && e.homeWins !== e.awayWins
+                          e.homeWins >= e.gamesNeeded && e.homeWins > e.awayWins
                             ? "PlayoffSetup-MatchupTeam-WinsComplete"
                             : "PlayoffSetup-MatchupTeam-Wins"
                         }
@@ -4003,7 +4003,7 @@
                     <div className="PlayoffSetup-MatchupTeam-Info">
                       <div
                         className={
-                          e.awayWins >= e.gamesNeeded && e.homeWins !== e.awayWins
+                          e.awayWins >= e.gamesNeeded && e.awayWins > e.homeWins
                             ? "PlayoffSetup-MatchupTeam-WinsComplete"
                             : "PlayoffSetup-MatchupTeam-Wins"
                         }
