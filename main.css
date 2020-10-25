@@ -11993,15 +11993,35 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
+  width: 100%;
 }
+#root .Team-Card,
 #root .Team-Standing {
+  font-family: "Lora", "Courier New", monospace, serif;
   font-size: 14px;
   color: #aaa;
   margin-top: 2px;
   margin-left: 10px;
+  line-height: 1.3em;
 }
-#root .Team-Slogan,
-#root .Team-Standing {
+#root .Team-Standing-Wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+#root .Team-Card {
+  margin-top: 5px;
+  margin-left: 0;
+  border: 1px solid #fff;
+  padding: 4px 10px;
+  border-radius: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #fff;
+}
+#root .Team-Slogan {
   font-family: "Lora", "Courier New", monospace, serif;
 }
 #root .Team-Section:not(:last-child) {
@@ -13126,6 +13146,13 @@ button:focus-visible {
 .Recap-Blessing-Description-Line:not(:last-child) {
   margin-bottom: 10px;
 }
+.Recap-SpaceBefore {
+  margin-top: 25px;
+}
+.Recap-Credits {
+  text-align: center;
+  width: 100%;
+}
 .Recap-Decree-Container {
   font-family: "Lora", "Courier New", monospace, serif;
   font-size: 16px;
@@ -13679,11 +13706,6 @@ button:focus-visible {
   height: 100%;
   min-height: 100vh;
   padding: 0 calc(50% - 512px);
-  background-image: url(/static/media/eyes1.eaf7608f.gif),
-    url(/static/media/eyes2.e1d8a261.gif), url(/static/media/eyes3.cca031ee.gif),
-    url(/static/media/eyes4.7cacb8ce.gif), url(/static/media/eyes5.c62b1f96.gif);
-  background-position: 28% 6%, 89% 34%, 39% 95%, 81% 79%, 69% 0;
-  background-repeat: no-repeat;
 }
 .Main-Ad-Banner {
   height: 90px;

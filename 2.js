@@ -1,4 +1,4 @@
-/*! For license information please see 2.da61a4c3.chunk.js.LICENSE.txt */
+/*! For license information please see 2.f3db8117.chunk.js.LICENSE.txt */
 (this.webpackJsonpsite = this.webpackJsonpsite || []).push([
   [2],
   [
@@ -1624,142 +1624,142 @@
         n.d(t, "db", function () {
           return j;
         }),
-        n.d(t, "eb", function () {
+        n.d(t, "hb", function () {
           return S;
         }),
         n.d(t, "ib", function () {
           return T;
         }),
-        n.d(t, "jb", function () {
+        n.d(t, "lb", function () {
           return P;
         }),
-        n.d(t, "mb", function () {
+        n.d(t, "rb", function () {
           return M;
         }),
-        n.d(t, "rb", function () {
+        n.d(t, "sb", function () {
           return _;
         }),
-        n.d(t, "sb", function () {
+        n.d(t, "tb", function () {
           return N;
         }),
-        n.d(t, "tb", function () {
+        n.d(t, "yb", function () {
           return L;
         }),
-        n.d(t, "yb", function () {
+        n.d(t, "zb", function () {
           return A;
         }),
-        n.d(t, "zb", function () {
+        n.d(t, "Cb", function () {
           return D;
         }),
-        n.d(t, "Cb", function () {
+        n.d(t, "Db", function () {
           return R;
         }),
-        n.d(t, "Db", function () {
+        n.d(t, "Fb", function () {
           return F;
         }),
-        n.d(t, "Fb", function () {
+        n.d(t, "Lb", function () {
           return B;
         }),
-        n.d(t, "Lb", function () {
+        n.d(t, "Nb", function () {
           return I;
         }),
-        n.d(t, "Nb", function () {
+        n.d(t, "Qb", function () {
           return V;
         }),
-        n.d(t, "Qb", function () {
+        n.d(t, "Sb", function () {
           return H;
         }),
-        n.d(t, "Sb", function () {
+        n.d(t, "Vb", function () {
           return G;
         }),
-        n.d(t, "Vb", function () {
+        n.d(t, "m", function () {
           return U;
         }),
-        n.d(t, "m", function () {
+        n.d(t, "n", function () {
           return $;
         }),
-        n.d(t, "n", function () {
+        n.d(t, "b", function () {
           return W;
         }),
-        n.d(t, "b", function () {
+        n.d(t, "c", function () {
           return q;
         }),
-        n.d(t, "c", function () {
+        n.d(t, "d", function () {
           return Q;
         }),
-        n.d(t, "d", function () {
+        n.d(t, "g", function () {
           return K;
         }),
-        n.d(t, "g", function () {
+        n.d(t, "h", function () {
           return Y;
         }),
-        n.d(t, "h", function () {
+        n.d(t, "i", function () {
           return X;
         }),
-        n.d(t, "i", function () {
+        n.d(t, "k", function () {
           return J;
         }),
-        n.d(t, "k", function () {
+        n.d(t, "r", function () {
           return Z;
         }),
-        n.d(t, "r", function () {
+        n.d(t, "t", function () {
           return ee;
         }),
-        n.d(t, "t", function () {
+        n.d(t, "u", function () {
           return te;
         }),
-        n.d(t, "u", function () {
+        n.d(t, "v", function () {
           return ne;
         }),
-        n.d(t, "v", function () {
+        n.d(t, "w", function () {
           return re;
         }),
-        n.d(t, "w", function () {
+        n.d(t, "y", function () {
           return ae;
         }),
-        n.d(t, "y", function () {
+        n.d(t, "B", function () {
           return ie;
         }),
-        n.d(t, "B", function () {
+        n.d(t, "C", function () {
           return oe;
         }),
-        n.d(t, "C", function () {
+        n.d(t, "E", function () {
           return ce;
         }),
-        n.d(t, "E", function () {
+        n.d(t, "F", function () {
           return le;
         }),
-        n.d(t, "F", function () {
+        n.d(t, "G", function () {
           return ue;
         }),
-        n.d(t, "G", function () {
+        n.d(t, "H", function () {
           return se;
         }),
-        n.d(t, "H", function () {
+        n.d(t, "P", function () {
           return fe;
         }),
-        n.d(t, "P", function () {
+        n.d(t, "Q", function () {
           return de;
         }),
-        n.d(t, "Q", function () {
+        n.d(t, "U", function () {
           return pe;
         }),
-        n.d(t, "U", function () {
+        n.d(t, "V", function () {
           return he;
         }),
-        n.d(t, "V", function () {
+        n.d(t, "X", function () {
           return me;
         }),
-        n.d(t, "X", function () {
+        n.d(t, "Y", function () {
           return ve;
         }),
-        n.d(t, "Y", function () {
+        n.d(t, "gb", function () {
           return ge;
         }),
-        n.d(t, "hb", function () {
+        n.d(t, "kb", function () {
           return be;
         }),
-        n.d(t, "lb", function () {
+        n.d(t, "mb", function () {
           return ye;
         }),
         n.d(t, "nb", function () {
@@ -1831,7 +1831,7 @@
         n.d(t, "Yb", function () {
           return He;
         }),
-        n.d(t, "kb", function () {
+        n.d(t, "jb", function () {
           return Ge;
         }),
         n.d(t, "z", function () {
@@ -1846,10 +1846,10 @@
         n.d(t, "l", function () {
           return qe;
         }),
-        n.d(t, "fb", function () {
+        n.d(t, "eb", function () {
           return Qe;
         }),
-        n.d(t, "gb", function () {
+        n.d(t, "fb", function () {
           return Ke;
         }),
         n.d(t, "Jb", function () {
@@ -2247,30 +2247,14 @@
               tag: "path",
               attr: {
                 d:
-                  "M41 66.91V415.8c86.5 1 147.5 14.8 206 29.3V141.4c-45.3-30.1-90.4-58.75-206-74.49zm430 0C355.4 82.65 310.3 111.3 265 141.4v303.7c58.5-14.5 119.5-28.3 206-29.3zm-20.9 26.6l.8 66.99c-59.4 17.6-114.5 37.9-168.9 56-.4-20.9-.7-41.7-1.1-62.6 52.8-29.2 111.2-48.1 169.2-60.39zM69.01 105.3C129.8 119.4 184.1 136 226.1 150.1l.2 19c-41.6-13.9-101.3-32.3-161.35-46.3zm.12 46.6l35.97 6.5-3.2 17.8-35.97-6.5zm54.17 11.3l32.5 6.2-3.4 17.6-32.5-6.2zm53.2 10.5l49.6 9.6-3.4 17.6-49.6-9.6zm263.1 19.9l5.2 17.2-56 16.9-5.2-17.2zm-377.68 4.7C119.2 205 176 212.2 223.8 225l-4.6 17.4c-46-12.4-102.2-19.6-159.38-26.3zM357.1 216l4.8 17.4-71.7 19.8-4.8-17.4zm86.4 21l4.8 17.4-32.8 9.1-4.8-17.4zm-378.3 1.6l49.9 5.2-2 18-49.8-5.4zm76.9 9.8l82.1 12.3-2.6 17.8-82.1-12.3zm248.5 3.7l4.8 17.4L288.5 299l-4.8-17.4zm55.8 22.9l4.6 17.4L348.5 319l-4.6-17.4zm-388.06 6.4c29.84 3.1 61.96 7.5 84.46 13v111L59.2 398c-.33-38.9-.48-77.7-.86-116.6zm104.56 14.7l61.5 7.5-2.2 17.8-61.5-7.5zm161.5 11.8l4.2 17.5-37.8 9.1-4.2-17.5zm129.1 4.1l.4 82.2-78.5 10.2c-.3-23.8-.4-47.7-.7-71.5zM164 334.4l59.8 9.8-3 17.8-59.8-9.8zm271.7 1l-42.8 11.3.3 37.3 42.7-5.6zm-81.4 9.8l3.4 17.6-68.9 13.1-3.4-17.6zm-191.1 29.1l62.6 12.4-3.4 17.6-62.6-12.4zm186.6 6.8l4 17.6-62.5 13.9-4-17.6z",
-              },
-            },
-          ],
-        })(e);
-      };
-      S.displayName = "GiNewspaper";
-      var T = function (e) {
-        return Object(r.a)({
-          tag: "svg",
-          attr: { viewBox: "0 0 512 512" },
-          child: [
-            {
-              tag: "path",
-              attr: {
-                d:
                   "M54.438 29.794a23.808 23.808 0 0 0-1.204.01c-4.688.157-7.914 1.736-10.113 3.935-2.932 2.932-4.761 7.689-3.588 15.305 1.174 7.616 5.683 17.754 15.272 28.941 67.894 79.21 132.935 155.56 183.703 211.969 12.273 13.637 23.693 26.08 34.125 37.135 12.095-31.902 34.57-54.144 62.902-64.715-10.825-10.199-22.936-21.313-36.197-33.248C242.93 178.358 166.578 113.314 87.369 45.42c-11.186-9.589-21.325-14.098-28.941-15.272a29.555 29.555 0 0 0-3.99-.355zm295.783 246.64c-30.461 7.627-53.241 29.185-63.608 65.219 5.652 5.785 10.956 11.085 15.78 15.707 7.58 7.264 14.095 13.007 19.21 16.957 1.776-17.225 10.045-33.062 21.645-44.691 10.601-10.628 24.496-18.006 39.125-19.092-3.871-4.836-9.14-10.751-15.63-17.524-4.838-5.047-10.415-10.623-16.522-16.576zm35.351 51.95c-10.397.137-20.929 5.28-29.582 13.955-11.537 11.565-18.674 28.85-16.267 45.7 5.334 37.342 23.749 65.81 49.46 81.237 22.727 13.636 51.452 17.35 83.643 6.983-24.222-4.01-46.475-30.706-48.197-50.65 10.63 12.814 23.94 24.547 38.426 31.75-9.881-22.578-9.201-45.452-11.088-64.321-1.352-13.522-3.891-24.982-11.377-35.162-7.486-10.18-20.423-19.8-44.74-27.907a31.062 31.062 0 0 0-10.278-1.585z",
               },
             },
           ],
         })(e);
       };
-      T.displayName = "GiPaintBrush";
-      var P = function (e) {
+      S.displayName = "GiPaintBrush";
+      var T = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2285,8 +2269,8 @@
           ],
         })(e);
       };
-      P.displayName = "GiPartyFlags";
-      var M = function (e) {
+      T.displayName = "GiPartyFlags";
+      var P = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2301,8 +2285,8 @@
           ],
         })(e);
       };
-      M.displayName = "GiPodium";
-      var _ = function (e) {
+      P.displayName = "GiPodium";
+      var M = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2317,8 +2301,8 @@
           ],
         })(e);
       };
-      _.displayName = "GiRoad";
-      var N = function (e) {
+      M.displayName = "GiRoad";
+      var _ = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2333,8 +2317,8 @@
           ],
         })(e);
       };
-      N.displayName = "GiRobber";
-      var L = function (e) {
+      _.displayName = "GiRobber";
+      var N = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2349,8 +2333,8 @@
           ],
         })(e);
       };
-      L.displayName = "GiRoundStar";
-      var A = function (e) {
+      N.displayName = "GiRoundStar";
+      var L = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2367,8 +2351,8 @@
           ],
         })(e);
       };
-      A.displayName = "GiShakingHands";
-      var D = function (e) {
+      L.displayName = "GiShakingHands";
+      var A = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2383,8 +2367,8 @@
           ],
         })(e);
       };
-      D.displayName = "GiShieldBash";
-      var R = function (e) {
+      A.displayName = "GiShieldBash";
+      var D = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2399,8 +2383,8 @@
           ],
         })(e);
       };
-      R.displayName = "GiSpikyPit";
-      var F = function (e) {
+      D.displayName = "GiSpikyPit";
+      var R = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2415,8 +2399,8 @@
           ],
         })(e);
       };
-      F.displayName = "GiSpookyHouse";
-      var B = function (e) {
+      R.displayName = "GiSpookyHouse";
+      var F = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2431,8 +2415,8 @@
           ],
         })(e);
       };
-      B.displayName = "GiSpy";
-      var I = function (e) {
+      F.displayName = "GiSpy";
+      var B = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2447,8 +2431,8 @@
           ],
         })(e);
       };
-      I.displayName = "GiStoneBust";
-      var V = function (e) {
+      B.displayName = "GiStoneBust";
+      var I = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2463,8 +2447,8 @@
           ],
         })(e);
       };
-      V.displayName = "GiTakeMyMoney";
-      var H = function (e) {
+      I.displayName = "GiTakeMyMoney";
+      var V = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2479,8 +2463,8 @@
           ],
         })(e);
       };
-      H.displayName = "GiTicket";
-      var G = function (e) {
+      V.displayName = "GiTicket";
+      var H = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2495,8 +2479,8 @@
           ],
         })(e);
       };
-      G.displayName = "GiTwoCoins";
-      var U = function (e) {
+      H.displayName = "GiTwoCoins";
+      var G = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2511,8 +2495,8 @@
           ],
         })(e);
       };
-      U.displayName = "GiWalk";
-      var $ = function (e) {
+      G.displayName = "GiWalk";
+      var U = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2527,8 +2511,8 @@
           ],
         })(e);
       };
-      $.displayName = "GiCardRandom";
-      var W = function (e) {
+      U.displayName = "GiCardRandom";
+      var $ = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2543,8 +2527,8 @@
           ],
         })(e);
       };
-      W.displayName = "GiCatapult";
-      var q = function (e) {
+      $.displayName = "GiCatapult";
+      var W = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2559,8 +2543,8 @@
           ],
         })(e);
       };
-      q.displayName = "GiArcheryTarget";
-      var Q = function (e) {
+      W.displayName = "GiArcheryTarget";
+      var q = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2576,8 +2560,8 @@
           ],
         })(e);
       };
-      Q.displayName = "GiBackPain";
-      var K = function (e) {
+      q.displayName = "GiBackPain";
+      var Q = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2592,8 +2576,8 @@
           ],
         })(e);
       };
-      K.displayName = "GiBackstab";
-      var Y = function (e) {
+      Q.displayName = "GiBackstab";
+      var K = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2608,8 +2592,8 @@
           ],
         })(e);
       };
-      Y.displayName = "GiBigWave";
-      var X = function (e) {
+      K.displayName = "GiBigWave";
+      var Y = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2624,8 +2608,8 @@
           ],
         })(e);
       };
-      X.displayName = "GiBirdClaw";
-      var J = function (e) {
+      Y.displayName = "GiBirdClaw";
+      var X = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2641,8 +2625,8 @@
           ],
         })(e);
       };
-      J.displayName = "GiBirdTwitter";
-      var Z = function (e) {
+      X.displayName = "GiBirdTwitter";
+      var J = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2657,8 +2641,8 @@
           ],
         })(e);
       };
-      Z.displayName = "GiBootStomp";
-      var ee = function (e) {
+      J.displayName = "GiBootStomp";
+      var Z = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2673,8 +2657,8 @@
           ],
         })(e);
       };
-      ee.displayName = "GiClockwork";
-      var te = function (e) {
+      Z.displayName = "GiClockwork";
+      var ee = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2689,8 +2673,8 @@
           ],
         })(e);
       };
-      te.displayName = "GiCrystalShine";
-      var ne = function (e) {
+      ee.displayName = "GiCrystalShine";
+      var te = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2705,8 +2689,8 @@
           ],
         })(e);
       };
-      ne.displayName = "GiCycle";
-      var re = function (e) {
+      te.displayName = "GiCycle";
+      var ne = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2721,8 +2705,8 @@
           ],
         })(e);
       };
-      re.displayName = "GiDiamondsSmile";
-      var ae = function (e) {
+      ne.displayName = "GiDiamondsSmile";
+      var re = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2738,8 +2722,8 @@
           ],
         })(e);
       };
-      ae.displayName = "GiEarthCrack";
-      var ie = function (e) {
+      re.displayName = "GiEarthCrack";
+      var ae = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2754,8 +2738,8 @@
           ],
         })(e);
       };
-      ie.displayName = "GiEchoRipples";
-      var oe = function (e) {
+      ae.displayName = "GiEchoRipples";
+      var ie = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2770,8 +2754,8 @@
           ],
         })(e);
       };
-      oe.displayName = "GiFireBreath";
-      var ce = function (e) {
+      ie.displayName = "GiFireBreath";
+      var oe = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2786,8 +2770,8 @@
           ],
         })(e);
       };
-      ce.displayName = "GiFireDash";
-      var le = function (e) {
+      oe.displayName = "GiFireDash";
+      var ce = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2803,8 +2787,8 @@
           ],
         })(e);
       };
-      le.displayName = "GiFireShield";
-      var ue = function (e) {
+      ce.displayName = "GiFireShield";
+      var le = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2819,8 +2803,8 @@
           ],
         })(e);
       };
-      ue.displayName = "GiFireSilhouette";
-      var se = function (e) {
+      le.displayName = "GiFireSilhouette";
+      var ue = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2835,8 +2819,8 @@
           ],
         })(e);
       };
-      se.displayName = "GiFragmentedMeteor";
-      var fe = function (e) {
+      ue.displayName = "GiFragmentedMeteor";
+      var se = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2851,8 +2835,8 @@
           ],
         })(e);
       };
-      fe.displayName = "GiGemPendant";
-      var de = function (e) {
+      se.displayName = "GiGemPendant";
+      var fe = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2868,8 +2852,8 @@
           ],
         })(e);
       };
-      de.displayName = "GiHeatHaze";
-      var pe = function (e) {
+      fe.displayName = "GiHeatHaze";
+      var de = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2884,8 +2868,8 @@
           ],
         })(e);
       };
-      pe.displayName = "GiHighFive";
-      var he = function (e) {
+      de.displayName = "GiHighFive";
+      var pe = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2900,8 +2884,8 @@
           ],
         })(e);
       };
-      he.displayName = "GiIfrit";
-      var me = function (e) {
+      pe.displayName = "GiIfrit";
+      var he = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2917,8 +2901,8 @@
           ],
         })(e);
       };
-      me.displayName = "GiInnerSelf";
-      var ve = function (e) {
+      he.displayName = "GiInnerSelf";
+      var me = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2933,8 +2917,8 @@
           ],
         })(e);
       };
-      ve.displayName = "GiLifeTap";
-      var ge = function (e) {
+      me.displayName = "GiLifeTap";
+      var ve = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2949,8 +2933,8 @@
           ],
         })(e);
       };
-      ge.displayName = "GiLightningFrequency";
-      var be = function (e) {
+      ve.displayName = "GiLightningFrequency";
+      var ge = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2965,8 +2949,8 @@
           ],
         })(e);
       };
-      be.displayName = "GiOrbitalRays";
-      var ye = function (e) {
+      ge.displayName = "GiOrbitalRays";
+      var be = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2981,8 +2965,8 @@
           ],
         })(e);
       };
-      ye.displayName = "GiPieSlice";
-      var we = function (e) {
+      be.displayName = "GiPieSlice";
+      var ye = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -2997,8 +2981,8 @@
           ],
         })(e);
       };
-      we.displayName = "GiPrayer";
-      var xe = function (e) {
+      ye.displayName = "GiPrayer";
+      var we = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -3014,8 +2998,8 @@
           ],
         })(e);
       };
-      xe.displayName = "GiPyromaniac";
-      var Oe = function (e) {
+      we.displayName = "GiPyromaniac";
+      var xe = function (e) {
         return Object(r.a)({
           tag: "svg",
           attr: { viewBox: "0 0 512 512" },
@@ -3030,7 +3014,24 @@
           ],
         })(e);
       };
-      Oe.displayName = "GiQuicksand";
+      xe.displayName = "GiQuicksand";
+      var Oe = function (e) {
+        return Object(r.a)({
+          tag: "svg",
+          attr: { viewBox: "0 0 512 512" },
+          child: [
+            {
+              tag: "path",
+              attr: {
+                d:
+                  "M496.938 14.063c-95.14 3.496-172.297 24.08-231.282 55.812l-29.47 49.28-4.967-28.093c-10.535 7.402-20.314 15.222-29.314 23.407l-14.687 45.06-5.032-25.155c-40.65 45.507-60.41 99.864-58.938 155.906 47.273-93.667 132.404-172.727 211.97-221.155l9.717 15.97c-75.312 45.838-156.387 121.202-202.187 208.25h12.156c19.78-12.02 39.16-26.858 58.406-43.44l-30.28 1.595 54.218-23.094c46.875-43.637 93.465-94.974 143.313-138.28l-24.47-5.19 56.5-21.03c26.853-20.485 54.8-37.844 84.344-49.843zM59.53 312.03v30.408H194V312.03H59.53zm20.376 49.095L47.25 389.813 24.97 474.78l14.53 15.876h177.22l14.56-15.875L209 389.814l-30.906-28.688H79.906z",
+                fillRule: "evenodd",
+              },
+            },
+          ],
+        })(e);
+      };
+      Oe.displayName = "GiQuillInk";
       var Ee = function (e) {
         return Object(r.a)({
           tag: "svg",
