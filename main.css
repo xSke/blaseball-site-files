@@ -13917,6 +13917,9 @@ button:focus-visible {
 .TheBook-Subheader-Group {
   white-space: nowrap;
 }
+.TheBook-New {
+  color: #3cc28a;
+}
 .TheBook-Line {
   text-align: left;
   font-size: 18px;
@@ -13968,6 +13971,44 @@ button:focus-visible {
   animation-timing-function: ease-in-out;
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
+}
+.TheBook-Navigation {
+  font-size: 24px;
+}
+.TheBook-Navigation,
+.TheBook-Navigation-Button {
+  display: flex;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+}
+.TheBook-Navigation-Button {
+  font-size: 14px;
+  background: #000;
+  color: #fff;
+  margin-right: 10px;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 2px solid transparent !important;
+  white-space: nowrap;
+  height: 40px;
+}
+.TheBook-Navigation-Button:hover {
+  border: 2px solid #fff;
+  color: #fff;
+}
+.TheBook-Navigation-Button-Current {
+  background-color: #fff;
+  color: #000;
+}
+.TheBook-Navigation-Button-Current:hover {
+  color: #000;
+}
+.TheBook-Navigation-Button-Content:focus {
+  outline: none;
 }
 .TheBook-List {
   margin: 20px 0;

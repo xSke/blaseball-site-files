@@ -49,17 +49,17 @@
 * g. Once the ball is in play, `||| |||| || ||| |||||||||| ||||| |||||||||| the outcome of the play. ||| |||| ||||||| || ||||||||||||||||` immaterial plane `|||||||||||||| ||||||| ||||||| ||||||||| ||||||||||||||| |||||||||||||||| |||||||| |||||||| unfathomable.`
 * h. The team with the most runs will win the game.
 * i. Shame Phase: If the home team scores the winning run in the bottom of the final inning, the away team must complete the game in shame, despite being mathematically eliminated.
-* j. `||||||||||||||||||||||`
+* j. ~~Nothing truly matters.~~
 * k. Crying in Blaseball is `||||||||||.`
 
 ### 6. `The Gods` and You
 * a. Should the Participants open the Forbidden Book, `The Discipline Era should begin||||||||||||||||||||||` suffering `upon the league. Players shall be ` banished `at the ||||||||||| ||||||||| |||| ||||||||||||||||.` The Discipline Era shall last until `the Participants have` atoned.
-* b. If a team wins three championships, they, and Blaseball, shall ascend.
-* c. When teams are sent to `||||||||||| |||||||||||||`, they shall return once `|||||||||||||||| |||||||||||||||||||||| |||||||||||||`
+* b. ~~If a team wins three championships, they, and Blaseball, shall ascend.~~
+* c. ~~When teams are sent to~~ `||||||||||| |||||||||||||`, ~~they shall return once~~ `|||||||||||||||| |||||||||||||||||||||| ||||||` ~~the Under.~~ When teams are sent to `||||||||| |||`, they shall return once `|||| ||| |||||||||| ||| ||||| |||||||||| ||||| || ||||||||||` Blasphemy.
 * d. Divine Favor: the `||||` have an internal ranking of favored teams. The list is decided `|||||||||` each season, and determines all standings tiebreakers.
 * e. ~~If at any time the Fans have angered the Blaseball Gods, they may atone by eating one million Peanuts.~~ STRIKE TWO
 * h. Eat The Rich: Every season, immediately before the Election, the Wealthiest 1% of Fans will have their Coins removed and distributed evenly to the other 99% of Fans.
-* i. Blood Bath: `||||| ||||||, ||||||||||| |||||| ||| ||||||||, ||| ||||| |||| |||| ||||||| ||| ||||||. ||||| |||| || |||||||||||| ||||| || |||| |||||| ||||| |||||||||||||`
+* i. ~~Blood Bath: ~~`||||| ||||||, ||||||||||| |||||| ||| ||||||||, ||| ||||| |||| |||| ||||||| ||| ||||||. ||||| |||| || |||||||||||| ||||| || |||| |||||| ||||| |||||||||||||`
 * f. Sunglasses `shall be |||||||||| ||||||||||||| |||||||||||||||||. They shall provide |||||||||||||| may be ||||||||||||||||||||.`
 * g. Splortsmanship, splortsmanship, is BACK.
 
@@ -69,4 +69,55 @@
 * c. It is known that the majority of the icons on the site are sourced from Game-Icons.net. `||||||||` thank the authors immensely. Individual author credits coming soon.
 
 ### Signed,
-* `||||`,  `||||`,  `||||||||`,  `|||||||`,  `||||||||`,  `|||||||||`,  `|||||||`,  `||||`,  `||||||`,  H`||||||||||`,  `||||||`,  `|||||||`,  `||||| ||||`,  A`|||||| ||||||`,  `||||`,  N`||||||`,  `||`,  `||||||`,  M`|| ||||||`
+* `||||`,  `||||`,  `||||||||`,  `|||||||`,  `||||||||`,  `|||||||||`,  `|||||||`,  `||||`,  `||||||`,  H`||||||||||`,  `||||||`,  `|||||||`,  `||||| ||||`,  A`|||||| ||||||`,  `||||`,  N`||||||`,  `||`,  `||||||`,  ~~M~~`|| ||||||`
+
+## Expansions
+
+### 1. Arcana
+* a. `||||| |||| |||| ||| || ||||| ||| ||| |||| ||||| |||` the First Reading.
+* b. `||||| | || |||| ||| ||| ||| ||| || ` to each Team for `||| |||| |||| ||||| ||||| |||| |||| |||| |||| ||||`
+* c. `||||| | || |||| ||| ||| ||| ||| || ||| |||| |||| ||||| ||||| |||| |||| |||| |||| |||| || |||| |||| || |||| ||| || || ||||||| ||| | |||| ||| ||||||| ||| |||| || ||||| `
+
+### 2. Bury - `|||||||||`
+* a. `||||||||||||||||||||||||` the Dead.
+* b. `|||||||||||||| |||||||||| |||||||||||||||||||||||||` Hall of Flame `||| ||||||| |||||||||| |||| ||||`
+* c. `||||||||||| |||||| |||||||| || ||| ||||| || ||||||||||| ||||||||`
+
+### 3. Burn - `|||||||||||`
+* a. `||||||||| |||||| |||||| || ||| |||||||| |||| |||| || ||| |||||| |||| |||| |||||||| || ||| ||`
+* b. `||||||||| ||| ||| |||||||| ||||| |||||||||| ||| || ` Days 27 & 72.
+* c. `|| ||| |||| ||| ||| |||||||| ||||| |||||||||| ||| || |||| |||| || | |||||||||| |||||| ||||||| ||||||||| ||||||| |||||||`
+
+### 4. Close - Ballparks
+* a. Teams shall build Ballparks in their Image.
+* b. `||| ||||||| |||| ||| ||| ||||| |||| ||||||| ||| || ||||| |||` Home Games at their Ballpark.
+* c. `||| |||||||||| ||||| ||| ||| ||| |||||||| || ||||| ||| || |||||||| |||||| |||||| | |||| |||| || ||| ||||. ||| |||||| |||| ||| |||| |||| ||| || |||| ||| |||| || |||| |||`
+* d. `||||||||| ||||||| ||||||||| ||| || ||| |||||| |||| ||||| ||| || |||||| |||| |||| ||| || |||| ||| || |||||`
+
+### 5. Deface - Wills
+* a. Fans shall bend the Election to their Will.
+* b. `||||| ||||| |||| ||||| |||||||||` the Election, `|||||||| ||| |||| || ||||| |||||||||||||`
+* c. `|| ||| |||||| ||` Fairness, each Team shall win the same number of Wills.`|||| |||||| || ||| ||||||| |||| ||| |||| ||| ||||| |||||||`
+
+### 6. Eat - Concessions
+* a. The League shall sell Concessions to the Fans.
+* b. Henceforth, `|||||||||| ||| |||| |||| || ||||||| || |||||||| |||||| ||| |||| |||||||||| ||||| ||||| |||` expand their earning potential and betting experience.
+
+### 7. Freeze - `||||||||||||||`
+* a. `|| |||||| |||| ||| |||||| |||| |||| |||||| || ||| ||||||| ||` improvements.
+* b. `|||||`: `||||| |||||| ||| ||||||| ||| ||| |||||| || |||| ||||||`
+* c. `|||||||`: `|||||| ||||| | |||||| ||||| ||| ||||||| |||| |||| ||||| ||||||||||| |||| ||| ||||| |||| ||||||`
+* d. `|||||`: `||||| |||| ||| ||| |||| |||||| ||| ||| || |||| || |||| |||||||| ||||| ||| |||| |||||| || ||||||`
+
+### 8. Shred - `|||||||||`
+* a. `|||| ||| ||||| ||| ||| ||| ||| |||||||| ||| |||||| ||||| |||`
+* b. `||||||||| ||||| ||| ||| ||| |||||| || ||||||| ||| || ||||||| ||| ||| |||||||||| |||||| ||| |||||||`
+* c. `||||| ||||||||||| ||| ||| ||||||||||| || ||||||| |||||||` Rivalries `||| |||| ||| ||| |||||| |||||||||| ||| ||||||||| |||||` Alliances
+
+### 9. Sink - `|||||||||`
+* a. `|| ||| ||||| |||| |||||||| |||||||| ||||||||| || || ||||| |||| ||| |||||||| |||| ||||||||| ||| |||||||| ||| |||||||| |||| ||| ||| |||||| ||| ||||| ||||| |||| ||||| ||||||||| ||||||||| ||||||||| |||||| |||||| ||||| |||||| |||||| ||||||| ||||||` Below Zero.
+
+### 10. Trash - `||||||||||||||`
+* a. `||||| |||| |||| |||| ||||| ||||| |||| |||||||| |||| |||| ||||| ||||| ||||| |||| ||||| |||| ||||||`
+* b. Pitchers: `||||||||| |||| || |||| || ||||| ||| ||||||| ||| |||| ||||| |||| |||| |||||||| ||| |||||||| || ||||||| |||| |||| |||||`
+* c. Hitters: `||||||| |||| ||| ||||| |||| |||||| |||||| ||||||||| || |||| ||||| ||| ||||| |||| ||||| |||| ||||`
