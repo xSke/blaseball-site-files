@@ -6101,136 +6101,136 @@
                     }),
                     l)
                   ) {
-                    H(e.favoriteTeam, n);
+                    var M = H(e.favoriteTeam, n) ? 2e3 : 0;
                     b = {
                       id: 3,
                       name: "Fair Weather Flute",
                       description:
                         "Plays a tune that allows you to change your favorite team. Your former team will be disappointed, but understand.",
-                      amount: 0,
+                      amount: M,
                       toast: "You abandon the ".concat(l.nickname, "."),
                       available: !0,
                       buyUrl: "/api/buyUpdateFavoriteTeam",
                       userUpdate: function () {
-                        a(Object(O.a)(Object(O.a)({}, e), {}, { favoriteTeam: null, coins: e.coins - 0 }));
+                        a(Object(O.a)(Object(O.a)({}, e), {}, { favoriteTeam: null, coins: e.coins - M }));
                       },
                     };
                   }
-                  var M = be.idolStrikeoutsTiers[Math.min(e.relics.Idol_Strikeouts, be.idolStrikeoutsTiers.length - 1)],
-                    R = be.idolStrikeoutsTiers[e.relics.Idol_Strikeouts + 1];
+                  var R = be.idolStrikeoutsTiers[Math.min(e.relics.Idol_Strikeouts, be.idolStrikeoutsTiers.length - 1)],
+                    D = be.idolStrikeoutsTiers[e.relics.Idol_Strikeouts + 1];
                   if (void 0 === e.relics.Idol_Strikeouts) {
-                    var D = be.idolStrikeoutsTiers[0],
-                      F = Object.create(e.relics);
-                    F.Idol_Strikeouts = 0;
-                    var P = "Adorn yourself. When your Idol strikes a batter out, you'll earn ".concat(
-                        D.amount,
+                    var F = be.idolStrikeoutsTiers[0],
+                      P = Object.create(e.relics);
+                    P.Idol_Strikeouts = 0;
+                    var W = "Adorn yourself. When your Idol strikes a batter out, you'll earn ".concat(
+                        F.amount,
                         " coins."
                       ),
-                      W = !0;
-                    ("" != e.idol && null != e.idol) || ((P += " Go to a Player page to choose an Idol."), (W = !1)),
+                      Q = !0;
+                    ("" != e.idol && null != e.idol) || ((W += " Go to a Player page to choose an Idol."), (Q = !1)),
                       (p = {
                         id: 14,
                         name: "Strikeout Pendant",
-                        description: P,
-                        amount: D.price,
-                        toast: "Coins per Idol strikeout is now ".concat(D.amount),
-                        available: W,
+                        description: W,
+                        amount: F.price,
+                        toast: "Coins per Idol strikeout is now ".concat(F.amount),
+                        available: Q,
                         buyUrl: "/api/buyRelic",
                         icon: <q.J />,
                         buyParams: { relicId: "Idol_Strikeouts" },
                         userUpdate: function () {
-                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - D.price, relics: F }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - F.price, relics: P }));
                         },
                       });
-                  } else if (void 0 !== R) {
-                    var Q = M.amount,
-                      x = R.amount,
-                      j = Object.create(e.relics);
-                    (j.Idol_Strikeouts = j.Idol_Strikeouts + 1),
+                  } else if (void 0 !== D) {
+                    var x = R.amount,
+                      j = D.amount,
+                      U = Object.create(e.relics);
+                    (U.Idol_Strikeouts = U.Idol_Strikeouts + 1),
                       (p = {
                         id: 14,
                         name: "Strikeout Pendant",
                         description: "Adorn yourself. When your Idol strikes a Batter out, you'll earn "
-                          .concat(x, " coins. You currently earn ")
-                          .concat(Q, " coins per Strikeout."),
-                        amount: R.price,
-                        toast: "Coins per Idol strikeout is now ".concat(R.amount),
+                          .concat(j, " coins. You currently earn ")
+                          .concat(x, " coins per Strikeout."),
+                        amount: D.price,
+                        toast: "Coins per Idol strikeout is now ".concat(D.amount),
                         available: !0,
                         buyUrl: "/api/buyRelic",
                         icon: <q.J />,
                         buyParams: { relicId: "Idol_Strikeouts" },
                         userUpdate: function () {
-                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - R.price, relics: j }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - D.price, relics: U }));
                         },
                       });
                   } else {
-                    var U = M.amount;
+                    var Y = R.amount;
                     p = {
                       id: 14,
                       name: "Strikeout Pendant",
                       icon: <q.J />,
                       description: "Adorn yourself. When your Idol strikes out a batter, you earn ".concat(
-                        U,
+                        Y,
                         " coins. You are maxed out."
                       ),
                       maxed: !0,
                       amount: 0,
                     };
                   }
-                  var Y = be.idolShutoutsTiers[Math.min(e.relics.Idol_Shutouts, be.idolShutoutsTiers.length - 1)],
-                    J = be.idolShutoutsTiers[e.relics.Idol_Shutouts + 1];
+                  var J = be.idolShutoutsTiers[Math.min(e.relics.Idol_Shutouts, be.idolShutoutsTiers.length - 1)],
+                    V = be.idolShutoutsTiers[e.relics.Idol_Shutouts + 1];
                   if (void 0 === e.relics.Idol_Shutouts) {
-                    var V = be.idolShutoutsTiers[0],
-                      K = Object.create(e.relics);
-                    K.Idol_Shutouts = 0;
-                    var z = "Adorn yourself. When your Idol pitches a Shutout, you'll earn ".concat(
-                        V.amount,
+                    var K = be.idolShutoutsTiers[0],
+                      z = Object.create(e.relics);
+                    z.Idol_Shutouts = 0;
+                    var X = "Adorn yourself. When your Idol pitches a Shutout, you'll earn ".concat(
+                        K.amount,
                         " coins."
                       ),
-                      X = !0;
-                    ("" != e.idol && null != e.idol) || ((z += " Go to a Player page to choose an Idol."), (X = !1)),
+                      Z = !0;
+                    ("" != e.idol && null != e.idol) || ((X += " Go to a Player page to choose an Idol."), (Z = !1)),
                       (E = {
                         id: 12,
                         name: "Shutout Pendant",
-                        description: z,
-                        amount: V.price,
-                        toast: "Coins per Idol shutout is now ".concat(V.amount),
-                        available: X,
+                        description: X,
+                        amount: K.price,
+                        toast: "Coins per Idol shutout is now ".concat(K.amount),
+                        available: Z,
                         buyUrl: "/api/buyRelic",
                         icon: <q.J />,
                         buyParams: { relicId: "Idol_Shutouts" },
                         userUpdate: function () {
-                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - V.price, relics: K }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - K.price, relics: z }));
                         },
                       });
-                  } else if (void 0 !== J) {
-                    var Z = Y.amount,
-                      _ = J.amount,
-                      $ = Object.create(e.relics);
-                    ($.Idol_Shutouts = $.Idol_Shutouts + 1),
+                  } else if (void 0 !== V) {
+                    var _ = J.amount,
+                      $ = V.amount,
+                      ee = Object.create(e.relics);
+                    (ee.Idol_Shutouts = ee.Idol_Shutouts + 1),
                       (E = {
                         id: 12,
                         name: "Shutout Pendant",
                         description: "Adorn yourself. When your Idol pitches a Shutout, you'll earn "
-                          .concat(_, " coins. You currently earn ")
-                          .concat(Z, " coins per Shutout."),
-                        amount: J.price,
-                        toast: "Coins per Idol shutout is now ".concat(J.amount),
+                          .concat($, " coins. You currently earn ")
+                          .concat(_, " coins per Shutout."),
+                        amount: V.price,
+                        toast: "Coins per Idol shutout is now ".concat(V.amount),
                         available: !0,
                         buyUrl: "/api/buyRelic",
                         icon: <q.J />,
                         buyParams: { relicId: "Idol_Shutouts" },
                         userUpdate: function () {
-                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - J.price, relics: $ }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - V.price, relics: ee }));
                         },
                       });
                   } else {
-                    var ee = Y.amount;
+                    var ae = J.amount;
                     E = {
                       id: 12,
                       name: "Shutout Pendant",
                       description: "Adorn yourself. When your Idol pitches a Shutout, you earn ".concat(
-                        ee,
+                        ae,
                         " coins. You are maxed out."
                       ),
                       maxed: !0,
@@ -6238,118 +6238,118 @@
                       amount: 0,
                     };
                   }
-                  var ae = be.idolHomersTiers[Math.min(e.relics.Idol_Homers, be.idolHomersTiers.length - 1)],
-                    te = be.idolHomersTiers[e.relics.Idol_Homers + 1];
+                  var te = be.idolHomersTiers[Math.min(e.relics.Idol_Homers, be.idolHomersTiers.length - 1)],
+                    ne = be.idolHomersTiers[e.relics.Idol_Homers + 1];
                   if (void 0 === e.relics.Idol_Homers) {
-                    var ne = be.idolHomersTiers[0],
-                      re = Object.create(e.relics);
-                    re.Idol_Homers = 0;
-                    var oe = "Adorn yourself. When your Idol hits a Home Run, you'll earn ".concat(
-                        ne.amount,
+                    var re = be.idolHomersTiers[0],
+                      oe = Object.create(e.relics);
+                    oe.Idol_Homers = 0;
+                    var le = "Adorn yourself. When your Idol hits a Home Run, you'll earn ".concat(
+                        re.amount,
                         " coins."
                       ),
-                      le = !0;
-                    ("" != e.idol && null != e.idol) || ((oe += " Go to a Player page to choose an Idol."), (le = !1)),
+                      ie = !0;
+                    ("" != e.idol && null != e.idol) || ((le += " Go to a Player page to choose an Idol."), (ie = !1)),
                       (h = {
                         id: 13,
                         name: "Home Run Pendant",
-                        description: oe,
-                        amount: ne.price,
-                        toast: "Coins per Idol homer is now ".concat(ne.amount),
-                        available: le,
+                        description: le,
+                        amount: re.price,
+                        toast: "Coins per Idol homer is now ".concat(re.amount),
+                        available: ie,
                         buyUrl: "/api/buyRelic",
                         icon: <q.J />,
                         buyParams: { relicId: "Idol_Homers" },
                         userUpdate: function () {
-                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - ne.price, relics: re }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - re.price, relics: oe }));
                         },
                       });
-                  } else if (void 0 !== te) {
-                    var ie = ae.amount,
-                      se = te.amount,
-                      ce = Object.create(e.relics);
-                    (ce.Idol_Homers = ce.Idol_Homers + 1),
+                  } else if (void 0 !== ne) {
+                    var se = te.amount,
+                      ce = ne.amount,
+                      me = Object.create(e.relics);
+                    (me.Idol_Homers = me.Idol_Homers + 1),
                       (h = {
                         id: 13,
                         name: "Home Run Pendant",
                         description: "Adorn yourself. When your Idol hits a Home Run, you'll earn "
-                          .concat(se, " coins. You currently earn ")
-                          .concat(ie, " coins per Home Run."),
-                        amount: te.price,
-                        toast: "Coins per Idol home run is now ".concat(te.amount),
+                          .concat(ce, " coins. You currently earn ")
+                          .concat(se, " coins per Home Run."),
+                        amount: ne.price,
+                        toast: "Coins per Idol home run is now ".concat(ne.amount),
                         available: !0,
                         buyUrl: "/api/buyRelic",
                         icon: <q.J />,
                         buyParams: { relicId: "Idol_Homers" },
                         userUpdate: function () {
-                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - te.price, relics: ce }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - ne.price, relics: me }));
                         },
                       });
                   } else {
-                    var me = ae.amount;
+                    var ue = te.amount;
                     h = {
                       id: 13,
                       name: "Home Run Pendant",
                       icon: <q.J />,
                       description: "Adorn yourself. When your Idol hits a Home Run, you earn ".concat(
-                        me,
+                        ue,
                         " coins. You are maxed out."
                       ),
                       maxed: !0,
                       amount: 0,
                     };
                   }
-                  var ue = be.idolHitsTiers[Math.min(e.relics.Idol_Hits, be.idolHitsTiers.length - 1)],
-                    de = be.idolHitsTiers[e.relics.Idol_Hits + 1];
+                  var de = be.idolHitsTiers[Math.min(e.relics.Idol_Hits, be.idolHitsTiers.length - 1)],
+                    he = be.idolHitsTiers[e.relics.Idol_Hits + 1];
                   if (void 0 === e.relics.Idol_Hits) {
-                    var he = be.idolHitsTiers[0],
-                      pe = Object.create(e.relics);
-                    pe.Idol_Hits = 0;
-                    var Ee = "Adorn yourself. When your Idol gets a Hit, you'll earn ".concat(he.amount, " coins."),
-                      fe = !0;
-                    ("" != e.idol && null != e.idol) || ((Ee += " Go to a Player page to choose an Idol."), (fe = !1)),
+                    var pe = be.idolHitsTiers[0],
+                      Ee = Object.create(e.relics);
+                    Ee.Idol_Hits = 0;
+                    var fe = "Adorn yourself. When your Idol gets a Hit, you'll earn ".concat(pe.amount, " coins."),
+                      ge = !0;
+                    ("" != e.idol && null != e.idol) || ((fe += " Go to a Player page to choose an Idol."), (ge = !1)),
                       (d = {
                         id: 11,
                         name: "Hits Pendant",
-                        description: Ee,
-                        amount: he.price,
-                        toast: "Coins per Idol hit is now ".concat(he.amount),
-                        available: fe,
+                        description: fe,
+                        amount: pe.price,
+                        toast: "Coins per Idol hit is now ".concat(pe.amount),
+                        available: ge,
                         buyUrl: "/api/buyRelic",
                         icon: <q.J />,
                         buyParams: { relicId: "Idol_Hits" },
                         userUpdate: function () {
-                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - he.price, relics: pe }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - pe.price, relics: Ee }));
                         },
                       });
-                  } else if (void 0 !== de) {
-                    var ge = ue.amount,
-                      ve = de.amount,
-                      ye = Object.create(e.relics);
-                    (ye.Idol_Hits = ye.Idol_Hits + 1),
+                  } else if (void 0 !== he) {
+                    var ve = de.amount,
+                      ye = he.amount,
+                      Ae = Object.create(e.relics);
+                    (Ae.Idol_Hits = Ae.Idol_Hits + 1),
                       (d = {
                         id: 11,
                         name: "Hits Pendant",
                         description: "Adorn yourself. When your Idol gets a hit, you'll earn "
-                          .concat(ve, " coins. You currently earn ")
-                          .concat(ge, " coins per hit."),
-                        amount: de.price,
-                        toast: "Coins per Idol hit is now ".concat(de.amount),
+                          .concat(ye, " coins. You currently earn ")
+                          .concat(ve, " coins per hit."),
+                        amount: he.price,
+                        toast: "Coins per Idol hit is now ".concat(he.amount),
                         available: !0,
                         buyUrl: "/api/buyRelic",
                         icon: <q.J />,
                         buyParams: { relicId: "Idol_Hits" },
                         userUpdate: function () {
-                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - de.price, relics: ye }));
+                          a(Object(O.a)(Object(O.a)({}, e), {}, { coins: e.coins - he.price, relics: Ae }));
                         },
                       });
                   } else {
-                    var Ae = ue.amount;
+                    var Ne = de.amount;
                     d = {
                       id: 11,
                       name: "Hits Pendant",
                       description: "Adorn yourself. When your Idol gets a hit, you earn ".concat(
-                        Ae,
+                        Ne,
                         " coins. You are maxed out."
                       ),
                       maxed: !0,
