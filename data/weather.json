@@ -73,5 +73,10 @@
         "name": "Black Hole",
         "background": "#000000",
         "color": "#00374a"
+    },
+    {
+        "name": "Coffee",
+        "background": "#9a7b4f",
+        "color": "#511c00"
     }
 ]

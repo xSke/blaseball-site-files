@@ -9000,35 +9000,36 @@ input[type="number"]::-webkit-outer-spin-button {
 .react-toast-notifications__toast__icon-wrapper svg {
   opacity: 0;
 }
-.DailySchedule-Header,
+.League-Header,
 .react-toast-notifications__toast__content {
   display: flex;
   align-items: center;
 }
-.DailySchedule-Header {
+.League-Header {
   font-family: "Lora", "Courier New", monospace, serif;
   font-weight: 700;
   font-size: 32px;
   padding: 20px 0 10px;
   justify-content: center;
 }
-.DailySchedule-Header-Group {
+.League-Header-Group {
   white-space: nowrap;
 }
-.DailySchedule-Nav {
+.League-Nav {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+  flex-wrap: wrap;
 }
-.DailySchedule-Countdown,
-.DailySchedule-Nav {
+.League-Countdown,
+.League-Nav {
   display: flex;
   font-size: 24px;
   padding-bottom: 20px;
   align-items: center;
   justify-content: center;
 }
-.DailySchedule-Number {
+.League-Number {
   margin: 0 10px;
   background: #fff;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
@@ -9039,20 +9040,27 @@ input[type="number"]::-webkit-outer-spin-button {
   text-align: center;
   font-size: 32px;
 }
-.DailySchedule-Number:last-child {
+.League-Number:last-child {
   margin-right: 0;
 }
-.DailySchedule-Number-Red {
+.League-Number-Red {
   background-color: red;
 }
-.DailySchedule-Body {
+.League-Number-LightMode {
+  background: #000;
+  color: #fff;
+}
+.League-Body {
   margin: 5px;
   font-family: "Lora", "Courier New", monospace, serif;
   font-size: 18px;
   text-align: center;
   color: #aaa;
 }
-.DailySchedule-Button {
+.League-Body-LightMode {
+  color: #111;
+}
+.League-Button {
   display: flex;
   font-size: 14px;
   background: #000;
@@ -9070,36 +9078,90 @@ input[type="number"]::-webkit-outer-spin-button {
   white-space: nowrap;
   height: 40px;
 }
-.DailySchedule-Button:hover {
+.League-Button:hover {
   border: 2px solid #fff;
   color: #fff;
 }
-.DailySchedule-Button-Current {
+.League-Button-Current {
   background: #fff;
   color: #000;
 }
-.DailySchedule-Button-Current:hover {
+.League-Button-Current:hover {
   color: #000;
 }
+.League-Info {
+  max-width: 550px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.League-Info-Header {
+  display: flex;
+  font-weight: 700;
+  font-size: 32px;
+  padding-top: 20px;
+  align-items: center;
+}
+.League-Info-Body,
+.League-Info-Header {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.League-Info-Body {
+  text-align: center;
+  margin: 24px 0;
+  font-size: 18px;
+}
+.League-Info-Callout {
+  font-size: 24px;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.League-Info-End {
+  margin: 5px;
+  font-size: 16px;
+}
+.League-Info-End,
+.League-SiteHeader {
+  font-family: "Lora", "Courier New", monospace, serif;
+  color: #aaa;
+}
+.League-SiteHeader {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 20px 20px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.League-SiteHeader-Callout {
+  padding: 0 5px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffeb57;
+}
+.League-SiteHeader-Callout-LightMode {
+  color: #0014a8;
+}
+.League-SiteHeader-LightMode {
+  color: #111;
+}
 @media (max-width: 1080px) {
-  .DailySchedule-Header {
+  .League-Header {
     font-size: 24px;
   }
-  .DailySchedule-Number {
+  .League-Number {
     margin: 0 10px;
     height: 28px;
     line-height: 28px;
     font-size: 24px;
   }
-  .DailySchedule-Body {
+  .League-Body {
     font-size: 14px;
     padding: 0 40px;
   }
 }
-.GameWidget {
-  margin-bottom: 80px;
-}
-.GameWidget-Button {
+.Widget-Button {
   color: #fff;
   font-weight: 700;
   font-size: 14px;
@@ -9110,30 +9172,13 @@ input[type="number"]::-webkit-outer-spin-button {
   align-items: center;
   border: 1px solid #fff !important;
 }
-.GameWidget-Button:not(:first-child) {
+.Widget-Button:not(:first-child) {
   border-left: none;
 }
-.GameWidget-Button:hover {
+.Widget-Button:hover {
   border: 1px solid #fff;
 }
-.GameWidget-Button-Wrapper {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  align-items: center;
-  flex-direction: row;
-}
-.GameWidget-Full-Live,
-.GameWidget-Full-Upcoming {
-  display: grid;
-  grid-template-columns: 38% calc(32% - 20px) 30%;
-  grid-gap: 10px;
-  gap: 10px;
-}
-.GameWidget-Display,
-.GameWidget-Display-Visual {
+.Widget-Display {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -9142,7 +9187,22 @@ input[type="number"]::-webkit-outer-spin-button {
   background: #111;
   overflow: hidden;
 }
-.GameWidget-Display-Body {
+.Widget-Display-LightMode {
+  background: hsla(0, 0%, 83.9%, 0.71);
+}
+.Widget-Display-Visual {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #111;
+  overflow: hidden;
+}
+.Widget-Display-Visual-LightMode {
+  background: hsla(0, 0%, 83.9%, 0.71);
+}
+.Widget-Display-Body {
   margin: auto;
   display: grid;
   padding: 10px;
@@ -9150,21 +9210,317 @@ input[type="number"]::-webkit-outer-spin-button {
   gap: 10px;
   grid-template-columns: 120px auto;
 }
-.GameWidget-Display-Body .GameWidget-Bases {
+.Widget-Display-Body .Widget-Bases {
   grid-column: 1/2;
   grid-row: 1/2;
 }
-.GameWidget-Display-Body .GameWidget-Outs {
+.Widget-Display-Body .Widget-Outs {
   grid-column: 2/3;
   grid-row: 1/2;
 }
-.GameWidget-Display-Body .GameWidget-AtBat {
+.Widget-Display-Body .Widget-AtBat {
   justify-content: center;
   grid-column: 1/3;
   grid-row: 2/3;
 }
-.GameWidget-Display-Body .GameWidget-Log {
+.Widget-Display-Body .Widget-Log {
   display: none;
+}
+.Widget-ScoreBacking {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px 0 10px 10px;
+}
+.Widget-StatusBar {
+  display: flex;
+  flex-direction: row;
+  height: 32px;
+}
+.Widget-StatusBar-LightMode {
+  color: #fff;
+}
+.Widget-Status {
+  display: flex;
+  padding: 0 8px;
+  height: 100%;
+  border-radius: 5px;
+  align-items: center;
+}
+.Widget-Status--Live {
+  background: green;
+}
+.Widget-Status--Complete {
+  background: red;
+}
+.Widget-Status--Upcoming {
+  background: #9a9531;
+}
+.Widget-Status--Shame {
+  background: #800878;
+}
+.Widget-ScoreLabel {
+  padding-right: 8px;
+}
+.Widget-Bases {
+  display: flex;
+  width: 100px;
+  margin-right: 10px;
+}
+.Widget-Bases.first #base1,
+.Widget-Bases.fourth #base4,
+.Widget-Bases.second #base2,
+.Widget-Bases.third #base3 {
+  fill: #fff;
+}
+.Widget-Bases-LightMode.first #base1,
+.Widget-Bases-LightMode.fourth #base4,
+.Widget-Bases-LightMode.second #base2,
+.Widget-Bases-LightMode.third #base3 {
+  fill: #000;
+}
+.Widget-Bases svg {
+  height: 100%;
+  width: 100%;
+}
+.Widget-Outs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 auto;
+}
+.Widget-Outs-Label {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  width: 60px;
+}
+.Widget-Outs-Label-LightMode {
+  color: #000;
+}
+.Widget-Outs-DotList {
+  width: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 10px;
+}
+.Widget-Outs-Dots {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 32px;
+  height: 52px;
+  color: #fff;
+}
+.Widget-Outs-Dots-LightMode {
+  color: #000;
+}
+.Widget-Outs-Row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 24px;
+}
+.Widget-Log {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #111;
+  border-radius: 5px;
+  overflow: hidden;
+  min-height: 135px;
+}
+.Widget-Log-LightMode {
+  background: #e1e1e1;
+}
+.Widget-Log-Header {
+  width: 100%;
+  height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: rgba(30, 30, 30, 0.64);
+}
+.Widget-Log-Header-LightMode {
+  background: #aaa;
+}
+.Widget-Log-Content {
+  padding: 10px;
+  overflow-y: scroll;
+  height: 100%;
+  min-height: 50px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  align-self: stretch;
+  border-radius: 5px;
+}
+.Widget-Loading {
+  width: 100%;
+  height: 160px;
+  background-color: #000;
+  margin: 0 0 20px;
+}
+.Widget-AtBat {
+  display: flex;
+  flex-direction: column;
+}
+.Widget-PlayerLine {
+  display: flex;
+  line-height: 32px;
+  align-items: center;
+  justify-content: space-between;
+}
+.Widget-PlayerStatusLabel {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.Widget-PlayerStatusLabel-LightMode {
+  color: #000;
+}
+.Widget-PlayerStatusIcon {
+  height: 32px;
+  width: 32px;
+  flex-shrink: 0;
+  margin-right: 10px;
+  display: none;
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.Widget-PlayerStatusIcon--Pitching {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAG0mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjAtMDQtMjdUMDE6NDc6MDItMDc6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmE0M2JhMTNkLTdhMDgtNDY4ZC04NmRjLTczYzU1OWI0OWQzNSIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjc3MDY0YWNmLTY2ODUtZTU0NC1iZjZhLWJlMGYxNjFhZGI5ZSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjExMmQ1MzYzLWY2ODEtNDM3NS1iZmIwLTY4ODNhZjljZjI0NSI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6MTEyZDUzNjMtZjY4MS00Mzc1LWJmYjAtNjg4M2FmOWNmMjQ1IiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAxOjQ3OjAyLTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZjAxMDU0YzgtM2I2OC00MDBjLWFiMmYtYmQwM2QxNmQ0NjdkIiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAxOjUzOjQ1LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YTQzYmExM2QtN2EwOC00NjhkLTg2ZGMtNzNjNTU5YjQ5ZDM1IiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBl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);
+}
+.Widget-PlayerStatusIcon--Batting {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFIGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjAtMDQtMjdUMDE6NDc6MzktMDc6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIwLTA0LTI3VDAxOjUyOjI2LTA3OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTA0LTI3VDAxOjUyOjI2LTA3OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmU4ZDlhZmI3LWIz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);
+}
+.Widget-PlayerStatusIcon-LightMode {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+.Widget-PlayerLineNameWrapper {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 20px;
+  padding: 0 12px;
+  border-radius: 5px;
+}
+.Widget-Header,
+.Widget-PlayerLineNameWrapper {
+  font-size: 14px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.Widget-Header {
+  height: 32px;
+  justify-content: space-between;
+  text-transform: uppercase;
+  background: rgba(30, 30, 30, 0.64);
+}
+.Widget-Header-LightMode {
+  background: #aaa;
+}
+.Widget-Header-Wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #111;
+}
+.Widget-Header-Wrapper-LightMode {
+  background: #e1e1e1;
+}
+.GameWidget {
+  margin-bottom: 80px;
+}
+.GameWidget-Full-Live,
+.GameWidget-Full-Upcoming {
+  display: grid;
+  grid-template-columns: 38% calc(32% - 20px) 30%;
+  grid-gap: 10px;
+  gap: 10px;
+}
+.GameWidget-WinChance {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  border-radius: 5px;
+  line-height: 1.2em;
+}
+.GameWidget-AllBetInfo,
+.GameWidget-ScoreBet {
+  display: flex;
+  flex-direction: row;
+}
+.GameWidget-ScoreBet {
+  font-family: "Lora", "Courier New", monospace, serif;
+  align-items: center;
+}
+.GameWidget-ScoreBet-Amount {
+  margin-left: 5px;
+}
+.GameWidget-ScoreBet-Bet {
+  padding-left: 10px;
+  padding-right: 5px;
+  border-radius: 20px 0 0 20px;
+  background: #979797;
+}
+.GameWidget-ScoreBet-Bet,
+.GameWidget-ScoreBet-Winnings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+}
+.GameWidget-ScoreBet-Winnings {
+  padding-right: 10px;
+  border-radius: 0 20px 20px 0;
+  background-color: green;
+  width: 100%;
+}
+.GameWidget-ScoreBet-Triangle {
+  content: "";
+  position: relative;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-color: transparent transparent transparent #979797;
+  border-style: solid;
+  border-width: 12px 0 12px 12px;
+  margin-right: 5px;
+}
+.GameWidget-UpcomingBet {
+  display: flex;
+  flex-direction: row;
+  margin: 0 10px;
+  padding: 0 10px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  align-items: center;
+  background: hsla(0, 0%, 39.6%, 0.65);
+  border-radius: 20px;
+}
+.GameWidget-UpcomingBet-Amount {
+  margin-left: 5px;
+}
+.GameWidget-UpcomingBet-LightMode {
+  background-color: #aaa;
+}
+.GameWidget-ScoreName {
+  font-size: 24px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
 }
 .GameWidget-Outcome {
   border-radius: 5px;
@@ -9175,6 +9531,9 @@ input[type="number"]::-webkit-outer-spin-button {
   background: #111;
   overflow: hidden;
   padding: 5px;
+}
+.GameWidget-Outcome-LightMode {
+  background: hsla(0, 0%, 83.9%, 0.71);
 }
 .GameWidget-Outcome-Blurb {
   font-family: "Lora", "Courier New", monospace, serif;
@@ -9197,6 +9556,9 @@ input[type="number"]::-webkit-outer-spin-button {
   overflow: hidden;
   background-color: rgba(30, 30, 30, 0.64);
 }
+.GameWidget-Upcoming-Info-LightMode {
+  background: hsla(0, 0%, 83.9%, 0.71);
+}
 .GameWidget-Upcoming-InfoBody {
   display: flex;
   flex-direction: column;
@@ -9211,6 +9573,9 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 5px;
   background-color: rgba(30, 30, 30, 0.64);
   overflow: hidden;
+}
+.GameWidget-Upcoming-Bets-LightMode {
+  background: hsla(0, 0%, 83.9%, 0.71);
 }
 .GameWidget-Upcoming-Odds {
   display: grid;
@@ -9256,6 +9621,9 @@ input[type="number"]::-webkit-outer-spin-button {
   text-transform: uppercase;
   background: rgba(30, 30, 30, 0.64);
 }
+.GameWidget-Upcoming-Header-LightMode {
+  background: #aaa;
+}
 .GameWidget-Upcoming-Body {
   display: grid;
   width: 100%;
@@ -9282,12 +9650,19 @@ input[type="number"]::-webkit-outer-spin-button {
 .GameWidget-Upcoming-Icon--Pitcher {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAG0mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjAtMDQtMjdUMDE6NDc6MDItMDc6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmE0M2JhMTNkLTdhMDgtNDY4ZC04NmRjLTczYzU1OWI0OWQzNSIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjc3MDY0YWNmLTY2ODUtZTU0NC1iZjZhLWJlMGYxNjFhZGI5ZSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjExMmQ1MzYzLWY2ODEtNDM3NS1iZmIwLTY4ODNhZjljZjI0NSI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6MTEyZDUzNjMtZjY4MS00Mzc1LWJmYjAtNjg4M2FmOWNmMjQ1IiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAxOjQ3OjAyLTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZjAxMDU0YzgtM2I2OC00MDBjLWFiMmYtYmQwM2QxNmQ0NjdkIiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAxOjUzOjQ1LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YTQzYmExM2QtN2EwOC00NjhkLTg2ZGMtNzNjNTU5YjQ5ZDM1IiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBl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);
 }
+.GameWidget-Upcoming-Icon-LightMode {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
 .GameWidget-Upcoming-Label {
   font-size: 14px;
   text-transform: uppercase;
   color: #fff;
   font-weight: 700;
   text-align: center;
+}
+.GameWidget-Upcoming-Label-LightMode {
+  color: #000;
 }
 .GameWidget-Upcoming-Pitchers-Wrapper {
   font-size: 14px;
@@ -9303,6 +9678,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .GameWidget-Upcoming-Favorites-Team {
   font-size: 20px;
   font-family: "Lora", "Courier New", monospace, serif;
+  border-radius: 5px;
 }
 .GameWidget-Upcoming-Favorites-Percentage {
   font-size: 32px;
@@ -9316,30 +9692,6 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-top: 10px;
   margin-bottom: auto;
 }
-.GameWidget-Header {
-  height: 32px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-  font-size: 14px;
-  text-transform: uppercase;
-  background: rgba(30, 30, 30, 0.64);
-}
-.GameWidget-Header-Wrapper {
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-  overflow: hidden;
-  background-color: #111;
-}
-.GameWidget-ScoreBacking {
-  display: flex;
-  flex: 1 0 auto;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 10px 0 10px 10px;
-}
 .GameWidget-ScoreLine {
   display: grid;
   grid-template-columns: 60px auto 15%;
@@ -9349,14 +9701,24 @@ input[type="number"]::-webkit-outer-spin-button {
   align-items: center;
 }
 .GameWidget-ScoreTeamColorBar {
-  display: flex;
   width: 50px;
   height: 50px;
   margin-left: 8px;
-  border-radius: 50%;
   font-size: 29px;
+}
+.GameWidget-ScoreNumber,
+.GameWidget-ScoreTeamColorBar {
+  display: flex;
+  border-radius: 50%;
   justify-content: center;
   align-items: center;
+}
+.GameWidget-ScoreNumber {
+  font-size: 24px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  width: 46px;
+  height: 46px;
+  margin: 0 auto;
 }
 .GameWidget-ScoreTeam {
   display: flex;
@@ -9365,294 +9727,50 @@ input[type="number"]::-webkit-outer-spin-button {
 .GameWidget-ScoreTeamInfo {
   display: flex;
   flex-direction: row;
-}
-.GameWidget-WinChance,
-.GameWidget-WinChance-WithBet {
-  margin-left: 20px;
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.GameWidget-AllBetInfo,
-.GameWidget-ScoreBet {
-  display: flex;
-  flex-direction: row;
-}
-.GameWidget-ScoreBet {
-  margin: 0 10px;
-  font-family: "Lora", "Courier New", monospace, serif;
+  flex-wrap: wrap;
   align-items: center;
 }
-.GameWidget-ScoreBet-Amount {
-  margin-left: 5px;
-}
-.GameWidget-ScoreBet-Bet {
-  padding-left: 10px;
-  padding-right: 5px;
-  border-radius: 20px 0 0 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background: hsla(0, 0%, 39.6%, 0.65);
-}
-.GameWidget-ScoreBet-Winnings {
-  padding-right: 10px;
-  border-radius: 0 20px 20px 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: green;
-  color: #fff;
-  width: 100%;
-}
-.GameWidget-ScoreBet-Triangle {
-  content: "";
-  position: relative;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-color: transparent transparent transparent #4a4a4a;
-  border-style: solid;
-  border-width: 12px 0 12px 12px;
-  margin-right: 5px;
-}
-.GameWidget-UpcomingBet {
-  display: flex;
-  flex-direction: row;
-  margin: 0 10px;
-  padding: 0 10px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  align-items: center;
-  background: hsla(0, 0%, 39.6%, 0.65);
-  border-radius: 20px;
-}
-.GameWidget-UpcomingBet-Amount {
-  margin-left: 5px;
-}
-.GameWidget-ScoreName {
-  font-size: 24px;
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.GameWidget-ScoreRecord,
-.GameWidget-ScoreRecord-WithBet {
+.GameWidget-ScoreRecord {
   display: flex;
   font-size: 16px;
   font-family: "Lora", "Courier New", monospace, serif;
   color: #aaa;
+  line-height: 1.2em;
 }
-.GameWidget-ScoreNumber {
-  display: flex;
-  font-size: 24px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  align-items: center;
-  justify-content: center;
-  width: 46px;
-  height: 46px;
-  margin: 0 auto;
-  border-radius: 50%;
+.GameWidget-ScoreRecord-LightMode {
+  color: #111;
 }
-.GameWidget-StatusBar {
-  display: flex;
-  flex-direction: row;
-  height: 32px;
-}
-.GameWidget-Status {
-  display: flex;
-  padding: 0 8px;
-  height: 100%;
-  border-radius: 5px;
-  align-items: center;
-}
-.GameWidget-Status--Live {
-  background: green;
-}
-.GameWidget-Status--Complete {
-  background: red;
-}
-.GameWidget-Status--Upcoming {
-  background: #9a9531;
-}
-.GameWidget-Status--Shame {
-  background: #800878;
-}
-.GameWidget-ScoreLabel {
-  padding-right: 8px;
-}
-.GameWidget-Bases {
-  display: flex;
-  width: 100px;
-  margin-right: 10px;
-}
-.GameWidget-Bases.first #base1,
-.GameWidget-Bases.fourth #base4,
-.GameWidget-Bases.second #base2,
-.GameWidget-Bases.third #base3 {
-  fill: #fff;
-}
-.GameWidget-Bases svg {
-  height: 100%;
-  width: 100%;
-}
-.GameWidget-Outs {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex: 1 0 auto;
-}
-.GameWidget-Outs-Label {
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: 700;
-  width: 60px;
-}
-.GameWidget-Outs-DotList {
-  width: 60px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  margin-left: 10px;
-}
-.GameWidget-Outs-Dots {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 32px;
-  height: 52px;
-  color: #fff;
-}
-.GameWidget-Outs-Row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 24px;
-}
-.GameWidget-Log {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  background: #111;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.GameWidget-Log-Header {
-  width: 100%;
-  height: 32px;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  text-transform: uppercase;
-  background: rgba(30, 30, 30, 0.64);
-}
-.GameWidget-Log-Content {
-  padding: 10px;
-  overflow-y: scroll;
-  height: 100%;
-  min-height: 50px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  align-self: stretch;
-  border-radius: 5px;
-}
-.GameWidget-Log-PlayCount {
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
-  font-size: 14px;
-  color: hsla(0, 0%, 39.6%, 0.65);
-}
-.GameWidget-Loading {
-  width: 100%;
-  height: 160px;
-  background-color: #000;
-  margin: 0 0 20px;
-}
-.GameWidget-AtBat {
-  display: flex;
-  flex-direction: column;
-}
-.GameWidget-PlayerLine {
-  display: flex;
-  line-height: 32px;
-  align-items: center;
-  justify-content: space-between;
-}
-.GameWidget-PlayerStatusLabel {
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: 700;
-  margin-right: 10px;
-}
-.GameWidget-PlayerStatusIcon {
-  height: 32px;
-  width: 32px;
-  flex-shrink: 0;
-  margin-right: 10px;
-  display: none;
-  background-size: contain;
-  background-position: 50%;
-  background-repeat: no-repeat;
-}
-.GameWidget-PlayerStatusIcon--Pitching {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAG0mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjAtMDQtMjdUMDE6NDc6MDItMDc6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmE0M2JhMTNkLTdhMDgtNDY4ZC04NmRjLTczYzU1OWI0OWQzNSIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjc3MDY0YWNmLTY2ODUtZTU0NC1iZjZhLWJlMGYxNjFhZGI5ZSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjExMmQ1MzYzLWY2ODEtNDM3NS1iZmIwLTY4ODNhZjljZjI0NSI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6MTEyZDUzNjMtZjY4MS00Mzc1LWJmYjAtNjg4M2FmOWNmMjQ1IiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAxOjQ3OjAyLTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZjAxMDU0YzgtM2I2OC00MDBjLWFiMmYtYmQwM2QxNmQ0NjdkIiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAxOjUzOjQ1LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YTQzYmExM2QtN2EwOC00NjhkLTg2ZGMtNzNjNTU5YjQ5ZDM1IiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBl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);
-}
-.GameWidget-PlayerStatusIcon--Batting {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFIGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjAtMDQtMjdUMDE6NDc6MzktMDc6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIwLTA0LTI3VDAxOjUyOjI2LTA3OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTA0LTI3VDAxOjUyOjI2LTA3OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmU4ZDlhZmI3LWIz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);
-}
-.GameWidget-PlayerLineLabel {
-  font-size: 14px;
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.GameWidget-PlayerLineNameWrapper {
-  font-size: 14px;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  line-height: 20px;
-  padding: 0 12px;
-  border-radius: 5px;
+.st0-LightMode {
+  fill: none;
+  stroke: #000;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
 }
 @media (max-width: 1080px) {
-  .GameWidget {
-    background-color: #111;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  .GameWidget-Full-Live {
-    grid-template-columns: 100%;
-    grid-gap: 0;
-    gap: 0;
-  }
-  .GameWidget-Full-Upcoming {
-    grid-template-columns: 40% auto;
-  }
-  .GameWidget-Display-Visual {
+  .Widget-Display-Visual {
     margin: 0;
     grid-row: 2/4;
     flex-direction: column;
     padding: 0 10px 10px;
     background: transparent;
   }
-  .GameWidget-Display-Body {
+  .Widget-Display-Body {
     padding: 0;
     width: 100%;
   }
-  .GameWidget-Display-Body .GameWidget-Bases {
+  .Widget-Display-Body .Widget-Bases {
     grid-column: 1/2;
     grid-row: 1/2;
   }
-  .GameWidget-Display-Body .GameWidget-Outs {
+  .Widget-Display-Body .Widget-Outs {
     grid-column: 1/2;
     grid-row: 2/3;
   }
-  .GameWidget-Display-Body .GameWidget-AtBat {
+  .Widget-Display-Body .Widget-AtBat {
     grid-column: 2/3;
     grid-row: 1/2;
   }
-  .GameWidget-Display-Body .GameWidget-Log {
+  .Widget-Display-Body .Widget-Log {
     display: block;
     min-height: 92px;
     background-color: rgba(30, 30, 30, 0.64);
@@ -9661,10 +9779,83 @@ input[type="number"]::-webkit-outer-spin-button {
     grid-row: 2/3;
     font-size: 14px;
   }
-  .GameWidget-Outcome {
-    grid-column: 1/3;
-    background-color: rgba(30, 30, 30, 0.64);
+  .Widget-Display-Body .Widget-Log-LightMode {
+    background-color: #c8c8c8;
+  }
+  .Widget-Header {
     border-radius: 0;
+  }
+  .Widget-Header-Wrapper {
+    grid-column: 1/3;
+  }
+  .Widget-ScoreBacking {
+    padding: 10px 0;
+  }
+  .Widget-ScoreLabel--Series + .GameWidget-ScoreLabel--Score {
+    display: none;
+  }
+  .Widget-AtBat {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .Widget-Outs {
+    justify-content: flex-start;
+  }
+  .Widget-Outs-Label {
+    font-size: 12px;
+  }
+  .Widget-Outs-DotList {
+    align-items: flex-start;
+    height: 85%;
+  }
+  .Widget-Outs-Dots {
+    font-size: 24px;
+    line-height: 14px;
+  }
+  .Widget-Log {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  .Widget-Log,
+  .Widget-Log-Header {
+    display: none;
+  }
+  .Widget-Log-Content {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .Widget-Log-Line {
+    margin: 0;
+  }
+  .Widget-PlayerLine {
+    justify-content: flex-start;
+  }
+  .Widget-PlayerStatusLabel {
+    display: none;
+  }
+  .Widget-PlayerStatusIcon {
+    display: block;
+  }
+  .Widget-PlayerLineName {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 2px 0;
+  }
+  .GameWidget {
+    background-color: #111;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .GameWidget-LightMode {
+    background-color: #e1e1e1;
+  }
+  .GameWidget-Full-Live {
+    grid-template-columns: 100%;
+    grid-gap: 0;
+    gap: 0;
+  }
+  .GameWidget-Full-Upcoming {
+    grid-template-columns: 40% auto;
   }
   .GameWidget-Upcoming-Info {
     grid-column: 1/3;
@@ -9715,24 +9906,20 @@ input[type="number"]::-webkit-outer-spin-button {
     grid-column: 1/3;
     border-radius: 0;
   }
+  .GameWidget-Upcoming-Bets-LightMode {
+    background-color: #c8c8c8;
+  }
   .GameWidget-Upcoming-BetButtons {
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  .GameWidget-Header {
+  .GameWidget-Outcome {
+    grid-column: 1/3;
+    background-color: rgba(30, 30, 30, 0.64);
     border-radius: 0;
   }
-  .GameWidget-Header-Wrapper {
-    grid-column: 1/3;
-  }
-  .GameWidget-WinChance-WithBet {
-    margin: 0;
-  }
-  .GameWidget-ScoreBacking {
-    padding: 10px 0;
-  }
-  .GameWidget-ScoreRecord-WithBet {
-    display: none;
+  .GameWidget-Outcome-LightMode {
+    background-color: hsla(0, 0%, 83.9%, 0.71);
   }
   .GameWidget-ScoreName {
     font-size: 18px;
@@ -9740,66 +9927,16 @@ input[type="number"]::-webkit-outer-spin-button {
   .GameWidget-ScoreNumber {
     margin: 0 8px 0 0;
   }
-  .GameWidget-ScoreLine {
-    grid-template-columns: 50px auto 54px;
-    grid-gap: 5px;
-    gap: 5px;
-  }
-  .GameWidget-ScoreLabel--Series + .GameWidget-ScoreLabel--Score {
-    display: none;
-  }
   .GameWidget-ScoreTeamColorBar {
     width: 35px;
     height: 35px;
     margin-left: 10px;
     font-size: 24px;
   }
-  .GameWidget-AtBat {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-  .GameWidget-Outs {
-    justify-content: flex-start;
-  }
-  .GameWidget-Outs-Label {
-    font-size: 12px;
-  }
-  .GameWidget-Outs-DotList {
-    align-items: flex-start;
-    height: 85%;
-  }
-  .GameWidget-Outs-Dots {
-    font-size: 24px;
-    line-height: 14px;
-  }
-  .GameWidget-Log {
-    display: none;
-    grid-column: 2/3;
-    grid-row: 3/4;
-  }
-  .GameWidget-Log-Header {
-    display: none;
-  }
-  .GameWidget-Log-Content {
-    font-size: 14px;
-    margin-bottom: 0;
-  }
-  .GameWidget-Log-Line {
-    margin: 0;
-  }
-  .GameWidget-PlayerLine {
-    justify-content: flex-start;
-  }
-  .GameWidget-PlayerStatusLabel {
-    display: none;
-  }
-  .GameWidget-PlayerStatusIcon {
-    display: block;
-  }
-  .GameWidget-PlayerLineName {
-    font-size: 14px;
-    line-height: 16px;
-    padding: 2px 0;
+  .GameWidget-ScoreLine {
+    grid-gap: 5px;
+    gap: 5px;
+    margin-bottom: 5px;
   }
   .GameWidget.IsComplete .GameWidget-Log {
     display: none;
@@ -9838,6 +9975,14 @@ input[type="number"]::-webkit-outer-spin-button {
   left: 0;
   z-index: 3;
 }
+.Modal-Background-LightMode {
+  background-color: hsla(0, 0%, 100%, 0.9);
+}
+.Modal-LightMode {
+  color: #000;
+  background-color: #fff;
+  border-color: #000;
+}
 .Modal-Close {
   position: absolute;
   right: 12px;
@@ -9856,6 +10001,12 @@ input[type="number"]::-webkit-outer-spin-button {
 .Modal-Close:hover {
   border: 1px solid #fff;
   border-radius: 50%;
+}
+.Modal-Close-LightMode {
+  color: #000;
+}
+.Modal-Close-LightMode:hover {
+  border: 1px solid #000;
 }
 .LoadingSpinner {
   width: 100%;
@@ -9904,31 +10055,37 @@ input[type="number"]::-webkit-outer-spin-button {
     transform: rotate(1turn);
   }
 }
-#root .Bet {
+#root .ModalForm {
   display: flex;
-  color: #fff;
   width: 460px;
   max-width: 95vw;
   max-height: 80vh;
   justify-content: flex-start;
   padding: 40px 20px 20px;
 }
-#root .Bet-Header {
+#root .ModalForm-Header {
   font-size: 24px;
   font-family: "Lora", "Courier New", monospace, serif;
   font-weight: 700;
   padding-bottom: 12px;
   text-align: center;
 }
-#root .Bet-Form {
+#root .ModalForm-Type {
   padding: 10px 0;
 }
-#root .Bet-Form-Teams {
+#root .ModalForm-Type-Name {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#root .ModalForm-Form {
+  padding: 10px 0;
+}
+#root .ModalForm-Form-Teams {
   width: 100%;
   display: flex;
   align-items: center;
 }
-#root .Bet-Form-Teams-Label {
+#root .ModalForm-Form-Teams-Label {
   background-color: #000;
   border: 3px solid hsla(0, 0%, 39.6%, 0.65);
   height: 50px;
@@ -9944,7 +10101,7 @@ input[type="number"]::-webkit-outer-spin-button {
   white-space: nowrap;
   padding: 5px;
 }
-#root .Bet-Form-Team {
+#root .ModalForm-Form-Team {
   position: relative;
   font-size: 18px;
   font-family: "Lora", "Courier New", monospace, serif;
@@ -9957,7 +10114,10 @@ input[type="number"]::-webkit-outer-spin-button {
   border: 3px solid hsla(0, 0%, 39.6%, 0.2);
   overflow: hidden;
 }
-#root .Bet-Form-Team-Background {
+#root .ModalForm-Form-Team-LightMode {
+  background-color: hsla(0, 0%, 39.6%, 0.06);
+}
+#root .ModalForm-Form-Team-Background {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -9966,90 +10126,99 @@ input[type="number"]::-webkit-outer-spin-button {
   opacity: 0;
   background-color: var(--team-color);
 }
-#root .Bet-Form-Team-Wrapper {
+#root .ModalForm-Form-Team-Wrapper {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-#root .Bet-Form-Team.Home {
+#root .ModalForm-Form-Team.Home {
   margin-right: 5px;
 }
-#root .Bet-Form-Team.Home .Bet-Form-Team-Wrapper {
+#root .ModalForm-Form-Team.Home .ModalForm-Form-Team-Wrapper {
   align-items: flex-start;
 }
-#root .Bet-Form-Team.Away {
+#root .ModalForm-Form-Team.Away {
   margin-left: 5px;
 }
-#root .Bet-Form-Team.Away .Bet-Form-Team-Wrapper {
+#root .ModalForm-Form-Team.Away .ModalForm-Form-Team-Wrapper {
   align-items: flex-end;
 }
-#root .Bet-Form-Team:hover:not(.is-selected) {
+#root .ModalForm-Form-Team:hover:not(.is-selected) {
   border: 3px solid var(--team-color);
   cursor: pointer;
 }
-#root .Bet-Form-Team:hover:not(.is-selected) .Bet-Form-Team-Background {
+#root
+  .ModalForm-Form-Team:hover:not(.is-selected)
+  .ModalForm-Form-Team-Background {
   opacity: 0.15;
 }
-#root .Bet-Form-Team.is-selected {
+#root .ModalForm-Form-Team.is-selected {
   border: 3px solid var(--team-color);
 }
-#root .Bet-Form-Team.is-selected .Bet-Form-Team-Background {
+#root .ModalForm-Form-Team.is-selected .ModalForm-Form-Team-Background {
   opacity: 0.5;
 }
-#root .Bet-Form-Team.is-selected .Bet-Form-Team-Name {
+#root .ModalForm-Form-Team.is-selected .ModalForm-Form-Team-Name {
   color: #fff;
 }
-#root .Bet-Form-Team.is-selected .Bet-Form-Team-Bar {
+#root .ModalForm-Form-Team.is-selected .ModalForm-Form-Team-Bar {
   background-color: #fff;
 }
-#root .Bet-Form-Team.is-selected .Bet-Form-Team-Percentage {
+#root .ModalForm-Form-Team.is-selected .ModalForm-Form-Team-Percentage {
   color: #fff;
 }
-#root .Bet-Form-Team.is-not-selected {
+#root .ModalForm-Form-Team.is-selected .ModalForm-Form-Team-Name-LightMode {
+  color: #000;
+}
+#root .ModalForm-Form-Team.is-not-selected {
   opacity: 0.35;
 }
-#root .Bet-Form-Team-Background {
+#root .ModalForm-Form-Team-Background {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-#root .Bet-Form-Team-Name {
+#root .ModalForm-Form-Team-Name {
   font-size: 24px;
   color: var(--team-color);
+  margin-bottom: 2px;
 }
-#root .Bet-Form-Team-Bar {
+#root .ModalForm-Form-Team-Name-LightMode {
+  color: #000;
+}
+#root .ModalForm-Form-Team-Bar {
   height: 3px;
   background-color: var(--team-color);
 }
-#root .Bet-Form-Team-Percentage {
+#root .ModalForm-Form-Team-Percentage {
   font-size: 18px;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
 }
-#root .Bet-Form-Amount {
+#root .ModalForm-Form-Amount {
   overflow: hidden;
   max-height: 200px;
   transition: max-height 0.3s ease-out;
 }
-#root .Bet-Form-Amount.is-hidden {
+#root .ModalForm-Form-Amount.is-hidden {
   max-height: 0;
 }
-#root .Bet-Form-Inputs {
+#root .ModalForm-Form-Inputs {
   display: flex;
 }
-#root .Bet-Form-Inputs-Right {
+#root .ModalForm-Form-Inputs-Right {
   display: flex;
   flex-direction: column;
   margin: 0;
 }
-#root .Bet-Form-Inputs-Info,
-#root .Bet-Form-Inputs-Label {
+#root .ModalForm-Form-Inputs-Info,
+#root .ModalForm-Form-Inputs-Label {
   font-family: "Lora", "Courier New", monospace, serif;
 }
-#root .Bet-Form-Inputs-Info {
+#root .ModalForm-Form-Inputs-Info {
   font-size: 14px;
 }
-#root .Bet-Form-Inputs-Amount {
+#root .ModalForm-Form-Inputs-Amount {
   background: rgba(30, 30, 30, 0.64);
   display: flex;
   flex-direction: column;
@@ -10057,7 +10226,7 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-bottom: 1rem;
   position: relative;
 }
-#root .Bet-Form-Inputs-Amount-Icon {
+#root .ModalForm-Form-Inputs-Amount-Icon {
   position: absolute;
   top: 0;
   left: 0;
@@ -10067,7 +10236,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   padding: 12px;
 }
-#root .Bet-Form-Inputs-Amount-MaxBet {
+#root .ModalForm-Form-Inputs-Amount-Max {
   position: absolute;
   bottom: 14px;
   right: 10px;
@@ -10080,12 +10249,21 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 20px;
   border: 1px solid #fff;
 }
-#root .Bet-Form-Inputs-Amount-MaxBet:hover {
+#root .ModalForm-Form-Inputs-Amount-Max:hover {
   background-color: #fff;
   color: #111;
   cursor: pointer;
 }
-#root .Bet-Form-Inputs-Amount input[type="range"] {
+#root .ModalForm-Form-Inputs-Amount-Max-LightMode {
+  color: #111;
+  background-color: #fff;
+  border-color: #111;
+}
+#root .ModalForm-Form-Inputs-Amount-Max-LightMode:hover {
+  background-color: #111;
+  color: #fff;
+}
+#root .ModalForm-Form-Inputs-Amount input[type="range"] {
   height: 50px;
   width: calc(100% - 105px);
   display: flex;
@@ -10093,7 +10271,7 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
   position: relative;
 }
-#root .Bet-Form-Inputs-Amount input[type="number"] {
+#root .ModalForm-Form-Inputs-Amount input[type="number"] {
   font-weight: 700;
   outline: none;
   height: 100%;
@@ -10104,15 +10282,32 @@ input[type="number"]::-webkit-outer-spin-button {
   border: none;
   color: #fff;
 }
-#root .Bet-Form-Inputs-Amount input[type="number"]:active,
-#root .Bet-Form-Inputs-Amount input[type="number"]:focus {
+#root .ModalForm-Form-Inputs-Amount input[type="number"]:active,
+#root .ModalForm-Form-Inputs-Amount input[type="number"]:focus {
   outline: none;
   box-shadow: none;
 }
-#root .Bet-Input {
+#root .ModalForm-Form-Inputs-Amount-LightMode {
+  background-color: #e1e1e1;
+  color: #000;
+}
+#root
+  .ModalForm-Form-Inputs-Amount-LightMode
+  input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #aaa;
+}
+#root
+  .ModalForm-Form-Inputs-Amount-LightMode
+  input[type="range"]::-webkit-slider-thumb {
+  background-color: #111;
+}
+#root .ModalForm-Form-Inputs-Amount-LightMode input[type="number"] {
+  color: #000;
+}
+#root .ModalForm-Input {
   color: #fff;
 }
-#root .Bet-Coin-Wrapper {
+#root .ModalForm-Ticket-Wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -10122,44 +10317,58 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 6px 12px;
   opacity: 0.6;
 }
-#root .Bet-Coin-Icon {
+#root .ModalForm-Ticket-Icon {
   padding-right: 5px;
   width: 20px;
 }
-#root .Bet-Outcome-Wrapper {
+#root .ModalForm-Coin-Wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px 12px;
+  opacity: 0.6;
+}
+#root .ModalForm-Coin-Icon {
+  padding-right: 5px;
+  width: 20px;
+}
+#root .ModalForm-Outcome-Wrapper {
   padding: 6px 0;
   text-align: center;
 }
-#root .Bet-Outcome-Team {
+#root .ModalForm-Outcome-Team {
   font-size: 20px;
   font-family: "Lora", "Courier New", monospace, serif;
 }
-#root .Bet-Outcome-Winnings {
+#root .ModalForm-Outcome-Winnings {
   font-size: 24px;
   font-family: "Lora", "Courier New", monospace, serif;
 }
-#root .Bet-Submit {
+#root .ModalForm-Submit {
   display: flex;
   align-items: center;
   color: #fff;
   font-weight: 700;
   border-radius: 20px;
 }
-#root .Bet-Submit-Wrapper {
+#root .ModalForm-Submit-Wrapper {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
-#root .Bet label {
+#root .ModalForm label {
   display: flex;
   flex-direction: column;
   font-size: 14px;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
 }
-#root .Bet label:not(:first-child) {
+#root .ModalForm label:not(:first-child) {
   margin-top: 12px;
 }
-#root .Bet select {
+#root .ModalForm select {
   background: rgba(30, 30, 30, 0.64);
   color: #fff;
   border: none;
@@ -10168,11 +10377,37 @@ input[type="number"]::-webkit-outer-spin-button {
   line-height: 40px;
   padding-left: 8px;
 }
+#root .ModalForm-Switch {
+  line-height: 1.5em;
+}
+#root .ModalForm-Switch .custom-control-label {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+#root .ModalForm-Switch .custom-control-label:before {
+  background-color: #000;
+}
+#root
+  .ModalForm-Switch
+  .custom-control-input:checked
+  ~ .custom-control-label:before {
+  background-color: #28a745;
+}
+#root .ModalForm-Switch-LightMode .custom-control-label:before {
+  background-color: #fff;
+}
+#root
+  .ModalForm-Switch-LightMode
+  .custom-control-input:checked
+  ~ .custom-control-label:before {
+  background-color: #28a745;
+}
 @media (max-width: 1080px) {
-  #root .Bet-Outcome-Wrapper {
+  #root .ModalForm-Outcome-Wrapper {
     font-size: 14px;
   }
-  #root .Bet-Outcome-Winnings {
+  #root .ModalForm-Outcome-Winnings {
     font-size: 18px;
   }
 }
@@ -10334,6 +10569,9 @@ input[type="number"]::-webkit-outer-spin-button {
   justify-content: space-between;
   align-items: flex-start;
 }
+.Navigation-LightMode {
+  background: #fff;
+}
 .Navigation-FavoriteTeamEmoji,
 .Navigation-IdolizedPlayer {
   display: flex;
@@ -10350,6 +10588,10 @@ input[type="number"]::-webkit-outer-spin-button {
 .Navigation-IdolizedPlayer:hover {
   border: 2px solid #fff;
   color: #fff;
+}
+.Navigation-FavoriteTeamEmoji-LightMode:hover,
+.Navigation-IdolizedPlayer-LightMode:hover {
+  border: 2px solid #000;
 }
 .Navigation-IdolizedPlayer {
   background-color: rgba(255, 191, 0, 0.81);
@@ -10404,6 +10646,9 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-right: 10px;
   border-radius: 10px;
 }
+.Navigation-Dropdown-Content-LightMode {
+  background: #fff;
+}
 .Navigation-Dropdown-Content a {
   margin-right: 0;
   margin-bottom: 5px;
@@ -10444,12 +10689,27 @@ input[type="number"]::-webkit-outer-spin-button {
   border: 2px solid #fff;
   color: #fff;
 }
+.Navigation-Button-LightMode {
+  color: #000;
+  background: #fff;
+}
+.Navigation-Button-LightMode:hover {
+  border: 2px solid #000;
+  color: #000;
+}
 .Navigation-Button-Current {
   background-color: #fff;
   color: #000;
 }
 .Navigation-Button-Current:hover {
   color: #000;
+}
+.Navigation-Button-Current-LightMode {
+  color: #fff;
+  background: #000;
+}
+.Navigation-Button-Current-LightMode:hover {
+  color: #fff;
 }
 .Navigation-Button-Content:focus {
   outline: none;
@@ -10487,6 +10747,14 @@ input[type="number"]::-webkit-outer-spin-button {
   border: 2px solid #fff;
   color: #fff;
 }
+.Navigation-CurrencyButton-LightMode {
+  color: #000;
+  background: #e1e1e1;
+}
+.Navigation-CurrencyButton-LightMode:hover {
+  border: 2px solid #000;
+  color: #000;
+}
 .Navigation-CurrencyButton-Current {
   background-color: #fff;
   color: #000;
@@ -10517,6 +10785,9 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #fff;
   bottom: 8px;
   left: 17px;
+}
+.Peanut-Eating-LightMode {
+  color: #000;
 }
 .Peanut-Eating svg {
   -webkit-animation-name: flyingPeanut;
@@ -10618,6 +10889,9 @@ button:focus-visible {
   .Navigation-User-Top svg:only-of-type {
     width: 14px;
   }
+  .Navigation-User-Top-LightMode {
+    background-color: #fff;
+  }
   .Navigation-User-Bottom {
     justify-content: flex-end;
   }
@@ -10637,6 +10911,11 @@ button:focus-visible {
   padding: 8px;
   background: rgba(0, 0, 0, 0.75);
   color: #fff;
+}
+.Overlay-LightMode {
+  background: hsla(0, 0%, 100%, 0.75);
+  color: #000;
+  border-color: #000;
 }
 .Overlay-Arrow {
   width: 1rem;
@@ -10668,6 +10947,9 @@ button:focus-visible {
   border-width: 0 0.5rem 0.5rem;
   border-bottom-color: #fff;
 }
+.Overlay-Arrow-LightMode:after {
+  border-bottom-color: #000;
+}
 .Advertisement-SiteHeader {
   display: flex;
   flex-direction: column;
@@ -10685,6 +10967,12 @@ button:focus-visible {
   font-weight: 700;
   color: #ffeb57;
 }
+.Advertisement-SiteHeader-Callout-LightMode {
+  color: #0014a8;
+}
+.Advertisement-SiteHeader-LightMode {
+  color: #111;
+}
 @media (max-width: 1080px) {
   .Advertisement-SiteHeader {
     display: block;
@@ -10694,29 +10982,15 @@ button:focus-visible {
     white-space: nowrap;
   }
 }
-.LeagueNavigation-Nav {
-  display: flex;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 24px;
-  padding-bottom: 20px;
-  align-items: center;
-  justify-content: center;
-}
-@media (max-width: 768px) {
-  .LeagueNavigation-Nav {
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
 .Countdown {
   display: flex;
   align-items: center;
   color: #fff;
   font-family: "Lora", "Courier New", monospace, serif;
   font-size: 24px;
+}
+.Countdown-LightMode {
+  color: #000;
 }
 .Countdown-Number {
   margin: 0 8px;
@@ -10728,6 +11002,10 @@ button:focus-visible {
   height: 32px;
   line-height: 32px;
   text-align: center;
+}
+.Countdown-Number-LightMode {
+  color: #fff;
+  background: #000;
 }
 @media (max-width: 1080px) {
   .Countdown {
@@ -10801,6 +11079,9 @@ button:focus-visible {
   color: #aaa;
   width: 100%;
 }
+.Leaderboard-Description-LightMode {
+  color: rgba(30, 30, 30, 0.64);
+}
 .Leaderboard-List {
   display: flex;
   flex-direction: column;
@@ -10835,8 +11116,14 @@ button:focus-visible {
   grid-gap: 5px;
   gap: 5px;
 }
+.Leaderboard-Player-Wrapper-LightMode:nth-child(odd) > a {
+  background: #e1e1e1;
+}
 .Leaderboard-Player:hover {
   background: hsla(0, 0%, 39.6%, 0.65) !important;
+}
+.Leaderboard-Player-LightMode:hover {
+  background: #aaa;
 }
 .Leaderboard-Player-Container {
   max-width: 600px;
@@ -10910,6 +11197,7 @@ button:focus-visible {
   font-weight: 700;
   padding: 0 5px;
   border-radius: 5px;
+  color: #fff;
 }
 .Leaderboard-Shelled1:after {
   transform: rotate(-7deg);
@@ -11017,11 +11305,647 @@ button:focus-visible {
     grid-template-columns: 36px auto;
   }
   .Leaderboard-Player-Container {
-    margin: 0 0 0 -40px;
+    margin: 0;
+  }
+  .Leaderboard-Player-Container-WithIcon {
+    margin-left: -40px;
   }
   .Leaderboard-Team-Name {
     font-size: 16px;
     margin: 0;
+  }
+  .Leaderboard-Team-Name-Location {
+    display: none;
+  }
+}
+.AttributeIcon {
+  display: flex;
+  margin: 0;
+  height: 32px;
+  width: 32px;
+  border-radius: 5px;
+  align-items: center;
+  font-size: 24px;
+  justify-content: center;
+}
+.AttributeIcon:not(:last-child) {
+  margin-right: 10px;
+}
+.AttributeSvg g {
+  fill: #000;
+}
+.AttributeBar {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 5px;
+  border-radius: 5px;
+  background: #222;
+}
+.AttributeBar-LightMode {
+  background: #eaeaea;
+}
+.AttributeTooltip {
+  border: 1px solid #fff;
+  margin: 0;
+  padding: 0;
+}
+.AttributeTooltip-LightMode {
+  border-color: #000;
+}
+.AttributeTooltip-LightMode .tooltip-inner {
+  background-color: #fff;
+}
+.AttributeTooltip-Container {
+  padding: 10px;
+}
+.AttributeTooltip-Container-LightMode {
+  background-color: #fff;
+  color: #000;
+}
+.AttributeTooltip-Header {
+  font-weight: 700;
+}
+.AttributeTooltip-Description,
+.AttributeTooltip-Header {
+  margin: 0;
+  padding: 0;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.AttributeTooltip-Divider {
+  margin: 10px 0;
+  border: 0.5px solid hsla(0, 0%, 39.6%, 0.65);
+}
+.AttributeTooltip-Divider-LightMode {
+  border-color: rgba(30, 30, 30, 0.64);
+}
+.ModalItem {
+  width: 500px;
+  max-width: 95%;
+  height: 750px;
+  max-height: 80vh;
+  justify-content: flex-start;
+  padding: 0;
+}
+.ModalItem-Content {
+  padding: 20px 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.ModalItem-Name {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 24px;
+}
+.ModalItem-Name-Wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  width: 100%;
+}
+.ModalItem-Attributes,
+.ModalItem-Status {
+  padding: 5px 40px;
+  display: flex;
+  flex-direction: row;
+  background: #111;
+  border-bottom: 1px solid #fff;
+}
+.ModalItem-Attributes-LightMode,
+.ModalItem-Status-LightMode {
+  border-color: #000;
+  background: #e1e1e1;
+}
+.ModalItem-Status {
+  padding: 15px 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+.ModalItem-Status-Line {
+  display: flex;
+}
+.ModalItem-Status-Name {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 18px;
+}
+.ModalItem-Info {
+  border-bottom: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 40px 20px;
+}
+.ModalItem-Info-LightMode {
+  border-color: #000;
+}
+.ModalItem-Vibe-MostExcellent {
+  color: #15d400;
+}
+.ModalItem-Vibe-MostExcellent-LightMode span {
+  background-color: #15d400;
+  color: #000;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.ModalItem-Vibe-Excellent {
+  color: #5de04f;
+}
+.ModalItem-Vibe-Excellent-LightMode span {
+  background-color: #5de04f;
+  color: #000;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.ModalItem-Vibe-Quality {
+  color: #8fdb88;
+}
+.ModalItem-Vibe-Quality-LightMode span {
+  background-color: #8fdb88;
+  color: #000;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.ModalItem-Vibe-Neutral {
+  color: #d1d1d1;
+}
+.ModalItem-Vibe-Neutral-LightMode span {
+  background-color: #b0b0b0;
+  color: #000;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.ModalItem-Vibe-LessThanIdeal {
+  color: #d97373;
+}
+.ModalItem-Vibe-LessThanIdeal-LightMode span {
+  background-color: #d97373;
+  color: #000;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.ModalItem-Vibe-FarLessThanIdeal {
+  color: #de3c3c;
+}
+.ModalItem-Vibe-FarLessThanIdeal-LightMode span {
+  background-color: #de3c3c;
+  color: #000;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.ModalItem-Vibe-Terrible {
+  color: #e00000;
+}
+.ModalItem-Vibe-Terrible-LightMode span {
+  background-color: #e00000;
+  color: #000;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.ModalItem-Icons-Wired {
+  color: #511c00;
+  background: #fff;
+  border-radius: 5px;
+  padding: 2px;
+}
+.ModalItem-Icons-Tired {
+  background: #511c00;
+  border-radius: 5px;
+  padding: 2px;
+  transform: rotate(180deg);
+}
+.Player-Header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+.Player-Header-Bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.Player-Info-Line {
+  display: grid;
+  grid-template-columns: 180px auto;
+  min-height: 34px;
+  align-items: center;
+  padding: 2px 40px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 18px;
+}
+.Player-Info-Line:nth-child(odd) {
+  background: rgba(30, 30, 30, 0.64);
+}
+.Player-Info-Line-LightMode:nth-child(odd) {
+  background-color: #e1e1e1;
+}
+.Player-Info-Line-Header {
+  font-weight: 700;
+}
+.Player-Info-Items {
+  padding: 10px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.Player-Info-Items-Box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  min-width: 150px;
+  height: 80px;
+  margin: 5px;
+  padding: 10px 0;
+  background: #111;
+  border-radius: 5px;
+}
+.Player-Info-Items-Box-LightMode {
+  background-color: #e1e1e1;
+}
+.Player-Info-Items-Header {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.Player-Info-Items-Details {
+  display: flex;
+  flex-direction: row;
+}
+.Player-Info-Items-Name,
+.Player-Standing {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Player-Standing {
+  font-size: 14px;
+}
+.Player-Slogan {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Player-Section:not(:last-child),
+.Player-Subheader {
+  margin-bottom: 10px;
+}
+.Player-Subheader {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #aaa;
+  text-align: center;
+}
+.Player-VibeLine span {
+  display: flex;
+  flex-direction: row;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.Player-VibeLine-Arrow {
+  font-size: 22px;
+  width: 16px;
+}
+.Player-VibeLine-Text {
+  padding: 0 5px;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Player-Soulscream {
+  height: auto;
+  max-width: 240px;
+  border-radius: 5px;
+}
+.Player-Soulscream-Body {
+  color: red;
+}
+.Player-Soulscream-Body,
+.Player-Soulscream-Released {
+  height: auto;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-style: italic;
+  word-wrap: break-word;
+}
+.Player-Soulscream-Released {
+  color: #5988ff;
+}
+.Player-Team-Line {
+  display: flex;
+}
+.Player-Team-Line:nth-child(odd) {
+  margin-bottom: 10px;
+}
+.Player-Team-Logo {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.Player-Team-Logo,
+.Player-Team-Name {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+.Player-Team-Name {
+  padding: 0 10px;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Player-Deceased-Icon {
+  background-image: url(/static/media/player_deceased_icon.2febfc5d.svg);
+  background-repeat: no-repeat;
+  min-width: 30px;
+  height: 30px;
+}
+.Player-Deceased-Icon-LightMode {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+.Player-Button {
+  font-size: 14px;
+  display: flex;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+.Player-Button-Form {
+  padding: 0;
+}
+.Player-Button-Idol {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  height: 32px;
+  display: flex;
+  border-radius: 30px;
+  white-space: nowrap;
+  align-items: center;
+  border: 1px solid #fff !important;
+  text-align: center;
+}
+.Player-Button-Idol:not(:first-child) {
+  border-left: none;
+}
+.Player-Button-Idol :first-child {
+  margin-right: 5px;
+  font-size: 20px;
+}
+.Player-Button-Idol:hover {
+  border: 1px solid #fff;
+}
+.Player-Button-Idol-Current {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  align-items: center;
+  background: rgba(255, 191, 0, 0.81);
+  white-space: nowrap;
+  border-radius: 20px;
+  height: 32px;
+  box-shadow: 0 0 10px 0 #ffbf00;
+}
+.Player-Button-Idol-Current :first-child {
+  margin-right: 5px;
+  font-size: 25px;
+}
+.Player-Button-Tribute {
+  color: #fff;
+  border: 1px solid #fff !important;
+  font-size: 14px;
+  background-color: #ba7300;
+  height: 32px;
+  font-weight: 700;
+  align-items: center;
+  display: flex;
+  border-radius: 30px;
+  white-space: nowrap;
+  text-align: center;
+  padding: 12px;
+}
+.Player-Button-Tribute:not(:first-child) {
+  border-left: none;
+}
+.Player-Button-Tribute :first-child {
+  margin-right: 5px;
+  font-size: 18px;
+}
+.Player-Button-Tribute-LightMode:hover {
+  border: 1px solid #fff;
+  color: #fff;
+}
+.Team-Header {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.Team-Header,
+.Team-Logo {
+  display: flex;
+  align-items: center;
+}
+.Team-Logo {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  font-size: 36px;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.Team-LogoLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Team-Card,
+.Team-Standing {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 2px;
+  margin-left: 10px;
+  line-height: 1.3em;
+}
+.Team-Standing-Wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.Team-Standing-LightMode {
+  color: rgba(30, 30, 30, 0.64);
+}
+.Team-Card {
+  margin-top: 5px;
+  margin-left: 0;
+  border: 1px solid #fff;
+  padding: 4px 10px;
+  border-radius: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #fff;
+}
+.Team-Card-LightMode {
+  border: 1px solid #000;
+  color: #000;
+}
+.Team-Slogan {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Team-Section:not(:last-child) {
+  margin-bottom: 20px;
+}
+.Team-Subheader {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #aaa;
+  text-align: center;
+}
+.Team-Subheader-LightMode {
+  color: #111;
+}
+.Team-Player-Line,
+.Team-Player-Line-Blank {
+  display: grid;
+  grid-template-columns: auto 100px 140px;
+  min-height: 34px;
+  align-items: center;
+  padding: 2px 20px 2px 40px;
+  line-height: 1.2em;
+}
+.Team-Player-Line-Blank:nth-child(odd),
+.Team-Player-Line:nth-child(odd) {
+  background: rgba(30, 30, 30, 0.64);
+}
+.Team-Player-Line-Blank:hover,
+.Team-Player-Line:hover {
+  background: hsla(0, 0%, 39.6%, 0.65);
+}
+.Team-Player-Line-Blank-LightMode:nth-child(odd),
+.Team-Player-Line-LightMode:nth-child(odd) {
+  background: #e1e1e1;
+}
+.Team-Player-Line-Blank-LightMode:hover,
+.Team-Player-Line-LightMode:hover {
+  background: #aaa;
+}
+.Team-Player-Header {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.Team-Player-Header svg {
+  margin-left: -5px;
+  margin-right: 5px;
+  font-size: 25px;
+}
+.Team-Player-Shelled1:after,
+.Team-Player-Shelled2:after,
+.Team-Player-Shelled3:after,
+.Team-Player-Shelled4:after,
+.Team-Player-Shelled5:after {
+  content: "SHELLED";
+  position: absolute;
+  background-color: red;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+.Team-Player-Shelled1:after {
+  transform: rotate(-7deg);
+  margin-left: 1px;
+  margin-top: 1px;
+}
+.Team-Player-Shelled2:after {
+  transform: rotate(-10deg);
+  margin-left: 3px;
+}
+.Team-Player-Shelled3:after {
+  transform: rotate(-5deg);
+  margin-left: 9px;
+  margin-top: 1px;
+}
+.Team-Player-Shelled4:after {
+  transform: rotate(10deg);
+  margin-left: 5px;
+  margin-top: 2px;
+}
+.Team-Player-Shelled5:after {
+  transform: rotate(5deg);
+  margin-left: 2px;
+  margin-top: 2px;
+}
+.Team-Player-Shelled6:after {
+  transform: rotate(7deg);
+  margin-left: 7px;
+}
+.Team-Player-Ratings,
+.Team-Player-Vibe {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 18px;
+}
+.Team-Player-Vibe-Line {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.Team-Player-Vibe-Line-Arrow {
+  width: 14px;
+}
+@media (max-width: 1080px) {
+  .ModalItem-Info {
+    padding: 20px 40px 20px 20px;
+  }
+  .Team-Logo {
+    height: 40px;
+    width: 40px;
+    font-size: 28px;
+    margin-top: 5px;
+  }
+  .Team-Name {
+    line-height: 32px;
+  }
+  .Team-Player-Line,
+  .Team-Player-Line-Blank {
+    padding: 5px 20px;
+    margin-top: 5px;
+    grid-gap: 5px;
+    gap: 5px;
+    grid-template-columns: auto 50px 110px;
+    font-size: 0.8em;
+    grid-template-rows: auto;
+  }
+  .Team-Player-Header {
+    font-size: 16px;
+  }
+  .Player-Info-Bio,
+  .Player-Info-Stats {
+    padding: 10px 0;
+  }
+  .Player-Info-Line {
+    grid-template-columns: 120px auto;
+    padding: 5px 30px;
+    font-size: 16px;
+    grid-gap: 10px;
+    gap: 10px;
+    line-height: 1.2em;
+  }
+  .Player-Team-Line {
+    margin-bottom: 10px;
+  }
+  .Player-Header-Bottom {
+    flex-wrap: wrap;
+  }
+  .Player-Soulscream {
+    max-width: 160px;
   }
 }
 .Standings-League {
@@ -11063,6 +11987,9 @@ button:focus-visible {
   margin: 6px;
   color: #aaa;
 }
+.Standings-Division-Header-LightMode {
+  color: rgba(30, 30, 30, 0.64);
+}
 .Standings-Division-Container {
   display: flex;
   flex-direction: column;
@@ -11083,6 +12010,12 @@ button:focus-visible {
 }
 .Standings-Team:hover {
   background: hsla(0, 0%, 39.6%, 0.65);
+}
+.Standings-Team-LightMode:nth-child(odd) {
+  background: #e1e1e1;
+}
+.Standings-Team-LightMode:hover {
+  background: #aaa;
 }
 .Standings-Team-Container {
   display: flex;
@@ -11111,6 +12044,9 @@ button:focus-visible {
 .Standings-Team-Name-Container {
   display: flex;
   align-items: center;
+}
+.Standings-Team-Name-LightMode {
+  border-radius: 5px;
 }
 @media (max-width: 1080px) {
   .Standings-League {
@@ -11163,12 +12099,27 @@ button:focus-visible {
   border: 2px solid #fff;
   color: #fff;
 }
+.PlayoffSetup-Navigation-Button-LightMode {
+  color: #000;
+  background-color: #fff;
+}
+.PlayoffSetup-Navigation-Button-LightMode:hover {
+  border-color: #000;
+  color: #000;
+}
 .PlayoffSetup-Navigation-Button-Current {
   background-color: #fff;
   color: #000;
 }
 .PlayoffSetup-Navigation-Button-Current:hover {
   color: #000;
+}
+.PlayoffSetup-Navigation-Button-Current-LightMode {
+  color: #fff;
+  background-color: #000;
+}
+.PlayoffSetup-Navigation-Button-Current-LightMode:hover {
+  color: #fff;
 }
 .PlayoffSetup-Navigation-Button-Content:focus {
   outline: none;
@@ -11189,6 +12140,9 @@ button:focus-visible {
 .PlayoffSetup-Matchup-Divine {
   max-width: 450px;
   margin: 20px 0 30px;
+}
+.PlayoffSetup-Matchup-LightMode {
+  background-color: #e1e1e1;
 }
 .PlayoffSetup-Versus {
   margin: 0 15px;
@@ -11247,6 +12201,9 @@ button:focus-visible {
 .PlayoffSetup-MatchupTeam-WinsComplete {
   border: 1px solid #fff;
   border-radius: 50%;
+}
+.PlayoffSetup-MatchupTeam-WinsComplete-LightMode {
+  border-color: #000;
 }
 .PlayoffSetup-Header {
   display: flex;
@@ -11311,40 +12268,6 @@ button:focus-visible {
     margin-right: 0;
   }
 }
-.PlayoffsEnd {
-  max-width: 550px;
-  margin: auto auto 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.PlayoffsEnd-Header {
-  display: flex;
-  font-weight: 700;
-  font-size: 32px;
-  padding-top: 20px;
-  align-items: center;
-}
-.PlayoffsEnd-Body,
-.PlayoffsEnd-Header {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.PlayoffsEnd-Body {
-  margin: 24px 0;
-  font-size: 18px;
-}
-.PlayoffsEnd-Callout {
-  font-size: 24px;
-}
-.PlayoffsEnd-Callout,
-.PlayoffsEnd-End {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.PlayoffsEnd-End {
-  margin: 5px;
-  font-size: 16px;
-  color: #aaa;
-}
 .EventTicker-Display {
   width: calc(100% - 40px);
   height: 30px;
@@ -11353,6 +12276,9 @@ button:focus-visible {
   overflow: hidden;
   background: rgba(30, 30, 30, 0.64);
   border-radius: 4px;
+}
+.EventTicker-Display-LightMode {
+  background: #e1e1e1;
 }
 .EventTicker-News {
   width: 60px;
@@ -11367,6 +12293,9 @@ button:focus-visible {
   font-weight: 700;
   text-align: center;
   display: none;
+}
+.EventTicker-News-LightMode {
+  background: #fff;
 }
 .EventTicker-Scroll {
   box-sizing: content-box;
@@ -11450,6 +12379,10 @@ button:focus-visible {
 .EventTicker-Item:not(:last-child) {
   margin-right: 100px;
 }
+.EventTicker-Item-LightMode {
+  background: #e1e1e1;
+  color: #000;
+}
 @-webkit-keyframes ticker {
   0% {
     transform: translateZ(0);
@@ -11484,30 +12417,32 @@ button:focus-visible {
   flex-direction: row;
   color: #fff;
   font-size: 60px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+  text-transform: uppercase;
   align-items: flex-end;
   margin-top: 10px;
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
-.Header-Logo,
-.Header-Logo-Era {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-weight: 700;
-  text-transform: uppercase;
+.Header-Logo-LightMode {
+  color: #000;
 }
 .Header-Logo-Era {
   font-size: 20px;
   width: 100%;
-  position: relative;
   left: 16px;
   margin-top: -10px;
 }
+.Header-Logo-Era,
 .Header-Logo-SubEra {
-  font-size: 16px;
   font-family: "Lora", "Courier New", monospace, serif;
   font-weight: 700;
   text-transform: uppercase;
   position: relative;
+}
+.Header-Logo-SubEra {
+  font-size: 16px;
   left: 32px;
 }
 .Header-Logo-Tag {
@@ -11524,6 +12459,9 @@ button:focus-visible {
 .Header-Social {
   display: flex;
   margin-left: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .Header-Social-Faq {
   margin-right: 10px;
@@ -11538,12 +12476,21 @@ button:focus-visible {
   padding: 10px 8px 9px;
   background: #1f1f1f;
 }
+.Header-Social-Faq-Inner-LightMode {
+  background: #ebebeb;
+}
 .Header-Social-Faq-Icon {
   font-size: 18px;
   margin: 0 5px;
 }
 .Header-Social-Faq-Icon:hover {
   color: #fff;
+}
+.Header-Social-Faq-Icon-LightMode {
+  color: #363636;
+}
+.Header-Social-Faq-Icon-LightMode:hover {
+  color: #000;
 }
 .Header-Social-Patreon {
   font-size: 12px;
@@ -11555,6 +12502,9 @@ button:focus-visible {
   padding: 8px 10px;
   background: #1f1f1f;
 }
+.Header-Social-Patreon-Inner-LightMode {
+  background: #ebebeb;
+}
 .Header-Social-Patreon-Icon {
   font-size: 14px;
   font-weight: 700;
@@ -11563,6 +12513,12 @@ button:focus-visible {
 }
 .Header-Social-Patreon-Icon:hover {
   color: #fff;
+}
+.Header-Social-Patreon-Icon-LightMode {
+  color: #363636;
+}
+.Header-Social-Patreon-Icon-LightMode:hover {
+  color: #000;
 }
 .Header-Social-Follow {
   display: flex;
@@ -11578,6 +12534,9 @@ button:focus-visible {
   padding: 15px 0 5px;
   background: #1f1f1f;
 }
+.Header-Social-Follow-Inner-LightMode {
+  background: #ebebeb;
+}
 .Header-Social-Follow-Icon {
   font-size: 24px;
   margin: 0 5px;
@@ -11585,12 +12544,21 @@ button:focus-visible {
 .Header-Social-Follow-Icon:hover {
   color: #fff;
 }
+.Header-Social-Follow-Icon-LightMode {
+  color: #363636;
+}
+.Header-Social-Follow-Icon-LightMode:hover {
+  color: #000;
+}
 .Header-Social-Follow-Triangle {
   width: 0;
   height: 0;
   border-left: 55px solid transparent;
   border-right: 55px solid transparent;
   border-top: 24px solid #1f1f1f;
+}
+.Header-Social-Follow-Triangle-LightMode {
+  border-top: 24px solid #ebebeb;
 }
 @media (max-width: 1080px) {
   .Header-Logo {
@@ -11731,6 +12699,12 @@ button:focus-visible {
 .HallOfFlame-Player:hover {
   background: hsla(0, 0%, 39.6%, 0.65);
 }
+.HallOfFlame-Player-LightMode:nth-child(odd) {
+  background: #e1e1e1;
+}
+.HallOfFlame-Player-LightMode:hover {
+  background: hsla(0, 0%, 39.6%, 0.65);
+}
 .HallOfFlame-Player-Container {
   display: flex;
   max-width: 550px;
@@ -11784,7 +12758,7 @@ button:focus-visible {
   }
 }
 .About-All {
-  max-width: 700px;
+  max-width: 800px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -11809,7 +12783,6 @@ button:focus-visible {
   font-weight: 700;
 }
 .About-Desc {
-  font-style: italic;
   font-size: 18px;
   margin: -5px 0 0;
 }
@@ -11832,22 +12805,21 @@ button:focus-visible {
 .About-QuoteList {
   margin: 50px 0;
   display: grid;
-  grid-template-columns: 1fr 1.25fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
-  grid-gap: 10px;
-  gap: 10px;
   grid-row-gap: 40px;
 }
-.About-QuoteList :first-child {
-  grid-column: 2;
-}
+.About-QuoteList :last-child,
 .About-QuoteList :nth-child(2) {
-  grid-column: 1;
-  grid-row: 1;
-}
-.About-QuoteList :last-child {
   grid-column: 2;
+}
+.About-QuoteList :first-child {
+  grid-column: 1/4;
+}
+.About-QuoteList :nth-child(3) {
+  grid-column: 1;
+  grid-row: 2;
 }
 .About-Quote {
   display: flex;
@@ -11938,290 +12910,6 @@ button:focus-visible {
     flex-direction: column;
   }
 }
-#root .Team {
-  width: 500px;
-  max-width: 95%;
-  height: 750px;
-  max-height: 80vh;
-  justify-content: flex-start;
-  padding: 0;
-}
-#root .Team-Content {
-  padding: 20px 40px 40px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-#root .Team-Attributes {
-  padding: 5px 40px;
-  display: flex;
-  flex-direction: row;
-  background: #111;
-  border-bottom: 1px solid #fff;
-}
-#root .Team-Logo {
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  font-size: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-}
-#root .Team-LogoLine {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#root .Team-Info {
-  display: flex;
-  flex-direction: column;
-  padding: 40px 40px 20px;
-  border-bottom: 1px solid #fff;
-}
-#root .Team-Header {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-#root .Team-Name {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 24px;
-}
-#root .Team-Name-Wrapper {
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px;
-  width: 100%;
-}
-#root .Team-Card,
-#root .Team-Standing {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 14px;
-  color: #aaa;
-  margin-top: 2px;
-  margin-left: 10px;
-  line-height: 1.3em;
-}
-#root .Team-Standing-Wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-#root .Team-Card {
-  margin-top: 5px;
-  margin-left: 0;
-  border: 1px solid #fff;
-  padding: 4px 10px;
-  border-radius: 5px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #fff;
-}
-#root .Team-Slogan {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-#root .Team-Section:not(:last-child) {
-  margin-bottom: 10px;
-}
-#root .Team-Subheader {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #aaa;
-  text-align: center;
-}
-#root .Team-Player-Line {
-  display: grid;
-  grid-template-columns: auto 100px 140px;
-  grid-template-rows: 30px;
-  align-items: center;
-  margin: 0 -40px;
-  padding: 0 20px 0 40px;
-  line-height: 1.2em;
-}
-#root .Team-Player-Line:nth-child(odd) {
-  background: rgba(30, 30, 30, 0.64);
-}
-#root .Team-Player-Line:hover,
-#root .Team-Player-Line:nth-child(odd):hover {
-  background: hsla(0, 0%, 39.6%, 0.65);
-}
-#root .Team-Player-Line-Blank {
-  display: grid;
-  grid-template-columns: auto 100px 140px;
-  grid-template-rows: 30px;
-  align-items: center;
-  margin: 0 -40px;
-  padding: 0 40px;
-  line-height: 1.2em;
-}
-#root .Team-Player-Line-Blank:nth-child(odd) {
-  background: rgba(30, 30, 30, 0.64);
-}
-#root .Team-Player-Header {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-#root .Team-Player-Header svg {
-  margin-left: -5px;
-  margin-right: 5px;
-  font-size: 25px;
-}
-#root .Team-Player-Shelled1:after,
-#root .Team-Player-Shelled2:after,
-#root .Team-Player-Shelled3:after,
-#root .Team-Player-Shelled4:after,
-#root .Team-Player-Shelled5:after {
-  content: "SHELLED";
-  position: absolute;
-  background-color: red;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
-  padding: 0 5px;
-  border-radius: 5px;
-}
-#root .Team-Player-Shelled1:after {
-  transform: rotate(-7deg);
-  margin-left: 1px;
-  margin-top: 1px;
-}
-#root .Team-Player-Shelled2:after {
-  transform: rotate(-10deg);
-  margin-left: 3px;
-}
-#root .Team-Player-Shelled3:after {
-  transform: rotate(-5deg);
-  margin-left: 9px;
-  margin-top: 1px;
-}
-#root .Team-Player-Shelled4:after {
-  transform: rotate(10deg);
-  margin-left: 5px;
-  margin-top: 2px;
-}
-#root .Team-Player-Shelled5:after {
-  transform: rotate(5deg);
-  margin-left: 2px;
-  margin-top: 2px;
-}
-#root .Team-Player-Shelled6:after {
-  transform: rotate(7deg);
-  margin-left: 7px;
-}
-#root .Team-Player-Vibe {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 18px;
-}
-#root .Team-Player-Vibe-Line {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-#root .Team-Player-Vibe-Line-Arrow {
-  width: 14px;
-}
-#root .Team-Player-Vibe-MostExcellent {
-  color: #15d400;
-}
-#root .Team-Player-Vibe-Excellent {
-  color: #5de04f;
-}
-#root .Team-Player-Vibe-Quality {
-  color: #8fdb88;
-}
-#root .Team-Player-Vibe-Neutral {
-  color: #d1d1d1;
-}
-#root .Team-Player-Vibe-LessThanIdeal {
-  color: #d97373;
-}
-#root .Team-Player-Vibe-FarLessThanIdeal {
-  color: #de3c3c;
-}
-#root .Team-Player-Vibe-Terrible {
-  color: #e00000;
-}
-#root .Team-Player-Ratings {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 18px;
-}
-@media (max-width: 1080px) {
-  #root .Team-Logo {
-    height: 40px;
-    width: 40px;
-    font-size: 28px;
-    margin-top: 5px;
-  }
-  #root .Team-Info {
-    padding: 20px 40px 20px 20px;
-  }
-  #root .Team-Name {
-    line-height: 32px;
-  }
-  #root .Team-Content {
-    padding: 20px;
-  }
-  #root .Team-Player-Line,
-  #root .Team-Player-Line-Blank {
-    padding: 5px 40px;
-    margin-top: 5px;
-    grid-gap: 5px;
-    gap: 5px;
-    grid-template-columns: auto 50px 110px;
-  }
-}
-.AttributeIcon {
-  display: flex;
-  margin: 0;
-  height: 32px;
-  width: 32px;
-  border-radius: 5px;
-  align-items: center;
-  font-size: 24px;
-  justify-content: center;
-}
-.AttributeIcon:not(:last-child) {
-  margin-right: 10px;
-}
-.AttributeSvg g {
-  fill: #000;
-}
-.AttributeBar {
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-  padding: 5px;
-  border-radius: 5px;
-  background: #222;
-}
-.AttributeTooltip {
-  border: 1px solid #fff;
-  margin: 0;
-  padding: 0;
-}
-.AttributeTooltip-Container {
-  padding: 10px;
-}
-.AttributeTooltip-Header {
-  font-weight: 700;
-}
-.AttributeTooltip-Description,
-.AttributeTooltip-Header {
-  margin: 0;
-  padding: 0;
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.AttributeTooltip-Divider {
-  margin: 10px 0;
-  border: 0.5px solid hsla(0, 0%, 39.6%, 0.65);
-}
 .Shop {
   display: flex;
   flex-direction: column;
@@ -12246,6 +12934,9 @@ button:focus-visible {
   margin: 15px 0;
   width: 100%;
 }
+.Shop-Description-LightMode {
+  color: #111;
+}
 .Shop-Grid {
   width: 100%;
   display: flex;
@@ -12266,13 +12957,22 @@ button:focus-visible {
   width: 270px;
   margin: 2px;
 }
+.Shop-Item-LightMode {
+  background-color: #e1e1e1;
+}
 .Shop-Item-Sponsor {
   padding: 30px;
   background: rgba(62, 62, 62, 0.64);
   justify-content: space-evenly;
 }
+.Shop-Item-Sponsor-LightMode {
+  background-color: #aaa;
+}
 .Shop-Item-Link {
   color: #ffeb57;
+}
+.Shop-Item-Link-LightMode {
+  color: #0014a8;
 }
 .Shop-Item-Header {
   display: flex;
@@ -12371,182 +13071,6 @@ button:focus-visible {
 @media (max-width: 1080px) {
   .Shop {
     width: 100%;
-  }
-}
-#root .BatchBuy {
-  display: flex;
-  color: #fff;
-  width: 460px;
-  max-width: 95vw;
-  max-height: 80vh;
-  justify-content: flex-start;
-  padding: 40px 20px 20px;
-}
-#root .BatchBuy-Header {
-  font-size: 24px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-weight: 700;
-  padding-bottom: 12px;
-  text-align: center;
-}
-#root .BatchBuy-Type {
-  padding: 10px 0;
-}
-#root .BatchBuy-Type-Name {
-  font-weight: 700;
-  text-transform: uppercase;
-}
-#root .BatchBuy-Form {
-  padding: 10px 0;
-}
-#root .BatchBuy-Form-Teams {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-#root .BatchBuy-Form-Teams-Label {
-  background-color: #000;
-  border: 3px solid hsla(0, 0%, 39.6%, 0.65);
-  height: 50px;
-  border-radius: 25px;
-  margin-left: -25px;
-  margin-right: -25px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  color: #fff;
-  white-space: nowrap;
-  padding: 5px;
-}
-#root .BatchBuy-Form-Inputs {
-  display: flex;
-}
-#root .BatchBuy-Form-Inputs-Amount {
-  background: rgba(30, 30, 30, 0.64);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 0 12px;
-  margin-bottom: 1rem;
-  position: relative;
-}
-#root .BatchBuy-Form-Inputs-Amount-Icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.4;
-  font-size: 20px;
-  display: flex;
-  padding: 12px;
-}
-#root .BatchBuy-Form-Inputs-Amount-MaxBatchBuy {
-  position: absolute;
-  bottom: 14px;
-  right: 10px;
-  padding: 3px 10px;
-  font-size: 12px;
-  text-align: right;
-  font-weight: 700;
-  color: #111;
-  background-color: hsla(0, 0%, 39.6%, 0.65);
-  border-radius: 20px;
-}
-#root .BatchBuy-Form-Inputs-Amount-MaxBatchBuy:hover {
-  background-color: #fff;
-  cursor: pointer;
-}
-#root .BatchBuy-Form-Inputs-Amount input[type="range"] {
-  height: 50px;
-  width: calc(100% - 105px);
-  display: flex;
-  align-items: center;
-  margin: 0;
-  position: relative;
-}
-#root .BatchBuy-Form-Inputs-Amount input[type="number"] {
-  font-weight: 700;
-  outline: none;
-  height: 100%;
-  font-size: 40px;
-  display: flex;
-  text-align: center;
-  background: transparent;
-  border: none;
-  color: #fff;
-}
-#root .BatchBuy-Form-Inputs-Amount input[type="number"]:active,
-#root .BatchBuy-Form-Inputs-Amount input[type="number"]:focus {
-  outline: none;
-  box-shadow: none;
-}
-#root .BatchBuy-Input {
-  color: #fff;
-}
-#root .BatchBuy-Ticket-Wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 6px 12px;
-  opacity: 0.6;
-}
-#root .BatchBuy-Ticket-Icon {
-  padding-right: 5px;
-  width: 20px;
-}
-#root .BatchBuy-Submit {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 20px;
-}
-#root .BatchBuy-Submit-Wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-#root .BatchBuy-Outcome-Wrapper {
-  padding: 6px 0;
-  text-align: center;
-}
-#root .BatchBuy-Outcome-Team {
-  font-size: 20px;
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-#root .BatchBuy-Outcome-Winnings {
-  font-size: 24px;
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-#root .BatchBuy label {
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-}
-#root .BatchBuy label:not(:first-child) {
-  margin-top: 12px;
-}
-#root .BatchBuy select {
-  background: rgba(30, 30, 30, 0.64);
-  color: #fff;
-  border: none;
-  margin-top: 12px;
-  height: 40px;
-  line-height: 40px;
-  padding-left: 8px;
-}
-@media (max-width: 1080px) {
-  #root .BatchBuy-Outcome-Wrapper {
-    font-size: 14px;
-  }
-  #root .BatchBuy-Outcome-Winnings {
-    font-size: 18px;
   }
 }
 .Welcome {
@@ -12733,6 +13257,32 @@ button:focus-visible {
     flex-direction: column;
   }
 }
+.Offseason-Button {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  height: 32px;
+  display: flex;
+  border-radius: 30px;
+  white-space: nowrap;
+  align-items: center;
+  border: 1px solid #fff !important;
+}
+.Offseason-Button:not(:first-child) {
+  border-left: none;
+}
+.Offseason-Button:hover {
+  border: 1px solid #fff;
+}
+.Offseason-Button-Wrapper {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  align-items: center;
+  flex-direction: row;
+}
 .Offseason-Info {
   max-width: 550px;
   margin: auto;
@@ -12767,8 +13317,17 @@ button:focus-visible {
 .Offseason-Description-Link:hover {
   color: #fff;
 }
+.Offseason-Description-LightMode {
+  color: #111;
+}
+.Offseason-Description-LightMode:hover {
+  color: #000;
+}
 .Offseason-Body {
   margin-top: 40px;
+}
+.Offseason-Body .Blessings {
+  margin-top: 50px;
 }
 .Offseason-Number {
   margin: 0 10px;
@@ -12780,6 +13339,10 @@ button:focus-visible {
   line-height: 32px;
   text-align: center;
   font-size: 32px;
+}
+.Offseason-Number-LightMode {
+  color: #fff;
+  background-color: #000;
 }
 .Offseason-Votes {
   margin-top: 48px;
@@ -12825,152 +13388,6 @@ button:focus-visible {
   align-items: center;
   padding: 0 12px;
 }
-@media (max-width: 768px) {
-  .Offseason {
-    width: 100%;
-  }
-  .Offseason-Header {
-    font-size: 24px;
-  }
-  .Offseason-Number {
-    margin: 0 10px;
-    height: 28px;
-    line-height: 28px;
-    font-size: 24px;
-  }
-}
-.Blessings {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-}
-.Blessings-Header {
-  font-size: 18px;
-  font-weight: 700;
-}
-.Blessings-Description,
-.Blessings-Header {
-  margin-bottom: 10px;
-  width: 100%;
-}
-.Blessings-Container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 24px;
-  grid-gap: 20px;
-  gap: 20px;
-}
-.Blessings-Option {
-  padding: 20px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(30, 30, 30, 0.64);
-  border-radius: 5px;
-}
-.Blessings-Option:hover {
-  cursor: pointer;
-  -webkit-filter: invert(0.15);
-  filter: invert(0.15);
-}
-.Blessings-Option-Icon {
-  fill: #fff;
-  height: 48px;
-  width: 48px;
-}
-.Blessings-Option-Subheader {
-  margin-top: 10px;
-  font-size: 12px;
-  text-align: center;
-}
-.Blessings-Option-SubheaderHyperlink {
-  margin-top: 10px;
-  margin-bottom: 30px;
-  font-size: 0.9rem;
-  color: #ffeb57;
-  font-weight: 700;
-}
-.Blessings-Option-Header {
-  margin-top: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-}
-.Blessings-Option-Description {
-  margin-top: 10px;
-  margin-bottom: 30px;
-  font-size: 0.9rem;
-  text-align: center;
-}
-.Blessings-Option-Button {
-  font-size: 14px;
-  font-weight: 700;
-  padding: 10px 16px;
-  margin-top: auto;
-  border-radius: 20px;
-  background: #fff;
-  color: #000;
-  text-transform: uppercase;
-}
-.Blessings-Option-Count {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 700;
-  align-self: flex-start;
-  margin-top: 30px;
-}
-.Blessings-Option-Bar {
-  background-color: #fff;
-  display: flex;
-  height: 2px;
-  justify-content: space-between;
-  align-items: center;
-  align-self: flex-start;
-  min-width: 1px;
-}
-.Blessings-Option.Blessings-Option-Current {
-  background-color: #000;
-  -webkit-filter: invert(1);
-  filter: invert(1);
-}
-.Blessings-Submit-Button {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 14px;
-  height: 100%;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 20px;
-}
-@media (max-width: 1080px) {
-  .Blessings-Container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    gap: 10px;
-  }
-}
-.Decrees {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.Decrees-Header {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 12px;
-  width: 100%;
-}
-.Decrees-Description {
-  width: 100%;
-  margin-bottom: 10px;
-}
 .Decrees-Container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -12987,26 +13404,91 @@ button:focus-visible {
   background: rgba(30, 30, 30, 0.64);
   border-radius: 5px;
 }
+.Blessings-Container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 24px;
+  grid-gap: 20px;
+  gap: 20px;
+}
+.Blessings-Option {
+  padding: 20px;
+  background: rgba(30, 30, 30, 0.64);
+  border-radius: 5px;
+}
+.Blessings,
+.Blessings-Option,
+.Decrees {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Blessings-Header,
+.Decrees-Header {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.Blessings-Description,
+.Decrees-Description {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.Blessings-Option:hover,
 .Decrees-Option:hover {
   cursor: pointer;
   -webkit-filter: invert(0.15);
   filter: invert(0.15);
 }
+.Blessings-Option-LightMode,
+.Decrees-Option-LightMode {
+  background-color: #e1e1e1;
+}
+.Blessings-Option-Icon,
 .Decrees-Option-Icon {
   fill: #fff;
   height: 48px;
   width: 48px;
 }
+.Blessings-Option-Icon-LightMode,
+.Decrees-Option-Icon-LightMode {
+  fill: #000;
+}
+.Blessings-Option-Subheader,
+.Decrees-Option-Subheader {
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+.Blessings-Option-SubheaderHyperlink,
+.Decrees-Option-SubheaderHyperlink {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+  color: #ffeb57;
+  font-weight: 700;
+}
+.Blessings-Option-SubheaderHyperlink-LightMode,
+.Decrees-Option-SubheaderHyperlink-LightMode {
+  color: #0014a8;
+}
+.Blessings-Option-Header,
 .Decrees-Option-Header {
   margin-top: 10px;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
 }
+.Blessings-Option-Description,
 .Decrees-Option-Description {
   margin-top: 10px;
   margin-bottom: 30px;
   font-size: 0.9rem;
+  text-align: center;
 }
+.Blessings-Option-Button,
 .Decrees-Option-Button {
   font-size: 14px;
   font-weight: 700;
@@ -13017,28 +13499,44 @@ button:focus-visible {
   color: #000;
   text-transform: uppercase;
 }
+.Blessings-Option-Button-LightMode,
+.Decrees-Option-Button-LightMode {
+  color: #fff;
+  background-color: #000;
+}
+.Blessings-Option-Count,
 .Decrees-Option-Count {
   color: #fff;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   align-self: flex-start;
-  margin-top: 20px;
+  margin-top: 30px;
 }
+.Blessings-Option-Bar,
 .Decrees-Option-Bar {
   background-color: #fff;
   display: flex;
-  height: 3px;
-  border-radius: 1.5px;
+  height: 2px;
   justify-content: space-between;
   align-items: center;
   align-self: flex-start;
   min-width: 1px;
 }
+.Blessings-Option.Blessings-Option-Current,
+.Blessings-Option.Decrees-Option-Current,
+.Decrees-Option.Blessings-Option-Current,
 .Decrees-Option.Decrees-Option-Current {
   background-color: #000;
   -webkit-filter: invert(1);
   filter: invert(1);
 }
+.Blessings-Option.Blessings-Option-Current-LightMode,
+.Blessings-Option.Decrees-Option-Current-LightMode,
+.Decrees-Option.Blessings-Option-Current-LightMode,
+.Decrees-Option.Decrees-Option-Current-LightMode {
+  background-color: #fff;
+}
+.Blessings-Submit-Button,
 .Decrees-Submit-Button {
   margin-top: 12px;
   display: flex;
@@ -13051,11 +13549,18 @@ button:focus-visible {
   font-weight: 700;
   border-radius: 20px;
 }
-@media (max-width: 1080px) {
-  .Decrees-Container {
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10px;
-    gap: 10px;
+@media (max-width: 768px) {
+  .Offseason {
+    width: 100%;
+  }
+  .Offseason-Header {
+    font-size: 24px;
+  }
+  .Offseason-Number {
+    margin: 0 10px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 24px;
   }
 }
 .Recap {
@@ -13122,6 +13627,9 @@ button:focus-visible {
   font-style: italic;
   color: #aaa;
 }
+.Recap-Blessing-Votes-LightMode {
+  color: rgba(30, 30, 30, 0.64);
+}
 .Recap-Blessing-Team {
   width: 50px;
   height: 50px;
@@ -13161,6 +13669,9 @@ button:focus-visible {
   background: rgba(30, 30, 30, 0.64);
   border-radius: 2px;
 }
+.Recap-Decree-Container-LightMode {
+  background-color: #e1e1e1;
+}
 .Recap-Decree-Info {
   display: flex;
   flex-direction: row;
@@ -13189,6 +13700,12 @@ button:focus-visible {
   justify-content: center;
   align-items: center;
 }
+.Recap-Decree-Icon-LightMode {
+  background-color: #fff;
+}
+.Recap-Decree-Icon-LightMode svg {
+  fill: #000;
+}
 .Recap-Decree-Description {
   margin-left: 5px;
   display: block;
@@ -13202,334 +13719,6 @@ button:focus-visible {
   }
   .Recap-Header {
     font-size: 24px;
-  }
-}
-#root .Tribute {
-  display: flex;
-  color: #fff;
-  width: 460px;
-  max-width: 95vw;
-  max-height: 80vh;
-  justify-content: flex-start;
-  padding: 40px 20px 20px;
-}
-#root .Tribute-Header {
-  font-size: 24px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-weight: 700;
-  padding-bottom: 12px;
-  text-align: center;
-}
-#root .Tribute-Type {
-  padding: 10px 0;
-}
-#root .Tribute-Type-Name {
-  font-weight: 700;
-  text-transform: uppercase;
-}
-#root .Tribute-Form {
-  padding: 10px 0;
-}
-#root .Tribute-Form-Teams {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-#root .Tribute-Form-Teams-Label {
-  background-color: #000;
-  border: 3px solid hsla(0, 0%, 39.6%, 0.65);
-  height: 50px;
-  border-radius: 25px;
-  margin-left: -25px;
-  margin-right: -25px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  color: #fff;
-  white-space: nowrap;
-  padding: 5px;
-}
-#root .Tribute-Form-Inputs {
-  display: flex;
-}
-#root .Tribute-Form-Inputs-Amount {
-  background: rgba(30, 30, 30, 0.64);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 0 12px;
-  margin-bottom: 1rem;
-  position: relative;
-}
-#root .Tribute-Form-Inputs-Amount-Icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.4;
-  font-size: 20px;
-  display: flex;
-  padding: 12px;
-}
-#root .Tribute-Form-Inputs-Amount-MaxTribute {
-  position: absolute;
-  bottom: 14px;
-  right: 10px;
-  padding: 3px 10px;
-  font-size: 12px;
-  text-align: right;
-  font-weight: 700;
-  color: #111;
-  background-color: hsla(0, 0%, 39.6%, 0.65);
-  border-radius: 20px;
-}
-#root .Tribute-Form-Inputs-Amount-MaxTribute:hover {
-  background-color: #fff;
-  cursor: pointer;
-}
-#root .Tribute-Form-Inputs-Amount input[type="range"] {
-  height: 50px;
-  width: calc(100% - 105px);
-  display: flex;
-  align-items: center;
-  margin: 0;
-  position: relative;
-}
-#root .Tribute-Form-Inputs-Amount input[type="number"] {
-  font-weight: 700;
-  outline: none;
-  height: 100%;
-  font-size: 40px;
-  display: flex;
-  text-align: center;
-  background: transparent;
-  border: none;
-  color: #fff;
-}
-#root .Tribute-Form-Inputs-Amount input[type="number"]:active,
-#root .Tribute-Form-Inputs-Amount input[type="number"]:focus {
-  outline: none;
-  box-shadow: none;
-}
-#root .Tribute-Input {
-  color: #fff;
-}
-#root .Tribute-Ticket-Wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 6px 12px;
-  opacity: 0.6;
-}
-#root .Tribute-Ticket-Icon {
-  padding-right: 5px;
-  width: 20px;
-}
-#root .Tribute-Submit {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 20px;
-}
-#root .Tribute-Submit-Wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-#root .Tribute label {
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-}
-#root .Tribute label:not(:first-child) {
-  margin-top: 12px;
-}
-#root .Tribute select {
-  background: rgba(30, 30, 30, 0.64);
-  color: #fff;
-  border: none;
-  margin-top: 12px;
-  height: 40px;
-  line-height: 40px;
-  padding-left: 8px;
-}
-@media (max-width: 1080px) {
-  #root .Tribute-Outcome-Wrapper {
-    font-size: 14px;
-  }
-  #root .Tribute-Outcome-Winnings {
-    font-size: 18px;
-  }
-}
-#root .Vote {
-  display: flex;
-  color: #fff;
-  width: 460px;
-  max-width: 95vw;
-  max-height: 80vh;
-  justify-content: flex-start;
-  padding: 40px 20px 20px;
-}
-#root .Vote-Header {
-  font-size: 24px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-weight: 700;
-  padding-bottom: 12px;
-  text-align: center;
-}
-#root .Vote-Type {
-  padding: 10px 0;
-}
-#root .Vote-Type-Name {
-  font-weight: 700;
-  text-transform: uppercase;
-}
-#root .Vote-Form {
-  padding: 10px 0;
-}
-#root .Vote-Form-Teams {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-#root .Vote-Form-Teams-Label {
-  background-color: #000;
-  border: 3px solid hsla(0, 0%, 39.6%, 0.65);
-  height: 50px;
-  border-radius: 25px;
-  margin-left: -25px;
-  margin-right: -25px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  color: #fff;
-  white-space: nowrap;
-  padding: 5px;
-}
-#root .Vote-Form-Inputs {
-  display: flex;
-}
-#root .Vote-Form-Inputs-Amount {
-  background: rgba(30, 30, 30, 0.64);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 0 12px;
-  margin-bottom: 1rem;
-  position: relative;
-}
-#root .Vote-Form-Inputs-Amount-Icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.4;
-  font-size: 20px;
-  display: flex;
-  padding: 12px;
-}
-#root .Vote-Form-Inputs-Amount-MaxVote {
-  position: absolute;
-  bottom: 14px;
-  right: 10px;
-  padding: 3px 10px;
-  font-size: 12px;
-  text-align: right;
-  font-weight: 700;
-  color: #111;
-  background-color: hsla(0, 0%, 39.6%, 0.65);
-  border-radius: 20px;
-}
-#root .Vote-Form-Inputs-Amount-MaxVote:hover {
-  background-color: #fff;
-  cursor: pointer;
-}
-#root .Vote-Form-Inputs-Amount input[type="range"] {
-  height: 50px;
-  width: calc(100% - 105px);
-  display: flex;
-  align-items: center;
-  margin: 0;
-  position: relative;
-}
-#root .Vote-Form-Inputs-Amount input[type="number"] {
-  font-weight: 700;
-  outline: none;
-  height: 100%;
-  font-size: 40px;
-  display: flex;
-  text-align: center;
-  background: transparent;
-  border: none;
-  color: #fff;
-}
-#root .Vote-Form-Inputs-Amount input[type="number"]:active,
-#root .Vote-Form-Inputs-Amount input[type="number"]:focus {
-  outline: none;
-  box-shadow: none;
-}
-#root .Vote-Input {
-  color: #fff;
-}
-#root .Vote-Ticket-Wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 6px 12px;
-  opacity: 0.6;
-}
-#root .Vote-Ticket-Icon {
-  padding-right: 5px;
-  width: 20px;
-}
-#root .Vote-Submit {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 20px;
-}
-#root .Vote-Submit-Wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-#root .Vote label {
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-}
-#root .Vote label:not(:first-child) {
-  margin-top: 12px;
-}
-#root .Vote select {
-  background: rgba(30, 30, 30, 0.64);
-  color: #fff;
-  border: none;
-  margin-top: 12px;
-  height: 40px;
-  line-height: 40px;
-  padding-left: 8px;
-}
-@media (max-width: 1080px) {
-  #root .Vote-Outcome-Wrapper {
-    font-size: 14px;
-  }
-  #root .Vote-Outcome-Winnings {
-    font-size: 18px;
   }
 }
 .GodsDay {
@@ -13707,6 +13896,10 @@ button:focus-visible {
   min-height: 100vh;
   padding: 0 calc(50% - 512px);
 }
+.Main-LightMode {
+  background-color: #fff;
+  color: #000;
+}
 .Main-Ad-Banner {
   height: 90px;
   justify-content: center;
@@ -13728,29 +13921,36 @@ button:focus-visible {
   height: 250px;
 }
 .Main-Body {
-  margin-top: 40px;
-}
-.Main-Body,
-.Main-Body-Intro {
   flex-grow: 1;
   justify-content: left;
   align-items: start;
   color: #fff;
+  margin-top: 40px;
+}
+.Main-Body-LightMode {
+  color: #000;
 }
 .Main-Body-Intro {
+  flex-grow: 1;
   background-color: #000;
+  justify-content: left;
+  align-items: start;
+  color: #fff;
   margin-top: 0;
 }
 .Main-Footer {
-  display: flex;
-  justify-content: center;
   padding: 40px;
   flex-direction: column;
   align-items: center;
 }
+.Main-Footer,
 .Main-Footer-Links {
   display: flex;
+  justify-content: center;
+}
+.Main-Footer-Links {
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .Main-Footer-Link {
   display: flex;
@@ -13763,6 +13963,13 @@ button:focus-visible {
 .Main-Footer-Link:hover {
   color: #fff;
   border: 1px solid #fff;
+}
+.Main-Footer-Link-LightMode {
+  color: #111;
+}
+.Main-Footer-Link-LightMode:hover {
+  color: #000;
+  border: 1px solid #000;
 }
 .Main-Footer-Logo {
   height: 50px;
@@ -13777,6 +13984,10 @@ button:focus-visible {
 .Main-Footer-Logo:hover {
   opacity: 0.75;
 }
+.Main-Footer-Logo-LightMode {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
 .Main-Footer-Advertise {
   font-size: 12px;
   margin: 16px 0;
@@ -13787,6 +13998,9 @@ button:focus-visible {
   padding: 8px 10px;
   background: #1f1f1f;
 }
+.Main-Footer-Advertise-Inner-LightMode {
+  background: #ebebeb;
+}
 .Main-Footer-Advertise-Icon {
   font-size: 14px;
   font-weight: 700;
@@ -13796,6 +14010,12 @@ button:focus-visible {
 .Main-Footer-Advertise-Icon:hover {
   color: #fff;
 }
+.Main-Footer-Advertise-Icon-LightMode {
+  color: #363636;
+}
+.Main-Footer-Advertise-Icon-LightMode:hover {
+  color: #000;
+}
 @media (max-width: 1080px) {
   .Main {
     padding: 0 20px;
@@ -13804,40 +14024,6 @@ button:focus-visible {
     padding: 40px 0;
     margin-bottom: 65px;
   }
-}
-.IdolResults {
-  max-width: 550px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.IdolResults-Header {
-  display: flex;
-  font-weight: 700;
-  font-size: 32px;
-  padding-top: 20px;
-  align-items: center;
-}
-.IdolResults-Body,
-.IdolResults-Header {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.IdolResults-Body {
-  margin: 24px 0;
-  font-size: 18px;
-}
-.IdolResults-Callout {
-  font-size: 24px;
-}
-.IdolResults-Callout,
-.IdolResults-End {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.IdolResults-End {
-  margin: 5px;
-  font-size: 16px;
-  color: #aaa;
 }
 .Stubs-All {
   max-width: 700px;
@@ -13920,6 +14106,9 @@ button:focus-visible {
 .TheBook-New {
   color: #3cc28a;
 }
+.TheBook-New-LightMode {
+  color: #1ba069;
+}
 .TheBook-Line {
   text-align: left;
   font-size: 18px;
@@ -14000,12 +14189,26 @@ button:focus-visible {
   border: 2px solid #fff;
   color: #fff;
 }
+.TheBook-Navigation-Button-LightMode {
+  background-color: #fff;
+  color: #000;
+}
+.TheBook-Navigation-Button-LightMode:hover {
+  color: #000;
+}
 .TheBook-Navigation-Button-Current {
   background-color: #fff;
   color: #000;
 }
 .TheBook-Navigation-Button-Current:hover {
   color: #000;
+}
+.TheBook-Navigation-Button-Current-LightMode {
+  background-color: #000;
+  color: #fff;
+}
+.TheBook-Navigation-Button-Current-LightMode:hover {
+  color: #fff;
 }
 .TheBook-Navigation-Button-Content:focus {
   outline: none;
@@ -14191,6 +14394,9 @@ button:focus-visible {
   width: 100%;
   padding: 20px 20px 10px;
 }
+#root .Bulletin-Item-LightMode {
+  background-color: #e1e1e1;
+}
 #root .Bulletin-Item-Header {
   display: flex;
   flex-flow: row;
@@ -14245,8 +14451,12 @@ button:focus-visible {
 }
 #root .Bulletin-Item-Telescope-Name {
   margin-left: 10px;
+  font-size: 18px;
+  font-family: "Lora", "Courier New", monospace, serif;
 }
-#root .Bulletin-Item-Telescope-Name,
+#root .Bulletin-Item-Telescope-Name-LightMode {
+  border-radius: 5px;
+}
 #root .Bulletin-Item-Telescope-Record {
   font-size: 18px;
   font-family: "Lora", "Courier New", monospace, serif;
@@ -14352,368 +14562,6 @@ button:focus-visible {
     columns: initial;
   }
 }
-#root .Player {
-  width: 500px;
-  max-width: 95%;
-  min-height: 640px;
-  max-height: 80vh;
-  justify-content: flex-start;
-  padding: 0;
-}
-#root .Player-Content {
-  padding: 20px 0;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-#root .Player-Logo {
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  font-size: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-}
-#root .Player-LogoLine {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#root .Player-Attributes,
-#root .Player-Status {
-  padding: 5px 40px;
-  display: flex;
-  flex-direction: row;
-  background: #111;
-  border-bottom: 1px solid #fff;
-}
-#root .Player-Status {
-  padding: 15px 40px;
-  justify-content: space-between;
-  align-items: center;
-}
-#root .Player-Status-Line {
-  display: flex;
-}
-#root .Player-Status-Name {
-  padding: 0 10px;
-  display: flex;
-  align-items: center;
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 18px;
-}
-#root .Player-Button {
-  font-size: 14px;
-  display: flex;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-}
-#root .Player-Button-Form {
-  padding: 0;
-}
-#root .Player-Button-Idol {
-  color: #fff;
-  font-weight: 700;
-  font-size: 14px;
-  height: 32px;
-  display: flex;
-  border-radius: 30px;
-  white-space: nowrap;
-  align-items: center;
-  border: 1px solid #fff !important;
-  text-align: center;
-}
-#root .Player-Button-Idol:not(:first-child) {
-  border-left: none;
-}
-#root .Player-Button-Idol :first-child {
-  margin-right: 5px;
-  font-size: 20px;
-}
-#root .Player-Button-Idol:hover {
-  border: 1px solid #fff;
-}
-#root .Player-Button-Idol-Current {
-  display: flex;
-  flex-direction: row;
-  padding: 0 10px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  align-items: center;
-  background: rgba(255, 191, 0, 0.81);
-  white-space: nowrap;
-  border-radius: 20px;
-  height: 32px;
-  box-shadow: 0 0 10px 0 #ffbf00;
-}
-#root .Player-Button-Idol-Current :first-child {
-  margin-right: 5px;
-  font-size: 25px;
-}
-#root .Player-Button-Tribute {
-  color: #fff;
-  border: 1px solid #fff !important;
-  font-size: 14px;
-  background-color: #ba7300;
-  height: 32px;
-  font-weight: 700;
-  align-items: center;
-  display: flex;
-  border-radius: 30px;
-  white-space: nowrap;
-  text-align: center;
-  padding: 12px;
-}
-#root .Player-Button-Tribute:not(:first-child) {
-  border-left: none;
-}
-#root .Player-Button-Tribute :first-child {
-  margin-right: 5px;
-  font-size: 18px;
-}
-#root .Player-Info {
-  border-bottom: 1px solid #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 40px 40px 20px;
-}
-#root .Player-Info-Line {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 2px 40px;
-}
-#root .Player-Info-Line:nth-child(2n) {
-  background: #000;
-}
-#root .Player-Info-Line-Header {
-  width: 180px;
-  font-weight: 700;
-}
-#root .Player-Info-Line-Body,
-#root .Player-Info-Line-Header {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-#root .Player-Info-Bio,
-#root .Player-Info-Stats {
-  padding: 0;
-  background: rgba(30, 30, 30, 0.64);
-}
-#root .Player-Info-Items {
-  padding: 10px 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-#root .Player-Info-Items-Box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: auto;
-  min-width: 150px;
-  height: 80px;
-  margin: 5px;
-  padding: 10px 0;
-  background: #111;
-  border-radius: 5px;
-}
-#root .Player-Info-Items-Header {
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-#root .Player-Info-Items-Details {
-  display: flex;
-  flex-direction: row;
-}
-#root .Player-Info-Items-Name {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-#root .Player-Header {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 24px;
-  width: 100%;
-}
-#root .Player-Header-Bottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-}
-#root .Player-Name {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 24px;
-}
-#root .Player-Name-Wrapper {
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px;
-}
-#root .Player-Standing {
-  font-size: 14px;
-}
-#root .Player-Slogan,
-#root .Player-Standing {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-#root .Player-Section:not(:last-child) {
-  margin-bottom: 10px;
-}
-#root .Player-Subheader {
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  text-transform: uppercase;
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: #aaa;
-  text-align: center;
-}
-#root .Player-VibeLine {
-  display: flex;
-  flex-direction: row;
-}
-#root .Player-VibeLine-Arrow {
-  font-size: 22px;
-  width: 16px;
-}
-#root .Player-VibeLine-Text {
-  padding: 0 5px;
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-#root .Player-Vibe-MostExcellent {
-  color: #15d400;
-}
-#root .Player-Vibe-Excellent {
-  color: #5de04f;
-}
-#root .Player-Vibe-Quality {
-  color: #8fdb88;
-}
-#root .Player-Vibe-Neutral {
-  color: #d1d1d1;
-}
-#root .Player-Vibe-LessThanIdeal {
-  color: #d97373;
-}
-#root .Player-Vibe-FarLessThanIdeal {
-  color: #de3c3c;
-}
-#root .Player-Vibe-Terrible {
-  color: #e00000;
-}
-#root .Player-Soulscream {
-  height: auto;
-  max-width: 240px;
-  border-radius: 5px;
-}
-#root .Player-Soulscream-Body {
-  color: red;
-}
-#root .Player-Soulscream-Body,
-#root .Player-Soulscream-Released {
-  height: auto;
-  font-size: 16px;
-  font-weight: 700;
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-style: italic;
-  word-wrap: break-word;
-}
-#root .Player-Soulscream-Released {
-  color: #5988ff;
-}
-#root .Player-Team-Line {
-  display: flex;
-}
-#root .Player-Team-Logo {
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-}
-#root .Player-Team-Name {
-  padding: 0 10px;
-  display: flex;
-  align-items: center;
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 18px;
-}
-#root .Player-Deceased-Icon {
-  background-image: url(/static/media/player_deceased_icon.2febfc5d.svg);
-  background-repeat: no-repeat;
-  min-width: 30px;
-  height: 30px;
-}
-.Idol-Disabled-Tooltip {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-@media (max-width: 1080px) {
-  #root .Player-Info-Bio,
-  #root .Player-Info-Stats {
-    padding: 10px 20px;
-    background: rgba(30, 30, 30, 0.64);
-  }
-  #root .Player-Info-Line-Header {
-    width: 120px;
-    font-size: 12px;
-  }
-  #root .Player-Info-Line-Body {
-    font-family: "Lora", "Courier New", monospace, serif;
-  }
-  #root .Player-Team-Line {
-    margin-bottom: 10px;
-  }
-  #root .Player-Header-Bottom {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #root .Player-Soulscream {
-    max-width: 160px;
-  }
-}
-.Preseason {
-  max-width: 550px;
-  margin: auto;
-  flex-direction: column;
-}
-.Preseason,
-.Preseason-Header {
-  display: flex;
-  align-items: center;
-}
-.Preseason-Header {
-  font-weight: 700;
-  font-size: 32px;
-  padding-top: 20px;
-}
-.Preseason-Body,
-.Preseason-Header {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.Preseason-Body {
-  margin: 24px 0;
-  font-size: 18px;
-}
-.Preseason-Callout {
-  font-size: 24px;
-}
-.Preseason-Callout,
-.Preseason-End {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.Preseason-End {
-  margin: 5px;
-  font-size: 16px;
-  color: #aaa;
-}
 .FAQ {
   display: flex;
   align-items: center;
@@ -14782,60 +14630,11 @@ button:focus-visible {
 .FAQ-Return svg {
   margin: 5px 5px 10px;
 }
-.SeasonEnd {
-  max-width: 550px;
-  margin: auto;
+.BossFightWidget {
+  display: flex;
   flex-direction: column;
-}
-.SeasonEnd,
-.SeasonEnd-Header {
-  display: flex;
-  align-items: center;
-}
-.SeasonEnd-Header {
-  font-weight: 700;
-  font-size: 32px;
-  padding-top: 20px;
-}
-.SeasonEnd-Body,
-.SeasonEnd-Header {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.SeasonEnd-Body {
-  margin: 24px 0;
-  font-size: 18px;
-}
-.SeasonEnd-Callout {
-  font-size: 24px;
-}
-.SeasonEnd-Callout,
-.SeasonEnd-End {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.SeasonEnd-End {
-  margin: 5px;
-  font-size: 16px;
-  color: #aaa;
-}
-@media (max-width: 768px) {
-  .GodsDay {
-    width: 100%;
-  }
-}
-.TeamLogo {
-  border-radius: 50%;
-  height: 44px;
-  width: 44px;
-  font-size: 26px;
-}
-.BossFightWidget,
-.TeamLogo {
-  display: flex;
   justify-content: center;
   align-items: center;
-}
-.BossFightWidget {
-  flex-direction: column;
   width: 80%;
   margin: auto;
 }
@@ -15835,4 +15634,22 @@ button:focus-visible {
   .BossFightWidget.IsComplete .BossFightWidget-Log {
     display: none;
   }
+}
+.TeamLogo {
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  font-size: 26px;
+}
+.TeamLogo,
+.Tournament-List {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Tournament-List {
+  flex-direction: column;
+  padding: 20px 0;
+  max-width: 600px;
+  margin: auto;
 }
