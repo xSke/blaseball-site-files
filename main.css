@@ -9284,6 +9284,9 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 100%;
   width: 100%;
 }
+.Widget-Bases-Icon {
+  font-size: 50.31px;
+}
 .Widget-Outs {
   display: flex;
   flex-direction: column;
@@ -9360,6 +9363,17 @@ input[type="number"]::-webkit-outer-spin-button {
   font-family: "Lora", "Courier New", monospace, serif;
   align-self: stretch;
   border-radius: 5px;
+}
+.Widget-Log-Score {
+  color: #ffeb57;
+}
+.Widget-Log-Score-LightMode {
+  color: #0014a8;
+}
+.Widget-Log-Ledger {
+  font-size: 13.5px;
+  color: hsla(0, 0%, 39.6%, 0.65);
+  font-style: italic;
 }
 .Widget-Loading {
   width: 100%;
@@ -9438,6 +9452,34 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .Widget-Header-Wrapper-LightMode {
   background: #e1e1e1;
+}
+.Widget-PlayerAttributes {
+  display: flex;
+  align-items: center;
+}
+.Widget-PlayerAttributes .AttributeIcon {
+  width: auto;
+  height: auto;
+  font-size: inherit;
+  margin-right: 5px;
+  padding: 2px;
+}
+.Widget-PlayerAttributes .AttributeIcon:not(:last-child) {
+  margin-right: 5px;
+}
+.Widget-Icons-Wired {
+  color: #511c00;
+  background: #fff;
+}
+.Widget-Icons-Tired,
+.Widget-Icons-Wired {
+  border-radius: 5px;
+  padding: 2px;
+  margin-right: 5px;
+}
+.Widget-Icons-Tired {
+  background: #511c00;
+  transform: rotate(180deg);
 }
 .GameWidget {
   margin-bottom: 80px;
@@ -9940,6 +9982,636 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .GameWidget.IsComplete .GameWidget-Log {
     display: none;
+  }
+}
+.AttributeIcon {
+  display: flex;
+  margin: 0;
+  height: 32px;
+  width: 32px;
+  border-radius: 5px;
+  align-items: center;
+  font-size: 24px;
+  justify-content: center;
+}
+.AttributeIcon:not(:last-child) {
+  margin-right: 10px;
+}
+.AttributeSvg g {
+  fill: #000;
+}
+.AttributeBar {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 5px;
+  border-radius: 5px;
+  background: #222;
+}
+.AttributeBar-LightMode {
+  background: #eaeaea;
+}
+.AttributeTooltip {
+  border: 1px solid #fff;
+  margin: 0;
+  padding: 0;
+}
+.AttributeTooltip-LightMode {
+  border-color: #000;
+}
+.AttributeTooltip-LightMode .tooltip-inner {
+  background-color: #fff;
+}
+.AttributeTooltip-Container {
+  padding: 10px;
+}
+.AttributeTooltip-Container-LightMode {
+  background-color: #fff;
+  color: #000;
+}
+.AttributeTooltip-Header {
+  font-weight: 700;
+}
+.AttributeTooltip-Description,
+.AttributeTooltip-Header {
+  margin: 0;
+  padding: 0;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.AttributeTooltip-Divider {
+  margin: 10px 0;
+  border: 0.5px solid hsla(0, 0%, 39.6%, 0.65);
+}
+.AttributeTooltip-Divider-LightMode {
+  border-color: rgba(30, 30, 30, 0.64);
+}
+.ModalItem {
+  width: 500px;
+  max-width: 95%;
+  height: 750px;
+  max-height: 80vh;
+  justify-content: flex-start !important;
+  padding: 0 !important;
+}
+.ModalItem-Content {
+  padding: 20px 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.ModalItem-Name {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 24px;
+}
+.ModalItem-Name-Wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  width: 100%;
+}
+.ModalItem-Attributes,
+.ModalItem-Status {
+  padding: 5px 40px;
+  display: flex;
+  flex-direction: row;
+  background: #111;
+  border-bottom: 1px solid #fff;
+}
+.ModalItem-Attributes-LightMode,
+.ModalItem-Status-LightMode {
+  border-color: #000;
+  background: #e1e1e1;
+}
+.ModalItem-Status {
+  padding: 15px 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+.ModalItem-Status-Line {
+  display: flex;
+}
+.ModalItem-Status-Name {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 18px;
+}
+.ModalItem-Info {
+  border-bottom: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 40px 20px;
+}
+.ModalItem-Info-LightMode {
+  border-color: #000;
+}
+.ModalItem-Vibe-MostExcellent {
+  color: #15d400;
+}
+.ModalItem-Vibe-MostExcellent-LightMode span {
+  background-color: #15d400;
+  color: #000;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.ModalItem-Vibe-Excellent {
+  color: #5de04f;
+}
+.ModalItem-Vibe-Excellent-LightMode span {
+  background-color: #5de04f;
+  color: #000;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.ModalItem-Vibe-Quality {
+  color: #8fdb88;
+}
+.ModalItem-Vibe-Quality-LightMode span {
+  background-color: #8fdb88;
+  color: #000;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.ModalItem-Vibe-Neutral {
+  color: #d1d1d1;
+}
+.ModalItem-Vibe-Neutral-LightMode span {
+  background-color: #b0b0b0;
+  color: #000;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.ModalItem-Vibe-LessThanIdeal {
+  color: #d97373;
+}
+.ModalItem-Vibe-LessThanIdeal-LightMode span {
+  background-color: #d97373;
+  color: #000;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.ModalItem-Vibe-FarLessThanIdeal {
+  color: #de3c3c;
+}
+.ModalItem-Vibe-FarLessThanIdeal-LightMode span {
+  background-color: #de3c3c;
+  color: #000;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.ModalItem-Vibe-Terrible {
+  color: #e00000;
+}
+.ModalItem-Vibe-Terrible-LightMode span {
+  background-color: #e00000;
+  color: #000;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.ModalItem-Icons-Wired {
+  color: #511c00;
+  background: #fff;
+  border-radius: 5px;
+  padding: 2px;
+}
+.ModalItem-Icons-Tired {
+  background: #511c00;
+  border-radius: 5px;
+  padding: 2px;
+  transform: rotate(180deg);
+}
+.Player-Header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+.Player-Header-Bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.Player-Info-Line {
+  display: grid;
+  grid-template-columns: 180px auto;
+  min-height: 34px;
+  align-items: center;
+  padding: 2px 40px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 18px;
+}
+.Player-Info-Line:nth-child(odd) {
+  background: rgba(30, 30, 30, 0.64);
+}
+.Player-Info-Line-LightMode:nth-child(odd) {
+  background-color: #e1e1e1;
+}
+.Player-Info-Line-Header {
+  font-weight: 700;
+}
+.Player-Info-Items {
+  padding: 10px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.Player-Info-Items-Box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  min-width: 150px;
+  height: 80px;
+  margin: 5px;
+  padding: 10px 0;
+  background: #111;
+  border-radius: 5px;
+}
+.Player-Info-Items-Box-LightMode {
+  background-color: #e1e1e1;
+}
+.Player-Info-Items-Header {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.Player-Info-Items-Details {
+  display: flex;
+  flex-direction: row;
+}
+.Player-Info-Items-Name,
+.Player-Standing {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Player-Standing {
+  font-size: 14px;
+}
+.Player-Slogan {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Player-Section:not(:last-child),
+.Player-Subheader {
+  margin-bottom: 10px;
+}
+.Player-Subheader {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #aaa;
+  text-align: center;
+}
+.Player-VibeLine span {
+  display: flex;
+  flex-direction: row;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.Player-VibeLine-Arrow {
+  font-size: 22px;
+  width: 16px;
+}
+.Player-VibeLine-Text {
+  padding: 0 5px;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Player-Soulscream {
+  height: auto;
+  max-width: 240px;
+  border-radius: 5px;
+}
+.Player-Soulscream-Body {
+  color: red;
+}
+.Player-Soulscream-Body,
+.Player-Soulscream-Released {
+  height: auto;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-style: italic;
+  word-wrap: break-word;
+}
+.Player-Soulscream-Released {
+  color: #5988ff;
+}
+.Player-Team-Line {
+  display: flex;
+}
+.Player-Team-Line:nth-child(odd) {
+  margin-bottom: 10px;
+}
+.Player-Team-Logo {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.Player-Team-Logo,
+.Player-Team-Name {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+.Player-Team-Name {
+  padding: 0 10px;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Player-Deceased-Icon {
+  background-image: url(/static/media/player_deceased_icon.2febfc5d.svg);
+  background-repeat: no-repeat;
+  min-width: 30px;
+  height: 30px;
+}
+.Player-Deceased-Icon-LightMode {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+.Player-Button {
+  font-size: 14px;
+  display: flex;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+.Player-Button-Form {
+  padding: 0;
+}
+.Player-Button-Idol {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  height: 32px;
+  display: flex;
+  border-radius: 30px;
+  white-space: nowrap;
+  align-items: center;
+  border: 1px solid #fff !important;
+  text-align: center;
+}
+.Player-Button-Idol:not(:first-child) {
+  border-left: none;
+}
+.Player-Button-Idol :first-child {
+  margin-right: 5px;
+  font-size: 20px;
+}
+.Player-Button-Idol:hover {
+  border: 1px solid #fff;
+}
+.Player-Button-Idol-Current {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  align-items: center;
+  background: rgba(255, 191, 0, 0.81);
+  white-space: nowrap;
+  border-radius: 20px;
+  height: 32px;
+  box-shadow: 0 0 10px 0 #ffbf00;
+}
+.Player-Button-Idol-Current :first-child {
+  margin-right: 5px;
+  font-size: 25px;
+}
+.Player-Button-Tribute {
+  color: #fff;
+  border: 1px solid #fff !important;
+  font-size: 14px;
+  background-color: #ba7300;
+  height: 32px;
+  font-weight: 700;
+  align-items: center;
+  display: flex;
+  border-radius: 30px;
+  white-space: nowrap;
+  text-align: center;
+  padding: 12px;
+}
+.Player-Button-Tribute:not(:first-child) {
+  border-left: none;
+}
+.Player-Button-Tribute :first-child {
+  margin-right: 5px;
+  font-size: 18px;
+}
+.Player-Button-Tribute-LightMode:hover {
+  border: 1px solid #fff;
+  color: #fff;
+}
+.Team-Header {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.Team-Header,
+.Team-Logo {
+  display: flex;
+  align-items: center;
+}
+.Team-Logo {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  font-size: 36px;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.Team-LogoLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Team-Card,
+.Team-Standing {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 2px;
+  margin-left: 10px;
+  line-height: 1.3em;
+}
+.Team-Standing-Wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.Team-Standing-LightMode {
+  color: rgba(30, 30, 30, 0.64);
+}
+.Team-Card {
+  margin-top: 5px;
+  margin-left: 0;
+  border: 1px solid #fff;
+  padding: 4px 10px;
+  border-radius: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #fff;
+}
+.Team-Card-LightMode {
+  border: 1px solid #000;
+  color: #000;
+}
+.Team-Slogan {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Team-Section:not(:last-child) {
+  margin-bottom: 20px;
+}
+.Team-Subheader {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #aaa;
+  text-align: center;
+}
+.Team-Subheader-LightMode {
+  color: #111;
+}
+.Team-Player-Line,
+.Team-Player-Line-Blank {
+  display: grid;
+  grid-template-columns: auto 100px 140px;
+  min-height: 34px;
+  align-items: center;
+  padding: 2px 20px 2px 40px;
+  line-height: 1.2em;
+}
+.Team-Player-Line-Blank:nth-child(odd),
+.Team-Player-Line:nth-child(odd) {
+  background: rgba(30, 30, 30, 0.64);
+}
+.Team-Player-Line-Blank:hover,
+.Team-Player-Line:hover {
+  background: hsla(0, 0%, 39.6%, 0.65);
+}
+.Team-Player-Line-Blank-LightMode:nth-child(odd),
+.Team-Player-Line-LightMode:nth-child(odd) {
+  background: #e1e1e1;
+}
+.Team-Player-Line-Blank-LightMode:hover,
+.Team-Player-Line-LightMode:hover {
+  background: #aaa;
+}
+.Team-Player-Header {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.Team-Player-Header svg {
+  margin-left: -5px;
+  margin-right: 5px;
+  font-size: 25px;
+}
+.Team-Player-Shelled1:after,
+.Team-Player-Shelled2:after,
+.Team-Player-Shelled3:after,
+.Team-Player-Shelled4:after,
+.Team-Player-Shelled5:after {
+  content: "SHELLED";
+  position: absolute;
+  background-color: red;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+.Team-Player-Shelled1:after {
+  transform: rotate(-7deg);
+  margin-left: 1px;
+  margin-top: 1px;
+}
+.Team-Player-Shelled2:after {
+  transform: rotate(-10deg);
+  margin-left: 3px;
+}
+.Team-Player-Shelled3:after {
+  transform: rotate(-5deg);
+  margin-left: 9px;
+  margin-top: 1px;
+}
+.Team-Player-Shelled4:after {
+  transform: rotate(10deg);
+  margin-left: 5px;
+  margin-top: 2px;
+}
+.Team-Player-Shelled5:after {
+  transform: rotate(5deg);
+  margin-left: 2px;
+  margin-top: 2px;
+}
+.Team-Player-Shelled6:after {
+  transform: rotate(7deg);
+  margin-left: 7px;
+}
+.Team-Player-Ratings,
+.Team-Player-Vibe {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 18px;
+}
+.Team-Player-Vibe-Line {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.Team-Player-Vibe-Line-Arrow {
+  width: 14px;
+}
+@media (max-width: 1080px) {
+  .ModalItem-Info {
+    padding: 20px 40px 20px 20px;
+  }
+  .Team-Logo {
+    height: 40px;
+    width: 40px;
+    font-size: 28px;
+    margin-top: 5px;
+  }
+  .Team-Name {
+    line-height: 32px;
+  }
+  .Team-Player-Line,
+  .Team-Player-Line-Blank {
+    padding: 5px 20px;
+    margin-top: 5px;
+    grid-gap: 5px;
+    gap: 5px;
+    grid-template-columns: auto 50px 110px;
+    font-size: 0.8em;
+    grid-template-rows: auto;
+  }
+  .Team-Player-Header {
+    font-size: 16px;
+  }
+  .Player-Info-Bio,
+  .Player-Info-Stats {
+    padding: 10px 0;
+  }
+  .Player-Info-Line {
+    grid-template-columns: 120px auto;
+    padding: 5px 30px;
+    font-size: 16px;
+    grid-gap: 10px;
+    gap: 10px;
+    line-height: 1.2em;
+  }
+  .Player-Team-Line {
+    margin-bottom: 10px;
+  }
+  .Player-Header-Bottom {
+    flex-wrap: wrap;
+  }
+  .Player-Soulscream {
+    max-width: 160px;
   }
 }
 .Modal {
@@ -11318,636 +11990,6 @@ button:focus-visible {
     display: none;
   }
 }
-.AttributeIcon {
-  display: flex;
-  margin: 0;
-  height: 32px;
-  width: 32px;
-  border-radius: 5px;
-  align-items: center;
-  font-size: 24px;
-  justify-content: center;
-}
-.AttributeIcon:not(:last-child) {
-  margin-right: 10px;
-}
-.AttributeSvg g {
-  fill: #000;
-}
-.AttributeBar {
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-  padding: 5px;
-  border-radius: 5px;
-  background: #222;
-}
-.AttributeBar-LightMode {
-  background: #eaeaea;
-}
-.AttributeTooltip {
-  border: 1px solid #fff;
-  margin: 0;
-  padding: 0;
-}
-.AttributeTooltip-LightMode {
-  border-color: #000;
-}
-.AttributeTooltip-LightMode .tooltip-inner {
-  background-color: #fff;
-}
-.AttributeTooltip-Container {
-  padding: 10px;
-}
-.AttributeTooltip-Container-LightMode {
-  background-color: #fff;
-  color: #000;
-}
-.AttributeTooltip-Header {
-  font-weight: 700;
-}
-.AttributeTooltip-Description,
-.AttributeTooltip-Header {
-  margin: 0;
-  padding: 0;
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.AttributeTooltip-Divider {
-  margin: 10px 0;
-  border: 0.5px solid hsla(0, 0%, 39.6%, 0.65);
-}
-.AttributeTooltip-Divider-LightMode {
-  border-color: rgba(30, 30, 30, 0.64);
-}
-.ModalItem {
-  width: 500px;
-  max-width: 95%;
-  height: 750px;
-  max-height: 80vh;
-  justify-content: flex-start;
-  padding: 0;
-}
-.ModalItem-Content {
-  padding: 20px 0;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-.ModalItem-Name {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 24px;
-}
-.ModalItem-Name-Wrapper {
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px;
-  width: 100%;
-}
-.ModalItem-Attributes,
-.ModalItem-Status {
-  padding: 5px 40px;
-  display: flex;
-  flex-direction: row;
-  background: #111;
-  border-bottom: 1px solid #fff;
-}
-.ModalItem-Attributes-LightMode,
-.ModalItem-Status-LightMode {
-  border-color: #000;
-  background: #e1e1e1;
-}
-.ModalItem-Status {
-  padding: 15px 40px;
-  justify-content: space-between;
-  align-items: center;
-}
-.ModalItem-Status-Line {
-  display: flex;
-}
-.ModalItem-Status-Name {
-  padding: 0 10px;
-  display: flex;
-  align-items: center;
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 18px;
-}
-.ModalItem-Info {
-  border-bottom: 1px solid #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 40px 40px 20px;
-}
-.ModalItem-Info-LightMode {
-  border-color: #000;
-}
-.ModalItem-Vibe-MostExcellent {
-  color: #15d400;
-}
-.ModalItem-Vibe-MostExcellent-LightMode span {
-  background-color: #15d400;
-  color: #000;
-  padding: 2px 5px;
-  border-radius: 5px;
-}
-.ModalItem-Vibe-Excellent {
-  color: #5de04f;
-}
-.ModalItem-Vibe-Excellent-LightMode span {
-  background-color: #5de04f;
-  color: #000;
-  padding: 2px 5px;
-  border-radius: 5px;
-}
-.ModalItem-Vibe-Quality {
-  color: #8fdb88;
-}
-.ModalItem-Vibe-Quality-LightMode span {
-  background-color: #8fdb88;
-  color: #000;
-  padding: 2px 5px;
-  border-radius: 5px;
-}
-.ModalItem-Vibe-Neutral {
-  color: #d1d1d1;
-}
-.ModalItem-Vibe-Neutral-LightMode span {
-  background-color: #b0b0b0;
-  color: #000;
-  padding: 2px 5px;
-  border-radius: 5px;
-}
-.ModalItem-Vibe-LessThanIdeal {
-  color: #d97373;
-}
-.ModalItem-Vibe-LessThanIdeal-LightMode span {
-  background-color: #d97373;
-  color: #000;
-  padding: 2px 5px;
-  border-radius: 5px;
-}
-.ModalItem-Vibe-FarLessThanIdeal {
-  color: #de3c3c;
-}
-.ModalItem-Vibe-FarLessThanIdeal-LightMode span {
-  background-color: #de3c3c;
-  color: #000;
-  padding: 2px 5px;
-  border-radius: 5px;
-}
-.ModalItem-Vibe-Terrible {
-  color: #e00000;
-}
-.ModalItem-Vibe-Terrible-LightMode span {
-  background-color: #e00000;
-  color: #000;
-  padding: 2px 5px;
-  border-radius: 5px;
-}
-.ModalItem-Icons-Wired {
-  color: #511c00;
-  background: #fff;
-  border-radius: 5px;
-  padding: 2px;
-}
-.ModalItem-Icons-Tired {
-  background: #511c00;
-  border-radius: 5px;
-  padding: 2px;
-  transform: rotate(180deg);
-}
-.Player-Header {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 100%;
-}
-.Player-Header-Bottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-}
-.Player-Info-Line {
-  display: grid;
-  grid-template-columns: 180px auto;
-  min-height: 34px;
-  align-items: center;
-  padding: 2px 40px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 18px;
-}
-.Player-Info-Line:nth-child(odd) {
-  background: rgba(30, 30, 30, 0.64);
-}
-.Player-Info-Line-LightMode:nth-child(odd) {
-  background-color: #e1e1e1;
-}
-.Player-Info-Line-Header {
-  font-weight: 700;
-}
-.Player-Info-Items {
-  padding: 10px 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.Player-Info-Items-Box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: auto;
-  min-width: 150px;
-  height: 80px;
-  margin: 5px;
-  padding: 10px 0;
-  background: #111;
-  border-radius: 5px;
-}
-.Player-Info-Items-Box-LightMode {
-  background-color: #e1e1e1;
-}
-.Player-Info-Items-Header {
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-.Player-Info-Items-Details {
-  display: flex;
-  flex-direction: row;
-}
-.Player-Info-Items-Name,
-.Player-Standing {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.Player-Standing {
-  font-size: 14px;
-}
-.Player-Slogan {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.Player-Section:not(:last-child),
-.Player-Subheader {
-  margin-bottom: 10px;
-}
-.Player-Subheader {
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  text-transform: uppercase;
-  font-size: 14px;
-  color: #aaa;
-  text-align: center;
-}
-.Player-VibeLine span {
-  display: flex;
-  flex-direction: row;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.Player-VibeLine-Arrow {
-  font-size: 22px;
-  width: 16px;
-}
-.Player-VibeLine-Text {
-  padding: 0 5px;
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.Player-Soulscream {
-  height: auto;
-  max-width: 240px;
-  border-radius: 5px;
-}
-.Player-Soulscream-Body {
-  color: red;
-}
-.Player-Soulscream-Body,
-.Player-Soulscream-Released {
-  height: auto;
-  font-size: 16px;
-  font-weight: 700;
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-style: italic;
-  word-wrap: break-word;
-}
-.Player-Soulscream-Released {
-  color: #5988ff;
-}
-.Player-Team-Line {
-  display: flex;
-}
-.Player-Team-Line:nth-child(odd) {
-  margin-bottom: 10px;
-}
-.Player-Team-Logo {
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.Player-Team-Logo,
-.Player-Team-Name {
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-}
-.Player-Team-Name {
-  padding: 0 10px;
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.Player-Deceased-Icon {
-  background-image: url(/static/media/player_deceased_icon.2febfc5d.svg);
-  background-repeat: no-repeat;
-  min-width: 30px;
-  height: 30px;
-}
-.Player-Deceased-Icon-LightMode {
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
-}
-.Player-Button {
-  font-size: 14px;
-  display: flex;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-}
-.Player-Button-Form {
-  padding: 0;
-}
-.Player-Button-Idol {
-  color: #fff;
-  font-weight: 700;
-  font-size: 14px;
-  height: 32px;
-  display: flex;
-  border-radius: 30px;
-  white-space: nowrap;
-  align-items: center;
-  border: 1px solid #fff !important;
-  text-align: center;
-}
-.Player-Button-Idol:not(:first-child) {
-  border-left: none;
-}
-.Player-Button-Idol :first-child {
-  margin-right: 5px;
-  font-size: 20px;
-}
-.Player-Button-Idol:hover {
-  border: 1px solid #fff;
-}
-.Player-Button-Idol-Current {
-  display: flex;
-  flex-direction: row;
-  padding: 0 10px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  align-items: center;
-  background: rgba(255, 191, 0, 0.81);
-  white-space: nowrap;
-  border-radius: 20px;
-  height: 32px;
-  box-shadow: 0 0 10px 0 #ffbf00;
-}
-.Player-Button-Idol-Current :first-child {
-  margin-right: 5px;
-  font-size: 25px;
-}
-.Player-Button-Tribute {
-  color: #fff;
-  border: 1px solid #fff !important;
-  font-size: 14px;
-  background-color: #ba7300;
-  height: 32px;
-  font-weight: 700;
-  align-items: center;
-  display: flex;
-  border-radius: 30px;
-  white-space: nowrap;
-  text-align: center;
-  padding: 12px;
-}
-.Player-Button-Tribute:not(:first-child) {
-  border-left: none;
-}
-.Player-Button-Tribute :first-child {
-  margin-right: 5px;
-  font-size: 18px;
-}
-.Player-Button-Tribute-LightMode:hover {
-  border: 1px solid #fff;
-  color: #fff;
-}
-.Team-Header {
-  flex-direction: row;
-  justify-content: flex-start;
-}
-.Team-Header,
-.Team-Logo {
-  display: flex;
-  align-items: center;
-}
-.Team-Logo {
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  font-size: 36px;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.Team-LogoLine {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.Team-Card,
-.Team-Standing {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 14px;
-  color: #aaa;
-  margin-top: 2px;
-  margin-left: 10px;
-  line-height: 1.3em;
-}
-.Team-Standing-Wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  flex-wrap: wrap;
-}
-.Team-Standing-LightMode {
-  color: rgba(30, 30, 30, 0.64);
-}
-.Team-Card {
-  margin-top: 5px;
-  margin-left: 0;
-  border: 1px solid #fff;
-  padding: 4px 10px;
-  border-radius: 5px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #fff;
-}
-.Team-Card-LightMode {
-  border: 1px solid #000;
-  color: #000;
-}
-.Team-Slogan {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.Team-Section:not(:last-child) {
-  margin-bottom: 20px;
-}
-.Team-Subheader {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #aaa;
-  text-align: center;
-}
-.Team-Subheader-LightMode {
-  color: #111;
-}
-.Team-Player-Line,
-.Team-Player-Line-Blank {
-  display: grid;
-  grid-template-columns: auto 100px 140px;
-  min-height: 34px;
-  align-items: center;
-  padding: 2px 20px 2px 40px;
-  line-height: 1.2em;
-}
-.Team-Player-Line-Blank:nth-child(odd),
-.Team-Player-Line:nth-child(odd) {
-  background: rgba(30, 30, 30, 0.64);
-}
-.Team-Player-Line-Blank:hover,
-.Team-Player-Line:hover {
-  background: hsla(0, 0%, 39.6%, 0.65);
-}
-.Team-Player-Line-Blank-LightMode:nth-child(odd),
-.Team-Player-Line-LightMode:nth-child(odd) {
-  background: #e1e1e1;
-}
-.Team-Player-Line-Blank-LightMode:hover,
-.Team-Player-Line-LightMode:hover {
-  background: #aaa;
-}
-.Team-Player-Header {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.Team-Player-Header svg {
-  margin-left: -5px;
-  margin-right: 5px;
-  font-size: 25px;
-}
-.Team-Player-Shelled1:after,
-.Team-Player-Shelled2:after,
-.Team-Player-Shelled3:after,
-.Team-Player-Shelled4:after,
-.Team-Player-Shelled5:after {
-  content: "SHELLED";
-  position: absolute;
-  background-color: red;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
-  padding: 0 5px;
-  border-radius: 5px;
-}
-.Team-Player-Shelled1:after {
-  transform: rotate(-7deg);
-  margin-left: 1px;
-  margin-top: 1px;
-}
-.Team-Player-Shelled2:after {
-  transform: rotate(-10deg);
-  margin-left: 3px;
-}
-.Team-Player-Shelled3:after {
-  transform: rotate(-5deg);
-  margin-left: 9px;
-  margin-top: 1px;
-}
-.Team-Player-Shelled4:after {
-  transform: rotate(10deg);
-  margin-left: 5px;
-  margin-top: 2px;
-}
-.Team-Player-Shelled5:after {
-  transform: rotate(5deg);
-  margin-left: 2px;
-  margin-top: 2px;
-}
-.Team-Player-Shelled6:after {
-  transform: rotate(7deg);
-  margin-left: 7px;
-}
-.Team-Player-Ratings,
-.Team-Player-Vibe {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 18px;
-}
-.Team-Player-Vibe-Line {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.Team-Player-Vibe-Line-Arrow {
-  width: 14px;
-}
-@media (max-width: 1080px) {
-  .ModalItem-Info {
-    padding: 20px 40px 20px 20px;
-  }
-  .Team-Logo {
-    height: 40px;
-    width: 40px;
-    font-size: 28px;
-    margin-top: 5px;
-  }
-  .Team-Name {
-    line-height: 32px;
-  }
-  .Team-Player-Line,
-  .Team-Player-Line-Blank {
-    padding: 5px 20px;
-    margin-top: 5px;
-    grid-gap: 5px;
-    gap: 5px;
-    grid-template-columns: auto 50px 110px;
-    font-size: 0.8em;
-    grid-template-rows: auto;
-  }
-  .Team-Player-Header {
-    font-size: 16px;
-  }
-  .Player-Info-Bio,
-  .Player-Info-Stats {
-    padding: 10px 0;
-  }
-  .Player-Info-Line {
-    grid-template-columns: 120px auto;
-    padding: 5px 30px;
-    font-size: 16px;
-    grid-gap: 10px;
-    gap: 10px;
-    line-height: 1.2em;
-  }
-  .Player-Team-Line {
-    margin-bottom: 10px;
-  }
-  .Player-Header-Bottom {
-    flex-wrap: wrap;
-  }
-  .Player-Soulscream {
-    max-width: 160px;
-  }
-}
 .Standings-League {
   flex-direction: column;
   font-size: 32px;
@@ -13128,7 +13170,9 @@ button:focus-visible {
   color: hsla(0, 0%, 39.6%, 0.65);
 }
 .Welcome-Team-Name {
+  font-size: 14px;
   font-weight: 700;
+  font-family: "Lora", "Courier New", monospace, serif;
 }
 .Welcome-Team-Name-Wrapper {
   text-align: right;
