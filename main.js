@@ -950,7 +950,7 @@
           {
             id: "WIRED",
             color: "#511c00",
-            textColor: "#ffffff",
+            textColor: "#511c00",
             background: "#ffffff",
             title: "Wired",
             description:
@@ -959,7 +959,7 @@
           {
             id: "TIRED",
             color: "#ffffff",
-            textColor: "#511c00",
+            textColor: "#ffffff",
             background: "#511c00",
             title: "Tired",
             description:
@@ -2091,10 +2091,11 @@
         return e.awayScore;
       }
       function We(e) {
-        var a = m.collection.find(function (a) {
-          return a.id === e;
-        });
-        return a ? [a.background, a.color] : [];
+        var a = Object(r.useContext)(D.context).user,
+          t = m.collection.find(function (a) {
+            return a.id === e;
+          });
+        return t ? [t.background, t.color] : a.lightMode ? ["#000000", "#ffffff"] : ["#ffffff", "#000000"];
       }
       function Qe(e) {
         var a = Object(r.useContext)(O.context),
@@ -2272,10 +2273,10 @@
             return a;
           })(l),
           O = "",
-          B = ["#ffffff", "#000000"],
-          k = ["#ffffff", "#000000"],
-          C = ["#ffffff", "#000000"],
-          L = ["#ffffff", "#000000"];
+          B = s.lightMode ? ["#000000", "#ffffff"] : ["#ffffff", "#000000"],
+          k = s.lightMode ? ["#000000", "#ffffff"] : ["#ffffff", "#000000"],
+          C = s.lightMode ? ["#000000", "#ffffff"] : ["#ffffff", "#000000"],
+          L = s.lightMode ? ["#000000", "#ffffff"] : ["#ffffff", "#000000"];
         w.onFirst && ((O += " first"), (B = We(w.modOnFirst))),
           w.onSecond && ((O += " second"), (k = We(w.modOnSecond))),
           w.onThird && ((O += " third"), (C = We(w.modOnThird))),
@@ -2548,7 +2549,10 @@
                                 placement="bottom"
                                 overlay={
                                   <Le.a id="tooltip-bottom">
-                                    <strong>{te.playerOnFirst}</strong>
+                                    <strong>{te.playerOnFirst}</strong>{" "}
+                                    {"BLASERUNNING" === w.modOnFirst ? "(Blaserunning)" : ""}
+                                    {"WIRED" === w.modOnFirst ? "(Wired)" : ""}
+                                    {"TIRED" === w.modOnFirst ? "(Tired)" : ""}
                                   </Le.a>
                                 }
                               >
@@ -2556,10 +2560,7 @@
                                   id="base1"
                                   className={s.lightMode ? "st0-LightMode" : "st0"}
                                   transform="matrix(0.7071,-0.7071,0.7071,0.7071,-40.4706,152.625)"
-                                  style={{
-                                    fill: w.onFirst ? ("" !== B[0] ? B[0] : "#ffffff") : "none",
-                                    stroke: "" !== B[0] && w.onFirst ? B[0] : "#ffffff",
-                                  }}
+                                  style={{ fill: w.onFirst ? B[0] : "none", stroke: B[0] }}
                                 >
                                   <rect x={141.95 + M} y={105.74 + M} width="70.31" height="70.31" />
                                   {"BLASERUNNING" === w.modOnFirst ? (
@@ -2591,7 +2592,10 @@
                                 placement="top"
                                 overlay={
                                   <Le.a id="tooltip-bottom">
-                                    <strong>{te.playerOnSecond}</strong>
+                                    <strong>{te.playerOnSecond}</strong>{" "}
+                                    {"BLASERUNNING" === w.modOnSecond ? "(Blaserunning)" : ""}
+                                    {"WIRED" === w.modOnSecond ? "(Wired)" : ""}
+                                    {"TIRED" === w.modOnSecond ? "(Tired)" : ""}
                                   </Le.a>
                                 }
                               >
@@ -2599,10 +2603,7 @@
                                   id="base2"
                                   className={s.lightMode ? "st0-LightMode" : "st0"}
                                   transform="matrix(0.7071,-0.7071,0.7071,0.7071,-16.7558,95.4764)"
-                                  style={{
-                                    fill: w.onSecond ? ("" !== k[0] ? k[0] : "#ffffff") : "none",
-                                    stroke: "" !== k[0] && w.onSecond ? k[0] : "#ffffff",
-                                  }}
+                                  style={{ fill: w.onSecond ? k[0] : "none", stroke: k[0] }}
                                 >
                                   <rect x={84.83 + M} y={48.54 + M} width="70.31" height="70.31" />
                                   {"BLASERUNNING" === w.modOnSecond ? (
@@ -2626,7 +2627,10 @@
                                 placement="bottom"
                                 overlay={
                                   <Le.a id="tooltip-bottom">
-                                    <strong>{te.playerOnThird}</strong>
+                                    <strong>{te.playerOnThird}</strong>{" "}
+                                    {"BLASERUNNING" === w.modOnThird ? "(Blaserunning)" : ""}
+                                    {"WIRED" === w.modOnThird ? "(Wired)" : ""}
+                                    {"TIRED" === w.modOnThird ? "(Tired)" : ""}
                                   </Le.a>
                                 }
                               >
@@ -2634,10 +2638,7 @@
                                   id="base3"
                                   className={s.lightMode ? "st0-LightMode" : "st0"}
                                   transform="matrix(0.7071,-0.7071,0.7071,0.7071,-74.0296,71.6061)"
-                                  style={{
-                                    fill: w.onThird ? ("" !== C[0] ? C[0] : "#ffffff") : "none",
-                                    stroke: "" !== C[0] && w.onThird ? C[0] : "#ffffff",
-                                  }}
+                                  style={{ fill: w.onThird ? C[0] : "none", stroke: C[0] }}
                                 >
                                   <rect x={27.38 + M} y={105.74 + M} width="70.31" height="70.31" />
                                   {"AN_ACTUAL_AIRPLANE" === w.modOnThird ? (
@@ -2670,7 +2671,10 @@
                                   placement="top"
                                   overlay={
                                     <Le.a id="tooltip-top">
-                                      <strong>{te.playerOnFourth}</strong>
+                                      <strong>{te.playerOnFourth}</strong>{" "}
+                                      {"BLASERUNNING" === w.modOnFourth ? "(Blaserunning)" : ""}
+                                      {"WIRED" === w.modOnFourth ? "(Wired)" : ""}
+                                      {"TIRED" === w.modOnFourth ? "(Tired)" : ""}
                                     </Le.a>
                                   }
                                 >
@@ -2681,10 +2685,7 @@
                                   >
                                     <z.s
                                       className="Widget-Bases-Icon"
-                                      style={{
-                                        fill: w.onFourth ? ("" !== L[0] ? L[0] : "#ffffff") : "none",
-                                        stroke: "" !== L[0] && w.onFourth ? L[0] : "#ffffff",
-                                      }}
+                                      style={{ fill: w.onFourth ? L[0] : "none", stroke: L[0] }}
                                     />
                                     <rect x={27.38 + M} y={25.04 + M} width="70.31" height="70.31" />
                                     {"AN_ACTUAL_AIRPLANE" === w.modOnFourth ? (
@@ -13464,12 +13465,13 @@
                     <div className="League-Header">{null === l || void 0 === l ? void 0 : l.name}</div>
                     <da dateString={null === (a = n.sim) || void 0 === a ? void 0 : a.nextPhaseTime} />
                     <div className="Stubs-Body">
-                      {null === l || void 0 === l ? void 0 : l.name} will continue soon. Whaaat
+                      Coffee Break! {null === l || void 0 === l ? void 0 : l.name} will continue soon. Cool!
                     </div>
                   </div>
                 }
                 text="Offseason. Check for updates on the Discord!"
               />
+              <ta />
               <sa />
               {i}
             </div>

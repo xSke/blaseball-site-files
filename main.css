@@ -9479,6 +9479,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .Widget-Icons-Tired {
   background: #511c00;
+  color: #fff;
   transform: rotate(180deg);
 }
 .GameWidget {
@@ -10177,6 +10178,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .ModalItem-Icons-Tired {
   background: #511c00;
+  color: #fff;
   border-radius: 5px;
   padding: 2px;
   transform: rotate(180deg);
@@ -10651,7 +10653,7 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: hsla(0, 0%, 100%, 0.9);
 }
 .Modal-LightMode {
-  color: #000;
+  color: #000 !important;
   background-color: #fff;
   border-color: #000;
 }
