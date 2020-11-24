@@ -9998,6 +9998,16 @@ input[type="number"]::-webkit-outer-spin-button {
 .AttributeIcon:not(:last-child) {
   margin-right: 10px;
 }
+.AttributeIcon-AtBat {
+  display: flex;
+  margin: 0 2px 0 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  align-items: center;
+  font-size: 16px;
+  justify-content: center;
+}
 .AttributeSvg g {
   fill: #000;
 }
@@ -10045,6 +10055,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .AttributeTooltip-Divider-LightMode {
   border-color: rgba(30, 30, 30, 0.64);
+}
+.AttributeTooltip-Mod {
+  white-space: nowrap;
 }
 .ModalItem {
   width: 500px;
@@ -10182,6 +10195,12 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 5px;
   padding: 2px;
   transform: rotate(180deg);
+}
+.ModalItem-Icons-Refills {
+  color: #2e1406;
+  background: #44c97c;
+  border-radius: 5px;
+  padding: 2px;
 }
 .Player-Header {
   display: flex;
@@ -12225,6 +12244,9 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
 }
+.PlayoffSetup-MatchupTeam-Mobile {
+  display: none;
+}
 .PlayoffSetup-MatchupTeam-Group {
   justify-content: space-between;
 }
@@ -12299,7 +12321,10 @@ button:focus-visible {
     width: 100%;
     margin: 0;
   }
-  .PlayoffSetup-MatchupTeam-Location {
+  .PlayoffSetup-MatchupTeam-Mobile {
+    display: block;
+  }
+  .PlayoffSetup-MatchupTeam-Desktop {
     display: none;
   }
   .PlayoffSetup-Navigation {
