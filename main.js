@@ -994,6 +994,15 @@
             title: "Free Refill",
             description: "Good for one Free Refill",
           },
+          {
+            id: "TRIPLE_THREAT",
+            color: "#cc527a",
+            textColor: "#cc527a",
+            background: "#5dbcd2",
+            title: "Triple Threat",
+            description:
+              "This pitcher's strikeouts score Unruns when there are 3 runners on base, a runner on 3rd, or 3 Balls in the count. Each condition met is worth .3 Unruns. At the end of the 3rd Inning, there's a 33.33% chance that this mod will disappear.",
+          },
         ],
       };
     },
@@ -1188,8 +1197,8 @@
       };
       N.context = y;
       var T,
-        S = N,
-        I = o.a.createContext({
+        I = N,
+        S = o.a.createContext({
           sim: void 0,
           standings: void 0,
           season: void 0,
@@ -1240,10 +1249,10 @@
                 }
               );
             }, []),
-            (<I.Provider value={l}>{a}</I.Provider>)
+            (<S.Provider value={l}>{a}</S.Provider>)
           );
         };
-      w.context = I;
+      w.context = S;
       var O = w,
         k = t(7),
         B = {
@@ -1826,9 +1835,9 @@
             A = y[0],
             N = y[1],
             T = Object(r.useState)(void 0),
-            S = Object(s.a)(T, 2),
-            I = S[0],
-            w = S[1],
+            I = Object(s.a)(T, 2),
+            S = I[0],
+            w = I[1],
             B = Object(r.useContext)(O.context),
             C = function (e) {
               var a = e.target.value;
@@ -1853,12 +1862,12 @@
                       })),
                 t && w(t);
             }, []),
-            void 0 === I)
+            void 0 === S)
           )
             return <Ae />;
           var L = Math.min(ve.maxBetTiers[n.maxBetTier].amount, n.coins),
             M = function () {
-              return I ? (A === I.homeTeam ? I.homeOdds : I.awayOdds) : 0.5;
+              return S ? (A === S.homeTeam ? S.homeOdds : S.awayOdds) : 0.5;
             },
             R = function (e) {
               N(e);
@@ -1974,18 +1983,18 @@
                   <be.a.Label>Pick a team:</be.a.Label>
                   <be.a.Group className="ModalForm-Form-Teams" controlId="team">
                     <D
-                      id={I.homeTeam}
-                      color={I.homeTeamSecondaryColor}
+                      id={S.homeTeam}
+                      color={S.homeTeamSecondaryColor}
                       modifier="Home"
-                      name={I.homeTeamNickname}
-                      odds={I.homeOdds}
+                      name={S.homeTeamNickname}
+                      odds={S.homeOdds}
                     />
                     <D
-                      id={I.awayTeam}
-                      color={I.awayTeamSecondaryColor}
+                      id={S.awayTeam}
+                      color={S.awayTeamSecondaryColor}
                       modifier="Away"
-                      name={I.awayTeamNickname}
-                      odds={I.awayOdds}
+                      name={S.awayTeamNickname}
+                      odds={S.awayOdds}
                     />
                   </be.a.Group>
                   <be.a.Group className={"ModalForm-Form-Amount ".concat(A ? "" : "is-hidden")} controlId="amount">
@@ -2037,18 +2046,18 @@
             )
           );
         },
-        Se = (t(105), t(29)),
-        Ie = [
-          { name: "Void", icon: <Se.e />, background: "#67678a", color: "#000000" },
-          { name: "Sun 2", icon: <Se.c />, background: "#fdff9c", color: "#ff3c00" },
-          { name: "Overcast", icon: <Se.a />, background: "#cfcfcf", color: "#737373" },
-          { name: "Rainy", icon: <Se.f />, background: "#348e9e", color: "#0727a8" },
-          { name: "Sandstorm", icon: <Se.g />, background: "#877652", color: "#e0dac3" },
-          { name: "Snowy", icon: <Se.h />, background: "#68969e", color: "#ffffff" },
-          { name: "Acidic", icon: <Se.d />, background: "#92ad58", color: "#235917" },
-          { name: "Solar Eclipse", icon: <Se.i />, background: "#002f3b", color: "#3c6cba" },
-          { name: "Glitter", icon: <Se.j />, background: "#ff94ff", color: "#fff98a" },
-          { name: "Blooddrain", icon: <Se.f />, background: "#52050f", color: "#ff1f3c" },
+        Ie = (t(105), t(29)),
+        Se = [
+          { name: "Void", icon: <Ie.e />, background: "#67678a", color: "#000000" },
+          { name: "Sun 2", icon: <Ie.c />, background: "#fdff9c", color: "#ff3c00" },
+          { name: "Overcast", icon: <Ie.a />, background: "#cfcfcf", color: "#737373" },
+          { name: "Rainy", icon: <Ie.f />, background: "#348e9e", color: "#0727a8" },
+          { name: "Sandstorm", icon: <Ie.g />, background: "#877652", color: "#e0dac3" },
+          { name: "Snowy", icon: <Ie.h />, background: "#68969e", color: "#ffffff" },
+          { name: "Acidic", icon: <Ie.d />, background: "#92ad58", color: "#235917" },
+          { name: "Solar Eclipse", icon: <Ie.i />, background: "#002f3b", color: "#3c6cba" },
+          { name: "Glitter", icon: <Ie.j />, background: "#ff94ff", color: "#fff98a" },
+          { name: "Blooddrain", icon: <Ie.f />, background: "#52050f", color: "#ff1f3c" },
           { name: "Peanuts", icon: <z.nb />, background: "#c4aa70", color: "#423822" },
           { name: "Birds", icon: <z.h />, background: "#45235e", color: "#8e5fad" },
           { name: "Feedback", icon: <z.eb />, background: "#383838", color: "#ff007b" },
@@ -2056,10 +2065,11 @@
           { name: "Black Hole", icon: <z.Yb />, background: "#000000", color: "#00374a" },
           { name: "Coffee", icon: <z.s />, background: "#9a7b4f", color: "#511c00" },
           { name: "Coffee 2", icon: <z.s />, background: "#44c97c", color: "#2e1406" },
+          { name: "Coffee 3s", icon: <z.s />, background: "#5fa9f1", color: "#cc527a" },
         ];
       function we(e) {
         var a = e.type,
-          t = Ie[a].icon;
+          t = Se[a].icon;
         return (
           <div className="WeatherIcon" style={{ color: ke(a), background: Be(a) }}>
             {t}
@@ -2067,13 +2077,13 @@
         );
       }
       function Oe(e) {
-        return Ie[e].name;
+        return Se[e].name;
       }
       function ke(e) {
-        return Ie[e].color;
+        return Se[e].color;
       }
       function Be(e) {
-        return Ie[e].background;
+        return Se[e].background;
       }
       var Ce,
         Le = t(24),
@@ -2262,6 +2272,8 @@
             return <z.H />;
           case "COFFEE_RALLY":
             return <z.s x={t} y={n} className={r} style={l} />;
+          case "TRIPLE_THREAT":
+            return <z.s />;
         }
         return null;
       }
@@ -2505,6 +2517,7 @@
             if (e.complete) (t = "Complete"), (a = "Final" + (e.inning <= 9 ? "" : " (".concat(e.inning + 1, ")")));
             else if (e.started)
               if (e.shame) (a = "Shame"), (t = "Shame");
+              else if (-1 === e.inning) (t = "Live"), (a = "Live - 1 \u25b2");
               else {
                 t = "Live";
                 var l = e.topOfInning ? "\u25b2" : "\u25bc";
@@ -2572,10 +2585,10 @@
         function T() {
           return l.homeScore > l.awayScore ? l.homeTeamSecondaryColor : l.awayTeamSecondaryColor;
         }
-        function S(e) {
+        function I(e) {
           return e === l.homeTeam ? l.homeTeamNickname : e === l.awayTeam ? l.awayTeamNickname : "Null Team";
         }
-        function I(e) {
+        function S(e) {
           return e === l.homeTeam
             ? l.homeTeamSecondaryColor
             : e === l.awayTeam
@@ -2826,12 +2839,12 @@
                   <span
                     className="GameWidget-Outcome-Callout"
                     style={{
-                      color: s.lightMode ? "#000000" : I(A()),
-                      background: s.lightMode ? x(I(A()), 0.5) : "none",
+                      color: s.lightMode ? "#000000" : S(A()),
+                      background: s.lightMode ? x(S(A()), 0.5) : "none",
                       padding: s.lightMode ? "0 4px" : "initial",
                     }}
                   >
-                    {S(A())}
+                    {I(A())}
                   </span>
                    were <span className="GameWidget-Outcome-Callout"> shamed!</span>
                 </div>
@@ -2847,12 +2860,12 @@
                   <span
                     className="GameWidget-Outcome-Callout"
                     style={{
-                      color: s.lightMode ? "#000000" : I(ee.entityId),
-                      background: s.lightMode ? x(I(ee.entityId), 0.5) : "none",
+                      color: s.lightMode ? "#000000" : S(ee.entityId),
+                      background: s.lightMode ? x(S(ee.entityId), 0.5) : "none",
                       padding: s.lightMode ? "0 4px" : "initial",
                     }}
                   >
-                    {S(ee.entityId)}
+                    {I(ee.entityId)}
                   </span>
                    and{" "}
                   {y() == ee.entityId ? (
@@ -3065,7 +3078,7 @@
                     </div>
                   </div>
                   <div className="GameWidget-Upcoming-Body">
-                    <Se.b className="GameWidget-Upcoming-Icon" />
+                    <Ie.b className="GameWidget-Upcoming-Icon" />
                     <div
                       className={
                         "GameWidget-Upcoming-Label" + (s.lightMode ? " GameWidget-Upcoming-Label-LightMode" : "")
@@ -3351,7 +3364,7 @@
                   p(!1);
                 }, 100);
               },
-              S = (
+              I = (
                 <ze.a target={a.current} show={h} placement="bottom">
                   {function (e) {
                     e.placement, e.scheduleUpdate, e.arrowProps, e.outOfBoundaries, e.show;
@@ -3374,7 +3387,7 @@
               );
             return (
               g &&
-                (S = (
+                (I = (
                   <ze.a target={a.current} show={h} placement="top">
                     {function (e) {
                       e.placement, e.scheduleUpdate, e.arrowProps, e.outOfBoundaries, e.show;
@@ -3404,21 +3417,21 @@
                   <a href={l} ref={a} onMouseOver={N} onMouseOut={T} className={c}>
                     {n}
                   </a>
-                  {S}
+                  {I}
                 </o.a.Fragment>
               ) : m ? (
                 <o.a.Fragment>
                   <button ref={a} onMouseOver={N} onMouseOut={T} onClick={m} className={c}>
                     {n}
                   </button>
-                  {S}
+                  {I}
                 </o.a.Fragment>
               ) : (
                 <o.a.Fragment>
                   <div ref={a} onMouseOver={N} onMouseOut={T} className={c}>
                     {n}
                   </div>
-                  {S}
+                  {I}
                 </o.a.Fragment>
               )
             );
@@ -3486,23 +3499,23 @@
             ),
             T = null;
           if (null !== a.favoriteTeam) {
-            var S = n.teams.find(function (e) {
+            var I = n.teams.find(function (e) {
               return e.id === a.favoriteTeam;
             });
-            if (S) {
-              var I = Y(S),
-                w = encodeURIComponent("".concat(S.slogan || "", " ").concat(I, " #blaseball")),
+            if (I) {
+              var S = Y(I),
+                w = encodeURIComponent("".concat(I.slogan || "", " ").concat(S, " #blaseball")),
                 B = "http://twitter.com/intent/tweet?text=".concat(w, "&url=https%3A%2F%2Fblaseball.com");
               T = (
                 <a
                   target="_blank"
                   href={B}
-                  style={{ background: S.mainColor }}
+                  style={{ background: I.mainColor }}
                   className={
                     "Navigation-FavoriteTeamEmoji" + (a.lightMode ? " Navigation-FavoriteTeamEmoji-LightMode" : "")
                   }
                 >
-                  {I}
+                  {S}
                 </a>
               );
             }
@@ -3720,7 +3733,7 @@
             v.current && !v.current.contains(e.target) && m(!1), y.current && !y.current.contains(e.target) && b(!1);
           },
           T = [],
-          S = [];
+          I = [];
         t &&
           t.sim &&
           (t.sim.phase >= 12 && t.sim.phase <= 15
@@ -3732,15 +3745,15 @@
               n &&
                 n.isSignedIn &&
                 (T.push({ text: "Bulletin", path: "/bulletin" }),
-                S.push({
+                I.push({
                   text: "League",
                   path: "/league",
                   subpaths: ["/upcoming", "/standings", "/leaderboard", "/bracket", "/postseason", "/tournament"],
                 }),
-                S.push({ text: "Election", path: "/offseason", locked: !n.unlockedElection }),
-                S.push({ text: "Shop", path: "/shop", locked: !n.unlockedShop }),
-                S.push({ text: "Book", path: "/thebook" }),
-                S.push({ text: "The Hall", path: "/thehall", glow: !0 })))
+                I.push({ text: "Election", path: "/offseason", locked: !n.unlockedElection }),
+                I.push({ text: "Shop", path: "/shop", locked: !n.unlockedShop }),
+                I.push({ text: "Book", path: "/thebook" }),
+                I.push({ text: "The Hall", path: "/thehall", glow: !0 })))
             : 9 !== t.sim.phase
             ? (T.push({
                 text: "League",
@@ -3751,11 +3764,11 @@
                 n.isSignedIn &&
                 (T.push({ text: "Election", path: "/offseason", locked: !n.unlockedElection }),
                 T.push({ text: "Bulletin", path: "/bulletin" }),
-                S.push({ text: "Shop", path: "/shop", locked: !n.unlockedShop }),
-                S.push({ text: "Book", path: "/thebook" }),
-                S.push({ text: "The Hall", path: "/thehall", glow: !0 })))
+                I.push({ text: "Shop", path: "/shop", locked: !n.unlockedShop }),
+                I.push({ text: "Book", path: "/thebook" }),
+                I.push({ text: "The Hall", path: "/thehall", glow: !0 })))
             : T.push({ text: "League", path: "/" }));
-        var I = function () {
+        var S = function () {
             m(!c);
           },
           w = n.isFetching ? null : n.isSignedIn ? <aa /> : <ta />,
@@ -3771,13 +3784,13 @@
                 })}
                 {9 !== (null === (a = t.sim) || void 0 === a ? void 0 : a.phase) ? (
                   <div className="Navigation-Dropdown">
-                    <button onClick={I} type="button" className="Navigation-Button">
+                    <button onClick={S} type="button" className="Navigation-Button">
                       More <X.f />
                     </button>
                     <ea.a in={c} timeout={350} classNames="Navigation-Animation" unmountOnExit={!0}>
                       <div className="Navigation-Dropdown-Content" style={c ? { display: "flex" } : {}}>
                         {c &&
-                          S.map(function (e, a) {
+                          I.map(function (e, a) {
                             return (
                               <ra key={a} path={e.path} glow={e.glow}>
                                 {e.text}
@@ -3802,7 +3815,7 @@
               })}
               <div className="Navigation-Dropdown" ref={v}>
                 <button
-                  onClick={I}
+                  onClick={S}
                   type="button"
                   className={"Navigation-Button" + (n.lightMode ? " Navigation-Button-LightMode" : "")}
                 >
@@ -3816,7 +3829,7 @@
                     style={c ? { display: "flex" } : {}}
                   >
                     {c &&
-                      S.map(function (e, a) {
+                      I.map(function (e, a) {
                         return (
                           <ra key={a} path={e.path} glow={e.glow}>
                             {e.text}
@@ -4254,7 +4267,7 @@
             l ||
             ((n = !0), (l = !0)),
             i < 0 || e.line,
-            t.push(<Sa info={e.info[i]} key={e.info[i].place} showIcons={e.line} monitor={n} />),
+            t.push(<Ia info={e.info[i]} key={e.info[i].place} showIcons={e.line} monitor={n} />),
             (n = !1);
         }
         return (
@@ -4271,7 +4284,7 @@
           </o.a.Fragment>
         );
       }
-      function Sa(e) {
+      function Ia(e) {
         var a,
           t,
           n,
@@ -4298,10 +4311,10 @@
             <div className="Leaderboard-Icon-Wrapper">
               {e.showIcons && [].includes(e.info.place) ? <z.eb className="Leaderboard-Icon-Microphone" /> : null}
               {e.showIcons && p.includes(e.info.place) ? (
-                <Se.i className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Eclipse"} />
+                <Ie.i className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Eclipse"} />
               ) : null}
               {e.showIcons && E.includes(e.info.place) ? (
-                <Se.f className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Blood"} />
+                <Ie.f className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Blood"} />
               ) : null}
               {e.showIcons && h.includes(e.info.place) ? (
                 <z.h className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Birds"} />
@@ -4352,7 +4365,7 @@
           </div>
         ) : null;
       }
-      var Ia;
+      var Sa;
       t(41);
       function wa() {
         var e = Object(r.useContext)(O.context),
@@ -4477,7 +4490,7 @@
           (e[(e.TheHall = 2)] = "TheHall"),
           (e[(e.Standings = 3)] = "Standings"),
           (e[(e.Leaderboard = 4)] = "Leaderboard");
-      })(Ia || (Ia = {}));
+      })(Sa || (Sa = {}));
       var La = function (e) {
         var a,
           t = e.path,
@@ -4488,19 +4501,19 @@
         function c() {
           switch (t) {
             case "/upcoming":
-              return Ia.Upcoming;
+              return Sa.Upcoming;
             case "/leaderboard":
-              return Ia.Leaderboard;
+              return Sa.Leaderboard;
             case "/standings":
-              return Ia.Standings;
+              return Sa.Standings;
             default:
-              return Ia.Live;
+              return Sa.Live;
           }
         }
         if (!n.sim) return null;
         var m,
-          u = c() === Ia.Upcoming ? n.tomorrowSchedule : n.schedule,
-          d = c() === Ia.Upcoming ? n.sim.day + 1 : n.sim.day,
+          u = c() === Sa.Upcoming ? n.tomorrowSchedule : n.schedule,
+          d = c() === Sa.Upcoming ? n.sim.day + 1 : n.sim.day,
           h =
             void 0 === u ? null : (
               <ul>
@@ -4547,21 +4560,21 @@
             ) : (
               <div>
                 <div className="League-Countdown">
-                  {c() === Ia.Upcoming ? <ba dateString={G().toString()} /> : null}
+                  {c() === Sa.Upcoming ? <ba dateString={G().toString()} /> : null}
                 </div>
                 {h}
               </div>
             ),
           E = void 0 !== n && void 0 !== n.sim ? n.sim.season : -1;
         switch (c()) {
-          case Ia.Leaderboard:
+          case Sa.Leaderboard:
             m = <Na />;
             break;
-          case Ia.Standings:
+          case Sa.Standings:
             m = <wa />;
             break;
-          case Ia.Live:
-          case Ia.Upcoming:
+          case Sa.Live:
+          case Sa.Upcoming:
             m = s ? <Ae /> : p;
         }
         return (
@@ -4829,8 +4842,8 @@
           if (!f.sim) return null;
           var N,
             T = y() === Da.Live ? f.schedule : f.tomorrowSchedule,
-            S = y() === Da.Live ? f.postseason.matchups : f.postseason.tomorrowMatchups,
-            I =
+            I = y() === Da.Live ? f.postseason.matchups : f.postseason.tomorrowMatchups,
+            S =
               void 0 === T || (void 0 !== T && T.length <= 0) ? null : (
                 <ul>
                   {null ===
@@ -4864,7 +4877,7 @@
                     })(T)) || void 0 === a
                     ? void 0
                     : a.map(function (e, a) {
-                        return <Ve key={a} data={e} matchups={S} />;
+                        return <Ve key={a} data={e} matchups={I} />;
                       })}
                 </ul>
               ),
@@ -4922,12 +4935,12 @@
                 <Ae />
               ) : (
                 <div>
-                  {null !== I ? (
+                  {null !== S ? (
                     <div>
                       <div className="League-Countdown">
                         {y() === Da.Upcoming ? <ba dateString={G().toString()} /> : null}
                       </div>
-                      <ul>{I}</ul>
+                      <ul>{S}</ul>
                     </div>
                   ) : (
                     <div className={"League-Body" + (g.lightMode ? " League-Body-LightMode" : "")}>
@@ -5656,7 +5669,8 @@
                     {f.idol === e.id ? <z.Pb /> : ""}
                     {e.gameAttr.includes("WIRED") ? <z.s className="ModalItem-Icons-Wired" /> : ""}
                     {e.gameAttr.includes("TIRED") ? <z.s className="ModalItem-Icons-Tired" /> : ""}
-                    {e.permAttr.includes("COFFEE_RALLY") ? <z.s className="ModalItem-Icons-Refills" /> : ""}{" "}
+                    {e.permAttr.includes("COFFEE_RALLY") ? <z.s className="ModalItem-Icons-Refills" /> : ""}
+                    {e.permAttr.includes("TRIPLE_THREAT") ? <z.s className="ModalItem-Icons-Threes" /> : ""}{" "}
                     {null === e || void 0 === e ? void 0 : e.name}
                   </div>
                   <div className="Team-Player-Vibe">
@@ -5700,7 +5714,8 @@
                     {f.idol === e.id ? <z.Pb /> : ""}
                     {e.gameAttr.includes("WIRED") ? <z.s className="ModalItem-Icons-Wired" /> : ""}
                     {e.gameAttr.includes("TIRED") ? <z.s className="ModalItem-Icons-Tired" /> : ""}
-                    {e.permAttr.includes("COFFEE_RALLY") ? <z.s className="ModalItem-Icons-Refills" /> : ""}{" "}
+                    {e.permAttr.includes("COFFEE_RALLY") ? <z.s className="ModalItem-Icons-Refills" /> : ""}
+                    {e.permAttr.includes("TRIPLE_THREAT") ? <z.s className="ModalItem-Icons-Threes" /> : ""}{" "}
                     {null === e || void 0 === e ? void 0 : e.name}
                   </div>
                   <div className="Team-Player-Vibe">
@@ -5740,8 +5755,8 @@
               }
               return [t, n];
             })(g.id, null === t || void 0 === t ? void 0 : t.standings),
-            S = T[1],
-            I = T[0],
+            I = T[1],
+            S = T[0],
             w =
               g.permAttr.length > 0 || g.seasAttr.length > 0 || g.weekAttr.length > 0 || g.gameAttr.length > 0 ? (
                 <o.a.Fragment>
@@ -5766,7 +5781,7 @@
             k = b ? (
               <div className={"Team-Standing" + (f.lightMode ? " Team-Standing-LightMode" : "")}>
                 {" "}
-                {De(I, S)} ,{" "}
+                {De(S, I)} ,{" "}
                 {(function (e, a, t) {
                   if (void 0 === a || void 0 === t || void 0 === a.sim) return "";
                   var n = t.leagues.find(function (e) {
@@ -6112,19 +6127,19 @@
                       },
                     };
                   } else {
-                    var S = y.amount;
+                    var I = y.amount;
                     m = {
                       id: 1,
                       name: "High Roller Snake Oil",
                       description: "This invigorating oil allows you to place larger wagers on each game. Your current limit is ".concat(
-                        S,
+                        I,
                         ", you are maxed out."
                       ),
                       maxed: !0,
                       amount: 0,
                     };
                   }
-                  var I = ve.teamWinCoinTiers[Math.min(e.dailyCoinsTier, ve.teamWinCoinTiers.length - 1)],
+                  var S = ve.teamWinCoinTiers[Math.min(e.dailyCoinsTier, ve.teamWinCoinTiers.length - 1)],
                     w = ve.teamWinCoinTiers[e.dailyCoinsTier + 1];
                   u =
                     void 0 !== w
@@ -6132,7 +6147,7 @@
                           id: 2,
                           name: "Passive Income Potion",
                           description: "This potion will boost the coins you earn when your team wins. Your current income per win is "
-                            .concat(I.amount, ", it would increase to ")
+                            .concat(S.amount, ", it would increase to ")
                             .concat(w.amount, "."),
                           amount: w.price,
                           toast: "Coins per win is now ".concat(w.amount),
@@ -6152,7 +6167,7 @@
                           id: 2,
                           name: "Passive Income Potion",
                           description: "This potion will boost the coins you earn when your team wins. Your current income per win is ".concat(
-                            I.amount,
+                            S.amount,
                             ", you are maxed out."
                           ),
                           maxed: !0,
@@ -6646,7 +6661,7 @@
                 Buy
               </K.a>
             ));
-          var S = Math.floor(n.coins / N);
+          var I = Math.floor(n.coins / N);
           return (
             <ee {...Object.assign({}, e, { className: "BatchBuy" })}>
               <div className="ModalForm-Header">Buy Votes</div>
@@ -6703,7 +6718,7 @@
                       type="range"
                       className="ModalForm-Range"
                       min={1}
-                      max={S}
+                      max={I}
                       value={h}
                       onChange={A}
                       step="1"
@@ -6714,10 +6729,10 @@
                         (n.lightMode ? " ModalForm-Form-Inputs-Amount-Max-LightMode" : "")
                       }
                       onClick={function (e) {
-                        e.preventDefault(), f(S);
+                        e.preventDefault(), f(I);
                       }}
                     >
-                      Max: {S}
+                      Max: {I}
                     </a>
                   </div>
                   <div className="ModalForm-Outcome-Wrapper">
@@ -7162,7 +7177,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function St(e, a) {
+      function It(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -7182,17 +7197,17 @@
         }
         return r;
       }
-      var It = (
+      var St = (
           <path d="M5.495 2h16.505v-2h-17c-1.657 0-3 1.343-3 3v18c0 1.657 1.343 3 3 3h17v-20h-16.505c-1.375 0-1.375-2 0-2zm.505 4h14v6h-6c-1.104 0-2 .896-2 2s.896 2 2 2h6v6h-14v-16zm9 8c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1z" />
         ),
         wt = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = St(e, ["svgRef", "title"]);
+            n = It(e, ["svgRef", "title"]);
           return (
             <svg {...Tt({ viewBox: "0 0 24 24", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
-              {It}
+              {St}
             </svg>
           );
         },
@@ -7494,9 +7509,9 @@
         ) : "forecast_peanuts" === e ? (
           <z.nb className={"Decrees-Option-Icon" + (a.lightMode ? " Decrees-Option-Icon-LightMode" : "")} />
         ) : "forecast_eclipse" === e ? (
-          <Se.i className={"Decrees-Option-Icon" + (a.lightMode ? " Decrees-Option-Icon-LightMode" : "")} />
+          <Ie.i className={"Decrees-Option-Icon" + (a.lightMode ? " Decrees-Option-Icon-LightMode" : "")} />
         ) : "forecast_blooddrain" === e ? (
-          <Se.f className={"Decrees-Option-Icon" + (a.lightMode ? " Decrees-Option-Icon-LightMode" : "")} />
+          <Ie.f className={"Decrees-Option-Icon" + (a.lightMode ? " Decrees-Option-Icon-LightMode" : "")} />
         ) : "forecast_reverb" === e ? (
           <z.g className={"Decrees-Option-Icon" + (a.lightMode ? " Decrees-Option-Icon-LightMode" : "")} />
         ) : "forecast_feedback" === e ? (
@@ -8018,11 +8033,11 @@
             A = y[0],
             N = y[1],
             T = { team1: n.favoriteTeam },
-            S = function (e) {
+            I = function (e) {
               var a = e.target.value;
               b(a);
             },
-            I = n.votes,
+            S = n.votes,
             w = <Ae />;
           return (
             A ||
@@ -8037,7 +8052,7 @@
                 <be.a
                   className="ModalForm-Form"
                   onSubmit={function (e) {
-                    if ((e.preventDefault(), N(!0), g > I)) a("Max vote is ".concat(I, "!"), { appearance: "error" });
+                    if ((e.preventDefault(), N(!0), g > S)) a("Max vote is ".concat(S, "!"), { appearance: "error" });
                     else {
                       var t = { amount: g, entityId: d, voteType: u, data: T };
                       te("/api/vote", JSON.stringify(t))
@@ -8080,14 +8095,14 @@
                         <z.Ub className="ModalForm-Ticket-Icon" />
                         {n.votes}
                       </div>
-                      <be.a.Control type="number" value={g} onChange={S} />
+                      <be.a.Control type="number" value={g} onChange={I} />
                       <be.a.Control
                         type="range"
                         className="ModalForm-Range"
                         min={1}
-                        max={Math.min(n.votes, I)}
+                        max={Math.min(n.votes, S)}
                         value={g}
-                        onChange={S}
+                        onChange={I}
                         step="1"
                       />
                       <a
@@ -8096,10 +8111,10 @@
                           (n.lightMode ? " ModalForm-Form-Inputs-Amount-Max-LightMode" : "")
                         }
                         onClick={function (e) {
-                          e.preventDefault(), b(Math.min(n.votes, I));
+                          e.preventDefault(), b(Math.min(n.votes, S));
                         }}
                       >
-                        Max Vote: {I}
+                        Max Vote: {S}
                       </a>
                     </div>
                   </be.a.Group>
@@ -9950,7 +9965,7 @@
       }
       t(128);
       var Tn = t(76);
-      function Sn() {
+      function In() {
         var e,
           a,
           t,
@@ -10176,7 +10191,7 @@
               </div>
             </div>
           ),
-          S = (
+          I = (
             <div className="Bulletin">
               <div className="Bulletin-Rows">
                 <div className={"Bulletin-Item Bulletin-Big-Right" + (u.lightMode ? " Bulletin-Item-LightMode" : "")}>
@@ -10191,9 +10206,9 @@
               </div>
             </div>
           );
-        return v ? S : T;
+        return v ? I : T;
       }
-      var In,
+      var Sn,
         wn,
         On = (function (e) {
           var a,
@@ -10650,7 +10665,7 @@
           (e[(e.Fire = 10)] = "Fire"),
           (e[(e.Psychic = 11)] = "Psychic"),
           (e[(e.Grass = 12)] = "Grass");
-      })(In || (In = {})),
+      })(Sn || (Sn = {})),
         (function (e) {
           (e[(e.Black = 0)] = "Black"),
             (e[(e.LightAndSweet = 1)] = "LightAndSweet"),
@@ -10689,10 +10704,10 @@
             A = Object(r.useContext)(F.context),
             N = A.user,
             T = A.setUser,
-            S = Object(r.useState)(!1),
-            I = Object(s.a)(S, 2),
-            w = I[0],
-            B = (I[1], Object(r.useState)(1)),
+            I = Object(r.useState)(!1),
+            S = Object(s.a)(I, 2),
+            w = S[0],
+            B = (S[1], Object(r.useState)(1)),
             C = Object(s.a)(B, 2);
           C[0], C[1];
           function L(e) {
@@ -11257,31 +11272,31 @@
                         <div className="Player-Info-Line-Body">
                           {(function (e) {
                             switch (e) {
-                              case In.SingleA:
+                              case Sn.SingleA:
                                 return "A";
-                              case In.DoubleA:
+                              case Sn.DoubleA:
                                 return "AA";
-                              case In.TripleA:
+                              case Sn.TripleA:
                                 return "AAA";
-                              case In.Acid:
+                              case Sn.Acid:
                                 return "Acidic";
-                              case In.Base:
+                              case Sn.Base:
                                 return "Basic";
-                              case In.Oh:
+                              case Sn.Oh:
                                 return "O";
-                              case In.OhNo:
+                              case Sn.OhNo:
                                 return "O No";
-                              case In.Water:
+                              case Sn.Water:
                                 return "H\u2082O";
-                              case In.Electric:
+                              case Sn.Electric:
                                 return "Electric";
-                              case In.Love:
+                              case Sn.Love:
                                 return "Love";
-                              case In.Fire:
+                              case Sn.Fire:
                                 return "Fire";
-                              case In.Psychic:
+                              case Sn.Psychic:
                                 return "Psychic";
-                              case In.Grass:
+                              case Sn.Grass:
                                 return "Grass";
                             }
                             return "Blood?";
@@ -12779,7 +12794,7 @@
           A = Object(r.useState)(""),
           N = Object(s.a)(A, 2),
           T = N[0],
-          S = N[1];
+          I = N[1];
         Object(r.useEffect)(
           function () {
             var e = JSON.parse(n.damageResults);
@@ -12806,12 +12821,12 @@
               )
                 n.awayTeam === e[l].teamTarget && (a = Math.max(a, r(e[l].dmg))),
                   n.homeTeam === e[l].teamTarget && (t = Math.max(t, r(e[l].dmg)));
-              S(o(a)), y(o(t));
+              I(o(a)), y(o(t));
             }
           },
           [n.damageResults]
         );
-        var I = n.topOfInning ? n.awayTeamColor : n.homeTeamColor,
+        var S = n.topOfInning ? n.awayTeamColor : n.homeTeamColor,
           w = n.topOfInning ? n.homeTeamColor : n.awayTeamColor,
           O = (function (e) {
             return e.homeScore;
@@ -12892,7 +12907,7 @@
                 <div className="BossFightWidget-PlayerLine">
                   <div className="BossFightWidget-PlayerStatusIcon BossFightWidget-PlayerStatusIcon--Batting" />
                   <div className="BossFightWidget-PlayerStatusLabel">Batting</div>
-                  <div className="BossFightWidget-PlayerLineNameWrapper" style={{ background: x(I, 0.5) }}>
+                  <div className="BossFightWidget-PlayerLineNameWrapper" style={{ background: x(S, 0.5) }}>
                     {n.homeBatterName || n.awayBatterName ? (
                       <d
                         background={j}
@@ -13707,7 +13722,7 @@
                         <lt />
                       </c.a>
                       <c.a path="/bulletin">
-                        <Sn />
+                        <In />
                       </c.a>
                       <c.a path="/faq">
                         <Mn />
@@ -13852,7 +13867,7 @@
         i.a.render(
           <o.a.StrictMode>
             <ge.ToastProvider autoDismiss={!0} autoDismissTimeout={3e3} placement="bottom-right">
-              <S value={{}}>
+              <I value={{}}>
                 <O value={sr}>
                   <$e value={{}}>
                     <nt value={{}}>
@@ -13864,7 +13879,7 @@
                     </nt>
                   </$e>
                 </O>
-              </S>
+              </I>
             </ge.ToastProvider>
           </o.a.StrictMode>,
           document.getElementById("root")

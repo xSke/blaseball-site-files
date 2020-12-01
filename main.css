@@ -10202,6 +10202,12 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 5px;
   padding: 2px;
 }
+.ModalItem-Icons-Threes {
+  color: #cc527a;
+  background: #5dbcd2;
+  border-radius: 5px;
+  padding: 2px;
+}
 .Player-Header {
   display: flex;
   flex-direction: column;

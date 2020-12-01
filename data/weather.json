@@ -83,5 +83,10 @@
         "name": "Coffee 2",
         "background": "#44c97c",
         "color": "#2e1406"
+    },
+    {
+        "name": "Coffee 3s",
+        "background": "#5fa9f1",
+        "color": "#cc527a"
     }
 ]
