@@ -13252,6 +13252,9 @@ button:focus-visible {
   margin-bottom: 24px;
   font-weight: 700;
 }
+.Auth-Header-Reset {
+  margin-bottom: 6px;
+}
 .Auth-Input {
   color: #fff;
   border: 1px solid #fff;
@@ -13315,6 +13318,10 @@ button:focus-visible {
 .Auth-CTA {
   margin-top: 8px;
   font-size: 12px;
+}
+.Auth-Instructions {
+  font-size: 12px;
+  margin-bottom: 24px;
 }
 .Auth-SignupWrapper {
   display: flex;
