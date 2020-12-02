@@ -1585,19 +1585,21 @@
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (e.prev = 0), (e.next = 3), fetch("".concat(ae, "/auth/reset-password?token=").concat(a));
+                      return (
+                        (e.prev = 0), (e.next = 3), fetch("".concat(ae, "/auth/validate-reset-token?token=").concat(a))
+                      );
                     case 3:
-                      return (t = e.sent), console.log(t), e.abrupt("return", t.status);
-                    case 8:
-                      (e.prev = 8), (e.t0 = e.catch(0)), console.log(e.t0);
-                    case 11:
+                      return (t = e.sent), e.abrupt("return", t.status);
+                    case 7:
+                      (e.prev = 7), (e.t0 = e.catch(0)), console.log(e.t0);
+                    case 10:
                     case "end":
                       return e.stop();
                   }
               },
               e,
               null,
-              [[0, 8]]
+              [[0, 7]]
             );
           })
         )).apply(this, arguments);
