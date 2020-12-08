@@ -6255,7 +6255,7 @@
                     var N = y.amount,
                       T = Ne.maxBetTiers[e.snacks[Ie.MAX_BET] + 1].amount,
                       S = Object.create(e.snacks);
-                    (S[Ie.MAX_BET] = T),
+                    (S[Ie.MAX_BET] += 1),
                       (m = {
                         id: 1,
                         name: "High Roller Snake Oil",
@@ -6287,7 +6287,7 @@
                   var k = Ne.teamWinCoinTiers[Math.min(e.snacks[Ie.TEAM_WIN], Ne.teamWinCoinTiers.length - 1)],
                     I = Ne.teamWinCoinTiers[e.snacks[Ie.TEAM_WIN] + 1],
                     B = Object.create(e.snacks);
-                  (B[Ie.TEAM_WIN] = I),
+                  (B[Ie.TEAM_WIN] += 1),
                     (u =
                       void 0 !== I
                         ? {
@@ -6409,7 +6409,7 @@
                       available: 0 === e.coins,
                       buyUrl: "/api/logBeg",
                       userUpdate: function (t) {
-                        t && (console.log(t), a(Object(w.a)(Object(w.a)({}, e), {}, { coins: e.coins + t.amount })));
+                        t && a(Object(w.a)(Object(w.a)({}, e), {}, { coins: e.coins + t.amount }));
                       },
                     }),
                     l)
@@ -6459,7 +6459,7 @@
                     var G = D.amount,
                       H = F.amount,
                       U = Object.create(e.snacks);
-                    (U[Ie.IDOL_STRIKEOUTS] = U[Ie.IDOL_STRIKEOUTS] + 1),
+                    (U[Ie.IDOL_STRIKEOUTS] += 1),
                       (p = {
                         id: 14,
                         name: "Strikeout Pendant",
@@ -6520,7 +6520,7 @@
                     var _ = J.amount,
                       $ = V.amount,
                       ee = Object.create(e.snacks);
-                    (ee[Ie.IDOL_SHUTOUTS] = ee[Ie.IDOL_SHUTOUTS] + 1),
+                    (ee[Ie.IDOL_SHUTOUTS] += 1),
                       (E = {
                         id: 12,
                         name: "Shutout Pendant",
@@ -6639,7 +6639,7 @@
                     var be = de.amount,
                       ve = he.amount,
                       ye = Object.create(e.snacks);
-                    (ye[Ie.IDOL_HITS] = ye[Ie.IDOL_HITS] + 1),
+                    (ye[Ie.IDOL_HITS] += 1),
                       (d = {
                         id: 11,
                         name: "Hits Pendant",
