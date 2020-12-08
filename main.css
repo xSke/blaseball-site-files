@@ -14148,6 +14148,10 @@ button:focus-visible {
 .Stubs-List {
   margin: 20px 0;
 }
+.Stubs-Cup {
+  font-size: 300px;
+  margin-top: 10px;
+}
 .TheBook-All {
   max-width: 550px;
   margin: auto;
