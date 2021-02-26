@@ -6033,7 +6033,7 @@
                         className={
                           "Header-Social-Follow-Icon" + (n.lightMode ? " Header-Social-Follow-Icon-LightMode" : "")
                         }
-                        href="https://www.instagram.com/blaseball/"
+                        href="https://www.instagram.com/blaseballcomms/"
                         target="_blank"
                       >
                         <za.e />
