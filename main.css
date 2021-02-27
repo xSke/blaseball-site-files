@@ -10350,7 +10350,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-family: "Lora", "Courier New", monospace, serif;
 }
 .Player-Deceased-Icon {
-  background-image: url(/static/media/player_deceased_icon.2febfc5d.svg);
+  background-image: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/player_deceased_icon.2febfc5d.svg);
   background-repeat: no-repeat;
   min-width: 30px;
   height: 30px;
@@ -11854,7 +11854,7 @@ button:focus-visible {
   align-items: center;
 }
 .Leaderboard-Player-Deceased-Icon {
-  background-image: url(/static/media/player_deceased_icon.2febfc5d.svg);
+  background-image: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/player_deceased_icon.2febfc5d.svg);
   background-repeat: no-repeat;
   padding: 15px;
   margin: 5px;
@@ -12715,7 +12715,7 @@ button:focus-visible {
   white-space: nowrap;
 }
 .HallOfFlame-Header-Deceased-Icon {
-  background-image: url(/static/media/player_deceased_icon-blue.abaaf02a.svg);
+  background-image: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/player_deceased_icon-blue.abaaf02a.svg);
   background-repeat: no-repeat;
   padding: 15px;
   margin: 0 10px;
@@ -12927,7 +12927,7 @@ button:focus-visible {
   background-size: contain;
   background-position: 50%;
   background-repeat: no-repeat;
-  background-image: url(/static/media/ticket.3cebc08e.png);
+  background-image: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/ticket.3cebc08e.png);
   -webkit-animation-name: floaty-ticket;
   animation-name: floaty-ticket;
   -webkit-animation-duration: 2s;
@@ -14373,7 +14373,7 @@ button:focus-visible {
   display: flex;
 }
 .BigDeal-Equity {
-  background: url(/static/media/Equity.7cde27ee.png);
+  background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/Equity.7cde27ee.png);
   width: 60%;
   height: 60%;
   background-repeat: no-repeat;
@@ -14739,42 +14739,42 @@ button:focus-visible {
 }
 .BossFightWidget-Weather-Feedback {
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url(/static/media/microphone.20fbca42.png);
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/microphone.20fbca42.png);
   background-size: 100px;
   -webkit-animation: scrollLeftTop 5s linear infinite;
   animation: scrollLeftTop 5s linear infinite;
 }
 .BossFightWidget-Weather-Reverb {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(/static/media/big-wave.56bea94d.png);
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/big-wave.56bea94d.png);
   background-size: 130px;
   -webkit-animation: scrollRight 3s linear infinite;
   animation: scrollRight 3s linear infinite;
 }
 .BossFightWidget-Weather-Peanuts {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/static/media/peanut.959714e3.png);
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/peanut.959714e3.png);
   background-size: 75px;
   -webkit-animation: scrollDown 3s linear infinite;
   animation: scrollDown 3s linear infinite;
 }
 .BossFightWidget-Weather-Birds {
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url(/static/media/bird-claw.2a18ca38.png);
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/bird-claw.2a18ca38.png);
   background-size: 100px;
   -webkit-animation: scrollRightTop 5s linear infinite;
   animation: scrollRightTop 5s linear infinite;
 }
 .BossFightWidget-Weather-Blooddrain {
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url(/static/media/raining.29414524.png);
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/raining.29414524.png);
   background-size: 100px;
   -webkit-animation: scrollRightBottom 5s linear infinite;
   animation: scrollRightBottom 5s linear infinite;
 }
 .BossFightWidget-Weather-SolarEclipse {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(/static/media/spiky-eclipse.3e054d93.png);
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/spiky-eclipse.3e054d93.png);
   background-position: 50%;
   background-repeat: no-repeat;
   -webkit-animation: sizeChange 15s linear infinite;
