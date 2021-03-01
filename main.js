@@ -1044,7 +1044,7 @@
             textColor: "#fffaba",
             background: "#786600",
             title: "Super Idol",
-            description: "This player will earn Fans double the rewards from all Idol Pendants.",
+            description: "This player will earn Fans double the rewards from all Idol Snacks.",
           },
           {
             id: "FIRE_PROTECTOR",
@@ -1207,7 +1207,7 @@
             textColor: "#fffaba",
             background: "#786600",
             title: "Credit to the Team",
-            description: "This player will earn Fans 5x the rewards from all Idol Pendants.",
+            description: "This player will earn Fans 5x the rewards from all Idol Snacks.",
           },
           {
             id: "LOVE",
@@ -8678,7 +8678,7 @@
             F = s[a.id],
             j = (null === F || void 0 === F ? void 0 : F.length) || 0,
             K = j > 0 ? F[0] : void 0;
-          void 0 !== K && (H = K.entityId === a.homeTeam ? a.homeTeamName : a.awayTeamName),
+          void 0 !== K && (H = K.targets[0] === a.homeTeam ? a.homeTeamName : a.awayTeamName),
             (X = (
               <de.a className="GameWidget-Button-Centered">
                 {j > 0 ? (

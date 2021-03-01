@@ -285,7 +285,7 @@
         "textColor": "#fffaba",
         "background": "#786600",
         "title": "Super Idol",
-        "description": "This player will earn Fans double the rewards from all Idol Pendants."
+        "description": "This player will earn Fans double the rewards from all Idol Snacks."
     },
     {
         "id": "FIRE_PROTECTOR",
@@ -445,7 +445,7 @@
         "textColor": "#fffaba",
         "background": "#786600",
         "title": "Credit to the Team",
-        "description": "This player will earn Fans 5x the rewards from all Idol Pendants."
+        "description": "This player will earn Fans 5x the rewards from all Idol Snacks."
     },
     {
         "id": "LOVE",
