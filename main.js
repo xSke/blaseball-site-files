@@ -2205,7 +2205,7 @@
           {
             name: "Fifth Base",
             definition: [
-              "A physical concept that can be adeded to a Team's base path, forcing the Team to run five bases instead of four in order to score.",
+              "A physical concept that can be added to a Team's base path, forcing the Team to run five bases instead of four in order to score.",
             ],
           },
           { name: "Fire Eater", definition: ["A Player that protects their Team from Incinerations."] },
@@ -4390,7 +4390,7 @@
           case F.Emperor:
             return ["IIII", "The Emperor"];
           case F.Heirophant:
-            return ["V", "The Heirophant"];
+            return ["V", "The Hierophant"];
           case F.Lover:
             return ["VI", "The Lover"];
           case F.Chariot:
@@ -6643,7 +6643,7 @@
           case "BLOOD_WINNER":
             return <ve.Gb />;
           case "BLOOD_PITY":
-            return <ve.nc />;
+            return <ve.mc />;
           case "BLOOD_FAITH":
           case "BLOOD_LAW":
           case "BLOOD_CHAOS":
@@ -6656,7 +6656,7 @@
           case "DEBT_THREE":
             return <ve.h />;
           case "MARKED":
-            return <ve.wc />;
+            return <ve.vc />;
           case "PARTY_TIME":
             return <ve.Db />;
           case "LIFE_OF_PARTY":
@@ -6681,7 +6681,7 @@
           case "ELECTRIC":
             return <ve.L />;
           case "DOUBLE_PAYOUTS":
-            return <ve.mc />;
+            return <ve.lc />;
           case "FIRE_PROTECTOR":
             return <ve.P />;
           case "ON_FIRE":
@@ -6731,7 +6731,7 @@
           case "DESTRUCTION":
             return <ve.I />;
           case "FLINCH":
-            return <ve.kc />;
+            return <ve.jc />;
           case "WILD":
             return <ve.Yb />;
           case "LOVE":
@@ -6741,7 +6741,7 @@
           case "CREDIT_TO_THE_TEAM":
             return <ve.qb />;
           case "WALK_IN_THE_PARK":
-            return <ve.uc />;
+            return <ve.tc />;
           case "BIRD_SEED":
             return <ve.X />;
           case "HAUNTED":
@@ -6759,7 +6759,7 @@
           case "TRIBUTE":
             return <ve.zb />;
           case "UNFLAMED":
-            return <ve.sc />;
+            return <ve.rc />;
           case "ESCAPE":
             return <ve.z />;
           case "RETIRED":
@@ -6815,7 +6815,7 @@
           case "UNDERSEA":
             return <ve.sb />;
           case "SWIM_BLADDER":
-            return <ve.lc />;
+            return <ve.kc />;
           case "AMBUSH":
             return <ve.cb />;
           case "KILLER_PIES":
@@ -11002,34 +11002,32 @@
           a,
           l,
           o,
-          s,
-          g,
-          i = Object(c.g)(),
-          d = Object(n.useContext)(L.context).user,
+          s = Object(c.g)(),
+          g = Object(n.useContext)(L.context).user,
+          i = [],
+          d = [],
           B = [],
-          u = [],
-          f = [],
-          v =
+          u =
             e.showIcons &&
             e.info.deceased &&
-            (f.includes(e.info.place) || u.includes(e.info.place) || B.includes(e.info.place));
+            (B.includes(e.info.place) || d.includes(e.info.place) || i.includes(e.info.place));
         return void 0 !== e.info ? (
           <div className={"Leaderboard-Player-Wrapper" + (e.showIcons ? " Leaderboard-Player-Wrapper-WithIcon" : "")}>
             <div className="Leaderboard-Icon-Wrapper">
               {e.showIcons && [].includes(e.info.place) ? <ve.tb className="Leaderboard-Icon-Microphone" /> : null}
-              {e.showIcons && u.includes(e.info.place) ? (
+              {e.showIcons && d.includes(e.info.place) ? (
                 <fe.h className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Eclipse"} />
               ) : null}
-              {e.showIcons && f.includes(e.info.place) ? (
+              {e.showIcons && B.includes(e.info.place) ? (
                 <fe.e className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Blood"} />
               ) : null}
-              {e.showIcons && B.includes(e.info.place) ? (
+              {e.showIcons && i.includes(e.info.place) ? (
                 <ve.m className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Birds"} />
               ) : null}
               {e.showIcons && e.monitor ? <ve.V className="Leaderboard-Icon-Monitor" /> : null}
             </div>
             <m
-              background={i}
+              background={s}
               path={"/player/".concat(null === (A = e.info.player) || void 0 === A ? void 0 : A.id)}
               className={
                 "Leaderboard-Player" +
@@ -11043,22 +11041,20 @@
             >
               <div className="Leaderboard-Player-Name-Container">
                 <div
-                  className={"Leaderboard-Player-Position" + (v ? " Leaderboard-Icon-Confirmed" : "")}
+                  className={"Leaderboard-Player-Position" + (u ? " Leaderboard-Icon-Confirmed" : "")}
                   aria-label={"Rank " + e.info.place}
                   role="text"
                 >
                   {e.info.place}
                 </div>
                 {e.info.deceased ? <div className="Leaderboard-Player-Deceased-Icon" /> : null}
-                {(null === (l = e.info.player) || void 0 === l ? void 0 : l.gameAttr.includes("WIRED")) ? (
-                  <ve.A className="ModalItem-Icons-Wired" />
-                ) : null}
-                {(null === (o = e.info.player) || void 0 === o ? void 0 : o.gameAttr.includes("TIRED")) ? (
-                  <ve.A className="ModalItem-Icons-Tired" />
-                ) : null}
                 <div className="Leaderboard-Player-Name">
-                  {d.idol === (null === (s = e.info.player) || void 0 === s ? void 0 : s.id) ? <ve.jc /> : ""}{" "}
-                  {null === (g = e.info.player) || void 0 === g ? void 0 : g.name}
+                  {g.idol === (null === (l = e.info.player) || void 0 === l ? void 0 : l.id) ? (
+                    <Il className="ModalItem-Icons" />
+                  ) : (
+                    ""
+                  )}{" "}
+                  {null === (o = e.info.player) || void 0 === o ? void 0 : o.name}
                 </div>
               </div>
               <div className="Leaderboard-Team-Container">
@@ -11820,13 +11816,6 @@
                     )}
                 </div>
                 <div className="Header-Social">
-                  <div className="Header-Social-Faq">
-                    <div className="Header-Social-Faq-Inner">
-                      <a className="Header-Social-Faq-Icon" href="/faq" aria-label="FAQ">
-                        <fo.f aria-label="Question Mark Icon" />
-                      </a>
-                    </div>
-                  </div>
                   <div className="Header-Social-Patreon">
                     <div className="Header-Social-Patreon-Inner">
                       <a
@@ -11855,7 +11844,7 @@
                         target="_blank"
                         aria-label="Twitter"
                       >
-                        <fo.h aria-label="Twitter Icon" />
+                        <fo.g aria-label="Twitter Icon" />
                       </a>
                       <a
                         className="Header-Social-Follow-Icon"
@@ -11871,7 +11860,7 @@
                         target="_blank"
                         aria-label="Twitch"
                       >
-                        <fo.g aria-label="Twitch Icon" />
+                        <fo.f aria-label="Twitch Icon" />
                       </a>
                       <a
                         className="Header-Social-Follow-Icon"
@@ -11879,7 +11868,7 @@
                         target="_blank"
                         aria-label="Youtube"
                       >
-                        <fo.i aria-label="Youtube Icon" />
+                        <fo.h aria-label="Youtube Icon" />
                       </a>
                     </div>
                   </div>
@@ -12049,7 +12038,11 @@
                 {e.info.place}
               </div>
               <div className="HallOfFlame-Player-Name">
-                {o.idol === (null === (t = e.info.player) || void 0 === t ? void 0 : t.id) ? <ve.jc /> : ""}{" "}
+                {o.idol === (null === (t = e.info.player) || void 0 === t ? void 0 : t.id) ? (
+                  <Il style={{ width: "25px", height: "25px" }} />
+                ) : (
+                  ""
+                )}{" "}
                 {null === (a = e.info.player) || void 0 === a ? void 0 : a.name}
               </div>
             </div>
@@ -13249,7 +13242,7 @@
           case Aa.ShadowRotation:
             return (
               <span>
-                Shadows <ve.rc />
+                Shadows <ve.qc />
               </span>
             );
         }
@@ -14064,7 +14057,7 @@
                       (e.permAttr.includes("ELSEWHERE") ? " Team-Player-Away" : "")
                     }
                   >
-                    {i.idol === e.id ? <ve.jc /> : ""}
+                    {i.idol === e.id ? <Il style={{ height: "25px", width: "25px" }} /> : ""}
                     {e.gameAttr.includes("WIRED") ? <ve.A className="ModalItem-Icons-Wired" /> : ""}
                     {e.gameAttr.includes("TIRED") ? <ve.A className="ModalItem-Icons-Tired" /> : ""}
                     {e.permAttr.includes("COFFEE_RALLY") ? <ve.A className="ModalItem-Icons-Refills" /> : ""}
@@ -14091,7 +14084,7 @@
                       (e.permAttr.includes("ELSEWHERE") ? " Team-Player-Away" : "")
                     }
                   >
-                    {i.idol === e.id ? <ve.jc /> : ""}
+                    {i.idol === e.id ? <Il style={{ height: "25px", width: "25px" }} /> : ""}
                     {e.gameAttr.includes("WIRED") ? <ve.A className="ModalItem-Icons-Wired" /> : ""}
                     {e.gameAttr.includes("TIRED") ? <ve.A className="ModalItem-Icons-Tired" /> : ""}
                     {e.permAttr.includes("COFFEE_RALLY") ? <ve.A className="ModalItem-Icons-Refills" /> : ""}
@@ -14118,7 +14111,7 @@
                       (e.permAttr.includes("ELSEWHERE") ? " Team-Player-Away" : "")
                     }
                   >
-                    {i.idol === e.id ? <ve.jc /> : ""}
+                    {i.idol === e.id ? <Il style={{ height: "25px", width: "25px" }} /> : ""}
                     {e.gameAttr.includes("WIRED") ? <ve.A className="ModalItem-Icons-Wired" /> : ""}
                     {e.gameAttr.includes("TIRED") ? <ve.A className="ModalItem-Icons-Tired" /> : ""}
                     {e.permAttr.includes("COFFEE_RALLY") ? <ve.A className="ModalItem-Icons-Refills" /> : ""}
@@ -14141,7 +14134,7 @@
                       (e.permAttr.includes("ELSEWHERE") ? " Team-Player-Away" : "")
                     }
                   >
-                    {i.idol === e.id ? <ve.jc /> : ""}
+                    {i.idol === e.id ? <Il style={{ height: "25px", width: "25px" }} /> : ""}
                     {e.gameAttr.includes("WIRED") ? <ve.A className="ModalItem-Icons-Wired" /> : ""}
                     {e.gameAttr.includes("TIRED") ? <ve.A className="ModalItem-Icons-Tired" /> : ""}
                     {e.permAttr.includes("COFFEE_RALLY") ? <ve.A className="ModalItem-Icons-Refills" /> : ""}
@@ -14275,7 +14268,7 @@
                         </div>
                         {void 0 !== i.snacks.Forbidden_Knowledge_Access && M.id === i.favoriteTeam ? (
                           <div className="Team-Section-Shadows">
-                            <ve.rc
+                            <ve.qc
                               onClick={function (e) {
                                 y(!0);
                               }}
@@ -16651,7 +16644,7 @@
                     }
                   >
                     <div className="ModalForm-Ticket-Wrapper">
-                      <ve.pc className="ModalForm-Ticket-Icon" />
+                      <ve.oc className="ModalForm-Ticket-Icon" />
                       {a.snacks[_.VOTES]}
                     </div>
                     <zo.a.Control type="number" value={d} onChange={Q} />
@@ -18757,7 +18750,7 @@
         ) : "home_field_advantage" === e ? (
           <Jr.b className="Decrees-Option-Icon" />
         ) : "team_punish" === e ? (
-          <ve.vc className="Decrees-Option-Icon" />
+          <ve.uc className="Decrees-Option-Icon" />
         ) : "do_nothing" === e ? (
           <ve.Hb className="Decrees-Option-Icon" />
         ) : "confuse_good" === e ? (
@@ -18767,7 +18760,7 @@
         ) : "parallel_world" === e ? (
           <ve.Mb className="Decrees-Option-Icon" />
         ) : "diagonal_world" === e ? (
-          <ve.oc className="Decrees-Option-Icon" />
+          <ve.nc className="Decrees-Option-Icon" />
         ) : "high_filter" === e ? (
           <ve.ob className="Decrees-Option-Icon" />
         ) : "new_kids" === e ? (
@@ -18801,11 +18794,11 @@
         ) : "forecast_feedback" === e ? (
           <ve.tb className="Decrees-Option-Icon" />
         ) : "tactical_nuke" === e ? (
-          <ve.tc className="Decrees-Option-Icon" />
+          <ve.sc className="Decrees-Option-Icon" />
         ) : "eliminator" === e ? (
           <ve.t className="Decrees-Option-Icon" />
         ) : "self_destruct" === e ? (
-          <ve.qc className="Decrees-Option-Icon" />
+          <ve.pc className="Decrees-Option-Icon" />
         ) : "champion_penance" === e ? (
           <Bg className="Decrees-Option-Icon" />
         ) : "champion_belt" === e ? (
@@ -22819,9 +22812,7 @@
                 </div>
               </div>
               <me.a className="Bulletin-Widget-Button" variant="success">
-                <m background={v} path="/league">
-                  Go To Games
-                </m>
+                <i.b to="/league">Go To Games</i.b>
               </me.a>
             </div>
           );

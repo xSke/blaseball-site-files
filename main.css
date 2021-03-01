@@ -10474,6 +10474,10 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: -10px 20px 10px;
   font-family: "Lora", "Courier New", monospace, serif;
 }
+.ModalItem-Icons {
+  width: 25px;
+  height: 25px;
+}
 .ModalItem-Icons-Wired {
   color: #511c00;
   background: #fff;
@@ -12158,6 +12162,9 @@ input[type="number"]::-webkit-outer-spin-button {
     padding: 5px 20px;
     grid-template-columns: 30px 28px 28px auto;
   }
+  .Events-List-Item-Game {
+    grid-template-columns: 28px auto 20px;
+  }
   .Events-List-Desc {
     margin: 0;
   }
@@ -13080,9 +13087,6 @@ button:focus-visible {
   .Advertisement-SiteHeader {
     display: block;
     text-align: center;
-  }
-  .Advertisement-SiteHeader-Callout {
-    white-space: nowrap;
   }
 }
 .Countdown {

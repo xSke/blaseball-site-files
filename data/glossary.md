@@ -145,7 +145,7 @@
 - A possible consequence of Localization Error.
 
 ## Fifth Base
-- A physical concept that can be adeded to a Team's base path, forcing the Team to run five bases instead of four in order to score.
+- A physical concept that can be added to a Team's base path, forcing the Team to run five bases instead of four in order to score.
 
 ## Fire Eater
 - A Player that protects their Team from Incinerations.

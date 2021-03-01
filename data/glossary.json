@@ -280,7 +280,7 @@
     {
         "name": "Fifth Base",
         "definition": [
-            "A physical concept that can be adeded to a Team's base path, forcing the Team to run five bases instead of four in order to score."
+            "A physical concept that can be added to a Team's base path, forcing the Team to run five bases instead of four in order to score."
         ]
     },
     {
