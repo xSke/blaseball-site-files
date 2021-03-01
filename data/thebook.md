@@ -74,9 +74,10 @@
 ## Expansions
 
 ### 1. Arcana
-* a. `||||| |||| |||| ||| || ||||| ||| ||| |||| ||||| |||` the First Reading.
-* b. `||||| | || |||| ||| ||| ||| ||| || ` to each Team for `||| |||| |||| ||||| ||||| |||| |||| |||| |||| ||||`
-* c. `||||| | || |||| ||| ||| ||| ||| || ||| |||| |||| ||||| ||||| |||| |||| |||| |||| |||| || |||| |||| || |||| ||| || || ||||||| ||| | |||| ||| ||||||| ||| |||| || ||||| `
+* a. Major Arcana will be Dealt to Teams during the First Reading.
+* b. Fans may purchase Tarot Spread to receive a Three-Card Spread, which may be read in their Inventory.
+* c. A Seasonal Reading will take place during each Season's Earlsiesta.
+* d. `||| ||||| ||| ||||| |||| |||` Fates `|| ||||| ||||| |||||| |||` the Seasonal Reading.
 
 ### 2. Bury - `|||||||||`
 * a. `||||||||||||||||||||||||` the Dead.
@@ -89,19 +90,26 @@
 * c. `|| ||| |||| ||| ||| |||||||| ||||| |||||||||| ||| || |||| |||| || | |||||||||| |||||| ||||||| ||||||||| ||||||| |||||||`
 
 ### 4. Close - Ballparks
-* a. Teams shall build Ballparks in their Image.
-* b. `||| ||||||| |||| ||| ||| ||||| |||| ||||||| ||| || ||||| |||` Home Games at their Ballpark.
-* c. `||| |||||||||| ||||| ||| ||| ||| |||||||| || ||||| ||| || |||||||| |||||| |||||| | |||| |||| || ||| ||||. ||| |||||| |||| ||| |||| |||| ||| || |||| ||| |||| || |||| |||`
-* d. `||||||||| ||||||| ||||||||| ||| || ||| |||||| |||| ||||| ||| || |||||| |||| |||| ||| || |||| ||| || |||||`
+* PROJECT SUSPENDED, PENDING INVESTIGATION
+* a. `|||||| | |||||||| ||| || |||||||||||, | |||| |||| ||||| ||| ||||. |||| |||||||| ||||| ||||, ||||| ||| |||||| || ||||||||||||| ||||| |||| | ||||||||| || ||||||||||||| ||||||.`
+* b. `|||| ||||||||| ||||| || ||||||||| || ||||| |||||. ||||||||||| ||| |||||| ||| ||||| || ||||. | |||||| || ||||||||||| ||| || ||||| |||| ||||||.`
+* c. `|||| |||||||| ||| ||||||||||| ||||| || |||||||| || ||| |||| ||| |||||||| |||| || ||||||||||||.`
+* d. `|||| |||||||| ||| ||||||||||| ||||| ||||||| ||| |||||||||| ||| ||| ||||||||| |||||| ||| ||||||||||.`
+* e. Renovations may affect `|||||||| ||| |||||||||||| ||||||||, ||||||||| ||| ||| ||||||| ||` Field Conditions, Weather patterns, and Elements of Play.
 
 ### 5. Deface - Wills
 * a. Fans shall bend the Election to their Will.
-* b. `||||| ||||| |||| ||||| |||||||||` the Election, `|||||||| ||| |||| || ||||| |||||||||||||`
-* c. `|| ||| |||||| ||` Fairness, each Team shall win the same number of Wills.`|||| |||||| || ||| ||||||| |||| ||| |||| ||| ||||| |||||||`
+* b. Wills shall be added to the Election, allowing Fans to name Beneficiaries.
+* c. In the spirit of `||||||||`, each Team shall win the same number of Wills. Wills will be decided by random selection from each Team's Votes.
+* d. Wills will be Executed in order of League Standings.
+* e. `|| ||| |||||, | |||| |||| |||||| |` Wont.
 
 ### 6. Eat - Concessions
 * a. The League shall sell Concessions to the Fans.
-* b. Henceforth, `|||||||||| ||| |||| |||| || ||||||| || |||||||| |||||| ||| |||| |||||||||| ||||| ||||| |||` expand their earning potential and betting experience.
+* b. Fans will be provided a Snack Pack to hold their Snacks.
+* c. Snackholders are granted access to Compensation, Betting, Exclusive Areas and Democratic Processes.
+* d. Seasonal Menus will be updated according to Market Trends.
+* e. Snackholders may sell a Snack back to the Food & Beverage Director. `|||| ||||| || | |||||.`
 
 ### 7. Freeze - `||||||||||||||`
 * a. `|| |||||| |||| ||| |||||| |||| |||| |||||| || ||| ||||||| ||` improvements.

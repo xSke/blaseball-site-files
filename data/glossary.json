@@ -1,0 +1,995 @@
+[
+    {
+        "name": "0 No",
+        "definition": [
+            "A bloodborne ability preventing Players from being struck out when there are 0 Balls in the Count."
+        ]
+    },
+    {
+        "name": "Affinity For Crows",
+        "definition": [
+            "A condition that results in a 50% increase in performance during Birds weather."
+        ]
+    },
+    {
+        "name": "Alternate",
+        "definition": [
+            "A Player who substitutes for or alternates with another."
+        ]
+    },
+    {
+        "name": "Apple",
+        "definition": [
+            "A Snack that accesses forbidden knowledge."
+        ]
+    },
+    {
+        "name": "Art Gallery",
+        "definition": [
+            "An exhibition showcasing art created by Fans of the ILB."
+        ]
+    },
+    {
+        "name": "Away Team",
+        "definition": [
+            "A Team playing in a Ballpark that is associated with another Team.",
+            "The Team that bats during the Top of each Inning."
+        ]
+    },
+    {
+        "name": "Ballpark",
+        "definition": [
+            "A venue where Blaseball is played and the location of a Team's home games."
+        ]
+    },
+    {
+        "name": "Base Instincts",
+        "definition": [
+            "A bloodborne ability granting a Player the chance to head past first base when getting walked."
+        ]
+    },
+    {
+        "name": "Bird Seed",
+        "definition": [
+            "Any seed or blend of seeds used for feeding birds.",
+            "A blessing to be used in case of Shelling."
+        ]
+    },
+    {
+        "name": "Black Hole",
+        "definition": [
+            "Weather.",
+            "A celestial object formed when a ||| runs out of fuel.",
+            "A region of Immateria with a gravitational field and |||||||| so strong that nothing can escape it."
+        ]
+    },
+    {
+        "name": "Blaserunning",
+        "definition": [
+            "The act of scoring .2 Runs for your Team whenever you steal a base."
+        ]
+    },
+    {
+        "name": "Bless Off",
+        "definition": [
+            "A denial of divine favor."
+        ]
+    },
+    {
+        "name": "Blood Bath",
+        "definition": [
+            "A canceled event"
+        ]
+    },
+    {
+        "name": "Blooddrain",
+        "definition": [
+            "Weather.",
+            "The act, process, or mode of transfusing ||||||||| |||| from one or more Players to one or more other Players."
+        ]
+    },
+    {
+        "name": "Bottom of the Inning",
+        "definition": [
+            "A portion of an Inning during which the Home Team bats and which concludes when the last of the Home Team's Ins becomes an Out."
+        ]
+    },
+    {
+        "name": "Burger",
+        "definition": [
+            "A Snack that rewards Coins whenever a Player's Idol pitches a shutout."
+        ]
+    },
+    {
+        "name": "Chaotic",
+        "definition": [
+            "A non-physical concept that results in Unstable players hitting 100% better."
+        ]
+    },
+    {
+        "name": "Charm",
+        "definition": [
+            "A bloodborne ability granting a Player the chance to convince an opponent to fail."
+        ]
+    },
+    {
+        "name": "Cheese Board",
+        "definition": [
+            "A Snack that allows participation in Wills."
+        ]
+    },
+    {
+        "name": "Chesapeake Racetrack and Ballpark (or: The Crabitat)",
+        "definition": [
+            "The home ballpark of the Baltimore Crabs."
+        ]
+    },
+    {
+        "name": "Chips",
+        "definition": [
+            "A Snack that rewards Coins whenever a Player's Idol pitches a strikeout."
+        ]
+    },
+    {
+        "name": "Coffee",
+        "definition": [
+            "Weather.",
+            "A beverage made by Percolation, Infusion, or Decoction from the roasted and ground seeds of a coffee plant."
+        ]
+    },
+    {
+        "name": "Coin",
+        "definition": [
+            "A form of currency.",
+            "A form of speech."
+        ]
+    },
+    {
+        "name": "Commissioner",
+        "definition": [
+            "An official representative of the ILB in charge of resolving disputes, negotiating contracts, handling disciplinary matters, promoting the overall league and maintaining order."
+        ]
+    },
+    {
+        "name": "Concessions",
+        "definition": [
+            "A place to spend Coins.",
+            "Things granted, especially in respond to demands."
+        ]
+    },
+    {
+        "name": "Consolidated Debt",
+        "definition": [
+            "A form of Debt Refinancing that entails taking out one loan to pay off many others. This commonly refers to a personal finance process of individuals addressing high Consumer Debt."
+        ]
+    },
+    {
+        "name": "Containment",
+        "definition": [
+            "The action of keeping Instability from chaining to an opponent."
+        ]
+    },
+    {
+        "name": "Credit to the Team",
+        "definition": [
+            "An Idol that earns Fans x5 the rewards for their worship."
+        ]
+    },
+    {
+        "name": "Crunchy",
+        "definition": [
+            "A condition that results in Honey-Roasted Players hitting 100% better and with +200% Power."
+        ]
+    },
+    {
+        "name": "Curse of Crows",
+        "definition": [
+            "A bird curse making a Team or Player the target of attacks, |||||||||||| || |||| || ||||| ||||||||."
+        ]
+    },
+    {
+        "name": "Debt",
+        "definition": [
+            "Something that is owed or due."
+        ]
+    },
+    {
+        "name": "Earlpostseason",
+        "definition": [
+            "The period of the Postseason comprising the Wild Card Round and Round 1."
+        ]
+    },
+    {
+        "name": "Earlseason",
+        "definition": [
+            "The period of the Regular Season spanning from the First Day to the Earlsiesta.",
+            "Days 1-27."
+        ]
+    },
+    {
+        "name": "Earlsiesta",
+        "definition": [
+            "A period of Rest bridging the Earlseason and the Midseason.",
+            "The time of the Seasonal Reading."
+        ]
+    },
+    {
+        "name": "||||",
+        "definition": [
+            "| |||||||||||||| ||||||| |||||||| ||||||| |||||||| ||||||"
+        ]
+    },
+    {
+        "name": "|||||",
+        "definition": [
+            "| |||||||||||||| ||||||| |||||||| ||||||| |||||||| ||||| ||| |||||"
+        ]
+    },
+    {
+        "name": "||||||",
+        "definition": [
+            "| |||||||||||||| ||||||| |||||||| ||||||| |||||||| |||| |||| ||||| ||| |||||"
+        ]
+    },
+    {
+        "name": "||||||||",
+        "definition": [
+            "| |||||||||||||| ||||||| |||||||| ||||||| |||||||| ||||| ||| |||| ||||||| |||||||| |||||"
+        ]
+    },
+    {
+        "name": "Election",
+        "definition": [
+            "A formal group decision-making process by which Fans spend Votes in exchange for divine favor."
+        ]
+    },
+    {
+        "name": "Electric",
+        "definition": [
+            "Of, relating to, or operated by electricity.",
+            "A bloodborne ability capable of zapping away Strikes."
+        ]
+    },
+    {
+        "name": "|||||||||",
+        "definition": [
+            "||| ||||."
+        ]
+    },
+    {
+        "name": "Endseason",
+        "definition": [
+            "A period of Rest bridging the Lateseason and the Earlpostseason.",
+            "The time of Postseason Births."
+        ]
+    },
+    {
+        "name": "Fan",
+        "definition": [
+            "An entity who observes and impacts Blaseball."
+        ]
+    },
+    {
+        "name": "Feedback",
+        "definition": [
+            "Weather.",
+            "The return to the input of a part of the output of a machine, system, or process (as for producing changes in an electronic circuit that improve performance or in an automatic control device that provide self-corrective action).",
+            "A possible consequence of Localization Error."
+        ]
+    },
+    {
+        "name": "Fifth Base",
+        "definition": [
+            "A physical concept that can be adeded to a Team's base path, forcing the Team to run five bases instead of four in order to score."
+        ]
+    },
+    {
+        "name": "Fire Eater",
+        "definition": [
+            "A Player that protects their Team from Incinerations."
+        ]
+    },
+    {
+        "name": "Fireproof",
+        "definition": [
+            "Unable to be incinerated."
+        ]
+    },
+    {
+        "name": "First Born",
+        "definition": [
+            "The firstborn of the Bloodhouse."
+        ]
+    },
+    {
+        "name": "Flickering",
+        "definition": [
+            "Shining unsteadily; wavering.",
+            "Having a higher chance of being Feedbacked."
+        ]
+    },
+    {
+        "name": "Fliickerrriiing",
+        "definition": [
+            "Shining unsteadily, but way more; wavering. (See Flickering)."
+        ]
+    },
+    {
+        "name": "Flinch",
+        "definition": [
+            "A curse resulting in the inability to swing until a strike has been thrown in the At Bat."
+        ]
+    },
+    {
+        "name": "Flute",
+        "definition": [
+            "A Snack that allows a Fan to change their favorite Team."
+        ]
+    },
+    {
+        "name": "Free Refill",
+        "definition": [
+            "The replenishment of an In."
+        ]
+    },
+    {
+        "name": "Friend of Crows",
+        "definition": [
+            "A Pitcher who encourages Birds to attack hitters in Bird weather."
+        ]
+    },
+    {
+        "name": "Gods' Day",
+        "definition": [
+            "A day of Rest and Revision.",
+            "Sunday."
+        ]
+    },
+    {
+        "name": "Gravity",
+        "definition": [
+            "A natural phenomenon by which all things with mass or energy are brought toward one another.",
+            "A modification that muffles Reverb."
+        ]
+    },
+    {
+        "name": "Growth",
+        "definition": [
+            "A bloodborne ability to play better over time, up to a 5% global boost in performance by season's end."
+        ]
+    },
+    {
+        "name": "Hall of Flame",
+        "definition": [
+            "A resting place for Players that have been Incinerated. The Hall of Flame is located || ||| |||||| and is guarded by the Being known as ||| |||||||."
+        ]
+    },
+    {
+        "name": "Hard Boiled",
+        "definition": [
+            "A Player that was boiled a little bit before hatching."
+        ]
+    },
+    {
+        "name": "Haunted",
+        "definition": [
+            "A curse that results in being occassionally Inhabited."
+        ]
+    },
+    {
+        "name": "Heating Up...",
+        "definition": [
+            "A transitory state in which a batter needs one or more consecutive hits to enter Fire mode, but which will dissipate should the batter record an Out."
+        ]
+    },
+    {
+        "name": "Home Field Advantage",
+        "definition": [
+            "A curse that adds one run to a Team's pile at the start of each Home Game."
+        ]
+    },
+    {
+        "name": "Home Team",
+        "definition": [
+            "A team playing in the Ballpark associated with their organization.",
+            "The team that bats during the Bottom of each Inning."
+        ]
+    },
+    {
+        "name": "Honey Roasted",
+        "definition": [
+            "Graced by the Shelled One."
+        ]
+    },
+    {
+        "name": "Hot Dog",
+        "definition": [
+            "A Snack that rewards Coins whenever a Player's Idol hits a home run."
+        ]
+    },
+    {
+        "name": "Idol",
+        "definition": [
+            "A Player that has been Idolized by a Fan, and whose performance will in turn reward the Fan with Coins."
+        ]
+    },
+    {
+        "name": "Idol Immune",
+        "definition": [
+            "Incapable of being Idolized."
+        ]
+    },
+    {
+        "name": "In",
+        "definition": [
+            "A |||||||| concept comprising the building blocks of an Inning."
+        ]
+    },
+    {
+        "name": "Incineration",
+        "definition": [
+            "The destruction of something, especially waste material, by burning."
+        ]
+    },
+    {
+        "name": "Inhabiting",
+        "definition": [
+            "The act of living in or occupying another Player."
+        ]
+    },
+    {
+        "name": "Inning",
+        "definition": [
+            "A division of a game during which the two teams alternate as offense and defense and during which each team is allowed at least two outs while batting.",
+            "A non-zero number of Ins."
+        ]
+    },
+    {
+        "name": "Internet Series",
+        "definition": [
+            "The annual championship series of Internet League Blaseball, contested since Season 6 of the Discipline Era, between the champion teams of the Wild League and the Mild League."
+        ]
+    },
+    {
+        "name": "Inward",
+        "definition": [
+            "| |||||||| ||||||| ||||||||| || |||||||| ||||||| | ||||||| ||||||| |||||||"
+        ]
+    },
+    {
+        "name": "Latepostseason",
+        "definition": [
+            "The period of the Postseason comprising the Wild League Championship Series, the Mild League Championship Series, and the Internet Series."
+        ]
+    },
+    {
+        "name": "Latesiesta",
+        "definition": [
+            "A period of Rest bridging the Midseason and the Lateseason."
+        ]
+    },
+    {
+        "name": "Lateseason",
+        "definition": [
+            "A period of the Regular season beginning at the end of the Latesiesta and ending at the beginning of the Endseason.",
+            "Days 73-99."
+        ]
+    },
+    {
+        "name": "|||||||||",
+        "definition": [
+            "| |||||||| ||||||| |||||||| ||||||| ||||||||||||"
+        ]
+    },
+    {
+        "name": "Liberated",
+        "definition": [
+            "Free from domination, control, or influence.",
+            "A guarantee of extra bases when a Player gets a hit."
+        ]
+    },
+    {
+        "name": "Life of the Party",
+        "definition": [
+            "A state of being in which a Team gets 10% more from their Party Time stats boosts."
+        ]
+    },
+    {
+        "name": "Lineup",
+        "definition": [
+            "The Players on a Team's Roster that have been designated as Hitters.",
+            "The sequence in which these Players take their turns batting against the Pitcher."
+        ]
+    },
+    {
+        "name": "Losses",
+        "definition": [
+            "A non-physical concept determining the total number of games that a Team lost in a Season, as presented in a Team's Record.",
+            "A unit of measurement."
+        ]
+    },
+    {
+        "name": "Lots of Birds",
+        "definition": [
+            "Weather.",
+            "A congregation of feathered friends.",
+            "An infestation of pests."
+        ]
+    },
+    {
+        "name": "Loyalty",
+        "definition": [
+            "A strong feeling of support or allegiance."
+        ]
+    },
+    {
+        "name": "Magmatic",
+        "definition": [
+            "A condition that guarantees a Player will hit a home run at their next At Bat."
+        ]
+    },
+    {
+        "name": "Midseason",
+        "definition": [
+            "The period of the Regular Season beginning at the end of the Earlsiesta and ending at the beginning of the Latesiesta.",
+            "Days 28-72."
+        ]
+    },
+    {
+        "name": "Mild",
+        "definition": [
+            "A curse resulting in the possibility of throwing a Mild Pitch."
+        ]
+    },
+    {
+        "name": "Mild League Championship Series",
+        "definition": [
+            "A postseason series to decide the Mild League representative in the Internet Series."
+        ]
+    },
+    {
+        "name": "Non-Losses",
+        "definition": [
+            "The non-physical concept determining the number of games that a Team did not lose, as presented in a Team's Record.",
+            "A unit of measurement."
+        ]
+    },
+    {
+        "name": "Observed",
+        "definition": [
+            "A state of being watched."
+        ]
+    },
+    {
+        "name": "|||||",
+        "definition": [
+            "A destroyed non-physical concept."
+        ]
+    },
+    {
+        "name": "Out",
+        "definition": [
+            "The absence of an In."
+        ]
+    },
+    {
+        "name": "Outing",
+        "definition": [
+            "The absence of Ins."
+        ]
+    },
+    {
+        "name": "Party Time",
+        "definition": [
+            "When a team is mathematically eliminated from the Postseason and will occassionally receive permanent stats boosts in their games."
+        ]
+    },
+    {
+        "name": "Peanuts",
+        "definition": [
+            "A gift from the Shelled One.",
+            "A snack to be consumed during Blaseball games (not to be confused with Snacks).",
+            "An offering of tribute in the Hall of Flame.",
+            "Weather.",
+            "A unit of significance."
+        ]
+    },
+    {
+        "name": "Pending",
+        "definition": [
+            "Awaiting decision or settlement."
+        ]
+    },
+    {
+        "name": "Percolated",
+        "definition": [
+            "|||| |||||| ||| |||| ||||| ||| |||||||||| |||||||||||"
+        ]
+    },
+    {
+        "name": "Perk",
+        "definition": [
+            "A reward of Percolated energy."
+        ]
+    },
+    {
+        "name": "Pity",
+        "definition": [
+            "To hold back."
+        ]
+    },
+    {
+        "name": "Pizza",
+        "definition": [
+            "A Snack that allows participation in Stadium renovation & flag planting."
+        ]
+    },
+    {
+        "name": "Player",
+        "definition": [
+            "An entity governed by the rules of Blaseball who is competing or has previously competed in the ILB."
+        ]
+    },
+    {
+        "name": "Popcorn",
+        "definition": [
+            "A Snack that increases the payout for each win-object forged by your Team."
+        ]
+    },
+    {
+        "name": "Preseason",
+        "definition": [
+            "The period of time between Gods' Day and the beginning of the Regular Season."
+        ]
+    },
+    {
+        "name": "Receiver",
+        "definition": [
+            "A Player that harmonizes with ||||||| ||||| or Player."
+        ]
+    },
+    {
+        "name": "Red Hot!",
+        "definition": [
+            "A Modification that greatly boosts a batter's hitting and which disappears if the batter gets out."
+        ]
+    },
+    {
+        "name": "Refinanced Debt",
+        "definition": [
+            "A new debt instrument that has better terms than a previous contract and can be used to pay down the previous obligation."
+        ]
+    },
+    {
+        "name": "Released",
+        "definition": [
+            "| ||||| || ||||| ||| |||"
+        ]
+    },
+    {
+        "name": "Repeating",
+        "definition": [
+            "A tendency to Repeat during Reverb weather."
+        ]
+    },
+    {
+        "name": "Returned",
+        "definition": [
+            "The state of having returned from the Void, with the possibility of being called back at the end of each Season."
+        ]
+    },
+    {
+        "name": "Reverb",
+        "definition": [
+            "Weather.",
+            "An electronically produced Echo."
+        ]
+    },
+    {
+        "name": "Reverberating",
+        "definition": [
+            "Having a small chance of batting again after each At Bat."
+        ]
+    },
+    {
+        "name": "Rotation",
+        "definition": [
+            "The Players on a Team's Roster that have been designated as Pitchers.",
+            "The sequence in which these players pitch."
+        ]
+    },
+    {
+        "name": "Run",
+        "definition": [
+            "A physical object forged |||| ||| |||||| || ||| | during a game of blaseball. Often kept in a pile."
+        ]
+    },
+    {
+        "name": "Saboteur",
+        "definition": [
+            "A Player that intentionally fails, usually out of allegiance to another Team."
+        ]
+    },
+    {
+        "name": "Sealant",
+        "definition": [
+            "Blooddrain prevention."
+        ]
+    },
+    {
+        "name": "Shadows",
+        "definition": [
+            "Players on a Team's Roster that have not joined the Lineup or Rotation.",
+            "Deep Dark, Static and Smoke."
+        ]
+    },
+    {
+        "name": "Shame",
+        "definition": [
+            "A physical concept that manifests when the Home Team takes the lead in Inning 9 or later, excluding ||| |||||| ||||."
+        ]
+    },
+    {
+        "name": "Shame Donor",
+        "definition": [
+            "A Team or Player who adds Unruns to a Shamed opponents' future pile."
+        ]
+    },
+    {
+        "name": "|||||||",
+        "definition": [
+            "A state of being trapped inside a big Peanut and unable to bat or pitch."
+        ]
+    },
+    {
+        "name": "Shop",
+        "definition": [
+            "The act of spending Coins in exchange for products."
+        ]
+    },
+    {
+        "name": "Siesta",
+        "definition": [
+            "An Official stoppage of League Play.",
+            "The only time Players may rest."
+        ]
+    },
+    {
+        "name": "Siphon",
+        "definition": [
+            "A Player that steals blood more often in Blooddrain and uses it in more ways."
+        ]
+    },
+    {
+        "name": "Snake Oil",
+        "definition": [
+            "A Snack that increases the amount Fans are able to bet on games."
+        ]
+    },
+    {
+        "name": "Solar Eclipse",
+        "definition": [
+            "Weather.",
+            "The total or partial obscuring of one celestial body by another.",
+            "The obstruction of ||| | by |||| |."
+        ]
+    },
+    {
+        "name": "Somewhat Better",
+        "definition": [
+            "An improvement of 5%."
+        ]
+    },
+    {
+        "name": "Somewhat Worse",
+        "definition": [
+            "A deterioration of 5%."
+        ]
+    },
+    {
+        "name": "Soundproof",
+        "definition": [
+            "Unable to be caught in Feedback's reality flickers."
+        ]
+    },
+    {
+        "name": "Spicy",
+        "definition": [
+            "A Modification that will make a Player Red Hot if they get three consecutive hits."
+        ]
+    },
+    {
+        "name": "Squiddest",
+        "definition": [
+            "A team-wide condition that causes any Player who joins the Team to become Squiddish."
+        ]
+    },
+    {
+        "name": "Squiddish",
+        "definition": [
+            "Of or relating to a squid or the act of being swallowed and regurgitated by a squid or other large cephalopod.",
+            "A condition that, in the event of the Player's Incineration, results in the replacement of the Incinerated Player with another from the Hall of Flame."
+        ]
+    },
+    {
+        "name": "Stable",
+        "definition": [
+            "Unable to be made Unstable."
+        ]
+    },
+    {
+        "name": "Stale Popcorn",
+        "definition": [
+            "A Snack that rewards Coins whenever your Team loses."
+        ]
+    },
+    {
+        "name": "Star",
+        "definition": [
+            "A volumetric unit of congealed care.",
+            "A measurement of potentiality."
+        ]
+    },
+    {
+        "name": "Steal",
+        "definition": [
+            "An exchange of Players in which only one Player is selected for the transaction."
+        ]
+    },
+    {
+        "name": "Subjection",
+        "definition": [
+            "A state of domination, control, or influence."
+        ]
+    },
+    {
+        "name": "Sub-League",
+        "definition": [
+            "A group of teams comprising half of the ILB and who compete against each other in order to win a Wild or Mild Championship."
+        ]
+    },
+    {
+        "name": "Sun 2",
+        "definition": [
+            "Weather.",
+            "A celestial body forged by ||||||||||.",
+            "The source of |||| and ||||."
+        ]
+    },
+    {
+        "name": "Sunflower Seeds",
+        "definition": [
+            "A Snack that rewards Coins whenever a Fan's Idol gets a Hit."
+        ]
+    },
+    {
+        "name": "Super Idol",
+        "definition": [
+            "An Idol that rewards Fans' double for their worship."
+        ]
+    },
+    {
+        "name": "Superallergic",
+        "definition": [
+            "Having an extreme allergy for a specific food, usually peanuts."
+        ]
+    },
+    {
+        "name": "Superyummy",
+        "definition": [
+            "Having an extreme love for a specific food, usually peanuts."
+        ]
+    },
+    {
+        "name": "Swap",
+        "definition": [
+            "An exchange of Players in which both Players are selected in order to determine the transaction."
+        ]
+    },
+    {
+        "name": "Targeted Shame",
+        "definition": [
+            "A curse that adds Unruns to a Shamed Team's pile for the following game."
+        ]
+    },
+    {
+        "name": "||| ||||",
+        "definition": [
+            "Is."
+        ]
+    },
+    {
+        "name": "The Coffee Cup",
+        "definition": [
+            "A Grand Siesta Tournament in which Players compete under the banner of their preferred coffee style."
+        ]
+    },
+    {
+        "name": "The Fourth Strike",
+        "definition": [
+            "An extra strike in each At Bat that may be rewarded to Teams or Players."
+        ]
+    },
+    {
+        "name": "Tired",
+        "definition": [
+            "A condition triggered when a Run is scored, resulting in each Tired player involved in the play (the Scoring Baserunner, Current Batter, or Current Pitcher) making the run-object worth 0.5 less."
+        ]
+    },
+    {
+        "name": "Top of the Inning",
+        "definition": [
+            "The portion of an Inning during which the Away Team bats and which concludes when the last of the Away Team's Ins becomes an Out."
+        ]
+    },
+    {
+        "name": "Traveling",
+        "definition": [
+            "Playing 5% better in Away Games."
+        ]
+    },
+    {
+        "name": "Tribute",
+        "definition": [
+            "An act, statement, or gift that is intended to show gratitude, respect, or admiration.",
+            "Payment made periodically by one individual to another, especially as a sign of dependence.",
+            "| |||||||| ||||| of Team Spirit."
+        ]
+    },
+    {
+        "name": "Unstable",
+        "definition": [
+            "The condition of having a much higher chance of being incinerated during a Solar Eclipse."
+        ]
+    },
+    {
+        "name": "Vote",
+        "definition": [
+            "A form of currency used in the Election and which may be spent on Decrees, Blessings, and Wills.",
+            "A Snack."
+        ]
+    },
+    {
+        "name": "Walk in the Park",
+        "definition": [
+            "The ability to walk to first base on one less Ball."
+        ]
+    },
+    {
+        "name": "Well Rested",
+        "definition": [
+            "A state of no longer being Tired and swapping with a Player from the Shadows."
+        ]
+    },
+    {
+        "name": "Wild League Championship Series",
+        "definition": [
+            "A postseason series to decide the Wild League representative in the Internet Series."
+        ]
+    },
+    {
+        "name": "Will",
+        "definition": [
+            "A democratically determined distribution of Benefits."
+        ]
+    },
+    {
+        "name": "Win",
+        "definition": [
+            "A valuable object forged |||| ||| |||||| || ||| |.",
+            "A unit of measurement."
+        ]
+    },
+    {
+        "name": "Wins",
+        "definition": [
+            "The gross collected win-objects forged |||| ||| |||||| || ||| | in a Season."
+        ]
+    },
+    {
+        "name": "Wired",
+        "definition": [
+            "A condition triggered when a Run is scored, resulting in each Wired Player involved in the pay (the Scoring Baserunner, Current Batter, or Current Pitcher) making the run-object worth 0.5 more."
+        ]
+    }
+]

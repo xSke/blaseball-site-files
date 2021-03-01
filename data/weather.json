@@ -2,91 +2,141 @@
     {
         "name": "Void",
         "background": "#67678a",
-        "color": "#000000"
+        "color": "#000000",
+        "description": "No chance of nothing."
     },
     {
         "name": "Sun 2",
         "background": "#fdff9c",
-        "color": "#ff3c00"
+        "color": "#ffffff",
+        "description": "When a team collects 10 Runs, Sun 2 will collect the Runs, and set a Win upon that team."
     },
     {
         "name": "Overcast",
         "background": "#cfcfcf",
-        "color": "#737373"
+        "color": "#737373",
+        "description": ""
     },
     {
         "name": "Rainy",
         "background": "#348e9e",
-        "color": "#0727a8"
+        "color": "#0727a8",
+        "description": ""
     },
     {
         "name": "Sandstorm",
         "background": "#877652",
-        "color": "#e0dac3"
+        "color": "#e0dac3",
+        "description": ""
     },
     {
         "name": "Snowy",
         "background": "#68969e",
-        "color": "#ffffff"
+        "color": "#ffffff",
+        "description": ""
     },
     {
         "name": "Acidic",
         "background": "#92ad58",
-        "color": "#235917"
+        "color": "#235917",
+        "description": ""
     },
     {
         "name": "Solar Eclipse",
         "background": "#002f3b",
-        "color": "#3c6cba"
+        "color": "#ffffff",
+        "description": "A chance of incinerations."
     },
     {
         "name": "Glitter",
         "background": "#ff94ff",
-        "color": "#fff98a"
+        "color": "#ffffff",
+        "description": "A chance of sparkles."
     },
     {
         "name": "Blooddrain",
         "background": "#52050f",
-        "color": "#ff1f3c"
+        "color": "#ffffff",
+        "description": "A chance of transfusions between players."
     },
     {
         "name": "Peanuts",
-        "background": "#c4aa70",
-        "color": "#423822"
+        "background": "#423519",
+        "color": "#ffffff",
+        "description": "Traces of salt and honey..."
     },
     {
         "name": "Birds",
         "background": "#45235e",
-        "color": "#8e5fad"
+        "color": "#ffffff",
+        "description": "Birds have been to known to eat peanuts and are just generally great friends."
     },
     {
         "name": "Feedback",
         "background": "#383838",
-        "color": "#ff007b"
+        "color": "#ffffff",
+        "description": "A chance of player swaps between teams."
     },
     {
         "name": "Reverb",
         "background": "#443561",
-        "color": "#61b3ff"
+        "color": "#ffffff",
+        "description": "A chance of roster shuffles."
     },
     {
         "name": "Black Hole",
         "background": "#000000",
-        "color": "#00374a"
+        "color": "#ffffff",
+        "description": "When a team collects 10 Runs, Black Hole will swallow the Runs and a Win from the opposing team.",
+        "link": true,
+        "path": "/team/8d87c468-699a-47a8-b40d-cfb73a5660ad"
     },
     {
         "name": "Coffee",
         "background": "#9a7b4f",
-        "color": "#511c00"
+        "color": "#ffffff",
+        "description": "Players may get Wired or Tired."
     },
     {
         "name": "Coffee 2",
-        "background": "#44c97c",
-        "color": "#2e1406"
+        "background": "#0c4022",
+        "color": "#ffffff",
+        "description": "Players may get Free Refills."
     },
     {
         "name": "Coffee 3s",
         "background": "#5fa9f1",
-        "color": "#cc527a"
+        "color": "#ffffff",
+        "description": "Pitchers will become Triple Threats."
+    },
+    {
+        "name": "Flooding",
+        "background": "#465f63",
+        "color": "#ffffff",
+        "description": "An Accident."
+    },
+    {
+        "name": "???",
+        "background": "#ba7b97",
+        "color": "#f2c7e3",
+        "description": "???"
+    },
+    {
+        "name": "???",
+        "background": "#92b3b0",
+        "color": "#d3e3e2",
+        "description": "???"
+    },
+    {
+        "name": "???",
+        "background": "#d3e3e2",
+        "color": "#ff6be6",
+        "description": "???"
+    },
+    {
+        "name": "???",
+        "background": "#0e4e8a",
+        "color": "#ffc400",
+        "description": "???"
     }
 ]
