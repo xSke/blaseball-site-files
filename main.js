@@ -3711,7 +3711,7 @@
         };
       M.context = y;
       var P = M,
-        N = t(7),
+        N = t(6),
         T = {
           id: "",
           email: "",
@@ -3772,7 +3772,7 @@
                                         for (;;)
                                           switch ((e.prev = e.next)) {
                                             case 0:
-                                              ((t = I(A)).isFetching = !1), o(t);
+                                              ((t = I(A)).isFetching = !1), o(Object(N.a)({}, t));
                                             case 3:
                                             case "end":
                                               return e.stop();
@@ -3786,7 +3786,7 @@
                                 })()
                               )
                               .catch(function (e) {
-                                (l.isFetching = !0), o(Object(N.a)({}, l)), console.log(e);
+                                (l.isFetching = !1), o(Object(N.a)({}, l));
                               })
                           );
                         case 2:
@@ -3811,7 +3811,7 @@
             initUser: c,
             setUser: o,
             clearUser: function () {
-              o(T);
+              o(Object(N.a)({}, T));
             },
           };
           return <O.Provider value={g}>{A}</O.Provider>;
@@ -8645,7 +8645,15 @@
                         path={"/player/".concat(a.topOfInning ? a.homePitcher : a.awayPitcher)}
                         className="Widget-PlayerLineName"
                       >
-                        {a.topOfInning ? a.homePitcherName : a.awayPitcherName}
+                        {a.topOfInning ? (
+                          <r.a.Fragment>
+                            {oe(a.homeTeamEmoji)} {a.homePitcherName}
+                          </r.a.Fragment>
+                        ) : (
+                          <r.a.Fragment>
+                            {oe(a.awayTeamEmoji)} {a.awayPitcherName}
+                          </r.a.Fragment>
+                        )}
                       </m>
                     </div>
                   </div>
@@ -8666,7 +8674,15 @@
                           path={"/player/".concat(a.topOfInning ? a.awayBatter : a.homeBatter)}
                           className="Widget-PlayerLineName"
                         >
-                          {a.topOfInning ? a.awayBatterName : a.homeBatterName}
+                          {a.topOfInning ? (
+                            <r.a.Fragment>
+                              {oe(a.awayTeamEmoji)} {a.awayBatterName}
+                            </r.a.Fragment>
+                          ) : (
+                            <r.a.Fragment>
+                              {oe(a.homeTeamEmoji)} {a.homeBatterName}
+                            </r.a.Fragment>
+                          )}
                         </m>
                       ) : (
                         <div className="Widget-PlayerLineName" role="text" aria-label="No One at Bat">
@@ -9100,7 +9116,7 @@
                           style={{ background: o.lightMode ? $(a.awayTeamColor, 0.25) : $(a.awayTeamColor, 0.5) }}
                         >
                           <m background={J} path={"/player/".concat(a.awayPitcher)} className="Widget-PlayerLineName">
-                            {a.awayPitcherName}
+                            {oe(a.awayTeamEmoji)} {a.awayPitcherName}
                             <div className="sr-only" aria-label={"for the " + l.awayTeamName} role="text" />
                           </m>
                         </div>
@@ -9111,7 +9127,7 @@
                           style={{ background: o.lightMode ? $(a.homeTeamColor, 0.25) : $(a.homeTeamColor, 0.5) }}
                         >
                           <m background={J} path={"/player/".concat(a.homePitcher)} className="Widget-PlayerLineName">
-                            {a.homePitcherName}
+                            {oe(a.homeTeamEmoji)} {a.homePitcherName}
                             <div className="sr-only" aria-label={"for the " + l.homeTeamName} role="text" />
                           </m>
                         </div>
@@ -14822,22 +14838,26 @@
           }),
           f = Object(n.useContext)(P.context),
           v = f && f.sim ? f.sim.phase : 99,
-          w = Object(n.useContext)(fs.context),
-          C = Object(n.useContext)(ba.context),
-          E = Object(c.g)(),
-          Q = Object(n.useState)(xs(g, i, f.sim, C, d, w)),
-          b = Object(s.a)(Q, 2),
-          p = b[0],
-          D = b[1],
-          y = Object(n.useState)(Rs(g, p)),
+          w = Object(n.useState)(!1),
+          C = Object(s.a)(w, 2),
+          E = C[0],
+          Q = C[1],
+          b = Object(n.useContext)(fs.context),
+          p = Object(n.useContext)(ba.context),
+          D = Object(c.g)(),
+          y = Object(n.useState)(xs(g, i, f.sim, p, d, b)),
           M = Object(s.a)(y, 2),
           T = M[0],
           z = M[1],
-          O = Object(n.useState)(Y.AD),
+          O = Object(n.useState)(Rs(g, T)),
           I = Object(s.a)(O, 2),
           k = I[0],
           h = I[1],
-          Z = Object(n.useState)({
+          Z = Object(n.useState)(Y.AD),
+          S = Object(s.a)(Z, 2),
+          G = S[0],
+          W = S[1],
+          X = Object(n.useState)({
             id: Y.AD,
             name: "Space Warlord Organ Trading Simulator",
             icon: <div className="Advertisement-ShopItem" />,
@@ -14865,37 +14885,37 @@
             available: !0,
             handleComplete: function () {},
           }),
-          S = Object(s.a)(Z, 2),
-          G = S[0],
-          W = S[1],
-          X = Object(n.useState)(g.snackOrder),
-          H = Object(s.a)(X, 2);
-        H[0], H[1];
+          H = Object(s.a)(X, 2),
+          F = H[0],
+          U = H[1],
+          j = Object(n.useState)(g.snackOrder),
+          K = Object(s.a)(j, 2);
+        K[0], K[1];
         Object(n.useEffect)(
           function () {
-            h(parseInt(e)), U(k), z(Rs(g, p));
+            W(parseInt(e)), x(G), h(Rs(g, T));
           },
           [e]
         ),
           Object(n.useEffect)(
             function () {
-              U(k);
+              x(G);
             },
-            [k, g.coins]
+            [G, g.coins]
           ),
           Object(n.useEffect)(
             function () {
-              U(k), z(Rs(g, p));
+              x(G), h(Rs(g, T));
             },
-            [p]
+            [T]
           ),
           Object(n.useEffect)(
             function () {
-              D(xs(g, i, f.sim, C, d, w));
+              z(xs(g, i, f.sim, p, d, b));
             },
             [g]
           );
-        var F = (function () {
+        var R = (function () {
           var e = Object(u.a)(
             B.a.mark(function e(t) {
               return B.a.wrap(function (e) {
@@ -14961,28 +14981,28 @@
             return e.apply(this, arguments);
           };
         })();
-        function U(e) {
-          p.map(function (A) {
-            A.id !== e || W(A);
+        function x(e) {
+          T.map(function (A) {
+            A.id !== e || U(A);
           });
         }
-        function j() {
-          return (j = Object(u.a)(
+        function V() {
+          return (V = Object(u.a)(
             B.a.mark(function e(t) {
               return B.a.wrap(function (e) {
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      if (!(t.amount <= g.coins || 0 === t.amount)) {
-                        e.next = 11;
+                      if ((Q(!0), !(t.amount <= g.coins || 0 === t.amount))) {
+                        e.next = 13;
                         break;
                       }
-                      if ((R(t), !t.buyUrl)) {
-                        e.next = 7;
+                      if (($(t), !t.buyUrl)) {
+                        e.next = 8;
                         break;
                       }
                       return (
-                        (e.next = 5),
+                        (e.next = 6),
                         Yr(t.buyUrl, JSON.stringify(t.params))
                           .then(
                             (function () {
@@ -15015,7 +15035,7 @@
                             })()
                           )
                           .then(function () {
-                            t.handleComplete && t.handleComplete();
+                            t.handleComplete && t.handleComplete(), Q(!1);
                           })
                           .catch(function (e) {
                             A(e, { appearance: "error" });
@@ -15037,17 +15057,17 @@
                             )
                           )
                       );
-                    case 5:
-                      e.next = 9;
+                    case 6:
+                      e.next = 11;
                       break;
-                    case 7:
-                      t.handleComplete && t.handleComplete(), l({ purchaseItem: void 0 });
-                    case 9:
-                      e.next = 12;
-                      break;
+                    case 8:
+                      t.handleComplete && t.handleComplete(), l({ purchaseItem: void 0 }), Q(!1);
                     case 11:
-                      A("Insufficient coins!", { appearance: "error" });
-                    case 12:
+                      e.next = 15;
+                      break;
+                    case 13:
+                      Q(!1), A("Insufficient coins!", { appearance: "error" });
+                    case 15:
                     case "end":
                       return e.stop();
                   }
@@ -15055,8 +15075,8 @@
             })
           )).apply(this, arguments);
         }
-        function K() {
-          return (K = Object(u.a)(
+        function q() {
+          return (q = Object(u.a)(
             B.a.mark(function e() {
               return B.a.wrap(function (e) {
                 for (;;)
@@ -15115,10 +15135,10 @@
             })
           )).apply(this, arguments);
         }
-        function R(e) {
+        function $(e) {
           l({ purchaseItem: e });
         }
-        function x(e) {
+        function ee(e) {
           return e.maxed
             ? "Maxed Out"
             : e.params && void 0 === e.available && void 0 !== g.snacks[e.params.snackId]
@@ -15131,8 +15151,10 @@
               : "Buy"
             : "Unavailable";
         }
-        function V(e) {
-          return g.coins < e.amount && 0 !== e.amount ? (
+        function Ae(e) {
+          return E ? (
+            <Sr />
+          ) : g.coins < e.amount && 0 !== e.amount ? (
             <Be.a
               placement="top"
               overlay={
@@ -15207,7 +15229,7 @@
               variant="success"
               onClick={function () {
                 !(function () {
-                  K.apply(this, arguments);
+                  q.apply(this, arguments);
                 })();
               }}
             >
@@ -15215,15 +15237,15 @@
             </me.a>
           ) : !e.available || e.maxed || void 0 === e.available ? (
             <me.a className="Shop-Item-Button" type="submit" variant="secondary" disabled={!0}>
-              {x(e)}
+              {ee(e)}
             </me.a>
           ) : (function (e) {
               var A = Object.keys(g.snacks);
               return A.includes(e.params.snackId) || A.length < g.packSize;
             })(e) ? (
             e.modal && void 0 !== e.buyUrl ? (
-              <m className="Shop-Item-Button Shop-Item-Modal" background={E} path={e.buyUrl}>
-                {x(e)}
+              <m className="Shop-Item-Button Shop-Item-Modal" background={D} path={e.buyUrl}>
+                {ee(e)}
               </m>
             ) : (
               <me.a
@@ -15232,11 +15254,11 @@
                 variant="success"
                 onClick={function () {
                   !(function (e) {
-                    j.apply(this, arguments);
+                    V.apply(this, arguments);
                   })(e);
                 }}
               >
-                {x(e)}
+                {ee(e)}
               </me.a>
             )
           ) : (
@@ -15245,9 +15267,9 @@
             </me.a>
           );
         }
-        var q,
-          $ =
-            void 0 !== (null === w || void 0 === w ? void 0 : w.doc) ? (
+        var te,
+          ae =
+            void 0 !== (null === b || void 0 === b ? void 0 : b.doc) ? (
               <div className="Shop-Grid">
                 <div className="Shop-Icons">
                   <div className="Shop-Icons-Section">
@@ -15255,15 +15277,15 @@
                       <div className="Shop-Icons-Section-Title">Snacks</div>
                     </div>
                     <div role="list" className="Shop-Icons-Section">
-                      {p.map(function (e, A) {
+                      {T.map(function (e, A) {
                         return void 0 === e || e.isSponsor ? null : (
                           <button
-                            className={"Shop-Item" + (k === e.id ? " Shop-Item-Highlighted" : "")}
+                            className={"Shop-Item" + (G === e.id ? " Shop-Item-Highlighted" : "")}
                             key={A}
                             onClick={function () {
-                              return h(e.id);
+                              return W(e.id);
                             }}
-                            aria-selected={k === e.id}
+                            aria-selected={G === e.id}
                             aria-label={e.name}
                           >
                             {e.icon}
@@ -15277,19 +15299,19 @@
                       </div>
                       <div className="Shop-Icons-Inventory">
                         <div role="list" className="Shop-Icons-Inventory-Grid">
-                          {T.map(function (e, A) {
+                          {k.map(function (e, A) {
                             return void 0 === e || e.isSponsor || A > g.packSize ? null : (
                               <li className="Shop-Item-WithNum">
                                 {e.id > -1 ? (
                                   <button
                                     className={
-                                      "Shop-Item Shop-Item-Inventory" + (k === e.id ? " Shop-Item-Highlighted" : "")
+                                      "Shop-Item Shop-Item-Inventory" + (G === e.id ? " Shop-Item-Highlighted" : "")
                                     }
                                     key={A}
                                     onClick={function () {
-                                      return h(e.id);
+                                      return W(e.id);
                                     }}
-                                    aria-selected={k === e.id}
+                                    aria-selected={G === e.id}
                                     aria-label={"Slot " + (A + 1) + " " + e.name}
                                   >
                                     {e.icon}
@@ -15313,12 +15335,12 @@
                   </div>
                 </div>
                 <div
-                  className={"Shop-CloseUp" + (G.isSponsor ? " Shop-CloseUp-Sponsor" : "")}
+                  className={"Shop-CloseUp" + (F.isSponsor ? " Shop-CloseUp-Sponsor" : "")}
                   aria-label="Selected Snack"
                 >
-                  <div className="Shop-CloseUp-Icon">{G.icon}</div>
+                  <div className="Shop-CloseUp-Icon">{F.icon}</div>
                   <div>
-                    <div className="Shop-CloseUp-Name">{G.name}</div>
+                    <div className="Shop-CloseUp-Name">{F.name}</div>
                     {(function (e) {
                       if (void 0 === e.params) return null;
                       var A = e.params.snackId;
@@ -15339,14 +15361,14 @@
                           </div>
                         )
                       ) : null;
-                    })(G)}
+                    })(F)}
                   </div>
-                  <div className="Shop-CloseUp-Body">{G.isSponsor ? G.sponsorText : G.description}</div>
-                  {G.isSponsor ? null : (
+                  <div className="Shop-CloseUp-Body">{F.isSponsor ? F.sponsorText : F.description}</div>
+                  {F.isSponsor ? null : (
                     <div className="Shop-Item-ButtonContainer">
-                      {G.sell
-                        ? ((q = G).params.snackId,
-                          void 0 !== g.snacks[q.params.snackId] ? (
+                      {F.sell
+                        ? ((te = F).params.snackId,
+                          void 0 !== g.snacks[te.params.snackId] ? (
                             <div className="Shop-Item-Cost-Sell">
                               {(function (e) {
                                 var A = e.params.snackId,
@@ -15359,13 +15381,15 @@
                                     {t.toString()} <Mr aria-label="coins" className="Shop-Item-Coins" />
                                   </div>
                                 );
-                              })(q)}
+                              })(te)}
                               {(function (e) {
-                                return e.sell && void 0 !== g.snacks[e.params.snackId] ? (
+                                return E ? (
+                                  <Sr />
+                                ) : e.sell && void 0 !== g.snacks[e.params.snackId] ? (
                                   0 === _.GetSellValue(e.params.snackId, g.snacks[e.params.snackId]) ? (
                                     <m
                                       className="Shop-Item-Button Shop-Item-Modal Shop-Item-Button-Sell"
-                                      background={E}
+                                      background={D}
                                       path={"/sell/".concat(e.params.snackId)}
                                     >
                                       Discard
@@ -15373,14 +15397,14 @@
                                   ) : (
                                     <m
                                       className="Shop-Item-Button Shop-Item-Modal Shop-Item-Button-Sell"
-                                      background={E}
+                                      background={D}
                                       path={"/sell/".concat(e.params.snackId)}
                                     >
                                       Sell
                                     </m>
                                   )
                                 ) : null;
-                              })(q)}
+                              })(te)}
                             </div>
                           ) : null)
                         : null}
@@ -15399,10 +15423,10 @@
                                 </div>
                               ) : null;
                             })(e)}
-                            {V(e)}
+                            {Ae(e)}
                           </div>
                         );
-                      })(G)}
+                      })(F)}
                     </div>
                   )}
                 </div>
@@ -15410,8 +15434,8 @@
             ) : (
               <Gr />
             ),
-          ee = (
-            <Oo.a className="Offseason-Description" onSubmit={F} style={{ color: "white" }}>
+          ne = (
+            <Oo.a className="Offseason-Description" onSubmit={R} style={{ color: "white" }}>
               <div className="Shop-CloseUp-Body" style={{ fontSize: "18px", marginTop: "20px" }}>
                 Purchase your Membership Card to unlock the Shop
               </div>
@@ -15439,7 +15463,7 @@
                 in.
               </div>
             ) : null}
-            {g.unlockedShop ? $ : ee}
+            {g.unlockedShop ? ae : ne}
           </div>
         );
       }
@@ -21046,7 +21070,9 @@
             );
           Object(n.useEffect)(
             function () {
-              v() && (void 0 !== d.current && clearTimeout(d.current), (d.current = setTimeout(w, 5e3))),
+              v() &&
+                (void 0 !== d.current && clearTimeout(d.current),
+                (d.current = setTimeout(w, Math.floor(3e4 * Math.random())))),
                 (m.current = p);
             },
             [p]
@@ -26235,14 +26261,12 @@
               ) : null,
             l = null !== A.model ? "Renovation" : "Plant Your Flag",
             o = [];
-          o.push("Spend coins to Contribute to the building & renovating of your team's Ballpark."),
+          o.push("Spend coins to Contribute to the building & renovation of your Team's Ballpark."),
             null === A.model
-              ? (o.push("To break ground on your stadium, choose a Ballpark Prefab as a starting point."),
-                o.push("The Ballpark Prefab with the most coins will be chosen for each team."))
-              : (o.push("The top chosen Renovation(s) will be implemented for your Ballpark."),
-                o.push(
-                  "The more Coins contributed to your Ballpark, the more Renovations will be built, but the more expensive future Renovations will be."
-                )),
+              ? (o.push("To break ground on your Ballpark, choose a Ballpark Prefab as a starting point."),
+                o.push("The Ballpark Prefab with the most coins will be chosen for each Team."))
+              : (o.push("The top chosen Renovation(s) will be implemented for your Team's Ballpark."),
+                o.push("The more Coins contributed to your Ballpark, the more Renovations will be built.")),
             o.push("All Ballpark construction goes into effect in the Latesiesta, after Day 72.");
           var s = <Jo header={l} lines={o} />;
           return (

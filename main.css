@@ -12212,7 +12212,6 @@ input[type="number"]::-webkit-outer-spin-button {
     padding: 10px;
   }
   .Account-Spread-Card {
-    height: 130px;
     font-size: 14px;
     margin: 5px;
     padding: 10px;
@@ -15150,8 +15149,13 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #fff;
   height: 50vh;
+}
+.theme-dark .BigDeal-All {
+  color: #fff;
+}
+.theme-light .BigDeal-All {
+  color: #000;
 }
 .BigDeal-Icon {
   position: relative;
@@ -15160,7 +15164,12 @@ button:focus-visible {
 .BigDeal-Icon-Text {
   text-align: center;
   font-size: 10px;
-  color: #111;
+}
+.theme-dark .BigDeal-Icon-Text {
+  color: #c4c4c4;
+}
+.theme-light .BigDeal-Icon-Text {
+  color: #272727;
 }
 .BigDeal-Icon-0 {
   font-size: 40vh;
@@ -15236,8 +15245,13 @@ button:focus-visible {
   margin: 0 20px;
 }
 .BigDeal-RedLine--1 {
-  color: #fff;
   font-style: italic;
+}
+.theme-dark .BigDeal-RedLine--1 {
+  color: #fff;
+}
+.theme-light .BigDeal-RedLine--1 {
+  color: #000;
 }
 .BigDeal-RedLine-0 {
   color: red;
@@ -15265,8 +15279,13 @@ button:focus-visible {
   font-weight: 700;
 }
 .BigDeal-Message-Style--1 {
-  color: #fff;
   font-style: italic;
+}
+.theme-dark .BigDeal-Message-Style--1 {
+  color: #fff;
+}
+.theme-light .BigDeal-Message-Style--1 {
+  color: #000;
 }
 .BigDeal-Message-Style-0 {
   color: red;
