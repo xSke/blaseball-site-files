@@ -144,11 +144,14 @@
 - The return to the input of a part of the output of a machine, system, or process (as for producing changes in an electronic circuit that improve performance or in an automatic control device that provide self-corrective action).
 - A possible consequence of Localization Error.
 
+## Fielder's Choice
+- A Play in which the` |||||||| |||||| |||||||| || ||| ||| ||||||| |||||| `allows the Hitter to reach first base safely.
+
 ## Fifth Base
 - A physical concept that can be added to a Team's base path, forcing the Team to run five bases instead of four in order to score.
 
 ## Fire Eater
-- A Player that protects their Team from Incinerations.
+- A Player that, in the event of attempted incineration, will instead` ||||||| ||| ||||| ||| `become Magmatic.
 
 ## Fireproof
 - Unable to be incinerated.
@@ -243,8 +246,7 @@
 - A period of Rest bridging the Midseason and the Lateseason.
 
 ## Lateseason
-- A period of the Regular season beginning at the end of the Latesiesta and ending at the beginning of the Endseason.
-- Days 73-99.
+- The period of the Regular Season beginning at the end of the Latesiesta and ending at the beginning of the Endseason.
 
 ## `|||||||||`
 - `| |||||||| ||||||| |||||||| ||||||| ||||||||||||`
@@ -515,5 +517,5 @@
 - The gross collected win-objects forged` |||| ||| |||||| || ||| | `in a Season.
 
 ## Wired
-- A condition triggered when a Run is scored, resulting in each Wired Player involved in the pay (the Scoring Baserunner, Current Batter, or Current Pitcher) making the run-object worth 0.5 more.
+- A condition triggered when a Run is scored, resulting in each Wired Player involved in the play (the Scoring Baserunner, Current Batter, or Current Pitcher) making the run-object worth 0.5 more.
 
