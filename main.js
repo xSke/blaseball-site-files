@@ -4438,8 +4438,8 @@
       }
       var me = t(9),
         de = t(103),
-        Be = (t(137), t(22)),
-        ue = t(21),
+        Be = (t(137), t(21)),
+        ue = t(20),
         fe = t(44),
         ve = t(33);
       function we() {
@@ -14108,7 +14108,7 @@
           J = w.bench.map(function (e) {
             return (
               <m background={l} path={"/player/".concat(e.id)} className="Team-Player-Line Team-Player-Line-Shadows">
-                <div className="Team-Player-Ratings">{Ss(e)}</div>
+                <div className="Team-Player-Ratings">{Gs(e)}</div>
                 <div
                   className={
                     "Team-Player-Header" +
@@ -14131,7 +14131,7 @@
           G = w.bullpen.map(function (e) {
             return (
               <m background={l} path={"/player/".concat(e.id)} className="Team-Player-Line Team-Player-Line-Shadows">
-                <div className="Team-Player-Ratings">{Gs(e)}</div>
+                <div className="Team-Player-Ratings">{Ss(e)}</div>
                 <div
                   className={
                     "Team-Player-Header" +
@@ -15267,8 +15267,9 @@
             </me.a>
           );
         }
-        var te,
-          ae =
+        var te = g.favoriteTeam && !ne(g.favoriteTeam, p);
+        var ae,
+          re =
             void 0 !== (null === b || void 0 === b ? void 0 : b.doc) ? (
               <div className="Shop-Grid">
                 <div className="Shop-Icons">
@@ -15367,26 +15368,32 @@
                   {F.isSponsor ? null : (
                     <div className="Shop-Item-ButtonContainer">
                       {F.sell
-                        ? ((te = F).params.snackId,
-                          void 0 !== g.snacks[te.params.snackId] ? (
+                        ? ((ae = F).params.snackId,
+                          void 0 !== g.snacks[ae.params.snackId] ? (
                             <div className="Shop-Item-Cost-Sell">
                               {(function (e) {
                                 var A = e.params.snackId,
                                   t = _.GetSellValue(A, g.snacks[A]);
-                                return 0 === t ? null : (
-                                  <div className="Shop-Item-Cost" role="text">
-                                    <span className="Shop-Item-Cost-Symbol" aria-label="plus">
-                                      +
-                                    </span>
-                                    {t.toString()} <Mr aria-label="coins" className="Shop-Item-Coins" />
-                                  </div>
+                                return (
+                                  te &&
+                                    e.id === Y.FLUTES &&
+                                    (t = g.snacks[_.FLUTES] < 2 ? 0 : _.GetSellValue(A, g.snacks[A] - 1)),
+                                  0 === t ? null : (
+                                    <div className="Shop-Item-Cost" role="text">
+                                      <span className="Shop-Item-Cost-Symbol" aria-label="plus">
+                                        +
+                                      </span>
+                                      {t.toString()} <Mr aria-label="coins" className="Shop-Item-Coins" />
+                                    </div>
+                                  )
                                 );
-                              })(te)}
+                              })(ae)}
                               {(function (e) {
                                 return E ? (
                                   <Sr />
                                 ) : e.sell && void 0 !== g.snacks[e.params.snackId] ? (
-                                  0 === _.GetSellValue(e.params.snackId, g.snacks[e.params.snackId]) ? (
+                                  0 === _.GetSellValue(e.params.snackId, g.snacks[e.params.snackId]) ||
+                                  (te && e.id === Y.FLUTES && g.snacks[_.FLUTES] < 2) ? (
                                     <m
                                       className="Shop-Item-Button Shop-Item-Modal Shop-Item-Button-Sell"
                                       background={D}
@@ -15404,7 +15411,7 @@
                                     </m>
                                   )
                                 ) : null;
-                              })(te)}
+                              })(ae)}
                             </div>
                           ) : null)
                         : null}
@@ -15434,7 +15441,7 @@
             ) : (
               <Gr />
             ),
-          ne = (
+          le = (
             <Oo.a className="Offseason-Description" onSubmit={R} style={{ color: "white" }}>
               <div className="Shop-CloseUp-Body" style={{ fontSize: "18px", marginTop: "20px" }}>
                 Purchase your Membership Card to unlock the Shop
@@ -15463,7 +15470,7 @@
                 in.
               </div>
             ) : null}
-            {g.unlockedShop ? ae : ne}
+            {g.unlockedShop ? re : le}
           </div>
         );
       }
@@ -15560,21 +15567,22 @@
               }),
           void 0 !== e.favoriteTeam && null !== e.favoriteTeam && "" !== e.favoriteTeam)
         ) {
-          var c = _.FLUTES;
-          void 0 !== e.snacks[c]
+          var c = ne(e.favoriteTeam, a) || void 0 !== e.snacks[_.FLUTES] ? 2e3 : 0,
+            g = _.FLUTES;
+          void 0 !== e.snacks[g]
             ? s.push({
                 id: Y.FLUTES,
                 name: "Flute",
                 description:
                   "Cheers. Change your favorite team. Your former team will be disappointed, but understand.",
-                amount: 2e3,
-                toast: "You now own ".concat(e.snacks[c] + 2, " flutes."),
+                amount: c,
+                toast: "You now own ".concat(e.snacks[g] + 2, " flutes."),
                 available: !0,
                 icon: <bt className="Shop-Item-Icon" />,
                 buyUrl: "/api/buySnackNoUpgrade",
-                params: { snackId: c },
+                params: { snackId: g },
                 userUpdate: function () {
-                  (e.trackers.SNACKS_BOUGHT += 1), (e.snacks[c] += 1), (e.coins -= 2e3), A(Object(N.a)({}, e));
+                  (e.trackers.SNACKS_BOUGHT += 1), (e.snacks[g] += 1), (e.coins -= c), A(Object(N.a)({}, e));
                 },
                 sell: !0,
               })
@@ -15583,105 +15591,105 @@
                 name: "Flutes",
                 description:
                   "Cheers. Change your favorite team. Your former team will be disappointed, but understand.",
-                amount: 2e3,
+                amount: c,
                 toast: "You now own a flute.",
                 available: !0,
                 icon: <bt className="Shop-Item-Icon" />,
                 buyUrl: "/api/buySnackNoUpgrade",
-                params: { snackId: c },
+                params: { snackId: g },
                 userUpdate: function () {
                   (e.SNACKS_BOUGHT += 1),
-                    (e.snacks[c] = 1),
-                    (e.snackOrder = _.InsertIntoSnackOrder(c, e.snackOrder)),
-                    (e.coins -= 2e3),
+                    (e.snacks[g] = 1),
+                    (e.snackOrder = _.InsertIntoSnackOrder(g, e.snackOrder)),
+                    (e.coins -= c),
                     A(Object(N.a)({}, e));
                 },
               });
         }
         if (void 0 !== e.snacks[_.MAX_BET]) {
-          var g = _.MAX_BET,
-            i = V.maxBetTiers[Math.min(e.snacks[g], V.maxBetTiers.length - 1)],
-            m = V.maxBetTiers[e.snacks[g] + 1];
-          if (void 0 !== m) {
-            var d = i.amount,
-              B = V.maxBetTiers[e.snacks[g] + 1].amount;
+          var i = _.MAX_BET,
+            m = V.maxBetTiers[Math.min(e.snacks[i], V.maxBetTiers.length - 1)],
+            d = V.maxBetTiers[e.snacks[i] + 1];
+          if (void 0 !== d) {
+            var B = m.amount,
+              u = V.maxBetTiers[e.snacks[i] + 1].amount;
             s.push({
               id: Y.MAX_BET,
               name: "Snake Oil",
               description: "This invigorating oil allows you to place larger wagers on games. Your current limit is "
-                .concat(d, ", it would increase to ")
-                .concat(B, "."),
-              amount: m.price,
-              toast: "Max Bet is now ".concat(B, "!"),
+                .concat(B, ", it would increase to ")
+                .concat(u, "."),
+              amount: d.price,
+              toast: "Max Bet is now ".concat(u, "!"),
               available: !0,
               icon: <jA className="Shop-Item-Icon" />,
               buyUrl: "/api/buySnack",
-              params: { snackId: g },
+              params: { snackId: i },
               userUpdate: function () {
-                (e.trackers.SNACK_UPGRADES += 1), (e.snacks[g] += 1), (e.coins -= m.price), A(Object(N.a)({}, e));
+                (e.trackers.SNACK_UPGRADES += 1), (e.snacks[i] += 1), (e.coins -= d.price), A(Object(N.a)({}, e));
               },
               sell: !0,
             });
           } else {
-            var u = i.amount;
+            var f = m.amount;
             s.push({
               id: Y.MAX_BET,
               name: "Snake Oil",
               description: "This invigorating oil allows you to place larger wagers on games. Your current limit is ".concat(
-                u,
+                f,
                 ", you are maxed out."
               ),
               icon: <jA className="Shop-Item-Icon" />,
               maxed: !0,
               amount: 0,
               sell: !0,
-              params: { snackId: g },
+              params: { snackId: i },
             });
           }
         } else {
-          var f = _.MAX_BET,
-            v = V.maxBetTiers[0];
+          var v = _.MAX_BET,
+            w = V.maxBetTiers[0];
           V.maxBetTiers[1];
           s.push({
             id: Y.MAX_BET,
             name: "Snake Oil",
             description: "This invigorating oil allows you to place wagers on games.",
-            amount: v.price,
-            toast: "Max Bet is now ".concat(v.amount, "!"),
+            amount: w.price,
+            toast: "Max Bet is now ".concat(w.amount, "!"),
             available: !0,
             icon: <jA className="Shop-Item-Icon" />,
             buyUrl: "/api/buySnack",
-            params: { snackId: f },
+            params: { snackId: v },
             userUpdate: function () {
               (e.trackers.SNACKS_BOUGHT += 1),
-                (e.snacks[f] = 0),
-                (e.snackOrder = _.InsertIntoSnackOrder(f, e.snackOrder)),
-                (e.coins -= v.price),
+                (e.snacks[v] = 0),
+                (e.snackOrder = _.InsertIntoSnackOrder(v, e.snackOrder)),
+                (e.coins -= w.price),
                 A(Object(N.a)({}, e));
             },
           });
         }
         if (void 0 !== e.snacks[_.TEAM_WIN]) {
-          var w = _.TEAM_WIN,
-            C = V.teamWinCoinTiers[Math.min(e.snacks[w], V.teamWinCoinTiers.length - 1)],
-            E = V.teamWinCoinTiers[e.snacks[w] + 1];
-          if (void 0 !== E) {
-            var Q = C.amount,
-              b = E.amount;
+          var C = _.TEAM_WIN,
+            E = V.teamWinCoinTiers[Math.min(e.snacks[C], V.teamWinCoinTiers.length - 1)],
+            Q = V.teamWinCoinTiers[e.snacks[C] + 1];
+          if (void 0 !== Q) {
+            var b = E.amount,
+              p = Q.amount;
             s.push({
               id: Y.TEAM_WIN,
               name: "Popcorn",
               description: "Mmm. Earn "
-                .concat(b, " coins when your Team wins. You currently earn ")
-                .concat(Q, " coins per win."),
-              amount: E.price,
-              toast: "Coins per win is now ".concat(b),
+                .concat(p, " coins when your Team wins. You currently earn ")
+                .concat(b, " coins per win."),
+              amount: Q.price,
+              toast: "Coins per win is now ".concat(p),
               icon: <XA className="Shop-Item-Icon" />,
               available: !0,
               buyUrl: "/api/buySnack",
-              params: { snackId: w },
+              params: { snackId: C },
               userUpdate: function () {
-                (e.trackers.SNACK_UPGRADES += 1), (e.snacks[w] += 1), (e.coins -= E.price), A(Object(N.a)({}, e));
+                (e.trackers.SNACK_UPGRADES += 1), (e.snacks[C] += 1), (e.coins -= Q.price), A(Object(N.a)({}, e));
               },
               sell: !0,
             });
@@ -15689,343 +15697,343 @@
             s.push({
               id: Y.TEAM_WIN,
               name: "Popcorn",
-              description: "Mmm. Earn ".concat(C.amount, " coins when your Team wins. You are maxed out."),
+              description: "Mmm. Earn ".concat(E.amount, " coins when your Team wins. You are maxed out."),
               maxed: !0,
               icon: <XA className="Shop-Item-Icon" />,
               amount: 0,
               sell: !0,
-              params: { snackId: w },
+              params: { snackId: C },
             });
         } else {
-          var p = _.TEAM_WIN,
-            D = V.teamWinCoinTiers[0];
+          var D = _.TEAM_WIN,
+            y = V.teamWinCoinTiers[0];
           s.push({
             id: Y.TEAM_WIN,
             name: "Popcorn",
-            description: "Mmm. Earn ".concat(D.amount, " coins when your Team wins."),
-            amount: D.price,
-            toast: "Coins per win is now ".concat(D.amount),
+            description: "Mmm. Earn ".concat(y.amount, " coins when your Team wins."),
+            amount: y.price,
+            toast: "Coins per win is now ".concat(y.amount),
             icon: <XA className="Shop-Item-Icon" />,
             available: !0,
             buyUrl: "/api/buySnack",
-            params: { snackId: p },
+            params: { snackId: D },
             userUpdate: function () {
               (e.trackers.SNACKS_BOUGHT += 1),
-                (e.snacks[p] = 0),
-                (e.snackOrder = _.InsertIntoSnackOrder(p, e.snackOrder)),
-                (e.coins -= D.price),
+                (e.snacks[D] = 0),
+                (e.snackOrder = _.InsertIntoSnackOrder(D, e.snackOrder)),
+                (e.coins -= y.price),
                 A(Object(N.a)({}, e));
             },
           });
         }
         if (void 0 !== e.snacks[_.TEAM_LOSS]) {
-          var y = _.TEAM_LOSS,
-            M = V.teamLossCoinTiers[Math.min(e.snacks[y], V.teamLossCoinTiers.length - 1)],
-            P = V.teamLossCoinTiers[e.snacks[y] + 1];
-          if (void 0 !== P) {
-            var T = M.amount,
-              z = P.amount;
+          var M = _.TEAM_LOSS,
+            P = V.teamLossCoinTiers[Math.min(e.snacks[M], V.teamLossCoinTiers.length - 1)],
+            T = V.teamLossCoinTiers[e.snacks[M] + 1];
+          if (void 0 !== T) {
+            var z = P.amount,
+              O = T.amount;
             s.push({
               id: Y.TEAM_LOSS,
               name: "Stale Popcorn",
               description: "Hmm. Earn "
-                .concat(z, " coins when your Team loses. You currently earn ")
-                .concat(T, " coins per loss."),
-              amount: P.price,
-              toast: "Coins per Idol run is now ".concat(z),
+                .concat(O, " coins when your Team loses. You currently earn ")
+                .concat(z, " coins per loss."),
+              amount: T.price,
+              toast: "Coins per Idol run is now ".concat(O),
               available: !0,
               buyUrl: "/api/buySnack",
               icon: <Pt className="Shop-Item-Icon" />,
-              params: { snackId: y },
+              params: { snackId: M },
               userUpdate: function () {
-                (e.trackers.SNACK_UPGRADES += 1), (e.snacks[y] += 1), (e.coins -= P.price), A(Object(N.a)({}, e));
+                (e.trackers.SNACK_UPGRADES += 1), (e.snacks[M] += 1), (e.coins -= T.price), A(Object(N.a)({}, e));
               },
               sell: !0,
             });
           } else {
-            var O = M.amount;
+            var I = P.amount;
             s.push({
               id: Y.TEAM_LOSS,
               name: "Stale Popcorn",
-              description: "Hmm. Earn ".concat(O, " coins when your Team loses. You are maxed out."),
+              description: "Hmm. Earn ".concat(I, " coins when your Team loses. You are maxed out."),
               maxed: !0,
               icon: <Pt className="Shop-Item-Icon" />,
               amount: 0,
               sell: !0,
-              params: { snackId: y },
+              params: { snackId: M },
             });
           }
         } else {
-          var I = _.TEAM_LOSS,
-            k = V.teamLossCoinTiers[0],
-            L = "Hmm. Earn ".concat(k.amount, " coins when your Team loses.");
+          var k = _.TEAM_LOSS,
+            L = V.teamLossCoinTiers[0],
+            h = "Hmm. Earn ".concat(L.amount, " coins when your Team loses.");
           s.push({
             id: Y.TEAM_LOSS,
             name: "Stale Popcorn",
-            description: L,
-            amount: k.price,
+            description: h,
+            amount: L.price,
             toast: "You bought Stale Popcorn.",
             available: !0,
             buyUrl: "/api/buySnack",
             icon: <Pt className="Shop-Item-Icon" />,
-            params: { snackId: I },
+            params: { snackId: k },
             userUpdate: function () {
               (e.trackers.SNACKS_BOUGHT += 1),
-                (e.snacks[I] = 0),
-                (e.snackOrder = _.InsertIntoSnackOrder(I, e.snackOrder)),
-                (e.coins -= k.price),
+                (e.snacks[k] = 0),
+                (e.snackOrder = _.InsertIntoSnackOrder(k, e.snackOrder)),
+                (e.coins -= L.price),
                 A(Object(N.a)({}, e));
             },
           });
         }
         if (void 0 !== e.snacks[_.IDOL_STRIKEOUTS]) {
-          var h = _.IDOL_STRIKEOUTS,
-            Z = V.idolStrikeoutsTiers[Math.min(e.snacks[h], V.idolStrikeoutsTiers.length - 1)],
-            J = V.idolStrikeoutsTiers[e.snacks[h] + 1];
-          if (void 0 !== J) {
-            var S = Z.amount,
-              G = J.amount;
-            (Object.create(e.snacks)[h] = e.snacks[h] + 1),
+          var Z = _.IDOL_STRIKEOUTS,
+            J = V.idolStrikeoutsTiers[Math.min(e.snacks[Z], V.idolStrikeoutsTiers.length - 1)],
+            S = V.idolStrikeoutsTiers[e.snacks[Z] + 1];
+          if (void 0 !== S) {
+            var G = J.amount,
+              W = S.amount;
+            (Object.create(e.snacks)[Z] = e.snacks[Z] + 1),
               s.push({
                 id: Y.IDOL_STRIKEOUTS,
                 name: "Chips",
                 description: "Crisp. Earn "
-                  .concat(G, " coins when your Idol strikes a batter out. You currently earn ")
-                  .concat(S, " coins per strikeout."),
-                amount: J.price,
-                toast: "Coins per Idol strikeout is now ".concat(J.amount),
+                  .concat(W, " coins when your Idol strikes a batter out. You currently earn ")
+                  .concat(G, " coins per strikeout."),
+                amount: S.price,
+                toast: "Coins per Idol strikeout is now ".concat(S.amount),
                 available: !0,
                 buyUrl: "/api/buySnack",
                 icon: <ot className="Shop-Item-Icon" />,
-                params: { snackId: h },
+                params: { snackId: Z },
                 userUpdate: function () {
-                  (e.trackers.SNACK_UPGRADES += 1), (e.snacks[h] += 1), (e.coins -= J.price), A(Object(N.a)({}, e));
+                  (e.trackers.SNACK_UPGRADES += 1), (e.snacks[Z] += 1), (e.coins -= S.price), A(Object(N.a)({}, e));
                 },
                 sell: !0,
               });
           } else {
-            var W = Z.amount;
+            var X = J.amount;
             s.push({
               id: Y.IDOL_STRIKEOUTS,
               name: "Chips",
               icon: <ot className="Shop-Item-Icon" />,
-              description: "Crisp. Earn ".concat(W, " coins when your Idol strikes a batter out. You are maxed out."),
+              description: "Crisp. Earn ".concat(X, " coins when your Idol strikes a batter out. You are maxed out."),
               maxed: !0,
               amount: 0,
               sell: !0,
-              params: { snackId: h },
+              params: { snackId: Z },
             });
           }
         } else {
-          var X = _.IDOL_STRIKEOUTS,
-            H = V.idolStrikeoutsTiers[0],
-            F = "Crisp. Earn ".concat(H.amount, " coins when your Idol strikes a batter out."),
-            U = !0;
-          ("" != e.idol && null != e.idol) || ((F += " Go to a Player page to choose an Idol."), (U = !1)),
+          var H = _.IDOL_STRIKEOUTS,
+            F = V.idolStrikeoutsTiers[0],
+            U = "Crisp. Earn ".concat(F.amount, " coins when your Idol strikes a batter out."),
+            j = !0;
+          ("" != e.idol && null != e.idol) || ((U += " Go to a Player page to choose an Idol."), (j = !1)),
             s.push({
               id: Y.IDOL_STRIKEOUTS,
               name: "Chips",
-              description: F,
-              amount: H.price,
-              toast: "Coins per Idol strikeout is now ".concat(H.amount),
-              available: U,
+              description: U,
+              amount: F.price,
+              toast: "Coins per Idol strikeout is now ".concat(F.amount),
+              available: j,
               buyUrl: "/api/buySnack",
               icon: <ot className="Shop-Item-Icon" />,
-              params: { snackId: X },
+              params: { snackId: H },
               userUpdate: function () {
                 (e.trackers.SNACKS_BOUGHT += 1),
-                  (e.snacks[X] = 0),
-                  (e.snackOrder = _.InsertIntoSnackOrder(X, e.snackOrder)),
-                  (e.coins -= H.price),
+                  (e.snacks[H] = 0),
+                  (e.snackOrder = _.InsertIntoSnackOrder(H, e.snackOrder)),
+                  (e.coins -= F.price),
                   A(Object(N.a)({}, e));
               },
             });
         }
         if (void 0 !== e.snacks[_.IDOL_SHUTOUTS]) {
-          var j = _.IDOL_SHUTOUTS,
-            K = V.idolShutoutsTiers[Math.min(e.snacks[j], V.idolShutoutsTiers.length - 1)],
-            R = V.idolShutoutsTiers[e.snacks[j] + 1];
-          if (void 0 !== R) {
-            var x = K.amount,
-              q = R.amount;
+          var K = _.IDOL_SHUTOUTS,
+            R = V.idolShutoutsTiers[Math.min(e.snacks[K], V.idolShutoutsTiers.length - 1)],
+            x = V.idolShutoutsTiers[e.snacks[K] + 1];
+          if (void 0 !== x) {
+            var q = R.amount,
+              $ = x.amount;
             s.push({
               id: Y.IDOL_SHUTOUTS,
               name: "Burger",
               description: "Medium Rare. Earn "
-                .concat(q, " coins when your Idol pitches a shutout. You currently earn ")
-                .concat(x, " coins per shutout."),
-              amount: R.price,
-              toast: "Coins per Idol shutout is now ".concat(R.amount),
+                .concat($, " coins when your Idol pitches a shutout. You currently earn ")
+                .concat(q, " coins per shutout."),
+              amount: x.price,
+              toast: "Coins per Idol shutout is now ".concat(x.amount),
               available: !0,
               buyUrl: "/api/buySnack",
               icon: <mt className="Shop-Item-Icon" />,
-              params: { snackId: j },
+              params: { snackId: K },
               userUpdate: function () {
-                (e.trackers.SNACK_UPGRADES += 1), (e.snacks[j] += 1), (e.coins -= R.price), A(Object(N.a)({}, e));
+                (e.trackers.SNACK_UPGRADES += 1), (e.snacks[K] += 1), (e.coins -= x.price), A(Object(N.a)({}, e));
               },
               sell: !0,
             });
           } else {
-            var $ = K.amount;
+            var ee = R.amount;
             s.push({
               id: Y.IDOL_SHUTOUTS,
               name: "Burger",
               description: "Medium Rare. Earn ".concat(
-                $,
+                ee,
                 " coins when your Idol pitches a shutout. You are maxed out."
               ),
               maxed: !0,
               icon: <mt className="Shop-Item-Icon" />,
               amount: 0,
               sell: !0,
-              params: { snackId: j },
+              params: { snackId: K },
             });
           }
         } else {
-          var ee = _.IDOL_SHUTOUTS,
-            Ae = V.idolShutoutsTiers[0],
-            te = "Medium Rare. Earn ".concat(Ae.amount, " coins when your Idol pitches a shutout."),
-            ae = !0;
-          ("" != e.idol && null != e.idol) || ((te += " Go to a Player page to choose an Idol."), (ae = !1)),
+          var Ae = _.IDOL_SHUTOUTS,
+            te = V.idolShutoutsTiers[0],
+            ae = "Medium Rare. Earn ".concat(te.amount, " coins when your Idol pitches a shutout."),
+            re = !0;
+          ("" != e.idol && null != e.idol) || ((ae += " Go to a Player page to choose an Idol."), (re = !1)),
             s.push({
               id: Y.IDOL_SHUTOUTS,
               name: "Burger",
-              description: te,
-              amount: Ae.price,
-              toast: "Coins per Idol shutout is now ".concat(Ae.amount),
-              available: ae,
+              description: ae,
+              amount: te.price,
+              toast: "Coins per Idol shutout is now ".concat(te.amount),
+              available: re,
               buyUrl: "/api/buySnack",
               icon: <mt className="Shop-Item-Icon" />,
-              params: { snackId: ee },
+              params: { snackId: Ae },
               userUpdate: function () {
                 (e.trackers.SNACKS_BOUGHT += 1),
-                  (e.snacks[ee] = 0),
-                  (e.snackOrder = _.InsertIntoSnackOrder(ee, e.snackOrder)),
-                  (e.coins -= Ae.price),
+                  (e.snacks[Ae] = 0),
+                  (e.snackOrder = _.InsertIntoSnackOrder(Ae, e.snackOrder)),
+                  (e.coins -= te.price),
                   A(Object(N.a)({}, e));
               },
             });
         }
         if (void 0 !== e.snacks[_.IDOL_HOMERS]) {
-          var ne = _.IDOL_HOMERS,
-            re = V.idolHomersTiers[Math.min(e.snacks[ne], V.idolHomersTiers.length - 1)],
-            le = V.idolHomersTiers[e.snacks[ne] + 1];
-          if (void 0 !== le) {
-            var oe = re.amount,
-              se = le.amount;
+          var le = _.IDOL_HOMERS,
+            oe = V.idolHomersTiers[Math.min(e.snacks[le], V.idolHomersTiers.length - 1)],
+            se = V.idolHomersTiers[e.snacks[le] + 1];
+          if (void 0 !== se) {
+            var ce = oe.amount,
+              ge = se.amount;
             s.push({
               id: Y.IDOL_HOMERS,
               name: "Hot Dog",
               description: "Hot Dog! Earn "
-                .concat(se, " coins when your Idol hits a home run. You currently earn ")
-                .concat(oe, " coins per home run."),
-              amount: le.price,
-              toast: "Coins per Idol home run is now ".concat(le.amount),
+                .concat(ge, " coins when your Idol hits a home run. You currently earn ")
+                .concat(ce, " coins per home run."),
+              amount: se.price,
+              toast: "Coins per Idol home run is now ".concat(se.amount),
               available: !0,
               buyUrl: "/api/buySnack",
               icon: <tt className="Shop-Item-Icon" />,
-              params: { snackId: ne },
+              params: { snackId: le },
               userUpdate: function () {
-                (e.trackers.SNACK_UPGRADES += 1), (e.snacks[ne] += 1), (e.coins -= le.price), A(Object(N.a)({}, e));
+                (e.trackers.SNACK_UPGRADES += 1), (e.snacks[le] += 1), (e.coins -= se.price), A(Object(N.a)({}, e));
               },
               sell: !0,
             });
           } else {
-            var ce = re.amount;
+            var ie = oe.amount;
             s.push({
               id: Y.IDOL_HOMERS,
               name: "Hot Dog",
               icon: <tt className="Shop-Item-Icon" />,
-              description: "Hot Dog! Earn ".concat(ce, " coins when your Idol hits a home run. You are maxed out."),
+              description: "Hot Dog! Earn ".concat(ie, " coins when your Idol hits a home run. You are maxed out."),
               maxed: !0,
               amount: 0,
               sell: !0,
-              params: { snackId: ne },
+              params: { snackId: le },
             });
           }
         } else {
-          var ge = _.IDOL_HOMERS,
-            ie = V.idolHomersTiers[0],
-            me = "Hot Dog! Earn ".concat(ie.amount, " coins when your Idol hits a home run."),
-            de = !0;
-          ("" != e.idol && null != e.idol) || ((me += " Go to a Player page to choose an Idol."), (de = !1)),
+          var me = _.IDOL_HOMERS,
+            de = V.idolHomersTiers[0],
+            Be = "Hot Dog! Earn ".concat(de.amount, " coins when your Idol hits a home run."),
+            ue = !0;
+          ("" != e.idol && null != e.idol) || ((Be += " Go to a Player page to choose an Idol."), (ue = !1)),
             s.push({
               id: Y.IDOL_HOMERS,
               name: "Hot Dog",
-              description: me,
-              amount: ie.price,
-              toast: "Coins per Idol homer is now ".concat(ie.amount),
-              available: de,
+              description: Be,
+              amount: de.price,
+              toast: "Coins per Idol homer is now ".concat(de.amount),
+              available: ue,
               buyUrl: "/api/buySnack",
               icon: <tt className="Shop-Item-Icon" />,
-              params: { snackId: ge },
+              params: { snackId: me },
               userUpdate: function () {
                 (e.trackers.SNACKS_BOUGHT += 1),
-                  (e.snacks[ge] = 0),
-                  (e.snackOrder = _.InsertIntoSnackOrder(ge, e.snackOrder)),
-                  (e.coins -= ie.price),
+                  (e.snacks[me] = 0),
+                  (e.snackOrder = _.InsertIntoSnackOrder(me, e.snackOrder)),
+                  (e.coins -= de.price),
                   A(Object(N.a)({}, e));
               },
             });
         }
         if (void 0 !== e.snacks[_.IDOL_HITS]) {
-          var Be = _.IDOL_HITS,
-            ue = V.idolHitsTiers[Math.min(e.snacks[Be], V.idolHitsTiers.length - 1)],
-            fe = V.idolHitsTiers[e.snacks[Be] + 1];
-          if (void 0 !== fe) {
-            var ve = ue.amount,
-              we = fe.amount;
+          var fe = _.IDOL_HITS,
+            ve = V.idolHitsTiers[Math.min(e.snacks[fe], V.idolHitsTiers.length - 1)],
+            we = V.idolHitsTiers[e.snacks[fe] + 1];
+          if (void 0 !== we) {
+            var Ce = ve.amount,
+              Ee = we.amount;
             s.push({
               id: Y.IDOL_HITS,
               name: "Sunflower Seeds",
               description: "Ptooie. Earn "
-                .concat(we, " coins when your Idol gets a hit. You currently earn ")
-                .concat(ve, " coins per hit."),
-              amount: fe.price,
-              toast: "Coins per Idol hit is now ".concat(fe.amount),
+                .concat(Ee, " coins when your Idol gets a hit. You currently earn ")
+                .concat(Ce, " coins per hit."),
+              amount: we.price,
+              toast: "Coins per Idol hit is now ".concat(we.amount),
               available: !0,
               buyUrl: "/api/buySnack",
               icon: <qA className="Shop-Item-Icon" />,
-              params: { snackId: Be },
+              params: { snackId: fe },
               userUpdate: function () {
-                (e.trackers.SNACK_UPGRADES += 1), (e.snacks[Be] += 1), (e.coins -= fe.price), A(Object(N.a)({}, e));
+                (e.trackers.SNACK_UPGRADES += 1), (e.snacks[fe] += 1), (e.coins -= we.price), A(Object(N.a)({}, e));
               },
               sell: !0,
             });
           } else {
-            var Ce = ue.amount;
+            var Qe = ve.amount;
             s.push({
               id: Y.IDOL_HITS,
               name: "Sunflower Seeds",
-              description: "Ptooie. Earn ".concat(Ce, " coins when your Idol gets a hit. You are maxed out."),
+              description: "Ptooie. Earn ".concat(Qe, " coins when your Idol gets a hit. You are maxed out."),
               maxed: !0,
               icon: <qA className="Shop-Item-Icon" />,
               amount: 0,
               sell: !0,
-              params: { snackId: Be },
+              params: { snackId: fe },
             });
           }
         } else {
-          var Ee = _.IDOL_HITS,
-            Qe = V.idolHitsTiers[0],
-            be = "Ptooie. Earn ".concat(Qe.amount, " coins when your Idol gets a hit."),
-            pe = !0;
-          ("" != e.idol && null != e.idol) || ((be += " Go to a Player page to choose an Idol."), (pe = !1)),
+          var be = _.IDOL_HITS,
+            pe = V.idolHitsTiers[0],
+            De = "Ptooie. Earn ".concat(pe.amount, " coins when your Idol gets a hit."),
+            ye = !0;
+          ("" != e.idol && null != e.idol) || ((De += " Go to a Player page to choose an Idol."), (ye = !1)),
             s.push({
               id: Y.IDOL_HITS,
               name: "Sunflower Seeds",
-              description: be,
-              amount: Qe.price,
-              toast: "Coins per Idol hit is now ".concat(Qe.amount),
-              available: pe,
+              description: De,
+              amount: pe.price,
+              toast: "Coins per Idol hit is now ".concat(pe.amount),
+              available: ye,
               buyUrl: "/api/buySnack",
               icon: <qA className="Shop-Item-Icon" />,
-              params: { snackId: Ee },
+              params: { snackId: be },
               userUpdate: function () {
                 (e.trackers.SNACKS_BOUGHT += 1),
-                  (e.snacks[Ee] = 0),
-                  (e.snackOrder = _.InsertIntoSnackOrder(Ee, e.snackOrder)),
-                  (e.coins -= Qe.price),
+                  (e.snacks[be] = 0),
+                  (e.snackOrder = _.InsertIntoSnackOrder(be, e.snackOrder)),
+                  (e.coins -= pe.price),
                   A(Object(N.a)({}, e));
               },
             });
@@ -16043,7 +16051,7 @@
             sell: !0,
           });
         else {
-          var De = _.STADIUM;
+          var Me = _.STADIUM;
           s.push({
             id: Y.STADIUM,
             name: "Pizza",
@@ -16053,11 +16061,11 @@
             available: !0,
             icon: <It className="Shop-Item-Icon" />,
             buyUrl: "/api/buySnackNoUpgrade",
-            params: { snackId: De },
+            params: { snackId: Me },
             userUpdate: function () {
               (e.trackers.SNACKS_BOUGHT += 1),
-                (e.snacks[De] = 0),
-                (e.snackOrder = _.InsertIntoSnackOrder(De, e.snackOrder)),
+                (e.snacks[Me] = 0),
+                (e.snackOrder = _.InsertIntoSnackOrder(Me, e.snackOrder)),
                 (e.coins -= 100),
                 A(Object(N.a)({}, e));
             },
@@ -16075,7 +16083,7 @@
             sell: !0,
           });
         else {
-          var ye = _.WILLS;
+          var Pe = _.WILLS;
           s.push({
             id: Y.WILLS,
             name: "Cheese Board",
@@ -16085,11 +16093,11 @@
             available: !0,
             icon: <Jt className="Shop-Item-Icon" />,
             buyUrl: "/api/buySnackNoUpgrade",
-            params: { snackId: ye },
+            params: { snackId: Pe },
             userUpdate: function () {
               (e.trackers.SNACKS_BOUGHT += 1),
-                (e.snacks[ye] = 0),
-                (e.snackOrder = _.InsertIntoSnackOrder(ye, e.snackOrder)),
+                (e.snacks[Pe] = 0),
+                (e.snackOrder = _.InsertIntoSnackOrder(Pe, e.snackOrder)),
                 (e.coins -= 100),
                 A(Object(N.a)({}, e));
             },
@@ -16107,7 +16115,7 @@
             sell: !0,
           });
         else {
-          var Me = _.FORBIDDEN_KNOWLEDGE;
+          var Ne = _.FORBIDDEN_KNOWLEDGE;
           s.push({
             id: Y.FORBIDDEN_KNOWLEDGE,
             name: "Apple",
@@ -16117,62 +16125,62 @@
             available: !0,
             icon: <Ht className="Shop-Item-Icon" />,
             buyUrl: "/api/buySnackNoUpgrade",
-            params: { snackId: Me },
+            params: { snackId: Ne },
             userUpdate: function () {
               (e.trackers.SNACKS_BOUGHT += 1),
-                (e.snacks[Me] = 0),
-                (e.snackOrder = _.InsertIntoSnackOrder(Me, e.snackOrder)),
+                (e.snacks[Ne] = 0),
+                (e.snackOrder = _.InsertIntoSnackOrder(Ne, e.snackOrder)),
                 (e.coins -= 100),
                 A(Object(N.a)({}, e));
             },
           });
         }
-        var Pe = 1e3;
-        void 0 !== o && void 0 !== o.alpha && (Pe = o.alpha);
-        var Ne = function () {
-          return Pe < 0
-            ? "Purchase ".concat(Pe, " peanuts")
-            : 0 == Pe
+        var Te = 1e3;
+        void 0 !== o && void 0 !== o.alpha && (Te = o.alpha);
+        var ze = function () {
+          return Te < 0
+            ? "Purchase ".concat(Te, " peanuts")
+            : 0 == Te
             ? "Purchase zero peanuts."
-            : 1 == Pe
+            : 1 == Te
             ? "Purchase a peanut."
-            : Pe <= 10
-            ? "Purchase a pack of ".concat(Pe, " peanuts.")
-            : "Purchase a bucket of ".concat(Pe, " peanuts.");
+            : Te <= 10
+            ? "Purchase a pack of ".concat(Te, " peanuts.")
+            : "Purchase a bucket of ".concat(Te, " peanuts.");
         };
         if (void 0 !== e.snacks[_.PEANUTS]) {
-          var Te = _.PEANUTS;
+          var Oe = _.PEANUTS;
           s.push({
             id: Y.PEANUTS,
-            name: "Peanut".concat(Pe > 1 ? "s" : ""),
-            description: Ne(),
-            amount: Pe,
+            name: "Peanut".concat(Te > 1 ? "s" : ""),
+            description: ze(),
+            amount: Te,
             available: !0,
             icon: <_t className="Shop-Item-Icon" />,
             buyUrl: "/api/buySnackNoUpgrade",
-            params: { snackId: Te },
+            params: { snackId: Oe },
             userUpdate: function () {
-              (e.trackers.SNACKS_BOUGHT += 1), (e.snacks[Te] += Pe), (e.coins -= Pe), A(Object(N.a)({}, e));
+              (e.trackers.SNACKS_BOUGHT += 1), (e.snacks[Oe] += Te), (e.coins -= Te), A(Object(N.a)({}, e));
             },
             sell: !0,
           });
         } else {
-          var ze = _.PEANUTS;
+          var Ie = _.PEANUTS;
           s.push({
             id: Y.PEANUTS,
-            name: "Peanut".concat(Pe > 1 ? "s" : ""),
-            description: Ne(),
-            amount: Pe,
+            name: "Peanut".concat(Te > 1 ? "s" : ""),
+            description: ze(),
+            amount: Te,
             toast: "",
             available: !0,
             icon: <_t className="Shop-Item-Icon" />,
             buyUrl: "/api/buySnackNoUpgrade",
-            params: { snackId: ze },
+            params: { snackId: Ie },
             userUpdate: function () {
               (e.trackers.SNACKS_BOUGHT += 1),
-                (e.snacks[ze] = Pe),
-                (e.snackOrder = _.InsertIntoSnackOrder(ze, e.snackOrder)),
-                (e.coins -= Pe),
+                (e.snacks[Ie] = Te),
+                (e.snackOrder = _.InsertIntoSnackOrder(Ie, e.snackOrder)),
+                (e.coins -= Te),
                 A(Object(N.a)({}, e));
             },
           });
@@ -16198,7 +16206,7 @@
             sell: !0,
           });
         else {
-          var Oe = _.TAROT;
+          var ke = _.TAROT;
           s.push({
             id: Y.TAROT,
             name: "Tarot Spread",
@@ -16208,13 +16216,13 @@
             available: !0,
             icon: <na className="Shop-Item-Icon" />,
             buyUrl: "/api/dealCards",
-            params: { snackId: Oe },
+            params: { snackId: ke },
             userUpdate: function (t) {
               (e.spread = t.spread),
                 (e.coins -= 9),
                 (e.trackers.SNACKS_BOUGHT += 1),
-                (e.snacks[Oe] = 0),
-                (e.snackOrder = _.InsertIntoSnackOrder(Oe, e.snackOrder)),
+                (e.snacks[ke] = 0),
+                (e.snackOrder = _.InsertIntoSnackOrder(ke, e.snackOrder)),
                 A(Object(N.a)({}, e));
             },
           });
@@ -16231,7 +16239,7 @@
             sell: !0,
           });
         else {
-          var Ie = _.BEG;
+          var Le = _.BEG;
           s.push({
             id: Y.BEG,
             name: "Bread Crumbs",
@@ -16240,11 +16248,11 @@
             available: !0,
             icon: <Kt className="Shop-Item-Icon" />,
             buyUrl: "/api/buySnackNoUpgrade",
-            params: { snackId: Ie },
+            params: { snackId: Le },
             userUpdate: function () {
               (e.trackers.SNACKS_BOUGHT += 1),
-                (e.snacks[Ie] = 0),
-                (e.snackOrder = _.InsertIntoSnackOrder(Ie, e.snackOrder)),
+                (e.snacks[Le] = 0),
+                (e.snackOrder = _.InsertIntoSnackOrder(Le, e.snackOrder)),
                 A(Object(N.a)({}, e));
             },
           });
@@ -16379,22 +16387,23 @@
         },
         $s = function (e) {
           var A = Object(Ql.useToasts)().addToast,
-            t = Object(n.useContext)(L.context),
-            a = t.user,
-            l = t.setUser,
-            o = Object(c.f)(),
-            g = Object(c.h)().id,
-            i = Object(n.useState)(0),
-            m = Object(s.a)(i, 2),
-            d = (m[0], m[1], Object(n.useState)(!1)),
-            f = Object(s.a)(d, 2);
-          f[0], f[1];
-          switch (g) {
-            case "vote":
-              100;
-          }
-          function v() {
-            return (v = Object(u.a)(
+            t = Object(n.useContext)(ba.context),
+            a = Object(n.useContext)(L.context),
+            l = a.user,
+            o = a.setUser,
+            g = Object(c.f)(),
+            i = Object(c.h)().id,
+            m = Object(n.useState)(0),
+            d = Object(s.a)(m, 2),
+            f = (d[0], d[1], Object(n.useState)(!1)),
+            v = Object(s.a)(f, 2),
+            w = (v[0], v[1], _.GetSellValue(i, l.snacks[i]));
+          l.favoriteTeam &&
+            !ne(l.favoriteTeam, t) &&
+            i === _.FLUTES &&
+            (w = l.snacks[_.FLUTES] < 2 ? 0 : _.GetSellValue(i, l.snacks[i] - 1));
+          function C() {
+            return (C = Object(u.a)(
               B.a.mark(function e(t) {
                 return B.a.wrap(function (e) {
                   for (;;)
@@ -16406,26 +16415,25 @@
                             .then(
                               (function () {
                                 var e = Object(u.a)(
-                                  B.a.mark(function e(n) {
+                                  B.a.mark(function e(a) {
                                     return B.a.wrap(function (e) {
                                       for (;;)
                                         switch ((e.prev = e.next)) {
                                           case 0:
                                             return (
                                               (e.next = 2),
-                                              n.json().then(function (e) {
+                                              a.json().then(function (e) {
                                                 if (e.message)
-                                                  if (n.ok && n.status && 200 === n.status) {
-                                                    var r = Object(N.a)({}, a.snacks),
-                                                      s = _.GetSellValue(t, r[t]);
-                                                    delete r[t];
-                                                    var c = _.RemoveFromSnackOrder(t, a.snackOrder);
-                                                    (a.snacks = r),
-                                                      (a.snackOrder = c),
-                                                      (a.coins += s),
-                                                      l(Object(N.a)({}, a)),
+                                                  if (a.ok && a.status && 200 === a.status) {
+                                                    var n = Object(N.a)({}, l.snacks);
+                                                    delete n[t];
+                                                    var r = _.RemoveFromSnackOrder(t, l.snackOrder);
+                                                    (l.snacks = n),
+                                                      (l.snackOrder = r),
+                                                      (l.coins += w),
+                                                      o(Object(N.a)({}, l)),
                                                       A(e.message, { appearance: "success" }),
-                                                      o.goBack();
+                                                      g.goBack();
                                                   } else A(e.message, { appearance: "error" });
                                               })
                                             );
@@ -16453,17 +16461,17 @@
               })
             )).apply(this, arguments);
           }
-          var w = void 0 !== _.GetTiers(g);
+          var E = void 0 !== _.GetTiers(i);
           return (
             <zo {...Object.assign({}, e, { className: "BatchBuy" })}>
               <div className="ModalForm-Header Sell-Question">
-                you wanna {0 === _.GetSellValue(g, a.snacks[g]) ? "discard" : "sell"} your{" "}
-                {g !== _.TAROT ? (w ? a.snacks[g] + 1 : a.snacks[g]) : ""} {_.GetName(g).toLowerCase()}?
+                you wanna {0 === w ? "discard" : "sell"} your {i !== _.TAROT ? (E ? l.snacks[i] + 1 : l.snacks[i]) : ""}{" "}
+                {_.GetName(i).toLowerCase()}?
               </div>
               <div className="Sell-Earnings">
                 you'll get{" "}
                 <span>
-                  <Mr style={{ width: "22px", height: "22px" }} /> {_.GetSellValue(g, a.snacks[g])}
+                  <Mr style={{ width: "22px", height: "22px" }} /> {w}
                 </span>{" "}
                 back
               </div>
@@ -16473,7 +16481,7 @@
                   type="submit"
                   variant="danger"
                   onClick={function () {
-                    o.goBack();
+                    g.goBack();
                   }}
                 >
                   Cancel
@@ -16484,8 +16492,8 @@
                   variant="success"
                   onClick={function () {
                     !(function (e) {
-                      v.apply(this, arguments);
-                    })(g);
+                      C.apply(this, arguments);
+                    })(i);
                   }}
                 >
                   Confirm
@@ -26246,6 +26254,118 @@
         },
         wm = t(113),
         Cm = function (e) {
+          var A = Object(Ql.useToasts)().addToast,
+            t = Object(n.useContext)(L.context),
+            a = t.user,
+            l = t.setUser,
+            o = Object(c.f)(),
+            g = Object(c.h)(),
+            i = g.stadiumId,
+            m = g.renovationId,
+            d = Object(n.useState)(25),
+            f = Object(s.a)(d, 2),
+            v = f[0],
+            w = f[1],
+            C = Object(n.useState)(!1),
+            E = Object(s.a)(C, 2),
+            Q = E[0],
+            b = E[1],
+            p = function (e) {
+              var A = e.target.value;
+              w(A);
+            },
+            D = a.coins,
+            y = <Gr />;
+          return (
+            Q ||
+              (y = (
+                <me.a className="ModalForm-Submit" type="submit" variant="success">
+                  Submit
+                </me.a>
+              )),
+            (
+              <zo {...Object.assign({}, e, { className: "Vote" })}>
+                <div className="ModalForm-Header">Contribute to Renovation</div>
+                <Oo.a
+                  className="ModalForm-Form"
+                  onSubmit={function (e) {
+                    if ((e.preventDefault(), v < 25))
+                      A("The minimum Ballpark contribution is 25 Coins.", { appearance: "error" });
+                    else if (v > D) A("Max contribution is ".concat(D, "!"), { appearance: "error" });
+                    else {
+                      b(!0);
+                      var t = { amount: v, stadiumId: i, renovationId: m };
+                      Yr("/api/renovate", JSON.stringify(t))
+                        .then(function (e) {
+                          e.status && 200 === e.status && e.ok
+                            ? ((a.coins = a.coins - v),
+                              l(Object(N.a)({}, a)),
+                              A("Contribution Made", { appearance: "success" }),
+                              o.goBack())
+                            : e.json().then(function (e) {
+                                A(e.error || "Error", { appearance: "error" });
+                              });
+                        })
+                        .finally(
+                          Object(u.a)(
+                            B.a.mark(function e() {
+                              return B.a.wrap(function (e) {
+                                for (;;)
+                                  switch ((e.prev = e.next)) {
+                                    case 0:
+                                      b(!1);
+                                    case 1:
+                                    case "end":
+                                      return e.stop();
+                                  }
+                              }, e);
+                            })
+                          )
+                        );
+                    }
+                  }}
+                >
+                  <Oo.a.Group className="ModalForm-Form-Amount" controlId="amount">
+                    <Oo.a.Label>How many coins do you want to contribute?</Oo.a.Label>
+                    <div
+                      className={
+                        "ModalForm-Form-Inputs-Amount" + (a.lightMode ? " ModalForm-Form-Inputs-Amount-LightMode" : "")
+                      }
+                    >
+                      <div className="ModalForm-Ticket-Wrapper">
+                        <Mr className="ModalForm-Ticket-Icon" />
+                        {a.coins}
+                      </div>
+                      <Oo.a.Control type="number" value={v} onChange={p} />
+                      <Oo.a.Control
+                        type="range"
+                        className="ModalForm-Range"
+                        min={25}
+                        max={Math.min(a.coins, D)}
+                        value={v}
+                        onChange={p}
+                        step="1"
+                      />
+                      <a
+                        className={
+                          "ModalForm-Form-Inputs-Amount-Max" +
+                          (a.lightMode ? " ModalForm-Form-Inputs-Amount-Max-LightMode" : "")
+                        }
+                        onClick={function (e) {
+                          e.preventDefault(), w(Math.min(a.coins, D));
+                        }}
+                      >
+                        Max: {D}
+                      </a>
+                    </div>
+                  </Oo.a.Group>
+                  <div className="ModalForm-Submit-Wrapper">{y}</div>
+                </Oo.a>
+              </zo>
+            )
+          );
+        },
+        Em = function (e) {
           var A = e.stadium,
             t = Object(n.useContext)(L.context).user,
             a =
@@ -26280,7 +26400,7 @@
             </div>
           );
         },
-        Em = function (e) {
+        Qm = function (e) {
           var A = e.loading,
             t = e.progress,
             a = e.stadium,
@@ -26357,7 +26477,7 @@
             </div>
           );
         },
-        Qm = function (e) {
+        bm = function (e) {
           var A = e.loading,
             t = e.renovations,
             a = e.user,
@@ -26367,7 +26487,7 @@
           return A || !t ? null : null === n.model ? (
             <div className="Team-Construction-Options">
               {wm.collection.map(function (e, A) {
-                return <pm prefab={e} stadium={n} index={A} selected={l} setSelected={o} user={a} />;
+                return <Dm prefab={e} stadium={n} index={A} selected={l} setSelected={o} user={a} />;
               })}
             </div>
           ) : (
@@ -26375,12 +26495,12 @@
               {null === t || void 0 === t
                 ? void 0
                 : t.map(function (e) {
-                    return <bm reno={e} selected={l} setSelected={o} user={a} />;
+                    return <pm reno={e} selected={l} setSelected={o} user={a} />;
                   })}
             </div>
           );
         },
-        bm = function (e) {
+        pm = function (e) {
           var A = e.reno,
             t = e.selected,
             a = e.setSelected,
@@ -26410,7 +26530,7 @@
             )
           );
         },
-        pm = function (e) {
+        Dm = function (e) {
           var A = e.index,
             t = e.stadium,
             a = e.prefab,
@@ -26440,276 +26560,185 @@
             )
           );
         },
-        Dm = function (e) {
+        ym = function (e) {
           var A = e.stadiumId,
             t = e.selected,
             a = e.setSelected,
             n = e.user,
             l = Object(c.g)(),
-            o = <ym />;
-          return (
-            n.isFetching || !n.isSignedIn || n.favoriteTeam || (o = <Mm />),
-            n.isFetching || !n.isSignedIn || n.snacks[_.VOTES] || (o = <Pm />),
-            !n.isFetching &&
-              n.isSignedIn &&
-              n.favoriteTeam &&
-              n.snacks[_.VOTES] &&
-              (o = (
-                <me.a
-                  className="Offseason-Button"
-                  variant="success"
-                  disabled={!t}
-                  onClick={function () {
-                    return a(void 0);
-                  }}
-                >
-                  {t ? (
-                    <m background={l} path={"/contribute/".concat(A, "/").concat(t)}>
-                      Contribute
-                    </m>
-                  ) : (
-                    <r.a.Fragment>Select an Option</r.a.Fragment>
-                  )}
-                </me.a>
-              )),
-            o
-          );
+            o = <Mm />;
+          if (
+            (n.isFetching || !n.isSignedIn || n.favoriteTeam || (o = <Pm />),
+            n.isFetching || !n.isSignedIn || n.snacks[_.VOTES] || (o = <Nm />),
+            !n.isFetching && n.isSignedIn && n.favoriteTeam && n.snacks[_.VOTES])
+          ) {
+            var s = n.coins >= 25;
+            o = s ? (
+              <me.a
+                className="Offseason-Button"
+                variant="success"
+                disabled={!t || !s}
+                onClick={function () {
+                  return a(void 0);
+                }}
+              >
+                {t ? (
+                  <m background={l} path={"/contribute/".concat(A, "/").concat(t)}>
+                    Contribute
+                  </m>
+                ) : (
+                  <r.a.Fragment>Select an Option</r.a.Fragment>
+                )}
+              </me.a>
+            ) : (
+              <Be.a
+                placement="top"
+                overlay={
+                  <ue.a id="minimum-contribution">
+                    <strong>The minimum Ballpark contribution is 25 Coins.</strong>
+                  </ue.a>
+                }
+              >
+                <div>
+                  <me.a
+                    aria-label="The minimum Ballpark contribution is 25 Coins."
+                    className="Offseason-Button"
+                    variant="secondary"
+                    disabled={!0}
+                  >
+                    Need Coins
+                  </me.a>
+                </div>
+              </Be.a>
+            );
+          }
+          return o;
         },
-        ym = function () {
+        Mm = function () {
           return (
             <a href="/login">
               <me.a className="Blessings-Submit-Button">Login to Vote</me.a>
             </a>
           );
         },
-        Mm = function () {
+        Pm = function () {
           return (
             <a href="/welcome">
               <me.a className="Blessings-Submit-Button">Pick a Favorite Team to Vote</me.a>
             </a>
           );
         },
-        Pm = function () {
+        Nm = function () {
           return (
             <a href={"/shop/".concat(Y.VOTES)}>
               <me.a className="Blessings-Submit-Button">Buy Another Vote</me.a>
             </a>
           );
         };
-      var Nm = function (e) {
-          var A = Object(n.useContext)(P.context),
-            t = Object(n.useContext)(ba.context),
-            a = Object(n.useState)(void 0),
-            l = Object(s.a)(a, 2),
-            o = l[0],
-            c = l[1],
-            g = Object(n.useState)(void 0),
-            i = Object(s.a)(g, 2),
-            m = i[0],
-            d = i[1],
-            f = Object(n.useState)(!1),
-            v = Object(s.a)(f, 2),
-            w = v[0],
-            C = v[1],
-            E = Object(n.useState)(void 0),
-            Q = Object(s.a)(E, 2),
-            b = Q[0],
-            p = Q[1],
-            D = Object(n.useContext)(L.context).user,
-            y = t.teams.find(function (e) {
-              return e.id === D.favoriteTeam;
-            });
-          Object(n.useEffect)(function () {
-            M();
-          }, []);
-          var M = (function () {
-            var e = Object(u.a)(
-              B.a.mark(function e() {
-                var A, a, n, r;
-                return B.a.wrap(function (e) {
-                  for (;;)
-                    switch ((e.prev = e.next)) {
-                      case 0:
-                        if ((C(!0), void 0 !== y)) {
-                          e.next = 4;
-                          break;
-                        }
-                        return C(!1), e.abrupt("return");
-                      case 4:
-                        if (null !== (A = y.stadium)) {
-                          e.next = 8;
-                          break;
-                        }
-                        return C(!1), e.abrupt("return");
-                      case 8:
-                        if (
-                          void 0 !==
-                          (a = t.stadiums.find(function (e) {
-                            return e.id === A;
-                          }))
-                        ) {
-                          e.next = 12;
-                          break;
-                        }
-                        return C(!1), e.abrupt("return");
-                      case 12:
-                        return (e.next = 14), vl(a.renoHand);
-                      case 14:
-                        return (n = e.sent), (e.next = 17), Cl(a.id);
-                      case 17:
-                        (r = e.sent), c(n), d(r), C(!1);
-                      case 21:
-                      case "end":
-                        return e.stop();
-                    }
-                }, e);
-              })
-            );
-            return function () {
-              return e.apply(this, arguments);
-            };
-          })();
-          if (void 0 === A) return null;
-          if (void 0 === t || void 0 === t.teams) return null;
-          if (void 0 === y) return null;
-          var N,
-            T = t.stadiums.find(function (e) {
-              return e.id === y.stadium;
-            });
-          if (void 0 === T) return null;
-          N = w ? (
-            <Gr />
-          ) : m ? (
-            <div className="Team-Construction">
-              <Qm loading={w} renovations={o} user={D} stadium={T} selected={b} setSelected={p} />
-              <div className="Team-Construction-Bottom">
-                <Em loading={w} progress={m} stadium={T} />
-                <Dm stadiumId={T.id} selected={b} setSelected={p} user={D} />
-              </div>
-            </div>
-          ) : (
-            <div className={"Team-Stadium-Help" + (D.lightMode ? " Team-Stadium-Help-LightMode" : "")}>
-              Something went wrong...
-            </div>
-          );
-          var z = (
-            <r.a.Fragment>
-              <Cm stadium={T} />
-              {N}
-            </r.a.Fragment>
-          );
-          return <zo {...Object.assign({}, e, { className: "ModalItem" })}>{z}</zo>;
-        },
-        Tm = function (e) {
-          var A = Object(Ql.useToasts)().addToast,
-            t = Object(n.useContext)(L.context),
-            a = t.user,
-            l = t.setUser,
-            o = Object(c.f)(),
-            g = Object(c.h)(),
-            i = g.stadiumId,
-            m = g.renovationId,
-            d = Object(n.useState)(1),
-            f = Object(s.a)(d, 2),
-            v = f[0],
-            w = f[1],
-            C = Object(n.useState)(!1),
-            E = Object(s.a)(C, 2),
-            Q = E[0],
-            b = E[1],
-            p = function (e) {
-              var A = e.target.value;
-              w(A);
-            },
-            D = a.coins,
-            y = <Gr />;
-          return (
-            Q ||
-              (y = (
-                <me.a className="ModalForm-Submit" type="submit" variant="success">
-                  Submit
-                </me.a>
-              )),
-            (
-              <zo {...Object.assign({}, e, { className: "Vote" })}>
-                <div className="ModalForm-Header">Contribute to Renovation</div>
-                <Oo.a
-                  className="ModalForm-Form"
-                  onSubmit={function (e) {
-                    if ((e.preventDefault(), b(!0), v > D))
-                      A("Max contribution is ".concat(D, "!"), { appearance: "error" });
-                    else {
-                      var t = { amount: v, stadiumId: i, renovationId: m };
-                      Yr("/api/renovate", JSON.stringify(t))
-                        .then(function (e) {
-                          e.status && 200 === e.status && e.ok
-                            ? ((a.coins = a.coins - v),
-                              l(Object(N.a)({}, a)),
-                              A("Contribution Made", { appearance: "success" }),
-                              o.goBack())
-                            : e.json().then(function (e) {
-                                A(e.error || "Error", { appearance: "error" });
-                              });
-                        })
-                        .finally(
-                          Object(u.a)(
-                            B.a.mark(function e() {
-                              return B.a.wrap(function (e) {
-                                for (;;)
-                                  switch ((e.prev = e.next)) {
-                                    case 0:
-                                      b(!1);
-                                    case 1:
-                                    case "end":
-                                      return e.stop();
-                                  }
-                              }, e);
-                            })
-                          )
-                        );
-                    }
-                  }}
-                >
-                  <Oo.a.Group className="ModalForm-Form-Amount" controlId="amount">
-                    <Oo.a.Label>How many coins do you want to contribute?</Oo.a.Label>
-                    <div
-                      className={
-                        "ModalForm-Form-Inputs-Amount" + (a.lightMode ? " ModalForm-Form-Inputs-Amount-LightMode" : "")
+      var Tm = function (e) {
+        var A = Object(n.useContext)(P.context),
+          t = Object(n.useContext)(ba.context),
+          a = Object(n.useState)(void 0),
+          l = Object(s.a)(a, 2),
+          o = l[0],
+          c = l[1],
+          g = Object(n.useState)(void 0),
+          i = Object(s.a)(g, 2),
+          m = i[0],
+          d = i[1],
+          f = Object(n.useState)(!1),
+          v = Object(s.a)(f, 2),
+          w = v[0],
+          C = v[1],
+          E = Object(n.useState)(void 0),
+          Q = Object(s.a)(E, 2),
+          b = Q[0],
+          p = Q[1],
+          D = Object(n.useContext)(L.context).user,
+          y = t.teams.find(function (e) {
+            return e.id === D.favoriteTeam;
+          });
+        Object(n.useEffect)(function () {
+          M();
+        }, []);
+        var M = (function () {
+          var e = Object(u.a)(
+            B.a.mark(function e() {
+              var A, a, n, r;
+              return B.a.wrap(function (e) {
+                for (;;)
+                  switch ((e.prev = e.next)) {
+                    case 0:
+                      if ((C(!0), void 0 !== y)) {
+                        e.next = 4;
+                        break;
                       }
-                    >
-                      <div className="ModalForm-Ticket-Wrapper">
-                        <Mr className="ModalForm-Ticket-Icon" />
-                        {a.coins}
-                      </div>
-                      <Oo.a.Control type="number" value={v} onChange={p} />
-                      <Oo.a.Control
-                        type="range"
-                        className="ModalForm-Range"
-                        min={1}
-                        max={Math.min(a.coins, D)}
-                        value={v}
-                        onChange={p}
-                        step="1"
-                      />
-                      <a
-                        className={
-                          "ModalForm-Form-Inputs-Amount-Max" +
-                          (a.lightMode ? " ModalForm-Form-Inputs-Amount-Max-LightMode" : "")
-                        }
-                        onClick={function (e) {
-                          e.preventDefault(), w(Math.min(a.coins, D));
-                        }}
-                      >
-                        Max: {D}
-                      </a>
-                    </div>
-                  </Oo.a.Group>
-                  <div className="ModalForm-Submit-Wrapper">{y}</div>
-                </Oo.a>
-              </zo>
-            )
+                      return C(!1), e.abrupt("return");
+                    case 4:
+                      if (null !== (A = y.stadium)) {
+                        e.next = 8;
+                        break;
+                      }
+                      return C(!1), e.abrupt("return");
+                    case 8:
+                      if (
+                        void 0 !==
+                        (a = t.stadiums.find(function (e) {
+                          return e.id === A;
+                        }))
+                      ) {
+                        e.next = 12;
+                        break;
+                      }
+                      return C(!1), e.abrupt("return");
+                    case 12:
+                      return (e.next = 14), vl(a.renoHand);
+                    case 14:
+                      return (n = e.sent), (e.next = 17), Cl(a.id);
+                    case 17:
+                      (r = e.sent), c(n), d(r), C(!1);
+                    case 21:
+                    case "end":
+                      return e.stop();
+                  }
+              }, e);
+            })
           );
-        };
+          return function () {
+            return e.apply(this, arguments);
+          };
+        })();
+        if (void 0 === A) return null;
+        if (void 0 === t || void 0 === t.teams) return null;
+        if (void 0 === y) return null;
+        var N,
+          T = t.stadiums.find(function (e) {
+            return e.id === y.stadium;
+          });
+        if (void 0 === T) return null;
+        N = w ? (
+          <Gr />
+        ) : m ? (
+          <div className="Team-Construction">
+            <bm loading={w} renovations={o} user={D} stadium={T} selected={b} setSelected={p} />
+            <div className="Team-Construction-Bottom">
+              <Qm loading={w} progress={m} stadium={T} />
+              <ym stadiumId={T.id} selected={b} setSelected={p} user={D} />
+            </div>
+          </div>
+        ) : (
+          <div className={"Team-Stadium-Help" + (D.lightMode ? " Team-Stadium-Help-LightMode" : "")}>
+            Something went wrong...
+          </div>
+        );
+        var z = (
+          <r.a.Fragment>
+            <Em stadium={T} />
+            {N}
+          </r.a.Fragment>
+        );
+        return <zo {...Object.assign({}, e, { className: "ModalItem" })}>{z}</zo>;
+      };
       function zm() {
         return (
           <div className="Main">
@@ -26966,10 +26995,10 @@
                         <c.a path="/sell/:id" children={<$s isModal={!0} />} />
                         <c.a path="/settings" children={<Ac isModal={!0} />} />
                         {void 0 !== t.snacks.Stadium_Access ? (
-                          <c.a path="/renovation" children={<Nm isModal={!0} />} />
+                          <c.a path="/renovation" children={<Tm isModal={!0} />} />
                         ) : null}
                         {void 0 !== t.snacks.Stadium_Access ? (
-                          <c.a path="/contribute/:stadiumId/:renovationId" children={<Tm isModal={!0} />} />
+                          <c.a path="/contribute/:stadiumId/:renovationId" children={<Cm isModal={!0} />} />
                         ) : null}
                         <c.a path="/account" children={<Ac isModal={!0} />} />
                       </r.a.Fragment>

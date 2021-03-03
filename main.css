@@ -9518,7 +9518,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: row;
   line-height: 20px;
-  padding: 0 12px;
+  padding: 0 12px 0 8px;
   border-radius: 5px;
 }
 .Widget-Header,
@@ -10010,6 +10010,9 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .Widget-PlayerLine {
     justify-content: flex-start;
+  }
+  .Widget-PlayerLine:first-child {
+    margin-bottom: 5px;
   }
   .Widget-PlayerStatusLabel {
     display: none;
@@ -10669,7 +10672,8 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 30px;
+  line-height: 1.2em;
+  min-height: 30px;
 }
 .Player-Info-Items {
   padding: 10px 40px;
@@ -16446,6 +16450,10 @@ button:focus-visible {
 .Shop-Item-Cost-Buy div:first-child,
 .Shop-Item-Cost-Sell div:first-child {
   margin-right: 10px;
+}
+.Shop-Item-Cost-Buy .LoadingSpinner-Inline,
+.Shop-Item-Cost-Sell .LoadingSpinner-Inline {
+  width: 50px;
 }
 .Shop-Item-Cost-Sell {
   margin: auto auto 0 0;
