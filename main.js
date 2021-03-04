@@ -11104,7 +11104,7 @@
                     <div className="sr-only" aria-label=" of the " role="text" />
                     <div className="Leaderboard-Team-Name">
                       <span className="Leaderboard-Team-Name-Location">
-                        {void 0 !== e.info.team ? e.info.team.fullName + "." : "Null Team."}
+                        {void 0 !== e.info.team ? e.info.team.fullName + "" : "Null Team."}
                       </span>
                     </div>
                   </div>
@@ -23321,10 +23321,12 @@
                                     case 0:
                                       return "Base";
                                     case 1:
-                                      return "Base 2";
+                                      return "Base 1";
                                     case 2:
-                                      return "Base 3";
+                                      return "Base 2";
                                     case 3:
+                                      return "Base 3";
+                                    case 4:
                                       return "Home";
                                   }
                                   return "Base";
