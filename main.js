@@ -11104,11 +11104,14 @@
                     <div className="sr-only" aria-label=" of the " role="text" />
                     <div className="Leaderboard-Team-Name">
                       <span className="Leaderboard-Team-Name-Location">
-                        {void 0 !== e.info.team ? e.info.team.fullName + "" : "Null Team."}
+                        {void 0 !== e.info.team ? e.info.team.fullName : "Null Team"}
                       </span>
                     </div>
                   </div>
-                  <div className="sr-only" aria-label={E.length > 0 ? "Current Status: " + E.join(", ") + "." : ""} />
+                  <div
+                    className="sr-only"
+                    aria-label={"." + (E.length > 0 ? " Current Status: " + E.join(", ") + "." : "")}
+                  />
                 </m>
               </div>
             )
@@ -22756,32 +22759,33 @@
             k,
             h,
             Z,
-            J,
             G,
             W,
             X,
             H,
             F,
-            Y = Object(c.h)().id,
-            U = Object(n.useContext)(P.context),
-            K = Object(n.useContext)(ba.context),
-            R = Object(n.useState)(ki),
-            x = Object(s.a)(R, 2),
-            V = x[0],
-            q = x[1],
-            _ = Object(Ql.useToasts)().addToast,
-            $ = Object(n.useContext)(L.context),
-            ee = $.user,
-            Ae = $.setUser,
-            ne = Object(n.useState)(!1),
-            re = Object(s.a)(ne, 2),
-            oe = re[0],
-            se = (re[1], Object(n.useState)(1)),
-            ce = Object(s.a)(se, 2);
-          ce[0], ce[1];
-          function ge(e) {
+            Y,
+            U,
+            K = Object(c.h)().id,
+            R = Object(n.useContext)(P.context),
+            x = Object(n.useContext)(ba.context),
+            V = Object(n.useState)(ki),
+            q = Object(s.a)(V, 2),
+            _ = q[0],
+            $ = q[1],
+            ee = Object(Ql.useToasts)().addToast,
+            Ae = Object(n.useContext)(L.context),
+            ne = Ae.user,
+            re = Ae.setUser,
+            oe = Object(n.useState)(!1),
+            se = Object(s.a)(oe, 2),
+            ce = se[0],
+            ge = (se[1], Object(n.useState)(1)),
+            ie = Object(s.a)(ge, 2);
+          ie[0], ie[1];
+          function fe(e) {
             if (null !== e)
-              return K.teams.find(function (A) {
+              return x.teams.find(function (A) {
                 return A.id === e;
               });
           }
@@ -22795,14 +22799,14 @@
                       for (;;)
                         switch ((e.prev = e.next)) {
                           case 0:
-                            return (e.next = 2), rl([Y]);
+                            return (e.next = 2), rl([K]);
                           case 2:
                             void 0 !== (A = e.sent) &&
                               1 == A.length &&
                               ((t = A[0]),
-                              (a = ge(t.leagueTeamId)),
-                              (n = ge(t.tournamentTeamId)),
-                              q({ player: t, team: a, tourneyTeam: n }));
+                              (a = fe(t.leagueTeamId)),
+                              (n = fe(t.tournamentTeamId)),
+                              $({ player: t, team: a, tourneyTeam: n }));
                           case 4:
                           case "end":
                             return e.stop();
@@ -22815,10 +22819,10 @@
                 };
               })()();
             },
-            [K]
+            [x]
           );
-          var ie,
-            fe = (function (e) {
+          var ve,
+            we = (function (e) {
               if (void 0 === e) return "NONE";
               if (void 0 === e.bat) return "NONE";
               if ("" === e.bat) return "NONE";
@@ -22826,8 +22830,8 @@
                 return A.id === e.bat;
               });
               return void 0 === A ? "NONE" : A.attr;
-            })(null === V || void 0 === V ? void 0 : V.player),
-            ve = (function (e) {
+            })(null === _ || void 0 === _ ? void 0 : _.player),
+            Ce = (function (e) {
               if (void 0 === e) return "NONE";
               if (void 0 === e.armor) return "NONE";
               if ("" === e.armor) return "NONE";
@@ -22835,25 +22839,25 @@
                 return A.id === e.armor;
               });
               return void 0 === A ? "NONE" : A.attr;
-            })(null === V || void 0 === V ? void 0 : V.player),
-            we = Object(c.g)(),
-            Ce =
-              te(null === U || void 0 === U ? void 0 : U.sim, "UNLOCKED_HALL") &&
-              void 0 !== (null === V || void 0 === V ? void 0 : V.player) &&
-              V.player.deceased ? (
-                <div className={"ModalItem-Status" + (ee.lightMode ? " ModalItem-Status-LightMode" : "")}>
+            })(null === _ || void 0 === _ ? void 0 : _.player),
+            Ee = Object(c.g)(),
+            Qe =
+              te(null === R || void 0 === R ? void 0 : R.sim, "UNLOCKED_HALL") &&
+              void 0 !== (null === _ || void 0 === _ ? void 0 : _.player) &&
+              _.player.deceased ? (
+                <div className={"ModalItem-Status" + (ne.lightMode ? " ModalItem-Status-LightMode" : "")}>
                   <div className="ModalItem-Status-Line">
-                    <div className={"Player-Deceased-Icon" + (ee.lightMode ? " Player-Deceased-Icon-LightMode" : "")} />
+                    <div className={"Player-Deceased-Icon" + (ne.lightMode ? " Player-Deceased-Icon-LightMode" : "")} />
                     <div className="ModalItem-Status-Name">Deceased</div>
                   </div>
-                  {void 0 !== ee.snacks.Peanuts ? (
-                    oe ? (
+                  {void 0 !== ne.snacks.Peanuts ? (
+                    ce ? (
                       <Sr />
                     ) : (
                       <m
                         className="ModalItem-Button-Tribute"
-                        background={we}
-                        path={"/tribute/".concat(null === V || void 0 === V ? void 0 : V.player.id)}
+                        background={Ee}
+                        path={"/tribute/".concat(null === _ || void 0 === _ ? void 0 : _.player.id)}
                       >
                         <_t className="ModalItem-Icon" /> Pay Tribute
                       </m>
@@ -22881,56 +22885,56 @@
                   )}
                 </div>
               ) : null,
-            Ee =
-              void 0 !== (null === V || void 0 === V ? void 0 : V.player) &&
-              (V.player.permAttr.length > 0 ||
-                V.player.seasAttr.length > 0 ||
-                V.player.weekAttr.length > 0 ||
-                V.player.gameAttr.length > 0 ||
-                "NONE" !== fe ||
-                "NONE" !== ve) ? (
-                <div className={"ModalItem-Attributes" + (ee.lightMode ? " ModalItem-Attributes-LightMode" : "")}>
-                  <div className={"AttributeBar" + (ee.lightMode ? " AttributeBar-LightMode" : "")}>
-                    {V.player.permAttr.map(function (e, A) {
+            be =
+              void 0 !== (null === _ || void 0 === _ ? void 0 : _.player) &&
+              (_.player.permAttr.length > 0 ||
+                _.player.seasAttr.length > 0 ||
+                _.player.weekAttr.length > 0 ||
+                _.player.gameAttr.length > 0 ||
+                "NONE" !== we ||
+                "NONE" !== Ce) ? (
+                <div className={"ModalItem-Attributes" + (ne.lightMode ? " ModalItem-Attributes-LightMode" : "")}>
+                  <div className={"AttributeBar" + (ne.lightMode ? " AttributeBar-LightMode" : "")}>
+                    {_.player.permAttr.map(function (e, A) {
                       return <fa id={e} type={ra.Permanent} key={A} />;
                     })}
-                    {V.player.seasAttr.map(function (e, A) {
+                    {_.player.seasAttr.map(function (e, A) {
                       return <fa id={e} type={ra.Season} key={A} />;
                     })}
-                    {V.player.weekAttr.map(function (e, A) {
+                    {_.player.weekAttr.map(function (e, A) {
                       return <fa id={e} type={ra.Weekly} key={A} />;
                     })}
-                    {V.player.gameAttr.map(function (e, A) {
+                    {_.player.gameAttr.map(function (e, A) {
                       return <fa id={e} type={ra.Game} key={A} />;
                     })}
-                    {"NONE" !== fe ? <fa id={fe} type={ra.Item} /> : null}
-                    {"NONE" !== ve ? <fa id={ve} type={ra.Armor} /> : null}
+                    {"NONE" !== we ? <fa id={we} type={ra.Item} /> : null}
+                    {"NONE" !== Ce ? <fa id={Ce} type={ra.Armor} /> : null}
                   </div>
                 </div>
               ) : null,
-            Qe = (function () {
+            pe = (function () {
               var e = Object(u.a)(
                 B.a.mark(function e(A) {
                   return B.a.wrap(function (e) {
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          if ((A.preventDefault(), !V || !V.player || V.player.id === ee.idol)) {
+                          if ((A.preventDefault(), !_ || !_.player || _.player.id === ne.idol)) {
                             e.next = 10;
                             break;
                           }
-                          if (!(ee.coins < 200) || ("" === ee.idol && null === ee.idol)) {
+                          if (!(ne.coins < 200) || ("" === ne.idol && null === ne.idol)) {
                             e.next = 6;
                             break;
                           }
-                          _("Not enough coins", { appearance: "error" }), (e.next = 8);
+                          ee("Not enough coins", { appearance: "error" }), (e.next = 8);
                           break;
                         case 6:
                           return (
                             (e.next = 8),
                             Yr(
                               "/api/chooseIdol",
-                              JSON.stringify({ playerId: V.player.id, playerName: V.player.name })
+                              JSON.stringify({ playerId: _.player.id, playerName: _.player.name })
                             ).then(
                               (function () {
                                 var e = Object(u.a)(
@@ -22939,18 +22943,18 @@
                                       for (;;)
                                         switch ((e.prev = e.next)) {
                                           case 0:
-                                            A.ok && A.status && 200 === A.status && V && V.player
+                                            A.ok && A.status && 200 === A.status && _ && _.player
                                               ? (!1,
-                                                "" === ee.idol || null === ee.idol
-                                                  ? ((ee.idol = V.player.id), Ae(Object(N.a)({}, ee)), !0)
-                                                  : ee.coins >= 200 &&
-                                                    ((ee.coins -= 200),
-                                                    (ee.idol = V.player.id),
-                                                    Ae(Object(N.a)({}, ee)),
+                                                "" === ne.idol || null === ne.idol
+                                                  ? ((ne.idol = _.player.id), re(Object(N.a)({}, ne)), !0)
+                                                  : ne.coins >= 200 &&
+                                                    ((ne.coins -= 200),
+                                                    (ne.idol = _.player.id),
+                                                    re(Object(N.a)({}, ne)),
                                                     !0),
-                                                _(V.player.name + " is now your idol.", { appearance: "success" }))
+                                                ee(_.player.name + " is now your idol.", { appearance: "success" }))
                                               : A.json().then(function (e) {
-                                                  _(e.message || "Error", { appearance: "error" });
+                                                  ee(e.message || "Error", { appearance: "error" });
                                                 });
                                           case 1:
                                           case "end":
@@ -22969,7 +22973,7 @@
                           e.next = 11;
                           break;
                         case 10:
-                          _("Insufficient coins!", { appearance: "error" });
+                          ee("Insufficient coins!", { appearance: "error" });
                         case 11:
                         case "end":
                           return e.stop();
@@ -22981,48 +22985,49 @@
                 return e.apply(this, arguments);
               };
             })(),
-            be =
-              ae(null === V || void 0 === V ? void 0 : V.player, "RETIRED") ||
-              ae(null === V || void 0 === V ? void 0 : V.player, "COFFEE_EXIT"),
-            pe = !1;
-          (2 !== (null === (A = U.sim) || void 0 === A ? void 0 : A.phase) &&
-            4 !== (null === (t = U.sim) || void 0 === t ? void 0 : t.phase) &&
-            10 !== (null === (a = U.sim) || void 0 === a ? void 0 : a.phase) &&
-            13 !== (null === (l = U.sim) || void 0 === l ? void 0 : l.phase)) ||
-            null === U ||
-            void 0 === U ||
-            null === (ie = U.schedule) ||
-            void 0 === ie ||
-            ie.forEach(function (e) {
-              e.gameComplete || (pe = !0);
+            De =
+              ae(null === _ || void 0 === _ ? void 0 : _.player, "RETIRED") ||
+              ae(null === _ || void 0 === _ ? void 0 : _.player, "COFFEE_EXIT"),
+            ye = !1;
+          ((null === (A = R.sim) || void 0 === A ? void 0 : A.phase) !== J.Earlseason &&
+            (null === (t = R.sim) || void 0 === t ? void 0 : t.phase) !== J.Midseason &&
+            (null === (a = R.sim) || void 0 === a ? void 0 : a.phase) !== J.Lateseason &&
+            (null === (l = R.sim) || void 0 === l ? void 0 : l.phase) !== J.EarlyPostseason &&
+            (null === (o = R.sim) || void 0 === o ? void 0 : o.phase) !== J.Postseason) ||
+            null === R ||
+            void 0 === R ||
+            null === (ve = R.schedule) ||
+            void 0 === ve ||
+            ve.forEach(function (e) {
+              e.gameComplete || (ye = !0);
             });
-          var De =
-              ae(null === V || void 0 === V ? void 0 : V.player, "NON_IDOLIZED") ||
-              ae(null === V || void 0 === V ? void 0 : V.player, "COFFEE_EXIT"),
-            ye = ee.idol,
-            Me =
-              !be && (null === V || void 0 === V ? void 0 : V.player) ? (
+          var Me =
+              ae(null === _ || void 0 === _ ? void 0 : _.player, "NON_IDOLIZED") ||
+              ae(null === _ || void 0 === _ ? void 0 : _.player, "COFFEE_EXIT"),
+            Pe = ne.idol,
+            Ne =
+              !De && (null === _ || void 0 === _ ? void 0 : _.player) ? (
                 <div className="Player-Header-Bottom">
                   <div className="Player-Teams-Section">
                     <div className="Player-Team-Line">
                       <div
                         className="Player-Team-Logo"
-                        style={{ background: void 0 !== V.team ? V.team.mainColor : "#999999" }}
+                        style={{ background: void 0 !== _.team ? _.team.mainColor : "#999999" }}
                       >
-                        <div className="Player-Team-Emoji">{le(V.team)}</div>
+                        <div className="Player-Team-Emoji">{le(_.team)}</div>
                       </div>
-                      <div className="Player-Team-Name">{void 0 !== V.team ? V.team.fullName : "Null Team"}</div>
+                      <div className="Player-Team-Name">{void 0 !== _.team ? _.team.fullName : "Null Team"}</div>
                     </div>
                   </div>
-                  {te(U.sim, "UNLOCKED_IDOLS") ? (
+                  {te(R.sim, "UNLOCKED_IDOLS") ? (
                     <de.a className="ModalItem-Button">
-                      {(pe || De) && ye !== V.player.id ? (
+                      {(ye || Me) && Pe !== _.player.id ? (
                         <div className="ModalItem-Tooltip">
                           <Be.a
                             placement="top"
                             overlay={
                               <ue.a id="tooltip-disabled" className="ModalItem-Tooltip">
-                                {pe
+                                {ye
                                   ? "You can't choose an Idol while games are active."
                                   : "This player cannot be Idolized."}
                               </ue.a>
@@ -23035,7 +23040,7 @@
                                 className="ModalItem-Button-Idol"
                                 variant="dark"
                               >
-                                {"" === ye || null === ye ? (
+                                {"" === Pe || null === Pe ? (
                                   <r.a.Fragment>
                                     <Il className="ModalItem-Icon" /> Choose Idol
                                   </r.a.Fragment>
@@ -23048,14 +23053,14 @@
                             </span>
                           </Be.a>
                         </div>
-                      ) : ye === V.player.id ? (
+                      ) : Pe === _.player.id ? (
                         <div className="ModalItem-Button-Idol-Current">
                           <Il className="ModalItem-Icon" /> Your Idol
                         </div>
                       ) : (
-                        <Oo.a className="ModalItem-Button-Form" onSubmit={Qe}>
+                        <Oo.a className="ModalItem-Button-Form" onSubmit={pe}>
                           <me.a className="ModalItem-Button-Idol" type="submit" variant="success">
-                            {"" === ye || null === ye ? (
+                            {"" === Pe || null === Pe ? (
                               <r.a.Fragment>
                                 <Il className="ModalItem-Icon" /> Choose Idol
                               </r.a.Fragment>
@@ -23073,10 +23078,10 @@
                   )}
                 </div>
               ) : null,
-            Pe =
-              !be && (null === V || void 0 === V ? void 0 : V.player) ? (
+            Te =
+              !De && (null === _ || void 0 === _ ? void 0 : _.player) ? (
                 <ul className="Player-Info-Stats">
-                  <li className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}>
+                  <li className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}>
                     <div className="Player-Info-Line-Header">Current Vibe</div>
                     {(function (e, A) {
                       var t = Object(n.useContext)(L.context).user,
@@ -23160,9 +23165,9 @@
                           </span>
                         </span>
                       );
-                    })(V.player, void 0 !== (null === (o = U.sim) || void 0 === o ? void 0 : o.day) ? U.sim.day : -1)}
+                    })(_.player, void 0 !== (null === (g = R.sim) || void 0 === g ? void 0 : g.day) ? R.sim.day : -1)}
                   </li>
-                  <li className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}>
+                  <li className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}>
                     <div className="Player-Info-Line-Header">Batting</div>
                     <div className="ModalItem-Ratings">
                       {Li(
@@ -23177,11 +23182,11 @@
                             Math.pow(1 - e.patheticism, 0.05) *
                             Math.pow(e.martyrdom, 0.02)
                           );
-                        })(V.player)
+                        })(_.player)
                       )}
                     </div>
                   </li>
-                  <li className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}>
+                  <li className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}>
                     <div className="Player-Info-Line-Header">Pitching</div>
                     <div className="ModalItem-Ratings">
                       {(function (e) {
@@ -23197,10 +23202,10 @@
                             );
                           })(e)
                         );
-                      })(V.player)}
+                      })(_.player)}
                     </div>
                   </li>
-                  <li className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}>
+                  <li className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}>
                     <div className="Player-Info-Line-Header">Baserunning</div>
                     <div className="ModalItem-Ratings">
                       {(function (e) {
@@ -23215,10 +23220,10 @@
                             );
                           })(e)
                         );
-                      })(V.player)}
+                      })(_.player)}
                     </div>
                   </li>
-                  <li className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}>
+                  <li className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}>
                     <div className="Player-Info-Line-Header">Defense</div>
                     <div className="ModalItem-Ratings">
                       {(function (e) {
@@ -23233,15 +23238,15 @@
                             );
                           })(e)
                         );
-                      })(V.player)}
+                      })(_.player)}
                     </div>
                   </li>
                 </ul>
               ) : null,
-            Ne =
-              !be && (null === V || void 0 === V ? void 0 : V.player) ? (
+            ze =
+              !De && (null === _ || void 0 === _ ? void 0 : _.player) ? (
                 <div className="Player-Info-Items">
-                  <li className={"Player-Info-Items-Box" + (ee.lightMode ? " Player-Info-Items-Box-LightMode" : "")}>
+                  <li className={"Player-Info-Items-Box" + (ne.lightMode ? " Player-Info-Items-Box-LightMode" : "")}>
                     <div className="Player-Info-Items-Header">Item</div>
                     <div className="Player-Info-Items-Details">
                       <div className="Player-Info-Items-Name">
@@ -23253,16 +23258,16 @@
                             return A.id === e.bat;
                           });
                           return void 0 === A ? "None?" : A.name;
-                        })(V.player)}
+                        })(_.player)}
                       </div>
                       <div className="Player-Info-Items-Icon">
                         {(function (e) {
                           return void 0 === e || void 0 === e.bat || e.bat, null;
-                        })(V.player)}
+                        })(_.player)}
                       </div>
                     </div>
                   </li>
-                  <li className={"Player-Info-Items-Box" + (ee.lightMode ? " Player-Info-Items-Box-LightMode" : "")}>
+                  <li className={"Player-Info-Items-Box" + (ne.lightMode ? " Player-Info-Items-Box-LightMode" : "")}>
                     <div className="Player-Info-Items-Header">Armor</div>
                     <div className="Player-Info-Items-Details">
                       <div className="Player-Info-Items-Name">
@@ -23274,31 +23279,31 @@
                             return A.id === e.armor;
                           });
                           return void 0 === A ? "None?" : A.name;
-                        })(V.player)}
+                        })(_.player)}
                       </div>
                       <div className="Player-Info-Items-Icon">
                         {(function (e) {
                           return void 0 === e || void 0 === e.armor || e.armor, null;
-                        })(V.player)}
+                        })(_.player)}
                       </div>
                     </div>
                   </li>
                 </div>
               ) : null,
-            Te =
-              void 0 === (null === V || void 0 === V ? void 0 : V.player) ? (
+            Oe =
+              void 0 === (null === _ || void 0 === _ ? void 0 : _.player) ? (
                 <Gr />
               ) : (
                 <r.a.Fragment>
-                  <div className={"ModalItem-Info" + (ee.lightMode ? " ModalItem-Info-LightMode" : "")}>
+                  <div className={"ModalItem-Info" + (ne.lightMode ? " ModalItem-Info-LightMode" : "")}>
                     <div className="Player-Header">
-                      <h2 className="ModalItem-Name">{V.player.name}</h2>
-                      {Me}
+                      <h2 className="ModalItem-Name">{_.player.name}</h2>
+                      {Ne}
                     </div>
                   </div>
-                  {Ce}
+                  {Qe}
                   <Io.a.Container id="ModalTabs-Container" defaultActiveKey="Interview">
-                    <ko.a variant="tabs" className={"ModalTabs" + (ee.lightMode ? " ModalTabs-LightMode" : "")}>
+                    <ko.a variant="tabs" className={"ModalTabs" + (ne.lightMode ? " ModalTabs-LightMode" : "")}>
                       <ko.a.Item>
                         <ko.a.Link eventKey="Interview">Info</ko.a.Link>
                       </ko.a.Item>
@@ -23308,12 +23313,12 @@
                     </ko.a>
                     <Io.a.Content>
                       <Io.a.Pane eventKey="Interview">
-                        {Ee}
-                        <div className={"ModalItem-Content" + (Ee ? " ModalItem-Content-WithAttributes" : "")}>
-                          {Pe}
-                          {Ne}
+                        {be}
+                        <div className={"ModalItem-Content" + (be ? " ModalItem-Content-WithAttributes" : "")}>
+                          {Te}
+                          {ze}
                           <ul className="Player-Info-Bio">
-                            <li className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}>
+                            <li className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}>
                               <div className="Player-Info-Line-Header">Evolution</div>
                               <div className="Player-Info-Line-Body">
                                 {(function (e) {
@@ -23330,22 +23335,22 @@
                                       return "Home";
                                   }
                                   return "Base";
-                                })(null === V || void 0 === V ? void 0 : V.player)}
+                                })(null === _ || void 0 === _ ? void 0 : _.player)}
                               </div>
                             </li>
-                            <li className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}>
+                            <li className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}>
                               <div className="Player-Info-Line-Header">Peanut Allergy</div>
-                              <div className="Player-Info-Line-Body">{V.player.peanutAllergy ? "Yes" : "No"}</div>
+                              <div className="Player-Info-Line-Body">{_.player.peanutAllergy ? "Yes" : "No"}</div>
                             </li>
-                            <li className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}>
+                            <li className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}>
                               <div className="Player-Info-Line-Header">Pregame Ritual</div>
-                              <div className="Player-Info-Line-Body">{V.player.ritual}</div>
+                              <div className="Player-Info-Line-Body">{_.player.ritual}</div>
                             </li>
-                            <li className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}>
+                            <li className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}>
                               <div className="Player-Info-Line-Header">Coffee Style</div>
-                              <div className="Player-Info-Line-Body">{tc(V.player.coffee)}</div>
+                              <div className="Player-Info-Line-Body">{tc(_.player.coffee)}</div>
                             </li>
-                            <li className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}>
+                            <li className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}>
                               <div className="Player-Info-Line-Header">Blood Type</div>
                               <div className="Player-Info-Line-Body">
                                 {(function (e) {
@@ -23378,15 +23383,15 @@
                                       return "Grass";
                                   }
                                   return "Blood?";
-                                })(V.player.blood)}
+                                })(_.player.blood)}
                               </div>
                             </li>
-                            <li className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}>
+                            <li className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}>
                               <div className="Player-Info-Line-Header">Fate</div>
-                              <div className="Player-Info-Line-Body">{V.player.fate}</div>
+                              <div className="Player-Info-Line-Body">{_.player.fate}</div>
                             </li>
-                            <li className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}>
-                              <div className="Player-Info-Line-Header">{be ? "Soulsong" : "Soulscream"}</div>
+                            <li className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}>
+                              <div className="Player-Info-Line-Header">{De ? "Soulsong" : "Soulscream"}</div>
                               {(function (e) {
                                 for (
                                   var A = ae(e, "RETIRED"),
@@ -23416,303 +23421,303 @@
                                     </div>
                                   </div>
                                 );
-                              })(V.player)}
+                              })(_.player)}
                             </li>
                           </ul>
-                          {void 0 !== ee.snacks.Forbidden_Knowledge_Access &&
-                          (null === (g = V.team) || void 0 === g ? void 0 : g.id) === ee.favoriteTeam ? (
+                          {void 0 !== ne.snacks.Forbidden_Knowledge_Access &&
+                          (null === (i = _.team) || void 0 === i ? void 0 : i.id) === ne.favoriteTeam ? (
                             <r.a.Fragment>
                               <h3 className="Player-Info-FK-Subheader">Advanced Stats</h3>
                               <ul className="Player-Info-FK">
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Anticapitalism</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.anticapitalism}
-                                      color={null === (i = V.team) || void 0 === i ? void 0 : i.mainColor}
+                                      value={_.player.anticapitalism}
+                                      color={null === (d = _.team) || void 0 === d ? void 0 : d.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Base Thirst</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.baseThirst}
-                                      color={null === (d = V.team) || void 0 === d ? void 0 : d.mainColor}
+                                      value={_.player.baseThirst}
+                                      color={null === (f = _.team) || void 0 === f ? void 0 : f.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Bouyancy</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.buoyancy}
-                                      color={null === (f = V.team) || void 0 === f ? void 0 : f.mainColor}
+                                      value={_.player.buoyancy}
+                                      color={null === (v = _.team) || void 0 === v ? void 0 : v.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Chasiness</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.chasiness}
-                                      color={null === (v = V.team) || void 0 === v ? void 0 : v.mainColor}
+                                      value={_.player.chasiness}
+                                      color={null === (w = _.team) || void 0 === w ? void 0 : w.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Cinnamon</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.cinnamon}
-                                      color={null === (w = V.team) || void 0 === w ? void 0 : w.mainColor}
+                                      value={_.player.cinnamon}
+                                      color={null === (C = _.team) || void 0 === C ? void 0 : C.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Coldness</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.coldness}
-                                      color={null === (C = V.team) || void 0 === C ? void 0 : C.mainColor}
+                                      value={_.player.coldness}
+                                      color={null === (E = _.team) || void 0 === E ? void 0 : E.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Continuation</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.continuation}
-                                      color={null === (E = V.team) || void 0 === E ? void 0 : E.mainColor}
+                                      value={_.player.continuation}
+                                      color={null === (Q = _.team) || void 0 === Q ? void 0 : Q.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Divinity</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.divinity}
-                                      color={null === (Q = V.team) || void 0 === Q ? void 0 : Q.mainColor}
+                                      value={_.player.divinity}
+                                      color={null === (b = _.team) || void 0 === b ? void 0 : b.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Ground Friction</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.groundFriction}
-                                      color={null === (b = V.team) || void 0 === b ? void 0 : b.mainColor}
+                                      value={_.player.groundFriction}
+                                      color={null === (p = _.team) || void 0 === p ? void 0 : p.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Indulgence</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.indulgence}
-                                      color={null === (p = V.team) || void 0 === p ? void 0 : p.mainColor}
+                                      value={_.player.indulgence}
+                                      color={null === (D = _.team) || void 0 === D ? void 0 : D.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Laserlikeness</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.laserlikeness}
-                                      color={null === (D = V.team) || void 0 === D ? void 0 : D.mainColor}
+                                      value={_.player.laserlikeness}
+                                      color={null === (y = _.team) || void 0 === y ? void 0 : y.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Martyrdom</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.martyrdom}
-                                      color={null === (y = V.team) || void 0 === y ? void 0 : y.mainColor}
+                                      value={_.player.martyrdom}
+                                      color={null === (M = _.team) || void 0 === M ? void 0 : M.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Moxie</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.moxie}
-                                      color={null === (M = V.team) || void 0 === M ? void 0 : M.mainColor}
+                                      value={_.player.moxie}
+                                      color={null === (T = _.team) || void 0 === T ? void 0 : T.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Musclitude</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.musclitude}
-                                      color={null === (T = V.team) || void 0 === T ? void 0 : T.mainColor}
+                                      value={_.player.musclitude}
+                                      color={null === (z = _.team) || void 0 === z ? void 0 : z.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Omniscience</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.omniscience}
-                                      color={null === (z = V.team) || void 0 === z ? void 0 : z.mainColor}
+                                      value={_.player.omniscience}
+                                      color={null === (O = _.team) || void 0 === O ? void 0 : O.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Overpowerment</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.overpowerment}
-                                      color={null === (O = V.team) || void 0 === O ? void 0 : O.mainColor}
+                                      value={_.player.overpowerment}
+                                      color={null === (I = _.team) || void 0 === I ? void 0 : I.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Patheticism</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.patheticism}
-                                      color={null === (I = V.team) || void 0 === I ? void 0 : I.mainColor}
+                                      value={_.player.patheticism}
+                                      color={null === (k = _.team) || void 0 === k ? void 0 : k.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Pressurization</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.pressurization}
-                                      color={null === (k = V.team) || void 0 === k ? void 0 : k.mainColor}
+                                      value={_.player.pressurization}
+                                      color={null === (h = _.team) || void 0 === h ? void 0 : h.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Ruthlessness</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.ruthlessness}
-                                      color={null === (h = V.team) || void 0 === h ? void 0 : h.mainColor}
+                                      value={_.player.ruthlessness}
+                                      color={null === (Z = _.team) || void 0 === Z ? void 0 : Z.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Shakespearianism</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.shakespearianism}
-                                      color={null === (Z = V.team) || void 0 === Z ? void 0 : Z.mainColor}
+                                      value={_.player.shakespearianism}
+                                      color={null === (G = _.team) || void 0 === G ? void 0 : G.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Suppresion</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.suppression}
-                                      color={null === (J = V.team) || void 0 === J ? void 0 : J.mainColor}
+                                      value={_.player.suppression}
+                                      color={null === (W = _.team) || void 0 === W ? void 0 : W.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Tenaciousness</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.tenaciousness}
-                                      color={null === (G = V.team) || void 0 === G ? void 0 : G.mainColor}
+                                      value={_.player.tenaciousness}
+                                      color={null === (X = _.team) || void 0 === X ? void 0 : X.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Thwackability</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.thwackability}
-                                      color={null === (W = V.team) || void 0 === W ? void 0 : W.mainColor}
+                                      value={_.player.thwackability}
+                                      color={null === (H = _.team) || void 0 === H ? void 0 : H.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Total Fingers</div>
-                                  <div className="Player-Info-Line-Body">{V.player.totalFingers}</div>
+                                  <div className="Player-Info-Line-Body">{_.player.totalFingers}</div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Tragicness</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.tragicness}
-                                      color={null === (X = V.team) || void 0 === X ? void 0 : X.mainColor}
+                                      value={_.player.tragicness}
+                                      color={null === (F = _.team) || void 0 === F ? void 0 : F.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Unthwackability</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.unthwackability}
-                                      color={null === (H = V.team) || void 0 === H ? void 0 : H.mainColor}
+                                      value={_.player.unthwackability}
+                                      color={null === (Y = _.team) || void 0 === Y ? void 0 : Y.mainColor}
                                     />
                                   </div>
                                 </li>
                                 <li
-                                  className={"Player-Info-Line" + (ee.lightMode ? " Player-Info-Line-LightMode" : "")}
+                                  className={"Player-Info-Line" + (ne.lightMode ? " Player-Info-Line-LightMode" : "")}
                                 >
                                   <div className="Player-Info-Line-Header">Watchfulness</div>
                                   <div className="Player-Info-Line-Body">
                                     <hi
-                                      value={V.player.watchfulness}
-                                      color={null === (F = V.team) || void 0 === F ? void 0 : F.mainColor}
+                                      value={_.player.watchfulness}
+                                      color={null === (U = _.team) || void 0 === U ? void 0 : U.mainColor}
                                     />
                                   </div>
                                 </li>
@@ -23724,7 +23729,7 @@
                       <Io.a.Pane eventKey="Events">
                         <div className="ModalItem-Content">
                           <Ts
-                            entity={V.player.id}
+                            entity={_.player.id}
                             source={ps.Player}
                             defaultCategory={S.Changes}
                             defaultSort={Ds.NewestFirst}
@@ -23736,7 +23741,7 @@
                   </Io.a.Container>
                 </r.a.Fragment>
               );
-          return <zo {...Object.assign({}, e, { className: "ModalItem" })}>{Te}</zo>;
+          return <zo {...Object.assign({}, e, { className: "ModalItem" })}>{Oe}</zo>;
         },
         Ji = function (e) {
           var A = Object(n.useContext)(ba.context),
