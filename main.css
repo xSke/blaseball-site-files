@@ -9929,6 +9929,7 @@ input[type="number"]::-webkit-outer-spin-button {
     background: transparent;
   }
   .Widget-Display-Visual-Max:after {
+    top: auto;
     bottom: 5px;
     left: 7px;
     font-size: 11px;
@@ -10962,60 +10963,62 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-right: 5px;
   font-size: 25px;
 }
-.Team-Player-Shelled1:after,
-.Team-Player-Shelled2:after,
-.Team-Player-Shelled3:after,
-.Team-Player-Shelled4:after,
-.Team-Player-Shelled5:after {
-  content: "SHELLED";
+.Team-Player-Shelled1,
+.Team-Player-Shelled2,
+.Team-Player-Shelled3,
+.Team-Player-Shelled4,
+.Team-Player-Shelled5 {
   position: absolute;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   padding: 0 5px;
   border-radius: 5px;
+  color: #fff;
 }
-.theme-dark .Team-Player-Shelled1:after,
-.theme-dark .Team-Player-Shelled2:after,
-.theme-dark .Team-Player-Shelled3:after,
-.theme-dark .Team-Player-Shelled4:after,
-.theme-dark .Team-Player-Shelled5:after,
-.theme-light .Team-Player-Shelled1:after,
-.theme-light .Team-Player-Shelled2:after,
-.theme-light .Team-Player-Shelled3:after,
-.theme-light .Team-Player-Shelled4:after,
-.theme-light .Team-Player-Shelled5:after {
+.theme-dark .Team-Player-Shelled1,
+.theme-dark .Team-Player-Shelled2,
+.theme-dark .Team-Player-Shelled3,
+.theme-dark .Team-Player-Shelled4,
+.theme-dark .Team-Player-Shelled5,
+.theme-light .Team-Player-Shelled1,
+.theme-light .Team-Player-Shelled2,
+.theme-light .Team-Player-Shelled3,
+.theme-light .Team-Player-Shelled4,
+.theme-light .Team-Player-Shelled5 {
   background: red;
 }
-.Team-Player-Shelled1:after {
+.Team-Player-Shelled1 {
   transform: rotate(-7deg);
   margin-left: 1px;
   margin-top: 1px;
 }
-.Team-Player-Shelled2:after {
+.Team-Player-Shelled2 {
   transform: rotate(-10deg);
   margin-left: 3px;
 }
-.Team-Player-Shelled3:after {
+.Team-Player-Shelled3 {
   transform: rotate(-5deg);
   margin-left: 9px;
   margin-top: 1px;
 }
-.Team-Player-Shelled4:after {
+.Team-Player-Shelled4 {
   transform: rotate(10deg);
   margin-left: 5px;
   margin-top: 2px;
 }
-.Team-Player-Shelled5:after {
+.Team-Player-Shelled5 {
   transform: rotate(5deg);
   margin-left: 2px;
   margin-top: 2px;
 }
-.Team-Player-Shelled6:after {
+.Team-Player-Shelled6 {
   transform: rotate(7deg);
   margin-left: 7px;
 }
-.Team-Player-Away:before {
-  content: "elsewhere...";
+.Team-Player-Away {
+  color: #827a87;
+}
+.Team-Player-Away-Status {
   position: absolute;
   padding: 2px 8px;
   border-radius: 50px;
@@ -11027,24 +11030,9 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
   font-weight: 400;
   z-index: 1;
-}
-.theme-dark .Team-Player-Away:before {
-  background: rgba(0, 0, 0, 0.9);
-}
-.theme-light .Team-Player-Away:before {
-  background: hsla(0, 0%, 100%, 0.9);
-}
-.theme-dark .Team-Player-Away:before {
-  color: #fff;
-}
-.theme-light .Team-Player-Away:before {
+  background: #bdb3c3;
   color: #000;
-}
-.theme-dark .Team-Player-Away:before {
-  box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.9);
-}
-.theme-light .Team-Player-Away:before {
-  box-shadow: 0 0 5px 4px hsla(0, 0%, 100%, 0.9);
+  box-shadow: 0 0 5px 4px #bdb3c3;
 }
 .Team-Player-Ratings,
 .Team-Player-Vibe {
@@ -13313,12 +13301,11 @@ button:focus-visible {
   display: flex;
   align-items: center;
 }
-.Leaderboard-Shelled1:after,
-.Leaderboard-Shelled2:after,
-.Leaderboard-Shelled3:after,
-.Leaderboard-Shelled4:after,
-.Leaderboard-Shelled5:after {
-  content: "SHELLED";
+.Leaderboard-Shelled1,
+.Leaderboard-Shelled2,
+.Leaderboard-Shelled3,
+.Leaderboard-Shelled4,
+.Leaderboard-Shelled5 {
   position: absolute;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
@@ -13326,65 +13313,66 @@ button:focus-visible {
   border-radius: 5px;
   color: #fff;
 }
-.theme-dark .Leaderboard-Shelled1:after,
-.theme-dark .Leaderboard-Shelled2:after,
-.theme-dark .Leaderboard-Shelled3:after,
-.theme-dark .Leaderboard-Shelled4:after,
-.theme-dark .Leaderboard-Shelled5:after,
-.theme-light .Leaderboard-Shelled1:after,
-.theme-light .Leaderboard-Shelled2:after,
-.theme-light .Leaderboard-Shelled3:after,
-.theme-light .Leaderboard-Shelled4:after,
-.theme-light .Leaderboard-Shelled5:after {
+.theme-dark .Leaderboard-Shelled1,
+.theme-dark .Leaderboard-Shelled2,
+.theme-dark .Leaderboard-Shelled3,
+.theme-dark .Leaderboard-Shelled4,
+.theme-dark .Leaderboard-Shelled5,
+.theme-light .Leaderboard-Shelled1,
+.theme-light .Leaderboard-Shelled2,
+.theme-light .Leaderboard-Shelled3,
+.theme-light .Leaderboard-Shelled4,
+.theme-light .Leaderboard-Shelled5 {
   background-color: red;
 }
-.Leaderboard-Shelled1:after {
+.Leaderboard-Shelled1 {
   transform: rotate(-7deg);
   margin-top: 5px;
   margin-left: 30px;
 }
-.Leaderboard-Shelled2:after {
+.Leaderboard-Shelled2 {
   transform: rotate(-10deg);
   margin-top: 7px;
   margin-left: 20px;
 }
-.Leaderboard-Shelled3:after {
+.Leaderboard-Shelled3 {
   transform: rotate(-5deg);
   margin-top: 2px;
   margin-left: 35px;
 }
-.Leaderboard-Shelled4:after {
+.Leaderboard-Shelled4 {
   transform: rotate(10deg);
   margin-top: 6px;
   margin-left: 25px;
 }
-.Leaderboard-Shelled5:after {
+.Leaderboard-Shelled5 {
   transform: rotate(5deg);
   margin-top: 9px;
   margin-left: 32px;
 }
-.Leaderboard-Shelled6:after {
+.Leaderboard-Shelled6 {
   transform: rotate(7deg);
   margin-top: 3px;
   margin-left: 28px;
 }
-.Leaderboard-Away:before {
-  content: "elsewhere...";
+.Leaderboard-Away {
+  color: #827a87;
+}
+.Leaderboard-Away-Status {
   position: absolute;
-  background: rgba(0, 0, 0, 0.83);
-  color: #e3e3e3;
-  box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.83);
   padding: 2px 8px;
   border-radius: 50px;
-  font-size: 16px;
+  font-size: 14px;
   left: 10%;
-  top: 7px;
-  margin: 0;
   transform: rotate(7deg);
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   letter-spacing: 0.05em;
+  margin: 0;
   font-weight: 400;
   z-index: 1;
+  background: #bdb3c3;
+  color: #000;
+  box-shadow: 0 0 5px 4px #bdb3c3;
 }
 .OminousRedLine {
   width: 100%;
