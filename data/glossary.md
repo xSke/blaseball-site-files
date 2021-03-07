@@ -100,7 +100,7 @@
 - Something that is owed or due.
 
 ## Earlpostseason
-- The period of the Postseason comprising the Wild Card Round and Round 1.
+- The period of the Postseason comprising the Wild Card Round and Round 2.
 
 ## Earlseason
 - The period of the Regular Season spanning from the First Day to the Earlsiesta.
@@ -304,7 +304,10 @@
 - The absence of Ins.
 
 ## Party Time
-- When a team is mathematically eliminated from the Postseason and will occassionally receive permanent stats boosts in their games.
+- A non-physical concept entered into when a team is mathematically eliminated from the Postseason, during which they may occasionally receive permanent stat boosts during games.
+
+## Partying
+- A non-physical concept that has the potential of becoming a physical concept.
 
 ## Peanuts
 - A gift from the Shelled One.
@@ -434,6 +437,7 @@
 ## Star
 - A volumetric unit of congealed care.
 - A measurement of potentiality.
+- An object forged by` ||| ||||| |||||||||| ||| |||||||||| |||||| `consisting of a luminous spheroid of Plasma held together by` ||||`.
 
 ## Steal
 - An exchange of Players in which only one Player is selected for the transaction.

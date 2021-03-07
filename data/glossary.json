@@ -196,7 +196,7 @@
     {
         "name": "Earlpostseason",
         "definition": [
-            "The period of the Postseason comprising the Wild Card Round and Round 1."
+            "The period of the Postseason comprising the Wild Card Round and Round 2."
         ]
     },
     {
@@ -586,7 +586,13 @@
     {
         "name": "Party Time",
         "definition": [
-            "When a team is mathematically eliminated from the Postseason and will occassionally receive permanent stats boosts in their games."
+            "A non-physical concept entered into when a team is mathematically eliminated from the Postseason, during which they may occasionally receive permanent stat boosts during games."
+        ]
+    },
+    {
+        "name": "Partying",
+        "definition": [
+            "A non-physical concept that has the potential of becoming a physical concept."
         ]
     },
     {
@@ -832,7 +838,8 @@
         "name": "Star",
         "definition": [
             "A volumetric unit of congealed care.",
-            "A measurement of potentiality."
+            "A measurement of potentiality.",
+            "An object forged by ||| ||||| |||||||||| ||| |||||||||| |||||| consisting of a luminous spheroid of Plasma held together by ||||."
         ]
     },
     {

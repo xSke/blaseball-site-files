@@ -90,11 +90,10 @@
 * c. `|| ||| |||| ||| ||| |||||||| ||||| |||||||||| ||| || |||| |||| || | |||||||||| |||||| ||||||| ||||||||| ||||||| |||||||`
 
 ### 4. Close - Ballparks
-* PROJECT SUSPENDED, PENDING INVESTIGATION
-* a. `|||||| | |||||||| ||| || |||||||||||, | |||| |||| ||||| ||| ||||. |||| |||||||| ||||| ||||, ||||| ||| |||||| || ||||||||||||| ||||| |||| | ||||||||| || ||||||||||||| ||||||.`
-* b. `|||| ||||||||| ||||| || ||||||||| || ||||| |||||. ||||||||||| ||| |||||| ||| ||||| || ||||. | |||||| || ||||||||||| ||| || ||||| |||| ||||||.`
-* c. `|||| |||||||| ||| ||||||||||| ||||| || |||||||| || ||| |||| ||| |||||||| |||| || ||||||||||||.`
-* d. `|||| |||||||| ||| ||||||||||| ||||| ||||||| ||| |||||||||| ||| ||| ||||||||| |||||| ||| ||||||||||.`
+* a. Before a Ballpark may be constructed, a Team must Plant its Flag. When Planting their Flag, Teams may choose an Architectural Style from a selection of Prefabricated Models.
+* b. Home Ballparks shall be Renovated in their Image.  Renovations may change the State of Play. A number of Renovations can be built each Season.
+* c. Flag Planting and Renovations shall be financed by the Fans and accessed only by Snackholders.
+* d. Flag Planting and Renovations begin during the Earlsiesta and are completed during the Latesiesta.
 * e. Renovations may affect `|||||||| ||| |||||||||||| ||||||||, ||||||||| ||| ||| ||||||| ||` Field Conditions, Weather patterns, and Elements of Play.
 
 ### 5. Deface - Wills

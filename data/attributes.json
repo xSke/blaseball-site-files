@@ -693,7 +693,7 @@
         "textColor": "#fffcd9",
         "background": "#44c97c",
         "title": "Free Refill",
-        "description": "Good for one Free Refill"
+        "description": "Good for one Free Refill."
     },
     {
         "id": "TRIPLE_THREAT",
@@ -709,7 +709,7 @@
         "textColor": "#be4fff",
         "background": "#96afd4",
         "title": "Perk",
-        "description": "This player has been rewarded Percolated energy."
+        "description": "This player has been rewarded Percolated energy. They will Overperform in all Coffee weathers."
     },
     {
         "id": "OVERPERFORMING",
@@ -877,7 +877,7 @@
         "textColor": "#ffffff",
         "background": "#000000",
         "title": "Static",
-        "description": ""
+        "description": "....."
     },
     {
         "id": "EARLBIRDS",
@@ -937,9 +937,9 @@
     },
     {
         "id": "SINKING_SHIP",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#78befb",
+        "textColor": "#78befb",
+        "background": "#00250d",
         "title": "Sinking Ship",
         "description": "This team plays 1% worse for every player above 14 players on their roster, and 1% better for every player below 14 on their roster."
     },
@@ -972,8 +972,8 @@
         "color": "#ace8de",
         "textColor": "#ace8de",
         "background": "#3b524e",
-        "title": "Flying Pies",
-        "description": "Whenever the Pies have lost 3 in a Row, their pitchers will start throwing Pies."
+        "title": "Flying Pie",
+        "description": "Whenever this team has lost 3 games in a Row, their pitchers will start throwing Pies."
     },
     {
         "id": "FRESH",
@@ -1017,11 +1017,11 @@
     },
     {
         "id": "FLOOD_PUMPS",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#41feff",
+        "textColor": "#41feff",
+        "background": "#465f63",
         "title": "Flood Pumps",
-        "description": ""
+        "description": "Flood Pumps will prevent Flooding weather from making your Ballpark filthier."
     },
     {
         "id": "POLAR_VORTEX",
@@ -1041,11 +1041,11 @@
     },
     {
         "id": "EVENT_HORIZON",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
+        "color": "#ec49ff",
+        "textColor": "#ec49ff",
         "background": "#000000",
         "title": "Event Horizon",
-        "description": ""
+        "description": "The Event Horizon will prevent the first Black Hole activation in each game, converting the Overflow to Unruns for your opponent's next game."
     },
     {
         "id": "SOUNDSYSTEM",
@@ -1065,19 +1065,19 @@
     },
     {
         "id": "FIRE_INSURANCE",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#ff2e2e",
+        "textColor": "#ff2e2e",
+        "background": "#4c2300",
         "title": "Heat Magnet",
-        "description": ""
+        "description": "The Heat Magnet will absorb heat from an incineration and pass it on to the Thermal Converter."
     },
     {
         "id": "PEANUT_MISTER",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#f3ff54",
+        "textColor": "#f3ff54",
+        "background": "#423519",
         "title": "Peanut Mister",
-        "description": ""
+        "description": "A Peanut Mister will occasionally cure a player of their peanut allergy."
     },
     {
         "id": "BLOOD_LUSTER",
@@ -1093,7 +1093,7 @@
         "textColor": "#ffffff",
         "background": "#000000",
         "title": "Birdhouses",
-        "description": ""
+        "description": "Birdhouses invite Birds."
     },
     {
         "id": "SWEETENER",
@@ -1133,7 +1133,7 @@
         "textColor": "#ffffff",
         "background": "#000000",
         "title": "Casino Zone",
-        "description": ""
+        "description": "777"
     },
     {
         "id": "CATAPULTS",
@@ -1145,19 +1145,19 @@
     },
     {
         "id": "BIG_BUCKET",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#72ff92",
+        "textColor": "#72ff92",
+        "background": "#00670d",
         "title": "Big Buckets",
-        "description": ""
+        "description": "If a home run lands in a Big Bucket, it scores an extra Run."
     },
     {
         "id": "SMALL_BUCKET",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#ffe76b",
+        "textColor": "#ffe76b",
+        "background": "#673e00",
         "title": "Small Bucket",
-        "description": ""
+        "description": "If a home run lands in a Small Bucket, it score 5 extra Runs."
     },
     {
         "id": "BUMPERS",
@@ -1222,5 +1222,85 @@
         "background": "#000000",
         "title": "Fugitive",
         "description": ""
+    },
+    {
+        "id": "BIG_RED_BUTTON",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#000000",
+        "title": "Supercharged",
+        "description": "When this Team hits a Grand Slam, reset the number of Outs to zero."
+    },
+    {
+        "id": "BASE_DEALING",
+        "color": "#d297f9",
+        "textColor": "#a16dc3",
+        "background": "#180027",
+        "title": "Base Dealing",
+        "description": "This Team's lineup will advance in reverse order."
+    },
+    {
+        "id": "SMOOTH",
+        "color": "#8ae9ff",
+        "textColor": "#8ae9ff",
+        "background": "#423519",
+        "title": "Smooth",
+        "description": "This player will have 100% more Speed in Peanut weather."
+    },
+    {
+        "id": "CHUNKY",
+        "color": "#ff9e08",
+        "textColor": "#ff9e08",
+        "background": "#423519",
+        "title": "Chunky",
+        "description": "This player will have 100% more Power in Peanut weather."
+    },
+    {
+        "id": "SUN_KISSED",
+        "color": "#ffe100",
+        "textColor": "#ffe100",
+        "background": "#5c5d45",
+        "title": "Sun Dialed",
+        "description": "When this Team activates Sun 2, a random player on their Team will be boosted by 1%."
+    },
+    {
+        "id": "UNHOLEY",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#863490",
+        "title": "Unholey",
+        "description": "When this Team activates the Black Hole, a random player on their opponent's Team will be impaired by 1%."
+    },
+    {
+        "id": "SUPERCHARGED",
+        "color": "#e6ff21",
+        "textColor": "#e6ff21",
+        "background": "#84072a",
+        "title": "Supercharged",
+        "description": "This Team will play 10% better after scoring 10+ Runs the Day before."
+    },
+    {
+        "id": "HIGH_PRESSURE",
+        "color": "#fff912",
+        "textColor": "#fff912",
+        "background": "#465f63",
+        "title": "High Pressure",
+        "description": "This Team will bat 50% better in Flooding weather when runners are on base."
+    },
+    {
+        "id": "SCATTERED",
+        "color": "#bdb3c3",
+        "textColor": "#bdb3c3",
+        "background": "#ffffff",
+        "title": "Scattered",
+        "description": "This Player returned from Elsewhere a bit Scattered."
+    },
+    {
+        "id": "PATIENT",
+        "color": "#f06cff",
+        "textColor": "#f06cff",
+        "background": "#1b2950",
+        "title": "Patient",
+        "description": "This batter will never swing when there are 0 Strikes and are 1 Ball away from a Walk."
     }
 ]
