@@ -13163,6 +13163,9 @@ button:focus-visible {
 .theme-light .Main {
   color: #000;
 }
+.Main-BigDeal {
+  overflow: hidden;
+}
 .Main-Body {
   margin-top: 40px;
 }
@@ -15443,7 +15446,7 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 50vh;
+  min-height: 100vh;
 }
 .theme-dark .BigDeal-All {
   color: #fff;
@@ -15503,8 +15506,6 @@ button:focus-visible {
 .BigDeal-Icon-2 {
   font-size: 40vh;
   line-height: 0;
-  height: 48vh;
-  width: 100%;
   display: flex;
 }
 .BigDeal-Icon-5 {
@@ -15515,8 +15516,8 @@ button:focus-visible {
 }
 .BigDeal-Equity {
   background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/Equity.7cde27ee.png);
-  width: 60%;
-  height: 60%;
+  width: 48vh;
+  height: 48vh;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50%;
@@ -15524,8 +15525,7 @@ button:focus-visible {
 }
 .BigDeal-Body {
   max-width: 550px;
-  height: 50px;
-  margin: auto;
+  margin: 20px auto auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15557,7 +15557,7 @@ button:focus-visible {
 .BigDeal-RedLine-2 {
   color: #ffbe00;
   line-height: 1.2em;
-  font-size: 48px;
+  font-size: 3em;
 }
 .BigDeal-Message-Style-FullScreen {
   margin: 0 20px;
@@ -15610,7 +15610,7 @@ button:focus-visible {
 }
 .BigDeal-Message-Size-2 {
   line-height: 1.2em;
-  font-size: 48px;
+  font-size: 3em;
 }
 .BigDeal-Message-Size-3 {
   font-size: 24px;
