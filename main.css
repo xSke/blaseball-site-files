@@ -10042,6 +10042,8 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .GameWidget-Full-Upcoming {
     grid-template-columns: 40% auto;
+    grid-gap: 0;
+    gap: 0;
   }
   .GameWidget-Upcoming-Info {
     grid-column: 1/3;
@@ -10056,7 +10058,7 @@ input[type="number"]::-webkit-outer-spin-button {
     justify-content: space-around;
   }
   .GameWidget-Upcoming-Favorites-Team {
-    font-size: 14px;
+    font-size: 16px;
   }
   .GameWidget-Upcoming-Favorites-Percentage {
     font-size: 18px;
@@ -10114,7 +10116,7 @@ input[type="number"]::-webkit-outer-spin-button {
     background: hsla(0, 0%, 89%, 0.71);
   }
   .GameWidget-ScoreName {
-    font-size: 18px;
+    font-size: 22px;
   }
   .GameWidget-ScoreNumber {
     margin: 0 8px 0 0;
@@ -10129,6 +10131,7 @@ input[type="number"]::-webkit-outer-spin-button {
     grid-gap: 5px;
     gap: 5px;
     margin-bottom: 5px;
+    grid-template-columns: 50px auto 15%;
   }
   .GameWidget.IsComplete .GameWidget-Log {
     display: none;
@@ -15506,6 +15509,8 @@ button:focus-visible {
 .BigDeal-Icon-2 {
   font-size: 40vh;
   line-height: 0;
+  width: 48vh;
+  height: 48vh;
   display: flex;
 }
 .BigDeal-Icon-5 {
@@ -15516,12 +15521,13 @@ button:focus-visible {
 }
 .BigDeal-Equity {
   background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/Equity.7cde27ee.png);
-  width: 48vh;
-  height: 48vh;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50%;
   margin: auto;
+  width: 100%;
+  height: 100%;
+  max-width: 80vw;
 }
 .BigDeal-Body {
   max-width: 550px;
@@ -15671,12 +15677,16 @@ button:focus-visible {
   }
 }
 @media (max-width: 1080px) {
-  .BigDeal-RedLine {
+  .BigDeal-RedLine,
+  .BigDeal-RedLine-2 {
     font-size: 24px;
   }
-  .BigDeal-RedLine-Three {
+  .BigDeal-RedLine-3 {
     font-size: 36px;
     line-height: 1.2em;
+  }
+  .BigDeal-Message-Size-2 {
+    font-size: 2em;
   }
 }
 #root .ModalForm {

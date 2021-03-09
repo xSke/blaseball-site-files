@@ -23835,7 +23835,7 @@
                             A.next = 10;
                             break;
                           }
-                          if (!(tA.coins < 200) || ("" === tA.idol && null === tA.idol)) {
+                          if (!(tA.coins < 200 && "" !== tA.idol && null !== tA.idol)) {
                             A.next = 6;
                             break;
                           }
@@ -27597,8 +27597,8 @@
             c = <hf />;
           if (
             (n.isFetching || !n.isSignedIn || n.favoriteTeam || (c = <Lf />),
-            n.isFetching || !n.isSignedIn || n.snacks[_.VOTES] || (c = <Yf />),
-            !n.isFetching && n.isSignedIn && n.favoriteTeam && n.snacks[_.VOTES])
+            !n.isFetching && n.isSignedIn && (n.coins <= 0 || !n.coins) && (c = <Yf />),
+            !n.isFetching && n.isSignedIn && n.favoriteTeam && n.coins > 0)
           ) {
             var o = n.coins >= 25;
             c = o ? (
@@ -27658,8 +27658,8 @@
         },
         Yf = function () {
           return (
-            <a href={"/shop/".concat(x.VOTES)}>
-              <_e.a className="Blessings-Submit-Button">Buy Another Vote</_e.a>
+            <a href={"/shop/".concat(x.BEG)}>
+              <_e.a className="Blessings-Submit-Button">No Coins</_e.a>
             </a>
           );
         },
