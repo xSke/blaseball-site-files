@@ -17073,6 +17073,7 @@ button:focus-visible {
 }
 .Recap-Results {
   margin-bottom: 20px;
+  width: 100%;
 }
 .Recap-Filters {
   display: flex;
@@ -17140,6 +17141,7 @@ button:focus-visible {
   font-size: 30px;
   justify-content: center;
   align-items: center;
+  color: #fff;
 }
 .theme-dark .Recap-Blessing-Team {
   background: #000;

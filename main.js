@@ -2404,8 +2404,8 @@
       };
     },
     ,
-    function (A, e, t) {},
     ,
+    function (A, e, t) {},
     ,
     ,
     ,
@@ -6190,7 +6190,7 @@
         $e = t(104),
         At = (t(138), t(21)),
         et = t(20),
-        tt = t(44),
+        tt = t(45),
         at = t(33);
       function nt() {
         return (nt =
@@ -7588,7 +7588,7 @@
         };
       Ia.context = pa;
       var Ta = Ia,
-        Za = (t(40), t(171));
+        Za = (t(41), t(171));
       function ka() {
         return (ka =
           Object.assign ||
@@ -27209,18 +27209,23 @@
         },
         Pf = function (A) {
           var e,
-            t = A.path,
-            a = Object(n.useContext)(P.context),
-            s = void 0 !== a.sim && void 0 !== a.sim.season ? a.sim.season : -1,
-            c = Object(n.useState)([]),
-            g = Object(o.a)(c, 2),
-            l = g[0],
-            B = g[1];
-          Object(n.useContext)(Z.context).user;
+            t,
+            a = A.path,
+            s = Object(n.useContext)(P.context),
+            c = void 0 !== s.sim && void 0 !== s.sim.season ? s.sim.season : -1,
+            g = Object(n.useState)([]),
+            l = Object(o.a)(g, 2),
+            B = l[0],
+            f = l[1],
+            v = Object(n.useState)(!0),
+            w = Object(o.a)(v, 2),
+            i = w[0],
+            m = w[1],
+            C = Object(n.useContext)(Z.context).user;
           Object(n.useEffect)(function () {
-            f();
+            Q();
           }, []);
-          var f = (function () {
+          var Q = (function () {
               var A = Object(u.a)(
                 d.a.mark(function A() {
                   var e;
@@ -27228,10 +27233,10 @@
                     for (;;)
                       switch ((A.prev = A.next)) {
                         case 0:
-                          return (A.next = 2), ys(s, 5);
+                          return (A.next = 2), ys(c, 5);
                         case 2:
                           (e = A.sent),
-                            B(
+                            f(
                               e.filter(function (A) {
                                 return 29 !== A.type;
                               })
@@ -27247,22 +27252,37 @@
                 return A.apply(this, arguments);
               };
             })(),
-            v = null;
-          switch (t) {
+            E = null !== (e = C.favoriteTeam) && void 0 !== e ? e : "",
+            D = null;
+          switch (a) {
             case "/leaderboard":
-              v = <fc />;
+              D = <fc />;
               break;
             case "/standings":
-              v = <ic />;
+              D = <ic />;
               break;
             case "/league":
-              v = (
+              var M = !0;
+              D = (
                 <div className="Recap">
                   <div className="Recap-Results">
                     <h2 className="Recap-ResultsHeader">Renovations</h2>
-                    {l.map(function (A) {
-                      return <bf event={A} />;
+                    <xc.a className="Recap-Filters">
+                      <xc.a.Check
+                        className="ModalForm-Switch Recap-Filters-Switch"
+                        type="switch"
+                        id="favteam"
+                        label="Favorite Team's Results Only"
+                        checked={i}
+                        onChange={function () {
+                          return m(!i);
+                        }}
+                      />
+                    </xc.a>
+                    {B.map(function (A) {
+                      return i && !A.teamTags.includes(E) ? null : (M && (M = !1), (<bf event={A} />));
                     })}
+                    {M ? <div className="Recap-NoneFound">No events found...</div> : null}
                   </div>
                 </div>
               );
@@ -27275,14 +27295,15 @@
                     <Qf style={{ width: "250px", height: "250px" }} />
                     <div className="Stubs-Header">Latesiesta</div>
                     <Ac />
-                    <oc dateString={null === (e = a.sim) || void 0 === e ? void 0 : e.nextPhaseTime} />
-                    <div className="Stubs-Body">Lateseason {s + 1} will begin soon.</div>
+                    <oc dateString={null === (t = s.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
+                    <div className="Stubs-Body">Lateseason {c + 1} will begin soon.</div>
                   </div>
                 }
                 text=""
               />
               <cc />
-              {v}
+              {D}
+              <Ss />
             </div>
           );
         },
