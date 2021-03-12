@@ -13532,6 +13532,16 @@ button:focus-visible {
 .theme-light .Leaderboard-Player-Wrapper:nth-child(odd) > a {
   background-color: hsla(0, 0%, 89%, 0.71);
 }
+.Leaderboard-Player-Wrapper-Bottom {
+  width: 100%;
+  align-items: center;
+}
+.theme-dark .Leaderboard-Player-Wrapper-Bottom:nth-child(2n) > a {
+  background-color: rgba(30, 30, 30, 0.64);
+}
+.theme-light .Leaderboard-Player-Wrapper-Bottom:nth-child(2n) > a {
+  background-color: hsla(0, 0%, 89%, 0.71);
+}
 .Leaderboard-Player-Wrapper-WithIcon {
   display: grid;
   grid-template-columns: auto 600px;
