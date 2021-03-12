@@ -867,9 +867,9 @@
         "id": "ECHO",
         "color": "#ffffff",
         "textColor": "#ffffff",
-        "background": "#000000",
+        "background": "#9c2c46",
         "title": "Echo",
-        "description": ""
+        "description": "Echo Echo Echo Echo Echo Echo Echo Echo Echo Echo Echo Echo"
     },
     {
         "id": "STATIC",
@@ -1302,5 +1302,117 @@
         "background": "#1b2950",
         "title": "Patient",
         "description": "This batter will never swing when there are 0 Strikes and are 1 Ball away from a Walk."
+    },
+    {
+        "id": "HUNCH",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#453e30",
+        "title": "Hunch",
+        "description": "This player has a Hunch."
+    },
+    {
+        "id": "UNCERTAIN",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#000000",
+        "title": "Uncertain",
+        "description": ""
+    },
+    {
+        "id": "MUNCHIES",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#000000",
+        "title": "Munchies",
+        "description": ""
+    },
+    {
+        "id": "DOUBLE_DOG",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#000000",
+        "title": "Double-Dog",
+        "description": ""
+    },
+    {
+        "id": "BLACKHOLE_PAYOUTS",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#000000",
+        "title": "Jam-Packed",
+        "description": ""
+    },
+    {
+        "id": "SUN2_PAYOUTS",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#000000",
+        "title": "Extra-Frosted",
+        "description": ""
+    },
+    {
+        "id": "POPCORN_PAYOUTS",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#000000",
+        "title": "Buttered Up",
+        "description": ""
+    },
+    {
+        "id": "STALEPOPCORN_PAYOUTS",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#000000",
+        "title": "Buttered Down",
+        "description": ""
+    },
+    {
+        "id": "MAXIMALIST",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#000000",
+        "title": "Maximalist",
+        "description": ""
+    },
+    {
+        "id": "MINIMALIST",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#000000",
+        "title": "Minimalist",
+        "description": ""
+    },
+    {
+        "id": "FREE_WILL",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#000000",
+        "title": "Free Will",
+        "description": "This Team will receive an Extra Will in the upcoming Election."
+    },
+    {
+        "id": "CUSTOM_HATCHED",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#000000",
+        "title": "Custom Hatched",
+        "description": "This Player was hatched via Bird Rights."
+    },
+    {
+        "id": "FORCE_FIELD",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#000000",
+        "title": "Force Field",
+        "description": "This Player is protected by a Force Field from Steals and Swaps."
+    },
+    {
+        "id": "PSYCHOACOUSTICS",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#000000",
+        "title": "PsychoAcoustics",
+        "description": ""
     }
 ]
