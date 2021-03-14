@@ -1285,7 +1285,7 @@
         "textColor": "#fff912",
         "background": "#465f63",
         "title": "High Pressure",
-        "description": "This Team will bat 50% better in Flooding weather when runners are on base."
+        "description": "This Team will play 25% better in Flooding weather when runners are on base."
     },
     {
         "id": "SCATTERED",
@@ -1313,11 +1313,11 @@
     },
     {
         "id": "UNCERTAIN",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#d285ff",
+        "textColor": "#d285ff",
+        "background": "#ffffff",
         "title": "Uncertain",
-        "description": ""
+        "description": "When this Player returns from Elsewhere, they'll be adjusted by -15% to +20%."
     },
     {
         "id": "MUNCHIES",
@@ -1387,7 +1387,7 @@
         "id": "FREE_WILL",
         "color": "#ffffff",
         "textColor": "#ffffff",
-        "background": "#000000",
+        "background": "#9e0000",
         "title": "Free Will",
         "description": "This Team will receive an Extra Will in the upcoming Election."
     },

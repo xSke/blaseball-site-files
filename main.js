@@ -2364,7 +2364,7 @@
             textColor: "#fff912",
             background: "#465f63",
             title: "High Pressure",
-            description: "This Team will bat 50% better in Flooding weather when runners are on base.",
+            description: "This Team will play 25% better in Flooding weather when runners are on base.",
           },
           {
             id: "SCATTERED",
@@ -2392,11 +2392,11 @@
           },
           {
             id: "UNCERTAIN",
-            color: "#ffffff",
-            textColor: "#ffffff",
-            background: "#000000",
+            color: "#d285ff",
+            textColor: "#d285ff",
+            background: "#ffffff",
             title: "Uncertain",
-            description: "",
+            description: "When this Player returns from Elsewhere, they'll be adjusted by -15% to +20%.",
           },
           {
             id: "MUNCHIES",
@@ -2466,7 +2466,7 @@
             id: "FREE_WILL",
             color: "#ffffff",
             textColor: "#ffffff",
-            background: "#000000",
+            background: "#9e0000",
             title: "Free Will",
             description: "This Team will receive an Extra Will in the upcoming Election.",
           },
@@ -4111,8 +4111,8 @@
             })) || void 0 === n
             ? void 0
             : n.REACT_APP_EVENT_URL) || "/events/",
-        g = t(102),
-        E = +(
+        E = t(102),
+        g = +(
           Object({
             NODE_ENV: "production",
             PUBLIC_URL: "https://d35iw2jmbg6ut8.cloudfront.net",
@@ -4121,7 +4121,7 @@
             WDS_SOCKET_PORT: void 0,
           }).DATA_STREAM_LIFETIME || 4e4
         ),
-        v = new g.SimpleEventDispatcher(),
+        v = new E.SimpleEventDispatcher(),
         b = l.a.createContext({ games: void 0, leagues: void 0, temporal: void 0, fights: void 0 });
       function y(e, a) {
         e.onmessage = function (e) {
@@ -4160,7 +4160,7 @@
                   }, a);
                 })
               ),
-              E
+              g
             );
             return function () {
               e.close();
@@ -4883,7 +4883,7 @@
             xlinkHref="<img/png blob>"
           />
         ),
-        ge = function (e) {
+        Ee = function (e) {
           var a = e.svgRef,
             t = e.title,
             n = he(e, ["svgRef", "title"]);
@@ -4894,8 +4894,8 @@
             </svg>
           );
         },
-        Ee = l.a.forwardRef(function (e, a) {
-          return <ge {...pe({ svgRef: a }, e)} />;
+        ge = l.a.forwardRef(function (e, a) {
+          return <Ee {...pe({ svgRef: a }, e)} />;
         });
       t.p;
       function ve() {
@@ -5483,8 +5483,8 @@
         }
         return r;
       }
-      var ga,
-        Ea = (
+      var Ea,
+        ga = (
           <image
             id="_37-TarotSpread"
             data-name="37-TarotSpread"
@@ -5502,7 +5502,7 @@
           return (
             <svg {...ha({ width: 256, height: 256, viewBox: "0 0 256 256", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
-              {Ea}
+              {ga}
             </svg>
           );
         },
@@ -5515,7 +5515,7 @@
           (e[(e.Rotation = 1)] = "Rotation"),
           (e[(e.ShadowLineup = 2)] = "ShadowLineup"),
           (e[(e.ShadowRotation = 3)] = "ShadowRotation");
-      })(ga || (ga = {}));
+      })(Ea || (Ea = {}));
       var ya = function e() {
         Object(K.a)(this, e), (this.wins = 0), (this.losses = 0), (this.games = 0), (this.nonlosses = 0);
       };
@@ -5862,25 +5862,25 @@
             e.divisions.map(function (e) {
               o.includes(e.id) && (f = f.concat(e.teams));
             });
-            var g = [];
-            e.teams.map(function (e) {
-              f.includes(e.id) && g.push(e);
-            }),
-              (r = g);
-          } else if ("inDivision" === n) {
             var E = [];
+            e.teams.map(function (e) {
+              f.includes(e.id) && E.push(e);
+            }),
+              (r = E);
+          } else if ("inDivision" === n) {
+            var g = [];
             e.divisions.map(function (e) {
               o.includes(e.id) &&
                 e.teams.find(function (e) {
                   return e === t;
                 }) &&
-                (E = E.concat(e.teams));
+                (g = g.concat(e.teams));
             });
-            var v = E.indexOf(t);
-            v > -1 && E.splice(v, 1);
+            var v = g.indexOf(t);
+            v > -1 && g.splice(v, 1);
             var b = [];
             e.teams.map(function (e) {
-              E.includes(e.id) && b.push(e);
+              g.includes(e.id) && b.push(e);
             }),
               (r = b);
           }
@@ -6240,12 +6240,12 @@
             </svg>
           );
         },
-        gt = l.a.forwardRef(function (e, a) {
+        Et = l.a.forwardRef(function (e, a) {
           return <ft {...At({ svgRef: a }, e)} />;
         });
       t.p;
-      function Et() {
-        return (Et =
+      function gt() {
+        return (gt =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -6291,14 +6291,14 @@
             t = e.title,
             n = vt(e, ["svgRef", "title"]);
           return (
-            <svg {...Et({ width: 128, height: 128, viewBox: "0 0 256 256", ref: a }, n)}>
+            <svg {...gt({ width: 128, height: 128, viewBox: "0 0 256 256", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
               {bt}
             </svg>
           );
         },
         wt = l.a.forwardRef(function (e, a) {
-          return <yt {...Et({ svgRef: a }, e)} />;
+          return <yt {...gt({ svgRef: a }, e)} />;
         });
       t.p;
       function Bt() {
@@ -6879,7 +6879,7 @@
             },
             {
               name: "Reverb",
-              icon: <gt aria-label="A purple and blue striped ocean wave" role="img" id="Reverb" />,
+              icon: <Et aria-label="A purple and blue striped ocean wave" role="img" id="Reverb" />,
               background: "#443561",
               color: "#ffffff",
               description: "A chance of roster shuffles.",
@@ -6950,7 +6950,7 @@
             className="WeatherIcon"
             id={i}
             aria-label={"".concat(i, " Weather")}
-            style={{ color: En(t), background: vn(t) }}
+            style={{ color: gn(t), background: vn(t) }}
           >
             <span id="definition" aria-labelledby={i} role="definition" className="sr-only">
               {n.description}
@@ -6973,7 +6973,7 @@
                 className="WeatherIcon"
                 id={i}
                 aria-label={"".concat(i, " Weather")}
-                style={{ color: En(t), background: vn(t) }}
+                style={{ color: gn(t), background: vn(t) }}
               >
                 <d className="WeatherIcon" background={a} path={n.path}>
                   <span id="definition" aria-labelledby={i} role="definition" className="sr-only">
@@ -6994,10 +6994,10 @@
           s
         );
       }
-      function gn(e) {
+      function En(e) {
         return hn[e].name;
       }
-      function En(e) {
+      function gn(e) {
         return hn[e].color;
       }
       function vn(e) {
@@ -7040,13 +7040,13 @@
           case "REVERBERATING":
             return <tt.l />;
           case "BLOOD_THIEF":
-            return <tt.Pb />;
+            return <tt.Qb />;
           case "BLOOD_DONOR":
             return <tt.Bb />;
           case "BLOOD_WINNER":
-            return <tt.Kb />;
+            return <tt.Lb />;
           case "BLOOD_PITY":
-            return <tt.nc />;
+            return <tt.pc />;
           case "BLOOD_FAITH":
           case "BLOOD_LAW":
           case "BLOOD_CHAOS":
@@ -7059,7 +7059,7 @@
           case "DEBT_THREE":
             return <tt.h />;
           case "MARKED":
-            return <tt.uc />;
+            return <tt.xc />;
           case "PARTY_TIME":
             return <tt.Gb />;
           case "LIFE_OF_PARTY":
@@ -7068,6 +7068,7 @@
             return <tt.nb />;
           case "FIRST_BORN":
           case "HARD_BOILED":
+          case "CUSTOM_HATCHED":
             return <tt.M />;
           case "HONEY_ROASTED":
             return <tt.F />;
@@ -7084,11 +7085,11 @@
           case "ELECTRIC":
             return <tt.N />;
           case "DOUBLE_PAYOUTS":
-            return <tt.mc />;
+            return <tt.oc />;
           case "FIRE_PROTECTOR":
             return <tt.R />;
           case "ON_FIRE":
-            return <tt.bc />;
+            return <tt.cc />;
           case "HEATING_UP":
             return <tt.db />;
           case "RECEIVER":
@@ -7101,9 +7102,9 @@
           case "FRIEND_OF_CROWS":
             return <tt.n />;
           case "BASE_INSTINCTS":
-            return <tt.Wb />;
+            return <tt.Xb />;
           case "STABLE":
-            return <tt.ic />;
+            return <tt.kc />;
           case "GROWTH":
             return <tt.gb />;
           case "REPEATING":
@@ -7114,17 +7115,17 @@
           case "SQUIDDEST":
             return <tt.X />;
           case "SUBJECTION":
-            return <tt.hc />;
+            return <tt.jc />;
           case "LIBERATED":
-            return <tt.Ub />;
+            return <tt.Vb />;
           case "FIRE_EATER":
             return <tt.O />;
           case "MAGMATIC":
-            return <tt.Lb />;
+            return <tt.Mb />;
           case "LOYALTY":
-            return <tt.Vb />;
+            return <tt.Wb />;
           case "SABOTEUR":
-            return <tt.fc />;
+            return <tt.hc />;
           case "PITY":
             return <tt.W />;
           case "GOD":
@@ -7134,9 +7135,9 @@
           case "DESTRUCTION":
             return <tt.K />;
           case "FLINCH":
-            return <tt.kc />;
+            return <tt.mc />;
           case "WILD":
-            return <tt.Zb />;
+            return <tt.ac />;
           case "LOVE":
             return <tt.H />;
           case "SIPHON":
@@ -7144,25 +7145,25 @@
           case "CREDIT_TO_THE_TEAM":
             return <tt.tb />;
           case "WALK_IN_THE_PARK":
-            return <tt.sc />;
+            return <tt.vc />;
           case "BIRD_SEED":
             return <tt.Z />;
           case "HAUNTED":
-            return <tt.dc />;
+            return <tt.fc />;
           case "TRAVELING":
-            return <tt.Ob />;
+            return <tt.Pb />;
           case "BLASERUNNING":
             return <tt.P x={t} y={n} className={r} style={o} />;
           case "SEALANT":
-            return <tt.ec />;
+            return <tt.gc />;
           case "O_NO":
-            return <tt.Sb />;
+            return <tt.Tb />;
           case "FAIRNESS":
-            return <tt.Rb />;
+            return <tt.Sb />;
           case "TRIBUTE":
             return <tt.Cb />;
           case "UNFLAMED":
-            return <tt.qc />;
+            return <tt.tc />;
           case "ESCAPE":
             return <tt.B />;
           case "RETIRED":
@@ -7186,7 +7187,7 @@
           case "TRIPLE_THREAT":
             return <tt.C />;
           case "PERK":
-            return <tt.cc />;
+            return <tt.dc />;
           case "OVERPERFORMING":
             return <tt.Db />;
           case "UNDERPERFORMING":
@@ -7218,11 +7219,11 @@
           case "UNDERSEA":
             return <tt.vb />;
           case "SWIM_BLADDER":
-            return <tt.lc />;
+            return <tt.nc />;
           case "AMBUSH":
             return <tt.eb />;
           case "KILLER_PIES":
-            return <tt.Jb />;
+            return <tt.Kb />;
           case "EARLBIRDS":
             return <tt.lb />;
           case "LATE_TO_PARTY":
@@ -7234,15 +7235,15 @@
           case "REDACTED":
             return <tt.Ab />;
           case "PENANCE":
-            return <tt.Nb />;
+            return <tt.Ob />;
           case "SINKING_SHIP":
-            return <tt.Xb />;
+            return <tt.Yb />;
           case "BASE_DEALING":
             return <tt.t />;
           case "FLOOD_PUMPS":
-            return <tt.tc />;
+            return <tt.wc />;
           case "EVENT_HORIZON":
-            return <tt.rc />;
+            return <tt.uc />;
           case "FIRE_INSURANCE":
             return <tt.rb />;
           case "PEANUT_MISTER":
@@ -7255,15 +7256,15 @@
             return <tt.r />;
           case "SMOOTH":
           case "CHUNKY":
-            return <tt.ac />;
+            return <tt.bc />;
           case "SUN_KISSED":
-            return <tt.jc />;
+            return <tt.lc />;
           case "UNHOLEY":
             return <tt.hb />;
           case "SUPERCHARGED":
             return <tt.w />;
           case "HIGH_PRESSURE":
-            return <tt.gc />;
+            return <tt.ic />;
           case "SCATTERED":
             return <tt.Hb />;
           case "PATIENT":
@@ -7272,6 +7273,12 @@
             return <tt.L />;
           case "HUNCH":
             return <tt.sb />;
+          case "UNCERTAIN":
+            return <tt.Jb />;
+          case "FREE_WILL":
+            return <tt.rc />;
+          case "FORCE_FIELD":
+            return <tt.ec />;
         }
         return null;
       }
@@ -7888,7 +7895,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function gr(e, a) {
+      function Er(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -7908,7 +7915,7 @@
         }
         return r;
       }
-      var Er = (
+      var gr = (
           <image
             id="_04-Boreal_B"
             data-name="04-Boreal_B"
@@ -7922,11 +7929,11 @@
         vr = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = gr(e, ["svgRef", "title"]);
+            n = Er(e, ["svgRef", "title"]);
           return (
             <svg {...fr({ width: 128, height: 128, viewBox: "0 0 256 256", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
-              {Er}
+              {gr}
             </svg>
           );
         },
@@ -8501,14 +8508,14 @@
             </svg>
           );
         },
-        gl = l.a.forwardRef(function (e, a) {
+        El = l.a.forwardRef(function (e, a) {
           return <fl {...dl({ svgRef: a }, e)} />;
         });
       t.p;
       !(function (e) {
         (e[(e.GameWidget = 0)] = "GameWidget"), (e[(e.TeamModal = 1)] = "TeamModal");
       })(pl || (pl = {}));
-      var El = function (e) {
+      var gl = function (e) {
           return (
             <div className={bl(e.style)} aria-label={e.stadium.nickname} style={{ background: e.stadium.mainColor }}>
               <div className="Team-Stadium-IconA" aria-hidden={!0} style={{ filter: yl(e.stadium.secondaryColor) }}>
@@ -8548,7 +8555,7 @@
                     case 3:
                       return <ol />;
                     case 4:
-                      return <gl />;
+                      return <El />;
                     case 5:
                       return <Qn />;
                     case 6:
@@ -8687,7 +8694,7 @@
         return void 0 === a || null === a.model ? (
           <vl style={e.style} stadium={e.stadium} />
         ) : (
-          <El stadium={a} index={a.model} style={e.style} />
+          <gl stadium={a} index={a.model} style={e.style} />
         );
       };
       function Bl() {
@@ -8863,8 +8870,8 @@
             );
           })(A),
           f = n.topOfInning ? n.awayTeamColor : n.homeTeamColor,
-          g = n.topOfInning ? n.homeTeamColor : n.awayTeamColor,
-          E = Ml(n),
+          E = n.topOfInning ? n.homeTeamColor : n.awayTeamColor,
+          g = Ml(n),
           v = xl(n);
         function b() {
           return n.homeScore > n.awayScore ? n.homeTeam : n.awayTeam;
@@ -8888,8 +8895,8 @@
             ? n.awayTeamSecondaryColor
             : "Null Color";
         }
-        (a = E > v && n.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {}),
-          (t = v > E && n.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {});
+        (a = g > v && n.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {}),
+          (t = v > g && n.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {});
         var N = (function (e) {
             for (
               var a = {
@@ -8970,7 +8977,7 @@
                     <div
                       className="Widget-PlayerLineNameWrapper"
                       aria-haspopup={!0}
-                      style={{ background: i.lightMode ? Ma(g, 0.25) : Ma(g, 0.5) }}
+                      style={{ background: i.lightMode ? Ma(E, 0.25) : Ma(E, 0.5) }}
                     >
                       <d
                         background={U}
@@ -9475,9 +9482,9 @@
                       <span
                         className="GameWidget-Upcoming-WeatherLabel"
                         aria-hidden="true"
-                        aria-label={"Sun 2" === gn(A.weather) ? "Sun Two" : ""}
+                        aria-label={"Sun 2" === En(A.weather) ? "Sun Two" : ""}
                       >
-                        {gn(A.weather)}
+                        {En(A.weather)}
                       </span>
                       <fn type={A.weather} tooltip={!0} />
                     </div>
@@ -9817,8 +9824,8 @@
               p = d[1],
               h = Object(r.useState)(!1),
               f = Object(s.a)(h, 2),
-              g = f[0],
-              E = f[1],
+              E = f[0],
+              g = f[1],
               v = Object(r.useContext)(P.context).user;
             Object(r.useEffect)(function () {
               var e = window.matchMedia("(max-width: 1080px)");
@@ -9832,7 +9839,7 @@
             }, []);
             var b,
               y = function (e) {
-                e.matches ? E(!0) : E(!1);
+                e.matches ? g(!0) : g(!1);
               },
               w = function () {
                 clearTimeout(b), p(!0);
@@ -9864,7 +9871,7 @@
                 </Yl.a>
               );
             return (
-              g &&
+              E &&
                 (O = (
                   <Yl.a target={a.current} show={A} placement="top">
                     {function (e) {
@@ -10386,11 +10393,11 @@
           })
         )).apply(this, arguments);
       }
-      function go(e, a) {
-        return Eo.apply(this, arguments);
+      function Eo(e, a) {
+        return go.apply(this, arguments);
       }
-      function Eo() {
-        return (Eo = Object(h.a)(
+      function go() {
+        return (go = Object(h.a)(
           p.a.mark(function e(a, t) {
             var n, r;
             return p.a.wrap(
@@ -10645,10 +10652,10 @@
             u = i[1],
             A = Object(Bo.useToasts)().addToast,
             f = Object(c.g)(),
-            g = ["PEANUTS", "EVERYONE LOVES PEANUTS", "CRACK IT OPEN", "CRACK IT OPEN NOW"],
-            E = ["SO GOOD", "YUMMY", "SO GREAT"],
-            v = Object(r.useRef)(Math.floor(Math.random() * g.length)),
-            b = Object(r.useRef)(Math.floor(Math.random() * E.length)),
+            E = ["PEANUTS", "EVERYONE LOVES PEANUTS", "CRACK IT OPEN", "CRACK IT OPEN NOW"],
+            g = ["SO GOOD", "YUMMY", "SO GREAT"],
+            v = Object(r.useRef)(Math.floor(Math.random() * E.length)),
+            b = Object(r.useRef)(Math.floor(Math.random() * g.length)),
             y = (
               <div className="CoinOverlay-Content">
                 <div className="CoinOverlay-Content-Body">Earn Coins by placing bets on upcoming games</div>
@@ -10661,7 +10668,7 @@
             ),
             B = (
               <div className="CoinOverlay-Content">
-                <div className="CoinOverlay-Content-Body">{m ? E[b.current] : g[v.current]}</div>
+                <div className="CoinOverlay-Content-Body">{m ? g[b.current] : E[v.current]}</div>
               </div>
             ),
             O = null;
@@ -10882,8 +10889,8 @@
           p = d[1],
           h = Object(r.useState)(!1),
           f = Object(s.a)(h, 2),
-          g = f[0],
-          E = f[1],
+          E = f[0],
+          g = f[1],
           v = Object(r.useRef)(null),
           b = Object(r.useRef)(null);
         Object(r.useEffect)(function () {
@@ -10901,7 +10908,7 @@
             e.matches ? p(!0) : p(!1);
           },
           w = function (e) {
-            v.current && !v.current.contains(e.target) && m(!1), b.current && !b.current.contains(e.target) && E(!1);
+            v.current && !v.current.contains(e.target) && m(!1), b.current && !b.current.contains(e.target) && g(!1);
           },
           B = [],
           O = [];
@@ -10944,7 +10951,7 @@
           },
           T = n.isFetching ? null : n.isSignedIn ? <Ro /> : <jo />,
           k = (
-            <Oo.a in={g} timeout={350} classNames="Navigation-Animation" unmountOnExit={!0}>
+            <Oo.a in={E} timeout={350} classNames="Navigation-Animation" unmountOnExit={!0}>
               <div className="Navigation-Main">
                 {B.map(function (e, a) {
                   return (
@@ -11008,7 +11015,7 @@
             <div className="Navigation-Top Navigation-Toggle">
               <button
                 onClick={function () {
-                  E(!g);
+                  g(!E);
                 }}
                 className="Navigation-Button"
               >
@@ -11351,10 +11358,10 @@
         );
         var f = Object(r.useContext)(N.context);
         if (!f || !f.sim) return null;
-        var g = void 0 !== f.sim.season ? f.sim.season : -1,
-          E = 7 == (null === (e = f.sim) || void 0 === e ? void 0 : e.phase),
+        var E = void 0 !== f.sim.season ? f.sim.season : -1,
+          g = 7 == (null === (e = f.sim) || void 0 === e ? void 0 : e.phase),
           v =
-            g > 11 &&
+            E > 11 &&
             (null === (a = f.sim) || void 0 === a ? void 0 : a.phase) >= 2 &&
             (null === (t = f.sim) || void 0 === t ? void 0 : t.phase) <= 7,
           b = i.data;
@@ -11365,7 +11372,7 @@
           ) : (
             <ri
               info={u}
-              playoffs={E}
+              playoffs={g}
               icons={!1}
               line={v}
               lineIndex={b}
@@ -11465,8 +11472,8 @@
             p,
             h,
             f,
-            g,
             E,
+            g,
             v,
             b,
             y,
@@ -11510,7 +11517,7 @@
                       SHELLED
                     </div>
                   ) : null}
-                  {(null === (g = e.info.player) || void 0 === g ? void 0 : g.permAttr.includes("ELSEWHERE")) ? (
+                  {(null === (E = e.info.player) || void 0 === E ? void 0 : E.permAttr.includes("ELSEWHERE")) ? (
                     <div className="Leaderboard-Away-Status" aria-hidden="true">
                       elsewhere...
                     </div>
@@ -11523,7 +11530,7 @@
                     <div
                       className={
                         "Leaderboard-Player-Name" +
-                        ((null === (E = e.info.player) || void 0 === E ? void 0 : E.permAttr.includes("ELSEWHERE"))
+                        ((null === (g = e.info.player) || void 0 === g ? void 0 : g.permAttr.includes("ELSEWHERE"))
                           ? " Leaderboard-Away"
                           : "")
                       }
@@ -11975,7 +11982,7 @@
             });
       }
       var fi,
-        gi = function () {
+        Ei = function () {
           var e = Object(r.useContext)(N.context),
             a = Object(r.useState)(e.postseason.round ? e.postseason.round.roundNumber : 0),
             t = Object(s.a)(a, 2),
@@ -11995,7 +12002,7 @@
           (e[(e.Standings = 3)] = "Standings"),
           (e[(e.Postseason = 4)] = "Postseason");
       })(fi || (fi = {}));
-      var Ei = function (e) {
+      var gi = function (e) {
           var a,
             t,
             n,
@@ -12010,8 +12017,8 @@
             p,
             h = e.path,
             f = Object(r.useContext)(N.context),
-            g = Object(r.useContext)(P.context).user,
-            E = Object(r.useContext)(Q.context),
+            E = Object(r.useContext)(P.context).user,
+            g = Object(r.useContext)(Q.context),
             v = void 0 === f.schedule;
           if (void 0 === f.postseason.playoffs) return null;
           function b() {
@@ -12044,21 +12051,21 @@
                   {null ===
                     (a = (function () {
                       var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-                      if (!g || !E || void 0 === e) return e;
+                      if (!E || !g || void 0 === e) return e;
                       for (var a = [], t = 0; t < e.length; t++) a.push(e[t]);
                       return (
                         a.sort(),
                         (a = a.sort(function (e, a) {
-                          var t = e.homeTeam == g.favoriteTeam || e.awayTeam == g.favoriteTeam,
-                            n = a.homeTeam == g.favoriteTeam || a.awayTeam == g.favoriteTeam;
+                          var t = e.homeTeam == E.favoriteTeam || e.awayTeam == E.favoriteTeam,
+                            n = a.homeTeam == E.favoriteTeam || a.awayTeam == E.favoriteTeam;
                           if (t) return -1;
                           if (n) return 1;
                           if (!e.gameComplete && a.gameComplete) return -1;
                           if (e.gameComplete && !a.gameComplete) return 1;
-                          var r = void 0 !== E[e.id] && E[e.id].length > 0,
-                            l = void 0 !== E[a.id] && E[a.id].length > 0,
-                            o = r ? E[e.id][0] : void 0,
-                            i = l ? E[a.id][0] : void 0;
+                          var r = void 0 !== g[e.id] && g[e.id].length > 0,
+                            l = void 0 !== g[a.id] && g[a.id].length > 0,
+                            o = r ? g[e.id][0] : void 0,
+                            i = l ? g[a.id][0] : void 0;
                           if (r && l) {
                             if (o.amount > i.amount) return -1;
                             if (i.amount > o.amount) return 1;
@@ -12117,7 +12124,7 @@
             I = (b() === fi.Live ? T : k) + 1;
           switch (b()) {
             case fi.Postseason:
-              w = <gi />;
+              w = <Ei />;
               break;
             case fi.Leaderboard:
               w = <ni />;
@@ -12248,16 +12255,16 @@
         }
         var A = "EventTicker-Group";
         if (c) {
-          for (var f = 0, g = 0; g < t.length; g++) f += t[g].length;
-          var E = f / 5;
+          for (var f = 0, E = 0; E < t.length; E++) f += t[E].length;
+          var g = f / 5;
           A +=
-            E > 300
+            g > 300
               ? " EventTicker-Group-Animating-300"
-              : E > 240
+              : g > 240
               ? " EventTicker-Group-Animating-240"
-              : E > 180
+              : g > 180
               ? " EventTicker-Group-Animating-180"
-              : E > 120
+              : g > 120
               ? " EventTicker-Group-Animating-120"
               : " EventTicker-Group-Animating-60";
         }
@@ -12943,7 +12950,7 @@
             <div className={"Player-Info-Line" + (e.user.lightMode ? " Player-Info-Line-LightMode" : "")}>
               <div className="Player-Info-Line-Header">
                 <fn type={e.index} tooltip={!0} />
-                <div className="Team-Stadium-Weather-Name">{gn(e.index)}</div>
+                <div className="Team-Stadium-Weather-Name">{En(e.index)}</div>
               </div>
               <div className="Player-Info-Line-Body">
                 <Hi value={a} index={e.index} />
@@ -13635,8 +13642,8 @@
           );
         };
       t(99);
-      function gs() {
-        return (gs =
+      function Es() {
+        return (Es =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -13646,7 +13653,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Es(e, a) {
+      function gs(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -13670,16 +13677,16 @@
         bs = function (e) {
           var a = e.svgRef,
             t = e.title,
-            n = Es(e, ["svgRef", "title"]);
+            n = gs(e, ["svgRef", "title"]);
           return (
-            <svg {...gs({ width: 1e3, height: 1e3, viewBox: "0 0 1000 1000", ref: a }, n)}>
+            <svg {...Es({ width: 1e3, height: 1e3, viewBox: "0 0 1000 1000", ref: a }, n)}>
               {t ? <title>{t}</title> : null}
               {vs}
             </svg>
           );
         },
         ys = l.a.forwardRef(function (e, a) {
-          return <bs {...gs({ svgRef: a }, e)} />;
+          return <bs {...Es({ svgRef: a }, e)} />;
         }),
         ws = (t.p, l.a.createContext({ doc: void 0 })),
         Bs = function (e) {
@@ -13739,7 +13746,7 @@
           case 4:
             return <dt />;
           case 5:
-            return <tt.Tb />;
+            return <tt.Ub />;
         }
         return null;
       }
@@ -13756,23 +13763,23 @@
       };
       function Cs(e) {
         switch (e) {
-          case ga.Lineup:
+          case Ea.Lineup:
             return (
               <span>
                 Lineup <tt.j />
               </span>
             );
-          case ga.Rotation:
+          case Ea.Rotation:
             return (
               <span>
                 Rotation <Rl.b />
               </span>
             );
-          case ga.ShadowLineup:
-          case ga.ShadowRotation:
+          case Ea.ShadowLineup:
+          case Ea.ShadowRotation:
             return (
               <span>
-                Shadows <tt.pc />
+                Shadows <tt.sc />
               </span>
             );
         }
@@ -13910,10 +13917,10 @@
             d = e.defaultCategory,
             A = e.defaultSort,
             f = Object(r.useRef)(new Gs()),
-            g = Object(r.useState)(null !== d && void 0 !== d ? d : -1),
-            E = Object(s.a)(g, 2),
-            v = E[0],
-            b = E[1],
+            E = Object(r.useState)(null !== d && void 0 !== d ? d : -1),
+            g = Object(s.a)(E, 2),
+            v = g[0],
+            b = g[1],
             y = Object(r.useState)(null !== A && void 0 !== A ? A : xs.NewestFirst),
             w = Object(s.a)(y, 2),
             B = w[0],
@@ -14223,9 +14230,9 @@
         if (e.category === U.Changes) return <Xi.a />;
         switch (e.type) {
           case 82:
-            return <tt.Yb />;
+            return <tt.Zb />;
           default:
-            return e.type <= 15 ? <Rl.g /> : <tt.Qb />;
+            return e.type <= 15 ? <Rl.g /> : <tt.Rb />;
         }
       }
       function Ys(e) {
@@ -14368,9 +14375,9 @@
           u = m.user,
           A = m.setUser,
           f = Object(r.useState)({ lineup: [], rotation: [], bullpen: [], bench: [] }),
-          g = Object(s.a)(f, 2),
-          E = g[0],
-          v = g[1],
+          E = Object(s.a)(f, 2),
+          g = E[0],
+          v = E[1],
           b = Object(r.useState)(!1),
           y = Object(s.a)(b, 2),
           w = (y[0], y[1], Object(r.useState)(!1)),
@@ -14390,7 +14397,7 @@
         var C = (function () {
             var e = Object(h.a)(
               p.a.mark(function e() {
-                var a, t, n, r, l, o, i, s, c, m, u, d, A, h, f, g, E, b;
+                var a, t, n, r, l, o, i, s, c, m, u, d, A, h, f, E, g, b;
                 return p.a.wrap(function (e) {
                   for (;;)
                     switch ((e.prev = e.next)) {
@@ -14451,9 +14458,9 @@
                         )
                           h(f);
                         for (
-                          g = [],
-                            E = function (e) {
-                              g.push(
+                          E = [],
+                            g = function (e) {
+                              E.push(
                                 o.find(function (a) {
                                   return k.bullpen[e] === a.id;
                                 })
@@ -14463,8 +14470,8 @@
                           b < k.bullpen.length;
                           b++
                         )
-                          E(b);
-                        v({ lineup: i, rotation: m, bench: A, bullpen: g });
+                          g(b);
+                        v({ lineup: i, rotation: m, bench: A, bullpen: E });
                       case 23:
                       case "end":
                         return e.stop();
@@ -14562,8 +14569,8 @@
           L = n.stadiums.find(function (e) {
             return e.id === k.stadium;
           });
-        if (void 0 === E) return <Fl />;
-        var D = E.lineup.map(function (e) {
+        if (void 0 === g) return <Fl />;
+        var D = g.lineup.map(function (e) {
             var a,
               n = [];
             return (
@@ -14620,7 +14627,7 @@
               )
             );
           }),
-          G = E.rotation.map(function (e) {
+          G = g.rotation.map(function (e) {
             var a,
               n = [];
             return (
@@ -14673,7 +14680,7 @@
               )
             );
           }),
-          R = E.bench.map(function (e) {
+          R = g.bench.map(function (e) {
             var a = [];
             return (
               u.idol === e.id && a.push("Your Idol"),
@@ -14722,7 +14729,7 @@
               )
             );
           }),
-          j = E.bullpen.map(function (e) {
+          j = g.bullpen.map(function (e) {
             var a = [];
             return (
               u.idol === e.id && a.push("Your Idol"),
@@ -14914,7 +14921,7 @@
                       </div>
                       {void 0 !== u.snacks.Forbidden_Knowledge_Access && k.id === u.favoriteTeam ? (
                         <div className="Team-Section-Shadows">
-                          <tt.pc
+                          <tt.sc
                             onClick={function (e) {
                               S(!0);
                             }}
@@ -15043,8 +15050,8 @@
             p = Object(c.h)().gameId,
             h = Object(r.useState)(0),
             f = Object(s.a)(h, 2),
-            g = f[0],
-            E = f[1],
+            E = f[0],
+            g = f[1],
             v = Object(r.useState)(""),
             b = Object(s.a)(v, 2),
             y = b[0],
@@ -15056,7 +15063,7 @@
             I = Object(r.useContext)(N.context),
             C = function (e) {
               var a = e.target.value;
-              E(a);
+              g(a);
             };
           if (
             (Object(r.useEffect)(function () {
@@ -15162,7 +15169,7 @@
                     : e < 0.5
                     ? Math.round(a * (2 + 0.0015 * Math.pow(100 * (0.5 - e), 2.2)))
                     : Math.round(a * (3.206 / (1 + Math.pow(0.443 * (e - 0.5), 0.95)) - 1.206));
-                })(x(), g)}
+                })(x(), E)}
               </span>
             ),
             R = <div className="ModalForm-Outcome-Wrapper">Choose a team to bet on.</div>;
@@ -15180,8 +15187,8 @@
                   className="ModalForm-Form"
                   onSubmit={function (e) {
                     var t;
-                    if ((e.preventDefault(), g > M)) a("Max bet is ".concat(M, "!"), { appearance: "error" });
-                    else if (g < 1) a("Invalid input", { appearance: "error" });
+                    if ((e.preventDefault(), E > M)) a("Max bet is ".concat(M, "!"), { appearance: "error" });
+                    else if (E < 1) a("Invalid input", { appearance: "error" });
                     else {
                       if (
                         void 0 ===
@@ -15193,12 +15200,12 @@
                       )
                         return a("Game has already started.", { appearance: "error" }), void i.goBack();
                       A(!0);
-                      var r = { amount: g, userId: n.id, targets: [y, p], type: 0 };
+                      var r = { amount: E, userId: n.id, targets: [y, p], type: 0 };
                       zl("/api/bet", JSON.stringify(r)).then(function (e) {
                         A(!1),
                           e.ok && e.status && 200 === e.status
                             ? ((n.trackers.BETS += 1),
-                              (n.coins -= g),
+                              (n.coins -= E),
                               o(Object(T.a)({}, n)),
                               a("Bet Placed", { appearance: "success" }),
                               i.goBack())
@@ -15233,20 +15240,20 @@
                         <Tl className="ModalForm-Coin-Icon" />
                         {n.coins}
                       </div>
-                      <Di.a.Control type="number" value={g} onChange={C} />
+                      <Di.a.Control type="number" value={E} onChange={C} />
                       <Di.a.Control
                         type="range"
                         className="ModalForm-Range"
                         min={1}
                         max={Math.min(n.coins, M)}
-                        value={g}
+                        value={E}
                         onChange={C}
                         step="1"
                       />
                       <a
                         className="ModalForm-Form-Inputs-Amount-Max"
                         onClick={function (e) {
-                          e.preventDefault(), E(Math.min(n.coins, M));
+                          e.preventDefault(), g(Math.min(n.coins, M));
                         }}
                       >
                         Max Bet: {M}
@@ -15280,10 +15287,10 @@
           d = Object(s.a)(u, 2),
           A = d[0],
           f = d[1],
-          g = Object(r.useState)([]),
-          E = Object(s.a)(g, 2),
-          v = E[0],
-          b = E[1],
+          E = Object(r.useState)([]),
+          g = Object(s.a)(E, 2),
+          v = g[0],
+          b = g[1],
           y = Object(r.useState)(n.snackOrder),
           w = Object(s.a)(y, 2),
           B = (w[0], w[1], Object(r.useState)(!1)),
@@ -15653,9 +15660,9 @@
             return e.id === m.favoriteTeam;
           }),
           f = Object(r.useContext)(N.context),
-          g = f && f.sim ? f.sim.phase : 99,
-          E = Object(r.useState)(!1),
-          v = Object(s.a)(E, 2),
+          E = f && f.sim ? f.sim.phase : 99,
+          g = Object(r.useState)(!1),
+          v = Object(s.a)(g, 2),
           b = v[0],
           y = v[1],
           w = Object(r.useContext)(Os.context),
@@ -15991,7 +15998,7 @@
                 </Xa.a>
               </div>
             </$a.a>
-          ) : e.id === V.TAROT && g >= G.EarlySiesta ? (
+          ) : e.id === V.TAROT && E >= G.EarlySiesta ? (
             <$a.a
               placement="top"
               overlay={
@@ -16470,24 +16477,24 @@
             });
           }
         } else {
-          var g = X.MAX_BET,
-            E = J.maxBetTiers[0];
+          var E = X.MAX_BET,
+            g = J.maxBetTiers[0];
           J.maxBetTiers[1];
           s.push({
             id: V.MAX_BET,
             name: "Snake Oil",
             description: "This invigorating oil allows you to place wagers on games.",
-            amount: E.price,
-            toast: "Max Bet is now ".concat(E.amount, "!"),
+            amount: g.price,
+            toast: "Max Bet is now ".concat(g.amount, "!"),
             available: !0,
             icon: <se className="Shop-Item-Icon" />,
             buyUrl: "/api/buySnack",
-            params: { snackId: g },
+            params: { snackId: E },
             userUpdate: function () {
               (e.trackers.SNACKS_BOUGHT += 1),
-                (e.snacks[g] = 0),
-                (e.snackOrder = X.InsertIntoSnackOrder(g, e.snackOrder)),
-                (e.coins -= E.price),
+                (e.snacks[E] = 0),
+                (e.snackOrder = X.InsertIntoSnackOrder(E, e.snackOrder)),
+                (e.coins -= g.price),
                 a(Object(T.a)({}, e));
             },
           });
@@ -16754,7 +16761,7 @@
               toast: "Coins per Idol home run is now ".concat(ce.amount),
               available: !0,
               buyUrl: "/api/buySnack",
-              icon: <Ee className="Shop-Item-Icon" />,
+              icon: <ge className="Shop-Item-Icon" />,
               params: { snackId: oe },
               userUpdate: function () {
                 (e.trackers.SNACK_UPGRADES += 1), (e.snacks[oe] += 1), (e.coins -= ce.price), a(Object(T.a)({}, e));
@@ -16766,7 +16773,7 @@
             s.push({
               id: V.IDOL_HOMERS,
               name: "Hot Dog",
-              icon: <Ee className="Shop-Item-Icon" />,
+              icon: <ge className="Shop-Item-Icon" />,
               description: "Hot Dog! Earn ".concat(de, " coins when your Idol hits a home run. You are maxed out."),
               maxed: !0,
               amount: 0,
@@ -16778,17 +16785,17 @@
           var pe = X.IDOL_HOMERS,
             he = J.idolHomersTiers[0],
             fe = "Hot Dog! Earn ".concat(he.amount, " coins when your Idol hits a home run."),
-            ge = !0;
-          ("" != e.idol && null != e.idol) || ((fe += " Go to a Player page to choose an Idol."), (ge = !1)),
+            Ee = !0;
+          ("" != e.idol && null != e.idol) || ((fe += " Go to a Player page to choose an Idol."), (Ee = !1)),
             s.push({
               id: V.IDOL_HOMERS,
               name: "Hot Dog",
               description: fe,
               amount: he.price,
               toast: "Coins per Idol homer is now ".concat(he.amount),
-              available: ge,
+              available: Ee,
               buyUrl: "/api/buySnack",
-              icon: <Ee className="Shop-Item-Icon" />,
+              icon: <ge className="Shop-Item-Icon" />,
               params: { snackId: pe },
               userUpdate: function () {
                 (e.trackers.SNACKS_BOUGHT += 1),
@@ -17254,7 +17261,7 @@
             sell: !0,
           });
         else {
-          var ga = X.BEG;
+          var Ea = X.BEG;
           s.push({
             id: V.BEG,
             name: "Bread Crumbs",
@@ -17263,11 +17270,11 @@
             available: !0,
             icon: <ca className="Shop-Item-Icon" />,
             buyUrl: "/api/buySnackNoUpgrade",
-            params: { snackId: ga },
+            params: { snackId: Ea },
             userUpdate: function () {
               (e.trackers.SNACKS_BOUGHT += 1),
-                (e.snacks[ga] = 0),
-                (e.snackOrder = X.InsertIntoSnackOrder(ga, e.snackOrder)),
+                (e.snacks[Ea] = 0),
+                (e.snackOrder = X.InsertIntoSnackOrder(Ea, e.snackOrder)),
                 a(Object(T.a)({}, e));
             },
           });
@@ -17275,8 +17282,8 @@
         return s;
       }
       var fc,
-        gc,
-        Ec = function (e) {
+        Ec,
+        gc = function (e) {
           var a = Object(Bo.useToasts)().addToast,
             t = Object(r.useContext)(P.context),
             n = t.user,
@@ -17287,10 +17294,10 @@
             d = Object(s.a)(u, 2),
             A = d[0],
             f = d[1],
-            g = Object(r.useState)(!1),
-            E = Object(s.a)(g, 2),
-            v = E[0],
-            b = E[1],
+            E = Object(r.useState)(!1),
+            g = Object(s.a)(E, 2),
+            v = g[0],
+            b = g[1],
             y = function (e) {
               var a = e.target.value;
               f(parseInt(a));
@@ -17365,7 +17372,7 @@
                     }
                   >
                     <div className="ModalForm-Ticket-Wrapper">
-                      <tt.oc className="ModalForm-Ticket-Icon" />
+                      <tt.qc className="ModalForm-Ticket-Icon" />
                       {n.snacks[X.VOTES]}
                     </div>
                     <Di.a.Control type="number" value={A} onChange={y} />
@@ -17411,12 +17418,12 @@
             d = Object(r.useState)(0),
             A = Object(s.a)(d, 2),
             f = (A[0], A[1], Object(r.useState)(!1)),
-            g = Object(s.a)(f, 2),
-            E = (g[0], g[1], X.GetSellValue(u, o.snacks[u]));
+            E = Object(s.a)(f, 2),
+            g = (E[0], E[1], X.GetSellValue(u, o.snacks[u]));
           o.favoriteTeam &&
             !Ga(o.favoriteTeam, t) &&
             u === X.FLUTES &&
-            (E = o.snacks[X.FLUTES] < 2 ? 0 : X.GetSellValue(u, o.snacks[u] - 1));
+            (g = o.snacks[X.FLUTES] < 2 ? 0 : X.GetSellValue(u, o.snacks[u] - 1));
           function v() {
             return (v = Object(h.a)(
               p.a.mark(function e(t) {
@@ -17445,7 +17452,7 @@
                                                     var l = X.RemoveFromSnackOrder(t, o.snackOrder);
                                                     (o.snacks = r),
                                                       (o.snackOrder = l),
-                                                      (o.coins += E),
+                                                      (o.coins += g),
                                                       i(Object(T.a)({}, o)),
                                                       a(e.message, { appearance: "success" }),
                                                       m.goBack();
@@ -17480,13 +17487,13 @@
           return (
             <Li {...Object.assign({}, e, { className: "BatchBuy" })}>
               <div className="ModalForm-Header Sell-Question">
-                you wanna {0 === E ? "discard" : "sell"} your {u !== X.TAROT ? (b ? o.snacks[u] + 1 : o.snacks[u]) : ""}{" "}
+                you wanna {0 === g ? "discard" : "sell"} your {u !== X.TAROT ? (b ? o.snacks[u] + 1 : o.snacks[u]) : ""}{" "}
                 {X.GetName(u).toLowerCase()}?
               </div>
               <div className="Sell-Earnings">
                 you'll get{" "}
                 <span>
-                  <Tl style={{ width: "22px", height: "22px" }} /> {E}
+                  <Tl style={{ width: "22px", height: "22px" }} /> {g}
                 </span>{" "}
                 back
               </div>
@@ -17519,33 +17526,33 @@
         };
       function bc(e) {
         switch (e) {
-          case gc.Black:
+          case Ec.Black:
             return "Black";
-          case gc.LightAndSweet:
+          case Ec.LightAndSweet:
             return "Light & Sweet";
-          case gc.Macchiato:
+          case Ec.Macchiato:
             return "Macchiato";
-          case gc.CreamAndSugar:
+          case Ec.CreamAndSugar:
             return "Cream & Sugar";
-          case gc.ColdBrew:
+          case Ec.ColdBrew:
             return "Cold Brew";
-          case gc.FlatWhite:
+          case Ec.FlatWhite:
             return "Flat White";
-          case gc.Americano:
+          case Ec.Americano:
             return "Americano";
-          case gc.Espresso:
+          case Ec.Espresso:
             return "Espresso";
-          case gc.Foam:
+          case Ec.Foam:
             return "Heavy Foam";
-          case gc.Latte:
+          case Ec.Latte:
             return "Latte";
-          case gc.Decaf:
+          case Ec.Decaf:
             return "Decaf";
-          case gc.MilkSubstitute:
+          case Ec.MilkSubstitute:
             return "Milk Substitute";
-          case gc.PlentyOfSugar:
+          case Ec.PlentyOfSugar:
             return "Plenty of Sugar";
-          case gc.Anything:
+          case Ec.Anything:
             return "Anything";
         }
         return "Coffee?";
@@ -17580,7 +17587,7 @@
             (e[(e.MilkSubstitute = 11)] = "MilkSubstitute"),
             (e[(e.PlentyOfSugar = 12)] = "PlentyOfSugar"),
             (e[(e.Anything = 13)] = "Anything");
-        })(gc || (gc = {}));
+        })(Ec || (Ec = {}));
       var yc = function (e) {
           var a = Object(Bo.useToasts)().addToast,
             t = Object(r.useContext)(P.context),
@@ -17590,10 +17597,10 @@
             m = Object(r.useContext)(N.context),
             A = Object(c.g)(),
             f = Object(c.h)(),
-            g = (f.voteType, f.entityId, Object(r.useState)(!1)),
-            E = Object(s.a)(g, 2),
-            v = E[0],
-            b = E[1],
+            E = (f.voteType, f.entityId, Object(r.useState)(!1)),
+            g = Object(s.a)(E, 2),
+            v = g[0],
+            b = g[1],
             y = Object(r.useState)(),
             w = Object(s.a)(y, 2),
             B = w[0],
@@ -18055,7 +18062,7 @@
                                               case X.IDOL_HITS:
                                                 return <Ae />;
                                               case X.IDOL_HOMERS:
-                                                return <Ee />;
+                                                return <ge />;
                                               case X.IDOL_STRIKEOUTS:
                                                 return <Be />;
                                               case X.IDOL_SHUTOUTS:
@@ -18315,17 +18322,17 @@
               p = Object(s.a)(A, 2),
               h = (p[0], p[1], Object(c.g)()),
               f = h.state && h.state.background ? h.state.background.pathname : "",
-              g = e.isModal,
-              E = e.isLogin,
+              E = e.isModal,
+              g = e.isLogin,
               v = Object(r.useRef)(null),
               b = Object(r.useRef)(null),
               y = Object(r.useRef)(null),
               w = Object(c.h)().code;
             return (
-              <div className={"".concat(g ? "" : "Auth-SignupWrapper")}>
-                {!g && <Ci />}
+              <div className={"".concat(E ? "" : "Auth-SignupWrapper")}>
+                {!E && <Ci />}
                 <Li {...Object.assign({}, e, { className: "Auth" })}>
-                  <header className="Auth-Header">{E ? "Login to Blaseball" : "Signup for Blaseball"}</header>
+                  <header className="Auth-Header">{g ? "Login to Blaseball" : "Signup for Blaseball"}</header>
                   <form
                     onSubmit={function (e) {
                       var r, l;
@@ -18338,12 +18345,12 @@
                             ? void 0
                             : l.trim(),
                         code: w,
-                        isLogin: E,
+                        isLogin: g,
                       };
                       zl("/auth/local", JSON.stringify(o)).then(function (e) {
                         u(!1),
                           e.ok && e.status && 200 === e.status
-                            ? (E || n("Account Created", { appearance: "success" }), a(), t.push("/"))
+                            ? (g || n("Account Created", { appearance: "success" }), a(), t.push("/"))
                             : e.json().then(function (e) {
                                 n(e.error || "Error", { appearance: "error" });
                               });
@@ -18356,7 +18363,7 @@
                     <div>
                       <input ref={b} className="Auth-Input" placeholder="Password" type="password" name="password" />
                     </div>
-                    {E ? null : (
+                    {g ? null : (
                       <div>
                         <input
                           ref={y}
@@ -18368,7 +18375,7 @@
                       </div>
                     )}
                     <div>{m ? <Fl /> : <input className="Auth-Submit" type="submit" value="Continue" />}</div>
-                    {E ? (
+                    {g ? (
                       <d background={h.state} path="/forgot" className="Auth-CTA">
                         Forgot password?
                       </d>
@@ -18393,8 +18400,8 @@
                     </div>
                     Continue with Google
                   </a>
-                  <a className="Auth-CTA" href={E ? "/signup" : "/login"}>
-                    {E ? "Not on Blaseball yet? Signup" : "Already a member? Log in"}
+                  <a className="Auth-CTA" href={g ? "/signup" : "/login"}>
+                    {g ? "Not on Blaseball yet? Signup" : "Already a member? Log in"}
                   </a>
                 </Li>
               </div>
@@ -18410,9 +18417,9 @@
             u = m[0],
             A = m[1],
             f = Object(r.useState)(!1),
-            g = Object(s.a)(f, 2),
-            E = g[0],
-            v = g[1],
+            E = Object(s.a)(f, 2),
+            g = E[0],
+            v = E[1],
             b = Object(c.g)(),
             y = e.isModal,
             w = Object(r.useRef)(null),
@@ -18440,7 +18447,7 @@
               };
             })()();
           }, []);
-          return E ? (
+          return g ? (
             <div className={"".concat(y ? "" : "Auth-SignupWrapper")}>
               {!y && !a && <Ci />}
               <Li {...Object.assign({}, e, { className: "Auth" })}>
@@ -19113,7 +19120,7 @@
             xlinkHref="<img/png blob>"
           />
         ),
-        gm = function (e) {
+        Em = function (e) {
           var a = e.svgRef,
             t = e.title,
             n = hm(e, ["svgRef", "title"]);
@@ -19124,8 +19131,8 @@
             </svg>
           );
         },
-        Em = l.a.forwardRef(function (e, a) {
-          return <gm {...pm({ svgRef: a }, e)} />;
+        gm = l.a.forwardRef(function (e, a) {
+          return <Em {...pm({ svgRef: a }, e)} />;
         });
       t.p;
       function vm() {
@@ -19218,7 +19225,7 @@
           case "force_fields":
             return <Am className="Decrees-Option-Icon" />;
           case "free_wills":
-            return <Em className="Decrees-Option-Icon" />;
+            return <gm className="Decrees-Option-Icon" />;
         }
         return <div />;
       }
@@ -19485,9 +19492,9 @@
               "Each Will can only be won once per Team per Election.",
               "Wills shall be performed in order of the league standings.",
             ],
-            g = null;
+            E = null;
           return (
-            (g =
+            (E =
               void 0 === t.snacks[X.WILLS] ? (
                 <div className="Wills-Header">
                   <div className="Wills-Icon" style={{ background: "#9e0000" }}>
@@ -19513,7 +19520,7 @@
               )),
             (
               <div className="Wills">
-                {g}
+                {E}
                 <ul className="Wills-Container">
                   {void 0 !== t.snacks[X.WILLS]
                     ? e.wills.map(function (e, a) {
@@ -19654,8 +19661,8 @@
           d = m[1],
           A = Object(r.useState)(!1),
           f = Object(s.a)(A, 2),
-          g = f[0],
-          E = f[1],
+          E = f[0],
+          g = f[1],
           v = Object(r.useState)([]),
           b = Object(s.a)(v, 2),
           y = b[0],
@@ -19673,7 +19680,7 @@
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (e.next = 2), go(n, 13);
+                      return (e.next = 2), Eo(n, 13);
                     case 2:
                       return (
                         (r = e.sent), w(r), (e.next = 6), _l(null === (a = t.sim) || void 0 === a ? void 0 : a.season)
@@ -19730,11 +19737,11 @@
           )).apply(this, arguments);
         }
         Object(r.useEffect)(function () {
-          E(!0),
+          g(!0),
             (function () {
               return I.apply(this, arguments);
             })().then(function () {
-              E(!1);
+              g(!1);
             });
         }, []);
         var C = function (e) {
@@ -19750,7 +19757,7 @@
                     <div className="Recap-Decree-Container">
                       <div className="Recap-Decree-Content">
                         <div className="Recap-Decree-Icon">
-                          <tt.Mb />
+                          <tt.Nb />
                         </div>
                         <div className="Recap-Decree-Description">
                           {e.msg.split("\n").map(function (e, a) {
@@ -19839,7 +19846,7 @@
         ) : (
           <div className="Recap">
             <div className="Recap-Header">The Results are in.</div>
-            {g ? (
+            {E ? (
               <Fl />
             ) : (
               <div className="Recap-Inner">
@@ -20044,10 +20051,10 @@
             d = Object(s.a)(u, 2),
             A = d[0],
             f = d[1],
-            g = Object(r.useState)(!1),
-            E = Object(s.a)(g, 2),
-            v = E[0],
-            b = E[1],
+            E = Object(r.useState)(!1),
+            g = Object(s.a)(E, 2),
+            v = g[0],
+            b = g[1],
             y = function (e) {
               var a = e.target.value;
               f(a);
@@ -20211,9 +20218,9 @@
           d = Object(r.useContext)(Pn.context),
           A = Object(r.useContext)(ti.context),
           f = Object(r.useState)(0),
-          g = Object(s.a)(f, 2),
-          E = g[0],
-          v = g[1],
+          E = Object(s.a)(f, 2),
+          g = E[0],
+          v = E[1],
           b = Object(r.useState)(!1),
           y = Object(s.a)(b, 2),
           w = y[0],
@@ -20262,9 +20269,9 @@
           pe = Ae[0],
           he = Ae[1],
           fe = Object(r.useState)(""),
-          ge = Object(s.a)(fe, 2),
-          Ee = ge[0],
-          ve = ge[1];
+          Ee = Object(s.a)(fe, 2),
+          ge = Ee[0],
+          ve = Ee[1];
         Object(r.useEffect)(function () {
           "" === C.id &&
             ("0" === S &&
@@ -20595,12 +20602,12 @@
                           className="ModalForm-Dropdown"
                           disabled={!(pe.length > 0)}
                         >
-                          <option value="" defaultValue={Ee} key={-1}>
+                          <option value="" defaultValue={ge} key={-1}>
                             Choose a mod.
                           </option>
                           {pe.map(function (e, a) {
                             return (
-                              <option value={e.id} defaultValue={Ee} key={a}>
+                              <option value={e.id} defaultValue={ge} key={a}>
                                 {e.title}
                               </option>
                             );
@@ -20618,9 +20625,9 @@
             <Di.a
               className="ModalForm-Form"
               onSubmit={function (e) {
-                if ((e.preventDefault(), B(!0), E > Ie))
+                if ((e.preventDefault(), B(!0), g > Ie))
                   return a("Max vote is ".concat(Ie, "!"), { appearance: "error" }), void B(!1);
-                if (E < 1) return a("You must cast at least 1 vote!", { appearance: "error" }), void B(!1);
+                if (g < 1) return a("You must cast at least 1 vote!", { appearance: "error" }), void B(!1);
                 var t = {};
                 if ("2" === S) {
                   var r = 0,
@@ -20639,25 +20646,25 @@
                   if (2 === r && ("" === oe || "" === me))
                     return a("You must select both players!", { appearance: "error" }), void B(!1);
                   if (1 === r && "" === oe) return a("You must select a player!", { appearance: "error" }), void B(!1);
-                  if (1 === s && "" === Ee) return a("You must select a mod!", { appearance: "error" }), void B(!1);
+                  if (1 === s && "" === ge) return a("You must select a mod!", { appearance: "error" }), void B(!1);
                   "" !== _ && (t = Object(T.a)(Object(T.a)({}, t), {}, { teamTarget0: _ })),
                     "" !== te && (t = Object(T.a)(Object(T.a)({}, t), {}, { teamTarget1: te })),
                     "" !== oe && (t = Object(T.a)(Object(T.a)({}, t), {}, { playerTarget0: oe })),
                     "" !== me && (t = Object(T.a)(Object(T.a)({}, t), {}, { playerTarget1: me })),
-                    "" !== Ee && (t = Object(T.a)(Object(T.a)({}, t), {}, { modTarget0: Ee }));
+                    "" !== ge && (t = Object(T.a)(Object(T.a)({}, t), {}, { modTarget0: ge }));
                 }
                 t = Object(T.a)(Object(T.a)({}, t), {}, { team1: n.favoriteTeam });
-                var c = { amount: E, entityId: N, voteType: S, data: t };
+                var c = { amount: g, entityId: N, voteType: S, data: t };
                 zl("/api/vote", JSON.stringify(c))
                   .then(function (e) {
                     if (e.status && 200 === e.status && e.ok) {
                       var t = Object(T.a)({}, n.snacks),
                         r = n.snackOrder;
-                      (t[X.VOTES] = t[X.VOTES] - E),
+                      (t[X.VOTES] = t[X.VOTES] - g),
                         t[X.VOTES] <= 0 && (delete t[X.VOTES], (r = X.RemoveFromSnackOrder(X.VOTES, n.snackOrder))),
                         (n.snacks = t),
                         (n.snackOrder = r),
-                        (n.trackers.VOTES_CAST += E),
+                        (n.trackers.VOTES_CAST += g),
                         o(Object(T.a)({}, n)),
                         a("Vote Placed", { appearance: "success" }),
                         i.goBack();
@@ -20698,13 +20705,13 @@
                     <Pe className="ModalForm-Ticket-Icon" />
                     {n.snacks.Votes}
                   </div>
-                  <Di.a.Control type="number" value={E} onChange={Se} />
+                  <Di.a.Control type="number" value={g} onChange={Se} />
                   <Di.a.Control
                     type="range"
                     className="ModalForm-Range"
                     min={1}
                     max={Math.min(n.snacks.Votes, Ie)}
-                    value={E}
+                    value={g}
                     onChange={Se}
                     step="1"
                   />
@@ -21887,20 +21894,20 @@
               },
               [m]
             );
-          var g = { notes: m };
-          return <Au.Provider value={g}>{a}</Au.Provider>;
+          var E = { notes: m };
+          return <Au.Provider value={E}>{a}</Au.Provider>;
         };
       pu.context = Au;
       var hu = pu,
         fu = t(51),
-        gu = function () {
+        Eu = function () {
           return (
             <div className="ModalItem-Content">
               <Us entity="" source={Ms.Book} defaultCategory={4} defaultSort={xs.NewestFirst} showCategory={!1} />
             </div>
           );
         };
-      function Eu() {
+      function gu() {
         var e = Object(r.useState)(0),
           a = Object(s.a)(e, 2),
           t = a[0],
@@ -21988,7 +21995,7 @@
           case 1:
             return <yu />;
           case 2:
-            return <gu />;
+            return <Eu />;
           case -1:
             return <wu />;
         }
@@ -22501,8 +22508,8 @@
           p,
           h = Object(r.useContext)(N.context),
           f = Object(r.useContext)(P.context).user,
-          g = Object(c.g)(),
-          E = Object(r.useContext)(Pn.context),
+          E = Object(c.g)(),
+          g = Object(r.useContext)(Pn.context),
           v = Object(r.useState)(fu.glossary[Math.floor(Math.random() * fu.glossary.length)]),
           b = Object(s.a)(v, 1)[0],
           y = null;
@@ -22545,8 +22552,8 @@
                 to organizing material support in the LA community.
               </div>
               <div className="Bulletin-Item-Contents-Text">
-                And here are your Season 12’s Division Ambassadors!{" "}
-                <a target="_blank" href="https://blaseballcares0307.carrd.co/" className="Bulletin-Serif">
+                And here are your Season 13’s Division Ambassadors!{" "}
+                <a target="_blank" href="https://blaseballcares0314.carrd.co/" className="Bulletin-Serif">
                   Click through to the Carrd
                 </a>{" "}
                 to learn more about this week's selections.
@@ -22565,7 +22572,7 @@
             <l.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#c23284" }}>
-                  <tt.Qb />
+                  <tt.Rb />
                 </div>
                 <h2 className="Bulletin-Item-Header-Title" id="updates">
                   Current Events
@@ -23010,7 +23017,7 @@
               : n.find(function (e) {
                   return e.awayTeam === f.favoriteTeam || e.homeTeam === f.favoriteTeam ? e : void 0;
                 }),
-          T = E.teams.find(function (e) {
+          T = g.teams.find(function (e) {
             return e.id === f.favoriteTeam;
           }),
           k = void 0 !== T ? wa(T.id, h.standings) : new ya();
@@ -23032,7 +23039,7 @@
             ) : (
               <div className="Bulletin-Item" style={{ gridRow: 2 }}>
                 <div className="Bulletin-Widget-NoGame">
-                  <d background={g} path={"/team/".concat(T.id)} className="Bulletin-Widget-Team">
+                  <d background={E} path={"/team/".concat(T.id)} className="Bulletin-Widget-Team">
                     <div className="Bulletin-Widget-ScoreTeamColorBar" style={{ background: T.mainColor }}>
                       {ja(T.emoji)}
                     </div>
@@ -23072,7 +23079,7 @@
             R = null,
             j = "";
           if (null !== S.stadiumId) {
-            var F = E.stadiums.find(function (e) {
+            var F = g.stadiums.find(function (e) {
               return e.id === S.stadiumId;
             });
             F && ((R = <wl stadium={F} style={pl.GameWidget} />), (j = F.nickname));
@@ -23107,7 +23114,7 @@
                   </div>
                 </div>
                 <div className="Bulletin-Widget-ScoreBacking" role="group" aria-label="The Teams">
-                  <d background={g} path={"/team/".concat(S.awayTeam)} className="GameWidget-ScoreLine">
+                  <d background={E} path={"/team/".concat(S.awayTeam)} className="GameWidget-ScoreLine">
                     <div
                       className="GameWidget-ScoreTeamColorBar"
                       aria-hidden={!0}
@@ -23154,7 +23161,7 @@
                       {D.awayTeamScore}
                     </div>
                   </d>
-                  <d background={g} path={"/team/".concat(S.homeTeam)} className="GameWidget-ScoreLine">
+                  <d background={E} path={"/team/".concat(S.homeTeam)} className="GameWidget-ScoreLine">
                     <div
                       className="GameWidget-ScoreTeamColorBar"
                       aria-hidden={!0}
@@ -23335,8 +23342,8 @@
             u,
             A,
             f,
-            g,
             E,
+            g,
             v,
             b,
             y,
@@ -23578,10 +23585,10 @@
                 return e.apply(this, arguments);
               };
             })(),
-            ge =
+            Ee =
               Da(null === _ || void 0 === _ ? void 0 : _.player, "RETIRED") ||
               Da(null === _ || void 0 === _ ? void 0 : _.player, "COFFEE_EXIT"),
-            Ee = !1;
+            ge = !1;
           ((null === (a = q.sim) || void 0 === a ? void 0 : a.phase) !== G.Earlseason &&
             (null === (t = q.sim) || void 0 === t ? void 0 : t.phase) !== G.Midseason &&
             (null === (n = q.sim) || void 0 === n ? void 0 : n.phase) !== G.Lateseason &&
@@ -23592,7 +23599,7 @@
             null === (me = q.schedule) ||
             void 0 === me ||
             me.forEach(function (e) {
-              e.gameComplete || (Ee = !0);
+              e.gameComplete || (ge = !0);
             });
           var ve,
             be =
@@ -23600,7 +23607,7 @@
               Da(null === _ || void 0 === _ ? void 0 : _.player, "COFFEE_EXIT"),
             ye = te.idol,
             we =
-              !ge && (null === _ || void 0 === _ ? void 0 : _.player) ? (
+              !Ee && (null === _ || void 0 === _ ? void 0 : _.player) ? (
                 <div className="Player-Header-Bottom">
                   <div className="Player-Teams-Section">
                     <div className="Player-Team-Line">
@@ -23615,13 +23622,13 @@
                   </div>
                   {La(q.sim, "UNLOCKED_IDOLS") ? (
                     <_a.a className="ModalItem-Button">
-                      {(Ee || be) && ye !== _.player.id ? (
+                      {(ge || be) && ye !== _.player.id ? (
                         <div className="ModalItem-Tooltip">
                           <$a.a
                             placement="top"
                             overlay={
                               <et.a id="tooltip-disabled" className="ModalItem-Tooltip">
-                                {Ee
+                                {ge
                                   ? "You can't choose an Idol while games are active."
                                   : "This player cannot be Idolized."}
                               </et.a>
@@ -23673,7 +23680,7 @@
                 </div>
               ) : null,
             Be =
-              !ge && (null === _ || void 0 === _ ? void 0 : _.player) ? (
+              !Ee && (null === _ || void 0 === _ ? void 0 : _.player) ? (
                 <ul className="Player-Info-Stats">
                   <li className={"Player-Info-Line" + (te.lightMode ? " Player-Info-Line-LightMode" : "")}>
                     <div className="Player-Info-Line-Header">Current Vibe</div>
@@ -23781,7 +23788,7 @@
                 </ul>
               ) : null,
             Oe =
-              !ge && (null === _ || void 0 === _ ? void 0 : _.player) ? (
+              !Ee && (null === _ || void 0 === _ ? void 0 : _.player) ? (
                 <div className="Player-Info-Items">
                   <li className={"Player-Info-Items-Box" + (te.lightMode ? " Player-Info-Items-Box-LightMode" : "")}>
                     <div className="Player-Info-Items-Header">Item</div>
@@ -23950,7 +23957,7 @@
                               <div className="Player-Info-Line-Body">{_.player.fate}</div>
                             </li>
                             <li className={"Player-Info-Line" + (te.lightMode ? " Player-Info-Line-LightMode" : "")}>
-                              <div className="Player-Info-Line-Header">{ge ? "Soulsong" : "Soulscream"}</div>
+                              <div className="Player-Info-Line-Header">{Ee ? "Soulsong" : "Soulscream"}</div>
                               {(function (e) {
                                 for (
                                   var a = Da(e, "RETIRED"),
@@ -24017,7 +24024,7 @@
                                   <div className="Player-Info-Line-Body">
                                     <xu
                                       value={_.player.buoyancy}
-                                      color={null === (g = _.team) || void 0 === g ? void 0 : g.mainColor}
+                                      color={null === (E = _.team) || void 0 === E ? void 0 : E.mainColor}
                                     />
                                   </div>
                                 </li>
@@ -24028,7 +24035,7 @@
                                   <div className="Player-Info-Line-Body">
                                     <xu
                                       value={_.player.chasiness}
-                                      color={null === (E = _.team) || void 0 === E ? void 0 : E.mainColor}
+                                      color={null === (g = _.team) || void 0 === g ? void 0 : g.mainColor}
                                     />
                                   </div>
                                 </li>
@@ -24346,27 +24353,27 @@
             void 0 === o || null === o.metadata)
           )
             return null;
-          var g = a.teams.find(function (e) {
+          var E = a.teams.find(function (e) {
               return e.id === o.metadata.home;
             }),
-            E = a.teams.find(function (e) {
+            g = a.teams.find(function (e) {
               return e.id === o.metadata.away;
             });
-          if (void 0 === g) return null;
           if (void 0 === E) return null;
+          if (void 0 === g) return null;
           var v = o.metadata.weather,
             b = (
               <l.a.Fragment>
                 <div className="ModalItem-Info">
                   <div className="ModalItem-Name">
-                    {E.nickname} at {g.nickname}
+                    {g.nickname} at {E.nickname}
                   </div>
                   <div className="Events-List-Row Events-Time">
                     Season {Qs(o.phase, o.tournament, o.season)}, Day {zs(o.phase, o.day)}
                   </div>
                   <span className="Events-List-Row">
                     <fn type={v} tooltip={!0} />
-                    <span className="Events-Time Events-List-Row-Group">{gn(v)}</span>
+                    <span className="Events-Time Events-List-Row-Group">{En(v)}</span>
                   </span>
                 </div>
                 <div className="ModalItem-Content ModalItem-Scroll">
@@ -24419,7 +24426,7 @@
               i = <si />;
               break;
             case "/league":
-              i = <gi />;
+              i = <Ei />;
           }
           return (
             <div>
@@ -25557,7 +25564,7 @@
               i = <si />;
               break;
             case "/league":
-              i = <gi />;
+              i = <Ei />;
           }
           return (
             <div>
@@ -25832,10 +25839,10 @@
           p = Object(s.a)(A, 2),
           h = p[0],
           f = p[1],
-          g = Object(r.useState)(""),
-          E = Object(s.a)(g, 2),
-          v = E[0],
-          b = E[1],
+          E = Object(r.useState)(""),
+          g = Object(s.a)(E, 2),
+          v = g[0],
+          b = g[1],
           y = Object(r.useState)(""),
           w = Object(s.a)(y, 2),
           B = w[0],
@@ -26161,7 +26168,7 @@
               {n.awayTeamName}
             </div>
           ),
-          $ = gn(n.weather);
+          $ = En(n.weather);
         $.includes(" ") && ($ = $.replace(" ", ""));
         var ee,
           ae = " BossFightWidget-Weather-" + $,
@@ -26451,7 +26458,7 @@
               u = <Xu />;
               break;
             case Ju.Bracket:
-              u = <gi />;
+              u = <Ei />;
               break;
             case Ju.Live:
             case Ju.Upcoming:
@@ -26480,7 +26487,7 @@
               i = <Xu />;
               break;
             case "/league":
-              i = <gi />;
+              i = <Ei />;
           }
           return (
             <l.a.Fragment>
@@ -26517,7 +26524,7 @@
               i = <Xu />;
               break;
             case "/league":
-              i = <gi />;
+              i = <Ei />;
           }
           return (
             <l.a.Fragment>
@@ -26554,7 +26561,7 @@
               i = <Xu />;
               break;
             case "/league":
-              i = <gi />;
+              i = <Ei />;
           }
           var s = o.teams.find(function (e) {
             var a;
@@ -26787,7 +26794,7 @@
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          return (e.next = 2), go(o, 3);
+                          return (e.next = 2), Eo(o, 3);
                         case 2:
                           (a = e.sent),
                             (n = []),
@@ -26809,16 +26816,16 @@
                 return e.apply(this, arguments);
               };
             })(),
-            g = null;
+            E = null;
           switch (t) {
             case "/leaderboard":
-              g = <ni />;
+              E = <ni />;
               break;
             case "/standings":
-              g = <si />;
+              E = <si />;
               break;
             case "/league":
-              g = (
+              E = (
                 <div className="Recap">
                   <div className="Recap-Results">
                     <h2 className="Recap-ResultsHeader">Seasonal Reading</h2>
@@ -26885,7 +26892,7 @@
                 text=""
               />
               <_o />
-              {g}
+              {E}
             </div>
           );
         },
@@ -26901,8 +26908,8 @@
             d = m[1],
             A = Object(r.useState)(!0),
             f = Object(s.a)(A, 2),
-            g = f[0],
-            E = f[1],
+            E = f[0],
+            g = f[1],
             v = Object(r.useContext)(P.context).user;
           Object(r.useEffect)(function () {
             b();
@@ -26915,7 +26922,7 @@
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          return (e.next = 2), go(i, 5);
+                          return (e.next = 2), Eo(i, 5);
                         case 2:
                           (a = e.sent),
                             d(
@@ -26955,14 +26962,14 @@
                         type="switch"
                         id="favteam"
                         label="Favorite Team's Results Only"
-                        checked={g}
+                        checked={E}
                         onChange={function () {
-                          return E(!g);
+                          return g(!E);
                         }}
                       />
                     </Di.a>
                     {u.map(function (e) {
-                      return g && !e.teamTags.includes(y) ? null : (B && (B = !1), (<pd event={e} />));
+                      return E && !e.teamTags.includes(y) ? null : (B && (B = !1), (<pd event={e} />));
                     })}
                     {B ? <div className="Recap-NoneFound">No events found...</div> : null}
                   </div>
@@ -26989,8 +26996,8 @@
             </div>
           );
         },
-        gd = t(114),
-        Ed = function (e) {
+        Ed = t(114),
+        gd = function (e) {
           var a = Object(Bo.useToasts)().addToast,
             t = Object(r.useContext)(P.context),
             n = t.user,
@@ -27001,15 +27008,15 @@
             d = m.renovationId,
             A = Object(r.useState)(25),
             f = Object(s.a)(A, 2),
-            g = f[0],
-            E = f[1],
+            E = f[0],
+            g = f[1],
             v = Object(r.useState)(!1),
             b = Object(s.a)(v, 2),
             y = b[0],
             w = b[1],
             B = function (e) {
               var a = e.target.value;
-              E(a);
+              g(a);
             },
             O = n.coins,
             S = <Fl />;
@@ -27026,16 +27033,16 @@
                 <Di.a
                   className="ModalForm-Form"
                   onSubmit={function (e) {
-                    if ((e.preventDefault(), g < 25))
+                    if ((e.preventDefault(), E < 25))
                       a("The minimum Ballpark contribution is 25 Coins.", { appearance: "error" });
-                    else if (g > O) a("Max contribution is ".concat(O, "!"), { appearance: "error" });
+                    else if (E > O) a("Max contribution is ".concat(O, "!"), { appearance: "error" });
                     else {
                       w(!0);
-                      var t = { amount: g, stadiumId: u, renovationId: d };
+                      var t = { amount: E, stadiumId: u, renovationId: d };
                       zl("/api/renovate", JSON.stringify(t))
                         .then(function (e) {
                           e.status && 200 === e.status && e.ok
-                            ? ((n.coins = n.coins - g),
+                            ? ((n.coins = n.coins - E),
                               o(Object(T.a)({}, n)),
                               a("Contribution Made", { appearance: "success" }),
                               i.goBack())
@@ -27073,13 +27080,13 @@
                         <Tl className="ModalForm-Ticket-Icon" />
                         {n.coins}
                       </div>
-                      <Di.a.Control type="number" value={g} onChange={B} />
+                      <Di.a.Control type="number" value={E} onChange={B} />
                       <Di.a.Control
                         type="range"
                         className="ModalForm-Range"
                         min={25}
                         max={Math.min(n.coins, O)}
-                        value={g}
+                        value={E}
                         onChange={B}
                         step="1"
                       />
@@ -27089,7 +27096,7 @@
                           (n.lightMode ? " ModalForm-Form-Inputs-Amount-Max-LightMode" : "")
                         }
                         onClick={function (e) {
-                          e.preventDefault(), E(Math.min(n.coins, O));
+                          e.preventDefault(), g(Math.min(n.coins, O));
                         }}
                       >
                         Max: {O}
@@ -27213,7 +27220,7 @@
             i = e.setSelected;
           return a || !t ? null : null === r.model ? (
             <div className="Team-Construction-Options">
-              {gd.collection.map(function (e, a) {
+              {Ed.collection.map(function (e, a) {
                 return <Bd prefab={e} stadium={r} index={a} selected={o} setSelected={i} user={n} />;
               })}
             </div>
@@ -27283,7 +27290,7 @@
                 }}
               >
                 <div className="Team-Construction-Prefab-Icon">
-                  <El index={a} stadium={t} style={pl.TeamModal} />
+                  <gl index={a} stadium={t} style={pl.TeamModal} />
                 </div>
                 <div className="Team-Construction-Prefab-Title">{n.name}</div>
                 <div className="Team-Construction-Renovation-Description">{n.description}</div>
@@ -27378,9 +27385,9 @@
             d = u[0],
             A = u[1],
             f = Object(r.useState)(!1),
-            g = Object(s.a)(f, 2),
-            E = g[0],
-            v = g[1],
+            E = Object(s.a)(f, 2),
+            g = E[0],
+            v = E[1],
             b = Object(r.useState)(void 0),
             y = Object(s.a)(b, 2),
             w = y[0],
@@ -27450,13 +27457,13 @@
               return e.id === S.stadium;
             });
           if (void 0 === I) return null;
-          k = E ? (
+          k = g ? (
             <Fl />
           ) : d ? (
             <div className="Team-Construction">
-              <yd loading={E} renovations={i} user={O} stadium={I} selected={w} setSelected={B} />
+              <yd loading={g} renovations={i} user={O} stadium={I} selected={w} setSelected={B} />
               <div className="Team-Construction-Bottom">
-                <bd loading={E} progress={d} stadium={I} />
+                <bd loading={g} progress={d} stadium={I} />
                 <Od stadiumId={I.id} selected={w} setSelected={B} user={O} />
               </div>
             </div>
@@ -27549,7 +27556,7 @@
                   <c.a path="/bet/:gameId" children={<Js isModal={!0} />} />
                   <c.a path="/vote/:voteType/:entityId" children={<au isModal={!0} />} />
                   <c.a path="/tribute/:entityId" children={<eu isModal={!0} />} />
-                  <c.a path="/buy/:itemName" children={<Ec isModal={!0} />} />
+                  <c.a path="/buy/:itemName" children={<gc isModal={!0} />} />
                   <c.a path="/sell/:id" children={<vc isModal={!0} />} />
                 </l.a.Fragment>
               )}
@@ -27623,7 +27630,7 @@
                 return <uu path={a} />;
               case 9:
               case 11:
-                return <Ei path={a} />;
+                return <gi path={a} />;
               case 10:
                 return <Ru path={a} />;
               case 12:
@@ -27669,7 +27676,7 @@
                         <Ac />
                       </c.a>
                       <c.a path="/thebook">
-                        <Eu />
+                        <gu />
                       </c.a>
                       <c.a path="/offseason">
                         <Jm />
@@ -27727,14 +27734,14 @@
                         <c.a path="/vote/:voteType/:entityId" children={<au isModal={!0} />} />
                         <c.a path="/reorder/:type" children={<Xs isModal={!0} />} />
                         <c.a path="/tribute/:entityId" children={<eu isModal={!0} />} />
-                        <c.a path="/buy/:itemName" children={<Ec isModal={!0} />} />
+                        <c.a path="/buy/:itemName" children={<gc isModal={!0} />} />
                         <c.a path="/sell/:id" children={<vc isModal={!0} />} />
                         <c.a path="/settings" children={<yc isModal={!0} />} />
                         {void 0 !== t.snacks.Stadium_Access ? (
                           <c.a path="/renovation" children={<kd isModal={!0} />} />
                         ) : null}
                         {void 0 !== t.snacks.Stadium_Access ? (
-                          <c.a path="/contribute/:stadiumId/:renovationId" children={<Ed isModal={!0} />} />
+                          <c.a path="/contribute/:stadiumId/:renovationId" children={<gd isModal={!0} />} />
                         ) : null}
                         <c.a path="/account" children={<yc isModal={!0} />} />
                       </l.a.Fragment>
