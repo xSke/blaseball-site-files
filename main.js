@@ -18399,7 +18399,7 @@
               e,
               a,
               "Sundae",
-              X.sunTwoTiers,
+              X.incinerationTiers,
               <At className="Shop-Item-Icon" />,
               "Refreshing. Earn {FT} coins every time a Player is incinerated.",
               "Refreshing. Earn {NT} coins every time a Player is incinerated. You currently earn {CT} coins per incineration.",
