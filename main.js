@@ -9,6 +9,7 @@
     ,
     ,
     ,
+    ,
     function (e) {
       e.exports = {
         maxBetTiers: [
@@ -1733,7 +1734,6 @@
     ,
     ,
     ,
-    ,
     function (e, a, t) {},
     ,
     ,
@@ -3204,6 +3204,7 @@
         ],
       };
     },
+    ,
     function (e, a, t) {},
     function (e, a, t) {},
     ,
@@ -3230,8 +3231,8 @@
       };
     },
     ,
-    ,
     function (e, a, t) {},
+    ,
     ,
     ,
     ,
@@ -3839,7 +3840,6 @@
     ,
     ,
     function (e, a, t) {},
-    ,
     ,
     ,
     ,
@@ -5230,11 +5230,11 @@
             (e[(e.AAAA = 9)] = "AAAA"),
             (e[(e.AAAAA = 10)] = "AAAAA");
         })(H || (H = {}));
-      var K = t(38),
+      var K = t(39),
         q = t(27),
         Z = t(17),
         J = t(28),
-        X = t(8),
+        X = t(9),
         _ = (function () {
           function e() {
             Object(Z.a)(this, e);
@@ -5243,14 +5243,14 @@
             Object(J.a)(e, null, [
               {
                 key: "GetSellValue",
-                value: function (e, a) {
+                value: function (e, a, t) {
                   switch (e) {
                     case this.VOTES:
-                      return Math.round((100 * a) / 4);
+                      return Math.round((100 * t) / 4);
                     case this.PEANUTS:
-                      return Math.round(a / 4);
+                      return Math.round(t / 4);
                     case this.FLUTES:
-                      return Math.round((2e3 * (a + 1)) / 4);
+                      return Math.round((2e3 * (t + 1)) / 4);
                     case this.STADIUM:
                     case this.WILLS:
                     case this.FORBIDDEN_KNOWLEDGE:
@@ -5258,19 +5258,21 @@
                     case this.TAROT:
                       return 0;
                     default:
-                      return Math.round(this.GetCombinedTierCost(e, a) / 4);
+                      return Math.round(this.GetCombinedTierCost(e, a, t) / 4);
                   }
                   return -1;
                 },
               },
               {
                 key: "GetCombinedTierCost",
-                value: function (e, a) {
+                value: function (e, a, t) {
                   if (a < 0) return 0;
-                  var t = this.GetTiers(e);
-                  if (!t) return -1;
-                  for (var n = 0, r = 0; r <= a; r++) n += t[r].price;
-                  return n;
+                  var n = this.GetTiers(e);
+                  if (!n) return -1;
+                  var r = 0;
+                  t && t - 1 < a && (r = a - (t - 1));
+                  for (var o = 0, l = a; l >= r; l--) o += n[l].price;
+                  return o;
                 },
               },
               {
@@ -5439,7 +5441,7 @@
         (_.SUN_2 = "Sun_2"),
         (_.BREAKFAST = "Breakfast");
       var $ = _,
-        ee = (t(96), t(75));
+        ee = (t(96), t(76));
       function ae() {
         return (ae =
           Object.assign ||
@@ -7422,7 +7424,7 @@
         var a = e / 0.2;
         return Math.round(2 * a) / 2;
       }
-      var zt = t(9),
+      var zt = t(8),
         Kt = t(104),
         qt = (t(138), t(22)),
         Zt = t(21),
@@ -10028,6 +10030,18 @@
             return "brightness(0) saturate(100%) invert(86%) sepia(8%) saturate(1857%) hue-rotate(328deg) brightness(96%) contrast(97%)";
           case "#ffd8c7":
             return "brightness(0) saturate(100%) invert(77%) sepia(31%) saturate(241%) hue-rotate(328deg) brightness(107%) contrast(103%)";
+          case "#ffaf96":
+            return "brightness(0) saturate(100%) invert(85%) sepia(26%) saturate(505%) hue-rotate(321deg) brightness(105%) contrast(102%)";
+          case "#ffddc4":
+            return "brightness(0) saturate(100%) invert(70%) sepia(91%) saturate(322%) hue-rotate(312deg) brightness(101%) contrast(101%)";
+          case "#a8fff5":
+            return "brightness(0) saturate(100%) invert(13%) sepia(99%) saturate(3642%) hue-rotate(168deg) brightness(106%) contrast(100%)";
+          case "#00332d":
+            return "brightness(0) saturate(100%) invert(16%) sepia(19%) saturate(2553%) hue-rotate(129deg) brightness(91%) contrast(102%)";
+          case "#ba9c65":
+            return "brightness(0) saturate(100%) invert(63%) sepia(35%) saturate(434%) hue-rotate(0deg) brightness(93%) contrast(89%)";
+          case "#ffe0a8":
+            return "brightness(0) saturate(100%) invert(89%) sepia(18%) saturate(750%) hue-rotate(338deg) brightness(101%) contrast(101%)";
           default:
             return "";
         }
@@ -11178,7 +11192,7 @@
           return <div className="LoadingSpinner">{100 * Math.random() < 99 ? <Dl.b /> : <Xt.Ib />}</div>;
         },
         Gl = (t(141), t(90)),
-        Ul = t(59),
+        Ul = t(60),
         Fl =
           (t(142),
           function (e) {
@@ -12811,11 +12825,13 @@
           t = [],
           n = e.line ? " Leaderboard-Player-Position-MVP" : void 0;
         if (void 0 === e.info || e.info.length < 1) return <Rl />;
-        if (void 0 !== e.lineIndex)
+        if (void 0 !== e.lineIndex && e.line)
           for (var l = 0; l < e.info.length; l++)
             l < e.lineIndex
-              ? a.push(<nc info={e.info[l]} key={e.info[l].place} showIcons={e.icons} numStyle={n} bottom={!1} />)
-              : t.push(<nc info={e.info[l]} key={e.info[l].place} showIcons={e.icons} bottom={!0} />);
+              ? a.push(<nc info={e.info[l]} key={e.info[l].place} showIcons={e.icons} numStyle={n} />)
+              : t.push(<nc info={e.info[l]} key={e.info[l].place} showIcons={e.icons} />);
+        else
+          for (l = 0; l < e.info.length; l++) a.push(<nc info={e.info[l]} key={e.info[l].place} showIcons={e.icons} />);
         return (
           <o.a.Fragment>
             <h3 className="Leaderboard-Header">
@@ -12902,21 +12918,21 @@
             b,
             y,
             w,
-            O = [];
+            O,
+            B = [];
           return (
-            t.idol === (null === (m = e.info.player) || void 0 === m ? void 0 : m.id) && O.push("Your Idol"),
+            t.idol === (null === (m = e.info.player) || void 0 === m ? void 0 : m.id) && B.push("Your Idol"),
             (null === (u = e.info.player) || void 0 === u ? void 0 : u.permAttr.includes("SHELLED")) &&
-              O.push("Shelled"),
+              B.push("Shelled"),
             (null === (A = e.info.player) || void 0 === A ? void 0 : A.permAttr.includes("ELSEWHERE")) &&
-              O.push("Elsewhere"),
-            (null === (p = e.info.player) || void 0 === p ? void 0 : p.deceased) && O.push("Dead"),
-            void 0 !== e.numStyle && O.push("MVP"),
+              B.push("Elsewhere"),
+            (null === (p = e.info.player) || void 0 === p ? void 0 : p.deceased) && B.push("Dead"),
+            void 0 !== e.numStyle && B.push("MVP"),
+            (null === (h = e.info.player) || void 0 === h ? void 0 : h.permAttr.includes("SCATTERED")) &&
+              B.push("Scattered"),
             (
               <div
-                className={
-                  (e.bottom ? " Leaderboard-Player-Wrapper-Bottom" : "Leaderboard-Player-Wrapper") +
-                  (e.showIcons ? " Leaderboard-Player-Wrapper-WithIcon" : "")
-                }
+                className={"Leaderboard-Player-Wrapper" + (e.showIcons ? " Leaderboard-Player-Wrapper-WithIcon" : "")}
               >
                 <div className="Leaderboard-Icon-Wrapper">
                   {e.showIcons && [].includes(e.info.place) ? <Xt.wb className="Leaderboard-Icon-Microphone" /> : null}
@@ -12933,15 +12949,15 @@
                 </div>
                 <d
                   background={a}
-                  path={"/player/".concat(null === (h = e.info.player) || void 0 === h ? void 0 : h.id)}
+                  path={"/player/".concat(null === (f = e.info.player) || void 0 === f ? void 0 : f.id)}
                   className="Leaderboard-Player"
                 >
-                  {(null === (f = e.info.player) || void 0 === f ? void 0 : f.permAttr.includes("SHELLED")) ? (
+                  {(null === (g = e.info.player) || void 0 === g ? void 0 : g.permAttr.includes("SHELLED")) ? (
                     <div className={"Leaderboard-Shelled" + +(Math.floor(5 * Math.random()) + 1)} aria-hidden="true">
                       SHELLED
                     </div>
                   ) : null}
-                  {(null === (g = e.info.player) || void 0 === g ? void 0 : g.permAttr.includes("ELSEWHERE")) ? (
+                  {(null === (E = e.info.player) || void 0 === E ? void 0 : E.permAttr.includes("ELSEWHERE")) ? (
                     <div className="Leaderboard-Away-Status" aria-hidden="true">
                       elsewhere...
                     </div>
@@ -12950,25 +12966,30 @@
                     <div className={c} aria-label={"Rank " + e.info.place + "."} role="text">
                       {e.info.place}
                     </div>
-                    {e.info.deceased ? <div className="Leaderboard-Player-Deceased-Icon" /> : null}
+                    {e.info.deceased ? (
+                      <div
+                        className="Leaderboard-Player-Deceased-Icon"
+                        style={{ filter: t.lightMode ? "invert(1)" : "initial" }}
+                      />
+                    ) : null}
                     <div
                       className={
                         "Leaderboard-Player-Name" +
-                        ((null === (E = e.info.player) || void 0 === E ? void 0 : E.permAttr.includes("ELSEWHERE"))
+                        ((null === (v = e.info.player) || void 0 === v ? void 0 : v.permAttr.includes("ELSEWHERE"))
                           ? " Leaderboard-Away"
                           : "")
                       }
                     >
-                      {t.idol === (null === (v = e.info.player) || void 0 === v ? void 0 : v.id) ? (
+                      {t.idol === (null === (b = e.info.player) || void 0 === b ? void 0 : b.id) ? (
                         <Mi aria-hidden="true" className="ModalItem-Icons" />
                       ) : (
                         ""
                       )}{" "}
-                      {(null === (b = e.info.player) || void 0 === b ? void 0 : b.permAttr.includes("SCATTERED"))
-                        ? Ot(null === (y = e.info.player) || void 0 === y ? void 0 : y.name)
-                        : null === (w = e.info.player) || void 0 === w
+                      {(null === (y = e.info.player) || void 0 === y ? void 0 : y.permAttr.includes("SCATTERED"))
+                        ? Ot(null === (w = e.info.player) || void 0 === w ? void 0 : w.name)
+                        : null === (O = e.info.player) || void 0 === O
                         ? void 0
-                        : w.name}
+                        : O.name}
                     </div>
                   </div>
                   <div className="Leaderboard-Team-Container">
@@ -12988,7 +13009,7 @@
                   </div>
                   <div
                     className="sr-only"
-                    aria-label={"." + (O.length > 0 ? " Current Status: " + O.join(", ") + "." : "")}
+                    aria-label={"." + (B.length > 0 ? " Current Status: " + B.join(", ") + "." : "")}
                   />
                 </d>
               </div>
@@ -12998,7 +13019,7 @@
         return null;
       }
       var rc;
-      t(53);
+      t(54);
       function oc() {
         var e = Object(r.useContext)(N.context),
           a = Object(r.useContext)(Ir.context);
@@ -13636,7 +13657,7 @@
             </div>
           );
         },
-        gc = t(71);
+        gc = t(72);
       t(151);
       function Ec() {
         var e = Object(r.useState)([]),
@@ -14215,12 +14236,12 @@
       };
       Cc.defaultProps = { dismissable: !0, style: Ic.GENERIC };
       var Mc = Cc,
-        xc = t(12),
+        xc = t(11),
         Lc = t(176),
         Dc = t(175),
         Pc = t(173),
         Rc =
-          (t(46),
+          (t(47),
           function (e) {
             return (
               <qt.a
@@ -14653,7 +14674,7 @@
             );
           return <o.a.Fragment>{h}</o.a.Fragment>;
         },
-        zc = t(58),
+        zc = t(59),
         Kc = t(108),
         qc = t(174),
         Zc = function (e) {
@@ -15067,7 +15088,7 @@
             </o.a.Fragment>
           );
         };
-      t(47);
+      t(48);
       function ps() {
         return (ps =
           Object.assign ||
@@ -16294,16 +16315,20 @@
               <div className="ModalItem-Info">
                 {k ? null : <div className="Team-Header-NotInLeague">WARNING: ACCESS RESTRICTED</div>}
                 <div className="Team-Header">
-                  <div className="Team-LogoLine">
-                    <div style={{ backgroundColor: I.mainColor }} className="Team-Logo">
-                      {Lt(I)}
+                  <div className="Team-LogoLine-Wrapper">
+                    <div className="Team-LogoLine">
+                      <div style={{ backgroundColor: I.mainColor }} className="Team-Logo">
+                        {Lt(I)}
+                      </div>
+                    </div>
+                    <div className="ModalItem-Name-Wrapper">
+                      <h2 className="ModalItem-Name">
+                        {I.fullName} {Q}
+                      </h2>
+                      <div className="Team-Slogan">"{I.slogan}"</div>
                     </div>
                   </div>
                   <div className="ModalItem-Name-Wrapper">
-                    <h2 className="ModalItem-Name">
-                      {I.fullName} {Q}
-                    </h2>
-                    <div className="Team-Slogan">"{I.slogan}"</div>
                     <div className="Team-Card-Wrapper">
                       {V}
                       {W}
@@ -16521,7 +16546,7 @@
           (<Mc {...Object.assign({}, e, { className: "ModalItem" })}>{x}</Mc>)
         );
       };
-      t(35), t(36);
+      t(36), t(37);
       var zs = function (e) {
           var a = Object(bi.useToasts)().addToast,
             t = Object(r.useContext)(L.context),
@@ -16760,7 +16785,7 @@
             )
           );
         },
-        Ks = t(76);
+        Ks = t(46);
       var qs = function (e) {
         var a = Object(bi.useToasts)().addToast,
           t = Object(r.useContext)(L.context),
@@ -16768,7 +16793,7 @@
           l = t.setUser,
           i = Object(r.useContext)(Ir.context),
           m = (Object(s.f)(), Object(s.h)().type),
-          u = Object(r.useState)(!1),
+          u = Object(r.useState)(!0),
           d = Object(c.a)(u, 2),
           A = d[0],
           f = d[1],
@@ -16778,63 +16803,228 @@
           b = E[1],
           y = Object(r.useState)(n.snackOrder),
           w = Object(c.a)(y, 2),
-          O = (w[0], w[1], Object(r.useState)(!1)),
-          B = Object(c.a)(O, 2),
-          S = B[0],
-          N = B[1];
+          O = w[0],
+          B = w[1],
+          S = Object(r.useState)(!1),
+          N = Object(c.a)(S, 2),
+          I = N[0],
+          k = N[1];
         Object(r.useEffect)(function () {
           var e = window.matchMedia("(max-width: 1080px)");
           return (
-            e.addListener(I),
-            I(e),
+            e.addListener(C),
+            C(e),
             function () {
-              e.removeListener(I);
+              e.removeListener(C);
             }
           );
         }, []),
-          Object(r.useEffect)(function () {
-            var e;
-            null !== n.spread &&
-              (function () {
-                var a = n.spread.map(function (e) {
-                  return e.toString();
-                });
-                if (
-                  (function (e) {
-                    for (var a = Object.create(null), t = 0; t < e.length; ++t) {
-                      var n = e[t];
-                      if (n in a) return !0;
-                      a[n] = !0;
-                    }
-                    return !1;
-                  })(a)
-                )
-                  for (e = a.length - 1; e >= 0; e--)
-                    a.filter(function (t) {
-                      return t === a[e];
-                    }).length > 1
-                      ? (a[e] = a[e] + "_" + e.toString())
-                      : (a[e] = a[e]);
-                0 === v.length && n.spread.length > 0 && b([a[0], a[1], a[2]]);
-              })();
-          });
-        var I = function (e) {
-            e.matches ? N(!0) : N(!1);
+          Object(r.useEffect)(
+            function () {
+              var e;
+              null !== n.spread &&
+                (function () {
+                  var a = n.spread.map(function (e) {
+                    return e.toString();
+                  });
+                  if (
+                    (function (e) {
+                      for (var a = Object.create(null), t = 0; t < e.length; ++t) {
+                        var n = e[t];
+                        if (n in a) return !0;
+                        a[n] = !0;
+                      }
+                      return !1;
+                    })(a)
+                  )
+                    for (e = a.length - 1; e >= 0; e--)
+                      a.filter(function (t) {
+                        return t === a[e];
+                      }).length > 1
+                        ? (a[e] = a[e] + "_" + e.toString())
+                        : (a[e] = a[e]);
+                  0 === v.length && n.spread.length > 0 && b([a[0], a[1], a[2]]);
+                })();
+              f(!1);
+            },
+            [n.spread]
+          ),
+          Object(r.useEffect)(
+            function () {
+              if (O.includes("E")) {
+                var e = O;
+                e.forEach(function (a, t) {
+                  "E" === a && (e[t] = a + t);
+                }),
+                  B(e);
+              }
+              f(!1);
+            },
+            [n.snackOrder]
+          );
+        var C = function (e) {
+            e.matches ? k(!0) : k(!1);
           },
-          k = <Rl />;
-        A ||
-          (k = (
+          M = (
             <zt.a className="ModalForm-Submit" type="submit" variant="success">
               Save Changes
             </zt.a>
-          ));
-        var C = null,
-          M = "",
-          x = S ? "vertical" : "horizontal";
+          ),
+          x = function (e, a) {
+            return Object(T.a)({}, a);
+          },
+          D = null,
+          P = "",
+          R = I ? "vertical" : "horizontal";
         switch (m) {
+          case "snacks":
+            (P = "Snacks"),
+              (D = (
+                <o.a.Fragment>
+                  <Ks.a
+                    onDragEnd={function (e) {
+                      e.source;
+                      var a = e.destination;
+                      e.draggableId;
+                      if (a) {
+                        var t = Array.from(O),
+                          n = t.splice(e.source.index, 1),
+                          r = Object(c.a)(n, 1)[0];
+                        t.splice(e.destination.index, 0, r), B(t);
+                      }
+                    }}
+                  >
+                    <Ks.c droppableId="Snacks" direction={R}>
+                      {function (e) {
+                        return (
+                          <div {...Object.assign({ className: "Reorder-Snacks", ref: e.innerRef }, e.droppableProps)}>
+                            {O.map(function (e, a) {
+                              return (
+                                <Ks.b key={e} draggableId={e} index={a}>
+                                  {function (a, t) {
+                                    return e.length > 1 ? (
+                                      e.includes("E") ? (
+                                        <div
+                                          {...Object.assign(
+                                            {
+                                              className:
+                                                "Reorder-Snacks-Item" +
+                                                (e.includes("E") ? " Reorder-Snacks-Item-Empty" : ""),
+                                              ref: a.innerRef,
+                                            },
+                                            a.draggableProps,
+                                            a.dragHandleProps,
+                                            { style: x(t.isDragging, a.draggableProps.style) }
+                                          )}
+                                        />
+                                      ) : (
+                                        <div
+                                          {...Object.assign(
+                                            { className: "Reorder-Snacks-Item", ref: a.innerRef },
+                                            a.draggableProps,
+                                            a.dragHandleProps,
+                                            { style: x(t.isDragging, a.draggableProps.style) }
+                                          )}
+                                        >
+                                          {vt(e)}
+                                          <div className="Reorder-Snacks-Amount">
+                                            {(function (e, a) {
+                                              if (void 0 === $.GetTiers(e)) return a;
+                                              return a + 1;
+                                            })(e, n.snacks[e])}
+                                          </div>
+                                        </div>
+                                      )
+                                    ) : (
+                                      <o.a.Fragment />
+                                    );
+                                  }}
+                                </Ks.b>
+                              );
+                            })}
+                            {e.placeholder}
+                            {O.map(function (e, a) {
+                              return (
+                                <div className="Reorder-Number" style={{ gridRow: I ? a + 1 : 2 }}>
+                                  {a + 1}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        );
+                      }}
+                    </Ks.c>
+                  </Ks.a>
+                  <xc.a
+                    className="ModalForm-Form ModalForm-Form-Wrapper"
+                    onSubmit={function (e) {
+                      e.preventDefault(), f(!0);
+                      var t = O.map(function (e) {
+                        return e.includes("E") ? "E" : e;
+                      });
+                      if (
+                        t.every(function (e, a) {
+                          return e === n.snackOrder[a];
+                        })
+                      )
+                        return f(!1), void a("Original Snack Order preserved", { appearance: "error" });
+                      var r = { snackOrder: t };
+                      Yl("/api/reorderSnacks", JSON.stringify(r))
+                        .then(function (e) {
+                          e.status && 200 === e.status && e.ok
+                            ? ((n.snackOrder = t),
+                              l(Object(T.a)({}, n)),
+                              a("New Order preserved", { appearance: "success" }))
+                            : e.json().then(function (e) {
+                                a(e.error || "Error", { appearance: "error" });
+                              });
+                        })
+                        .finally(
+                          Object(h.a)(
+                            p.a.mark(function e() {
+                              return p.a.wrap(function (e) {
+                                for (;;)
+                                  switch ((e.prev = e.next)) {
+                                    case 0:
+                                      f(!1);
+                                    case 1:
+                                    case "end":
+                                      return e.stop();
+                                  }
+                              }, e);
+                            })
+                          )
+                        );
+                    }}
+                  >
+                    {A ? (
+                      <Rl />
+                    ) : (
+                      <o.a.Fragment>
+                        <zt.a
+                          onClick={function () {
+                            return (function () {
+                              f(!0);
+                              var e = Bt(Array.from(O));
+                              B(e), f(!1);
+                            })();
+                          }}
+                          className="ModalForm-Submit"
+                          variant="success"
+                          style={{ marginRight: "10px" }}
+                        >
+                          Shuffle
+                        </zt.a>
+                        {M}
+                      </o.a.Fragment>
+                    )}
+                  </xc.a>
+                </o.a.Fragment>
+              ));
+            break;
           case "cards":
-            (M = "Cards"),
-              (C = (
+            (P = "Cards"),
+              (D = (
                 <o.a.Fragment>
                   <Ks.a
                     onDragEnd={function (e) {
@@ -16849,7 +17039,7 @@
                       }
                     }}
                   >
-                    <Ks.c droppableId="Spread" direction={x}>
+                    <Ks.c droppableId="Spread" direction={R}>
                       {function (e) {
                         return (
                           <div {...Object.assign({ className: "Reorder-Spread", ref: e.innerRef }, e.droppableProps)}>
@@ -16868,7 +17058,7 @@
                                           },
                                           a.draggableProps,
                                           a.dragHandleProps,
-                                          { style: (t.isDragging, (r = a.draggableProps.style), Object(T.a)({}, r)) }
+                                          { style: x(t.isDragging, a.draggableProps.style) }
                                         )}
                                       >
                                         <div className="Reorder-Spread-Card-Number">
@@ -16884,7 +17074,6 @@
                                         <div className="Reorder-Spread-Card-Name">{Ut(Number(e.split("_")[0]))[1]}</div>
                                       </div>
                                     );
-                                    var r;
                                   }}
                                 </Ks.b>
                               );
@@ -16892,7 +17081,7 @@
                             {e.placeholder}
                             {v.map(function (e, a) {
                               return (
-                                <div className="Reorder-Number" style={{ gridRow: S ? a + 1 : 2 }}>
+                                <div className="Reorder-Number" style={{ gridRow: I ? a + 1 : 2 }}>
                                   {a + 1}
                                 </div>
                               );
@@ -16944,7 +17133,7 @@
                         );
                     }}
                   >
-                    <div className="ModalForm-Submit-Wrapper">{k}</div>
+                    {A ? <Rl /> : <div className="ModalForm-Submit-Wrapper">{M}</div>}
                   </xc.a>
                 </o.a.Fragment>
               ));
@@ -16952,11 +17141,11 @@
         Math.floor(n.coins / 10);
         return (
           <Mc {...Object.assign({}, e, { className: "BatchBuy" })}>
-            <div className="ModalForm-Header">Reorder {M}</div>
+            <div className="ModalForm-Header">Reorder {P}</div>
             <div className="Account-Miniheader">
               <kr.a /> Drag to reorder <kr.c />
             </div>
-            {C}
+            {D}
           </Mc>
         );
       };
@@ -17432,6 +17621,13 @@
                     <div className="Shop-Icons-Section Shop-Icons-Section-Pack">
                       <div className="Shop-Icons-Section-Header">
                         <div className="Shop-Icons-Section-Title">Your Snack Pack</div>
+                        <d
+                          className="Shop-Item-Button Shop-Icons-Section-Pack-Button"
+                          background={B}
+                          path="/reorder/snacks"
+                        >
+                          Reorder
+                        </d>
                       </div>
                       <div className="Shop-Icons-Inventory">
                         <div role="list" className="Shop-Icons-Inventory-Grid">
@@ -17508,11 +17704,16 @@
                             <div className="Shop-Item-Cost-Sell">
                               {(function (e) {
                                 var a = e.params.snackId,
-                                  t = $.GetSellValue(a, m.snacks[a]);
+                                  t = $.GetSellValue(
+                                    a,
+                                    m.snacks[a],
+                                    void 0 !== $.GetTiers(a) ? m.snacks[a] + 1 : m.snacks[a]
+                                  );
                                 return (
                                   te &&
                                     e.id === Q.FLUTES &&
-                                    (t = m.snacks[$.FLUTES] < 2 ? 0 : $.GetSellValue(a, m.snacks[a] - 1)),
+                                    (t =
+                                      m.snacks[$.FLUTES] < 2 ? 0 : $.GetSellValue(a, m.snacks[a] - 1, m.snacks[a] - 1)),
                                   0 === t ? null : (
                                     <div className="Shop-Item-Cost" role="text">
                                       <span className="Shop-Item-Cost-Symbol" aria-label="plus">
@@ -17527,7 +17728,14 @@
                                 return b ? (
                                   <Pl />
                                 ) : e.sell && void 0 !== m.snacks[e.params.snackId] ? (
-                                  0 === $.GetSellValue(e.params.snackId, m.snacks[e.params.snackId]) ||
+                                  0 ===
+                                    $.GetSellValue(
+                                      e.params.snackId,
+                                      m.snacks[e.params.snackId],
+                                      void 0 !== $.GetTiers(e.params.snackId)
+                                        ? m.snacks[e.params.snackId] + 1
+                                        : m.snacks[e.params.snackId]
+                                    ) ||
                                   (te && e.id === Q.FLUTES && m.snacks[$.FLUTES] < 2) ? (
                                     <d
                                       className="Shop-Item-Button Shop-Item-Modal Shop-Item-Button-Sell"
@@ -17542,7 +17750,7 @@
                                       background={B}
                                       path={"/sell/".concat(e.params.snackId)}
                                     >
-                                      Sell All
+                                      Sell
                                     </d>
                                   )
                                 ) : null;
@@ -18904,112 +19112,146 @@
             i = n.setUser,
             m = Object(s.f)(),
             u = Object(s.h)().id,
-            d = Object(r.useState)(0),
-            A = Object(c.a)(d, 2),
-            f = (A[0], A[1], Object(r.useState)(!1)),
-            g = Object(c.a)(f, 2),
-            E = (g[0], g[1], $.GetSellValue(u, l.snacks[u]));
+            d = $.GetSellValue(u, l.snacks[u], l.snacks[u]),
+            A = Object(r.useState)(0 === d ? 1 : 0),
+            f = Object(c.a)(A, 2),
+            g = f[0],
+            E = f[1],
+            v = Object(r.useState)(!1),
+            b = Object(c.a)(v, 2),
+            y = (b[0], b[1]),
+            w = void 0 !== $.GetTiers(u),
+            O = function (e) {
+              var a = e.target.value;
+              E(parseInt(a));
+            },
+            B = $.GetSellValue(u, l.snacks[u], g);
           l.favoriteTeam &&
             !Mt(l.favoriteTeam, t) &&
             u === $.FLUTES &&
-            (E = l.snacks[$.FLUTES] < 2 ? 0 : $.GetSellValue(u, l.snacks[u] - 1));
-          function v() {
-            return (v = Object(h.a)(
-              p.a.mark(function e(t) {
-                return p.a.wrap(function (e) {
-                  for (;;)
-                    switch ((e.prev = e.next)) {
-                      case 0:
-                        return (
-                          (e.next = 2),
-                          Yl("/api/sellSnack", JSON.stringify({ snackId: t }))
-                            .then(
-                              (function () {
-                                var e = Object(h.a)(
-                                  p.a.mark(function e(n) {
-                                    return p.a.wrap(function (e) {
-                                      for (;;)
-                                        switch ((e.prev = e.next)) {
-                                          case 0:
-                                            return (
-                                              (e.next = 2),
-                                              n.json().then(function (e) {
-                                                if (e.message)
-                                                  if (n.ok && n.status && 200 === n.status) {
-                                                    var r = Object(T.a)({}, l.snacks);
-                                                    delete r[t];
-                                                    var o = $.RemoveFromSnackOrder(t, l.snackOrder);
-                                                    (l.snacks = r),
-                                                      (l.snackOrder = o),
-                                                      (l.coins += E),
-                                                      i(Object(T.a)({}, l)),
-                                                      a(e.message, { appearance: "success" }),
-                                                      m.goBack();
-                                                  } else a(e.message, { appearance: "error" });
-                                              })
-                                            );
-                                          case 2:
-                                          case "end":
-                                            return e.stop();
-                                        }
-                                    }, e);
-                                  })
-                                );
-                                return function (a) {
-                                  return e.apply(this, arguments);
-                                };
-                              })()
-                            )
-                            .catch(function (e) {
-                              a(e, { appearance: "error" });
-                            })
-                        );
-                      case 2:
-                      case "end":
-                        return e.stop();
-                    }
-                }, e);
-              })
-            )).apply(this, arguments);
-          }
-          var b = void 0 !== $.GetTiers(u);
+            (B = l.snacks[$.FLUTES] < 2 ? 0 : $.GetSellValue(u, l.snacks[u] - 1, g));
+          var S = w ? l.snacks[u] + 1 : l.snacks[u];
           return (
             <Mc {...Object.assign({}, e, { className: "BatchBuy" })}>
               <div className="ModalForm-Header Sell-Question">
-                you wanna {0 === E ? "discard" : "sell"} your {u !== $.TAROT ? (b ? l.snacks[u] + 1 : l.snacks[u]) : ""}{" "}
-                {$.GetName(u).toLowerCase()}?
+                you wanna {0 === d ? "discard" : "sell"} your {$.GetName(u).toLowerCase()}?
               </div>
-              <div className="Sell-Earnings">
-                you'll get{" "}
-                <span>
-                  <Ol style={{ width: "22px", height: "22px" }} /> {E}
-                </span>{" "}
-                back
-              </div>
-              <div className="Sell-Buttons">
-                <zt.a
-                  className="Shop-Item-Button"
-                  type="submit"
-                  variant="danger"
-                  onClick={function () {
-                    m.goBack();
-                  }}
-                >
-                  Cancel
-                </zt.a>
-                <zt.a
-                  className="Shop-Item-Button"
-                  type="submit"
-                  variant="success"
-                  onClick={function () {
-                    !(function (e) {
-                      v.apply(this, arguments);
-                    })(u);
-                  }}
-                >
-                  Confirm
-                </zt.a>
-              </div>
+              <xc.a
+                className="ModalForm-Form"
+                onSubmit={function (e) {
+                  e.preventDefault();
+                  var t = w ? l.snacks[u] + 1 : l.snacks[u];
+                  g > t
+                    ? a("Insufficent snacks", { appearance: "error" })
+                    : g < 1
+                    ? a("Invalid input", { appearance: "error" })
+                    : (y(!0),
+                      Yl("/api/sellSnack", JSON.stringify({ snackId: u, amount: g }))
+                        .then(function (e) {
+                          if (e.status && 200 === e.status && e.ok && e.body) {
+                            var t = Object(T.a)({}, l.snacks);
+                            if ((l.snacks[u] - g === 0 && !w) || (l.snacks[u] - g === -1 && w)) {
+                              delete t[u];
+                              var n = $.RemoveFromSnackOrder(u, l.snackOrder);
+                              l.snackOrder = n;
+                            } else t[u] = t[u] - g;
+                            (l.snacks = t),
+                              (l.coins += B),
+                              i(Object(T.a)({}, l)),
+                              a("You sold ".concat(g, " ").concat($.GetName(u)), { appearance: "success" }),
+                              m.goBack();
+                          } else
+                            e.json().then(function (e) {
+                              a(e.error || "Error", { appearance: "error" });
+                            });
+                        })
+                        .finally(
+                          Object(h.a)(
+                            p.a.mark(function e() {
+                              return p.a.wrap(function (e) {
+                                for (;;)
+                                  switch ((e.prev = e.next)) {
+                                    case 0:
+                                      y(!1);
+                                    case 1:
+                                    case "end":
+                                      return e.stop();
+                                  }
+                              }, e);
+                            })
+                          )
+                        ));
+                }}
+              >
+                {0 === d ? (
+                  <div className="ModalForm-Outcome-Wrapper">
+                    <div className="Sell-Earnings">
+                      you'll get{" "}
+                      <span>
+                        <Ol style={{ width: "22px", height: "22px" }} /> {B}
+                      </span>{" "}
+                      back
+                    </div>
+                  </div>
+                ) : (
+                  <xc.a.Group controlId="amount">
+                    <xc.a.Label className="Sell-Earnings">
+                      how many {$.GetName(u).toLowerCase()} do you wanna sell?
+                    </xc.a.Label>
+                    <div
+                      className={
+                        "ModalForm-Form-Inputs-Amount" + (l.lightMode ? " ModalForm-Form-Inputs-Amount-LightMode" : "")
+                      }
+                    >
+                      <div className="ModalForm-Ticket-Wrapper">{S}</div>
+                      <xc.a.Control type="number" value={g} onChange={O} />
+                      <xc.a.Control
+                        type="range"
+                        className="ModalForm-Range"
+                        min={1}
+                        max={S}
+                        value={g}
+                        onChange={O}
+                        step="1"
+                      />
+                      <a
+                        className={
+                          "ModalForm-Form-Inputs-Amount-Max" +
+                          (l.lightMode ? " ModalForm-Form-Inputs-Amount-Max-LightMode" : "")
+                        }
+                        onClick={function (e) {
+                          e.preventDefault(), E(S);
+                        }}
+                      >
+                        Max: {S}
+                      </a>
+                    </div>
+                    <div className="ModalForm-Outcome-Wrapper">
+                      <div className="Sell-Earnings">
+                        you'll get{" "}
+                        <span>
+                          <Ol style={{ width: "22px", height: "22px" }} /> {0 === g ? 0 : B}
+                        </span>{" "}
+                        back for your <span>{g}</span> {$.GetName(u).toLowerCase()}
+                      </div>
+                    </div>
+                  </xc.a.Group>
+                )}
+                <div className="Sell-Buttons">
+                  <zt.a
+                    className="Shop-Item-Button"
+                    variant="danger"
+                    onClick={function () {
+                      m.goBack();
+                    }}
+                  >
+                    Cancel
+                  </zt.a>
+                  <zt.a className="Shop-Item-Button" type="submit" variant="success">
+                    Confirm
+                  </zt.a>
+                </div>
+              </xc.a>
             </Mc>
           );
         };
@@ -20101,6 +20343,13 @@
                                 var t, r;
                               })}
                             </div>
+                            <d
+                              className="ModalForm-Submit Account-Inventory-Button"
+                              background={A}
+                              path="/reorder/snacks"
+                            >
+                              Reorder
+                            </d>
                           </div>
                         </div>
                         {H}
@@ -24030,7 +24279,7 @@
         };
       wd.context = yd;
       var Od = wd,
-        Bd = t(52),
+        Bd = t(53),
         Sd = function () {
           return (
             <div className="ModalItem-Content">
@@ -24712,24 +24961,33 @@
               <div className="Bulletin-Item-Contents Bulletin-Item-Contents-Text" role="list">
                 <div role="listItem">
                   <h3 className="Bulletin-Item-Contents-Header" role="text">
-                    Out of the Breach!
+                    Mind the Gaps
                   </h3>
                   <p className="Bulletin-Item-Contents-Text" role="text">
                     <Rd />
-                    Fans of the Baltimore Crabs planted the flag for their Crabitat (despite multiple warnings) and
-                    caused a surge of Immateria to Flood the Plane, sweeping the cantankerous crustaceans back into the
-                    league with three New Teams in tow -- the Georgias, Mechanics, and Worms!
+                    Flooding caused by the Fan-made crisis continued to sweep Players Elsewhere in Season 13. Those that
+                    did find their way back struggled to pull themselves together, leaving Teams with serious holes in
+                    their rosters.
                   </p>
                 </div>
                 <div role="listItem">
                   <h3 className="Bulletin-Item-Contents-Header" role="text">
-                    Expansion Protocols Activated
+                    Hands on the Dial
                   </h3>
                   <p className="Bulletin-Item-Contents-Text" role="text">
                     <Rd />
-                    Flooding saw runners swept from play and fan-favorites swept Elsewhere. Ownership was forced to
-                    activate Expansion Protocols, greenlighting Ballpark construction league-wide. Experts suggest that
-                    things may already be leveling off, thanks to the league’s swift action.
+                    Snackholders completed construction of their home ballparks, allowing Teams to personalize home
+                    field advantage and giving Fans the chance to really crank up the fun!
+                  </p>
+                </div>
+                <div role="listItem">
+                  <h3 className="Bulletin-Item-Contents-Header" role="text">
+                    Where'd You Go, Friendo?
+                  </h3>
+                  <p className="Bulletin-Item-Contents-Text" role="text">
+                    <Rd />
+                    Ownership responded to a missing persons report Sunday, hiring top-tier investigators to look into
+                    the sudden disappearances of Brisket Friendo and Tad Seeth.{" "}
                   </p>
                 </div>
               </div>
@@ -28445,7 +28703,7 @@
             </o.a.Fragment>
           );
         };
-      t(64);
+      t(65);
       function oA() {
         var e = Object(r.useContext)(N.context);
         if (!e || !e.sim) return null;
@@ -29030,18 +29288,23 @@
         },
         BA = function (e) {
           var a,
-            t = e.path,
-            n = Object(r.useContext)(N.context),
-            l = void 0 !== n.sim && void 0 !== n.sim.season ? n.sim.season : -1,
-            i = Object(r.useState)([]),
-            s = Object(c.a)(i, 2),
-            m = s[0],
-            u = s[1];
-          Object(r.useContext)(L.context).user;
+            t,
+            n = e.path,
+            l = Object(r.useContext)(N.context),
+            i = void 0 !== l.sim && void 0 !== l.sim.season ? l.sim.season : -1,
+            s = Object(r.useState)([]),
+            m = Object(c.a)(s, 2),
+            u = m[0],
+            d = m[1],
+            A = Object(r.useState)(!0),
+            f = Object(c.a)(A, 2),
+            g = f[0],
+            E = f[1],
+            v = Object(r.useContext)(L.context).user;
           Object(r.useEffect)(function () {
-            d();
+            b();
           }, []);
-          var d = (function () {
+          var b = (function () {
               var e = Object(h.a)(
                 p.a.mark(function e() {
                   var a;
@@ -29049,10 +29312,10 @@
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          return (e.next = 2), pi(l, 5);
+                          return (e.next = 2), pi(i, 5);
                         case 2:
                           (a = e.sent),
-                            u(
+                            d(
                               a.filter(function (e) {
                                 return 29 !== e.type;
                               })
@@ -29068,22 +29331,37 @@
                 return e.apply(this, arguments);
               };
             })(),
-            A = null;
-          switch (t) {
+            y = null !== (a = v.favoriteTeam) && void 0 !== a ? a : "",
+            w = null;
+          switch (n) {
             case "/leaderboard":
-              A = <ec />;
+              w = <ec />;
               break;
             case "/standings":
-              A = <oc />;
+              w = <oc />;
               break;
             case "/league":
-              A = (
+              var O = !0;
+              w = (
                 <div className="Recap">
                   <div className="Recap-Results">
                     <h2 className="Recap-ResultsHeader">Renovations</h2>
-                    {m.map(function (e) {
-                      return <wA event={e} />;
+                    <xc.a className="Recap-Filters">
+                      <xc.a.Check
+                        className="ModalForm-Switch Recap-Filters-Switch"
+                        type="switch"
+                        id="favteam"
+                        label="Favorite Team's Results Only"
+                        checked={g}
+                        onChange={function () {
+                          return E(!g);
+                        }}
+                      />
+                    </xc.a>
+                    {u.map(function (e) {
+                      return g && !e.teamTags.includes(y) ? null : (O && (O = !1), (<wA event={e} />));
                     })}
+                    {O ? <div className="Recap-NoneFound">No events found...</div> : null}
                   </div>
                 </div>
               );
@@ -29096,14 +29374,15 @@
                     <gA style={{ width: "250px", height: "250px" }} />
                     <div className="Stubs-Header">Latesiesta</div>
                     <Vi />
-                    <Ji dateString={null === (a = n.sim) || void 0 === a ? void 0 : a.nextPhaseTime} />
-                    <div className="Stubs-Body">Lateseason {l + 1} will begin soon.</div>
+                    <Ji dateString={null === (t = l.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
+                    <div className="Stubs-Body">Lateseason {i + 1} will begin soon.</div>
                   </div>
                 }
                 text=""
               />
               <Zi />
-              {A}
+              {w}
+              <Di />
             </div>
           );
         },
@@ -29418,8 +29697,8 @@
             i = <LA />;
           if (
             (r.isFetching || !r.isSignedIn || r.favoriteTeam || (i = <DA />),
-            r.isFetching || !r.isSignedIn || r.snacks[$.VOTES] || (i = <PA />),
-            !r.isFetching && r.isSignedIn && r.favoriteTeam && r.snacks[$.VOTES])
+            !r.isFetching && r.isSignedIn && (r.coins <= 0 || !r.coins) && (i = <PA />),
+            !r.isFetching && r.isSignedIn && r.favoriteTeam && r.coins > 0)
           ) {
             var c = r.coins >= 25;
             i = c ? (
@@ -29479,8 +29758,8 @@
         },
         PA = function () {
           return (
-            <a href={"/shop/".concat(Q.VOTES)}>
-              <zt.a className="Blessings-Submit-Button">Buy Another Vote</zt.a>
+            <a href={"/shop/".concat(Q.BEG)}>
+              <zt.a className="Blessings-Submit-Button">No Coins</zt.a>
             </a>
           );
         },

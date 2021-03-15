@@ -10276,7 +10276,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .ModalItem-Content {
   padding: 20px 0;
-  overflow-y: scroll;
 }
 .ModalItem-Content-WithAttributes {
   padding: 73px 0 20px;
@@ -10858,7 +10857,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .Team-Header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
@@ -10926,9 +10925,13 @@ input[type="number"]::-webkit-outer-spin-button {
 .Team-LogoLine {
   flex-direction: column;
 }
+.Team-LogoLine-Wrapper {
+  width: 100%;
+  display: flex;
+}
 .Team-Card {
   font-size: 14px;
-  margin-left: 0;
+  margin-left: 60px;
   border: 1px solid;
   padding: 4px 10px;
   border-radius: 5px;
@@ -10948,7 +10951,6 @@ input[type="number"]::-webkit-outer-spin-button {
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
-  margin-top: 5px;
 }
 .Team-Slogan {
   font-style: italic;
@@ -12191,13 +12193,21 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 60px;
 }
 @media (max-width: 1080px) {
+  .ModalItem-Attributes {
+    padding: 5px 30px;
+  }
+  .ModalItem-Status {
+    padding: 15px 30px;
+  }
   .ModalItem-Info {
-    padding: 20px 40px 20px 20px;
+    padding: 20px 40px 20px 15px;
   }
   .ModalItem-Button-Flute-Current,
-  .ModalItem-Button-Flute-Wrapper,
-  .ModalItem-Button-Idol-Span {
-    margin: 10px 0 0;
+  .ModalItem-Button-Flute-Wrapper {
+    font-size: 12px;
+  }
+  .ModalItem-Name {
+    font-size: 22px;
   }
   .Team-Logo {
     height: 40px;
@@ -12207,6 +12217,13 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .Team-Name {
     line-height: 32px;
+  }
+  .Team-Card {
+    margin-left: 0;
+    font-size: 12px;
+  }
+  .Team-Card-Wrapper {
+    margin-top: 10px;
   }
   .Team-Player-Line,
   .Team-Player-Line-Blank {
@@ -12255,7 +12272,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .Player-Info-Line {
     grid-template-columns: 120px auto;
-    padding: 5px 30px;
+    padding: 5px 20px;
     font-size: 16px;
     grid-gap: 10px;
     gap: 10px;
@@ -12271,7 +12288,9 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-bottom: 10px;
   }
   .Player-Header-Bottom {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5px;
   }
   .Player-Soulscream {
     max-width: 160px;
@@ -12281,7 +12300,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .Events-List-Item {
     font-size: 15px;
-    padding: 5px 15px;
+    padding: 5px 20px;
     grid-template-columns: 30px 28px 30px auto;
   }
   .Events-List-Item-ParentEvent {
@@ -12299,6 +12318,9 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .Events-List-Minor {
     font-size: 13px;
+  }
+  .Account-Title {
+    margin-left: 20px;
   }
   .Account-Section {
     padding: 10px;
@@ -12318,7 +12340,7 @@ input[type="number"]::-webkit-outer-spin-button {
   .Account-Info-List-Item {
     display: grid;
     grid-template-columns: 120px auto 20px;
-    padding: 5px 30px;
+    padding: 5px 20px;
     font-size: 16px;
     grid-gap: 10px;
     gap: 10px;
@@ -13617,16 +13639,6 @@ button:focus-visible {
   background-color: rgba(30, 30, 30, 0.64);
 }
 .theme-light .Leaderboard-Player-Wrapper:nth-child(odd) > a {
-  background-color: hsla(0, 0%, 89%, 0.71);
-}
-.Leaderboard-Player-Wrapper-Bottom {
-  width: 100%;
-  align-items: center;
-}
-.theme-dark .Leaderboard-Player-Wrapper-Bottom:nth-child(2n) > a {
-  background-color: rgba(30, 30, 30, 0.64);
-}
-.theme-light .Leaderboard-Player-Wrapper-Bottom:nth-child(2n) > a {
   background-color: hsla(0, 0%, 89%, 0.71);
 }
 .Leaderboard-Player-Wrapper-WithIcon {
@@ -15097,6 +15109,15 @@ button:focus-visible {
 .theme-light .Modal-Close:hover {
   border-color: #000;
 }
+@media (max-width: 1080px) {
+  .Modal {
+    padding: 45px 20px;
+  }
+  .Modal-Close {
+    right: 8px;
+    top: 8px;
+  }
+}
 .Offseason-Locked,
 .Offseason-Locked-ButtonContainer {
   font-family: "Lora", "Courier New", monospace, serif;
@@ -15880,7 +15901,6 @@ button:focus-visible {
   display: flex;
   width: 460px;
   max-width: 95vw;
-  max-height: 80vh;
   justify-content: flex-start;
   padding: 40px 20px 20px;
   overflow: visible;
@@ -15892,6 +15912,7 @@ button:focus-visible {
   font-weight: 700;
   padding-bottom: 12px;
   text-align: center;
+  text-transform: capitalize;
 }
 #root .ModalForm-Type {
   padding: 10px 0;
@@ -15902,6 +15923,12 @@ button:focus-visible {
 }
 #root .ModalForm-Form {
   padding: 10px 0;
+}
+#root .ModalForm-Form-Wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 #root .ModalForm-Form-Teams {
   width: 100%;
@@ -16363,6 +16390,8 @@ button:focus-visible {
 }
 #root .Reorder-Snacks-Item svg {
   font-size: 60px;
+  width: 50px;
+  height: 50px;
   margin: 15px 15px 0;
 }
 #root .Reorder-Snacks-Item-Title {
@@ -16410,6 +16439,9 @@ button:focus-visible {
 .theme-light #root .Sell-Earnings span {
   color: #000;
 }
+#root .Sell-Question {
+  text-transform: lowercase;
+}
 .theme-dark #root .Sell-Question,
 .theme-light #root .Sell-Question {
   text-shadow: 0 0 5px #5988ff;
@@ -16430,6 +16462,15 @@ button:focus-visible {
   }
   #root .ModalForm-Outcome-Winnings {
     font-size: 18px;
+  }
+  #root .ModalForm-Form-Team {
+    padding: 5px;
+  }
+  #root .ModalForm-Form-Team-Name {
+    font-size: 18px;
+  }
+  #root .ModalForm-Form-Team-Percentage {
+    font-size: 16px;
   }
   #root .Reorder-Spread {
     grid-template-columns: auto;
@@ -16995,6 +17036,9 @@ button:focus-visible {
 @media (max-width: 1080px) {
   .Shop {
     width: 100%;
+  }
+  .Shop-Icons-Section {
+    justify-content: center;
   }
 }
 .Welcome {
