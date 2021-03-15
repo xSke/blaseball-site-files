@@ -9460,6 +9460,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-family: "Lora", "Courier New", monospace, serif;
   align-self: stretch;
   border-radius: 5px;
+  z-index: 1;
 }
 .theme-dark .Widget-Log-Score {
   color: #ffeb57;
@@ -9476,6 +9477,19 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .theme-light .Widget-Log-Ledger {
   color: hsla(0, 0%, 72.5%, 0.65);
+}
+.Widget-Log-UhOh {
+  text-align: center;
+  font-weight: 700;
+}
+.theme-dark .Widget-Log-UhOh {
+  text-shadow: 2px 2px 1px #000;
+}
+.theme-light .Widget-Log-UhOh {
+  text-shadow: 2px 2px 1px #fff;
+}
+.Widget-Log-UhOh:first-child {
+  margin-top: 30px;
 }
 .Widget-Loading {
   width: 100%;
@@ -9593,6 +9607,19 @@ input[type="number"]::-webkit-outer-spin-button {
 .GameWidget {
   margin-bottom: 80px;
 }
+.GameWidget-DunDun {
+  height: 170px;
+  width: 180px;
+  position: absolute;
+  bottom: 0;
+  right: 25%;
+}
+.theme-dark .GameWidget-DunDun-DunDun {
+  fill: #000;
+}
+.theme-light .GameWidget-DunDun-DunDun {
+  fill: #fff;
+}
 .GameWidget-Full-Live,
 .GameWidget-Full-Upcoming {
   display: grid;
@@ -9674,13 +9701,15 @@ input[type="number"]::-webkit-outer-spin-button {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  border-radius: 5px;
 }
-.GameWidget-Outcome {
+.GameWidget-Outcome,
+.GameWidget-ScoreName {
   border-radius: 5px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+.GameWidget-Outcome {
+  flex-direction: column;
   justify-content: space-between;
   background: #111;
   overflow: hidden;
@@ -10042,8 +10071,6 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .GameWidget-Full-Upcoming {
     grid-template-columns: 40% auto;
-    grid-gap: 0;
-    gap: 0;
   }
   .GameWidget-Upcoming-Info {
     grid-column: 1/3;
@@ -10058,7 +10085,7 @@ input[type="number"]::-webkit-outer-spin-button {
     justify-content: space-around;
   }
   .GameWidget-Upcoming-Favorites-Team {
-    font-size: 16px;
+    font-size: 14px;
   }
   .GameWidget-Upcoming-Favorites-Percentage {
     font-size: 18px;
@@ -10116,7 +10143,7 @@ input[type="number"]::-webkit-outer-spin-button {
     background: hsla(0, 0%, 89%, 0.71);
   }
   .GameWidget-ScoreName {
-    font-size: 22px;
+    font-size: 18px;
   }
   .GameWidget-ScoreNumber {
     margin: 0 8px 0 0;
@@ -10131,7 +10158,6 @@ input[type="number"]::-webkit-outer-spin-button {
     grid-gap: 5px;
     gap: 5px;
     margin-bottom: 5px;
-    grid-template-columns: 50px auto 15%;
   }
   .GameWidget.IsComplete .GameWidget-Log {
     display: none;
@@ -10250,6 +10276,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .ModalItem-Content {
   padding: 20px 0;
+  overflow-y: scroll;
 }
 .ModalItem-Content-WithAttributes {
   padding: 73px 0 20px;
@@ -11088,6 +11115,30 @@ input[type="number"]::-webkit-outer-spin-button {
 .theme-light .Team-Info-Championships {
   color: #0014a8;
 }
+.Team-Info-Score {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+.Team-Info-Score-Low {
+  color: #ff2c40;
+  border: 2px solid #ff2c40;
+  padding: 0 8px;
+  border-radius: 5px;
+  transform: rotate(4deg);
+}
+.Team-Info-Score-Medium {
+  color: #86a8ff;
+  border: 2px solid #86a8ff;
+  padding: 0 8px;
+  border-radius: 5px;
+  transform: rotate(359deg);
+}
+.Team-Info-Score-High {
+  color: #ffbe00;
+  border: 2px solid #ffbe00;
+  padding: 0 8px;
+  border-radius: 5px;
+}
 .Team-Construction {
   padding: 20px;
   display: flex;
@@ -11658,6 +11709,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .Events-List-Item-ParentEvent .Events-List-Category {
   display: none;
 }
+.Events-List-Item-User {
+  grid-template-columns: 60px auto;
+}
 .theme-dark .Events-List-Item:nth-child(odd) .Events-List-Background-Standard {
   background: rgba(30, 30, 30, 0.64);
 }
@@ -11741,8 +11795,13 @@ input[type="number"]::-webkit-outer-spin-button {
   background: #237a32;
 }
 .Events-List-PositiveText {
-  color: #4fe060;
   font-weight: 700;
+}
+.theme-dark .Events-List-PositiveText {
+  color: #4fe060;
+}
+.theme-light .Events-List-PositiveText {
+  color: #048c14;
 }
 .Events-List-NegativeBackground {
   background: #a13838;
@@ -11761,7 +11820,8 @@ input[type="number"]::-webkit-outer-spin-button {
   flex-direction: row;
   align-items: center;
 }
-.Events-List-Row-Group {
+.Events-List-Row-Group,
+.Events-List-Row-TeamName {
   margin-left: 10px;
 }
 .Events-List-Column {
@@ -11772,10 +11832,30 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 24px;
   height: 24px;
 }
+.Events-List-Image {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  margin-left: 2px;
+}
+.Events-List-Image svg {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
 .Events-List-Minor {
   margin-left: 10px;
   font-size: 14px;
   padding-top: 5px;
+}
+.Events-List-Minor-SpaceBetween {
+  font-size: 14px;
+  padding-top: 5px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .Account-Header {
   display: flex;
@@ -12196,6 +12276,9 @@ input[type="number"]::-webkit-outer-spin-button {
   .Player-Soulscream {
     max-width: 160px;
   }
+  .Events-ButtonList {
+    padding: 0 15px;
+  }
   .Events-List-Item {
     font-size: 15px;
     padding: 5px 15px;
@@ -12207,6 +12290,9 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .Events-List-Item-Game {
     grid-template-columns: 28px auto 20px;
+  }
+  .Events-List-Item-User {
+    grid-template-columns: 45px auto;
   }
   .Events-List-Desc {
     margin: 0;
@@ -12515,7 +12601,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: 700;
   text-align: center;
   line-height: 1em;
-  padding-top: 10px;
+  padding: 10px 0.5em 0.5em;
   text-transform: uppercase;
   border: none;
   border-top-left-radius: 0.5rem;
@@ -13282,6 +13368,7 @@ button:focus-visible {
   font-weight: 700;
   border-radius: 10px;
   cursor: pointer;
+  z-index: 10;
 }
 .theme-dark .ScrollToTop {
   background: #000;
@@ -13356,7 +13443,7 @@ button:focus-visible {
   color: #0014a8;
 }
 .Advertisement-ShopItem {
-  background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/yesplz.c29e23a0.png);
+  background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/multitude.93efd3d7.png);
   display: flex;
   background-size: contain;
   width: 150px;
@@ -13928,12 +14015,99 @@ button:focus-visible {
 .Standings-Team-Name {
   padding-left: 6px;
 }
+.Standings-Team-Name,
 .Standings-Team-Name-Container {
   display: flex;
   align-items: center;
 }
 .Standings-Team-Name-LightMode {
   border-radius: 5px;
+}
+.BlinkingRedLight {
+  -webkit-animation: blink 3s infinite;
+  animation: blink 3s infinite;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #c80c0c;
+  opacity: 0.5;
+  margin-left: 10px;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  .BlinkingRedLight {
+    -webkit-animation: none;
+    animation: none;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0.8;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0.8;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 0.8;
+  }
 }
 @media (max-width: 1080px) {
   .Standings-League {
@@ -15499,13 +15673,13 @@ button:focus-visible {
   animation-direction: normal;
 }
 .BigDeal-Icon-1 {
-  font-size: 90vh;
   line-height: 0;
   position: relative;
-  height: 68vh;
+  height: 52vh;
   top: -200px;
 }
 .BigDeal-Icon-1 svg {
+  max-height: 90vh;
   -webkit-animation-name: floaty;
   animation-name: floaty;
   -webkit-animation-duration: 4s;
@@ -15694,6 +15868,9 @@ button:focus-visible {
   .BigDeal-RedLine-3 {
     font-size: 36px;
     line-height: 1.2em;
+  }
+  .BigDeal-Message-Size-1 {
+    font-size: 1.2em;
   }
   .BigDeal-Message-Size-2 {
     font-size: 2em;
@@ -16207,6 +16384,7 @@ button:focus-visible {
 #root .Sell-Buttons {
   display: flex;
   align-self: center;
+  justify-content: center;
 }
 #root .Sell-Buttons :first-child {
   margin-right: 10px;
@@ -17083,7 +17261,6 @@ button:focus-visible {
 }
 .Recap-Results {
   margin-bottom: 20px;
-  width: 100%;
 }
 .Recap-Filters {
   display: flex;
@@ -17151,7 +17328,6 @@ button:focus-visible {
   font-size: 30px;
   justify-content: center;
   align-items: center;
-  color: #fff;
 }
 .theme-dark .Recap-Blessing-Team {
   background: #000;
