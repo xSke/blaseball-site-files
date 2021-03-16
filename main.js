@@ -15183,11 +15183,12 @@
         return "BigDeal-Message-Style-".concat(e);
       }
       function Ss(e) {
+        var a = Object(r.useContext)(L.context).user;
         switch (e) {
           case 0:
             return <Xt.Ib />;
           case 1:
-            return <Es />;
+            return <Es style={{ filter: a.lightMode ? "invert(1)" : "none" }} />;
           case 2:
             return <div className="BigDeal-Equity" />;
           case 4:
@@ -15814,52 +15815,57 @@
         return "Ties #".concat(o + 1);
       }
       var Hs = function (e) {
-        var a = Object(s.h)().nickname,
-          t = Object(r.useContext)(N.context),
-          n = Object(r.useContext)(Ir.context),
-          l = Object(s.g)(),
-          i = Object(bi.useToasts)().addToast,
-          m = Object(r.useContext)(L.context),
-          u = m.user,
-          A = m.setUser,
-          f = Object(r.useState)({ lineup: [], rotation: [], bullpen: [], bench: [] }),
-          g = Object(c.a)(f, 2),
-          E = g[0],
-          v = g[1],
-          b = Object(r.useState)(!1),
-          y = Object(c.a)(b, 2),
-          w = (y[0], y[1], Object(r.useState)(!1)),
-          O = Object(c.a)(w, 2),
-          B = O[0],
-          S = O[1],
-          I = n.teams.find(function (e) {
-            return e.id === a;
+        var a,
+          t,
+          n,
+          l,
+          i,
+          m = Object(s.h)().nickname,
+          u = Object(r.useContext)(N.context),
+          A = Object(r.useContext)(Ir.context),
+          f = Object(s.g)(),
+          g = Object(bi.useToasts)().addToast,
+          E = Object(r.useContext)(L.context),
+          v = E.user,
+          b = E.setUser,
+          y = Object(r.useState)({ lineup: [], rotation: [], bullpen: [], bench: [] }),
+          w = Object(c.a)(y, 2),
+          O = w[0],
+          B = w[1],
+          S = Object(r.useState)(!1),
+          I = Object(c.a)(S, 2),
+          k = (I[0], I[1], Object(r.useState)(!1)),
+          C = Object(c.a)(k, 2),
+          M = C[0],
+          x = C[1],
+          D = A.teams.find(function (e) {
+            return e.id === m;
           }),
-          k = Mt(a, n);
+          P = Mt(m, A);
         Object(r.useEffect)(
           function () {
-            C();
+            U();
           },
-          [n]
+          [A]
         );
-        var C = (function () {
+        var U = (function () {
             var e = Object(h.a)(
               p.a.mark(function e() {
-                var a, t, n, r, o, l, i, c, s, m, u, d, A, h, f, g, E, b;
+                var a, t, n, r, o, l, i, c, s, m, u, d, A, h, f, g, E, v;
                 return p.a.wrap(function (e) {
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        if (void 0 !== I) {
+                        if (void 0 !== D) {
                           e.next = 2;
                           break;
                         }
                         return e.abrupt("return");
                       case 2:
-                        for (a = [], t = 0; t < I.lineup.length; t++) a.push(I.lineup[t]);
-                        for (n = 0; n < I.rotation.length; n++) a.push(I.rotation[n]);
-                        for (r = 0; r < I.bench.length; r++) a.push(I.bench[r]);
-                        for (o = 0; o < I.bullpen.length; o++) a.push(I.bullpen[o]);
+                        for (a = [], t = 0; t < D.lineup.length; t++) a.push(D.lineup[t]);
+                        for (n = 0; n < D.rotation.length; n++) a.push(D.rotation[n]);
+                        for (r = 0; r < D.bench.length; r++) a.push(D.bench[r]);
+                        for (o = 0; o < D.bullpen.length; o++) a.push(D.bullpen[o]);
                         return (e.next = 9), ti(a);
                       case 9:
                         for (
@@ -15868,12 +15874,12 @@
                             c = function (e) {
                               i.push(
                                 l.find(function (a) {
-                                  return I.lineup[e] === a.id;
+                                  return D.lineup[e] === a.id;
                                 })
                               );
                             },
                             s = 0;
-                          s < I.lineup.length;
+                          s < D.lineup.length;
                           s++
                         )
                           c(s);
@@ -15882,12 +15888,12 @@
                             u = function (e) {
                               m.push(
                                 l.find(function (a) {
-                                  return I.rotation[e] === a.id;
+                                  return D.rotation[e] === a.id;
                                 })
                               );
                             },
                             d = 0;
-                          d < I.rotation.length;
+                          d < D.rotation.length;
                           d++
                         )
                           u(d);
@@ -15896,12 +15902,12 @@
                             h = function (e) {
                               A.push(
                                 l.find(function (a) {
-                                  return I.bench[e] === a.id;
+                                  return D.bench[e] === a.id;
                                 })
                               );
                             },
                             f = 0;
-                          f < I.bench.length;
+                          f < D.bench.length;
                           f++
                         )
                           h(f);
@@ -15910,16 +15916,16 @@
                             E = function (e) {
                               g.push(
                                 l.find(function (a) {
-                                  return I.bullpen[e] === a.id;
+                                  return D.bullpen[e] === a.id;
                                 })
                               );
                             },
-                            b = 0;
-                          b < I.bullpen.length;
-                          b++
+                            v = 0;
+                          v < D.bullpen.length;
+                          v++
                         )
-                          E(b);
-                        v({ lineup: i, rotation: m, bench: A, bullpen: g });
+                          E(v);
+                        B({ lineup: i, rotation: m, bench: A, bullpen: g });
                       case 23:
                       case "end":
                         return e.stop();
@@ -15931,27 +15937,27 @@
               return e.apply(this, arguments);
             };
           })(),
-          M = (function () {
+          F = (function () {
             var e = Object(h.a)(
               p.a.mark(function e(a) {
                 return p.a.wrap(function (e) {
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        if ((a.preventDefault(), !I || I.id === u.favoriteTeam)) {
+                        if ((a.preventDefault(), !D || D.id === v.favoriteTeam)) {
                           e.next = 10;
                           break;
                         }
-                        if (!(void 0 === u.snacks.Flutes || u.snacks.Flutes < 0) && u.snackOrder.includes("Flutes")) {
+                        if (!(void 0 === v.snacks.Flutes || v.snacks.Flutes < 0) && v.snackOrder.includes("Flutes")) {
                           e.next = 6;
                           break;
                         }
-                        i("No Flutes in your inventory", { appearance: "error" }), (e.next = 8);
+                        g("No Flutes in your inventory", { appearance: "error" }), (e.next = 8);
                         break;
                       case 6:
                         return (
                           (e.next = 8),
-                          Yl("/api/updateFavoriteTeam", JSON.stringify({ newTeamId: I.id, teamName: I.fullName })).then(
+                          Yl("/api/updateFavoriteTeam", JSON.stringify({ newTeamId: D.id, teamName: D.fullName })).then(
                             (function () {
                               var e = Object(h.a)(
                                 p.a.mark(function e(a) {
@@ -15961,8 +15967,8 @@
                                       switch ((e.prev = e.next)) {
                                         case 0:
                                           a.ok && a.status && 200 === a.status
-                                            ? ((t = JSON.parse(JSON.stringify(u.snacks))),
-                                              (n = JSON.parse(JSON.stringify(u.snackOrder))),
+                                            ? ((t = JSON.parse(JSON.stringify(v.snacks))),
+                                              (n = JSON.parse(JSON.stringify(v.snackOrder))),
                                               1 === t.Flutes
                                                 ? (delete t.Flutes,
                                                   n.includes("Flutes") &&
@@ -15971,15 +15977,15 @@
                                                     })),
                                                     n.splice(r, 1, "E")))
                                                 : (t.Flutes -= 1),
-                                              (u.favoriteTeam = I.id),
-                                              (u.snacks = t),
-                                              (u.snackOrder = n),
-                                              A(Object(T.a)({}, u)),
-                                              i("You abandon your old team for the ".concat(I.fullName, "."), {
+                                              (v.favoriteTeam = D.id),
+                                              (v.snacks = t),
+                                              (v.snackOrder = n),
+                                              b(Object(T.a)({}, v)),
+                                              g("You abandon your old team for the ".concat(D.fullName, "."), {
                                                 appearance: "success",
                                               }))
                                             : a.json().then(function (e) {
-                                                i(e.message || "Error", { appearance: "error" });
+                                                g(e.error || "Error", { appearance: "error" });
                                               });
                                         case 1:
                                         case "end":
@@ -15998,7 +16004,7 @@
                         e.next = 11;
                         break;
                       case 10:
-                        i("Invalid request!", { appearance: "error" });
+                        g("Invalid request!", { appearance: "error" });
                       case 11:
                       case "end":
                         return e.stop();
@@ -16010,28 +16016,29 @@
               return e.apply(this, arguments);
             };
           })();
-        if (void 0 === t) return null;
-        if (void 0 === n || void 0 === n.teams) return null;
-        if (void 0 === I) return null;
-        var x,
-          D = n.stadiums.find(function (e) {
-            return e.id === I.stadium;
+        if (void 0 === u) return null;
+        if (void 0 === A || void 0 === A.teams) return null;
+        if (void 0 === D) return null;
+        var j,
+          Y = A.stadiums.find(function (e) {
+            return e.id === D.stadium;
           });
-        if (void 0 === E) return <Rl />;
-        var P = E.lineup.map(function (e) {
+        if (void 0 === O) return <Rl />;
+        var V,
+          W = O.lineup.map(function (e) {
             var a,
-              n = [];
+              t = [];
             return (
-              u.idol === e.id && n.push("Your Idol"),
-              e.permAttr.includes("SHELLED") && n.push("Shelled"),
-              e.permAttr.includes("ELSEWHERE") && n.push("Elsewhere"),
-              e.permAttr.includes("TRIPLE_THREAT") && n.push("A Triple Threat"),
-              e.gameAttr.includes("WIRED") && n.push("Wired"),
-              e.gameAttr.includes("TIRED") && n.push("Tired"),
-              e.gameAttr.includes("COFFEE_RALLY") && n.push("Has a Free Refill"),
-              e.permAttr.includes("SCATTERED") && n.push("Scattered"),
+              v.idol === e.id && t.push("Your Idol"),
+              e.permAttr.includes("SHELLED") && t.push("Shelled"),
+              e.permAttr.includes("ELSEWHERE") && t.push("Elsewhere"),
+              e.permAttr.includes("TRIPLE_THREAT") && t.push("A Triple Threat"),
+              e.gameAttr.includes("WIRED") && t.push("Wired"),
+              e.gameAttr.includes("TIRED") && t.push("Tired"),
+              e.gameAttr.includes("COFFEE_RALLY") && t.push("Has a Free Refill"),
+              e.permAttr.includes("SCATTERED") && t.push("Scattered"),
               (
-                <d background={l} path={"/player/".concat(e.id)} className="Team-Player-Line">
+                <d background={f} path={"/player/".concat(e.id)} className="Team-Player-Line">
                   <div
                     className={"Team-Player-Header " + (e.permAttr.includes("ELSEWHERE") ? " Team-Player-Away" : "")}
                   >
@@ -16045,7 +16052,7 @@
                         elsewhere...
                       </div>
                     ) : null}
-                    {u.idol === e.id ? <Mi aria-hidden="true" style={{ height: "25px", width: "25px" }} /> : ""}
+                    {v.idol === e.id ? <Mi aria-hidden="true" style={{ height: "25px", width: "25px" }} /> : ""}
                     {e.gameAttr.includes("WIRED") ? <Xt.C className="ModalItem-Icons-Wired" aria-hidden="true" /> : ""}
                     {e.gameAttr.includes("TIRED") ? <Xt.C className="ModalItem-Icons-Tired" aria-hidden="true" /> : ""}
                     {e.permAttr.includes("COFFEE_RALLY") ? (
@@ -16066,29 +16073,29 @@
                   </div>
                   <div className="sr-only" aria-label=" with " />
                   <div className="Team-Player-Vibe">
-                    {Ws(e, void 0 !== (null === (a = t.sim) || void 0 === a ? void 0 : a.day) ? t.sim.day : -1)}
+                    {Ws(e, void 0 !== (null === (a = u.sim) || void 0 === a ? void 0 : a.day) ? u.sim.day : -1)}
                   </div>
                   <div className="sr-only" aria-label=" and " />
                   <div className="Team-Player-Ratings">{Ft(e)}</div>
-                  <div className="sr-only" aria-label={n.length > 0 ? "Current Status: " + n.join(", ") + "." : ""} />
+                  <div className="sr-only" aria-label={t.length > 0 ? "Current Status: " + t.join(", ") + "." : ""} />
                 </d>
               )
             );
           }),
-          R = E.rotation.map(function (e) {
+          Q = O.rotation.map(function (e) {
             var a,
-              n = [];
+              t = [];
             return (
-              u.idol === e.id && n.push("Your Idol"),
-              e.permAttr.includes("SHELLED") && n.push("Shelled"),
-              e.permAttr.includes("ELSEWHERE") && n.push("Elsewhere"),
-              e.permAttr.includes("TRIPLE_THREAT") && n.push("A Triple Threat"),
-              e.gameAttr.includes("WIRED") && n.push("Wired"),
-              e.gameAttr.includes("TIRED") && n.push("Tired"),
-              e.gameAttr.includes("COFFEE_RALLY") && n.push("Has a Free Refill"),
-              e.permAttr.includes("SCATTERED") && n.push("Scattered"),
+              v.idol === e.id && t.push("Your Idol"),
+              e.permAttr.includes("SHELLED") && t.push("Shelled"),
+              e.permAttr.includes("ELSEWHERE") && t.push("Elsewhere"),
+              e.permAttr.includes("TRIPLE_THREAT") && t.push("A Triple Threat"),
+              e.gameAttr.includes("WIRED") && t.push("Wired"),
+              e.gameAttr.includes("TIRED") && t.push("Tired"),
+              e.gameAttr.includes("COFFEE_RALLY") && t.push("Has a Free Refill"),
+              e.permAttr.includes("SCATTERED") && t.push("Scattered"),
               (
-                <d background={l} path={"/player/".concat(e.id)} className="Team-Player-Line">
+                <d background={f} path={"/player/".concat(e.id)} className="Team-Player-Line">
                   <div
                     className={"Team-Player-Header " + (e.permAttr.includes("ELSEWHERE") ? " Team-Player-Away" : "")}
                   >
@@ -16102,7 +16109,7 @@
                         elsewhere...
                       </div>
                     ) : null}
-                    {u.idol === e.id ? <Mi aria-hidden="true" style={{ height: "25px", width: "25px" }} /> : ""}
+                    {v.idol === e.id ? <Mi aria-hidden="true" style={{ height: "25px", width: "25px" }} /> : ""}
                     {e.gameAttr.includes("WIRED") ? <Xt.C className="ModalItem-Icons-Wired" aria-hidden="true" /> : ""}
                     {e.gameAttr.includes("TIRED") ? <Xt.C className="ModalItem-Icons-Tired" aria-hidden="true" /> : ""}
                     {e.permAttr.includes("COFFEE_RALLY") ? (
@@ -16119,19 +16126,19 @@
                   </div>
                   <div className="sr-only" aria-label=" with " />
                   <div className="Team-Player-Vibe">
-                    {Ws(e, void 0 !== (null === (a = t.sim) || void 0 === a ? void 0 : a.day) ? t.sim.day : -1)}
+                    {Ws(e, void 0 !== (null === (a = u.sim) || void 0 === a ? void 0 : a.day) ? u.sim.day : -1)}
                   </div>
                   <div className="sr-only" aria-label=" and " />
                   <div className="Team-Player-Ratings">{Vt(e)}</div>
-                  <div className="sr-only" aria-label={n.length > 0 ? "Current Status: " + n.join(", ") + "." : ""} />
+                  <div className="sr-only" aria-label={t.length > 0 ? "Current Status: " + t.join(", ") + "." : ""} />
                 </d>
               )
             );
           }),
-          U = E.bench.map(function (e) {
+          H = O.bench.map(function (e) {
             var a = [];
             return (
-              u.idol === e.id && a.push("Your Idol"),
+              v.idol === e.id && a.push("Your Idol"),
               e.permAttr.includes("SHELLED") && a.push("Shelled"),
               e.permAttr.includes("ELSEWHERE") && a.push("Elsewhere"),
               e.permAttr.includes("TRIPLE_THREAT") && a.push("A Triple Threat"),
@@ -16139,7 +16146,7 @@
               e.gameAttr.includes("TIRED") && a.push("Tired"),
               e.gameAttr.includes("COFFEE_RALLY") && a.push("Has a Free Refill"),
               (
-                <d background={l} path={"/player/".concat(e.id)} className="Team-Player-Line Team-Player-Line-Shadows">
+                <d background={f} path={"/player/".concat(e.id)} className="Team-Player-Line Team-Player-Line-Shadows">
                   <div className="Team-Player-Ratings" aria-hidden="true">
                     {Vt(e)}
                   </div>
@@ -16156,7 +16163,7 @@
                         elsewhere...
                       </div>
                     ) : null}
-                    {u.idol === e.id ? <Mi aria-hidden="true" style={{ height: "25px", width: "25px" }} /> : ""}
+                    {v.idol === e.id ? <Mi aria-hidden="true" style={{ height: "25px", width: "25px" }} /> : ""}
                     {e.gameAttr.includes("WIRED") ? <Xt.C className="ModalItem-Icons-Wired" aria-hidden="true" /> : ""}
                     {e.gameAttr.includes("TIRED") ? <Xt.C className="ModalItem-Icons-Tired" aria-hidden="true" /> : ""}
                     {e.permAttr.includes("COFFEE_RALLY") ? (
@@ -16177,10 +16184,10 @@
               )
             );
           }),
-          F = E.bullpen.map(function (e) {
+          z = O.bullpen.map(function (e) {
             var a = [];
             return (
-              u.idol === e.id && a.push("Your Idol"),
+              v.idol === e.id && a.push("Your Idol"),
               e.permAttr.includes("SHELLED") && a.push("Shelled"),
               e.permAttr.includes("ELSEWHERE") && a.push("Elsewhere"),
               e.permAttr.includes("TRIPLE_THREAT") && a.push("A Triple Threat"),
@@ -16188,7 +16195,7 @@
               e.gameAttr.includes("TIRED") && a.push("Tired"),
               e.gameAttr.includes("COFFEE_RALLY") && a.push("Has a Free Refill"),
               (
-                <d background={l} path={"/player/".concat(e.id)} className="Team-Player-Line Team-Player-Line-Shadows">
+                <d background={f} path={"/player/".concat(e.id)} className="Team-Player-Line Team-Player-Line-Shadows">
                   <div className="Team-Player-Ratings" aria-hidden="true">
                     {Ft(e)}
                   </div>
@@ -16205,7 +16212,7 @@
                         elsewhere...
                       </div>
                     ) : null}
-                    {u.idol === e.id ? <Mi aria-hidden="true" style={{ height: "25px", width: "25px" }} /> : ""}
+                    {v.idol === e.id ? <Mi aria-hidden="true" style={{ height: "25px", width: "25px" }} /> : ""}
                     {e.gameAttr.includes("WIRED") ? <Xt.C className="ModalItem-Icons-Wired" aria-hidden="true" /> : ""}
                     {e.gameAttr.includes("TIRED") ? <Xt.C className="ModalItem-Icons-Tired" aria-hidden="true" /> : ""}
                     {e.permAttr.includes("COFFEE_RALLY") ? (
@@ -16226,52 +16233,65 @@
               )
             );
           }),
-          j =
-            I.permAttr.length > 0 || I.seasAttr.length > 0 || I.weekAttr.length > 0 || I.gameAttr.length > 0 ? (
+          K =
+            D.permAttr.length > 0 || D.seasAttr.length > 0 || D.weekAttr.length > 0 || D.gameAttr.length > 0 ? (
               <o.a.Fragment>
                 <div className="ModalItem-Attributes">
                   <div className="AttributeBar">
-                    {I.permAttr.map(function (e, a) {
+                    {D.permAttr.map(function (e, a) {
                       return <wr id={e} type={hr.Permanent} key={a} />;
                     })}
-                    {I.seasAttr.map(function (e, a) {
+                    {D.seasAttr.map(function (e, a) {
                       return <wr id={e} type={hr.Season} key={a} />;
                     })}
-                    {I.weekAttr.map(function (e, a) {
+                    {D.weekAttr.map(function (e, a) {
                       return <wr id={e} type={hr.Weekly} key={a} />;
                     })}
-                    {I.gameAttr.map(function (e, a) {
+                    {D.gameAttr.map(function (e, a) {
                       return <wr id={e} type={hr.Game} key={a} />;
                     })}
                   </div>
                 </div>
               </o.a.Fragment>
             ) : null,
-          Y = ht(I.id, t.standings),
-          V = (k && (gt(Y), Qs(a, t, n)), k ? <div className="Team-Card"> {Ut(I.card).join(" ")} </div> : null),
-          W = (
-            <xc.a className="ModalItem-Button-Form ModalItem-Button-Flute-Wrapper" onSubmit={M}>
-              <zt.a
-                className="ModalItem-Button-Flute"
-                type="submit"
-                variant="success"
-                style={{ background: I.mainColor, color: Tt(I.mainColor) }}
-              >
-                <je style={{ width: "20px", height: "20px" }} /> Choose Team
-              </zt.a>
-            </xc.a>
-          );
-        u.favoriteTeam === I.id
-          ? (W = (
+          q = ht(D.id, u.standings),
+          Z = (P && (gt(q), Qs(m, u, A)), P ? <div className="Team-Card"> {Ut(D.card).join(" ")} </div> : null),
+          J = !1;
+        ((null === (a = u.sim) || void 0 === a ? void 0 : a.phase) !== R.Earlseason &&
+          (null === (t = u.sim) || void 0 === t ? void 0 : t.phase) !== R.Midseason &&
+          (null === (n = u.sim) || void 0 === n ? void 0 : n.phase) !== R.Lateseason &&
+          (null === (l = u.sim) || void 0 === l ? void 0 : l.phase) !== R.EarlyPostseason &&
+          (null === (i = u.sim) || void 0 === i ? void 0 : i.phase) !== R.Postseason) ||
+          null === u ||
+          void 0 === u ||
+          null === (V = u.schedule) ||
+          void 0 === V ||
+          V.forEach(function (e) {
+            e.gameComplete || (J = !0);
+          });
+        var X = (
+          <xc.a className="ModalItem-Button-Form ModalItem-Button-Flute-Wrapper" onSubmit={F}>
+            <zt.a
+              className="ModalItem-Button-Flute"
+              type="submit"
+              variant="success"
+              style={{ background: D.mainColor, color: Tt(D.mainColor) }}
+            >
+              <je style={{ width: "20px", height: "20px" }} /> Choose Team
+            </zt.a>
+          </xc.a>
+        );
+        v.favoriteTeam === D.id
+          ? (X = (
               <div
                 className="ModalItem-Button-Flute-Current"
-                style={{ background: I.mainColor, color: Tt(I.mainColor) }}
+                style={{ background: D.mainColor, color: Tt(D.mainColor) }}
               >
                 Favorite Team
               </div>
             ))
-          : (void 0 === u.snacks.Flutes || u.snacks.Flutes < 0) &&
-            (W = (
+          : (void 0 === v.snacks.Flutes || v.snacks.Flutes < 0) &&
+            (X = (
               <qt.a
                 placement="top"
                 overlay={
@@ -16285,53 +16305,76 @@
                     disabled={!0}
                     className="ModalItem-Button-Idol"
                     variant="dark"
-                    style={{ background: Nt(I.mainColor, 0.8), color: Tt(I.mainColor), pointerEvents: "none" }}
+                    style={{ background: Nt(D.mainColor, 0.8), color: Tt(D.mainColor), pointerEvents: "none" }}
+                  >
+                    <je style={{ width: "20px", height: "20px" }} /> Choose Team
+                  </zt.a>
+                </span>
+              </qt.a>
+            )),
+          J &&
+            v.favoriteTeam !== D.id &&
+            (X = (
+              <qt.a
+                placement="top"
+                overlay={
+                  <Zt.a id="tooltip-disabled" className="ModalItem-Tooltip">
+                    You can't change favorite teams while games are active.
+                  </Zt.a>
+                }
+              >
+                <span className="ModalItem-Button-Idol-Span">
+                  <zt.a
+                    disabled={!0}
+                    className="ModalItem-Button-Idol"
+                    variant="dark"
+                    style={{ background: Nt(D.mainColor, 0.8), color: Tt(D.mainColor), pointerEvents: "none" }}
                   >
                     <je style={{ width: "20px", height: "20px" }} /> Choose Team
                   </zt.a>
                 </span>
               </qt.a>
             ));
-        var Q = null;
-        if (null !== u.favoriteTeam && I.id === u.favoriteTeam) {
-          var H = n.teams.find(function (e) {
-            return e.id === u.favoriteTeam;
+        var _ = null;
+        if (null !== v.favoriteTeam && D.id === v.favoriteTeam) {
+          var $ = A.teams.find(function (e) {
+            return e.id === v.favoriteTeam;
           });
-          if (H) {
-            var z = Lt(H),
-              K = encodeURIComponent("".concat(H.slogan || "", " ").concat(z, " #blaseball")),
-              q = "http://twitter.com/intent/tweet?text=".concat(K, "&url=https%3A%2F%2Fblaseball.com"),
-              Z = { "--team-color": H.secondaryColor };
-            Q = (
-              <a target="_blank" href={q} className="Team-Tweet" style={Z} aria-label="Tweet your favorite team.">
+          if ($) {
+            var ee = Lt($),
+              ae = encodeURIComponent("".concat($.slogan || "", " ").concat(ee, " #blaseball")),
+              te = "http://twitter.com/intent/tweet?text=".concat(ae, "&url=https%3A%2F%2Fblaseball.com"),
+              ne = { "--team-color": $.secondaryColor };
+            _ = (
+              <a target="_blank" href={te} className="Team-Tweet" style={ne} aria-label="Tweet your favorite team.">
                 <gc.g className="Team-Tweet-Icon" />
               </a>
             );
           }
         }
         return (
-          (x = (
+          (j = (
             <o.a.Fragment>
               <div className="ModalItem-Info">
-                {k ? null : <div className="Team-Header-NotInLeague">WARNING: ACCESS RESTRICTED</div>}
+                {P ? null : <div className="Team-Header-NotInLeague">WARNING: ACCESS RESTRICTED</div>}
                 <div className="Team-Header">
                   <div className="Team-LogoLine-Wrapper">
                     <div className="Team-LogoLine">
-                      <div style={{ backgroundColor: I.mainColor }} className="Team-Logo">
-                        {Lt(I)}
+                      <div style={{ backgroundColor: D.mainColor }} className="Team-Logo">
+                        {Lt(D)}
                       </div>
                     </div>
                     <div className="ModalItem-Name-Wrapper">
                       <h2 className="ModalItem-Name">
-                        {I.fullName} {Q}
+                        {D.fullName} {_}
                       </h2>
-                      <div className="Team-Slogan">"{I.slogan}"</div>
+                      <div className="Team-Slogan">"{D.slogan}"</div>
                     </div>
                   </div>
                   <div className="ModalItem-Name-Wrapper">
                     <div className="Team-Card-Wrapper">
-                      {V}
-                      {W}
+                      {Z}
+                      {X}
                     </div>
                   </div>
                 </div>
@@ -16344,9 +16387,9 @@
                   <Dc.a.Item>
                     <Dc.a.Link eventKey="Info">Info</Dc.a.Link>
                   </Dc.a.Item>
-                  {D ? (
+                  {Y ? (
                     <Dc.a.Item>
-                      {k ? (
+                      {P ? (
                         <Dc.a.Link eventKey="Stadium">Ballpark</Dc.a.Link>
                       ) : (
                         <Dc.a.Link className="ModalTabs-StadiumTab" eventKey="Stadium">
@@ -16361,32 +16404,32 @@
                 </Dc.a>
                 <Lc.a.Content>
                   <Lc.a.Pane eventKey="Roster">
-                    {j}
-                    <div className={"ModalItem-Content" + (j ? " ModalItem-Content-WithAttributes" : "")}>
+                    {K}
+                    <div className={"ModalItem-Content" + (K ? " ModalItem-Content-WithAttributes" : "")}>
                       <div className="Team-Section">
                         <div className="ModalItem-Subheader">Lineup</div>
-                        <ul role="list">{P}</ul>
+                        <ul role="list">{W}</ul>
                       </div>
                       <div className="Team-Section">
                         <div className="ModalItem-Subheader">Rotation</div>
-                        <ul>{R}</ul>
+                        <ul>{Q}</ul>
                       </div>
-                      {void 0 !== u.snacks.Forbidden_Knowledge_Access && I.id === u.favoriteTeam ? (
+                      {void 0 !== v.snacks.Forbidden_Knowledge_Access && D.id === v.favoriteTeam ? (
                         <div className="Team-Section-Shadows">
                           <Xt.sc
                             onClick={function (e) {
-                              S(!0);
+                              x(!0);
                             }}
-                            className={"Team-Section-Shadows-Icon" + (B ? " is-hidden" : "")}
+                            className={"Team-Section-Shadows-Icon" + (M ? " is-hidden" : "")}
                           />
-                          <div className={"Team-Section-Shadows-Content" + (B ? "" : " is-hidden")}>
+                          <div className={"Team-Section-Shadows-Content" + (M ? "" : " is-hidden")}>
                             <div className="Team-Section Team-Section-Shadows-Players">
                               <div className="ModalItem-Subheader">Shadow Lineup</div>
-                              <ul>{F}</ul>
+                              <ul>{z}</ul>
                             </div>
                             <div className="Team-Section Team-Section-Shadows-Players">
                               <div className="ModalItem-Subheader">Shadow Rotation</div>
-                              <ul>{U}</ul>
+                              <ul>{H}</ul>
                             </div>
                           </div>
                         </div>
@@ -16394,17 +16437,17 @@
                     </div>
                   </Lc.a.Pane>
                   <Lc.a.Pane eventKey="Info">
-                    {j}
-                    <div className={"ModalItem-Content" + (j ? " ModalItem-Content-WithAttributes" : "")}>
+                    {K}
+                    <div className={"ModalItem-Content" + (K ? " ModalItem-Content-WithAttributes" : "")}>
                       <div className="Team-Section">
                         <ul>
                           <div className="Player-Info-Line">
                             <div className="Player-Info-Line-Header">Wins</div>
-                            <div className="Player-Info-Line-Body">{Y.wins}</div>
+                            <div className="Player-Info-Line-Body">{q.wins}</div>
                           </div>
                           <div className="Player-Info-Line">
                             <div className="Player-Info-Line-Header">Record</div>
-                            <div className="Player-Info-Line-Body">{gt(Y)}</div>
+                            <div className="Player-Info-Line-Body">{gt(q)}</div>
                           </div>
                           <div className="Player-Info-Line">
                             <div className="Player-Info-Line-Header">Runs</div>
@@ -16418,10 +16461,10 @@
                                       break;
                                     }
                                 return t;
-                              })(I.id, null === t || void 0 === t ? void 0 : t.standings)}
+                              })(D.id, null === u || void 0 === u ? void 0 : u.standings)}
                             </div>
                           </div>
-                          {kt(t.sim, "SIM_SHOW_LEVELS") ? (
+                          {kt(u.sim, "SIM_SHOW_LEVELS") ? (
                             <div className="Player-Info-Line">
                               <qt.a
                                 placement="top"
@@ -16475,22 +16518,22 @@
                                       ? " Team-Info-Score-High"
                                       : " Team-Info-Score-Medium";
                                   return <span className={t}>{a}</span>;
-                                })(I.level)}
+                                })(D.level)}
                               </div>
                             </div>
                           ) : null}
                           <div className="Player-Info-Line">
                             <div className="Player-Info-Line-Header">eDensity</div>
-                            <div className="Player-Info-Line-Body">{I.eDensity.toFixed(5)} bl/m³</div>
+                            <div className="Player-Info-Line-Body">{D.eDensity.toFixed(5)} bl/m³</div>
                           </div>
                           <div className="Player-Info-Line">
                             <div className="Player-Info-Line-Header">Tiebreaker Place</div>
-                            <div className="Player-Info-Line-Body">{Qs(a, t, n)}</div>
+                            <div className="Player-Info-Line-Body">{Qs(m, u, A)}</div>
                           </div>
-                          {k ? (
+                          {P ? (
                             <div className="Player-Info-Line">
                               <div className="Player-Info-Line-Header">Tarot Card</div>
-                              <div className="Player-Info-Line-Body">{Ut(I.card).join(" ")}</div>
+                              <div className="Player-Info-Line-Body">{Ut(D.card).join(" ")}</div>
                             </div>
                           ) : null}
                           <div className="Player-Info-Line">
@@ -16500,38 +16543,38 @@
                                 for (var a = [], t = e - 1; t >= 0; t--)
                                   a.push(<div className="Team-Info-Championships">●</div>);
                                 return a;
-                              })(I.championships)}
+                              })(D.championships)}
                             </div>
                           </div>
-                          {kt(t.sim, "SIM_EVOLUTION_CONCEPTUALIZED") ? (
+                          {kt(u.sim, "SIM_EVOLUTION_CONCEPTUALIZED") ? (
                             <div className="Player-Info-Line">
                               <div className="Player-Info-Line-Header">Times Evolved</div>
-                              <div className="Player-Info-Line-Body">{I.evolution}</div>
+                              <div className="Player-Info-Line-Body">{D.evolution}</div>
                             </div>
                           ) : null}
                           <div className="Player-Info-Line">
                             <div className="Player-Info-Line-Header">Net Shame</div>
-                            <div className="Player-Info-Line-Body">{I.totalShamings - I.totalShames}</div>
+                            <div className="Player-Info-Line-Body">{D.totalShamings - D.totalShames}</div>
                           </div>
                           <div className="Player-Info-Line">
                             <div className="Player-Info-Line-Header">Number of Players</div>
                             <div className="Player-Info-Line-Body">
-                              {I.rotation.length + I.lineup.length + I.bench.length + I.bullpen.length}
+                              {D.rotation.length + D.lineup.length + D.bench.length + D.bullpen.length}
                             </div>
                           </div>
                         </ul>
                       </div>
                     </div>
                   </Lc.a.Pane>
-                  {D ? (
+                  {Y ? (
                     <Lc.a.Pane eventKey="Stadium">
-                      <Hc team={I} />
+                      <Hc team={D} />
                     </Lc.a.Pane>
                   ) : null}
                   <Lc.a.Pane eventKey="Events">
                     <div className="ModalItem-Content">
                       <Ds
-                        entity={I.id}
+                        entity={D.id}
                         source={Is.Team}
                         defaultCategory={G.Outcomes}
                         defaultSort={ks.NewestFirst}
@@ -16543,7 +16586,7 @@
               </Lc.a.Container>
             </o.a.Fragment>
           )),
-          (<Mc {...Object.assign({}, e, { className: "ModalItem" })}>{x}</Mc>)
+          (<Mc {...Object.assign({}, e, { className: "ModalItem" })}>{j}</Mc>)
         );
       };
       t(36), t(37);
@@ -17219,19 +17262,19 @@
           function () {
             j(parseInt(e)), Z(F), P(Js(m, k));
           },
-          [e]
+          [e, O]
         ),
           Object(r.useEffect)(
             function () {
               Z(F);
             },
-            [F, m.coins]
+            [F, m.coins, O]
           ),
           Object(r.useEffect)(
             function () {
               Z(F), P(Js(m, k));
             },
-            [k]
+            [k, O]
           ),
           Object(r.useEffect)(
             function () {
@@ -19442,10 +19485,12 @@
       var im,
         cm = function (e) {
           var a = e.event,
-            t = a.metadata.coinsAfter < a.metadata.coinsBefore,
-            n = void 0 !== a.metadata.coinsBefore ? Math.abs(a.metadata.coinsAfter - a.metadata.coinsBefore) : 0,
-            l = void 0 !== a.metadata.snackBefore ? Math.abs(a.metadata.snackAfter - a.metadata.snackBefore) : 0,
-            i = (function (e, a, t, n) {
+            t = void 0 !== a.metadata.coinsBefore ? a.metadata.coinsAfter - a.metadata.coinsBefore : 0,
+            n = void 0 !== a.metadata.snackBefore ? a.metadata.snackAfter - a.metadata.snackBefore : 0,
+            l = t <= 0 && n >= 0,
+            i = Math.abs(t),
+            c = Math.abs(n),
+            s = (function (e, a, t, n) {
               var r = "";
               if ([0, 1].includes(e.type))
                 r = "You "
@@ -19472,11 +19517,11 @@
                     : (r += ".");
               }
               return r;
-            })(a, t, n, l);
+            })(a, l, i, c);
           return (
             <o.a.Fragment>
               <div className="Events-List-Desc Events-List-Background-Standard">
-                <div className="Events-List-Row">{i}</div>
+                <div className="Events-List-Row">{s}</div>
                 {(function (e, a, t, n) {
                   var l,
                     i,
@@ -19575,7 +19620,7 @@
                       )}
                     </o.a.Fragment>
                   );
-                })(a, t, n, l)}
+                })(a, l, i, c)}
               </div>
             </o.a.Fragment>
           );
@@ -24269,7 +24314,7 @@
                 if (m)
                   for (var e = 0; e < m.length; e++) {
                     var a = m[e];
-                    u(a.message, { appearance: "info", autoDismiss: !1 });
+                    u(a.message, { appearance: "info", autoDismiss: !0 });
                   }
               },
               [m]
