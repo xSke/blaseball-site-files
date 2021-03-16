@@ -11653,7 +11653,7 @@
                       return (
                         (t = u.length > 1 && void 0 !== u[1] ? u[1] : 0),
                         (n = u.length > 2 && void 0 !== u[2] ? u[2] : -1),
-                        (r = u.length > 3 && void 0 !== u[3] ? u[3] : -1),
+                        (r = u.length > 3 && void 0 !== u[3] ? u[3] : 0),
                         (e.prev = 3),
                         (o = null !== r ? "&start=".concat(r) : ""),
                         (l = "&sort=".concat(t)),
@@ -19746,45 +19746,45 @@
           function x() {
             return (x = Object(h.a)(
               p.a.mark(function e() {
-                var a, t, n, r, o, l, i;
+                var a, t, n, r, o, l;
                 return p.a.wrap(function (e) {
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        if (void 0 !== (a = O.events && O.events.length > 0 ? O.events[O.events.length - 1] : void 0)) {
+                        if (void 0 !== (O.events && O.events.length > 0 ? O.events[O.events.length - 1] : void 0)) {
                           e.next = 6;
                           break;
                         }
                         return (
-                          (t = Object(T.a)(Object(T.a)({}, O), {}, { noMoreToLoad: !0 })),
-                          m.current.Set(A, v, t),
-                          B(t),
+                          (a = Object(T.a)(Object(T.a)({}, O), {}, { noMoreToLoad: !0 })),
+                          m.current.Set(A, v, a),
+                          B(a),
                           e.abrupt("return")
                         );
                       case 6:
                         return (
-                          (n = Object(T.a)(Object(T.a)({}, O), {}, { loading: !0 })),
-                          m.current.Set(A, v, n),
-                          B(n),
+                          (t = Object(T.a)(Object(T.a)({}, O), {}, { loading: !0 })),
+                          m.current.Set(A, v, t),
+                          B(t),
                           (e.next = 11),
-                          li(30, v, A, a.id)
+                          li(30, v, A, O.events.length)
                         );
                       case 11:
-                        if (void 0 !== (r = e.sent) && 0 !== r.length) {
+                        if (void 0 !== (n = e.sent) && 0 !== n.length) {
                           e.next = 17;
                           break;
                         }
                         return (
-                          (o = Object(T.a)(Object(T.a)({}, O), {}, { noMoreToLoad: !0 })),
-                          m.current.Set(A, v, o),
-                          B(o),
+                          (r = Object(T.a)(Object(T.a)({}, O), {}, { noMoreToLoad: !0 })),
+                          m.current.Set(A, v, r),
+                          B(r),
                           e.abrupt("return")
                         );
                       case 17:
-                        (l = O.events ? [].concat(Object(q.a)(O.events), Object(q.a)(r)) : r),
-                          ((i = Object(T.a)(Object(T.a)({}, O), {}, { events: l })).noMoreToLoad = r.length < 30),
-                          B(i),
-                          m.current.Set(A, v, i);
+                        (o = O.events ? [].concat(Object(q.a)(O.events), Object(q.a)(n)) : n),
+                          ((l = Object(T.a)(Object(T.a)({}, O), {}, { events: o })).noMoreToLoad = n.length < 30),
+                          B(l),
+                          m.current.Set(A, v, l);
                       case 22:
                       case "end":
                         return e.stop();
