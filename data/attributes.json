@@ -875,7 +875,7 @@
         "id": "STATIC",
         "color": "#ffffff",
         "textColor": "#ffffff",
-        "background": "#000000",
+        "background": "#302a2f",
         "title": "Static",
         "description": "....."
     },
@@ -961,9 +961,9 @@
     },
     {
         "id": "HOMEBODY",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#8dadb5",
+        "textColor": "#8dadb5",
+        "background": "#032b12",
         "title": "Homebody",
         "description": "This player will Overperform when playing in their home Ballpark and Underperform otherwise."
     },
@@ -1043,7 +1043,7 @@
         "id": "EVENT_HORIZON",
         "color": "#ec49ff",
         "textColor": "#ec49ff",
-        "background": "#000000",
+        "background": "#160626",
         "title": "Event Horizon",
         "description": "The Event Horizon will prevent the first Black Hole activation in each game, converting the Overflow to Unruns for your opponent's next game."
     },
@@ -1067,7 +1067,7 @@
         "id": "FIRE_INSURANCE",
         "color": "#ff2e2e",
         "textColor": "#ff2e2e",
-        "background": "#4c2300",
+        "background": "#020324",
         "title": "Heat Magnet",
         "description": "The Heat Magnet will absorb heat from an incineration and pass it on to the Thermal Converter."
     },
@@ -1089,11 +1089,11 @@
     },
     {
         "id": "BIRDHOUSES",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#d4ecff",
+        "textColor": "#d4ecff",
+        "background": "#0a8ef5",
         "title": "Birdhouses",
-        "description": "Birdhouses invite Birds."
+        "description": "Birdhouses invite Birds to come live in your Ballpark."
     },
     {
         "id": "SWEETENER",
@@ -1121,11 +1121,11 @@
     },
     {
         "id": "GRIND_RAIL",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#a8a8a5",
+        "textColor": "#a8a8a5",
+        "background": "#43474a",
         "title": "Grind Rail",
-        "description": ""
+        "description": "The Grind Rail allows a chance to steal directly from first base to third base, as long as they have the skills."
     },
     {
         "id": "CASINO_ZONE",
@@ -1145,9 +1145,9 @@
     },
     {
         "id": "BIG_BUCKET",
-        "color": "#72ff92",
-        "textColor": "#72ff92",
-        "background": "#00670d",
+        "color": "#fffb82",
+        "textColor": "#fffb82",
+        "background": "#083a3b",
         "title": "Big Buckets",
         "description": "If a home run lands in a Big Bucket, it scores an extra Run."
     },
@@ -1193,11 +1193,11 @@
     },
     {
         "id": "SOLAR_PANELS",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#fff896",
+        "textColor": "#fff896",
+        "background": "#b58004",
         "title": "Solar Panels",
-        "description": ""
+        "description": "Solar Panels will prevent the first Sun 2 activation in each game, converting the Overflow to Runs for your Team's next game."
     },
     {
         "id": "TEMP_STOLEN",
@@ -1339,49 +1339,49 @@
         "id": "BLACKHOLE_PAYOUTS",
         "color": "#ffffff",
         "textColor": "#ffffff",
-        "background": "#000000",
+        "background": "#863490",
         "title": "Jam-Packed",
-        "description": ""
+        "description": "When this Team triggers the Black Hole, they'll earn double payouts for all Wet Pretzel holders."
     },
     {
         "id": "SUN2_PAYOUTS",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
-        "title": "Extra-Frosted",
-        "description": ""
+        "color": "#ffe100",
+        "textColor": "#ffe100",
+        "background": "#5c5d45",
+        "title": "Glazed",
+        "description": "When this Team activates Sun 2, they'll earn double payouts for all Doughnut holders."
     },
     {
         "id": "POPCORN_PAYOUTS",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#fff8bd",
+        "textColor": "#fff8bd",
+        "background": "#d4223a",
         "title": "Buttered Up",
-        "description": ""
+        "description": "This Team earns double payouts on Popcorn."
     },
     {
         "id": "STALEPOPCORN_PAYOUTS",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
-        "title": "Buttered Down",
-        "description": ""
+        "color": "#bababa",
+        "textColor": "#bababa",
+        "background": "#7a0000",
+        "title": "Over Salted",
+        "description": "This Team earns double payouts on Stale Popcorn."
     },
     {
         "id": "MAXIMALIST",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#29ffd1",
+        "textColor": "#29ffd1",
+        "background": "#007a87",
         "title": "Maximalist",
-        "description": ""
+        "description": "This Player plays 250% better at Maximum Blaseball."
     },
     {
         "id": "MINIMALIST",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#80bfb2",
+        "textColor": "#80bfb2",
+        "background": "#2f4e52",
         "title": "Minimalist",
-        "description": ""
+        "description": "This Player plays 75% worse at Maximum Blaseball."
     },
     {
         "id": "FREE_WILL",
@@ -1409,10 +1409,10 @@
     },
     {
         "id": "PSYCHOACOUSTICS",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#ff007b",
+        "textColor": "#ff007b",
+        "background": "#ffd1f1",
         "title": "PsychoAcoustics",
-        "description": ""
+        "description": "In Feedback or Reverb, PsychoAcoustics will occasionally Echo one of the Away Team's mods to the Home Team, for game-long use."
     }
 ]
