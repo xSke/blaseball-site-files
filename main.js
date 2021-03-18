@@ -19237,7 +19237,7 @@
                   var t = w ? l.snacks[u] + 1 : l.snacks[u];
                   g > t
                     ? a("Insufficent snacks", { appearance: "error" })
-                    : g < 1
+                    : g < 1 || null === g || void 0 === g || isNaN(g)
                     ? a("Invalid input", { appearance: "error" })
                     : (y(!0),
                       Vl("/api/sellSnack", JSON.stringify({ snackId: u, amount: g }))
