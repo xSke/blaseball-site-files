@@ -10787,6 +10787,10 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #c4c4c4;
   text-align: center;
 }
+.Player-VibeLine {
+  display: flex;
+  align-items: center;
+}
 .Player-VibeLine span {
   display: flex;
   flex-direction: row;
@@ -11440,12 +11444,6 @@ input[type="number"]::-webkit-outer-spin-button {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: stretch;
-}
-.Team-Stadium-Upgrades .Player-Info-Items-Box {
-  margin: 10px;
-  min-width: auto;
-  height: auto;
-  min-height: 90px;
 }
 .Team-Stadium-Options {
   display: grid;
@@ -16617,14 +16615,57 @@ button:focus-visible {
   cursor: not-allowed;
 }
 .Shop {
+  display: flex;
   flex-direction: column;
+  align-items: center;
   margin: auto;
   max-width: 900px;
 }
-.Shop,
-.Shop-Header {
-  display: flex;
-  align-items: center;
+.Shop-Construction {
+  padding: 10px 50px;
+  color: #000;
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+  font-size: 22px;
+  background: #f5d903;
+  margin-top: 10px;
+  background: linear-gradient(
+    45deg,
+    #f5d903 5%,
+    #000 0,
+    #000 8%,
+    #f5d903 0,
+    #f5d903 13%,
+    #000 0,
+    #000 17%,
+    #f5d903 0,
+    #f5d903 80%,
+    #f5d903 0,
+    #000 0,
+    #000 83%,
+    #f5d903 0,
+    #f5d903 88%,
+    #000 0,
+    #000 92%,
+    #f5d903 0,
+    #f5d903 100%,
+    #f5d903 0
+  );
+}
+.Shop-Construction-Description {
+  font-family: "Lora", "Courier New", monospace, serif;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  margin: 20px 0;
+  font-style: italic;
+}
+.theme-dark .Shop-Construction-Description {
+  color: #c4c4c4;
+}
+.theme-light .Shop-Construction-Description {
+  color: #272727;
 }
 .Shop-Header {
   font-family: "Lora", "Courier New", monospace, serif;
@@ -16632,6 +16673,8 @@ button:focus-visible {
   font-size: 32px;
   text-align: center;
   padding-top: 20px;
+  align-items: center;
+  display: flex;
 }
 .Shop-Header svg {
   margin-right: 10px;
@@ -17784,6 +17827,14 @@ button:focus-visible {
   width: 100%;
   grid-gap: 20px;
   gap: 20px;
+}
+#root .Bulletin-Rows-Siesta {
+  grid-template-rows: 1fr 1fr !important;
+}
+#root .Bulletin-Rows-Siesta .Bulletin-Item-Actions {
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
 }
 #root .Bulletin-Serif {
   font-family: "Lora", "Courier New", monospace, serif;

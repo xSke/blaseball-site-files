@@ -1414,5 +1414,13 @@
         "background": "#ffd1f1",
         "title": "PsychoAcoustics",
         "description": "In Feedback or Reverb, PsychoAcoustics will occasionally Echo one of the Away Team's mods to the Home Team, for game-long use."
+    },
+    {
+        "id": "CRIME_SCENE",
+        "color": "#8a8099",
+        "textColor": "#8a8099",
+        "background": "#2a0b40",
+        "title": "Crime Scene",
+        "description": "When a Hard-Boiled Player plays at a Crime Scene, they'll Investigate."
     }
 ]
