@@ -26588,20 +26588,22 @@
                                       e.shakespearianism,
                                       e.ruthlessness,
                                     ],
-                                    l = 0;
-                                  l < e.soul;
-                                  l++
+                                    l = Math.min(e.soul, 300),
+                                    i = 0;
+                                  i < l;
+                                  i++
                                 )
-                                  for (var i = 0; i < 11; i++) {
-                                    var c = 1 / Math.pow(10, l),
-                                      s = r[i % r.length] % c,
-                                      m = Math.floor((s / c) * 10);
-                                    t += n[m];
+                                  for (var c = 0; c < 11; c++) {
+                                    var s = 1 / Math.pow(10, i),
+                                      m = r[c % r.length] % s,
+                                      u = Math.floor((m / s) * 10);
+                                    t += n[u];
                                   }
                                 return (
                                   <div className="Player-Soulscream">
                                     <div className={a ? "Player-Soulscream-Released" : "Player-Soulscream-Body"}>
                                       {t}
+                                      {l < e.soul ? "... (CONT. FOR ".concat(e.soul - l, " SOUL)") : ""}
                                     </div>
                                   </div>
                                 );
