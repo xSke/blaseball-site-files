@@ -13832,7 +13832,7 @@
                       </a>
                       <a
                         className="Header-Social-Follow-Icon"
-                        href="https://www.instagram.com/blaseballcomms/"
+                        href="https://www.instagram.com/blaseball/"
                         target="_blank"
                         aria-label="Instagram"
                       >
