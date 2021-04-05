@@ -12026,6 +12026,23 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 0 8px;
   border-radius: 5px;
 }
+.Team-Info-Score-Undef {
+  border: 2px solid;
+  padding: 0 15px;
+  border-radius: 5px;
+}
+.theme-dark .Team-Info-Score-Undef {
+  color: #fff;
+}
+.theme-light .Team-Info-Score-Undef {
+  color: #000;
+}
+.theme-dark .Team-Info-Score-Undef {
+  border-color: #fff;
+}
+.theme-light .Team-Info-Score-Undef {
+  border-color: #000;
+}
 .Team-Construction {
   padding: 20px;
   display: -webkit-flex;
