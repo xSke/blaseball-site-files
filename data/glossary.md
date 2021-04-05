@@ -45,6 +45,10 @@
 - Weather.
 - The act, process, or mode of transfusing` ||||||||| |||| `from one or more Players to one or more other Players.
 
+## Boost
+- To add a quantity of stellar Plasma.
+- To apply a statistical increase.
+
 ## Bottom of the Inning
 - A portion of an Inning during which the Home Team bats and which concludes when the last of the Home Team's Ins becomes an Out.
 
@@ -97,6 +101,7 @@
 - A bird curse making a Team or Player the target of attacks,` |||||||||||| || |||| || ||||| ||||||||`.
 
 ## Debt
+- A curse.
 - Something that is owed or due.
 
 ## Earlpostseason
@@ -114,10 +119,10 @@
 - `| |||||||||||||| ||||||| |||||||| ||||||| |||||||| ||||||`
 
 ## `|||||`
-- `| |||||||||||||| ||||||| |||||||| ||||||| |||||||| ||||| ||| |||||`
+- `| |||||||||||||| ||||||| |||||||| ||||||| |||||||| ||||||`
 
 ## `||||||`
-- `| |||||||||||||| ||||||| |||||||| ||||||| |||||||| |||| |||| ||||| ||| |||||`
+- `| |||||||||||||| ||||||| |||||||| ||||||| |||||||| |||| |||| ||||||`
 
 ## `||||||||`
 - `| |||||||||||||| ||||||| |||||||| ||||||| |||||||| ||||| ||| |||| ||||||| |||||||| |||||`
@@ -134,7 +139,7 @@
 
 ## Endseason
 - A period of Rest bridging the Lateseason and the Earlpostseason.
-- The time of Postseason Births.
+- The time of Postseason Births and MVP selection.
 
 ## Fan
 - An entity who observes and impacts Blaseball.
@@ -169,6 +174,11 @@
 ## Flinch
 - A curse resulting in the inability to swing until a strike has been thrown in the At Bat.
 
+## Flooding
+- Weather.
+- A surge of Immateria.
+- A Fan-made crisis.
+
 ## Flute
 - A Snack that allows a Fan to change their favorite Team.
 
@@ -202,7 +212,7 @@
 - A transitory state in which a batter needs one or more consecutive hits to enter Fire mode, but which will dissipate should the batter record an Out.
 
 ## Home Field Advantage
-- A curse that adds one run to a Team's pile at the start of each Home Game.
+- A physical concept that adds one Run to a Team's pile at the start of each Home Game.
 
 ## Home Team
 - A team playing in the Ballpark associated with their organization.
@@ -220,6 +230,10 @@
 ## Idol Immune
 - Incapable of being Idolized.
 
+## Impair
+- To remove a quantity of stellar Plasma.
+- To apply a statistical reduction.
+
 ## In
 - A` |||||||| `concept comprising the building blocks of an Inning.
 
@@ -236,7 +250,7 @@
 ## Internet Series
 - The annual championship series of Internet League Blaseball, contested since Season 6 of the Discipline Era, between the champion teams of the Wild League and the Mild League.
 
-## Inward
+## Inverted
 - `| |||||||| ||||||| ||||||||| || |||||||| ||||||| | ||||||| ||||||| |||||||`
 
 ## Latepostseason
@@ -249,7 +263,7 @@
 - The period of the Regular Season beginning at the end of the Latesiesta and ending at the beginning of the Endseason.
 
 ## `|||||||||`
-- `| |||||||| ||||||| |||||||| ||||||| ||||||||||||`
+- `| |||||||| ||||||| |||||||| ||||| ||| |||| |||||||| |||||||| ||||| || ||||| ||||| |||||| |||||| |||||||`
 
 ## Liberated
 - Free from domination, control, or influence.
@@ -364,6 +378,9 @@
 
 ## Reverberating
 - Having a small chance of batting again after each At Bat.
+
+## Roamin
+- A state of uncertainty following Revocation and preceding Recruitment.
 
 ## Rotation
 - The Players on a Team's Roster that have been designated as Pitchers.

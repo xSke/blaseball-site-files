@@ -59,7 +59,8 @@
 * d. Divine Favor: the `||||` have an internal ranking of favored teams. The list is decided `|||||||||` each season, and determines all standings tiebreakers.
 * e. ~~If at any time the Fans have angered the Blaseball Gods, they may atone by eating one million Peanuts.~~ STRIKE TWO
 * h. Eat The Rich: Every season, immediately before the Election, the Wealthiest 1% of Fans will have their Coins removed and distributed evenly to the other 99% of Fans.
-* i. ~~Blood Bath: ~~`||||| ||||||, ||||||||||| |||||| ||| ||||||||, ||| ||||| |||| |||| ||||||| ||| ||||||. ||||| |||| || |||||||||||| ||||| || |||| |||||| ||||| |||||||||||||`
+* i. Based Evolution: Every Third Championship a Team wins will cause the Team and its Players to Evolve. Players that round the phylogenic Bases will get to go Home.
+* j. ~~Blood Bath: ~~`||||| ||||||, ||||||||||| |||||| ||| ||||||||, ||| ||||| |||| |||| ||||||| ||| ||||||. ||||| |||| || |||||||||||| ||||| || |||| |||||| ||||| |||||||||||||`
 * f. Sunglasses `shall be |||||||||| ||||||||||||| |||||||||||||||||. They shall provide |||||||||||||| may be ||||||||||||||||||||.`
 * g. Splortsmanship, splortsmanship, is BACK.
 
@@ -99,9 +100,10 @@
 ### 5. Deface - Wills
 * a. Fans shall bend the Election to their Will.
 * b. Wills shall be added to the Election, allowing Fans to name Beneficiaries.
-* c. In the spirit of `||||||||`, each Team shall win the same number of Wills. Wills will be decided by random selection from each Team's Votes.
-* d. Wills will be Executed in order of League Standings.
-* e. `|| ||| |||||, | |||| |||| |||||| |` Wont.
+* c. In the spirit of `||||||||`, each Team shall win the same base number of Wills, unless affected by Free Will. Wills will be decided by random selection from each Team's Votes.
+* d. Free Wills: Each season, The bottom four finishing Teams in the league will receive an extra Will in that season's Election.
+* e. Wills will be Executed in order of League Standings.
+* f. `|| ||| |||||, | |||| |||| |||||| |` Wont.
 
 ### 6. Eat - Concessions
 * a. The League shall sell Concessions to the Fans.
@@ -109,6 +111,7 @@
 * c. Snackholders are granted access to Compensation, Betting, Exclusive Areas and Democratic Processes.
 * d. Seasonal Menus will be updated according to Market Trends.
 * e. Snackholders may sell a Snack back to the Food & Beverage Director. `|||| ||||| || | |||||.`
+* f. Fans will be able to freely buy and sell Snack Slots at any time. The less Snack Slots a Fan owns, the higher the Payout Modifier for the Snacks in them.
 
 ### 7. Freeze - `||||||||||||||`
 * a. `|| |||||| |||| ||| |||||| |||| |||| |||||| || ||| ||||||| ||` improvements.

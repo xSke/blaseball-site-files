@@ -128,12 +128,12 @@
         "description": "This player has Returned from the void. At the end of each season, this player has a chance of being called back to the Void."
     },
     {
-        "id": "INWARD",
+        "id": "INVERTED",
         "color": "#d3d8de",
         "textColor": "#d3d8de",
         "background": "#38080d",
-        "title": "Inward",
-        "description": "This player has turned Inward."
+        "title": "Inverted",
+        "description": "This player has Inverted."
     },
     {
         "id": "MARKED",
@@ -945,9 +945,9 @@
     },
     {
         "id": "PARASITE",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#e30000",
+        "textColor": "#e30000",
+        "background": "#2b0000",
         "title": "Parasite",
         "description": "When this pitcher strikes out a batter in Blooddrain, they'll drain some blood from them."
     },
@@ -1000,20 +1000,12 @@
         "description": "If this player is protected from a Steal or Swap Will, they'll be boosted by 2%."
     },
     {
-        "id": "HALL_ENTER_BOOST",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
-        "title": "Hall Enter Boost",
-        "description": "When this player enters the Hall of Flame, they'll be boosted 5%."
-    },
-    {
         "id": "HALL_EXIT_BOOST",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
-        "title": "Hall Exit Boost",
-        "description": "When this player exits the Hall of Flame, they'll be boosted 5%."
+        "color": "#ff943d",
+        "textColor": "#ff943d",
+        "background": "#163073",
+        "title": "Phoenix",
+        "description": "When this player exits the Hall of Flame, they'll be boosted 10% to 20%."
     },
     {
         "id": "FLOOD_PUMPS",
@@ -1049,17 +1041,17 @@
     },
     {
         "id": "SOUNDSYSTEM",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#4be397",
+        "textColor": "#4be397",
+        "background": "#330a2a",
         "title": "LCD Soundsystem",
         "description": ""
     },
     {
         "id": "ECHO_CHAMBER",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#61b3ff",
+        "textColor": "#61b3ff",
+        "background": "#1f061b",
         "title": "Echo Chamber",
         "description": ""
     },
@@ -1107,7 +1099,7 @@
         "id": "SECRET_BASE",
         "color": "#ffffff",
         "textColor": "#ffffff",
-        "background": "#000000",
+        "background": "#363335",
         "title": "Secret Base",
         "description": ""
     },
@@ -1422,5 +1414,37 @@
         "background": "#2a0b40",
         "title": "Crime Scene",
         "description": "When a Hard-Boiled Player plays at a Crime Scene, they'll Investigate."
+    },
+    {
+        "id": "AFTER_PARTY",
+        "color": "#aba9a4",
+        "textColor": "#aba9a4",
+        "background": "#450043",
+        "title": "Afterparty",
+        "description": "This Team will occasionally receive permanent stats boost in their games (outside of Party Time), but only while they're losing."
+    },
+    {
+        "id": "MIDDLING",
+        "color": "#809fff",
+        "textColor": "#809fff",
+        "background": "#002b0f",
+        "title": "Middling",
+        "description": "This team will Overperform in the Midseason."
+    },
+    {
+        "id": "0",
+        "color": "#cffff0",
+        "textColor": "#cffff0",
+        "background": "#904899",
+        "title": "0",
+        "description": "Players with 0 will always swing at strikes while there are 0 Balls and 0 Strikes in the At Bat."
+    },
+    {
+        "id": "H20",
+        "color": "#cffff0",
+        "textColor": "#cffff0",
+        "background": "#489699",
+        "title": "H20",
+        "description": "Players with H20 will always swing at strikes while there are 2 Outs."
     }
 ]

@@ -89,6 +89,13 @@
         ]
     },
     {
+        "name": "Boost",
+        "definition": [
+            "To add a quantity of stellar Plasma.",
+            "To apply a statistical increase."
+        ]
+    },
+    {
         "name": "Bottom of the Inning",
         "definition": [
             "A portion of an Inning during which the Home Team bats and which concludes when the last of the Home Team's Ins becomes an Out."
@@ -190,6 +197,7 @@
     {
         "name": "Debt",
         "definition": [
+            "A curse.",
             "Something that is owed or due."
         ]
     },
@@ -222,13 +230,13 @@
     {
         "name": "|||||",
         "definition": [
-            "| |||||||||||||| ||||||| |||||||| ||||||| |||||||| ||||| ||| |||||"
+            "| |||||||||||||| ||||||| |||||||| ||||||| |||||||| ||||||"
         ]
     },
     {
         "name": "||||||",
         "definition": [
-            "| |||||||||||||| ||||||| |||||||| ||||||| |||||||| |||| |||| ||||| ||| |||||"
+            "| |||||||||||||| ||||||| |||||||| ||||||| |||||||| |||| |||| ||||||"
         ]
     },
     {
@@ -260,7 +268,7 @@
         "name": "Endseason",
         "definition": [
             "A period of Rest bridging the Lateseason and the Earlpostseason.",
-            "The time of Postseason Births."
+            "The time of Postseason Births and MVP selection."
         ]
     },
     {
@@ -324,6 +332,14 @@
         "name": "Flinch",
         "definition": [
             "A curse resulting in the inability to swing until a strike has been thrown in the At Bat."
+        ]
+    },
+    {
+        "name": "Flooding",
+        "definition": [
+            "Weather.",
+            "A surge of Immateria.",
+            "A Fan-made crisis."
         ]
     },
     {
@@ -391,7 +407,7 @@
     {
         "name": "Home Field Advantage",
         "definition": [
-            "A curse that adds one run to a Team's pile at the start of each Home Game."
+            "A physical concept that adds one Run to a Team's pile at the start of each Home Game."
         ]
     },
     {
@@ -426,6 +442,13 @@
         ]
     },
     {
+        "name": "Impair",
+        "definition": [
+            "To remove a quantity of stellar Plasma.",
+            "To apply a statistical reduction."
+        ]
+    },
+    {
         "name": "In",
         "definition": [
             "A |||||||| concept comprising the building blocks of an Inning."
@@ -457,7 +480,7 @@
         ]
     },
     {
-        "name": "Inward",
+        "name": "Inverted",
         "definition": [
             "| |||||||| ||||||| ||||||||| || |||||||| ||||||| | ||||||| ||||||| |||||||"
         ]
@@ -483,7 +506,7 @@
     {
         "name": "|||||||||",
         "definition": [
-            "| |||||||| ||||||| |||||||| ||||||| ||||||||||||"
+            "| |||||||| ||||||| |||||||| ||||| ||| |||| |||||||| |||||||| ||||| || ||||| ||||| |||||| |||||| |||||||"
         ]
     },
     {
@@ -700,6 +723,12 @@
         "name": "Reverberating",
         "definition": [
             "Having a small chance of batting again after each At Bat."
+        ]
+    },
+    {
+        "name": "Roamin",
+        "definition": [
+            "A state of uncertainty following Revocation and preceding Recruitment."
         ]
     },
     {
