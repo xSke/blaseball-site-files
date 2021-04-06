@@ -22713,7 +22713,7 @@
                 var e = 1;
                 C.info.forEach(function (a, t) {
                   if (a.type === lA.PlayerDropdown) {
-                    if ("myTeam" === a.filters.leagueLocation) {
+                    if ("myTeam" === a.filters.leagueLocation && void 0 === a.filters.equivalence) {
                       var r = n.favoriteTeam ? n.favoriteTeam : "";
                       Ye(r, a.filters.position, e, a.filters.hasMods);
                     }
@@ -22809,7 +22809,7 @@
             [me]
           );
         var We = function (e, a) {
-            a !== [] && a.length > 0 && (1 === e ? Z(a) : 2 === e && _(a));
+            1 === e ? Z(a) : 2 === e && _(a);
           },
           je = (function () {
             var e = Object(h.a)(
@@ -23026,7 +23026,7 @@
                           </_o.a.Control>
                         </_o.a.Group>
                       );
-                    if (2 === ea)
+                    if (2 === ea && 2 === ea)
                       return (
                         <_o.a.Group controlId="team selection">
                           <_o.a.Label>{e.description}</_o.a.Label>
@@ -23037,7 +23037,7 @@
                             disabled={!(X.length > 0)}
                           >
                             <option value="" defaultValue={pe} key={-1}>
-                              Choose a player.
+                              {X.length < 1 ? "No valid players." : "Choose a player."}
                             </option>
                             {X.map(function (e, a) {
                               return (
