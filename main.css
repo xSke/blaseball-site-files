@@ -11386,9 +11386,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .theme-light .Player-Stars-Num {
   color: #272727;
 }
-.Player-Stars-Num-Temp {
-  color: #6dc0ff;
-}
 .Player-Stars-Gilded {
   color: #ffc81e;
   border-radius: 50%;
@@ -11403,15 +11400,32 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 18px;
   position: relative;
 }
-.Player-Stars-Temp {
+.Player-Stars-Blue {
   color: #6dc0ff;
 }
+.Player-Stars-Red {
+  color: #d94141;
+}
+.Player-Stars-Red-Line {
+  position: absolute;
+  background: #000;
+  height: 1px;
+  width: 11px;
+  top: 9px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  left: 3px;
+}
 .Player-Stars-Temp-Blue,
+.Player-Stars-Temp-Red,
 .Player-Stars-Temp-White {
   position: absolute;
 }
 .Player-Stars-Temp-Blue {
   color: #6dc0ff;
+}
+.Player-Stars-Temp-Red {
+  color: #d94141;
 }
 .Player-Stars-Temp-Wrapper {
   height: 18px;
@@ -11450,6 +11464,14 @@ input[type="number"]::-webkit-outer-spin-button {
   align-items: center;
   line-height: 1.2em;
   min-height: 30px;
+}
+.Player-Info-Line-Advanced {
+  grid-template-columns: 180px auto 40px;
+  padding: 2px 30px 2px 40px;
+}
+.Player-Info-Line-Advanced-Num {
+  margin: 0;
+  justify-self: right;
 }
 .Player-Info-Items {
   display: grid;
@@ -11509,9 +11531,9 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   width: 125px;
-  height: 100px;
-  margin-top: 15px;
-  font-size: 100px;
+  height: 125px;
+  margin-top: 5px;
+  font-size: 30px;
   line-height: 1rem;
   display: -webkit-flex;
   display: flex;
@@ -11522,11 +11544,26 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-justify-content: space-around;
   justify-content: space-around;
 }
+.theme-dark .Player-Info-Items-Box-Inner {
+  color: #333;
+}
+.theme-light .Player-Info-Items-Box-Inner {
+  color: #c3c3c3;
+}
+.Player-Info-Items-Box-Locked {
+  border: 5px solid;
+}
 .theme-dark .Player-Info-Items-Box-Locked {
   background: #000;
 }
 .theme-light .Player-Info-Items-Box-Locked {
   background: #fff;
+}
+.theme-dark .Player-Info-Items-Box-Locked {
+  border-color: #0b0b0b;
+}
+.theme-light .Player-Info-Items-Box-Locked {
+  border-color: #f2f2f2;
 }
 .Player-Info-Items-Box-Empty {
   border: 5px solid;
@@ -11548,7 +11585,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: -webkit-flex;
   display: flex;
   color: #6dc0ff;
-  line-height: 1rem;
+  margin-bottom: 2px;
 }
 .Player-Info-Items-Durability-Unbreakable {
   font-size: 28px;
@@ -11556,6 +11593,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .Player-Info-Items-Durability-Broken {
   font-size: 13px;
   margin-top: 3px;
+}
+.Player-Info-Items-Durability-Dot {
+  line-height: 14px;
 }
 .Player-Info-Items-Header {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
@@ -11573,6 +11613,15 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .Player-Info-Items-Name {
   font-family: "Lora", "Courier New", monospace, serif;
+  line-height: 14px;
+  font-size: 14px;
+  text-align: center;
+}
+.theme-dark .Player-Info-Items-Name {
+  color: #fff;
+}
+.theme-light .Player-Info-Items-Name {
+  color: #000;
 }
 .Player-Info-Items-Stats {
   display: grid;
@@ -13403,48 +13452,25 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 60px;
 }
 .Item {
-  min-height: 300px;
+  min-height: 250px;
   height: auto;
+}
+.Item-Icon {
+  max-width: 60px;
+  max-height: 60px;
 }
 .Item-Info {
   border: none;
+  display: -webkit-flex;
+  display: flex;
 }
 .Item-Info-Line {
-  grid-template-columns: 120px auto;
-  padding: 2px 20px;
+  grid-template-columns: 150px auto;
 }
 .Item-Name {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-.Item-Header {
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  align-items: center;
-}
-.Item-Status {
-  line-height: 1rem;
-  font-size: 16px;
-  font-style: italic;
-  margin-left: 10px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.Item-Status-Legendary {
-  color: #ffc81e;
-}
-.Item-Status-Broken {
-  color: #6dc0ff;
-}
-.Item-Data {
-  display: grid;
-  grid-template-columns: 140px auto;
-  padding: 0 10px 10px;
-  grid-gap: 10px;
-  gap: 10px;
 }
 .Item-Stats {
   justify-items: center;
@@ -13481,12 +13507,33 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-align-items: center;
   align-items: center;
 }
+.Item-Stats-Line-Body .Item-Icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
 .Item-Stats-Line-Body span {
   line-height: 1rem;
   color: #6dc0ff;
 }
+.Item-Status {
+  line-height: 1rem;
+  font-size: 16px;
+  font-style: italic;
+  margin-left: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.Item-Status-Legendary {
+  color: #ffc81e;
+}
+.Item-Status-Broken {
+  color: #6dc0ff;
+}
 .Item-Content {
   padding: 0;
+  margin-bottom: 30px;
 }
 @media (max-width: 1080px) {
   .ModalItem-Attributes {
@@ -13576,11 +13623,34 @@ input[type="number"]::-webkit-outer-spin-button {
     gap: 10px;
     line-height: 1.2em;
   }
+  .Player-Info-Items {
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px;
+  }
   .Player-Info-Items-Header {
     font-size: 16px;
   }
   .Player-Info-Items-Name {
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .Player-Info-Items-Number {
+    -webkit-transform: rotate(-45deg) translate(-22px, -35px);
+    transform: rotate(-45deg) translate(-22px, -35px);
+  }
+  .Player-Info-Items-Box {
+    width: 100px;
+    height: 100px;
+  }
+  .Player-Info-Items-Box-Inner {
+    width: 80px;
+    height: 80px;
+    margin-top: 0;
+  }
+  .Player-Info-Items-Durability {
+    font-size: 18px;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .Player-Team-Line {
     margin-bottom: 10px;
@@ -13690,6 +13760,9 @@ input[type="number"]::-webkit-outer-spin-button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 10px;
+  }
+  .Item-Stats-Line-Body .Player-Info-Items-Durability {
+    font-size: 22px;
   }
   .Item-Info {
     padding-bottom: 10px;
@@ -14680,19 +14753,25 @@ button:focus-visible {
   animation-direction: alternate-reverse;
 }
 .BigDeal-Icon-2 {
-  font-size: 40vh;
   width: 48vh;
   height: 48vh;
 }
 .BigDeal-Icon-2,
 .BigDeal-Icon-5 {
+  font-size: 40vh;
   line-height: 0;
   display: -webkit-flex;
   display: flex;
 }
 .BigDeal-Icon-5 {
-  font-size: 24vh;
-  height: 12vh;
+  width: 100%;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.BigDeal-Icon-5 svg {
+  z-index: 2;
 }
 .BigDeal-Equity {
   background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/Equity.c533a2ae.png);
@@ -14751,7 +14830,6 @@ button:focus-visible {
 .BigDeal-Message-Style-2,
 .BigDeal-Message-Style-3,
 .BigDeal-Message-Style-4,
-.BigDeal-Message-Style-5,
 .BigDeal-Message-Style--1 {
   font-family: "Lora", "Courier New", monospace, serif;
   font-weight: 700;
@@ -14783,12 +14861,18 @@ button:focus-visible {
   color: #c50c55;
 }
 .BigDeal-Message-Style-5 {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-style: italic;
+}
+.theme-dark .BigDeal-Message-Style-5 {
   color: #b3b3b3;
+}
+.theme-light .BigDeal-Message-Style-5 {
+  color: #626262;
 }
 .BigDeal-Message-Size-0,
 .BigDeal-Message-Size-1,
 .BigDeal-Message-Size-4,
-.BigDeal-Message-Size-5,
 .BigDeal-Message-Size--1 {
   font-size: 32px;
 }
@@ -14798,6 +14882,9 @@ button:focus-visible {
 }
 .BigDeal-Message-Size-3 {
   font-size: 24px;
+}
+.BigDeal-Message-Size-5 {
+  font-size: 28px;
 }
 .BigDeal-Message-Icon--1 {
   background: #000;
@@ -14827,6 +14914,17 @@ button:focus-visible {
 }
 .BigDeal-Message-Icon-5 {
   background: #707070;
+}
+.BigDeal-Message-Icon-5 svg {
+  width: 16px;
+  height: 16px;
+}
+.BigDeal-Glitter-Dot {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  -webkit-animation: sparkle infinite;
+  animation: sparkle infinite;
 }
 @-webkit-keyframes spinny {
   0% {
@@ -14860,7 +14958,38 @@ button:focus-visible {
     transform: translateY(-80px);
   }
 }
+@-webkit-keyframes sparkle {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes sparkle {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 @media (max-width: 1080px) {
+  .BigDeal-Icon-5 {
+    font-size: 30vh;
+  }
   .BigDeal-RedLine,
   .BigDeal-RedLine-2 {
     font-size: 24px;
