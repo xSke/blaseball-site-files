@@ -17566,7 +17566,7 @@
                   target="_blank"
                   className="Shop-Item-Link"
                 >
-                  <strong>Get 50% your first bag here.</strong>
+                  <strong>Get 50% off your first bag here.</strong>
                 </a>
               </div>
             ),
