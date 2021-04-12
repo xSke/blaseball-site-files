@@ -15284,7 +15284,7 @@ button:focus-visible {
   color: #0014a8;
 }
 .Advertisement-ShopItem {
-  background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/skymap.62914e00.png);
+  background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/yesplz.3be76dcd.png);
   display: -webkit-flex;
   display: flex;
   background-size: contain;
@@ -17241,7 +17241,7 @@ button:focus-visible {
 }
 .Decrees-Container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-bottom: 24px;
   grid-gap: 20px;
   gap: 20px;

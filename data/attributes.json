@@ -885,7 +885,7 @@
         "textColor": "#ffc2f9",
         "background": "#0a8ef5",
         "title": "Earlbirds",
-        "description": "This team will Overperform in the Earlseason."
+        "description": "This Team or Player will Overperform in the Earlseason."
     },
     {
         "id": "LATE_TO_PARTY",
@@ -893,7 +893,7 @@
         "textColor": "#addbff",
         "background": "#700065",
         "title": "Late to the Party",
-        "description": "This team will Overperform in the Lateseason."
+        "description": "This Team or Player will Overperform in the Lateseason."
     },
     {
         "id": "OVERUNDER",
@@ -1277,7 +1277,7 @@
         "textColor": "#fff912",
         "background": "#465f63",
         "title": "High Pressure",
-        "description": "This Team will play 25% better in Flooding weather when runners are on base."
+        "description": "This Team or Player will play 25% better in Flooding weather when runners are on base."
     },
     {
         "id": "SCATTERED",
@@ -1429,7 +1429,7 @@
         "textColor": "#809fff",
         "background": "#002b0f",
         "title": "Middling",
-        "description": "This team will Overperform in the Midseason."
+        "description": "This Team or Player will Overperform in the Midseason."
     },
     {
         "id": "0",
