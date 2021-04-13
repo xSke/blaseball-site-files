@@ -5913,7 +5913,7 @@
         switch (e) {
           case "Bat":
             return <yt className="Item-Icon" />;
-          case "Gloves":
+          case "Glove":
             return <Ft className="Item-Icon" />;
           case "Necklace":
             return <Mt className="Item-Icon" />;
@@ -32817,7 +32817,7 @@
             background: "#2e0330",
             title: "Attractor",
             description:
-              "When this player scores a Run, they'll join the Lineup of the Team that scored them, if they're not already on their roster.",
+              "When this player scores a Run, they'll join the Shadows of the Team that scored them, if they're not already on their roster.",
           },
           {
             id: "SCRAMBLED",
