@@ -2853,7 +2853,7 @@
       x.context = C;
       var L = x,
         R = o.a.createContext([]),
-        D = function (e) {
+        F = function (e) {
           var a = e.children,
             t = Object(c.g)().pathname,
             n = Object(r.useState)({}),
@@ -2886,8 +2886,8 @@
             (<R.Provider value={i}>{a}</R.Provider>)
           );
         };
-      D.context = R;
-      var F,
+      F.context = R;
+      var D,
         U,
         P,
         W,
@@ -2897,7 +2897,7 @@
         Y,
         Q,
         z,
-        H = D,
+        H = F,
         q = t(33);
       !(function (e) {
         (e[(e.Rest = 0)] = "Rest"),
@@ -2914,7 +2914,7 @@
           (e[(e.Postseason = 11)] = "Postseason"),
           (e[(e.PostseasonEnd = 12)] = "PostseasonEnd"),
           (e[(e.Election = 13)] = "Election");
-      })(F || (F = {})),
+      })(D || (D = {})),
         (function (e) {
           (e[(e.Game = 0)] = "Game"),
             (e[(e.Changes = 1)] = "Changes"),
@@ -3729,8 +3729,8 @@
       var Le,
         Re = r.forwardRef(xe);
       t.p;
-      function De() {
-        return (De =
+      function Fe() {
+        return (Fe =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -3740,7 +3740,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Fe(e, a) {
+      function De(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -3763,10 +3763,10 @@
       function Ue(e, a) {
         var t = e.title,
           n = e.titleId,
-          o = Fe(e, ["title", "titleId"]);
+          o = De(e, ["title", "titleId"]);
         return (
           <svg
-            {...De(
+            {...Fe(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -4486,10 +4486,10 @@
         );
       }
       var Ra,
-        Da = r.forwardRef(La);
+        Fa = r.forwardRef(La);
       t.p;
-      function Fa() {
-        return (Fa =
+      function Da() {
+        return (Da =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -4525,7 +4525,7 @@
           o = Ua(e, ["title", "titleId"]);
         return (
           <svg
-            {...Fa(
+            {...Da(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -5195,8 +5195,8 @@
           </svg>
         );
       }
-      var Dt,
-        Ft = r.forwardRef(Rt);
+      var Ft,
+        Dt = r.forwardRef(Rt);
       t.p;
       function Ut() {
         return (Ut =
@@ -5250,7 +5250,7 @@
             )}
           >
             {t ? <title id={n}>{t}</title> : null}
-            {Dt || (Dt = <image id="l" x={166} y={78} width={677} height={865} xlinkHref="<img/png blob>" />)}
+            {Ft || (Ft = <image id="l" x={166} y={78} width={677} height={865} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
@@ -5720,7 +5720,7 @@
           case ee.IDOL_STEAL:
             return <Ga />;
           case ee.BLACK_HOLE:
-            return <Da />;
+            return <Fa />;
           case ee.INCINERATION:
             return <gt />;
           case ee.IDOL_HOMER_ALLOW:
@@ -5914,7 +5914,7 @@
           case "Bat":
             return <yt className="Item-Icon" />;
           case "Glove":
-            return <Ft className="Item-Icon" />;
+            return <Dt className="Item-Icon" />;
           case "Necklace":
             return <Mt className="Item-Icon" />;
           case "Jersey":
@@ -6013,13 +6013,13 @@
         return void 0 !== e && e.phase >= 3 && e.phase <= 4;
       }
       function Rn(e) {
-        return void 0 === e ? String.fromCodePoint(Number("0x2753")) : Dn(e.emoji);
+        return void 0 === e ? String.fromCodePoint(Number("0x2753")) : Fn(e.emoji);
       }
-      function Dn(e) {
+      function Fn(e) {
         var a = Number(e);
         return isNaN(a) ? e : String.fromCodePoint(a);
       }
-      function Fn(e, a, t) {
+      function Dn(e, a, t) {
         var n = void 0 !== a.filters.leagueLocation ? a.filters.leagueLocation : "inLeague",
           r = [];
         if ("anywhere" === n) r = e.teams;
@@ -6925,8 +6925,8 @@
           </svg>
         );
       }
-      var Dr,
-        Fr = r.forwardRef(Rr);
+      var Fr,
+        Dr = r.forwardRef(Rr);
       t.p;
       function Ur() {
         return (Ur =
@@ -6979,8 +6979,8 @@
             )}
           >
             {t ? <title id={n}>{t}</title> : null}
-            {Dr ||
-              (Dr = (
+            {Fr ||
+              (Fr = (
                 <image
                   id="_08-Birds"
                   data-name="08-Birds"
@@ -7422,7 +7422,7 @@
             },
             {
               name: "Sun 2",
-              icon: <Fr aria-label="A yellow sun" role="img" id="Sun 2" />,
+              icon: <Dr aria-label="A yellow sun" role="img" id="Sun 2" />,
               background: "#fdff9c",
               color: "#ffffff",
               description: "When a team collects 10 Runs, Sun 2 will collect the Runs, and set a Win upon that team.",
@@ -7544,9 +7544,9 @@
               color: "#f2c7e3",
               description: "Salmon have been known to swim Upstream.",
             },
-            { name: "???", icon: <ar.E />, background: "#92b3b0", color: "#d3e3e2", description: "???" },
-            { name: "???", icon: <ar.E />, background: "#d3e3e2", color: "#ff6be6", description: "???" },
-            { name: "???", icon: <ar.E />, background: "#0e4e8a", color: "#ffc400", description: "???" },
+            { name: "???", icon: <ar.F />, background: "#92b3b0", color: "#d3e3e2", description: "???" },
+            { name: "???", icon: <ar.F />, background: "#d3e3e2", color: "#ff6be6", description: "???" },
+            { name: "???", icon: <ar.F />, background: "#0e4e8a", color: "#ffc400", description: "???" },
           ]);
       function vo(e) {
         Object(r.useContext)(L.context).user;
@@ -7635,31 +7635,31 @@
         switch (a) {
           case "EXTRA_STRIKE":
           case "EXTRA_OUT":
-            return <ar.Ab />;
+            return <ar.Bb />;
           case "SHAME_PIT":
             return <ar.d />;
           case "HOME_FIELD":
-            return <ar.nb />;
+            return <ar.ob />;
           case "FIREPROOF":
-            return <ar.R />;
+            return <ar.S />;
           case "ALTERNATE":
-            return <ar.rb />;
+            return <ar.sb />;
           case "SHELLED":
           case "SUPERALLERGIC":
           case "SUPERYUMMY":
-            return <ar.Qb />;
+            return <ar.Rb />;
           case "SOUNDPROOF":
-            return <ar.ob />;
+            return <ar.pb />;
           case "REVERBERATING":
             return <ar.l />;
           case "BLOOD_THIEF":
-            return <ar.cc />;
+            return <ar.dc />;
           case "BLOOD_DONOR":
-            return <ar.Jb />;
+            return <ar.Kb />;
           case "BLOOD_WINNER":
-            return <ar.Wb />;
+            return <ar.Xb />;
           case "BLOOD_PITY":
-            return <ar.Ec />;
+            return <ar.Fc />;
           case "BLOOD_FAITH":
           case "BLOOD_LAW":
           case "BLOOD_CHAOS":
@@ -7672,174 +7672,175 @@
           case "DEBT_THREE":
             return <ar.h />;
           case "MARKED":
-            return <ar.Nc />;
+            return <ar.Oc />;
           case "PARTY_TIME":
           case "AFTER_PARTY":
-            return <ar.Ob />;
+            return <ar.Pb />;
           case "LIFE_OF_PARTY":
-            return <ar.bb />;
+            return <ar.cb />;
           case "INVERTED":
-            return <ar.sb />;
+            return <ar.tb />;
           case "FIRST_BORN":
           case "HARD_BOILED":
           case "CUSTOM_HATCHED":
-            return <ar.N />;
+            return <ar.O />;
           case "HONEY_ROASTED":
-            return <ar.F />;
+            return <ar.G />;
           case "EXTRA_BASE":
-            return <ar.jb />;
+            return <ar.kb />;
           case "BLESS_OFF":
-            return <ar.fb />;
+            return <ar.gb />;
           case "NON_IDOLIZED":
-            return <ar.vb />;
+            return <ar.wb />;
           case "GRAVITY":
             return <ar.p />;
           case "SPICY":
-            return <ar.x />;
+            return <ar.y />;
           case "ELECTRIC":
-            return <ar.O />;
+            return <ar.P />;
           case "DOUBLE_PAYOUTS":
-            return <ar.Dc />;
+            return <ar.Ec />;
           case "FIRE_PROTECTOR":
-            return <ar.S />;
+            return <ar.T />;
           case "ON_FIRE":
-            return <ar.pc />;
+            return <ar.qc />;
           case "HEATING_UP":
-            return <ar.hb />;
+            return <ar.ib />;
           case "RECEIVER":
-            return <ar.Cb />;
+            return <ar.Db />;
           case "FLICKERING":
           case "FLIICKERRRIIING":
-            return <ar.u />;
+            return <ar.v />;
           case "AFFINITY_FOR_CROWS":
           case "CURSE_OF_CROWS":
           case "FRIEND_OF_CROWS":
             return <ar.n />;
           case "BASE_INSTINCTS":
-            return <ar.jc />;
+            return <ar.kc />;
           case "STABLE":
-            return <ar.zc />;
+            return <ar.Ac />;
           case "GROWTH":
-            return <ar.kb />;
+            return <ar.lb />;
           case "REPEATING":
-            return <ar.G />;
+            return <ar.H />;
           case "CRUNCHY":
-            return <ar.y />;
+            return <ar.z />;
           case "SQUIDDISH":
           case "SQUIDDEST":
-            return <ar.ab />;
+            return <ar.bb />;
           case "SUBJECTION":
-            return <ar.yc />;
+            return <ar.zc />;
           case "LIBERATED":
-            return <ar.hc />;
-          case "FIRE_EATER":
-            return <ar.P />;
-          case "MAGMATIC":
-            return <ar.Zb />;
-          case "LOYALTY":
             return <ar.ic />;
+          case "FIRE_EATER":
+            return <ar.Q />;
+          case "MAGMATIC":
+            return <ar.ac />;
+          case "LOYALTY":
+            return <ar.jc />;
           case "SABOTEUR":
-            return <ar.wc />;
+            return <ar.xc />;
           case "PITY":
-            return <ar.Z />;
+            return <ar.ab />;
           case "GOD":
-            return <ar.Mb />;
+            return <ar.Nb />;
           case "PEANUT_RAIN":
-            return <ar.X />;
+            return <ar.Y />;
           case "DESTRUCTION":
-            return <ar.L />;
+            return <ar.M />;
           case "FLINCH":
-            return <ar.Bc />;
+            return <ar.Cc />;
           case "WILD":
-            return <ar.nc />;
+            return <ar.oc />;
           case "LOVE":
-            return <ar.H />;
+            return <ar.I />;
           case "SIPHON":
-            return <ar.ub />;
+            return <ar.vb />;
           case "CREDIT_TO_THE_TEAM":
-            return <ar.zb />;
+            return <ar.Ab />;
           case "WALK_IN_THE_PARK":
-            return <ar.Lc />;
+            return <ar.Mc />;
           case "BIRD_SEED":
-            return <ar.cb />;
+            return <ar.db />;
           case "HAUNTED":
-            return <ar.uc />;
-          case "TRAVELING":
-            return <ar.bc />;
-          case "BLASERUNNING":
-            return <ar.Q x={t} y={n} className={r} style={l} />;
-          case "SEALANT":
             return <ar.vc />;
+          case "TRAVELING":
+            return <ar.cc />;
+          case "BLASERUNNING":
+            return <ar.R x={t} y={n} className={r} style={l} />;
+          case "SEALANT":
+            return <ar.wc />;
           case "O_NO":
-            return <ar.fc />;
+            return <ar.gc />;
           case "FAIRNESS":
-            return <ar.ec />;
+            return <ar.fc />;
           case "TRIBUTE":
-            return <ar.Kb />;
+            return <ar.Lb />;
           case "UNFLAMED":
-            return <ar.Kc />;
+            return <ar.Lc />;
           case "ESCAPE":
-            return <ar.A />;
+            return <ar.B />;
           case "RETIRED":
             return <ar.k />;
           case "CONTAINMENT":
-            return <ar.gb />;
+            return <ar.hb />;
           case "INHABITING":
-            return <ar.Db />;
+            return <ar.Eb />;
           case "WIRED":
-            return <ar.B className={r + " ModalItem-Icons-Wired"} x={t} y={n} style={l} />;
+            return <ar.C className={r + " ModalItem-Icons-Wired"} x={t} y={n} style={l} />;
           case "TIRED":
-            return <ar.B className={r + " ModalItem-Icons-Tired"} x={t} y={n} style={l} />;
+            return <ar.C className={r + " ModalItem-Icons-Tired"} x={t} y={n} style={l} />;
           case "COFFEE_SHADOWS":
-            return <ar.Gb />;
-          case "COFFEE_PERIL":
             return <ar.Hb />;
+          case "COFFEE_PERIL":
+            return <ar.Ib />;
           case "COFFEE_EXIT":
-            return <ar.V />;
+            return <ar.W />;
           case "COFFEE_RALLY":
-            return <ar.B x={t} y={n} className={r} style={l} />;
+            return <ar.C x={t} y={n} className={r} style={l} />;
           case "TRIPLE_THREAT":
-            return <ar.B />;
+          case "SWEETENER":
+            return <ar.C />;
           case "PERK":
-            return <ar.qc />;
+            return <ar.rc />;
           case "OVERPERFORMING":
-            return <ar.Lb />;
+            return <ar.Mb />;
           case "UNDERPERFORMING":
-            return <ar.Lb className="ModalItem-Icons-Flipped" />;
+            return <ar.Mb className="ModalItem-Icons-Flipped" />;
           case "WANDERER":
           case "SUPERWANDERER":
-            return <ar.w />;
+            return <ar.x />;
           case "NEWADVENTURE":
-            return <ar.D />;
+            return <ar.E />;
           case "EGO1":
           case "EGO2":
           case "EGO3":
           case "EGO4":
-            return <ar.mb />;
+            return <ar.nb />;
           case "LEGENDARY":
             return <ar.c />;
           case "STUCK":
             return <ar.b />;
           case "ELSEWHERE":
-            return <ar.W />;
+            return <ar.X />;
           case "OVERUNDER":
             return <ar.e />;
           case "UNDEROVER":
             return <ar.e className="ModalItem-Icons-Flipped" />;
           case "CARCINIZATION":
-            return <ar.z />;
+            return <ar.A />;
           case "BOTTOM_DWELLER":
-            return <ar.I />;
+            return <ar.J />;
           case "UNDERSEA":
-            return <ar.Bb />;
+            return <ar.Cb />;
           case "SWIM_BLADDER":
-            return <ar.Cc />;
+            return <ar.Dc />;
           case "AMBUSH":
-            return <ar.ib />;
+            return <ar.jb />;
           case "KILLER_PIES":
-            return <ar.Tb />;
+            return <ar.Ub />;
           case "EARLBIRDS":
-            return <ar.pb />;
+            return <ar.qb />;
           case "LATE_TO_PARTY":
             return <ar.i />;
           case "SHAME_GIVER":
@@ -7847,94 +7848,96 @@
           case "MAINTENANCE_MODE":
             return <ar.f />;
           case "REDACTED":
-            return <ar.Ib />;
+            return <ar.Jb />;
           case "PENANCE":
-            return <ar.ac />;
+            return <ar.bc />;
           case "SINKING_SHIP":
-            return <ar.lc />;
+            return <ar.mc />;
           case "BASE_DEALING":
-            return <ar.t />;
+            return <ar.u />;
           case "FLOOD_PUMPS":
-            return <ar.Mc />;
+            return <ar.Nc />;
           case "EVENT_HORIZON":
-            return <ar.U />;
+            return <ar.V />;
           case "FIRE_INSURANCE":
-            return <ar.wb />;
+            return <ar.xb />;
           case "PEANUT_MISTER":
             return <ar.a />;
           case "BIG_BUCKET":
-            return <ar.Y />;
+            return <ar.Z />;
           case "BIG_RED_BUTTON":
             return <ar.r />;
           case "SMOOTH":
           case "CHUNKY":
-            return <ar.oc />;
+            return <ar.pc />;
           case "SUN_KISSED":
-            return <ar.Ac />;
+            return <ar.Bc />;
           case "UNHOLEY":
-            return <ar.lb />;
+            return <ar.mb />;
           case "SUPERCHARGED":
-            return <ar.v />;
+            return <ar.w />;
           case "HIGH_PRESSURE":
-            return <ar.xc />;
+            return <ar.yc />;
           case "SCATTERED":
-            return <ar.Pb />;
+            return <ar.Qb />;
           case "PATIENT":
-            return <ar.K />;
+            return <ar.L />;
           case "ECHO":
-            return <ar.M />;
+            return <ar.N />;
           case "HUNCH":
-            return <ar.xb />;
-          case "UNCERTAIN":
-            return <ar.Sb />;
-          case "FREE_WILL":
-            return <ar.Gc />;
-          case "FORCE_FIELD":
-            return <ar.sc />;
-          case "PSYCHOACOUSTICS":
-            return <ar.Yb />;
-          case "SOLAR_PANELS":
-            return <ar.rc />;
-          case "GRIND_RAIL":
-            return <ar.qb />;
-          case "BIRDHOUSES":
-            return <ar.db />;
-          case "MAXIMALIST":
             return <ar.yb />;
+          case "UNCERTAIN":
+            return <ar.Tb />;
+          case "FREE_WILL":
+            return <ar.Hc />;
+          case "FORCE_FIELD":
+            return <ar.tc />;
+          case "PSYCHOACOUSTICS":
+            return <ar.Zb />;
+          case "SOLAR_PANELS":
+            return <ar.sc />;
+          case "GRIND_RAIL":
+            return <ar.rb />;
+          case "BIRDHOUSES":
+            return <ar.eb />;
+          case "MAXIMALIST":
+            return <ar.zb />;
           case "MINIMALIST":
             return <No.b />;
           case "BLACKHOLE_PAYOUTS":
           case "SUN2_PAYOUTS":
-            return <ar.J />;
+            return <ar.K />;
           case "STALEPOPCORN_PAYOUTS":
           case "POPCORN_PAYOUTS":
-            return <ar.Xb />;
+            return <ar.Yb />;
           case "HOMEBODY":
-            return <ar.T />;
+            return <ar.U />;
           case "STATIC":
             return <To.e />;
           case "CRIME_SCENE":
-            return <ar.C />;
+            return <ar.D />;
           case "MIDDLING":
-            return <ar.kc />;
+            return <ar.lc />;
           case "0":
             return <No.a />;
           case "H20":
-            return <ar.Hc />;
-          case "HALL_EXIT_BOOST":
             return <ar.Ic />;
+          case "HALL_EXIT_BOOST":
+            return <ar.Jc />;
           case "PARASITE":
-            return <ar.Eb />;
-          case "SECRET_BASE":
-            return <ar.gc />;
-          case "ECHO_CHAMBER":
             return <ar.Fb />;
+          case "SECRET_BASE":
+            return <ar.hc />;
+          case "ECHO_CHAMBER":
+            return <ar.Gb />;
           case "SOUNDSYSTEM":
-            return <ar.Vb />;
+            return <ar.Wb />;
           case "ATTRACTOR":
-            return <ar.Rb />;
+            return <ar.Sb />;
           case "SCRAMBLED":
-            return <ar.tc />;
+            return <ar.uc />;
+          case "SALMON_CANNONS":
+            return <ar.t />;
         }
         return null;
       }
@@ -8054,7 +8057,7 @@
         });
         return void 0 === t && (t = Mo), (<span className="AttributeTooltip-Mod">({t.title})</span>);
       }
-      function Do(e) {
+      function Fo(e) {
         var a = e.id,
           t = Object(r.useContext)(L.context).user;
         if ("" === a) return null;
@@ -8093,7 +8096,7 @@
           )
         );
       }
-      var Fo = o.a.createContext({
+      var Do = o.a.createContext({
           leagues: [],
           subleagues: [],
           divisions: [],
@@ -8128,10 +8131,10 @@
                 }
               );
             }, []),
-            (<Fo.Provider value={l}>{a}</Fo.Provider>)
+            (<Do.Provider value={l}>{a}</Do.Provider>)
           );
         };
-      Uo.context = Fo;
+      Uo.context = Do;
       var Po,
         Wo = Uo;
       t(40);
@@ -8823,10 +8826,10 @@
         );
       }
       var Rl,
-        Dl = r.forwardRef(Ll);
+        Fl = r.forwardRef(Ll);
       t.p;
-      function Fl() {
-        return (Fl =
+      function Dl() {
+        return (Dl =
           Object.assign ||
           function (e) {
             for (var a = 1; a < arguments.length; a++) {
@@ -8862,7 +8865,7 @@
           o = Ul(e, ["title", "titleId"]);
         return (
           <svg
-            {...Fl(
+            {...Dl(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -9412,7 +9415,7 @@
                 {(function (e) {
                   switch (e) {
                     case 0:
-                      return <Dl />;
+                      return <Fl />;
                     case 1:
                       return <zl />;
                     case 2:
@@ -9671,19 +9674,19 @@
           {
             homeTeamName: e.homeTeamNickname,
             homeTeamRecord: t,
-            homeTeamScore: Oo(Di(e)),
+            homeTeamScore: Oo(Fi(e)),
             awayTeamName: e.awayTeamNickname,
             awayTeamRecord: n,
-            awayTeamScore: Oo(Fi(e)),
+            awayTeamScore: Oo(Di(e)),
             seriesIndex: e.seriesIndex,
             seriesLength: e.seriesLength,
           }
         );
       }
-      function Di(e) {
+      function Fi(e) {
         return e.homeScore;
       }
-      function Fi(e) {
+      function Di(e) {
         return e.awayScore;
       }
       function Ui(e) {
@@ -9748,8 +9751,8 @@
           })(p),
           E = n.topOfInning ? n.awayTeamColor : n.homeTeamColor,
           f = n.topOfInning ? n.homeTeamColor : n.awayTeamColor,
-          v = Di(n),
-          b = Fi(n);
+          v = Fi(n),
+          b = Di(n);
         function y() {
           return n.homeScore > n.awayScore ? n.homeTeam : n.awayTeam;
         }
@@ -9835,14 +9838,14 @@
           M = i.lightMode ? ["#000000", "#ffffff"] : ["#ffffff", "#000000"],
           x = i.lightMode ? ["#000000", "#ffffff"] : ["#ffffff", "#000000"],
           R = i.lightMode ? ["#000000", "#ffffff"] : ["#ffffff", "#000000"],
-          D = i.lightMode ? ["#000000", "#ffffff"] : ["#ffffff", "#000000"];
+          F = i.lightMode ? ["#000000", "#ffffff"] : ["#ffffff", "#000000"];
         k.onFirst && (" first", (M = Ui(k.modOnFirst))),
           k.onSecond && (" second", (x = Ui(k.modOnSecond))),
           k.onThird && (" third", (R = Ui(k.modOnThird))),
-          k.onFourth && (" fourth", (D = Ui(k.modOnFourth)));
-        var F = 0,
+          k.onFourth && (" fourth", (F = Ui(k.modOnFourth)));
+        var D = 0,
           U = "0 0 255 197";
-        p.bases > 4 && ((F = 30), (U = "0 0 285 197"));
+        p.bases > 4 && ((D = 30), (U = "0 0 285 197"));
         var P = k.playerOnFirst || k.playerOnSecond || k.playerOnThird || k.playerOnFourth,
           W = (
             <ul className="Widget-Outs" aria-label="The Count">
@@ -9861,7 +9864,7 @@
                   <div className="Widget-PlayerStatusIcon Widget-PlayerStatusIcon--Pitching" aria-label="Pitching" />
                   <div className="Widget-PlayerStatusLabel">Pitching</div>
                   <div className="Widget-PlayerAttributes">
-                    <Do id={V} />
+                    <Fo id={V} />
                     <div
                       className="Widget-PlayerLineNameWrapper"
                       aria-haspopup={!0}
@@ -9874,11 +9877,11 @@
                       >
                         {n.topOfInning ? (
                           <o.a.Fragment>
-                            {Dn(n.homeTeamEmoji)} {n.homePitcherName}
+                            {Fn(n.homeTeamEmoji)} {n.homePitcherName}
                           </o.a.Fragment>
                         ) : (
                           <o.a.Fragment>
-                            {Dn(n.awayTeamEmoji)} {n.awayPitcherName}
+                            {Fn(n.awayTeamEmoji)} {n.awayPitcherName}
                           </o.a.Fragment>
                         )}
                       </d>
@@ -9889,7 +9892,7 @@
                   <div className="Widget-PlayerStatusIcon Widget-PlayerStatusIcon--Batting" aria-label="Batting" />
                   <div className="Widget-PlayerStatusLabel">Batting</div>
                   <div className="Widget-PlayerAttributes">
-                    <Do id={j} />
+                    <Fo id={j} />
                     <div
                       className="Widget-PlayerLineNameWrapper"
                       aria-haspopup={!0}
@@ -9903,11 +9906,11 @@
                         >
                           {n.topOfInning ? (
                             <o.a.Fragment>
-                              {Dn(n.awayTeamEmoji)} {n.awayBatterName}
+                              {Fn(n.awayTeamEmoji)} {n.awayBatterName}
                             </o.a.Fragment>
                           ) : (
                             <o.a.Fragment>
-                              {Dn(n.homeTeamEmoji)} {n.homeBatterName}
+                              {Fn(n.homeTeamEmoji)} {n.homeBatterName}
                             </o.a.Fragment>
                           )}
                         </d>
@@ -10196,11 +10199,11 @@
                                   transform="matrix(0.7071,-0.7071,0.7071,0.7071,-40.4706,152.625)"
                                   style={{ fill: k.onFirst ? M[0] : "none", stroke: M[0] }}
                                 >
-                                  <rect x={141.95 + F} y={105.74 + F} width="70.31" height="70.31" />
+                                  <rect x={141.95 + D} y={105.74 + D} width="70.31" height="70.31" />
                                   <ko
                                     id={le.modOnFirst}
-                                    x={149.95 + F}
-                                    y={113.74 + F}
+                                    x={149.95 + D}
+                                    y={113.74 + D}
                                     className="Widget-Bases-Icon"
                                     style={{ color: M[1] }}
                                   />
@@ -10229,11 +10232,11 @@
                                   transform="matrix(0.7071,-0.7071,0.7071,0.7071,-16.7558,95.4764)"
                                   style={{ fill: k.onSecond ? x[0] : "none", stroke: x[0] }}
                                 >
-                                  <rect x={84.83 + F} y={48.54 + F} width="70.31" height="70.31" />
+                                  <rect x={84.83 + D} y={48.54 + D} width="70.31" height="70.31" />
                                   <ko
                                     id={le.modOnSecond}
-                                    x={92.83 + F}
-                                    y={56.54 + F}
+                                    x={92.83 + D}
+                                    y={56.54 + D}
                                     className="Widget-Bases-Icon"
                                     style={{ color: x[1] }}
                                   />
@@ -10261,11 +10264,11 @@
                                   transform="matrix(0.7071,-0.7071,0.7071,0.7071,-74.0296,71.6061)"
                                   style={{ fill: k.onThird ? R[0] : "none", stroke: R[0] }}
                                 >
-                                  <rect x={27.38 + F} y={105.74 + F} width="70.31" height="70.31" />
+                                  <rect x={27.38 + D} y={105.74 + D} width="70.31" height="70.31" />
                                   <ko
                                     id={le.modOnThird}
-                                    x={35.38 + F}
-                                    y={113.74 + F}
+                                    x={35.38 + D}
+                                    y={113.74 + D}
                                     className="Widget-Bases-Icon"
                                     style={{ color: R[1] }}
                                   />
@@ -10293,17 +10296,17 @@
                                     className="st0"
                                     transform="matrix(0.7071,-0.7071,0.7071,0.7071,-74.0296,71.6061)"
                                   >
-                                    <ar.B
+                                    <ar.C
                                       className="Widget-Bases-Icon"
-                                      style={{ fill: k.onFourth ? D[0] : "none", stroke: D[0] }}
+                                      style={{ fill: k.onFourth ? F[0] : "none", stroke: F[0] }}
                                     />
-                                    <rect x={27.38 + F} y={25.04 + F} width="70.31" height="70.31" />
+                                    <rect x={27.38 + D} y={25.04 + D} width="70.31" height="70.31" />
                                     <ko
                                       id={le.modOnFourth}
-                                      x={35.38 + F}
-                                      y={33.04 + F}
+                                      x={35.38 + D}
+                                      y={33.04 + D}
                                       className="Widget-Bases-Icon"
-                                      style={{ color: D[1] }}
+                                      style={{ color: F[1] }}
                                     />
                                   </g>
                                 </_n.a>
@@ -10343,7 +10346,7 @@
                           style={{ background: i.lightMode ? In(n.awayTeamColor, 0.25) : In(n.awayTeamColor, 0.5) }}
                         >
                           <d background={G} path={"/player/".concat(n.awayPitcher)} className="Widget-PlayerLineName">
-                            {Dn(n.awayTeamEmoji)} {n.awayPitcherName}
+                            {Fn(n.awayTeamEmoji)} {n.awayPitcherName}
                             <div className="sr-only" aria-label={"for the " + l.awayTeamName} role="text" />
                           </d>
                         </div>
@@ -10354,7 +10357,7 @@
                           style={{ background: i.lightMode ? In(n.homeTeamColor, 0.25) : In(n.homeTeamColor, 0.5) }}
                         >
                           <d background={G} path={"/player/".concat(n.homePitcher)} className="Widget-PlayerLineName">
-                            {Dn(n.homeTeamEmoji)} {n.homePitcherName}
+                            {Fn(n.homeTeamEmoji)} {n.homePitcherName}
                             <div className="sr-only" aria-label={"for the " + l.homeTeamName} role="text" />
                           </d>
                         </div>
@@ -10564,7 +10567,7 @@
                     aria-hidden={!0}
                     style={{ background: n.awayTeamColor }}
                   >
-                    {Dn(n.awayTeamEmoji)}
+                    {Fn(n.awayTeamEmoji)}
                   </div>
                   <div className="GameWidget-ScoreTeam">
                     <div
@@ -10619,7 +10622,7 @@
                     aria-hidden={!0}
                     style={{ background: n.homeTeamColor }}
                   >
-                    {Dn(n.homeTeamEmoji)}
+                    {Fn(n.homeTeamEmoji)}
                   </div>
                   <div className="GameWidget-ScoreTeam">
                     <div
@@ -10685,11 +10688,11 @@
             homeTeamName: e.homeTeamNickname,
             homeTeamRecord:
               void 0 === t ? new re() : { wins: n ? t.homeWins : t.awayWins, nonlosses: 0, losses: 0, games: 0 },
-            homeTeamScore: Oo(Di(e)),
+            homeTeamScore: Oo(Fi(e)),
             awayTeamName: e.awayTeamNickname,
             awayTeamRecord:
               void 0 === t ? new re() : { wins: n ? t.awayWins : t.homeWins, nonlosses: 0, losses: 0, games: 0 },
-            awayTeamScore: Oo(Fi(e)),
+            awayTeamScore: Oo(Di(e)),
             seriesIndex: void 0 === t ? -1 : t.gamesPlayed,
             seriesLength: void 0 === t ? -1 : t.gamesNeeded,
           };
@@ -10707,7 +10710,7 @@
             );
           }),
         Yi = function () {
-          return <div className="LoadingSpinner">{100 * Math.random() < 99 ? <Vi.b /> : <ar.Qb />}</div>;
+          return <div className="LoadingSpinner">{100 * Math.random() < 99 ? <Vi.b /> : <ar.Rb />}</div>;
         },
         Qi = (t(182), t(119)),
         zi = t(73),
@@ -11509,7 +11512,7 @@
       function Ms() {
         var e = Object(r.useContext)(Cs.context),
           a = (null === e || void 0 === e ? void 0 : e.doc) ? e.doc.gamma : -1,
-          t = Ds(a),
+          t = Fs(a),
           n =
             5 === a
               ? (function () {
@@ -11559,11 +11562,11 @@
       function Rs(e) {
         return "BigDeal-Message-Style-".concat(e);
       }
-      function Ds(e) {
+      function Fs(e) {
         var a = Object(r.useContext)(L.context).user;
         switch (e) {
           case 0:
-            return <ar.Qb />;
+            return <ar.Rb />;
           case 1:
             return <Bs style={{ filter: a.lightMode ? "invert(1)" : "none" }} />;
           case 2:
@@ -11575,14 +11578,14 @@
         }
         return null;
       }
-      var Fs,
+      var Ds,
         Us = function (e) {
           var a,
             t = e.event,
             n = t.metadata.being ? parseInt(t.metadata.being) : -1;
           return (
             <o.a.Fragment>
-              <div className={rc(t.category) + " " + ((a = n), "BigDeal-Message-Icon-".concat(a))}>{Ds(n)}</div>
+              <div className={rc(t.category) + " " + ((a = n), "BigDeal-Message-Icon-".concat(a))}>{Fs(n)}</div>
               <div className={"Events-List-Desc Events-List-Background-Standard " + Rs(n)}>{fn(t.description)}</div>
             </o.a.Fragment>
           );
@@ -11613,7 +11616,7 @@
           (e[(e.Baserunning = 3)] = "Baserunning"),
           (e[(e.Combined = 4)] = "Combined"),
           (e[(e.Overall = 5)] = "Overall");
-      })(Fs || (Fs = {}));
+      })(Ds || (Ds = {}));
       function Ws(e, a, t) {
         return (
           <div className="Events-List-Row Events-List-Minor">
@@ -11939,7 +11942,7 @@
           case $.ShadowRotation:
             return (
               <span>
-                Shadows <ar.Jc />
+                Shadows <ar.Kc />
               </span>
             );
         }
@@ -12143,9 +12146,9 @@
             x = null === (t = e.showSort) || void 0 === t || t,
             L = null === (n = e.showCategory) || void 0 === n || n,
             R = null !== (l = e.sortOptions) && void 0 !== l ? l : [qs.Hot, qs.NewestFirst, qs.OldestFirst, qs.Top],
-            D = null !== (i = e.categoryOptions) && void 0 !== i ? i : [-1, U.Outcomes, U.Changes];
-          function F() {
-            return (F = Object(h.a)(
+            F = null !== (i = e.categoryOptions) && void 0 !== i ? i : [-1, U.Outcomes, U.Changes];
+          function D() {
+            return (D = Object(h.a)(
               p.a.mark(function e() {
                 var a, t;
                 return p.a.wrap(function (e) {
@@ -12180,7 +12183,7 @@
                       case 12:
                         return (t = e.sent), e.abrupt("break", 26);
                       case 14:
-                        return (e.next = 16), Fc(c, O, b);
+                        return (e.next = 16), Dc(c, O, b);
                       case 16:
                         return (t = e.sent), e.abrupt("break", 26);
                       case 18:
@@ -12254,7 +12257,7 @@
                       case 19:
                         return (o = e.sent), e.abrupt("break", 33);
                       case 21:
-                        return (e.next = 23), Fc(c, O, b, O === qs.Top ? t : a.created);
+                        return (e.next = 23), Dc(c, O, b, O === qs.Top ? t : a.created);
                       case 23:
                         return (o = e.sent), e.abrupt("break", 33);
                       case 25:
@@ -12291,12 +12294,12 @@
           }
           if (
             (Object(r.useEffect)(function () {
-              u && E.current.SetPreload(u, D, R);
+              u && E.current.SetPreload(u, F, R);
             }, []),
             Object(r.useEffect)(
               function () {
                 !(function () {
-                  F.apply(this, arguments);
+                  D.apply(this, arguments);
                 })();
               },
               [O, b]
@@ -12316,7 +12319,7 @@
                       y(parseInt(e.target.value));
                     }}
                   >
-                    {D.map(function (e, a) {
+                    {F.map(function (e, a) {
                       switch (e) {
                         case -1:
                           return (
@@ -12419,7 +12422,7 @@
                   {g ? null : (
                     <o.a.Fragment>
                       <div className="Bulletin-Item-Header-Icon" style={{ background: "#c23284" }}>
-                        <ar.dc />
+                        <ar.ec />
                       </div>
                       <h2 className="Bulletin-Item-Header-Title" id="updates">
                         Global Feed
@@ -12522,9 +12525,9 @@
         if (e.category === U.Changes) return <Ki.a />;
         switch (e.type) {
           case 82:
-            return <ar.mc />;
+            return <ar.nc />;
           default:
-            return e.type <= 15 ? <Vi.g /> : <ar.dc />;
+            return e.type <= 15 ? <Vi.g /> : <ar.ec />;
         }
       }
       function nc(e) {
@@ -13006,10 +13009,10 @@
         )).apply(this, arguments);
       }
       function Rc(e, a) {
-        return Dc.apply(this, arguments);
+        return Fc.apply(this, arguments);
       }
-      function Dc() {
-        return (Dc = Object(h.a)(
+      function Fc() {
+        return (Fc = Object(h.a)(
           p.a.mark(function e(a, t) {
             var n,
               r,
@@ -13057,7 +13060,7 @@
           })
         )).apply(this, arguments);
       }
-      function Fc(e, a) {
+      function Dc(e, a) {
         return Uc.apply(this, arguments);
       }
       function Uc() {
@@ -13794,7 +13797,7 @@
                 }}
                 className="Navigation-Button"
               >
-                <ar.eb className="Navigation-Toggle-Icon" />
+                <ar.fb className="Navigation-Toggle-Icon" />
               </button>
               {N}
             </div>
@@ -14175,9 +14178,9 @@
         return (
           <o.a.Fragment>
             <h3 className="Leaderboard-Header">
-              <ar.mb className="Leaderboard-Trophy" />
+              <ar.nb className="Leaderboard-Trophy" />
               MVP Voting
-              <ar.mb className="Leaderboard-Trophy" />
+              <ar.nb className="Leaderboard-Trophy" />
             </h3>
             <div className="Leaderboard-Description-Box">
               <div className="Leaderboard-Description">
@@ -14275,7 +14278,7 @@
                 className={"Leaderboard-Player-Wrapper" + (e.showIcons ? " Leaderboard-Player-Wrapper-WithIcon" : "")}
               >
                 <div className="Leaderboard-Icon-Wrapper">
-                  {e.showIcons && [].includes(e.info.place) ? <ar.Cb className="Leaderboard-Icon-Microphone" /> : null}
+                  {e.showIcons && [].includes(e.info.place) ? <ar.Db className="Leaderboard-Icon-Microphone" /> : null}
                   {e.showIcons && l.includes(e.info.place) ? (
                     <er.h className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Eclipse"} />
                   ) : null}
@@ -14285,7 +14288,7 @@
                   {e.showIcons && n.includes(e.info.place) ? (
                     <ar.m className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Birds"} />
                   ) : null}
-                  {e.showIcons && e.monitor ? <ar.ab className="Leaderboard-Icon-Monitor" /> : null}
+                  {e.showIcons && e.monitor ? <ar.bb className="Leaderboard-Icon-Monitor" /> : null}
                 </div>
                 <d
                   background={a}
@@ -14578,7 +14581,7 @@
         );
       };
       t(192);
-      function Dm(e) {
+      function Fm(e) {
         var a = Object(r.useContext)(L.context).user,
           t = Object(r.useContext)(I.context),
           n = t.postseason.round,
@@ -14612,7 +14615,7 @@
           (<div className="PlayoffSetup-Navigation">{i}</div>)
         );
       }
-      function Fm(e) {
+      function Dm(e) {
         var a = Object(r.useContext)(I.context),
           t = a.postseason.allRounds,
           n = a.postseason.allMatchups;
@@ -14780,8 +14783,8 @@
             l = t[1];
           return void 0 === e || void 0 === e.postseason.round ? null : (
             <div className="PlayoffSetup">
-              <Dm index={n} setIndex={l} />
-              <Fm roundNumber={n} />
+              <Fm index={n} setIndex={l} />
+              <Dm roundNumber={n} />
             </div>
           );
         };
@@ -16135,7 +16138,7 @@
           R = A.teams.find(function (e) {
             return e.id === m;
           }),
-          D = xn(m, A);
+          F = xn(m, A);
         Object(r.useEffect)(
           function () {
             P();
@@ -16347,15 +16350,15 @@
                       </div>
                     ) : null}
                     {v.idol === e.id ? <tm aria-hidden="true" style={{ height: "25px", width: "25px" }} /> : ""}
-                    {e.gameAttr.includes("WIRED") ? <ar.B className="ModalItem-Icons-Wired" aria-hidden="true" /> : ""}
-                    {e.gameAttr.includes("TIRED") ? <ar.B className="ModalItem-Icons-Tired" aria-hidden="true" /> : ""}
+                    {e.gameAttr.includes("WIRED") ? <ar.C className="ModalItem-Icons-Wired" aria-hidden="true" /> : ""}
+                    {e.gameAttr.includes("TIRED") ? <ar.C className="ModalItem-Icons-Tired" aria-hidden="true" /> : ""}
                     {e.permAttr.includes("COFFEE_RALLY") ? (
-                      <ar.B className="ModalItem-Icons-Refills" aria-hidden="true" />
+                      <ar.C className="ModalItem-Icons-Refills" aria-hidden="true" />
                     ) : (
                       ""
                     )}
                     {e.permAttr.includes("TRIPLE_THREAT") ? (
-                      <ar.B className="ModalItem-Icons-Threes" aria-hidden="true" />
+                      <ar.C className="ModalItem-Icons-Threes" aria-hidden="true" />
                     ) : (
                       ""
                     )}{" "}
@@ -16404,15 +16407,15 @@
                       </div>
                     ) : null}
                     {v.idol === e.id ? <tm aria-hidden="true" style={{ height: "25px", width: "25px" }} /> : ""}
-                    {e.gameAttr.includes("WIRED") ? <ar.B className="ModalItem-Icons-Wired" aria-hidden="true" /> : ""}
-                    {e.gameAttr.includes("TIRED") ? <ar.B className="ModalItem-Icons-Tired" aria-hidden="true" /> : ""}
+                    {e.gameAttr.includes("WIRED") ? <ar.C className="ModalItem-Icons-Wired" aria-hidden="true" /> : ""}
+                    {e.gameAttr.includes("TIRED") ? <ar.C className="ModalItem-Icons-Tired" aria-hidden="true" /> : ""}
                     {e.permAttr.includes("COFFEE_RALLY") ? (
-                      <ar.B className="ModalItem-Icons-Refills" aria-hidden="true" />
+                      <ar.C className="ModalItem-Icons-Refills" aria-hidden="true" />
                     ) : (
                       ""
                     )}
                     {e.permAttr.includes("TRIPLE_THREAT") ? (
-                      <ar.B className="ModalItem-Icons-Threes" aria-hidden="true" />
+                      <ar.C className="ModalItem-Icons-Threes" aria-hidden="true" />
                     ) : (
                       ""
                     )}{" "}
@@ -16458,15 +16461,15 @@
                       </div>
                     ) : null}
                     {v.idol === e.id ? <tm aria-hidden="true" style={{ height: "25px", width: "25px" }} /> : ""}
-                    {e.gameAttr.includes("WIRED") ? <ar.B className="ModalItem-Icons-Wired" aria-hidden="true" /> : ""}
-                    {e.gameAttr.includes("TIRED") ? <ar.B className="ModalItem-Icons-Tired" aria-hidden="true" /> : ""}
+                    {e.gameAttr.includes("WIRED") ? <ar.C className="ModalItem-Icons-Wired" aria-hidden="true" /> : ""}
+                    {e.gameAttr.includes("TIRED") ? <ar.C className="ModalItem-Icons-Tired" aria-hidden="true" /> : ""}
                     {e.permAttr.includes("COFFEE_RALLY") ? (
-                      <ar.B className="ModalItem-Icons-Refills" aria-hidden="true" />
+                      <ar.C className="ModalItem-Icons-Refills" aria-hidden="true" />
                     ) : (
                       ""
                     )}
                     {e.permAttr.includes("TRIPLE_THREAT") ? (
-                      <ar.B className="ModalItem-Icons-Threes" aria-hidden="true" />
+                      <ar.C className="ModalItem-Icons-Threes" aria-hidden="true" />
                     ) : (
                       ""
                     )}{" "}
@@ -16507,15 +16510,15 @@
                       </div>
                     ) : null}
                     {v.idol === e.id ? <tm aria-hidden="true" style={{ height: "25px", width: "25px" }} /> : ""}
-                    {e.gameAttr.includes("WIRED") ? <ar.B className="ModalItem-Icons-Wired" aria-hidden="true" /> : ""}
-                    {e.gameAttr.includes("TIRED") ? <ar.B className="ModalItem-Icons-Tired" aria-hidden="true" /> : ""}
+                    {e.gameAttr.includes("WIRED") ? <ar.C className="ModalItem-Icons-Wired" aria-hidden="true" /> : ""}
+                    {e.gameAttr.includes("TIRED") ? <ar.C className="ModalItem-Icons-Tired" aria-hidden="true" /> : ""}
                     {e.permAttr.includes("COFFEE_RALLY") ? (
-                      <ar.B className="ModalItem-Icons-Refills" aria-hidden="true" />
+                      <ar.C className="ModalItem-Icons-Refills" aria-hidden="true" />
                     ) : (
                       ""
                     )}
                     {e.permAttr.includes("TRIPLE_THREAT") ? (
-                      <ar.B className="ModalItem-Icons-Threes" aria-hidden="true" />
+                      <ar.C className="ModalItem-Icons-Threes" aria-hidden="true" />
                     ) : (
                       ""
                     )}{" "}
@@ -16549,13 +16552,13 @@
               </o.a.Fragment>
             ) : null,
           J = An(R.id, u.standings),
-          K = (D && (hn(J), gu(m, u, A)), D ? <div className="Team-Card"> {jn(R.card).join(" ")} </div> : null),
+          K = (F && (hn(J), gu(m, u, A)), F ? <div className="Team-Card"> {jn(R.card).join(" ")} </div> : null),
           Z = !1;
-        ((null === (a = u.sim) || void 0 === a ? void 0 : a.phase) !== F.Earlseason &&
-          (null === (t = u.sim) || void 0 === t ? void 0 : t.phase) !== F.Midseason &&
-          (null === (n = u.sim) || void 0 === n ? void 0 : n.phase) !== F.Lateseason &&
-          (null === (l = u.sim) || void 0 === l ? void 0 : l.phase) !== F.EarlyPostseason &&
-          (null === (i = u.sim) || void 0 === i ? void 0 : i.phase) !== F.Postseason) ||
+        ((null === (a = u.sim) || void 0 === a ? void 0 : a.phase) !== D.Earlseason &&
+          (null === (t = u.sim) || void 0 === t ? void 0 : t.phase) !== D.Midseason &&
+          (null === (n = u.sim) || void 0 === n ? void 0 : n.phase) !== D.Lateseason &&
+          (null === (l = u.sim) || void 0 === l ? void 0 : l.phase) !== D.EarlyPostseason &&
+          (null === (i = u.sim) || void 0 === i ? void 0 : i.phase) !== D.Postseason) ||
           null === u ||
           void 0 === u ||
           null === (j = u.schedule) ||
@@ -16672,7 +16675,7 @@
           (G = (
             <o.a.Fragment>
               <div className="ModalItem-Info">
-                {D ? null : <div className="Team-Header-NotInLeague">WARNING: ACCESS RESTRICTED</div>}
+                {F ? null : <div className="Team-Header-NotInLeague">WARNING: ACCESS RESTRICTED</div>}
                 <div className="Team-Header">
                   <div className="Team-LogoLine-Wrapper">
                     <div className="Team-LogoLine">
@@ -16705,7 +16708,7 @@
                   </ru.a.Item>
                   {V ? (
                     <ru.a.Item>
-                      {D ? (
+                      {F ? (
                         <ru.a.Link eventKey="Stadium">Ballpark</ru.a.Link>
                       ) : (
                         <ru.a.Link className="ModalTabs-StadiumTab" eventKey="Stadium">
@@ -16732,7 +16735,7 @@
                       </div>
                       {void 0 !== v.snacks.Forbidden_Knowledge_Access && R.id === v.favoriteTeam ? (
                         <div className="Team-Section-Shadows">
-                          <ar.Jc
+                          <ar.Kc
                             onClick={function (e) {
                               x(!0);
                             }}
@@ -16851,7 +16854,7 @@
                             <div className="Player-Info-Line-Header">Tiebreaker Place</div>
                             <div className="Player-Info-Line-Body">{gu(m, u, A)}</div>
                           </div>
-                          {D ? (
+                          {F ? (
                             <div className="Player-Info-Line">
                               <div className="Player-Info-Line-Header">Tarot Card</div>
                               <div className="Player-Info-Line-Body">{jn(R.card).join(" ")}</div>
@@ -16972,7 +16975,7 @@
             R = function (e) {
               w(e);
             };
-          var D = function (e) {
+          var F = function (e) {
               var a = e.id,
                 t = e.modifier,
                 n = e.color,
@@ -17012,7 +17015,7 @@
                 </div>
               );
             },
-            F = (
+            D = (
               <span
                 style={{
                   color: (function (e) {
@@ -17055,7 +17058,7 @@
             y &&
               (P = (
                 <div className="ModalForm-Outcome-Wrapper">
-                  You'll have a {F} chance to win {U} coins.
+                  You'll have a {D} chance to win {U} coins.
                 </div>
               )),
             (
@@ -17096,14 +17099,14 @@
                 >
                   <qi.a.Label>Pick a team:</qi.a.Label>
                   <qi.a.Group className="ModalForm-Form-Teams" controlId="team">
-                    <D
+                    <F
                       id={S.homeTeam}
                       color={S.homeTeamSecondaryColor}
                       modifier="Home"
                       name={S.homeTeamNickname}
                       odds={S.homeOdds}
                     />
-                    <D
+                    <F
                       id={S.awayTeam}
                       color={S.awayTeamSecondaryColor}
                       modifier="Away"
@@ -17242,11 +17245,11 @@
             return Object(N.a)({}, a);
           },
           R = null,
-          D = "",
-          F = T ? "vertical" : "horizontal";
+          F = "",
+          D = T ? "vertical" : "horizontal";
         switch (m) {
           case "snacks":
-            (D = "Snacks"),
+            (F = "Snacks"),
               (R = (
                 <o.a.Fragment>
                   <vu.a
@@ -17261,7 +17264,7 @@
                       }
                     }}
                   >
-                    <vu.c droppableId="Snacks" direction={F}>
+                    <vu.c droppableId="Snacks" direction={D}>
                       {function (e) {
                         return (
                           <div {...Object.assign({ className: "Reorder-Snacks", ref: e.innerRef }, e.droppableProps)}>
@@ -17390,7 +17393,7 @@
               ));
             break;
           case "cards":
-            (D = "Cards"),
+            (F = "Cards"),
               (R = (
                 <o.a.Fragment>
                   <vu.a
@@ -17405,7 +17408,7 @@
                       }
                     }}
                   >
-                    <vu.c droppableId="Spread" direction={F}>
+                    <vu.c droppableId="Spread" direction={D}>
                       {function (e) {
                         return (
                           <div {...Object.assign({ className: "Reorder-Spread", ref: e.innerRef }, e.droppableProps)}>
@@ -17507,7 +17510,7 @@
         Math.floor(n.coins / 10);
         return (
           <tu {...Object.assign({}, e, { className: "BatchBuy" })}>
-            <div className="ModalForm-Header">Reorder {D}</div>
+            <div className="ModalForm-Header">Reorder {F}</div>
             <div className="Account-Miniheader">
               <To.a /> Drag to reorder <To.c />
             </div>
@@ -17544,7 +17547,7 @@
           M = Object(r.useState)(wu(m, k)),
           x = Object(s.a)(M, 2),
           R = x[0],
-          D = x[1],
+          F = x[1],
           U = Object(r.useState)(Q.AD),
           P = Object(s.a)(U, 2),
           W = P[0],
@@ -17583,7 +17586,7 @@
         q[0], q[1];
         Object(r.useEffect)(
           function () {
-            W === Q.AD && (G(parseInt(e)), K(W), D(wu(m, k)));
+            W === Q.AD && (G(parseInt(e)), K(W), F(wu(m, k)));
           },
           [e, B]
         ),
@@ -17595,7 +17598,7 @@
           ),
           Object(r.useEffect)(
             function () {
-              K(W), D(wu(m, k));
+              K(W), F(wu(m, k));
             },
             [k, B]
           ),
@@ -17867,7 +17870,7 @@
                 </Zn.a>
               </div>
             </_n.a>
-          ) : e.id === Q.TAROT && E >= F.EarlySiesta ? (
+          ) : e.id === Q.TAROT && E >= D.EarlySiesta ? (
             <_n.a
               placement="top"
               overlay={
@@ -18683,7 +18686,7 @@
               a,
               "Wet Pretzel",
               X.blackHoleTiers,
-              <Da className="Shop-Item-Icon" />,
+              <Fa className="Shop-Item-Icon" />,
               "Earn {FT} coins for every time the Black Hole swallows a Win from any Team.",
               "Earn {NT} coins for every time the Black Hole swallows a Win from any Team. You currently earn {CT} coins per Black Hole.",
               "Refreshing. Earn {CT} coins for every time the Black Hole swallows a Win from any Team. You are maxed out."
@@ -19112,7 +19115,7 @@
                     }
                   >
                     <div className="ModalForm-Ticket-Wrapper">
-                      <ar.Fc className="ModalForm-Ticket-Icon" />
+                      <ar.Gc className="ModalForm-Ticket-Icon" />
                       {n.snacks[ee.VOTES]}
                     </div>
                     <qi.a.Control type="number" value={A} onChange={y} />
@@ -19724,10 +19727,10 @@
           </o.a.Fragment>
         );
       };
-      function Du(e) {
+      function Fu(e) {
         if (void 0 !== En(e)) return <span className="Events-List-Image">{En(e)}</span>;
       }
-      var Fu,
+      var Du,
         Uu = function (e) {
           var a = e.event,
             t = void 0 !== a.metadata.coinsBefore ? a.metadata.coinsAfter - a.metadata.coinsBefore : 0,
@@ -19788,7 +19791,7 @@
                           <span className="Events-List-Row">
                             <span className="Events-List-Row Events-List-Row-Group">
                               {c.snackBefore}
-                              {Du(c.snackId)}
+                              {Fu(c.snackId)}
                             </span>
                             <To.b className="Events-List-Row-Group" />
                             <span
@@ -19798,7 +19801,7 @@
                               }
                             >
                               {c.snackAfter}
-                              {Du(c.snackId)}
+                              {Fu(c.snackId)}
                             </span>
                           </span>
                         )}
@@ -19896,7 +19899,7 @@
         (e[(e.NewestFirst = 0)] = "NewestFirst"),
           (e[(e.OldestFirst = 1)] = "OldestFirst"),
           (e[(e.Peanuts = 2)] = "Peanuts");
-      })(Fu || (Fu = {}));
+      })(Du || (Du = {}));
       var Gu = function e() {
           Object(K.a)(this, e), (this.events = []), (this.loading = !0), (this.noMoreToLoad = !1);
         },
@@ -19950,7 +19953,7 @@
             d = Object(s.a)(u, 2),
             A = d[0],
             g = d[1],
-            E = Object(r.useState)(null !== c && void 0 !== c ? c : Fu.NewestFirst),
+            E = Object(r.useState)(null !== c && void 0 !== c ? c : Du.NewestFirst),
             f = Object(s.a)(E, 2),
             v = f[0],
             b = f[1],
@@ -19961,7 +19964,7 @@
             S = null === (a = e.showButtons) || void 0 === a || a,
             I = null === (t = e.showSort) || void 0 === t || t,
             T = null === (n = e.showCategory) || void 0 === n || n,
-            k = null !== (l = e.sortOptions) && void 0 !== l ? l : [Fu.NewestFirst, Fu.OldestFirst],
+            k = null !== (l = e.sortOptions) && void 0 !== l ? l : [Du.NewestFirst, Du.OldestFirst],
             C = [-1, P.ShopTransactions, P.OtherTransactions, P.Rewards, P.Contributions];
           function M() {
             return (M = Object(h.a)(
@@ -20095,10 +20098,10 @@
                   >
                     {k.map(function (e) {
                       switch (e) {
-                        case Fu.NewestFirst:
-                          return <option value={Fu.NewestFirst}>Newest First</option>;
-                        case Fu.OldestFirst:
-                          return <option value={Fu.OldestFirst}>Oldest First</option>;
+                        case Du.NewestFirst:
+                          return <option value={Du.NewestFirst}>Newest First</option>;
+                        case Du.OldestFirst:
+                          return <option value={Du.OldestFirst}>Oldest First</option>;
                       }
                       return null;
                     })}
@@ -20215,7 +20218,7 @@
             })()();
           }, []);
           var R = <Yi />,
-            D = (function () {
+            F = (function () {
               var e = Object(h.a)(
                 p.a.mark(function e(t) {
                   return p.a.wrap(function (e) {
@@ -20455,7 +20458,7 @@
             G = 7 - Object.keys(n.snacks).length,
             V = [];
           if (G > 0) for (var j = 0; j < G; j++) V.push(<div className="Account-Inventory-Slot" />);
-          var Y = m.sim.phase < F.EarlySiesta,
+          var Y = m.sim.phase < D.EarlySiesta,
             z = null;
           return (
             (z =
@@ -20553,7 +20556,7 @@
                             <li className="Account-Info-List-Item">
                               <div className="Account-Info-List-Header">Coins</div>
                               <div className="Account-Info-List-Body">{n.coins}</div>
-                              <qi.a className="Account-Refresh" onSubmit={D}>
+                              <qi.a className="Account-Refresh" onSubmit={F}>
                                 <div className="Account-Refresh-Wrapper">
                                   {void 0 !== n.snacks[ee.BEG] ? (
                                     n.coins > 0 ? (
@@ -21642,7 +21645,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Dd(e, a) {
+      function Fd(e, a) {
         if (null == e) return {};
         var t,
           n,
@@ -21662,10 +21665,10 @@
         }
         return r;
       }
-      function Fd(e, a) {
+      function Dd(e, a) {
         var t = e.title,
           n = e.titleId,
-          o = Dd(e, ["title", "titleId"]);
+          o = Fd(e, ["title", "titleId"]);
         return (
           <svg
             {...Rd(
@@ -21698,7 +21701,7 @@
         );
       }
       var Ud,
-        Pd = r.forwardRef(Fd);
+        Pd = r.forwardRef(Dd);
       t.p;
       function Wd() {
         return (Wd =
@@ -22236,7 +22239,7 @@
           case "distribute_shoes":
             return <Ht className="Decrees-Option-Icon" />;
           case "distribute_gloves":
-            return <Ft className="Decrees-Option-Icon" />;
+            return <Dt className="Decrees-Option-Icon" />;
           case "goodie_bags":
             return <cA className="Decrees-Option-Icon" />;
           case "gift_baskets":
@@ -22364,7 +22367,7 @@
         }
         return r;
       }
-      function DA(e, a) {
+      function FA(e, a) {
         var t = e.title,
           n = e.titleId,
           o = RA(e, ["title", "titleId"]);
@@ -22388,12 +22391,12 @@
           </svg>
         );
       }
-      var FA,
-        UA = r.forwardRef(DA);
+      var DA,
+        UA = r.forwardRef(FA);
       t.p;
       !(function (e) {
         (e[(e.DECREE = 0)] = "DECREE"), (e[(e.BONUS = 1)] = "BONUS"), (e[(e.WILL = 2)] = "WILL");
-      })(FA || (FA = {}));
+      })(DA || (DA = {}));
       var PA = function () {
           return (
             <a href="/login">
@@ -22504,7 +22507,7 @@
                   }}
                 >
                   {i ? (
-                    <d background={A} path={"/vote/".concat(FA.WILL, "/").concat(i)}>
+                    <d background={A} path={"/vote/".concat(DA.WILL, "/").concat(i)}>
                       Submit Will Vote
                     </d>
                   ) : (
@@ -22826,7 +22829,7 @@
             </div>
           ),
           R = !0,
-          D = (
+          F = (
             <div className="Recap-Results" ref={l} style={{ marginTop: "-70px", paddingTop: "70px" }}>
               <h2 className="Recap-ResultsHeader" id="Wills">
                 Wills
@@ -22846,7 +22849,7 @@
               {R ? <div className="Recap-NoneFound">No Wills found...</div> : null}
             </div>
           ),
-          F = !0,
+          D = !0,
           U = (
             <div className="Recap-Results">
               <h2
@@ -22860,7 +22863,7 @@
               {y.map(function (e) {
                 if (S && !e.teamTags.includes(T)) return null;
                 if (60 !== e.type) return null;
-                F && (F = !1);
+                D && (D = !1);
                 var a = e.metadata.children,
                   t = a
                     ? y.filter(function (e) {
@@ -22869,7 +22872,7 @@
                     : [];
                 return <HA event={e} subEvents={t} />;
               })}
-              {F ? <div className="Recap-NoneFound">No Blessings found...</div> : null}
+              {D ? <div className="Recap-NoneFound">No Blessings found...</div> : null}
             </div>
           ),
           P = null === U && null === x ? <div className="Recap-Note">Nothing happened in this Election.</div> : null;
@@ -22920,7 +22923,7 @@
                 <div className="Recap-Body">
                   {M}
                   {x}
-                  {D}
+                  {F}
                   {U}
                   {P}
                 </div>
@@ -23207,7 +23210,7 @@
                       }
                     >
                       <div className="ModalForm-Ticket-Wrapper">
-                        <ar.Qb className="ModalForm-Ticket-Icon" />
+                        <ar.Rb className="ModalForm-Ticket-Icon" />
                         {n.snacks.Peanuts}
                       </div>
                       <qi.a.Control type="number" value={A} onChange={y} />
@@ -23286,8 +23289,8 @@
           M = k[1],
           x = Object(r.useState)(void 0),
           R = Object(s.a)(x, 2),
-          D = R[0],
-          F = R[1],
+          F = R[0],
+          D = R[1],
           U = Object(r.useState)([]),
           P = Object(s.a)(U, 2),
           W = P[0],
@@ -23339,9 +23342,9 @@
           xe = Object(r.useState)([]),
           Le = Object(s.a)(xe, 2),
           Re = Le[0],
-          De = Le[1],
-          Fe = Object(r.useState)(""),
-          Ue = Object(s.a)(Fe, 2),
+          Fe = Le[1],
+          De = Object(r.useState)(""),
+          Ue = Object(s.a)(De, 2),
           Pe = Ue[0],
           Ge = Ue[1];
         Object(r.useEffect)(function () {
@@ -23379,7 +23382,7 @@
                               case 0:
                                 return (a = ""), n.favoriteTeam && (a = n.favoriteTeam), (e.next = 4), Qc(a);
                               case 4:
-                                void 0 !== (t = e.sent) && F(t);
+                                void 0 !== (t = e.sent) && D(t);
                               case 6:
                               case "end":
                                 return e.stop();
@@ -23426,7 +23429,7 @@
                       (e === ap.Defense || e >= 4) && a.push({ id: ap.Defense, name: "Defense" });
                       return a;
                     })(a.filters.ratings);
-                    De(i);
+                    Fe(i);
                   }
                 });
               }
@@ -23508,8 +23511,8 @@
                           C.info.forEach(function (e, t) {
                             if (e.type === ep.TeamDropdown)
                               W === [] || void 0 === W || W.length < 1
-                                ? G(Fn(d, e, a))
-                                : (Y === [] || void 0 === Y || Y.length < 1) && Q(Fn(d, e, a));
+                                ? G(Dn(d, e, a))
+                                : (Y === [] || void 0 === Y || Y.length < 1) && Q(Dn(d, e, a));
                             else if (e.type === ep.PlayerDropdown && "idolsBoard" === e.filters.leagueLocation) {
                               var n = [];
                               A.topIdols.forEach(function (e) {
@@ -23809,9 +23812,9 @@
               </o.a.Fragment>
             ) : null,
           ta =
-            null === D || void 0 === D
+            null === F || void 0 === F
               ? void 0
-              : D.wills.find(function (e) {
+              : F.wills.find(function (e) {
                   return e.id === C.id;
                 }),
           na = ta ? ta.percent : 0;
@@ -25780,7 +25783,7 @@
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#1b95e0" }}>
-                  <ar.Nb />
+                  <ar.Ob />
                 </div>
                 <h2 className="Bulletin-Item-Header-Title" id="community">
                   Art Gallery
@@ -26184,7 +26187,7 @@
               <o.a.Fragment>
                 <div className="Bulletin-Item-Header">
                   <div className="Bulletin-Item-Header-Icon" style={{ background: "#0eb854", color: "#323d20" }}>
-                    <ar.tb />
+                    <ar.ub />
                   </div>
                   <h2 className="Bulletin-Item-Header-Title" id="actions">
                     Actions
@@ -26198,11 +26201,11 @@
         var T,
           k =
             void 0 === (T = null === g || void 0 === g ? void 0 : g.sim) ||
-            (T.phase !== F.Earlseason &&
-              T.phase !== F.Midseason &&
-              T.phase !== F.Lateseason &&
-              T.phase !== F.EarlyPostseason &&
-              T.phase !== F.Postseason) ||
+            (T.phase !== D.Earlseason &&
+              T.phase !== D.Midseason &&
+              T.phase !== D.Lateseason &&
+              T.phase !== D.EarlyPostseason &&
+              T.phase !== D.Postseason) ||
             O ||
             null === g ||
             void 0 === g ||
@@ -26239,7 +26242,7 @@
                 <div className="Bulletin-Widget-NoGame">
                   <d background={f} path={"/team/".concat(C.id)} className="Bulletin-Widget-Team">
                     <div className="Bulletin-Widget-ScoreTeamColorBar" style={{ background: C.mainColor }}>
-                      {Dn(C.emoji)}
+                      {Fn(C.emoji)}
                     </div>
                     <div
                       className="Bulletin-Widget-ScoreName"
@@ -26266,10 +26269,10 @@
           var R = k.isPostseason
               ? "to ".concat(k.seriesLength)
               : "".concat(k.seriesIndex, " of ").concat(k.seriesLength),
-            D = k.homeScore,
+            F = k.homeScore,
             P = k.awayScore,
-            W = D > P && k.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {},
-            G = P > D && k.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {},
+            W = F > P && k.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {},
+            G = P > F && k.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {},
             V = Ri(k, g.standings),
             j = xi(k),
             Y = null,
@@ -26316,7 +26319,7 @@
                       aria-hidden={!0}
                       style={{ background: k.awayTeamColor }}
                     >
-                      {Dn(k.awayTeamEmoji)}
+                      {Fn(k.awayTeamEmoji)}
                     </div>
                     <div className="GameWidget-ScoreTeam">
                       <div
@@ -26363,7 +26366,7 @@
                       aria-hidden={!0}
                       style={{ background: k.homeTeamColor }}
                     >
-                      {Dn(k.homeTeamEmoji)}
+                      {Fn(k.homeTeamEmoji)}
                     </div>
                     <div className="GameWidget-ScoreTeam">
                       <div
@@ -26445,7 +26448,7 @@
           <o.a.Fragment>
             <div className="Bulletin-Item-Header">
               <div className="Bulletin-Item-Header-Icon" style={{ background: "#4b35b4", color: "#efecff" }}>
-                <ar.Ub />
+                <ar.Vb />
               </div>
               <h2 className="Bulletin-Item-Header-Title" id="actions">
                 Recap
@@ -26578,8 +26581,8 @@
           t + "/" + n + " " + r + l
         );
       }
-      var Dp = { player: void 0, team: void 0, tourneyTeam: void 0 };
-      function Fp(e, a, t) {
+      var Fp = { player: void 0, team: void 0, tourneyTeam: void 0 };
+      function Dp(e, a, t) {
         return a.evolution < t
           ? ((n = t),
             (
@@ -26721,7 +26724,7 @@
             M,
             x,
             R,
-            D,
+            F,
             P,
             W,
             G,
@@ -26759,7 +26762,7 @@
             ve = Object(c.h)().id,
             be = Object(r.useContext)(I.context),
             ye = Object(r.useContext)(Wo.context),
-            we = Object(r.useState)(Dp),
+            we = Object(r.useState)(Fp),
             Be = Object(s.a)(we, 2),
             Oe = Be[0],
             Se = Be[1],
@@ -26772,8 +26775,8 @@
             xe = Me[0],
             Le = (Me[1], Object(r.useState)(1)),
             Re = Object(s.a)(Le, 2),
-            De = (Re[0], Re[1], Object(c.g)());
-          function Fe(e) {
+            Fe = (Re[0], Re[1], Object(c.g)());
+          function De(e) {
             if (null !== e)
               return ye.teams.find(function (a) {
                 return a.id === e;
@@ -26794,8 +26797,8 @@
                             void 0 !== (a = e.sent) &&
                               1 == a.length &&
                               ((t = a[0]),
-                              (n = Fe(t.leagueTeamId)),
-                              (r = Fe(t.tournamentTeamId)),
+                              (n = De(t.leagueTeamId)),
+                              (r = De(t.tournamentTeamId)),
                               Se({ player: t, team: n, tourneyTeam: r }));
                           case 4:
                           case "end":
@@ -26827,7 +26830,7 @@
                     ) : (
                       <d
                         className="ModalItem-Button-Tribute"
-                        background={De}
+                        background={Fe}
                         path={"/tribute/".concat(null === Oe || void 0 === Oe ? void 0 : Oe.player.id)}
                       >
                         <ba className="ModalItem-Icon" /> Pay Tribute
@@ -26960,11 +26963,11 @@
               Mn(null === Oe || void 0 === Oe ? void 0 : Oe.player, "RETIRED") ||
               Mn(null === Oe || void 0 === Oe ? void 0 : Oe.player, "COFFEE_EXIT"),
             je = !1;
-          ((null === (a = be.sim) || void 0 === a ? void 0 : a.phase) !== F.Earlseason &&
-            (null === (t = be.sim) || void 0 === t ? void 0 : t.phase) !== F.Midseason &&
-            (null === (n = be.sim) || void 0 === n ? void 0 : n.phase) !== F.Lateseason &&
-            (null === (l = be.sim) || void 0 === l ? void 0 : l.phase) !== F.EarlyPostseason &&
-            (null === (i = be.sim) || void 0 === i ? void 0 : i.phase) !== F.Postseason) ||
+          ((null === (a = be.sim) || void 0 === a ? void 0 : a.phase) !== D.Earlseason &&
+            (null === (t = be.sim) || void 0 === t ? void 0 : t.phase) !== D.Midseason &&
+            (null === (n = be.sim) || void 0 === n ? void 0 : n.phase) !== D.Lateseason &&
+            (null === (l = be.sim) || void 0 === l ? void 0 : l.phase) !== D.EarlyPostseason &&
+            (null === (i = be.sim) || void 0 === i ? void 0 : i.phase) !== D.Postseason) ||
             null === be ||
             void 0 === be ||
             null === (Ue = be.schedule) ||
@@ -27308,8 +27311,8 @@
                   <div className="Player-Info-Items">
                     {(function (e, a) {
                       var t = [];
-                      return t.push(Fp(e, a, 2)), t.push(Fp(e, a, 1)), t.push(Fp(e, a, 3)), t.push(Fp(e, a, 0)), t;
-                    })(De, null === Oe || void 0 === Oe ? void 0 : Oe.player)}
+                      return t.push(Dp(e, a, 2)), t.push(Dp(e, a, 1)), t.push(Dp(e, a, 3)), t.push(Dp(e, a, 0)), t;
+                    })(Fe, null === Oe || void 0 === Oe ? void 0 : Oe.player)}
                   </div>
                 </div>
               ) : null,
@@ -27424,7 +27427,7 @@
                                   <Up
                                     value={Oe.player.groundFriction}
                                     color={null === (R = Oe.team) || void 0 === R ? void 0 : R.mainColor}
-                                    secondColor={null === (D = Oe.team) || void 0 === D ? void 0 : D.secondaryColor}
+                                    secondColor={null === (F = Oe.team) || void 0 === F ? void 0 : F.secondaryColor}
                                   />
                                 </li>
                                 <li className="Player-Info-Line Player-Info-Line-Advanced">
@@ -27735,7 +27738,7 @@
                       for (;;)
                         switch ((e.prev = e.next)) {
                           case 0:
-                            return (e.next = 2), Fc(g, qs.OldestFirst);
+                            return (e.next = 2), Dc(g, qs.OldestFirst);
                           case 2:
                             (a = e.sent) &&
                               (A(a),
@@ -29338,8 +29341,8 @@
           x = "";
         M.onFirst && (x += " first"), M.onSecond && (x += " second"), M.onThird && (x += " third");
         var R,
-          D,
           F,
+          D,
           U,
           P = <div className="BossFightWidget-Outs">{m}</div>,
           W = Object(c.g)(),
@@ -29395,7 +29398,7 @@
               <div className="BossFightWidget-Outcome-Blurb">
                 The{" "}
                 {
-                  ((F = C()),
+                  ((D = C()),
                   (U = Q) > 0.25
                     ? (function (e) {
                         switch (e) {
@@ -29405,7 +29408,7 @@
                             return "heavily but mildly flavored";
                         }
                         return "heavily favored";
-                      })(F)
+                      })(D)
                     : U > 0
                     ? (function (e) {
                         switch (e) {
@@ -29415,7 +29418,7 @@
                             return "mildly flavored";
                         }
                         return "favored";
-                      })(F)
+                      })(D)
                     : U < -0.25
                     ? "heavy underdog"
                     : U < 0
@@ -29438,10 +29441,10 @@
                     className="BossFightWidget-Outcome-Callout"
                     style={{
                       color:
-                        ((D = k()),
-                        D === n.homeTeam
+                        ((F = k()),
+                        F === n.homeTeam
                           ? n.homeTeamSecondaryColor
-                          : D === n.awayTeam
+                          : F === n.awayTeam
                           ? n.awayTeamSecondaryColor
                           : "Null Color"),
                     }}
@@ -29555,7 +29558,7 @@
           J = Hp(n.awayHp, n.awayMaxHp),
           K = (
             <div className={"BossFightWidget-ScoreTeamColorBar" + v} style={{ background: n.homeTeamColor }}>
-              {Dn(n.homeTeamEmoji)}
+              {Fn(n.homeTeamEmoji)}
             </div>
           ),
           Z = (
@@ -29565,7 +29568,7 @@
           ),
           X = (
             <div className={"BossFightWidget-ScoreTeamColorBar" + B} style={{ background: n.awayTeamColor }}>
-              {Dn(n.awayTeamEmoji)}
+              {Fn(n.awayTeamEmoji)}
             </div>
           ),
           _ = (
@@ -29596,10 +29599,10 @@
         return (
           <div className={"BossFightWidget ".concat(l.complete ? "IsComplete" : "")}>
             <div className={"BossFightWidget-Weather" + ae}>
-              {te > 0 ? <ar.ab className="BossFightWidget-UnknownEntity" style={{ opacity: te }} /> : null}
+              {te > 0 ? <ar.bb className="BossFightWidget-UnknownEntity" style={{ opacity: te }} /> : null}
               <div className="BossFightWidget-Enemy">
                 <div className="BossFightWidget-Enemy-Icon">
-                  <ar.Qb />
+                  <ar.Rb />
                 </div>
                 <div className="BossFightWidget-Enemy-Body">
                   <div className="BossFightWidget-Enemy-RedLine">
@@ -29982,7 +29985,7 @@
                 element={
                   <div className="Stubs-All">
                     <h2 className="League-Header">{null === n || void 0 === n ? void 0 : n.name}</h2>
-                    <ar.B className="Stubs-Cup" />
+                    <ar.C className="Stubs-Cup" />
                     <div className="League-Info-Body">
                       Congratulations to your {null === n || void 0 === n ? void 0 : n.name} Champions{" "}
                       <div className="League-Info-Callout" style={{ color: c }}>
@@ -30924,24 +30927,24 @@
               Something went wrong...
             </div>
           );
-          var D = (
+          var F = (
             <o.a.Fragment>
               <Sh stadium={R} />
               {x}
             </o.a.Fragment>
           );
-          return <tu {...Object.assign({}, e, { className: "ModalItem" })}>{D}</tu>;
+          return <tu {...Object.assign({}, e, { className: "ModalItem" })}>{F}</tu>;
         };
-      function Dh() {
+      function Fh() {
         var e = Object(r.useContext)(Cs.context);
         return (
           <div className={"Main" + (e && e.doc && e.doc.epsilon ? " Main-BigDeal" : "")}>
             <Qm />
-            <Fh />
+            <Dh />
           </div>
         );
       }
-      function Fh() {
+      function Dh() {
         var e = Object(r.useContext)(L.context).user,
           a = Object(r.useContext)(Cs.context),
           t = Object(r.useState)(!1),
@@ -31282,7 +31285,7 @@
       var jh = function () {
         return (
           <L>
-            <Dh />
+            <Fh />
           </L>
         );
       };
@@ -32377,11 +32380,11 @@
           },
           {
             id: "SALMON_CANNONS",
-            color: "#ffffff",
-            textColor: "#ffffff",
-            background: "#000000",
+            color: "#ffb0c6",
+            textColor: "#ffb0c6",
+            background: "#2a292e",
             title: "Salmon Cannons",
-            description: "",
+            description: "Salmon Cannons have a chance of expelling pests from your Ballpark.",
           },
           {
             id: "EVENT_HORIZON",
@@ -32444,11 +32447,12 @@
           },
           {
             id: "SWEETENER",
-            color: "#ffffff",
-            textColor: "#ffffff",
-            background: "#000000",
+            color: "#fffcad",
+            textColor: "#fffcad",
+            background: "#4a2f40",
             title: "Sweetener",
-            description: "",
+            description:
+              "Sweetener makes Beanings & Free Refills more likely in Coffee & Coffee Two weathers, and lowers the chance of losing Triple Threat.",
           },
           {
             id: "SECRET_BASE",

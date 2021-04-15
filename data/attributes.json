@@ -1025,11 +1025,11 @@
     },
     {
         "id": "SALMON_CANNONS",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#ffb0c6",
+        "textColor": "#ffb0c6",
+        "background": "#2a292e",
         "title": "Salmon Cannons",
-        "description": ""
+        "description": "Salmon Cannons have a chance of expelling pests from your Ballpark."
     },
     {
         "id": "EVENT_HORIZON",
@@ -1089,11 +1089,11 @@
     },
     {
         "id": "SWEETENER",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#fffcad",
+        "textColor": "#fffcad",
+        "background": "#4a2f40",
         "title": "Sweetener",
-        "description": ""
+        "description": "Sweetener makes Beanings & Free Refills more likely in Coffee & Coffee Two weathers, and lowers the chance of losing Triple Threat."
     },
     {
         "id": "SECRET_BASE",
