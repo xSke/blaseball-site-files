@@ -25888,19 +25888,18 @@
       function _p() {
         var e,
           t,
-          a,
-          n = Object(r.useContext)(I.context),
-          i = Object(r.useContext)(L.context).user,
-          l = Object(s.g)(),
-          m = Object(r.useContext)(ii.context),
-          A = Object(r.useContext)(Xc.context),
-          g = Object(r.useRef)(null),
-          f = Object(r.useState)(Mp.glossary[Math.floor(Math.random() * Mp.glossary.length)]),
-          E = Object(c.a)(f, 1)[0],
-          v = Object(r.useState)(0),
-          b = Object(c.a)(v, 2),
-          w = b[0],
-          y = b[1];
+          a = Object(r.useContext)(I.context),
+          n = Object(r.useContext)(L.context).user,
+          i = Object(s.g)(),
+          l = Object(r.useContext)(ii.context),
+          m = Object(r.useContext)(Xc.context),
+          A = Object(r.useRef)(null),
+          g = Object(r.useState)(Mp.glossary[Math.floor(Math.random() * Mp.glossary.length)]),
+          f = Object(c.a)(g, 1)[0],
+          E = Object(r.useState)(0),
+          v = Object(c.a)(E, 2),
+          b = v[0],
+          w = v[1];
         Object(r.useEffect)(
           function () {
             (function () {
@@ -25913,7 +25912,7 @@
                         case 0:
                           return (e.next = 2), pm();
                         case 2:
-                          void 0 !== (t = e.sent) && y(t.runs);
+                          void 0 !== (t = e.sent) && w(t.runs);
                         case 4:
                         case "end":
                           return e.stop();
@@ -25926,27 +25925,30 @@
               };
             })()();
           },
-          [m]
+          [l]
         );
-        var B,
+        var y,
+          B,
           O,
           S,
           N,
           k,
           T,
-          C,
-          M = null,
-          x = !(!A || !A.doc) && A.doc.delta;
-        if (!n || !n.sim) return <mc />;
-        var R = null === (e = n.sim) || void 0 === e ? void 0 : e.phase;
-        Object(r.useEffect)(
-          function () {
-            g.current && g && g.current.scrollIntoView({ block: "nearest", inline: "start" });
-          },
-          [R]
-        );
-        var F = 13 === R || 0 === R;
-        (B = (
+          C = null,
+          M = !(!m || !m.doc) && m.doc.delta,
+          x = a && a.sim ? a.sim.phase : 0;
+        if (
+          (Object(r.useEffect)(
+            function () {
+              A.current && A && A.current.scrollIntoView({ block: "nearest", inline: "start" });
+            },
+            [x]
+          ),
+          !a || !a.sim)
+        )
+          return <mc />;
+        var R = 13 === x || 0 === x;
+        (y = (
           <o.a.Fragment>
             <div className="Bulletin-Item-Header">
               <div className="Bulletin-Item-Header-Icon" style={{ background: "#ba1111" }}>
@@ -25986,17 +25988,17 @@
             </div>
           </o.a.Fragment>
         )),
-          (k = (
+          (N = (
             <bs
               entity=""
               defaultCategory={-1}
               source={ps.Home}
               defaultSort={hs.Hot}
               categoryOptions={[-1, U.Outcomes, U.Changes, U.Game, U.Abilities, U.Narrative]}
-              consolidated={!!x}
+              consolidated={!!M}
             />
           )),
-          (O = (
+          (B = (
             <o.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#1b95e0" }}>
@@ -26011,7 +26013,7 @@
                   return (
                     <Qp.a
                       id={e}
-                      options={{ theme: i.lightMode ? "light" : "dark", conversation: "none", dnt: !0 }}
+                      options={{ theme: n.lightMode ? "light" : "dark", conversation: "none", dnt: !0 }}
                       className="Bulletin-Tweet"
                     />
                   );
@@ -26019,31 +26021,31 @@
               </div>
             </o.a.Fragment>
           ));
-        var P = m.leagues.find(function (e) {
+        var F = l.leagues.find(function (e) {
           var t;
-          return e.id === (null === (t = n.season) || void 0 === t ? void 0 : t.league);
+          return e.id === (null === (t = a.season) || void 0 === t ? void 0 : t.league);
         });
-        C = (
+        T = (
           <o.a.Fragment>
             <div className="Bulletin-Item-Header Bulletin-Item-League-Small">
               <h2 className="Bulletin-Item-Header-Title Bulletin-Item-League-Small-Text">
-                {null === P || void 0 === P ? void 0 : P.name}
+                {null === F || void 0 === F ? void 0 : F.name}
               </h2>
             </div>
             <div className="Bulletin-Item-League">
-              {F ? null : (
+              {R ? null : (
                 <h3 className="League-Header Bulletin-Item-League-Day">
-                  Season<span className="League-Number">{n.sim.season + 1}</span>Day
-                  <span className="League-Number">{n.sim.day + 1}</span>
+                  Season<span className="League-Number">{a.sim.season + 1}</span>Day
+                  <span className="League-Number">{a.sim.day + 1}</span>
                 </h3>
               )}
               <Gm />
               <Xp className="Bulletin-Item-League-Icon" />
-              {F ? null : (
+              {R ? null : (
                 <o.a.Fragment>
-                  {mr(n.sim, "SIM_COMMUNITY_CHEST") ? rr(<MA />, "LeagueInfo-Bar", w, 3e3) : null}
+                  {mr(a.sim, "SIM_COMMUNITY_CHEST") ? rr(<MA />, "LeagueInfo-Bar", b, 3e3) : null}
                   <d
-                    background={l}
+                    background={i}
                     path="/leagueinfo"
                     className="Bulletin-Widget-Button btn btn-success Bulletin-Widget-Button-White"
                   >
@@ -26054,19 +26056,19 @@
             </div>
           </o.a.Fragment>
         );
-        var G = [
-          { datetime: n.sim.godsDayDate, phase: [0], name: "Gods' Day" },
-          { datetime: n.sim.preseasonDate, phase: [1], name: "Preseason" },
-          { datetime: n.sim.earlseasonDate, phase: [2], name: "Earlseason" },
-          { datetime: n.sim.earlsiestaDate, phase: [3], name: "Earlsiesta" },
-          { datetime: n.sim.midseasonDate, phase: [4], name: "Midseason" },
-          { datetime: n.sim.latesiestaDate, phase: [5], name: "Latesiesta" },
-          { datetime: n.sim.lateseasonDate, phase: [6], name: "Lateseason" },
-          { datetime: n.sim.endseasonDate, phase: [7], name: "Endseason" },
-          { datetime: n.sim.earlpostseasonDate, phase: [9, 10], name: "Earlpostseason" },
-          { datetime: n.sim.latepostseasonDate, phase: [11, 12, 13], name: "Latepostseason" },
+        var P = [
+          { datetime: a.sim.godsDayDate, phase: [0], name: "Gods' Day" },
+          { datetime: a.sim.preseasonDate, phase: [1], name: "Preseason" },
+          { datetime: a.sim.earlseasonDate, phase: [2], name: "Earlseason" },
+          { datetime: a.sim.earlsiestaDate, phase: [3], name: "Earlsiesta" },
+          { datetime: a.sim.midseasonDate, phase: [4], name: "Midseason" },
+          { datetime: a.sim.latesiestaDate, phase: [5], name: "Latesiesta" },
+          { datetime: a.sim.lateseasonDate, phase: [6], name: "Lateseason" },
+          { datetime: a.sim.endseasonDate, phase: [7], name: "Endseason" },
+          { datetime: a.sim.earlpostseasonDate, phase: [9, 10], name: "Earlpostseason" },
+          { datetime: a.sim.latepostseasonDate, phase: [11, 12, 13], name: "Latepostseason" },
         ];
-        S = (
+        O = (
           <o.a.Fragment>
             <div className="Bulletin-Item-Header">
               <div className="Bulletin-Item-Header-Icon" style={{ background: "#ffcb49", color: "#e30050" }}>
@@ -26076,7 +26078,7 @@
                 Schedule
               </h2>
             </div>
-            {x ? (
+            {M ? (
               <div className="Bulletin-Schedule-Contents">
                 <p className="Bulletin-Item-Contents-Text" role="text">
                   The first On Season of the Expansion Era, Seasons 12 through 14, has concluded.
@@ -26098,22 +26100,22 @@
               </div>
             ) : (
               <div role="list" className="Bulletin-Schedule-Contents">
-                {G.map(function (e, t) {
+                {P.map(function (e, t) {
                   var a = !1;
                   return (
                     e.phase.forEach(function (e) {
-                      R === e && (a = !0);
+                      x === e && (a = !0);
                     }),
                     (
                       <div
                         className={
                           "Bulletin-Schedule-Item" +
                           (a ? " Bulletin-Schedule-Item-Current" : "") +
-                          (R < e.phase[0] ? " Bulletin-Schedule-Item-Future" : "")
+                          (x < e.phase[0] ? " Bulletin-Schedule-Item-Future" : "")
                         }
-                        aria-hidden={R > e.phase[0]}
+                        aria-hidden={x > e.phase[0]}
                         key={t}
-                        ref={a ? g : null}
+                        ref={a ? A : null}
                       >
                         <span className="Bulletin-Schedule-Date" aria-hidden="true">
                           {eh(e.datetime)}
@@ -26127,15 +26129,15 @@
                   );
                 })}
                 <div
-                  className={"Bulletin-Schedule-Item" + (n.sim.phase < 13 ? " Bulletin-Schedule-Item-Future" : "")}
-                  aria-hidden={n.sim.phase > 13}
+                  className={"Bulletin-Schedule-Item" + (a.sim.phase < 13 ? " Bulletin-Schedule-Item-Future" : "")}
+                  aria-hidden={a.sim.phase > 13}
                 >
                   <span className="Bulletin-Schedule-Date" aria-hidden="true">
-                    {eh(n.sim.electionDate)}
+                    {eh(a.sim.electionDate)}
                   </span>
                   <span className="Bulletin-Schedule-Name" role="text">
                     Election
-                    <span className="sr-only" aria-label={" starts at " + th(n.sim.electionDate)} role="text" />
+                    <span className="sr-only" aria-label={" starts at " + th(a.sim.electionDate)} role="text" />
                   </span>
                   <xu header="Election" lines={Pp("Election")} noMargin={!0} />
                 </div>
@@ -26143,9 +26145,9 @@
             )}
           </o.a.Fragment>
         );
-        var W = [];
-        0 === i.trackers.BETS &&
-          W.push(
+        var G = [];
+        0 === n.trackers.BETS &&
+          G.push(
             <li className="Bulletin-Actions-Item">
               <div className="Bulletin-Actions-Item-Title">Place Your First Bet</div>
               <Tr.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Games">
@@ -26154,10 +26156,10 @@
               <div className="Bulletin-Actions-Item-Text">Bet on Upcoming Games to earn more Coins.</div>
             </li>
           ),
-          i.unlockedShop &&
-            i.coins < 1 &&
-            i.trackers.BEGS < 3 &&
-            W.push(
+          n.unlockedShop &&
+            n.coins < 1 &&
+            n.trackers.BEGS < 3 &&
+            G.push(
               <li className="Bulletin-Actions-Item">
                 <div className="Bulletin-Actions-Item-Title">Beg to the Gods</div>
                 <Tr.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Shop">
@@ -26168,8 +26170,8 @@
                 </div>
               </li>
             ),
-          (void 0 !== i.idol && "" !== i.idol && null !== i.idol) ||
-            W.push(
+          (void 0 !== n.idol && "" !== n.idol && null !== n.idol) ||
+            G.push(
               <li className="Bulletin-Actions-Item">
                 <div className="Bulletin-Actions-Item-Title">Choose Your First Idol</div>
                 <Tr.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Idols Board">
@@ -26178,9 +26180,9 @@
                 <div className="Bulletin-Actions-Item-Text">Go to a Player's page to Idolize them.</div>
               </li>
             ),
-          !i.unlockedShop &&
-            i.coins >= 20 &&
-            W.push(
+          !n.unlockedShop &&
+            n.coins >= 20 &&
+            G.push(
               <li className="Bulletin-Actions-Item">
                 <div className="Bulletin-Actions-Item-Title">Unlock the Shop</div>
                 <Tr.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Shop">
@@ -26191,19 +26193,19 @@
                 </div>
               </li>
             ),
-          i.trackers.SNACKS_BOUGHT < 2 &&
-            W.push(
+          n.trackers.SNACKS_BOUGHT < 2 &&
+            G.push(
               <li className="Bulletin-Actions-Item">
                 <div className="Bulletin-Actions-Item-Title">Buy a Snack</div>
                 <Tr.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Shop">
-                  <u.b to={"/shop/" + (void 0 === i.snacks.Team_Win ? "".concat(Q.TEAM_WIN) : "")}>Try It</u.b>
+                  <u.b to={"/shop/" + (void 0 === n.snacks.Team_Win ? "".concat(Q.TEAM_WIN) : "")}>Try It</u.b>
                 </Tr.a>
                 <div className="Bulletin-Actions-Item-Text">Buy Snacks. They'll help you earn Coins.</div>
               </li>
             ),
-          !i.unlockedElection &&
-            i.coins >= 100 &&
-            W.push(
+          !n.unlockedElection &&
+            n.coins >= 100 &&
+            G.push(
               <li className="Bulletin-Actions-Item">
                 <div className="Bulletin-Actions-Item-Title">Unlock the Election</div>
                 <Tr.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Election">
@@ -26212,18 +26214,18 @@
                 <div className="Bulletin-Actions-Item-Text">Vote in the Election to create Change.</div>
               </li>
             ),
-          i.trackers.BETS >= 1 &&
-            i.trackers.BETS < 10 &&
-            W.push(
+          n.trackers.BETS >= 1 &&
+            n.trackers.BETS < 10 &&
+            G.push(
               <li className="Bulletin-Actions-Item">
                 <div className="Bulletin-Actions-Item-Title">
                   Place Bets
                   <div
                     className="Bulletin-Actions-Item-Amount"
                     role="text"
-                    aria-label={"Bets Placed: ".concat(i.trackers.BETS, " of 10 completed")}
+                    aria-label={"Bets Placed: ".concat(n.trackers.BETS, " of 10 completed")}
                   >
-                    {i.trackers.BETS} / 10
+                    {n.trackers.BETS} / 10
                   </div>
                 </div>
                 <Tr.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Games">
@@ -26232,37 +26234,37 @@
                 <div className="Bulletin-Actions-Item-Text">Bet on Upcoming Games. Takes Coins to make Coins.</div>
               </li>
             ),
-          i.unlockedShop &&
-            i.trackers.SNACK_UPGRADES < 3 &&
+          n.unlockedShop &&
+            n.trackers.SNACK_UPGRADES < 3 &&
             (function (e) {
               for (var t = Object.keys(e), a = t.length - 1; a >= 0; a--) {
                 var n = ee.GetTiers(t[a]);
                 if (void 0 !== n && void 0 !== n[e[t[a]] + 1]) return !0;
               }
               return !1;
-            })(i.snacks) &&
-            W.push(
+            })(n.snacks) &&
+            G.push(
               <li className="Bulletin-Actions-Item">
                 <div className="Bulletin-Actions-Item-Title">
                   Upgrade a Snack
                   <div
                     className="Bulletin-Actions-Item-Amount"
                     role="text"
-                    aria-label={"Bets Placed: ".concat(i.trackers.SNACK_UPGRADES, " of 3 completed")}
+                    aria-label={"Bets Placed: ".concat(n.trackers.SNACK_UPGRADES, " of 3 completed")}
                   >
-                    {i.trackers.SNACK_UPGRADES} / 3
+                    {n.trackers.SNACK_UPGRADES} / 3
                   </div>
                 </div>
                 <Tr.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Shop">
-                  <u.b to={"/shop/" + (void 0 !== i.snacks.Max_Bet ? "".concat(Q.MAX_BET) : "")}>Try It</u.b>
+                  <u.b to={"/shop/" + (void 0 !== n.snacks.Max_Bet ? "".concat(Q.MAX_BET) : "")}>Try It</u.b>
                 </Tr.a>
                 <div className="Bulletin-Actions-Item-Text">Buying more of a Snack earns you more Coins.</div>
               </li>
             ),
-          i.unlockedElection &&
-            0 === i.trackers.VOTES_CAST &&
-            (i.snacks.Votes < 1
-              ? W.push(
+          n.unlockedElection &&
+            0 === n.trackers.VOTES_CAST &&
+            (n.snacks.Votes < 1
+              ? G.push(
                   <li className="Bulletin-Actions-Item">
                     <div className="Bulletin-Actions-Item-Title">Buy Votes</div>
                     <Tr.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Shop">
@@ -26271,7 +26273,7 @@
                     <div className="Bulletin-Actions-Item-Text">Buy Votes in order to participate in the Election.</div>
                   </li>
                 )
-              : W.push(
+              : G.push(
                   <li className="Bulletin-Actions-Item">
                     <div className="Bulletin-Actions-Item-Title">Cast Votes</div>
                     <Tr.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Election">
@@ -26280,8 +26282,8 @@
                     <div className="Bulletin-Actions-Item-Text">The Future is in your hands. Democracy now!</div>
                   </li>
                 )),
-          (N =
-            0 === W.length || 0 === (null === (t = n.sim) || void 0 === t ? void 0 : t.phase) || x ? (
+          (S =
+            0 === G.length || 0 === (null === (e = a.sim) || void 0 === e ? void 0 : e.phase) || M ? (
               <o.a.Fragment>
                 <div className="Bulletin-Item-Header">
                   <div className="Bulletin-Item-Header-Icon" style={{ background: "#3337dd", color: "#baf4ff" }}>
@@ -26292,14 +26294,14 @@
                   </h2>
                 </div>
                 <div className="Bulletin-Item-Contents Bulletin-Item-Glossary">
-                  <span className="Bulletin-Item-Word">{E.name.includes("|") ? <Gp str={E.name} /> : E.name}: </span>
-                  {1 === E.definition.length ? (
+                  <span className="Bulletin-Item-Word">{f.name.includes("|") ? <Gp str={f.name} /> : f.name}: </span>
+                  {1 === f.definition.length ? (
                     <span className="Bulletin-Item-Def">
-                      <Kn str={E.definition} />
+                      <Kn str={f.definition} />
                     </span>
                   ) : (
                     <div className="Bulletin-Item-Def">
-                      <Kn str={E.definition} />
+                      <Kn str={f.definition} />
                     </div>
                   )}
                 </div>
@@ -26315,232 +26317,232 @@
                   </h2>
                 </div>
                 <div role="list" className="Bulletin-Item-Contents">
-                  {W.slice(0, 2)}
+                  {G.slice(0, 2)}
                 </div>
               </o.a.Fragment>
             ));
-        var V,
-          j =
-            void 0 === (V = null === n || void 0 === n ? void 0 : n.sim) ||
-            (V.phase !== D.Earlseason &&
-              V.phase !== D.Midseason &&
-              V.phase !== D.Lateseason &&
-              V.phase !== D.EarlyPostseason &&
-              V.phase !== D.Postseason) ||
-            x ||
-            null === n ||
-            void 0 === n ||
-            null === (a = n.schedule) ||
-            void 0 === a
+        var W,
+          V =
+            void 0 === (W = null === a || void 0 === a ? void 0 : a.sim) ||
+            (W.phase !== D.Earlseason &&
+              W.phase !== D.Midseason &&
+              W.phase !== D.Lateseason &&
+              W.phase !== D.EarlyPostseason &&
+              W.phase !== D.Postseason) ||
+            M ||
+            null === a ||
+            void 0 === a ||
+            null === (t = a.schedule) ||
+            void 0 === t
               ? void 0
-              : a.find(function (e) {
-                  return e.awayTeam === i.favoriteTeam || e.homeTeam === i.favoriteTeam ? e : void 0;
+              : t.find(function (e) {
+                  return e.awayTeam === n.favoriteTeam || e.homeTeam === n.favoriteTeam ? e : void 0;
                 }),
-          Y = m.teams.find(function (e) {
-            return e.id === i.favoriteTeam;
+          j = l.teams.find(function (e) {
+            return e.id === n.favoriteTeam;
           }),
-          z = void 0 !== Y ? zn(Y.id, n.standings) : new re();
-        if (void 0 === j) {
-          var H = x ? null : (
+          Y = void 0 !== j ? zn(j.id, a.standings) : new re();
+        if (void 0 === V) {
+          var z = M ? null : (
             <Tr.a className="Bulletin-Widget-Button" variant="success">
               <u.b to="/league">Go To Games</u.b>
             </Tr.a>
           );
-          M =
-            null === i.favoriteTeam ||
-            "" == i.favoriteTeam ||
-            void 0 === i.favoriteTeam ||
-            null === Y ||
-            void 0 === Y ? (
+          C =
+            null === n.favoriteTeam ||
+            "" == n.favoriteTeam ||
+            void 0 === n.favoriteTeam ||
+            null === j ||
+            void 0 === j ? (
               <div className="Bulletin-Item" style={{ gridRow: 3 }}>
                 <div className="Bulletin-Widget-NoGame">
                   <div className="Bulletin-Actions-Item-Text">You currently don't have a favorite team.</div>
-                  {H}
+                  {z}
                 </div>
               </div>
             ) : (
               <div className="Bulletin-Item" style={{ gridRow: 3 }}>
                 <div className="Bulletin-Widget-NoGame">
-                  <d background={l} path={"/team/".concat(Y.id)} className="Bulletin-Widget-Team">
-                    <div className="Bulletin-Widget-ScoreTeamColorBar" style={{ background: Y.mainColor }}>
-                      {hr(Y.emoji)}
+                  <d background={i} path={"/team/".concat(j.id)} className="Bulletin-Widget-Team">
+                    <div className="Bulletin-Widget-ScoreTeamColorBar" style={{ background: j.mainColor }}>
+                      {hr(j.emoji)}
                     </div>
                     <div
                       className="Bulletin-Widget-ScoreName"
                       style={{
-                        color: i.lightMode ? lr(Y.secondaryColor) : Y.secondaryColor,
-                        background: i.lightMode ? Y.secondaryColor : "none",
-                        padding: i.lightMode ? "2px 8px" : "initial",
+                        color: n.lightMode ? lr(j.secondaryColor) : j.secondaryColor,
+                        background: n.lightMode ? j.secondaryColor : "none",
+                        padding: n.lightMode ? "2px 8px" : "initial",
                       }}
                     >
-                      {Y.fullName}
+                      {j.fullName}
                     </div>
                   </d>
                   <div className="GameWidget-ScoreRecord">
-                    {void 0 !== n.standings && i.favoriteTeam ? qn(z, Y.secondaryColor, i.lightMode) : "?? - ??"}
+                    {void 0 !== a.standings && n.favoriteTeam ? qn(Y, j.secondaryColor, n.lightMode) : "?? - ??"}
                   </div>
                   <div className="Bulletin-Actions-Item-Text">
                     Your favorite team isn't playing games at the moment.
                   </div>
-                  {H}
+                  {z}
                 </div>
               </div>
             );
         } else {
-          var q = j.isPostseason
-              ? "to ".concat(j.seriesLength)
-              : "".concat(j.seriesIndex, " of ").concat(j.seriesLength),
-            K = j.homeScore,
-            J = j.awayScore,
-            Z = K > J && j.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {},
-            X = J > K && j.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {},
-            _ = tc(j, n.standings),
-            $ = $l(j),
-            te = null,
-            ne = "";
-          if (null !== j.stadiumId) {
-            var ie = m.stadiums.find(function (e) {
-              return e.id === j.stadiumId;
+          var H = V.isPostseason
+              ? "to ".concat(V.seriesLength)
+              : "".concat(V.seriesIndex, " of ").concat(V.seriesLength),
+            q = V.homeScore,
+            K = V.awayScore,
+            J = q > K && V.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {},
+            Z = K > q && V.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {},
+            X = tc(V, a.standings),
+            _ = $l(V),
+            $ = null,
+            te = "";
+          if (null !== V.stadiumId) {
+            var ne = l.stadiums.find(function (e) {
+              return e.id === V.stadiumId;
             });
-            ie && ((te = <Kl stadium={ie} style={Vl.GameWidget} />), (ne = ie.nickname));
+            ne && (($ = <Kl stadium={ne} style={Vl.GameWidget} />), (te = ne.nickname));
           }
-          M = (
+          C = (
             <div
               className="Bulletin-Widget"
               style={{ gridRow: 3, minHeight: "300px" }}
-              aria-label={"".concat(_.awayTeamName, " versus ").concat(_.homeTeamName)}
+              aria-label={"".concat(X.awayTeamName, " versus ").concat(X.homeTeamName)}
             >
               <div className="Bulletin-Widget-Header-Wrapper">
                 <div className="Widget-Header" role="group" aria-label="Game Status Bar">
                   <div className="Widget-StatusBar-WithStadium">
-                    {ec($)}
+                    {ec(_)}
                     <div className="Widget-StadiumLabel">
-                      {$.started ? (
+                      {_.started ? (
                         <Se.a
                           placement="top"
                           overlay={
                             <Oe.a id="tooltip-stadium">
-                              <strong>{ne}</strong>
+                              <strong>{te}</strong>
                             </Oe.a>
                           }
                         >
-                          <div className="Widget-Stadium-Icon">{te}</div>
+                          <div className="Widget-Stadium-Icon">{$}</div>
                         </Se.a>
                       ) : null}
                     </div>
                   </div>
-                  <div className="Widget-ScoreLabel Widget-ScoreLabel--Series" aria-label={q + " Games"} role="text">
-                    {q}
+                  <div className="Widget-ScoreLabel Widget-ScoreLabel--Series" aria-label={H + " Games"} role="text">
+                    {H}
                   </div>
                 </div>
                 <div className="Bulletin-Widget-ScoreBacking" role="group" aria-label="The Teams">
-                  <d background={l} path={"/team/".concat(j.awayTeam)} className="GameWidget-ScoreLine">
+                  <d background={i} path={"/team/".concat(V.awayTeam)} className="GameWidget-ScoreLine">
                     <div
                       className="GameWidget-ScoreTeamColorBar"
                       aria-hidden={!0}
-                      style={{ background: j.awayTeamColor }}
+                      style={{ background: V.awayTeamColor }}
                     >
-                      {hr(j.awayTeamEmoji)}
+                      {hr(V.awayTeamEmoji)}
                     </div>
                     <div className="GameWidget-ScoreTeam">
                       <div
                         className="GameWidget-ScoreName"
                         style={{
-                          color: i.lightMode ? lr(j.awayTeamSecondaryColor) : j.awayTeamSecondaryColor,
-                          background: i.lightMode ? j.awayTeamSecondaryColor : "none",
-                          padding: i.lightMode ? "2px 8px" : "initial",
-                          lineHeight: i.lightMode ? "1.6rem" : "initial",
+                          color: n.lightMode ? lr(V.awayTeamSecondaryColor) : V.awayTeamSecondaryColor,
+                          background: n.lightMode ? V.awayTeamSecondaryColor : "none",
+                          padding: n.lightMode ? "2px 8px" : "initial",
+                          lineHeight: n.lightMode ? "1.6rem" : "initial",
                         }}
                       >
-                        {_.awayTeamName}
+                        {X.awayTeamName}
                       </div>
                       <div className="GameWidget-ScoreTeamInfo">
                         <div
                           className="GameWidget-ScoreRecord"
                           aria-label={""
-                            .concat(zn(j.awayTeam, n.standings).wins, " Wins, ")
-                            .concat(zn(j.awayTeam, n.standings).losses, " Losses")}
+                            .concat(zn(V.awayTeam, a.standings).wins, " Wins, ")
+                            .concat(zn(V.awayTeam, a.standings).losses, " Losses")}
                         >
-                          {qn(zn(j.awayTeam, n.standings))}
+                          {qn(zn(V.awayTeam, a.standings))}
                         </div>
                         <div
                           className="GameWidget-WinChance"
-                          aria-label={"".concat(Math.round(100 * j.awayOdds), "% Chance of Winning")}
+                          aria-label={"".concat(Math.round(100 * V.awayOdds), "% Chance of Winning")}
                           style={{
-                            color: i.lightMode ? lr(j.awayTeamSecondaryColor) : j.awayTeamSecondaryColor,
-                            background: i.lightMode ? j.awayTeamSecondaryColor : "none",
-                            padding: i.lightMode ? "2px 8px" : "initial",
-                            lineHeight: i.lightMode ? "1.2rem" : "initial",
+                            color: n.lightMode ? lr(V.awayTeamSecondaryColor) : V.awayTeamSecondaryColor,
+                            background: n.lightMode ? V.awayTeamSecondaryColor : "none",
+                            padding: n.lightMode ? "2px 8px" : "initial",
+                            lineHeight: n.lightMode ? "1.2rem" : "initial",
                           }}
                         >
-                          {Math.round(100 * j.awayOdds)}%
+                          {Math.round(100 * V.awayOdds)}%
                         </div>
                       </div>
                     </div>
-                    <div className="GameWidget-ScoreNumber" style={X} aria-label={"".concat(_.awayTeamScore, " Runs")}>
-                      {_.awayTeamScore}
+                    <div className="GameWidget-ScoreNumber" style={Z} aria-label={"".concat(X.awayTeamScore, " Runs")}>
+                      {X.awayTeamScore}
                     </div>
                   </d>
-                  <d background={l} path={"/team/".concat(j.homeTeam)} className="GameWidget-ScoreLine">
+                  <d background={i} path={"/team/".concat(V.homeTeam)} className="GameWidget-ScoreLine">
                     <div
                       className="GameWidget-ScoreTeamColorBar"
                       aria-hidden={!0}
-                      style={{ background: j.homeTeamColor }}
+                      style={{ background: V.homeTeamColor }}
                     >
-                      {hr(j.homeTeamEmoji)}
+                      {hr(V.homeTeamEmoji)}
                     </div>
                     <div className="GameWidget-ScoreTeam">
                       <div
                         className="GameWidget-ScoreName"
                         style={{
-                          color: i.lightMode ? lr(j.homeTeamSecondaryColor) : j.homeTeamSecondaryColor,
-                          background: i.lightMode ? j.homeTeamSecondaryColor : "none",
-                          padding: i.lightMode ? "2px 8px" : "initial",
-                          lineHeight: i.lightMode ? "1.6rem" : "initial",
+                          color: n.lightMode ? lr(V.homeTeamSecondaryColor) : V.homeTeamSecondaryColor,
+                          background: n.lightMode ? V.homeTeamSecondaryColor : "none",
+                          padding: n.lightMode ? "2px 8px" : "initial",
+                          lineHeight: n.lightMode ? "1.6rem" : "initial",
                         }}
                       >
-                        {_.homeTeamName}
+                        {X.homeTeamName}
                       </div>
                       <div className="GameWidget-ScoreTeamInfo">
                         <div
                           className="GameWidget-ScoreRecord"
                           aria-label={""
-                            .concat(zn(j.homeTeam, n.standings).wins, " Wins, ")
-                            .concat(zn(j.homeTeam, n.standings).losses, " Losses")}
+                            .concat(zn(V.homeTeam, a.standings).wins, " Wins, ")
+                            .concat(zn(V.homeTeam, a.standings).losses, " Losses")}
                         >
-                          {qn(zn(j.homeTeam, n.standings))}
+                          {qn(zn(V.homeTeam, a.standings))}
                         </div>
                         <div
                           className="GameWidget-WinChance"
-                          aria-label={"".concat(Math.round(100 * j.homeOdds), "% Chance of Winning")}
+                          aria-label={"".concat(Math.round(100 * V.homeOdds), "% Chance of Winning")}
                           style={{
-                            color: i.lightMode ? lr(j.homeTeamSecondaryColor) : j.homeTeamSecondaryColor,
-                            background: i.lightMode ? j.homeTeamSecondaryColor : "none",
-                            padding: i.lightMode ? "2px 8px" : "initial",
-                            lineHeight: i.lightMode ? "1.2rem" : "initial",
+                            color: n.lightMode ? lr(V.homeTeamSecondaryColor) : V.homeTeamSecondaryColor,
+                            background: n.lightMode ? V.homeTeamSecondaryColor : "none",
+                            padding: n.lightMode ? "2px 8px" : "initial",
+                            lineHeight: n.lightMode ? "1.2rem" : "initial",
                           }}
                         >
-                          {Math.round(100 * j.homeOdds)}%
+                          {Math.round(100 * V.homeOdds)}%
                         </div>
                       </div>
                     </div>
-                    <div className="GameWidget-ScoreNumber" style={Z} aria-label={"".concat(_.homeTeamScore, " Runs")}>
-                      {_.homeTeamScore}
+                    <div className="GameWidget-ScoreNumber" style={J} aria-label={"".concat(X.homeTeamScore, " Runs")}>
+                      {X.homeTeamScore}
                     </div>
                   </d>
                 </div>
               </div>
               <div className="Bulletin-Widget-Log" aria-label="Log">
                 <div className="Bulletin-Widget-Log-Content">
-                  {j.lastUpdate.split("\n").map(function (e, t) {
+                  {V.lastUpdate.split("\n").map(function (e, t) {
                     return (
                       <div className="Widget-Log-Line" key={t}>
                         {e}
                       </div>
                     );
                   })}
-                  {"" !== j.scoreLedger
-                    ? j.scoreLedger.split("\n").map(function (e, t) {
+                  {"" !== V.scoreLedger
+                    ? V.scoreLedger.split("\n").map(function (e, t) {
                         return (
                           <div className="Widget-Log-Line Widget-Log-Ledger" key={t}>
                             {e}
@@ -26548,8 +26550,8 @@
                         );
                       })
                     : null}
-                  {"" !== j.scoreUpdate
-                    ? j.scoreUpdate.split("\n").map(function (e, t) {
+                  {"" !== V.scoreUpdate
+                    ? V.scoreUpdate.split("\n").map(function (e, t) {
                         return (
                           <div className="Widget-Log-Line Widget-Log-Score" key={t}>
                             {e}
@@ -26565,7 +26567,7 @@
             </div>
           );
         }
-        T = (
+        k = (
           <o.a.Fragment>
             <div className="Bulletin-Item-Header">
               <div className="Bulletin-Item-Header-Icon" style={{ background: "#4b35b4", color: "#efecff" }}>
@@ -26580,11 +26582,11 @@
             </div>
           </o.a.Fragment>
         );
-        var le = (
+        var ie = (
           <div className="Bulletin" id="Main-Body">
             <div className="Bulletin-Rows">
-              <div role="article" className="Bulletin-Item" style={{ gridRow: 1, paddingBottom: F ? "0" : "20px" }}>
-                {C}
+              <div role="article" className="Bulletin-Item" style={{ gridRow: 1, paddingBottom: R ? "0" : "20px" }}>
+                {T}
               </div>
               <div
                 role="article"
@@ -26592,11 +26594,11 @@
                 aria-labelledby="actions"
                 style={{ gridRow: 3 }}
               >
-                {N}
+                {S}
               </div>
-              {M}
+              {C}
               <div role="article" className="Bulletin-Item" style={{ gridRow: 3 }}>
-                {T}
+                {k}
               </div>
               <div
                 role="article"
@@ -26604,16 +26606,16 @@
                 aria-labelledby="actions"
                 style={{ gridRow: "1 / 3", gridColumn: "2 / 4", maxHeight: "100%" }}
               >
-                {k}
+                {N}
               </div>
-              {F ? (
+              {R ? (
                 <div
                   role="article"
                   className="Bulletin-Item"
                   aria-labelledby="schedule"
                   style={{ gridRow: 2, gridColumn: 1, minWidth: "350px" }}
                 >
-                  {B}
+                  {y}
                 </div>
               ) : (
                 <div
@@ -26622,20 +26624,20 @@
                   aria-labelledby="schedule"
                   style={{ gridRow: 2, gridColumn: 1, minWidth: "350px" }}
                 >
-                  {S}
+                  {O}
                 </div>
               )}
               <div role="article" aria-labelledby="community" className="Bulletin-Item Bulletin-Wide-Bottom">
-                {O}
+                {B}
               </div>
             </div>
           </div>
         );
-        return x ? (
+        return M ? (
           <div className="Bulletin" id="Main-Body">
             <div className="Bulletin-Rows Bulletin-Rows-Siesta">
               <div role="article" className="Bulletin-Item" aria-labelledby="schedule" style={{ gridRow: 1 }}>
-                {S}
+                {O}
               </div>
               <div
                 role="article"
@@ -26643,7 +26645,7 @@
                 aria-labelledby="actions"
                 style={{ gridRow: "1 / 3", gridColumn: "2 / 4" }}
               >
-                {T}
+                {k}
               </div>
               <div
                 role="article"
@@ -26651,7 +26653,7 @@
                 aria-labelledby="actions"
                 style={{ gridRow: "2 / 4", gridColumn: 1, maxHeight: "400px", minHeight: "100%", minWidth: "400px" }}
               >
-                {k}
+                {N}
               </div>
               <div
                 role="article"
@@ -26659,16 +26661,16 @@
                 aria-labelledby="actions"
                 style={{ gridRow: 3 }}
               >
-                {N}
+                {S}
               </div>
-              {M}
+              {C}
               <div role="article" aria-labelledby="community" className="Bulletin-Item Bulletin-Wide-Bottom">
-                {O}
+                {B}
               </div>
             </div>
           </div>
         ) : (
-          le
+          ie
         );
       }
       var $p = (function (e) {
@@ -31197,12 +31199,16 @@
                         </ul>
                       </div>
                       <div className="Team-Section">
-                        <div className="ModalItem-Subheader">Next Crate</div>
-                        <ul className="Player-Info-Stats">
-                          <li className="Player-Info-Line LeagueInfo-Line-Bar">
-                            {rr(<MA />, "LeagueInfo-Bar", g, 3e3)}
-                          </li>
-                        </ul>
+                        {mr(t.sim, "SIM_COMMUNITY_CHEST") ? (
+                          <o.a.Fragment>
+                            <div className="ModalItem-Subheader">Next Crate</div>
+                            <ul className="Player-Info-Stats">
+                              <li className="Player-Info-Line LeagueInfo-Line-Bar">
+                                {rr(<MA />, "LeagueInfo-Bar", g, 3e3)}
+                              </li>
+                            </ul>
+                          </o.a.Fragment>
+                        ) : null}
                       </div>
                     </div>
                   </div>
