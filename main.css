@@ -10574,6 +10574,18 @@ input[type="number"]::-webkit-outer-spin-button {
 .theme-light .st0 {
   stroke: #000;
 }
+.theme-dark .st1 {
+  fill: #fff;
+}
+.theme-light .st1 {
+  fill: #000;
+}
+.theme-dark .st1 {
+  stroke: #fff;
+}
+.theme-light .st1 {
+  stroke: #000;
+}
 @media (max-width: 1080px) {
   .Widget-Display-Visual {
     margin: 0;
@@ -10836,6 +10848,8 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
   padding: 5px;
   border-radius: 5px;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .theme-dark .AttributeBar {
   background: #1f1f1f;
@@ -11433,6 +11447,18 @@ input[type="number"]::-webkit-outer-spin-button {
   position: relative;
   width: 18px;
 }
+.Player-Stars-Combined {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.Player-Stars-Combined svg {
+  margin-left: 5px;
+}
 .Player-Info-Line {
   display: grid;
   grid-template-columns: 180px auto;
@@ -11458,10 +11484,10 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
-}
-.Player-Info-Line-Body {
   -webkit-align-items: center;
   align-items: center;
+}
+.Player-Info-Line-Body {
   line-height: 1.2em;
   min-height: 30px;
 }
@@ -12024,7 +12050,18 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #000;
   box-shadow: 0 0 5px 4px #bdb3c3;
 }
-.Team-Player-Ratings,
+.Team-Player-Ratings {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 18px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.Team-Player-Ratings .AttributeIcon {
+  height: 28px;
+  width: 28px;
+}
 .Team-Player-Vibe {
   font-family: "Lora", "Courier New", monospace, serif;
   font-size: 18px;
@@ -12039,6 +12076,22 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .Team-Player-Vibe-Line-Arrow {
   width: 14px;
+}
+.Team-Items-Box {
+  position: relative;
+  width: 28px;
+}
+.Team-Items-Box .Item-Icon {
+  height: 28px;
+  width: 28px;
+}
+.Team-Items-Box-Broken {
+  position: absolute;
+  font-size: 18px;
+  margin-top: 0;
+  top: 5px;
+  left: 5px;
+  color: #6dc0ff;
 }
 .Team-Info-Championships {
   font-size: 26px;
@@ -12866,7 +12919,7 @@ input[type="number"]::-webkit-outer-spin-button {
   cursor: auto;
 }
 .Events-List-Home {
-  max-height: 500px;
+  max-height: 640px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -13535,6 +13588,108 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 0;
   margin-bottom: 30px;
 }
+.LeagueInfo-Section {
+  display: -webkit-flex;
+  display: flex;
+}
+.LeagueInfo-Line {
+  grid-template-columns: 190px auto;
+}
+.LeagueInfo-Line-Box {
+  width: 100%;
+  margin: 0 8px;
+  border-radius: 10px;
+  padding: 15px 5px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  text-align: center;
+}
+.theme-dark .LeagueInfo-Line-Box {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .LeagueInfo-Line-Box {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.LeagueInfo-Line-Box .LeagueInfo-Line-Header {
+  margin-bottom: 10px;
+}
+.LeagueInfo-Line-Bar {
+  display: -webkit-flex;
+  display: flex;
+  max-height: 35px;
+  padding: 5px 40px;
+}
+.LeagueInfo-Line-Header {
+  line-height: 1.2rem;
+  padding: 2px 0;
+}
+.LeagueInfo-Line-Header-Icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 15px;
+}
+.LeagueInfo-Header-Icon {
+  height: 65px;
+  width: 65px;
+}
+.LeagueInfo-Header-Icon svg {
+  width: 100%;
+  height: 100%;
+}
+.LeagueInfo-Icon {
+  height: 55px;
+  width: 55px;
+}
+.LeagueInfo-Icon svg {
+  width: 100%;
+  height: 100%;
+}
+.LeagueInfo-Bar {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 100%;
+}
+.theme-dark .LeagueInfo-Bar .progress-bar {
+  background: #ffeb57;
+}
+.theme-light .LeagueInfo-Bar .progress-bar {
+  background: #0014a8;
+}
+.LeagueInfo-Bar svg:first-child {
+  height: 35px;
+  width: 35px;
+  margin-right: 15px;
+}
+.LeagueInfo-Bar svg:last-child {
+  font-size: 25px;
+  margin-left: 15px;
+}
+.LeagueInfo-Attributes {
+  border: none;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.LeagueInfo-Attributes .AttributeIcon {
+  margin: 5px 0;
+}
+.LeagueInfo-Attributes .AttributeIcon:not(:last-child) {
+  margin-right: 10px;
+}
+.LeagueInfo-Team-Icon {
+  width: 20px;
+  font-size: 14px;
+  height: 20px;
+  margin-right: 5px;
+}
 @media (max-width: 1080px) {
   .ModalItem-Attributes {
     padding: 5px 30px;
@@ -13584,6 +13739,18 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .Team-Player-Header {
     font-size: 16px;
+  }
+  .Team-Player-Ratings .AttributeIcon {
+    height: 22px;
+    width: 22px;
+    margin-right: 5px;
+  }
+  .Team-Items-Box .Item-Icon {
+    height: 22px;
+    width: 22px;
+  }
+  .Team-Items-Box-Broken {
+    font-size: 14px;
   }
   .Team-Stadium-Build-Grid {
     height: 280px;
@@ -13766,6 +13933,11 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .Item-Info {
     padding-bottom: 10px;
+  }
+  .LeagueInfo-Team-Icon {
+    width: 20px;
+    font-size: 14px;
+    height: 20px;
   }
 }
 @media screen and (prefers-reduced-motion: reduce) {
@@ -15776,6 +15948,18 @@ button:focus-visible {
 }
 .Standings-League h3 {
   font-weight: 700;
+}
+.Standings-League-Header {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.Standings-League-Header :last-child {
+  margin-left: 10px;
+}
+.Standings-Button {
+  height: 32px;
 }
 .Standings-Subleague {
   font-family: "Lora", "Courier New", monospace, serif;
@@ -20075,6 +20259,49 @@ button:focus-visible {
   -webkit-flex-direction: row;
   flex-direction: row;
 }
+#root .Bulletin-Item-League {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+}
+#root .Bulletin-Item-League-Wrapper .Events-List-Home {
+  max-height: 560px;
+}
+#root .Bulletin-Item-League-Day {
+  font-size: 18px;
+  padding: 10px 0 5px;
+}
+#root .Bulletin-Item-League-Day .League-Number {
+  font-size: 20px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 4px;
+}
+#root .Bulletin-Item-League-Small {
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+#root .Bulletin-Item-League-Small-Text {
+  font-size: 1.5rem;
+  max-width: 100%;
+  text-align: center;
+  text-transform: none;
+}
+#root .Bulletin-Item-League .Advertisement-SiteHeader {
+  font-size: 12px;
+  padding: 0;
+}
+#root .Bulletin-Item-League .Advertisement-SiteHeader-Callout {
+  font-size: 14px;
+}
+#root .Bulletin-Item-League-Icon {
+  width: 130px;
+  height: 130px;
+}
 #root .Bulletin-Item-Contents-Video {
   display: -webkit-flex;
   display: flex;
@@ -20200,6 +20427,8 @@ button:focus-visible {
 }
 #root .Bulletin-Schedule-Contents {
   text-align: center;
+  overflow-y: scroll;
+  max-height: 270px;
 }
 #root .Bulletin-Schedule-Contents div:not(:last-child) {
   margin-bottom: 15px;
@@ -20487,6 +20716,12 @@ button:focus-visible {
 #root .Bulletin-Widget-Button:hover {
   opacity: 0.8;
 }
+.theme-dark #root .Bulletin-Widget-Button-White {
+  background: #fff;
+}
+.theme-light #root .Bulletin-Widget-Button-White {
+  background: #000;
+}
 #root .Bulletin-Widget-ScoreBacking {
   display: -webkit-flex;
   display: flex;
@@ -20546,6 +20781,10 @@ button:focus-visible {
   #root .Bulletin-Widget-Button {
     margin: 20px auto;
   }
+  #root .Bulletin-Item {
+    padding: 20px 15px;
+    min-width: auto !important;
+  }
   #root .Bulletin-Item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -20555,16 +20794,26 @@ button:focus-visible {
   #root .Bulletin-Item-Header-Icon {
     margin: 0 16px 0 0;
   }
+  #root .Bulletin-Item-Header .Events-ButtonList {
+    padding: 0;
+  }
+  #root .Bulletin-Item-Header .Events-Dropdown {
+    font-size: 14px;
+  }
   #root .Bulletin-Item-ImageGrid {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: column;
     flex-flow: column;
+    margin-left: -10px;
   }
   #root .Bulletin-Item-Columns {
     -webkit-columns: auto;
     -webkit-columns: initial;
     columns: initial;
+  }
+  #root .Bulletin-Item-League-Small-Text {
+    font-size: 2rem;
   }
 }
 .FAQ {

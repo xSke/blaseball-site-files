@@ -1462,5 +1462,117 @@
         "background": "#511c00",
         "title": "Scrambled",
         "description": "This player is Scrambled."
+    },
+    {
+        "id": "CAREFUL",
+        "color": "#fff39c",
+        "textColor": "#fff39c",
+        "background": "#ad4b00",
+        "title": "Careful",
+        "description": "This player's Items will not be damaged by standard game actions."
+    },
+    {
+        "id": "AMBITIOUS",
+        "color": "#ffcf0f",
+        "textColor": "#ffcf0f",
+        "background": "#247d7a",
+        "title": "Ambitious",
+        "description": "This Team or Player will Overperform in the Postseason."
+    },
+    {
+        "id": "PRO_SKATER",
+        "color": "#4dbd8b",
+        "textColor": "#4dbd8b",
+        "background": "#1a385c",
+        "title": "Pro Skater",
+        "description": "This player cannot bail when using the Grind Rail."
+    },
+    {
+        "id": "PSYCHIC",
+        "color": "#ff87ff",
+        "textColor": "#ff87ff",
+        "background": "#230747",
+        "title": "Psychic",
+        "description": "Psychic players have a chance of reversing a bad outcome with a Mind Trick."
+    },
+    {
+        "id": "FIERY",
+        "color": "#ff995e",
+        "textColor": "#ff995e",
+        "background": "#940101",
+        "title": "Fiery",
+        "description": "Players with Fiery have a small chance of throwing Double Strikes."
+    },
+    {
+        "id": "AAA",
+        "color": "#f1ffa3",
+        "textColor": "#f1ffa3",
+        "background": "#192400",
+        "title": "Power Chaaarge",
+        "description": "When this Player hits a Triple, they'll have a chance of Overperforming for the rest of the game."
+    },
+    {
+        "id": "UNAMBITIOUS",
+        "color": "#ada26d",
+        "textColor": "#ada26d",
+        "background": "#062e2d",
+        "title": "Unambitious",
+        "description": "This Team or player will Underperform in the Postseason."
+    },
+    {
+        "id": "COASTING",
+        "color": "#809fff",
+        "textColor": "#809fff",
+        "background": "#4a152c",
+        "title": "Coasting",
+        "description": "This Team or player will Underperform in the Midseason."
+    },
+    {
+        "id": "EAT_THE_RICH",
+        "color": "#f5d64e",
+        "textColor": "#f5d64e",
+        "background": "#911d00",
+        "title": "Eat The Rich",
+        "description": "At the end of each season, the Fans with the top 1% of Coins will have their funds redistributed throughout the 99%."
+    },
+    {
+        "id": "WILD_CARDS",
+        "color": "#dda6ed",
+        "textColor": "#dda6ed",
+        "background": "#291633",
+        "title": "Wild Cards",
+        "description": "At the end of the regular season, 1 Wild Card will be drawn at random from the remaining teams in each Sub-League to receive a Postseason Birth."
+    },
+    {
+        "id": "SIM_FREE_WILL",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#9e0000",
+        "title": "Free Wills",
+        "description": "The bottom team in each Division will win an extra Will in each Election."
+    },
+    {
+        "id": "SIM_ALL_YOU_CAN_EAT",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#06293d",
+        "title": "All You Can Eat",
+        "description": "Fans are free to buy and discard Snack Slots in their Snack Pack. The number of Slots they have will determine their Payout Modifier for all Snacks. The less slots, the higher the Payout Modifier."
+    },
+    {
+        "id": "SIM_BASED_EVOLUTION",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#254027",
+        "title": "Based Evolution",
+        "description": "Every Third Championship a Team wins will cause the Team and its Players to Evolve. Players that round the phylogenic Bases will get to go Home."
+    },
+    {
+        "id": "SIM_PARTY_TIME",
+        "color": "#ff66f9",
+        "textColor": "#ff66f9",
+        "background": "#fff947",
+        "title": "Party Time",
+        "description": "A Team will enter Party Time if receiving 1 Win per remaining game would not land them in the Postseason. In Party Time, they'll receive random Stat Boosts from Partying."
     }
 ]
