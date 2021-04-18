@@ -33206,7 +33206,8 @@
             textColor: "#ffffff",
             background: "#9e0000",
             title: "Free Wills",
-            description: "The bottom team in each Division will win an extra Will in each Election.",
+            description:
+              "The bottom four finishing Teams in the League will receive an extra Will in that season's election.",
           },
           {
             id: "SIM_ALL_YOU_CAN_EAT",
