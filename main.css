@@ -15444,7 +15444,18 @@ button:focus-visible {
 .theme-light .Advertisement-SiteHeader {
   color: #272727;
 }
+.Advertisement-SiteHeader-Line {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
 .Advertisement-SiteHeader-Callout {
+  text-align: center;
   padding: 0 5px;
   font-size: 18px;
   font-weight: 700;
@@ -15456,7 +15467,7 @@ button:focus-visible {
   color: #0014a8;
 }
 .Advertisement-ShopItem {
-  background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/yesplz.3be76dcd.png);
+  background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/ludonarracon.f73aea8e.png);
   display: -webkit-flex;
   display: flex;
   background-size: contain;
@@ -20268,7 +20279,7 @@ button:focus-visible {
   align-items: center;
 }
 #root .Bulletin-Item-League-Wrapper .Events-List-Home {
-  max-height: 560px;
+  max-height: 630px;
 }
 #root .Bulletin-Item-League-Day {
   font-size: 18px;

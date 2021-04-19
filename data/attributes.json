@@ -1574,5 +1574,45 @@
         "background": "#fff947",
         "title": "Party Time",
         "description": "A Team will enter Party Time if receiving 1 Win per remaining game would not land them in the Postseason. In Party Time, they'll receive random Stat Boosts from Partying."
+    },
+    {
+        "id": "FLOOD_BATH",
+        "color": "#5988ff",
+        "textColor": "#5988ff",
+        "background": "#163073",
+        "title": "Flood Bath",
+        "description": "When Runners on this Team are cleared via Flooding, they'll become Slippery for the remainder of the game."
+    },
+    {
+        "id": "SLIPPERY",
+        "color": "#5988ff",
+        "textColor": "#5988ff",
+        "background": "#163073",
+        "title": "Slippery",
+        "description": "When a Slippery baserunner scores, and first base is available, they'll slide to first after scoring."
+    },
+    {
+        "id": "HOTEL_MOTEL",
+        "color": "#5988ff",
+        "textColor": "#5988ff",
+        "background": "#163073",
+        "title": "Hotel Motel",
+        "description": ""
+    },
+    {
+        "id": "FAX_MACHINE",
+        "color": "#5988ff",
+        "textColor": "#5988ff",
+        "background": "#163073",
+        "title": "Fax Machine",
+        "description": ""
+    },
+    {
+        "id": "SIM_COMMUNITY_CHEST",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#40223e",
+        "title": "Community Chest",
+        "description": "Anytime 3000 Runs are accumulated league-wide, every Team will receive an Item Crate for a random active Player on their Team."
     }
 ]
