@@ -10519,8 +10519,8 @@ input[type="number"]::-webkit-outer-spin-button {
 .GameWidget-ScoreTeamColorBar {
   width: 50px;
   height: 50px;
-  margin-left: 8px;
   font-size: 29px;
+  margin-left: 6px;
 }
 .GameWidget-ScoreNumber,
 .GameWidget-ScoreTeamColorBar {
@@ -10796,8 +10796,8 @@ input[type="number"]::-webkit-outer-spin-button {
   .GameWidget-ScoreTeamColorBar {
     width: 35px;
     height: 35px;
-    margin-left: 10px;
     font-size: 24px;
+    margin-left: 10px;
   }
   .GameWidget-ScoreLine {
     grid-gap: 5px;

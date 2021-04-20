@@ -1392,12 +1392,12 @@
         "description": "This Player was hatched via Bird Rights."
     },
     {
-        "id": "FORCE_FIELD",
+        "id": "FORCE",
         "color": "#ffffff",
         "textColor": "#ffffff",
         "background": "#000000",
-        "title": "Force Field",
-        "description": "This Player is protected by a Force Field from Steals and Swaps."
+        "title": "Force",
+        "description": "This Player is Forced into position. They cannot leave or move within this Team's roster."
     },
     {
         "id": "PSYCHOACOUSTICS",
@@ -1614,5 +1614,13 @@
         "background": "#40223e",
         "title": "Community Chest",
         "description": "Anytime 3000 Runs are accumulated league-wide, every Team will receive an Item Crate for a random active Player on their Team."
+    },
+    {
+        "id": "ENTANGLED",
+        "color": "#4b0f69",
+        "textColor": "#d285ff",
+        "background": "#ffffff",
+        "title": "Entangled",
+        "description": "Whenever this Player would return from Elsewhere, their Alternate will return instead."
     }
 ]
