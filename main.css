@@ -12941,7 +12941,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .Events-List-Item {
   display: grid;
-  grid-template-columns: 25px 25px 25px auto fit-content(50px);
+  grid-template-columns: 25px 30px 25px auto fit-content(50px);
   min-height: 34px;
   -webkit-align-items: center;
   align-items: center;
@@ -13043,6 +13043,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .Events-List-Category-Abilities {
   background: #9448a9;
+}
+.Events-List-Category-Redacted {
+  background: hsla(0, 0%, 39.6%, 0.6509803921568628);
 }
 .Events-List-PositiveBackground {
   background: #237a32;
@@ -13854,14 +13857,14 @@ input[type="number"]::-webkit-outer-spin-button {
   .Events-List-Item {
     font-size: 15px;
     padding: 5px 10px 5px 15px;
-    grid-template-columns: 30px 28px 30px auto 35px;
+    grid-template-columns: 25px 30px 25px auto auto;
   }
   .Events-List-Item-ParentEvent {
     grid-template-columns: auto auto;
     padding: 5px 0;
   }
   .Events-List-Item-Game {
-    grid-template-columns: 28px auto 20px;
+    grid-template-columns: 25px 1fr auto 20px;
   }
   .Events-List-Item-User {
     grid-template-columns: 45px auto;
