@@ -1593,19 +1593,19 @@
     },
     {
         "id": "HOTEL_MOTEL",
-        "color": "#5988ff",
-        "textColor": "#5988ff",
-        "background": "#163073",
+        "color": "#fd73ff",
+        "textColor": "#fd73ff",
+        "background": "#fffd7a",
         "title": "Hotel Motel",
-        "description": ""
+        "description": "The Hotel Motel will occasionally create Holiday Innings during the Earlseason, where you Party instead of Score."
     },
     {
         "id": "FAX_MACHINE",
-        "color": "#5988ff",
-        "textColor": "#5988ff",
-        "background": "#163073",
+        "color": "#19002b",
+        "textColor": "#ffffff",
+        "background": "#8b5cad",
         "title": "Fax Machine",
-        "description": ""
+        "description": "The Fax Machine will swap the Home Team's pitcher for their best Shadows Pitcher whenever they've allowed 10+ Runs in a game."
     },
     {
         "id": "SIM_COMMUNITY_CHEST",

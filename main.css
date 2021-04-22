@@ -9879,24 +9879,31 @@ input[type="number"]::-webkit-outer-spin-button {
   display: -webkit-flex;
   display: flex;
 }
-.Widget-StadiumLabel {
+.Widget-StadiumLabel,
+.Widget-State {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
   -webkit-flex-direction: row;
   flex-direction: row;
   -webkit-justify-content: center;
   justify-content: center;
   margin-left: 5px;
 }
-.Widget-StadiumLabel,
+.Widget-State-Icon .AttributeIcon {
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+}
 .Widget-Status {
   display: -webkit-flex;
   display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-}
-.Widget-Status {
   padding: 0 8px;
   height: 100%;
   border-radius: 5px;
+  -webkit-align-items: center;
+  align-items: center;
 }
 .Widget-Status--Live {
   background: green;
