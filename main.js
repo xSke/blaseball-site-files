@@ -15011,6 +15011,9 @@
               <div className="Standings-Team-Name" style={mr(i, l)}>
                 {l.fullName}
                 {Br(n.sim, "SIM_SHOW_LEVELS") && l.level > 4 ? <pr /> : null}
+                {l.seasAttr.includes("PARTY_TIME") ? (
+                  <div style={{ fontSize: "14px", marginTop: "2px", marginLeft: "8px" }}>{kr("0x1F389")}</div>
+                ) : null}
               </div>
             </div>
             <div className="Standings-Team-Wins" aria-label={" with " + e.record.wins + " Wins,"} role="text">
@@ -27623,7 +27626,8 @@
           var He =
               Or(null === Oe || void 0 === Oe ? void 0 : Oe.player, "NON_IDOLIZED") ||
               Or(null === Oe || void 0 === Oe ? void 0 : Oe.player, "COFFEE_EXIT") ||
-              Or(null === Oe || void 0 === Oe ? void 0 : Oe.player, "STATIC"),
+              Or(null === Oe || void 0 === Oe ? void 0 : Oe.player, "STATIC") ||
+              Or(null === Oe || void 0 === Oe ? void 0 : Oe.player, "LEGENDARY"),
             ze = ke.idol,
             qe =
               !Ye && (null === Oe || void 0 === Oe ? void 0 : Oe.player) ? (
