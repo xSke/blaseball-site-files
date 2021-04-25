@@ -25636,25 +25636,24 @@
       };
       a(201);
       function ih(e) {
-        var t,
-          a = e.path,
-          n = Object(r.useContext)(bi.context),
-          i = Object(r.useContext)(L.context).user,
-          l = Object(r.useContext)(I.context);
-        if (void 0 === n || void 0 === l) return null;
-        var c = n.teams.find(function (e) {
+        var t = e.path,
+          a = Object(r.useContext)(bi.context),
+          n = Object(r.useContext)(L.context).user,
+          i = Object(r.useContext)(I.context);
+        if (void 0 === a || void 0 === i) return null;
+        var l = a.teams.find(function (e) {
           var t;
-          return e.id === (null === (t = l.postseason.playoffs) || void 0 === t ? void 0 : t.winner);
+          return e.id === (null === (t = i.postseason.playoffs) || void 0 === t ? void 0 : t.winner);
         });
-        if (void 0 === c) return null;
-        var s = void 0 !== l.sim ? l.sim.season : -1,
-          m = (void 0 !== c && c.secondaryColor, void 0 !== c ? c.fullName : ""),
-          u =
-            void 0 !== c ? (
+        if (void 0 === l) return null;
+        var c = void 0 !== i.sim ? i.sim.season : -1,
+          s = (void 0 !== l && l.secondaryColor, void 0 !== l ? l.fullName : ""),
+          m =
+            void 0 !== l ? (
               <div className="League-Info-Body">
-                Your Season {s + 1} champions are the{" "}
-                <span className="League-Info-Callout" style={ur(i, c)}>
-                  {m}
+                Your Season {c + 1} champions are the{" "}
+                <span className="League-Info-Callout" style={ur(n, l)}>
+                  {s}
                 </span>
                 !
               </div>
@@ -25663,16 +25662,15 @@
           <div>
             <div className="GodsDay">
               <div className="GodsDay-Header">Blaseball Gods' Day</div>
-              {u}
-              <wu dateString={null === (t = l.sim) || void 0 === t ? void 0 : t.earlseasonDate} />
+              {m}
               <div className="GodsDay-Body">
-                Welcome to Blaseball. Season {s + 2} will start soon. Check the{" "}
+                Welcome to Blaseball. Season {c + 2} will start on May 10th at 8am PST. Check the{" "}
                 <a href="https://twitter.com/blaseball">Twitter</a> or <a href="https://discord.gg/3uFgJhu">Discord</a>{" "}
                 for updates!
               </div>
             </div>
             <hu />
-            {"/leaderboard" === a ? <Su /> : <Tu />}
+            {"/leaderboard" === t ? <Su /> : <Tu />}
           </div>
         );
       }
