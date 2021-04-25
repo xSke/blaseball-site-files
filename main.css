@@ -15187,6 +15187,117 @@ button:focus-visible {
     font-size: 2em;
   }
 }
+.Modal {
+  position: fixed;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-flex;
+  display: flex;
+  padding: 40px;
+  z-index: 3;
+}
+.Modal--Generic {
+  border: 1px solid;
+  overflow-y: scroll;
+  z-index: 20;
+}
+.theme-dark .Modal--Generic {
+  border-color: #fff;
+}
+.theme-light .Modal--Generic {
+  border-color: #000;
+}
+.theme-dark .Modal--Generic {
+  background: #000;
+}
+.theme-light .Modal--Generic {
+  background: #fff;
+}
+.Modal--Static {
+  border: none;
+  position: relative;
+  margin: 0 auto;
+  -webkit-transform: none;
+  transform: none;
+  left: unset;
+  top: unset;
+  height: auto;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  z-index: 3;
+}
+.Modal--Static .ModalItem-Content-WithAttributes {
+  padding-top: 20px;
+}
+.Modal--Static .ModalItem-Attributes {
+  position: static;
+}
+.Modal-Background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.theme-dark .Modal-Background {
+  background: rgba(0, 0, 0, 0.9);
+}
+.theme-light .Modal-Background {
+  background: hsla(0, 0%, 100%, 0.9);
+}
+.Modal-Close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  z-index: 10;
+}
+.theme-dark .Modal-Close {
+  color: #fff;
+}
+.theme-light .Modal-Close {
+  color: #000;
+}
+.Modal-Close svg {
+  width: 100%;
+  height: 100%;
+}
+.Modal-Close:hover {
+  border: 1px solid;
+  border-radius: 50%;
+}
+.theme-dark .Modal-Close:hover {
+  border-color: #fff;
+}
+.theme-light .Modal-Close:hover {
+  border-color: #000;
+}
+@media (max-width: 1080px) {
+  .Modal {
+    padding: 45px 20px;
+  }
+  .Modal-Close {
+    right: 8px;
+    top: 8px;
+  }
+}
 .theme-dark .tooltip-inner {
   background: #000;
 }
@@ -17191,117 +17302,6 @@ button:focus-visible {
     flex-direction: column;
   }
 }
-.Modal {
-  position: fixed;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  display: -webkit-flex;
-  display: flex;
-  padding: 40px;
-  z-index: 3;
-}
-.Modal--Generic {
-  border: 1px solid;
-  overflow-y: scroll;
-  z-index: 20;
-}
-.theme-dark .Modal--Generic {
-  border-color: #fff;
-}
-.theme-light .Modal--Generic {
-  border-color: #000;
-}
-.theme-dark .Modal--Generic {
-  background: #000;
-}
-.theme-light .Modal--Generic {
-  background: #fff;
-}
-.Modal--Static {
-  border: none;
-  position: relative;
-  margin: 0 auto;
-  -webkit-transform: none;
-  transform: none;
-  left: unset;
-  top: unset;
-  height: auto;
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
-  z-index: 3;
-}
-.Modal--Static .ModalItem-Content-WithAttributes {
-  padding-top: 20px;
-}
-.Modal--Static .ModalItem-Attributes {
-  position: static;
-}
-.Modal-Background {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 20;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-.theme-dark .Modal-Background {
-  background: rgba(0, 0, 0, 0.9);
-}
-.theme-light .Modal-Background {
-  background: hsla(0, 0%, 100%, 0.9);
-}
-.Modal-Close {
-  position: absolute;
-  right: 12px;
-  top: 12px;
-  width: 40px;
-  height: 40px;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  align-items: center;
-  z-index: 10;
-}
-.theme-dark .Modal-Close {
-  color: #fff;
-}
-.theme-light .Modal-Close {
-  color: #000;
-}
-.Modal-Close svg {
-  width: 100%;
-  height: 100%;
-}
-.Modal-Close:hover {
-  border: 1px solid;
-  border-radius: 50%;
-}
-.theme-dark .Modal-Close:hover {
-  border-color: #fff;
-}
-.theme-light .Modal-Close:hover {
-  border-color: #000;
-}
-@media (max-width: 1080px) {
-  .Modal {
-    padding: 45px 20px;
-  }
-  .Modal-Close {
-    right: 8px;
-    top: 8px;
-  }
-}
 .Offseason-Locked,
 .Offseason-Locked-ButtonContainer {
   font-family: "Lora", "Courier New", monospace, serif;
@@ -18897,6 +18897,15 @@ button:focus-visible {
 .theme-light .Shop-Construction-Description {
   color: #272727;
 }
+.Shop-Construction-Description-Small {
+  font-size: 16px;
+  margin: 5px 0 15px;
+}
+.Shop-Construction-Small {
+  padding: 5px 50px;
+  margin: 0;
+  font-size: 18px;
+}
 .Shop-Header {
   font-family: "Lora", "Courier New", monospace, serif;
   font-weight: 700;
@@ -20190,7 +20199,8 @@ button:focus-visible {
     opacity: 0;
   }
 }
-#root .Bulletin {
+#root .Bulletin,
+#root .Library {
   margin: auto;
   display: -webkit-flex;
   display: flex;

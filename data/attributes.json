@@ -1289,9 +1289,9 @@
     },
     {
         "id": "PATIENT",
-        "color": "#f06cff",
-        "textColor": "#f06cff",
-        "background": "#1b2950",
+        "color": "#b3ffa6",
+        "textColor": "#b3ffa6",
+        "background": "#2b304f",
         "title": "Patient",
         "description": "This batter will never swing when there are 0 Strikes and are 1 Ball away from a Walk."
     },
@@ -1622,5 +1622,69 @@
         "background": "#ffffff",
         "title": "Entangled",
         "description": "Whenever this Player would return from Elsewhere, their Alternate will return instead."
+    },
+    {
+        "id": "OFFWORLD",
+        "color": "#fffca6",
+        "textColor": "#fffca6",
+        "background": "#54216e",
+        "title": "Offworld",
+        "description": "When this Player hits a foul ball, it will fly Offworld."
+    },
+    {
+        "id": "ACIDIC",
+        "color": "#40ff89",
+        "textColor": "#40ff89",
+        "background": "#015437",
+        "title": "Acidic",
+        "description": "Acidic pitchers occasionally throw Acidic pitches, which cause any Runs scored on the play to be worth .1 less."
+    },
+    {
+        "id": "AA",
+        "color": "#40f9ff",
+        "textColor": "#40f9ff",
+        "background": "#001f2e",
+        "title": "Power Chaarge",
+        "description": "When this Player hits a Double, they'll have a chance of Overperforming for the rest of the game."
+    },
+    {
+        "id": "SMITHY",
+        "color": "#ff6c3b",
+        "textColor": "#ff6c3b",
+        "background": "#414445",
+        "title": "Smithy",
+        "description": "The Smithy will occasionally repair Items for Players playing in this Ballpark."
+    },
+    {
+        "id": "COVERUP",
+        "color": "#9de3de",
+        "textColor": "#9de3de",
+        "background": "#2b2a29",
+        "title": "Cover Up",
+        "description": "This Player is covering something up."
+    },
+    {
+        "id": "REPLICA",
+        "color": "#ffb452",
+        "textColor": "#ffb452",
+        "background": "#30140d",
+        "title": "Replica",
+        "description": "This Player will fade to Dust at the end of the Season."
+    },
+    {
+        "id": "DUST",
+        "color": "#ffb452",
+        "textColor": "#ffb452",
+        "background": "#30140d",
+        "title": "Dust",
+        "description": "This Player is waiting to be Dusted off."
+    },
+    {
+        "id": "RALLY",
+        "color": "#00ff51",
+        "textColor": "#00ff51",
+        "background": "#1a0112",
+        "title": "Rally",
+        "description": "This Team or Player will play 5% better when losing in the 7th inning or later."
     }
 ]
