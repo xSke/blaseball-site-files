@@ -14389,7 +14389,7 @@
             case 199:
               r.push(<vs entity={n} event={a} />);
               break;
-            case 193:
+            case 194:
               r.push(<Sm entity={n} event={a} />);
               break;
             default:
@@ -26613,15 +26613,16 @@
           ),
           Object(r.useEffect)(
             function () {
-              C.info.forEach(function (e, t) {
-                if (e.type === ff.PlayerDropdown && "idolsBoard" === e.filters.leagueLocation) {
-                  var a = [];
-                  A.topIdols.forEach(function (e) {
-                    return a.push(e.id);
-                  }),
-                    Ze(a, t + 1);
-                }
-              });
+              "2" === S &&
+                C.info.forEach(function (e, t) {
+                  if (e.type === ff.PlayerDropdown && "idolsBoard" === e.filters.leagueLocation) {
+                    var a = [];
+                    A.topIdols.forEach(function (e) {
+                      return a.push(e.id);
+                    }),
+                      Ze(a, t + 1);
+                  }
+                });
             },
             [A]
           ),
