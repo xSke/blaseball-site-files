@@ -16268,18 +16268,42 @@
                   path: "/league",
                   subpaths: [
                     {
-                      text: "Watch Live",
+                      text:
+                        t.sim.phase === D.Rest ||
+                        t.sim.phase === D.Preseason ||
+                        t.sim.phase === D.SeasonEnd ||
+                        t.sim.phase === D.PostseasonEnd ||
+                        t.sim.phase === D.Election
+                          ? "Standings"
+                          : t.sim.phase === D.PrePostseason || t.sim.phase === D.EarlyPostseasonEnd
+                          ? "Postseason"
+                          : t.sim.phase === D.EarlySiesta || t.sim.phase === D.LateSiesta
+                          ? "Events"
+                          : "Watch Live",
                       path: "/league",
-                      phases: [D.Earlseason, D.Midseason, D.Lateseason, D.EarlyPostseason, D.Postseason],
                     },
                     {
                       text: "Place Bets",
                       path: "/upcoming",
                       phases: [D.Earlseason, D.Midseason, D.Lateseason, D.EarlyPostseason, D.Postseason],
                     },
-                    { text: "Standings", path: "/standings" },
+                    { text: "Postseason", path: "/bracket", phases: [D.EarlyPostseason, D.Postseason] },
+                    {
+                      text: "Standings",
+                      path: "/standings",
+                      phases: [
+                        D.Earlseason,
+                        D.EarlySiesta,
+                        D.Midseason,
+                        D.LateSiesta,
+                        D.Lateseason,
+                        D.PrePostseason,
+                        D.EarlyPostseason,
+                        D.EarlyPostseasonEnd,
+                        D.Postseason,
+                      ],
+                    },
                     { text: "Idols", path: "/leaderboard" },
-                    { text: "Postseason", path: "/bracket", phases: [8, 9, 10, 11] },
                   ],
                 }),
                 G.push({ text: "Shop", path: "/shop", locked: !a.unlockedShop, ids: !0 }),
@@ -16303,16 +16327,19 @@
                 })))
             : G.push({ text: "League", path: "/league" }));
         var V = function () {
-            A(!u);
+            C(!T);
           },
           Y = function () {
-            g(!f);
+            A(!u);
           },
           Q = function () {
+            g(!f);
+          },
+          z = function () {
             w(!b);
           },
-          z = a.isFetching ? null : a.isSignedIn ? <Ju /> : <Ku />,
-          H = (function (e, a) {
+          H = a.isFetching ? null : a.isSignedIn ? <Ju /> : <Ku />,
+          q = (function (e, a) {
             var n = 0;
             return e.map(function (e, r) {
               if (e.subpaths && e.subpaths.length > 0) {
@@ -16321,13 +16348,13 @@
                   c = void 0;
                 return (
                   "League" === e.text
-                    ? ((l = M), (o = V), (c = u))
+                    ? ((l = M), (o = Y), (c = u))
                     : "Vote" === e.text
-                    ? ((l = L), (o = Y), (c = f))
-                    : "Info" === e.text && ((l = F), (o = Q), (c = b)),
+                    ? ((l = L), (o = Q), (c = f))
+                    : "Info" === e.text && ((l = F), (o = z), (c = b)),
                   (n += 1),
                   (
-                    <div className="Navigation-Dropdown Navigation-Dropdown-League" key={n}>
+                    <div className={"Navigation-Dropdown Navigation-Dropdown-" + e.text} key={n}>
                       {a ? (
                         <div className="Navigation-Header Navigation-Header-Dropdown" ref={l} onClick={o}>
                           {e.text} <es.g />
@@ -16338,13 +16365,17 @@
                         </Xu>
                       )}
                       <div
-                        className="Navigation-Dropdown-Content Navigation-Dropdown-Content-League"
+                        className={"Navigation-Dropdown-Content Navigation-Dropdown-Content-" + e.text}
                         style={c ? { maxHeight: "230px" } : {}}
+                        onClick={function (e) {
+                          B && V();
+                        }}
                       >
                         {e.subpaths.map(function (e, a) {
+                          if (void 0 === e.text) return null;
                           var r = !0;
-                          if (
-                            (e.phases &&
+                          return (
+                            e.phases &&
                               e.phases.length > 0 &&
                               ((r = !1),
                               e.phases.forEach(function (e) {
@@ -16354,13 +16385,14 @@
                                   : a.phase) === e && (r = !0);
                               })),
                             (n += 1),
-                            r)
-                          )
-                            return (
+                            r ? (
                               <Xu key={n} path={e.path} glow={e.glow} ids={e.ids}>
                                 {e.text} {e.locked ? <es.d /> : null}
                               </Xu>
-                            );
+                            ) : (
+                              void 0
+                            )
+                          );
                         })}
                       </div>
                     </div>
@@ -16377,14 +16409,9 @@
               );
             });
           })(G, B),
-          q = B ? (
+          J = B ? (
             <i.a.Fragment>
-              <div
-                className="Navigation-Header Navigation-Header-Dropdown"
-                onClick={function () {
-                  C(!T);
-                }}
-              >
+              <div className="Navigation-Header Navigation-Header-Dropdown" onClick={V}>
                 <ie.rb className="Navigation-Toggle-Icon" />
               </div>
               <div className="Navigation-Dropdown Navigation-Dropdown-Hamburger">
@@ -16392,13 +16419,13 @@
                   className="Navigation-Dropdown-Content Navigation-Dropdown-Content-Hamburger"
                   style={T ? { maxHeight: "400px" } : {}}
                 >
-                  {H}
+                  {q}
                 </div>
               </div>
             </i.a.Fragment>
           ) : (
             <div className="Navigation-Main">
-              {H}
+              {q}
               <d key={0} path="/search" background={P} className="Navigation-CurrencyButton Navigation-Search">
                 <es.l />
               </d>
@@ -16406,14 +16433,14 @@
           );
         return (
           <nav className="Navigation" ref={x}>
-            {q}
+            {J}
             <div className="Navigation-Top Navigation-Toggle">
               <d key={-1} path="/search" background={P} className="Navigation-CurrencyButton Navigation-Search">
                 <es.l />
               </d>
-              {z}
+              {H}
             </div>
-            {B ? null : <div className="Navigation-User">{z}</div>}
+            {B ? null : <div className="Navigation-User">{H}</div>}
           </nav>
         );
       }
@@ -16423,7 +16450,7 @@
           a = e.isModal,
           n = e.subpaths,
           l = e.glow,
-          o = Object(s.g)(),
+          o = (e.onClick, Object(s.g)()),
           c = o.pathname,
           m = !("/login" === c || "/signup" === c),
           u =
@@ -28253,8 +28280,8 @@
                                             return (e.next = 3), t.json();
                                           case 3:
                                             (a = e.sent) &&
-                                              ((n.coins = a.coins),
-                                              (n.lightMode = a.lightMode),
+                                              (void 0 !== a.coins && (n.coins = a.coins),
+                                              void 0 !== a.lightMode && (n.lightMode = a.lightMode),
                                               a.peanuts && (n.snacks.Peanuts = a.peanuts),
                                               l(Object(N.a)({}, n)),
                                               a.toasts &&
@@ -28921,7 +28948,7 @@
           <div className="Library" id="Main-Body">
             <h2 className="Library-Header">Library</h2>
             <Jp className="Library-Librarian" />
-            <h4 className="Stubs-Body" style={{ width: "50%", textAlign: "center" }}>
+            <h4 className="Stubs-Body Library-Description">
               Welcome to the Library. Collections will be made available pending approval from the League Historian.
             </h4>
             <div className="League-Nav">
@@ -32893,11 +32920,7 @@
                           l(o);
                         return (
                           <div className="Recap-Results">
-                            <div
-                              className={
-                                "Recap-Decree-Container" + (B.lightMode ? " Recap-Decree-Container-LightMode" : "")
-                              }
-                            >
+                            <div className="Recap-Decree-Container">
                               <div className="Recap-Blessing-Info">
                                 <div className="Recap-Decree-Header">
                                   {n.nickname} received {a.totalGifts} Gifts!
@@ -33113,7 +33136,7 @@
               : (l.push("The top chosen Renovation(s) will be implemented for your Team's Ballpark."),
                 l.push("The more Coins contributed to your Ballpark, the more Renovations will be built.")),
             l.push("All Ballpark construction goes into effect in the Latesiesta, after Day 72.");
-          var o = <Vd header={n} lines={l} />;
+          var o = <Vd header={n} lines={l} noMargin={!0} />;
           return (
             <div className="Offseason-Info">
               <div className="Offseason-Header">

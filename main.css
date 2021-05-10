@@ -9544,6 +9544,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 20px 0;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -9552,11 +9553,13 @@ input[type="number"]::-webkit-outer-spin-button {
   display: -webkit-flex;
   display: flex;
   font-size: 24px;
-  padding-bottom: 20px;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
+}
+.League-Countdown {
+  padding-bottom: 20px;
 }
 .League-Number {
   margin: 0 10px;
@@ -14975,6 +14978,9 @@ button:focus-visible {
   .theme-light .Navigation-Dropdown-Hamburger {
     background: #fff;
   }
+  .Navigation-Dropdown:hover .Navigation-Dropdown-Content {
+    max-height: 0;
+  }
   .Navigation-Dropdown-Content {
     position: static;
     top: auto;
@@ -17604,7 +17610,7 @@ button:focus-visible {
   align-items: center;
 }
 .Offseason-Header svg {
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .Offseason-Description {
   font-family: "Lora", "Courier New", monospace, serif;
@@ -20651,6 +20657,10 @@ button:focus-visible {
   align-items: center;
   font-family: "Lora", "Courier New", monospace, serif;
 }
+#root .Library-Description {
+  width: 50%;
+  text-align: center;
+}
 #root .Library-Body {
   overflow: hidden;
 }
@@ -20679,6 +20689,13 @@ button:focus-visible {
 }
 #root .Library-Chapters {
   width: 40%;
+  margin-top: 20px;
+}
+.theme-dark #root .Library-Chapters-Item :hover {
+  color: #c4c4c4;
+}
+.theme-light #root .Library-Chapters-Item :hover {
+  color: #272727;
 }
 #root .Library-Story {
   width: 60%;
@@ -20755,6 +20772,9 @@ button:focus-visible {
   }
 }
 @media (max-width: 1080px) {
+  #root .Library-Description {
+    width: 100%;
+  }
   #root .Library-Wrapper {
     -webkit-transform: none;
     transform: none;
@@ -20763,9 +20783,13 @@ button:focus-visible {
   }
   #root .Library-Chapters {
     margin-right: auto;
+    width: 100%;
   }
   #root .Library-Chapters-Item {
     font-size: 15px;
+  }
+  #root .Library-Story {
+    width: 100%;
   }
 }
 #root .Bulletin {
