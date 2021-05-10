@@ -64,62 +64,6 @@
         "description": "A Reverberating player has a small chance of batting again after each of their At-Bats end."
     },
     {
-        "id": "BLOOD_DONOR",
-        "color": "#ff1f3c",
-        "textColor": "#ff1f3c",
-        "background": "#52050f",
-        "title": "Blood Donor",
-        "description": "In the Blood Bath, this team will donate Stars to a division opponent that finished behind them in the standings."
-    },
-    {
-        "id": "BLOOD_THIEF",
-        "color": "#ff1f3c",
-        "textColor": "#ff1f3c",
-        "background": "#52050f",
-        "title": "Blood Thief",
-        "description": "In the Blood Bath, this team will steal Stars from a division opponent that finished ahead of them in the standings."
-    },
-    {
-        "id": "BLOOD_PITY",
-        "color": "#ff1f3c",
-        "textColor": "#ff1f3c",
-        "background": "#52050f",
-        "title": "Blood Pity",
-        "description": "In the Blood Bath, this team must give Stars to the team that finished last in their division."
-    },
-    {
-        "id": "BLOOD_WINNER",
-        "color": "#ff1f3c",
-        "textColor": "#ff1f3c",
-        "background": "#52050f",
-        "title": "Blood Winner",
-        "description": "In the Blood Bath, this team must give Stars to the team that finished first in their division."
-    },
-    {
-        "id": "BLOOD_FAITH",
-        "color": "#ff1f3c",
-        "textColor": "#ff1f3c",
-        "background": "#52050f",
-        "title": "Blood Faith",
-        "description": "In the Blood Bath, this player will receive a small boost to a random stat."
-    },
-    {
-        "id": "BLOOD_LAW",
-        "color": "#ff1f3c",
-        "textColor": "#ff1f3c",
-        "background": "#52050f",
-        "title": "Blood Law",
-        "description": "In the Blood Bath, this team will gain or lose Stars depending on how low or high they finish in their division."
-    },
-    {
-        "id": "BLOOD_CHAOS",
-        "color": "#ff1f3c",
-        "textColor": "#ff1f3c",
-        "background": "#52050f",
-        "title": "Blood Chaos",
-        "description": "In the Blood Bath, each player on this team will gain or lose a random amount of Stars."
-    },
-    {
         "id": "RETURNED",
         "color": "#fbff8a",
         "textColor": "#fbff8a",
@@ -953,11 +897,11 @@
     },
     {
         "id": "DEFECTOR",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#ff2679",
+        "textColor": "#ff2679",
+        "background": "#1d1324",
         "title": "Defector",
-        "description": ""
+        "description": "This Player will switch to the opponent's roster when the game ends."
     },
     {
         "id": "HOMEBODY",
@@ -1152,14 +1096,6 @@
         "description": "If a home run lands in a Small Bucket, it score 5 extra Runs."
     },
     {
-        "id": "BUMPERS",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
-        "title": "Bumpers",
-        "description": ""
-    },
-    {
         "id": "BULLPEN",
         "color": "#ffffff",
         "textColor": "#ffffff",
@@ -1193,11 +1129,11 @@
     },
     {
         "id": "TEMP_STOLEN",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
-        "title": "Temp Stolen",
-        "description": "This player has been temporarily stolen."
+        "color": "#eb9494",
+        "textColor": "#eb9494",
+        "background": "#260411",
+        "title": "Stolen",
+        "description": "This Player has been temporarily stolen."
     },
     {
         "id": "REDACTED",
@@ -1209,11 +1145,11 @@
     },
     {
         "id": "FUGITIVE",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#ffcc8a",
+        "textColor": "#ffcc8a",
+        "background": "#48474d",
         "title": "Fugitive",
-        "description": ""
+        "description": "This Player is at risk of being caught by Searchlights."
     },
     {
         "id": "BIG_RED_BUTTON",
@@ -1294,14 +1230,6 @@
         "background": "#2b304f",
         "title": "Patient",
         "description": "This batter will never swing when there are 0 Strikes and are 1 Ball away from a Walk."
-    },
-    {
-        "id": "HUNCH",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#453e30",
-        "title": "Hunch",
-        "description": "This player has a Hunch."
     },
     {
         "id": "UNCERTAIN",
@@ -1397,7 +1325,7 @@
         "textColor": "#ffffff",
         "background": "#000000",
         "title": "Force",
-        "description": "This Player is Forced into position. They cannot leave or move within this Team's roster."
+        "description": "This Player is Forced into position. They cannot leave their current location."
     },
     {
         "id": "PSYCHOACOUSTICS",
@@ -1577,16 +1505,16 @@
     },
     {
         "id": "FLOOD_BATH",
-        "color": "#5988ff",
-        "textColor": "#5988ff",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
         "background": "#163073",
         "title": "Flood Bath",
         "description": "When Runners on this Team are cleared via Flooding, they'll become Slippery for the remainder of the game."
     },
     {
         "id": "SLIPPERY",
-        "color": "#5988ff",
-        "textColor": "#5988ff",
+        "color": "#5ed4ff",
+        "textColor": "#5ed4ff",
         "background": "#163073",
         "title": "Slippery",
         "description": "When a Slippery baserunner scores, and first base is available, they'll slide to first after scoring."
@@ -1614,6 +1542,14 @@
         "background": "#40223e",
         "title": "Community Chest",
         "description": "Anytime 3000 Runs are accumulated league-wide, every Team will receive an Item Crate for a random active Player on their Team."
+    },
+    {
+        "id": "SIM_FAIRGROUNDS",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#000000",
+        "title": "Fairgrounds",
+        "description": "All games have a chance of being Prize Matches, in which the winning Team will open an Item Crate."
     },
     {
         "id": "ENTANGLED",
@@ -1686,5 +1622,21 @@
         "background": "#1a0112",
         "title": "Rally",
         "description": "This Team or Player will play 5% better when losing in the 7th inning or later."
+    },
+    {
+        "id": "NIGHT_VISION",
+        "color": "#b2ffa1",
+        "textColor": "#b2ffa1",
+        "background": "#1c0a4a",
+        "title": "Night Vision",
+        "description": "This Player will play 50% better in Solar Eclipse weather."
+    },
+    {
+        "id": "NEGATIVE",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#000000",
+        "title": "Negative",
+        "description": "This Player is a Negative."
     }
 ]

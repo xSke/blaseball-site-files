@@ -1,0 +1,477 @@
+[
+    {
+        "title": "Root",
+        "chapters": [
+            {
+                "title": "| ||||",
+                "id": "b56d96ea-92e7-4895-8cb4-f8a9d9a03804",
+                "redacted": true
+            },
+            {
+                "title": "| |||||",
+                "id": "84ade43c-a724-40cc-9459-5b6340f9e528",
+                "redacted": true
+            },
+            {
+                "title": "| |||||||",
+                "id": "8a74b84b-233e-4128-a2ef-b8871b65525b",
+                "redacted": true
+            }
+        ]
+    },
+    {
+        "title": "Pre-History I",
+        "chapters": [
+            {
+                "title": "The First Day, 1st Edition",
+                "id": "db89fdca-5f18-4ab2-8b1a-722274c24d0f",
+                "redacted": false
+            },
+            {
+                "title": "|||||| |",
+                "id": "972adba7-6524-4302-9d71-d35374153e83",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| |",
+                "id": "cb2e486e-551c-4fc1-bc80-a5d56119f840",
+                "redacted": true
+            },
+            {
+                "title": "|||||| |",
+                "id": "d35b3910-b294-4633-a5b6-f126d4fa66dc",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| ||||",
+                "id": "016c0975-4806-4229-9a40-aba4a75a8382",
+                "redacted": true
+            },
+            {
+                "title": "||||| ||||| |||||||||",
+                "id": "12d3c673-b0d4-4c30-a0c6-e1894189e1c7",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| |",
+                "id": "427ac722-6330-475f-98f7-08b44e4a27ed",
+                "redacted": true
+            },
+            {
+                "title": "|||||| |",
+                "id": "f313b2bf-c6e4-4f75-9fd7-863820265359",
+                "redacted": true
+            },
+            {
+                "title": "|||||| |||||||||",
+                "id": "739f16fc-6872-4d5b-a715-bff47071df65",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| |",
+                "id": "ee43a14a-9b8c-43ed-9370-4eefcc8f5b3c",
+                "redacted": true
+            },
+            {
+                "title": "||| ||| || ||| |||||||||",
+                "id": "25de9318-c872-4d06-b019-9a7c7017aab5",
+                "redacted": true
+            },
+            {
+                "title": "|||||| |",
+                "id": "c54d6fc5-0899-415d-942d-36b82b2f66e6",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| |",
+                "id": "b3efde45-073d-40a0-ba6b-62b4a5d09a38",
+                "redacted": true
+            },
+            {
+                "title": "||| ||||| |||||",
+                "id": "7403c4b2-f28f-4bc2-b2d1-b0e9ed13296a",
+                "redacted": true
+            },
+            {
+                "title": "|||| ||||||||",
+                "id": "4e37e27c-fa7f-4405-8732-bd4131e717a2",
+                "redacted": true
+            },
+            {
+                "title": "|||||| |",
+                "id": "829743bf-7531-4552-ad50-d9644a599486",
+                "redacted": true
+            },
+            {
+                "title": "| ||||",
+                "id": "3e51714c-6f8e-4725-8345-3f8a1e22a6e1",
+                "redacted": true
+            },
+            {
+                "title": "| ||||||||",
+                "id": "68e232dc-36fa-4e3f-aff4-c4f97e27e785",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| |",
+                "id": "d44bfe59-e439-4ead-aaf1-233278103971",
+                "redacted": true
+            },
+            {
+                "title": "||| ||| ||||||",
+                "id": "4bc47bf2-db4d-48eb-bba8-f2754197ec50",
+                "redacted": true
+            }
+        ]
+    },
+    {
+        "title": "Pre-History II",
+        "chapters": [
+            {
+                "title": "||| ||||| |||| ||| |||||||",
+                "id": "4de3649f-bbcf-4e09-b1b6-c9a35e4b817d",
+                "redacted": true
+            },
+            {
+                "title": "|||||| ||",
+                "id": "9757f352-1b33-4478-858d-9248bc4c7e5b",
+                "redacted": true
+            },
+            {
+                "title": "||| ||||| |||",
+                "id": "326cc41d-8bad-4bb6-b2ac-a0e9fe435b42",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| ||",
+                "id": "420a9f1f-ce20-48c3-affc-3004aa4c0eba",
+                "redacted": true
+            },
+            {
+                "title": "| |||||| |||||||",
+                "id": "477f2379-db29-4af4-a5ba-6fe7d5744056",
+                "redacted": true
+            },
+            {
+                "title": "|||||| ||",
+                "id": "643c4519-41c8-4da4-bb7d-9f67bc6a7c1e",
+                "redacted": true
+            },
+            {
+                "title": "| ||||| |||||||",
+                "id": "14db5581-9a08-4a4d-a07d-fb1b1c1cc771",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| ||",
+                "id": "4c4a1ae0-a2dc-424d-8da9-dbd564147559",
+                "redacted": true
+            },
+            {
+                "title": "|||||| ||",
+                "id": "2fcd13c2-5787-4de6-acba-a8eff59f1fe1",
+                "redacted": true
+            },
+            {
+                "title": "||| ||||||||| || ||||",
+                "id": "32730ddd-901e-4ded-a58e-3d46f6c7e1f0",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| ||",
+                "id": "c0194626-23fc-4bf8-9425-118fab23e7fe",
+                "redacted": true
+            },
+            {
+                "title": "|||||| ||",
+                "id": "6a4cd5b0-cd95-421a-8ce9-3fcfc2b31f0e",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| ||",
+                "id": "1e8491b2-a2c6-4c50-bbac-77d5d0ace25b",
+                "redacted": true
+            },
+            {
+                "title": "|||||||||| |||||||||||||",
+                "id": "77a880d9-1ff6-4c47-8cc3-453d5d1476e7",
+                "redacted": true
+            },
+            {
+                "title": "|||||| ||",
+                "id": "595c40f6-4da0-4ba3-a1b2-bc9169311abf",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| ||",
+                "id": "6cd8a662-ef44-4b5f-b186-63a87d5a527b",
+                "redacted": true
+            },
+            {
+                "title": "||| |||||||||||| ||||||",
+                "id": "834e08fe-8228-47e7-8ee2-13b4143487fc",
+                "redacted": true
+            },
+            {
+                "title": "|||||| ||",
+                "id": "4286be18-3625-4595-8285-1e9111b3a143",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| ||",
+                "id": "4a47f7a4-e9ae-42e8-9378-0dc77925a0f1",
+                "redacted": true
+            },
+            {
+                "title": "|||||| ||",
+                "id": "8b8697d7-7dc5-479b-bc20-9e8295c40dd0",
+                "redacted": true
+            },
+            {
+                "title": "| ||||| |||||||||",
+                "id": "a3de1ac4-87d5-4b94-8b64-268a4f64c13b",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| ||",
+                "id": "0049de10-c07a-4d9a-83bc-f2b31098906c",
+                "redacted": true
+            },
+            {
+                "title": "| ||||| |||||||||||",
+                "id": "e5a0a130-8df1-43a1-9880-2a66ff087153",
+                "redacted": true
+            },
+            {
+                "title": "|||||| ||",
+                "id": "6c04ea46-617a-488e-b3bb-ce0277d76585",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| ||",
+                "id": "0bcb144f-e000-4513-8163-fc048201afed",
+                "redacted": true
+            },
+            {
+                "title": "||||||| ||||||||||||",
+                "id": "5afe46bb-de89-4724-a7f6-fa1bfd5d96f7",
+                "redacted": true
+            },
+            {
+                "title": "|||||| ||",
+                "id": "ddcfd46d-1b62-4de7-b22b-5f51ad0050c2",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| ||",
+                "id": "97f51687-21ff-43f3-ad70-ec7a49d12f35",
+                "redacted": true
+            },
+            {
+                "title": "| ||||||| || ||||",
+                "id": "54701884-7c10-4018-a3bd-5e45786cbfde",
+                "redacted": true
+            },
+            {
+                "title": "| ||||||||||||| || ||||||||||",
+                "id": "d884bf05-4680-4c80-881f-77ca29ec202a",
+                "redacted": true
+            },
+            {
+                "title": "||| ||| ||||||",
+                "id": "e6a1e840-aa52-4143-9d3f-7b6c8c4fc5a0",
+                "redacted": true
+            },
+            {
+                "title": "| ||||",
+                "id": "948c3b99-82d5-4850-bc5c-b64774dd18bd",
+                "redacted": true
+            }
+        ]
+    },
+    {
+        "title": "Bridge",
+        "chapters": [
+            {
+                "title": "||| ||||| |||||||||",
+                "id": "d22a91ed-1611-47e9-97a5-0123aaf31776",
+                "redacted": true
+            },
+            {
+                "title": "||| ||||| |||| ||| |||||||",
+                "id": "6567eb7f-de92-442f-b0ee-41187411f997",
+                "redacted": true
+            },
+            {
+                "title": "|||||| |",
+                "id": "7ecc3aaa-421e-40f7-a30d-8ddddd87095d",
+                "redacted": true
+            },
+            {
+                "title": "||||||| |",
+                "id": "55ad6591-103e-47c3-b5b1-99f366b62b09",
+                "redacted": true
+            },
+            {
+                "title": "||| ||||| ||||||",
+                "id": "134e38d4-e1d3-4074-a24b-aadc96c1e168",
+                "redacted": true
+            }
+        ]
+    },
+    {
+        "title": "Discipline",
+        "chapters": [
+            {
+                "title": "||| ||||| |||| ||| |||||||",
+                "id": "1d8a11e7-73c0-4234-ac33-7381007156d6",
+                "redacted": true
+            },
+            {
+                "title": "||| ||||||||| ||||",
+                "id": "d855fe19-dd24-495e-a52e-3921fcd5a517",
+                "redacted": true
+            },
+            {
+                "title": "|||||| |||||||||||||",
+                "id": "81b11619-7b2a-477f-a0ee-98b928d24adf",
+                "redacted": true
+            },
+            {
+                "title": "|||||| |||||",
+                "id": "84741e54-2c0f-4678-83b9-a0db5dfea8ff",
+                "redacted": true
+            },
+            {
+                "title": "||| ||||| ||||||",
+                "id": "62737500-6f94-464e-94dc-4a753c816ef9",
+                "redacted": true
+            },
+            {
+                "title": "||| ||||| ||||||||",
+                "id": "750a5ac7-c9f1-4e50-980b-559fcff194a0",
+                "redacted": true
+            },
+            {
+                "title": "||| ||||||| |||",
+                "id": "5282fe53-d90a-4700-85ab-a8e717370426",
+                "redacted": true
+            },
+            {
+                "title": "||| ||| |||||||||",
+                "id": "7a6f7a38-9a77-45a6-b73e-d1e7c3711453",
+                "redacted": true
+            },
+            {
+                "title": "|||||| |",
+                "id": "408c4a86-c135-4d13-914e-5dc285a67612",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| |",
+                "id": "e57f4ff1-c460-41ae-a2c9-f77284199bb0",
+                "redacted": true
+            },
+            {
+                "title": "|||||| |",
+                "id": "cdefbb50-6d20-4228-b638-dd790dad6490",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| |",
+                "id": "0db4aa83-9b1a-45dd-8123-f4464fe718f7",
+                "redacted": true
+            },
+            {
+                "title": "|||||| || |||||| ||||||",
+                "id": "2f7bb8cb-caec-4056-9571-27789d6ed1c7",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| |",
+                "id": "128b6012-b173-402b-b6d1-f58b6cfaf6a4",
+                "redacted": true
+            },
+            {
+                "title": "|||||| || ||||||||",
+                "id": "cedad557-b71b-4905-b93d-16c8c9258eb1",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| |",
+                "id": "19babc27-a5c0-43b0-9c4a-dbb7ba6cb1d5",
+                "redacted": true
+            },
+            {
+                "title": "|||||| || ||||||",
+                "id": "3ba824c9-af6f-4fcb-9874-c50f11ab1326",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| |",
+                "id": "ca6a2ed1-4d10-4499-89a6-eeeee639efdf",
+                "redacted": true
+            },
+            {
+                "title": "|||||| || ||||",
+                "id": "ecd28e1a-f12a-4653-a74a-027bce64235a",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| |",
+                "id": "ef4889da-313f-4959-93d8-40fac011c8be",
+                "redacted": true
+            },
+            {
+                "title": "|||||| || ||||||| |||||||",
+                "id": "645d22b6-696b-4630-a706-ef268172df6f",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| |",
+                "id": "c787f35e-0ab1-4730-af6f-3bd1f5cb68ec",
+                "redacted": true
+            },
+            {
+                "title": "|||||| || |||| || ||||||||",
+                "id": "727de905-481f-4d03-8f40-37675c56cbd3",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| |",
+                "id": "55f23d02-86b5-44fa-8651-6b8dc88117b4",
+                "redacted": true
+            },
+            {
+                "title": "|||||| || ||||||||",
+                "id": "4ec7884a-39cc-48e0-a1ba-5c93abae9f52",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| |",
+                "id": "8971475d-42b2-4235-90e5-72d02bd21388",
+                "redacted": true
+            },
+            {
+                "title": "|||||| ||| |||||||||",
+                "id": "f01be5dd-a587-46f0-9634-242b04fc991a",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| ||",
+                "id": "e4c46a49-dd28-4a0b-9639-0c03bb3a91dc",
+                "redacted": true
+            },
+            {
+                "title": "|||||| ||| ||||| | ||||||||||",
+                "id": "12b1de05-d48e-4c63-89c0-7af5a7731dff",
+                "redacted": true
+            },
+            {
+                "title": "|||||||| ||",
+                "id": "92c84947-aee7-43a7-bdcb-6b20967aab94",
+                "redacted": true
+            }
+        ]
+    }
+]
