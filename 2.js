@@ -1,4 +1,4 @@
-/*! For license information please see 2.778ae496.chunk.js.LICENSE.txt */
+/*! For license information please see 2.bcc72b0c.chunk.js.LICENSE.txt */
 (this.webpackJsonpsite = this.webpackJsonpsite || []).push([
   [2],
   [
