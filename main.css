@@ -17744,6 +17744,26 @@ button:focus-visible {
 .theme-light .GiftShop-Gifts-Item-Button {
   color: #fff;
 }
+.GiftShop-Gifts-Item-View {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: 10px;
+  max-height: 20px;
+  margin: auto;
+}
+.theme-dark .GiftShop-Gifts-Item-View {
+  background: #4fe060;
+}
+.theme-light .GiftShop-Gifts-Item-View {
+  background: #048c14;
+}
+.theme-dark .GiftShop-Gifts-Item-View {
+  color: #000;
+}
+.theme-light .GiftShop-Gifts-Item-View {
+  color: #fff;
+}
 .GiftShop-Gifts-Wishlist {
   font-size: 16px;
   display: -webkit-flex;
@@ -18991,10 +19011,6 @@ button:focus-visible {
 }
 #root .Gift-List {
   font-family: "Lora", "Courier New", monospace, serif;
-  margin: 15px 0;
-  padding: 25px 0;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
   max-width: 600px;
   text-align: center;
 }
@@ -19010,21 +19026,21 @@ button:focus-visible {
 #root .Gift-List-Items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 10px;
-}
-#root .Gift-List-Item,
-#root .Gift-List-Items {
+  margin-top: 30px;
+  margin-bottom: 20px;
   -webkit-align-items: center;
   align-items: center;
 }
 #root .Gift-List-Item {
   font-size: 16px;
-  max-height: 18px;
   font-weight: 400;
+  margin-top: 8px;
+  height: 100%;
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: center;
   justify-content: center;
+  vertical-align: top;
 }
 #root .Gift-List-Item-Emoji {
   margin: 2px 5px 0;
