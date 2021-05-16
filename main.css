@@ -12867,6 +12867,9 @@ input[type="number"]::-webkit-outer-spin-button {
   align-items: center;
   justify-self: flex-end;
 }
+.Events-Feed-Item {
+  grid-column: 5;
+}
 .Events-Feed-Num {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 12px;
@@ -12971,16 +12974,25 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .Events-List-Item {
   display: grid;
-  grid-template-columns: 25px 30px 25px auto fit-content(50px);
+  grid-template-columns: 25px 30px auto fit-content(25px) fit-content(50px);
   min-height: 34px;
   -webkit-align-items: center;
   align-items: center;
   padding: 0 10px 0 20px;
   font-family: "Lora", "Courier New", monospace, serif;
   font-size: 18px;
+  position: relative;
+  grid-gap: 2px;
+  gap: 2px;
+}
+.Events-List-Item:not(:last-child) {
+  margin-bottom: 5px;
 }
 .Events-List-Item-Game {
   grid-template-columns: 25px auto fit-content(50px) 30px;
+}
+.Events-List-Item-Game .Events-List-Links-Link-Game {
+  display: none;
 }
 .Events-List-Item-ParentEvent {
   grid-template-columns: auto fit-content(50px);
@@ -12991,10 +13003,12 @@ input[type="number"]::-webkit-outer-spin-button {
 .Events-List-Item-User {
   grid-template-columns: 60px auto;
 }
-.theme-dark .Events-List-Item:nth-child(odd) .Events-List-Background-Standard {
+.theme-dark .Events-List-Item:nth-child(odd) .Events-List-Background-Standard,
+.theme-dark .Events-List-Item:nth-child(odd) .Events-List-Links-Shown {
   background: rgba(30, 30, 30, 0.6392156862745098);
 }
-.theme-light .Events-List-Item:nth-child(odd) .Events-List-Background-Standard {
+.theme-light .Events-List-Item:nth-child(odd) .Events-List-Background-Standard,
+.theme-light .Events-List-Item:nth-child(odd) .Events-List-Links-Shown {
   background: hsla(0, 0%, 89%, 0.7098039215686275);
 }
 .theme-dark .Events-List-Item:nth-child(odd) a:hover {
@@ -13058,24 +13072,7 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #fff;
   border-radius: 50%;
   justify-self: center;
-}
-.Events-List-Category-Game {
-  background: #23677a;
-}
-.Events-List-Category-Changes {
-  background: #6b0046;
-}
-.Events-List-Category-Outcomes {
-  background: #af7624;
-}
-.Events-List-Category-Narrative {
-  background: #3872b7;
-}
-.Events-List-Category-Abilities {
-  background: #9448a9;
-}
-.Events-List-Category-Redacted {
-  background: hsla(0, 0%, 39.6%, 0.6509803921568628);
+  margin-right: 5px;
 }
 .Events-List-PositiveBackground {
   background: #237a32;
@@ -13093,14 +13090,48 @@ input[type="number"]::-webkit-outer-spin-button {
   background: #a13838;
 }
 .Events-List-NegativeText {
-  color: #d94141;
   font-weight: 700;
+}
+.theme-dark .Events-List-NegativeText,
+.theme-light .Events-List-NegativeText {
+  color: #d94141;
 }
 .Events-List-Desc {
   padding: 10px;
   border-radius: 5px;
   line-height: 1.2em;
   width: 100%;
+  position: relative;
+}
+.Events-List-Desc-Book {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.Events-List-Desc-Win {
+  border-left: 5px solid #237a32;
+}
+.Events-List-Desc-Loss {
+  border-left: 5px solid #a13838;
+}
+.Events-List-Desc-Game {
+  border-left: 5px solid #23677a;
+}
+.Events-List-Desc-Changes {
+  border-left: 5px solid #6b0046;
+}
+.Events-List-Desc-Outcomes {
+  border-left: 5px solid #af7624;
+}
+.Events-List-Desc-Narrative {
+  border-left: 5px solid #3872b7;
+}
+.Events-List-Desc-Abilities {
+  border-left: 5px solid #9448a9;
+}
+.Events-List-Desc-Redacted {
+  border-left: 5px solid hsla(0, 0%, 39.6%, 0.6509803921568628);
 }
 .Events-List-Row {
   display: -webkit-flex;
@@ -13147,12 +13178,84 @@ input[type="number"]::-webkit-outer-spin-button {
   padding-top: 5px;
 }
 .Events-List-Minor-SpaceBetween {
-  font-size: 14px;
   padding-top: 5px;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+}
+.Events-List-Links,
+.Events-List-Minor-SpaceBetween {
+  font-size: 14px;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+.Events-List-Links {
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 5px;
+  display: none;
+  -webkit-transform: translateY(-30px);
+  transform: translateY(-30px);
+  opacity: 0;
+  grid-column: 3;
+  border-radius: 5px;
+  position: relative;
+}
+.theme-dark .Events-List-Links {
+  color: #c4c4c4;
+}
+.theme-light .Events-List-Links {
+  color: #272727;
+}
+.Events-List-Links-Button {
+  font-size: 14px;
+  border-radius: 50%;
+  border: 1px solid;
+  padding: 2px;
+  width: 18px;
+  height: 18px;
+  width: 22px;
+  height: 22px;
+  grid-column: 4;
+  align-self: center;
+  grid-row: 1;
+  justify-self: center;
+}
+.theme-dark .Events-List-Links-Button {
+  color: #c4c4c4;
+}
+.theme-light .Events-List-Links-Button {
+  color: #272727;
+}
+.theme-dark .Events-List-Links-Button {
+  background: #0b0b0b;
+}
+.theme-light .Events-List-Links-Button {
+  background: #f2f2f2;
+}
+.theme-dark .Events-List-Links-Button {
+  border-color: #333;
+}
+.theme-light .Events-List-Links-Button {
+  border-color: #c3c3c3;
+}
+.Events-List-Links-Link {
+  padding: 2px 7px;
+  border-radius: 5px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.Events-List-Links-Link :first-child {
+  margin-right: 3px;
+}
+.Events-List-Links-Shown {
+  display: -webkit-flex;
+  display: flex;
+  opacity: 1;
+  -webkit-animation: op 0.3s forwards;
+  animation: op 0.3s forwards;
 }
 @-webkit-keyframes rotate {
   0% {
@@ -13172,6 +13275,30 @@ input[type="number"]::-webkit-outer-spin-button {
   to {
     -webkit-transform: rotate(1turn);
     transform: rotate(1turn);
+  }
+}
+@-webkit-keyframes op {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1%;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes op {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1%;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 .Account-Header {
@@ -13821,6 +13948,15 @@ input[type="number"]::-webkit-outer-spin-button {
   position: relative;
   border-radius: 10px;
   margin-bottom: 10px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .LeagueInfo-Attributes .AttributeIcon {
   margin: 5px 0;
@@ -13988,10 +14124,21 @@ input[type="number"]::-webkit-outer-spin-button {
   .Events-Feed-Text {
     display: none;
   }
+  .Events-Feed-Item {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-left: 2px;
+  }
   .Events-List-Item {
     font-size: 15px;
-    padding: 5px 10px 5px 15px;
-    grid-template-columns: 25px 30px 25px auto auto;
+    padding: 0 10px 0 15px;
+    grid-template-columns: fit-content(23px) fit-content(27px) auto fit-content(
+        25px
+      ) fit-content(50px);
+    grid-gap: 0;
+    gap: 0;
   }
   .Events-List-Item-ParentEvent {
     grid-template-columns: auto auto;
@@ -14003,11 +14150,25 @@ input[type="number"]::-webkit-outer-spin-button {
   .Events-List-Item-User {
     grid-template-columns: 45px auto;
   }
+  .Events-List-Row {
+    margin-left: 5px;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
   .Events-List-Desc {
     margin: 0;
   }
   .Events-List-Minor {
     font-size: 13px;
+  }
+  .Events-List-Home-Item {
+    padding-right: 5px !important;
+  }
+  .Events-List-Date,
+  .Events-List-Season {
+    min-width: 20px;
+    height: 20px;
+    font-size: 14px;
   }
   .Account-Title {
     margin-left: 20px;
@@ -16487,6 +16648,16 @@ button:focus-visible {
 }
 .Standings-Team-Name-LightMode {
   border-radius: 5px;
+}
+.theme-dark .Record-Positive {
+  color: #fff;
+}
+.theme-light .Record-Positive {
+  color: #000;
+}
+.theme-dark .Record-Negative,
+.theme-light .Record-Negative {
+  color: #d94141;
 }
 .BlinkingRedLight {
   -webkit-animation: blink 3s infinite;
@@ -20749,6 +20920,10 @@ button:focus-visible {
 #root .Library-Story-Item:not(:last-child) {
   margin-bottom: 10px;
 }
+#root .Library-Chapters-Item-Arrow,
+#root .Library-Story-Item-Arrow {
+  display: none;
+}
 #root .Library-Subheader {
   text-align: center;
 }
@@ -20814,8 +20989,14 @@ button:focus-visible {
   #root .Library-Chapters-Item {
     font-size: 15px;
   }
+  #root .Library-Chapters-Item-Arrow {
+    display: inline;
+  }
   #root .Library-Story {
     width: 100%;
+  }
+  #root .Library-Story-Open {
+    margin-top: 40px;
   }
 }
 #root .Bulletin {

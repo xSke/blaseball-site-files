@@ -661,7 +661,11 @@
         "textColor": "#32b528",
         "background": "#000000",
         "title": "Overperforming",
-        "description": "This player will play 20% better than usual."
+        "description": "This Player will play 20% better than usual.",
+        "descriptions": {
+            "player": "This Player will play 20% better than usual.",
+            "team": "This Team will play 20% better than usual."
+        }
     },
     {
         "id": "SHAME_GIVER",
@@ -677,7 +681,11 @@
         "textColor": "#db3616",
         "background": "#000000",
         "title": "Underperforming",
-        "description": "This player will play 20% worse than usual."
+        "description": "This Player will play 20% worse than usual.",
+        "descriptions": {
+            "player": "This Player will play 20% worse than usual.",
+            "team": "This Team will play 20% worse than usual."
+        }
     },
     {
         "id": "EGO1",
@@ -1525,7 +1533,11 @@
         "textColor": "#fd73ff",
         "background": "#fffd7a",
         "title": "Hotel Motel",
-        "description": "The Hotel Motel will occasionally create Holiday Innings during the Earlseason, where you Party instead of Score."
+        "description": "The Hotel Motel will occasionally create Holiday Innings during the Earlseason, where you Party instead of Score.",
+        "descriptions": {
+            "ballpark": "The Hotel Motel will occasionally create Holiday Innings during the Earlseason, where you Party instead of Score.",
+            "league": "Holiday Innings will occasionally happen during the Earlseason, where Teams Party instead of score."
+        }
     },
     {
         "id": "FAX_MACHINE",
@@ -1638,5 +1650,105 @@
         "background": "#000000",
         "title": "Negative",
         "description": "This Player is a Negative."
+    },
+    {
+        "id": "OPEN_FLOOR_PLAN",
+        "color": "#bdbdbd",
+        "textColor": "#bdbdbd",
+        "background": "#002b00",
+        "title": "Open Floor Plan",
+        "description": "This Ballpark's Grandiosity is 5% the eDensity of a standard Ballpark."
+    },
+    {
+        "id": "INTUITIVE",
+        "color": "#fff373",
+        "textColor": "#fff373",
+        "background": "#273300",
+        "title": "Intuitive",
+        "description": "This Player's pitching will be boosted 10% when switching from Lineup to Rotation, and their hitting will be boosted 10% when switching from Rotation to Lineup."
+    },
+    {
+        "id": "UNDEFINED",
+        "color": "#b30074",
+        "textColor": "#b30074",
+        "background": "#c7c7c7",
+        "title": "Undefined",
+        "description": "This Player will play 50-100% better while Scattered."
+    },
+    {
+        "id": "SLOW_BUILD",
+        "color": "#00c9bc",
+        "textColor": "#00c9bc",
+        "background": "#2b2e2e",
+        "title": "Slow Build",
+        "description": "This Player will bat 1% better for each subsequent At Bat they have in a game."
+    },
+    {
+        "id": "GRAPHENE",
+        "color": "#a8ffae",
+        "textColor": "#a8ffae",
+        "background": "#1c2b2a",
+        "title": "Graphene",
+        "description": "This Ballpark's Fortifications are 5% the eDensity of a standard Ballpark."
+    },
+    {
+        "id": "A",
+        "color": "#ab0e00",
+        "textColor": "#ab0e00",
+        "background": "#260300",
+        "title": "A Blood Type",
+        "description": "A Team or Player with A Blood Type will play each game with a random Blood type ability."
+    },
+    {
+        "id": "GOOD_RIDDANCE",
+        "color": "#ffcffd",
+        "textColor": "#ffcffd",
+        "background": "#1a070d",
+        "title": "Good Riddance",
+        "description": "This Team will throw a Party when a Roamin' or Super Roamin' player leaves their roster."
+    },
+    {
+        "id": "TURNTABLES",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#a16dc3",
+        "title": "Turntables",
+        "description": "Any Win earned from a non-loss in this Ballpark during the Regular Season will be converted to an Unwin.",
+        "descriptions": {
+            "ballpark": "Any Win earned from a non-loss in this Ballpark during the Regular Season will be converted to an Unwin.",
+            "league": "Any Win earned from a non-loss during the Regular Season will be converted to an Unwin."
+        }
+    },
+    {
+        "id": "SIM_RATIFICATION",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#23263d",
+        "title": "Ratification",
+        "description": "Renovations built by at least 18 Teams will be Ratified into Non-Physical Law for the entire League."
+    },
+    {
+        "id": "SIM_ON_THE_HOUSE",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#163321",
+        "title": "On the House",
+        "description": "Teams will build an Additional Renovation at no extra cost each Season."
+    },
+    {
+        "id": "UNDERTAKER",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#163321",
+        "title": "Undertaker",
+        "description": "This Player will dive in to Develop a Negative when a teammate goes Elsewhere."
+    },
+    {
+        "id": "SEEKER",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#163321",
+        "title": "Seeker",
+        "description": "The Player has a chance to bring teammates back from Elsewhere."
     }
 ]
