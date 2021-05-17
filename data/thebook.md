@@ -48,9 +48,11 @@
 * f. The pitcher must throw the ball `with their hands.`, unless `that doesn't make sense.`
 * g. Once the ball is in play, `||| |||| || ||| |||||||||| ||||| |||||||||| the outcome of the play. ||| |||| ||||||| || ||||||||||||||||` immaterial plane `|||||||||||||| ||||||| ||||||| ||||||||| ||||||||||||||| |||||||||||||||| |||||||| |||||||| unfathomable.`
 * h. The team with the most runs will win the game.
-* i. Shame Phase: If the home team scores the winning run in the bottom of the final inning, the away team must complete the game in shame, despite being mathematically eliminated.
-* j. ~~Nothing truly matters.~~
-* k. Crying in Blaseball is `||||||||||.`
+* i. Turntables: Any Win earned from a non-loss during the Regular Season will be converted into an Unwin.
+* j. Shame Phase: If the home team scores the winning run in the bottom of the final inning, the away team must complete the game in shame, despite being mathematically eliminated.
+* k. Hotel Motel: Games during the Earlseason will have a chance of being Holiday Innings, during which Teams Party instead of Score.
+* l. ~~Nothing truly matters.~~
+* m. Crying in Blaseball is `||||||||||.`
 
 ### 6. `The Gods` and You
 * a. Should the Participants open the Forbidden Book, `The Discipline Era should begin||||||||||||||||||||||` suffering `upon the league. Players shall be ` banished `at the ||||||||||| ||||||||| |||| ||||||||||||||||.` The Discipline Era shall last until `the Participants have` atoned.
@@ -74,11 +76,11 @@
 
 ## Expansions
 
-### 1. Arcana
-* a. Major Arcana will be Dealt to Teams during the First Reading.
-* b. Fans may purchase Tarot Spread to receive a Three-Card Spread, which may be read in their Inventory.
-* c. A Seasonal Reading will take place during each Season's Earlsiesta.
-* d. `||| ||||| ||| ||||| |||| |||` Fates `|| ||||| ||||| |||||| |||` the Seasonal Reading.
+### ~~1. Arcana~~
+* ~~a. Major Arcana will be Dealt to Teams during the First Reading.~~
+* ~~b. Fans may purchase Tarot Spread to receive a Three-Card Spread, which may be read in their Inventory.~~
+* ~~c. A Seasonal Reading will take place during each Season's Earlsiesta.~~
+* ~~d. ~~`||| ||||| ||| ||||| |||| |||`~~ Fates ~~`|| ||||| ||||| |||||| |||`~~ the Seasonal Reading.~~
 
 ### 2. Bury - `|||||||||`
 * a. `||||||||||||||||||||||||` the Dead.
