@@ -120,16 +120,16 @@
         "description": "Salmon have been known to swim Upstream."
     },
     {
-        "name": "???",
-        "background": "#92b3b0",
+        "name": "Polarity +",
+        "background": "#042e16",
         "color": "#d3e3e2",
-        "description": "???"
+        "description": "Numbers go up."
     },
     {
-        "name": "???",
-        "background": "#d3e3e2",
+        "name": "Polarity -",
+        "background": "#3b0422",
         "color": "#ff6be6",
-        "description": "???"
+        "description": "Numbers go down."
     },
     {
         "name": "???",
