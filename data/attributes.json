@@ -1057,11 +1057,15 @@
     },
     {
         "id": "HOOPS",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
+        "color": "#fdffd4",
+        "textColor": "#fdffd4",
+        "background": "#7a4500",
         "title": "Hoops",
-        "description": ""
+        "description": "When a Player hits a Home Run, the next batter can go up for an alley oop to score an extra Run.",
+        "descriptions": {
+            "ballpark": "When a Player hits a Home Run in this Ballpark, the next batter can go up for an alley oop to score an extra Run.",
+            "player": "When a Player hits a Home Run, the next batter can go up for an alley oop to score an extra Run."
+        }
     },
     {
         "id": "GRIND_RAIL",

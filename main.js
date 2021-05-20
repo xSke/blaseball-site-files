@@ -2125,23 +2125,23 @@
         switch (t) {
           case "EXTRA_STRIKE":
           case "EXTRA_OUT":
-            return <_.Sb />;
+            return <_.Tb />;
           case "SHAME_PIT":
             return <_.e />;
           case "HOME_FIELD":
-            return <_.Eb />;
+            return <_.Fb />;
           case "FIREPROOF":
-            return <_.eb />;
+            return <_.fb />;
           case "ALTERNATE":
-            return <_.Ib />;
+            return <_.Jb />;
           case "SHELLED":
           case "SUPERALLERGIC":
           case "SUPERYUMMY":
-            return <_.hc />;
+            return <_.ic />;
           case "SOUNDPROOF":
-            return <_.Fb />;
+            return <_.Gb />;
           case "REVERBERATING":
-            return <_.o />;
+            return <_.p />;
           case "RETURNED":
             return <_.h />;
           case "DEBT_ZERO":
@@ -2150,288 +2150,288 @@
           case "DEBT_THREE":
             return <_.i />;
           case "MARKED":
-            return <_.qd />;
+            return <_.rd />;
           case "PARTY_TIME":
           case "AFTER_PARTY":
           case "SIM_PARTY_TIME":
-            return <_.fc />;
+            return <_.gc />;
           case "LIFE_OF_PARTY":
-            return <_.rb />;
+            return <_.sb />;
           case "INVERTED":
-            return <_.Jb />;
+            return <_.Kb />;
           case "FIRST_BORN":
           case "HARD_BOILED":
           case "CUSTOM_HATCHED":
-            return <_.Z />;
-          case "HONEY_ROASTED":
-            return <_.P />;
-          case "EXTRA_BASE":
-            return <_.Ab />;
-          case "BLESS_OFF":
-            return <_.wb />;
-          case "NON_IDOLIZED":
-            return <_.Nb />;
-          case "GRAVITY":
-            return <_.t />;
-          case "SPICY":
-            return <_.G />;
-          case "ELECTRIC":
             return <_.ab />;
+          case "HONEY_ROASTED":
+            return <_.Q />;
+          case "EXTRA_BASE":
+            return <_.Bb />;
+          case "BLESS_OFF":
+            return <_.xb />;
+          case "NON_IDOLIZED":
+            return <_.Ob />;
+          case "GRAVITY":
+            return <_.u />;
+          case "SPICY":
+            return <_.H />;
+          case "ELECTRIC":
+            return <_.bb />;
           case "DOUBLE_PAYOUTS":
-            return <_.ed />;
+            return <_.fd />;
           case "FIRE_PROTECTOR":
-            return <_.fb />;
+            return <_.gb />;
           case "ON_FIRE":
-            return <_.Kc />;
+            return <_.Lc />;
           case "HEATING_UP":
-            return <_.yb />;
+            return <_.zb />;
           case "RECEIVER":
-            return <_.Ub />;
+            return <_.Vb />;
           case "FLICKERING":
           case "FLIICKERRRIIING":
-            return <_.C />;
+            return <_.D />;
           case "AFFINITY_FOR_CROWS":
           case "CURSE_OF_CROWS":
           case "FRIEND_OF_CROWS":
-            return <_.q />;
+            return <_.r />;
           case "BASE_INSTINCTS":
-            return <_.Ec />;
+            return <_.Fc />;
           case "STABLE":
-            return <_.Zc />;
+            return <_.ad />;
           case "GROWTH":
-            return <_.Bb />;
+            return <_.Cb />;
           case "REPEATING":
-            return <_.Q />;
+            return <_.R />;
           case "CRUNCHY":
-            return <_.H />;
+            return <_.I />;
           case "SQUIDDISH":
           case "SQUIDDEST":
-            return <_.qb />;
+            return <_.rb />;
           case "SUBJECTION":
-            return <_.Yc />;
+            return <_.Zc />;
           case "LIBERATED":
-            return <_.Cc />;
-          case "FIRE_EATER":
-            return <_.cb />;
-          case "MAGMATIC":
-            return <_.tc />;
-          case "LOYALTY":
             return <_.Dc />;
+          case "FIRE_EATER":
+            return <_.db />;
+          case "MAGMATIC":
+            return <_.uc />;
+          case "LOYALTY":
+            return <_.Ec />;
           case "SABOTEUR":
-            return <_.Tc />;
+            return <_.Uc />;
           case "PITY":
-            return <_.pb />;
+            return <_.qb />;
           case "GOD":
-            return <_.dc />;
+            return <_.ec />;
           case "PEANUT_RAIN":
-            return <_.nb />;
+            return <_.ob />;
           case "DESTRUCTION":
-            return <_.W />;
+            return <_.X />;
           case "FLINCH":
-            return <_.bd />;
+            return <_.cd />;
           case "WILD":
-            return <_.Ic />;
+            return <_.Jc />;
           case "LOVE":
-            return <_.R />;
+            return <_.S />;
           case "SIPHON":
-            return <_.Mb />;
+            return <_.Nb />;
           case "CREDIT_TO_THE_TEAM":
-            return <_.Rb />;
+            return <_.Sb />;
           case "WALK_IN_THE_PARK":
-            return <_.od />;
+            return <_.pd />;
           case "BIRD_SEED":
-            return <_.tb />;
+            return <_.ub />;
           case "HAUNTED":
-            return <_.Rc />;
-          case "TRAVELING":
-            return <_.vc />;
-          case "BLASERUNNING":
-            return <_.db x={a} y={n} className={r} style={i} />;
-          case "SEALANT":
             return <_.Sc />;
+          case "TRAVELING":
+            return <_.wc />;
+          case "BLASERUNNING":
+            return <_.eb x={a} y={n} className={r} style={i} />;
+          case "SEALANT":
+            return <_.Tc />;
           case "O_NO":
-            return <_.Ac />;
+            return <_.Bc />;
           case "FAIRNESS":
-            return <_.zc />;
+            return <_.Ac />;
           case "TRIBUTE":
-            return <_.bc />;
+            return <_.cc />;
           case "UNFLAMED":
-            return <_.nd />;
+            return <_.od />;
           case "ESCAPE":
-            return <_.J />;
+            return <_.K />;
           case "RETIRED":
-            return <_.n />;
+            return <_.o />;
           case "CONTAINMENT":
-            return <_.xb />;
+            return <_.yb />;
           case "INHABITING":
-            return <_.Vb />;
+            return <_.Wb />;
           case "WIRED":
-            return <_.K className={r + " ModalItem-Icons-Wired"} x={a} y={n} style={i} />;
+            return <_.L className={r + " ModalItem-Icons-Wired"} x={a} y={n} style={i} />;
           case "TIRED":
-            return <_.K className={r + " ModalItem-Icons-Tired"} x={a} y={n} style={i} />;
+            return <_.L className={r + " ModalItem-Icons-Tired"} x={a} y={n} style={i} />;
           case "COFFEE_SHADOWS":
-            return <_.Yb />;
-          case "COFFEE_PERIL":
             return <_.Zb />;
+          case "COFFEE_PERIL":
+            return <_.ac />;
           case "COFFEE_EXIT":
-            return <_.lb />;
+            return <_.mb />;
           case "COFFEE_RALLY":
-            return <_.K x={a} y={n} className={r} style={i} />;
+            return <_.L x={a} y={n} className={r} style={i} />;
           case "TRIPLE_THREAT":
           case "SWEETENER":
-            return <_.K />;
+            return <_.L />;
           case "PERK":
-            return <_.Mc />;
+            return <_.Nc />;
           case "OVERPERFORMING":
-            return <_.cc />;
+            return <_.dc />;
           case "UNDERPERFORMING":
-            return <_.cc className="ModalItem-Icons-Flipped" />;
+            return <_.dc className="ModalItem-Icons-Flipped" />;
           case "WANDERER":
           case "SUPERWANDERER":
-            return <_.E />;
+            return <_.F />;
           case "NEWADVENTURE":
-            return <_.N />;
+            return <_.O />;
           case "EGO1":
           case "EGO2":
           case "EGO3":
           case "EGO4":
-            return <_.Db />;
+            return <_.Eb />;
           case "LEGENDARY":
             return <_.c />;
           case "STUCK":
             return <_.b />;
           case "ELSEWHERE":
-            return <_.mb />;
+            return <_.nb />;
           case "OVERUNDER":
             return <_.f />;
           case "UNDEROVER":
             return <_.f className="ModalItem-Icons-Flipped" />;
           case "CARCINIZATION":
-            return <_.I />;
+            return <_.J />;
           case "BOTTOM_DWELLER":
-            return <_.S />;
+            return <_.T />;
           case "UNDERSEA":
-            return <_.Tb />;
+            return <_.Ub />;
           case "SWIM_BLADDER":
-            return <_.dd />;
+            return <_.ed />;
           case "AMBUSH":
-            return <_.zb />;
+            return <_.Ab />;
           case "KILLER_PIES":
-            return <_.kc />;
+            return <_.lc />;
           case "EARLBIRDS":
-            return <_.Gb />;
+            return <_.Hb />;
           case "LATE_TO_PARTY":
             return <_.j />;
           case "SHAME_GIVER":
-            return <_.u />;
+            return <_.v />;
           case "MAINTENANCE_MODE":
             return <_.g />;
           case "REDACTED":
-            return <_.ac />;
+            return <_.bc />;
           case "PENANCE":
-            return <_.uc />;
+            return <_.vc />;
           case "SINKING_SHIP":
-            return <_.Gc />;
+            return <_.Hc />;
           case "BASE_DEALING":
-            return <_.z />;
+            return <_.A />;
           case "FLOOD_PUMPS":
-            return <_.pd />;
+            return <_.qd />;
           case "EVENT_HORIZON":
-            return <_.jb />;
+            return <_.kb />;
           case "FIRE_INSURANCE":
-            return <_.Ob />;
+            return <_.Pb />;
           case "PEANUT_MISTER":
             return <_.a />;
           case "BIG_BUCKET":
-            return <_.ob />;
+            return <_.pb />;
           case "BIG_RED_BUTTON":
-            return <_.v />;
+            return <_.w />;
           case "SMOOTH":
           case "CHUNKY":
-            return <_.Jc />;
+            return <_.Kc />;
           case "SUN_KISSED":
-            return <_.ad />;
+            return <_.bd />;
           case "UNHOLEY":
-            return <_.Cb />;
+            return <_.Db />;
           case "SUPERCHARGED":
-            return <_.D />;
+            return <_.E />;
           case "HIGH_PRESSURE":
-            return <_.Xc />;
+            return <_.Yc />;
           case "SCATTERED":
-            return <_.gc />;
+            return <_.hc />;
           case "PATIENT":
-            return <_.V />;
+            return <_.W />;
           case "ECHO":
-            return <_.Y />;
+            return <_.Z />;
           case "UNCERTAIN":
-            return <_.jc />;
+            return <_.kc />;
           case "FREE_WILL":
-            return <_.hd />;
+            return <_.id />;
           case "PSYCHOACOUSTICS":
-            return <_.rc />;
+            return <_.sc />;
           case "SOLAR_PANELS":
-            return <_.Nc />;
+            return <_.Oc />;
           case "GRIND_RAIL":
-            return <_.Hb />;
+            return <_.Ib />;
           case "BIRDHOUSES":
-            return <_.ub />;
+            return <_.vb />;
           case "MAXIMALIST":
-            return <_.Qb />;
+            return <_.Rb />;
           case "MINIMALIST":
             return <se.d />;
           case "BLACKHOLE_PAYOUTS":
           case "SUN2_PAYOUTS":
-            return <_.T />;
+            return <_.U />;
           case "STALEPOPCORN_PAYOUTS":
           case "POPCORN_PAYOUTS":
-            return <_.pc />;
+            return <_.qc />;
           case "HOMEBODY":
-            return <_.hb />;
+            return <_.ib />;
           case "STATIC":
             return <ce.e />;
           case "CRIME_SCENE":
-            return <_.M />;
+            return <_.N />;
           case "MIDDLING":
-            return <_.Fc />;
+            return <_.Gc />;
           case "0":
             return <se.a />;
           case "H20":
-            return <_.jd />;
-          case "HALL_EXIT_BOOST":
             return <_.kd />;
+          case "HALL_EXIT_BOOST":
+            return <_.ld />;
           case "PARASITE":
-            return <_.Wb />;
-          case "SECRET_BASE":
-            return <_.Bc />;
-          case "ECHO_CHAMBER":
             return <_.Xb />;
+          case "SECRET_BASE":
+            return <_.Cc />;
+          case "ECHO_CHAMBER":
+            return <_.Yb />;
           case "SOUNDSYSTEM":
-            return <_.mc />;
+            return <_.nc />;
           case "ATTRACTOR":
-            return <_.ic />;
+            return <_.jc />;
           case "SCRAMBLED":
-            return <_.Qc />;
+            return <_.Rc />;
           case "CAREFUL":
-            return <_.id />;
+            return <_.jd />;
           case "AMBITIOUS":
-            return <_.oc />;
+            return <_.pc />;
           case "PRO_SKATER":
-            return <_.y />;
+            return <_.z />;
           case "PSYCHIC":
-            return <_.fd />;
+            return <_.gd />;
           case "FIERY":
-            return <_.gb />;
+            return <_.hb />;
           case "AAA":
           case "AA":
-            return <_.m />;
+            return <_.n />;
           case "UNAMBITIOUS":
-            return <_.nc />;
+            return <_.oc />;
           case "COASTING":
-            return <_.yc />;
+            return <_.zc />;
           case "EAT_THE_RICH":
-            return <_.X />;
+            return <_.Y />;
           case "WILD_CARDS":
-            return <_.A />;
+            return <_.B />;
           case "SIM_ALL_YOU_CAN_EAT":
             return <Ee />;
           case "SIM_BASED_EVOLUTION":
@@ -2439,73 +2439,75 @@
           case "SIM_FREE_WILL":
             return <Se />;
           case "SALMON_CANNONS":
-            return <_.x />;
+            return <_.y />;
           case "SIM_COMMUNITY_CHEST":
             return <xe />;
           case "SIM_FAIRGROUNDS":
             return <De />;
           case "FORCE":
-            return <_.B />;
+            return <_.C />;
           case "ENTANGLED":
             return <_.k />;
           case "FAX_MACHINE":
-            return <_.qc />;
+            return <_.rc />;
           case "HOTEL_MOTEL":
             return <ue.f />;
           case "SMITHY":
             return <_.d />;
           case "REPLICA":
-            return <_.sc />;
+            return <_.tc />;
           case "DUST":
             return <me.c />;
           case "OFFWORLD":
-            return <_.Oc />;
-          case "ACIDIC":
-            return <_.ib />;
-          case "COVERUP":
-            return <_.U />;
-          case "PATIENT":
             return <_.Pc />;
+          case "ACIDIC":
+            return <_.jb />;
+          case "COVERUP":
+            return <_.V />;
+          case "PATIENT":
+            return <_.Qc />;
           case "RALLY":
-            return <_.Vc />;
-          case "FLOOD_BATH":
-            return <_.kb />;
-          case "SLIPPERY":
-            return <_.sb />;
-          case "NIGHT_VISION":
             return <_.Wc />;
+          case "FLOOD_BATH":
+            return <_.lb />;
+          case "SLIPPERY":
+            return <_.tb />;
+          case "NIGHT_VISION":
+            return <_.Xc />;
           case "TEMP_STOLEN":
-            return <_.F />;
+            return <_.G />;
           case "DEFECTOR":
-            return <_.Uc />;
+            return <_.Vc />;
           case "FUGITIVE":
-            return <_.xc />;
+            return <_.yc />;
           case "NEGATIVE":
-            return <_.Kb />;
+            return <_.Lb />;
           case "OPEN_FLOOR_PLAN":
-            return <_.md />;
+            return <_.nd />;
           case "TURNTABLES":
             return <qe />;
           case "UNDEFINED":
             return <se.c />;
           case "INTUITIVE":
-            return <_.Lc />;
+            return <_.Mc />;
           case "SLOW_BUILD":
-            return <_.L />;
+            return <_.M />;
           case "A":
-            return <_.s />;
+            return <_.t />;
           case "GOOD_RIDDANCE":
-            return <_.bb />;
+            return <_.cb />;
           case "GRAPHENE":
-            return <_.r />;
+            return <_.s />;
+          case "HOOPS":
+            return <_.m />;
           case "SIM_RATIFICATION":
             return <Ge />;
           case "SIM_ON_THE_HOUSE":
             return <ze />;
           case "UNDERTAKER":
-            return <_.cd />;
+            return <_.dd />;
           case "SEEKER":
-            return <_.Pb />;
+            return <_.Qb />;
         }
         return null;
       }
@@ -7174,7 +7176,7 @@
         var t = Object(r.useContext)(M.context).user;
         switch (e) {
           case 0:
-            return <_.hc />;
+            return <_.ic />;
           case 1:
             return <Di style={{ filter: t.lightMode ? "invert(1)" : "none" }} />;
           case 2:
@@ -7705,7 +7707,7 @@
             );
           }),
         fo = function () {
-          return <div className="LoadingSpinner">{100 * Math.random() < 99 ? <ee.b /> : <_.hc />}</div>;
+          return <div className="LoadingSpinner">{100 * Math.random() < 99 ? <ee.b /> : <_.ic />}</div>;
         },
         go = a(9),
         Eo = a(147),
@@ -10177,7 +10179,7 @@
               color: "#ff6be6",
               description: "Numbers go down.",
             },
-            { name: "???", icon: <_.O />, background: "#0e4e8a", color: "#ffc400", description: "???" },
+            { name: "???", icon: <_.P />, background: "#0e4e8a", color: "#ffc400", description: "???" },
           ]);
       function lc(e) {
         Object(r.useContext)(M.context).user;
@@ -10323,7 +10325,7 @@
           case ae.ShadowRotation:
             return (
               <span>
-                Shadows <_.ld />
+                Shadows <_.md />
               </span>
             );
         }
@@ -10921,7 +10923,7 @@
                     {E ? null : (
                       <l.a.Fragment>
                         <div className="Bulletin-Item-Header-Icon" style={{ background: "#c23284" }}>
-                          <_.wc />
+                          <_.xc />
                         </div>
                         <h2 className="Bulletin-Item-Header-Title" id="updates">
                           Global Feed
@@ -11027,9 +11029,9 @@
         if (e.category === F.Changes) return <$.a />;
         switch (e.type) {
           case 82:
-            return <_.Hc />;
+            return <_.Ic />;
           default:
-            return e.type <= 15 ? <ee.i /> : <_.wc />;
+            return e.type <= 15 ? <ee.i /> : <_.xc />;
         }
       }
       function Sc(e) {
@@ -14672,7 +14674,7 @@
                                     className="st0"
                                     transform="matrix(0.7071,-0.7071,0.7071,0.7071,-74.0296,71.6061)"
                                   >
-                                    <_.K
+                                    <_.L
                                       className="Widget-Bases-Icon"
                                       style={{ fill: x.onFourth ? F[0] : "none", stroke: F[0] }}
                                     />
@@ -15805,7 +15807,7 @@
           X = O ? (
             <l.a.Fragment>
               <div className="Navigation-Header Navigation-Header-Dropdown" onClick={W}>
-                <_.vb className="Navigation-Toggle-Icon" />
+                <_.wb className="Navigation-Toggle-Icon" />
               </div>
               <div className="Navigation-Dropdown Navigation-Dropdown-Hamburger">
                 <div
@@ -16294,9 +16296,9 @@
         return (
           <l.a.Fragment>
             <h3 className="Leaderboard-Header">
-              <_.Db className="Leaderboard-Trophy" />
+              <_.Eb className="Leaderboard-Trophy" />
               MVP Voting
-              <_.Db className="Leaderboard-Trophy" />
+              <_.Eb className="Leaderboard-Trophy" />
             </h3>
             <div className="Leaderboard-Description-Box">
               <div className="Leaderboard-Description">
@@ -16394,7 +16396,7 @@
                 className={"Leaderboard-Player-Wrapper" + (e.showIcons ? " Leaderboard-Player-Wrapper-WithIcon" : "")}
               >
                 <div className="Leaderboard-Icon-Wrapper">
-                  {e.showIcons && [].includes(e.info.place) ? <_.Ub className="Leaderboard-Icon-Microphone" /> : null}
+                  {e.showIcons && [].includes(e.info.place) ? <_.Vb className="Leaderboard-Icon-Microphone" /> : null}
                   {e.showIcons && i.includes(e.info.place) ? (
                     <me.i className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Eclipse"} />
                   ) : null}
@@ -16402,9 +16404,9 @@
                     <me.f className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Blood"} />
                   ) : null}
                   {e.showIcons && n.includes(e.info.place) ? (
-                    <_.p className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Birds"} />
+                    <_.q className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Birds"} />
                   ) : null}
-                  {e.showIcons && e.monitor ? <_.qb className="Leaderboard-Icon-Monitor" /> : null}
+                  {e.showIcons && e.monitor ? <_.rb className="Leaderboard-Icon-Monitor" /> : null}
                 </div>
                 <A
                   background={t}
@@ -18312,15 +18314,15 @@
                   </div>
                 ) : null}
                 {t.idol === e.id ? <Oo aria-hidden="true" style={{ height: "25px", width: "25px" }} /> : ""}
-                {e.gameAttr.includes("WIRED") ? <_.K className="ModalItem-Icons-Wired" aria-hidden="true" /> : ""}
-                {e.gameAttr.includes("TIRED") ? <_.K className="ModalItem-Icons-Tired" aria-hidden="true" /> : ""}
+                {e.gameAttr.includes("WIRED") ? <_.L className="ModalItem-Icons-Wired" aria-hidden="true" /> : ""}
+                {e.gameAttr.includes("TIRED") ? <_.L className="ModalItem-Icons-Tired" aria-hidden="true" /> : ""}
                 {e.permAttr.includes("COFFEE_RALLY") ? (
-                  <_.K className="ModalItem-Icons-Refills" aria-hidden="true" />
+                  <_.L className="ModalItem-Icons-Refills" aria-hidden="true" />
                 ) : (
                   ""
                 )}
                 {e.permAttr.includes("TRIPLE_THREAT") ? (
-                  <_.K className="ModalItem-Icons-Threes" aria-hidden="true" style={{ gridColumn: 2 }} />
+                  <_.L className="ModalItem-Icons-Threes" aria-hidden="true" style={{ gridColumn: 2 }} />
                 ) : (
                   ""
                 )}{" "}
@@ -18343,15 +18345,15 @@
                   </div>
                 ) : null}
                 {t.idol === e.id ? <Oo aria-hidden="true" style={{ height: "25px", width: "25px" }} /> : ""}
-                {e.gameAttr.includes("WIRED") ? <_.K className="ModalItem-Icons-Wired" aria-hidden="true" /> : ""}
-                {e.gameAttr.includes("TIRED") ? <_.K className="ModalItem-Icons-Tired" aria-hidden="true" /> : ""}
+                {e.gameAttr.includes("WIRED") ? <_.L className="ModalItem-Icons-Wired" aria-hidden="true" /> : ""}
+                {e.gameAttr.includes("TIRED") ? <_.L className="ModalItem-Icons-Tired" aria-hidden="true" /> : ""}
                 {e.permAttr.includes("COFFEE_RALLY") ? (
-                  <_.K className="ModalItem-Icons-Refills" aria-hidden="true" />
+                  <_.L className="ModalItem-Icons-Refills" aria-hidden="true" />
                 ) : (
                   ""
                 )}
                 {e.permAttr.includes("TRIPLE_THREAT") ? (
-                  <_.K className="ModalItem-Icons-Threes" aria-hidden="true" />
+                  <_.L className="ModalItem-Icons-Threes" aria-hidden="true" />
                 ) : (
                   ""
                 )}{" "}
@@ -18804,7 +18806,7 @@
                       </div>
                       {void 0 !== b.snacks.Forbidden_Knowledge_Access && U.id === b.favoriteTeam ? (
                         <div className="Team-Section-Shadows">
-                          <_.ld
+                          <_.md
                             onClick={function (e) {
                               Q(!0);
                             }}
@@ -21225,7 +21227,7 @@
                     }
                   >
                     <div className="ModalForm-Ticket-Wrapper">
-                      <_.gd className="ModalForm-Ticket-Icon" />
+                      <_.hd className="ModalForm-Ticket-Icon" />
                       {n.snacks[ne.VOTES]}
                     </div>
                     <q.a.Control type="number" value={d} onChange={w} />
@@ -21786,66 +21788,65 @@
             o = Math.abs(a),
             s = Math.abs(n),
             c = (function (e, t, a, n) {
-              var r = "";
-              if ([0, 1].includes(e.type))
-                r = "You "
+              var r,
+                l,
+                i = "";
+              [0, 1].includes(e.type) &&
+                (i = "You "
                   .concat(t ? "bought" : 0 === a ? "discarded" : "sold", " ")
                   .concat(n, " ")
-                  .concat(ne.GetName(e.metadata.snackId), ".");
-              else if (8 === e.type) r = "You ate ".concat(n, " Peanut").concat(n > 1 ? "s" : "", ".");
-              else if (9 === e.type)
-                r = "You offered "
+                  .concat(ne.GetName(e.metadata.snackId), "."));
+              8 === e.type && (i = "You ate ".concat(n, " Peanut").concat(n > 1 ? "s" : "", "."));
+              9 === e.type &&
+                (i = "You offered "
                   .concat(n, " Peanut")
                   .concat(n > 1 ? "s" : "", " as tribute to ")
-                  .concat(e.metadata.tributeName, ".");
-              else if (5 === e.type) r = "You chose a new favorite team.";
-              else if (6 === e.type) r = "You chose a new Idol.";
-              else if (10 === e.type) r = "You cast ".concat(n, " Votes on ").concat(e.metadata.entity, ".");
-              else if (11 === e.type) r = e.metadata.reading;
-              else if (7 === e.type) {
-                var l = ni.teams.find(function (t) {
+                  .concat(e.metadata.tributeName, "."));
+              5 === e.type && (i = "You chose a new favorite team.");
+              6 === e.type && (i = "You chose a new Idol.");
+              10 === e.type && (i = "You cast ".concat(n, " Votes on ").concat(e.metadata.entity, "."));
+              11 === e.type && (i = e.metadata.reading);
+              if (7 === e.type) {
+                var o = ni.teams.find(function (t) {
                   return t.stadium === e.metadata.stadiumId;
                 });
-                (r = "You contributed to the ".concat(null === l || void 0 === l ? void 0 : l.nickname, " Ballpark")),
+                (i = "You contributed to the ".concat(null === o || void 0 === o ? void 0 : o.nickname, " Ballpark")),
                   void 0 !== e.metadata.entity
-                    ? (r += " for the ".concat(e.metadata.entity, " renovation."))
-                    : (r += ".");
-              } else if (12 === e.type)
-                (r = "You Upshelled an event."), e.metadata.snackId2 === ne.RED_HERRING && (r += " Go Fish.");
-              else if (13 === e.type) {
-                var i, o;
-                r = "You gifted ".concat(a, " coins to the ").concat(
+                    ? (i += " for the ".concat(e.metadata.entity, " renovation."))
+                    : (i += ".");
+              }
+              12 === e.type &&
+                ((i = "You Upshelled an event."), e.metadata.snackId2 === ne.RED_HERRING && (i += " Go Fish."));
+              13 === e.type && e.metadata.snackId && (i = "You Upscaled an event.");
+              ((14 === e.type && !e.metadata.data) || (13 === e.type && e.metadata.entity)) &&
+                (i = "You gifted ".concat(a, " coins to the ").concat(
                   null !==
-                    (i =
+                    (r =
                       null ===
-                        (o = ni.teams.find(function (t) {
+                        (l = ni.teams.find(function (t) {
                           return t.id === e.metadata.entity;
-                        })) || void 0 === o
+                        })) || void 0 === l
                         ? void 0
-                        : o.nickname) && void 0 !== i
-                    ? i
+                        : l.nickname) && void 0 !== r
+                    ? r
                     : "??",
                   "."
-                );
-              } else if (14 === e.type) {
-                var s, c, u;
-                r = "You spent "
+                ));
+              if (15 === e.type || (14 === e.type && e.metadata.data)) {
+                var s;
+                i = "You spent "
                   .concat(a, " coins to wishlist ")
-                  .concat(null !== (s = e.metadata.entity) && void 0 !== s ? s : "??", " for the ")
-                  .concat(
-                    null !==
-                      (c =
-                        null ===
-                          (u = ni.teams.find(function (t) {
-                            return t.id === e.metadata.data.team1;
-                          })) || void 0 === u
-                          ? void 0
-                          : u.nickname) && void 0 !== c
-                      ? c
-                      : "??"
-                  );
-              } else 15 === e.type && (r = "You Upscaled an event.");
-              return r;
+                  .concat(null !== (s = e.metadata.entity) && void 0 !== s ? s : "??");
+                var c = "??";
+                if (e.metadata.data.team1) {
+                  var u = ni.teams.find(function (t) {
+                    return t.id === e.metadata.data.team1;
+                  });
+                  c = u ? u.nickname : "??";
+                }
+                i += " for the ".concat(c, ".");
+              }
+              return i;
             })(t, i, o, s);
           return (
             <l.a.Fragment>
@@ -21980,6 +21981,11 @@
         },
         Qf = function (e) {
           switch (e.event.type) {
+            case 2:
+              return Pf(e);
+            case 3:
+            case 4:
+              return Lf(e);
             case 0:
             case 1:
             case 5:
@@ -21994,11 +22000,6 @@
             case 14:
             case 15:
               return Ff(e);
-            case 2:
-              return Pf(e);
-            case 3:
-            case 4:
-              return Lf(e);
           }
           return <l.a.Fragment />;
         },
@@ -25883,7 +25884,7 @@
                       }
                     >
                       <div className="ModalForm-Ticket-Wrapper">
-                        <_.hc className="ModalForm-Ticket-Icon" />
+                        <_.ic className="ModalForm-Ticket-Icon" />
                         {n.snacks.Peanuts}
                       </div>
                       <q.a.Control type="number" value={d} onChange={w} />
@@ -28757,7 +28758,7 @@
             <l.a.Fragment>
               <div className="Bulletin-Item-Header">
                 <div className="Bulletin-Item-Header-Icon" style={{ background: "#1b95e0" }}>
-                  <_.ec />
+                  <_.fc />
                 </div>
                 <h2 className="Bulletin-Item-Header-Title" id="community">
                   Art Gallery
@@ -28827,7 +28828,7 @@
           <l.a.Fragment>
             <div className="Bulletin-Item-Header">
               <div className="Bulletin-Item-Header-Icon" style={{ background: "#ffcb49", color: "#e30050" }}>
-                <_.w />
+                <_.x />
               </div>
               <h2 className="Bulletin-Item-Header-Title" id="schedule">
                 Schedule
@@ -29065,7 +29066,7 @@
               <l.a.Fragment>
                 <div className="Bulletin-Item-Header">
                   <div className="Bulletin-Item-Header-Icon" style={{ background: "#0eb854", color: "#323d20" }}>
-                    <_.Lb />
+                    <_.Mb />
                   </div>
                   <h2 className="Bulletin-Item-Header-Title" id="actions">
                     Actions
@@ -29326,7 +29327,7 @@
           <l.a.Fragment>
             <div className="Bulletin-Item-Header">
               <div className="Bulletin-Item-Header-Icon" style={{ background: "#4b35b4", color: "#efecff" }}>
-                <_.lc />
+                <_.mc />
               </div>
               <h2 className="Bulletin-Item-Header-Title" id="actions">
                 Recap
@@ -31529,10 +31530,10 @@
         return (
           <div className={"BossFightWidget ".concat(i.complete ? "IsComplete" : "")}>
             <div className={"BossFightWidget-Weather" + ae}>
-              {ne > 0 ? <_.qb className="BossFightWidget-UnknownEntity" style={{ opacity: ne }} /> : null}
+              {ne > 0 ? <_.rb className="BossFightWidget-UnknownEntity" style={{ opacity: ne }} /> : null}
               <div className="BossFightWidget-Enemy">
                 <div className="BossFightWidget-Enemy-Icon">
-                  <_.hc />
+                  <_.ic />
                 </div>
                 <div className="BossFightWidget-Enemy-Body">
                   <div className="BossFightWidget-Enemy-RedLine">
@@ -31915,7 +31916,7 @@
                 element={
                   <div className="Stubs-All">
                     <h2 className="League-Header">{null === n || void 0 === n ? void 0 : n.name}</h2>
-                    <_.K className="Stubs-Cup" />
+                    <_.L className="Stubs-Cup" />
                     <div className="League-Info-Body">
                       Congratulations to your {null === n || void 0 === n ? void 0 : n.name} Champions{" "}
                       <div className="League-Info-Callout" style={{ color: c }}>
@@ -32018,12 +32019,12 @@
             if (void 0 === o) return null;
             var s = { team: o, reno: i.renoId, title: i.title, description: n.description, votes: i.votes };
             return (
-              <div className="Recap-Decree-Container Events-Container">
+              <div className="Recap-Decree-Container">
                 <div className="Recap-Decree-Info">
                   <div className="Recap-Decree-Header">{s.title}</div>
                   <div className="Recap-Decree-Votes"> - {s.votes} Coins Spent</div>
                 </div>
-                <div className="Recap-Decree-Content">
+                <div className="Recap-Decree-Content Events-Container">
                   <div className="Recap-Blessing-Team" style={{ background: s.team.mainColor }}>
                     {ju(s.team)}
                   </div>
@@ -32248,24 +32249,24 @@
           );
         },
         fv = function (e) {
-          var t = Object(r.useContext)(M.context).user,
-            a = Object(r.useContext)(si.context),
-            n = e.event;
-          if (0 === n.teamTags.length) return null;
-          var i = a.teams.find(function (e) {
-            return e.id === n.teamTags[0];
+          Object(r.useContext)(M.context).user;
+          var t = Object(r.useContext)(si.context),
+            a = e.event;
+          if (0 === a.teamTags.length) return null;
+          var n = t.teams.find(function (e) {
+            return e.id === a.teamTags[0];
           });
-          if (void 0 === i) return null;
-          var o = n.metadata;
+          if (void 0 === n) return null;
+          var i = a.metadata;
           return (
-            <div className={"Recap-Decree-Container" + (t.lightMode ? " Recap-Decree-Container-LightMode" : "")}>
+            <div className="Recap-Decree-Container">
               <div className="Recap-Blessing-Info">
-                <div className="Recap-Decree-Header">{n.metadata.title}</div>
-                <div className="Recap-Blessing-Votes"> - Wishlist #{o.wishListIndex + 1}</div>
+                <div className="Recap-Decree-Header">{a.metadata.title}</div>
+                <div className="Recap-Blessing-Votes"> - Wishlist #{i.wishListIndex + 1}</div>
               </div>
               <div className="Recap-Decree-Content">
-                <div className="Recap-Blessing-Team" style={{ background: i.mainColor }}>
-                  {ju(i)}
+                <div className="Recap-Blessing-Team" style={{ background: n.mainColor }}>
+                  {ju(n)}
                 </div>
                 <div className="Recap-Decree-Description">{yc(e)}</div>
               </div>
@@ -32419,7 +32420,7 @@
                                   <ul className="Events-List">
                                     {r.map(function (e) {
                                       return (
-                                        <li className="Events-List-Item Events-List-Item-Game">
+                                        <li className="Events-List-Item Recap-Gift-Contributer-Wrapper">
                                           <div
                                             className="Recap-Gift-Contributer"
                                             style={{ background: e.team.mainColor }}
@@ -33496,7 +33497,8 @@
                   return e.bonus;
                 });
           }
-          var T = <fo />;
+          var T = <fo />,
+            x = u.coins;
           return (
             y ||
               (T = (
@@ -33557,38 +33559,45 @@
                   <q.a
                     className="ModalForm-Form"
                     onSubmit={function (e) {
-                      e.preventDefault(),
+                      if (
+                        (e.preventDefault(),
                         B(!0),
-                        Qu(n, d) || (i("Team not accepting gifts", { appearance: "error" }), A.goBack());
-                      var t = { amount: p, entityId: n, data: { team1: u.favoriteTeam } };
-                      Lc("/api/gift", JSON.stringify(t))
-                        .then(function (e) {
-                          e.status && 200 === e.status && e.ok
-                            ? ((u.coins = u.coins - p),
-                              m(Object(C.a)({}, u)),
-                              m(Object(C.a)({}, u)),
-                              i("Coins Gifted", { appearance: "success" }),
-                              A.goBack())
-                            : e.json().then(function (e) {
-                                i(e.error || "Error", { appearance: "error" });
-                              });
-                        })
-                        .finally(
-                          Object(g.a)(
-                            f.a.mark(function e() {
-                              return f.a.wrap(function (e) {
-                                for (;;)
-                                  switch ((e.prev = e.next)) {
-                                    case 0:
-                                      B(!1);
-                                    case 1:
-                                    case "end":
-                                      return e.stop();
-                                  }
-                              }, e);
-                            })
-                          )
-                        );
+                        Qu(n, d) || (i("Team not accepting gifts", { appearance: "error" }), A.goBack()),
+                        p < 25)
+                      )
+                        i("The minimum Gift contribution is 25 Coins.", { appearance: "error" });
+                      else if (p > x) i("Max contribution is ".concat(x, "!"), { appearance: "error" });
+                      else {
+                        var t = { amount: p, entityId: n, data: { team1: u.favoriteTeam } };
+                        Lc("/api/gift", JSON.stringify(t))
+                          .then(function (e) {
+                            e.status && 200 === e.status && e.ok
+                              ? ((u.coins = u.coins - p),
+                                m(Object(C.a)({}, u)),
+                                m(Object(C.a)({}, u)),
+                                i("Coins Gifted", { appearance: "success" }),
+                                A.goBack())
+                              : e.json().then(function (e) {
+                                  i(e.error || "Error", { appearance: "error" });
+                                });
+                          })
+                          .finally(
+                            Object(g.a)(
+                              f.a.mark(function e() {
+                                return f.a.wrap(function (e) {
+                                  for (;;)
+                                    switch ((e.prev = e.next)) {
+                                      case 0:
+                                        B(!1);
+                                      case 1:
+                                      case "end":
+                                        return e.stop();
+                                    }
+                                }, e);
+                              })
+                            )
+                          );
+                      }
                     }}
                   >
                     <q.a.Group className="ModalForm-Form-Amount" controlId="amount">
@@ -33602,7 +33611,7 @@
                         <q.a.Control
                           type="range"
                           className="ModalForm-Range"
-                          min={1}
+                          min={25}
                           max={u.coins}
                           value={p}
                           onChange={k}
@@ -33671,7 +33680,7 @@
                 className="ModalForm-Form"
                 onSubmit={function (e) {
                   if ((e.preventDefault(), void 0 !== n.snacks.Stadium_Access))
-                    if (d < 25) t("The minimum Ballpark contribution is 25 Coins.", { appearance: "error" });
+                    if (d < 25) t("The minimum Wishlist contribution is 25 Coins.", { appearance: "error" });
                     else if (d > B) t("Max contribution is ".concat(B, "!"), { appearance: "error" });
                     else {
                       b(!0);
@@ -35839,11 +35848,18 @@
           },
           {
             id: "HOOPS",
-            color: "#ffffff",
-            textColor: "#ffffff",
-            background: "#000000",
+            color: "#fdffd4",
+            textColor: "#fdffd4",
+            background: "#7a4500",
             title: "Hoops",
-            description: "",
+            description:
+              "When a Player hits a Home Run, the next batter can go up for an alley oop to score an extra Run.",
+            descriptions: {
+              ballpark:
+                "When a Player hits a Home Run in this Ballpark, the next batter can go up for an alley oop to score an extra Run.",
+              player:
+                "When a Player hits a Home Run, the next batter can go up for an alley oop to score an extra Run.",
+            },
           },
           {
             id: "GRIND_RAIL",

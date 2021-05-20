@@ -12758,7 +12758,7 @@ input[type="number"]::-webkit-outer-spin-button {
   color: rgba(30, 30, 30, 0.6392156862745098);
 }
 .Events-Container {
-  display: grid;
+  display: grid !important;
   grid-template-columns: auto 1fr auto;
 }
 .Events-Container .Events-List-Links {
@@ -20374,6 +20374,15 @@ button:focus-visible {
 }
 .theme-light .Recap-Gift-Contributer {
   background: #fff;
+}
+.Recap-Gift-Contributer-Wrapper {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.Recap-Gift-Contributer-Wrapper:first-child {
+  margin-top: 5px;
 }
 .Recap-Gift-Description {
   font-family: "Lora", "Courier New", monospace, serif;
