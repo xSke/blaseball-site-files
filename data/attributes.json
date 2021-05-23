@@ -5,7 +5,11 @@
         "textColor": "#f77c9f",
         "background": "#8c1839",
         "title": "The Fourth Strike",
-        "description": "Those with the Fourth Strike will get an extra strike in each at bat."
+        "description": "Those with the Fourth Strike will get an extra strike in each at bat.",
+        "descriptions": {
+            "player": "This Player will get an extra strike in each at-bat.",
+            "team": "This Team will get an extra strike in each at-bat."
+        }
     },
     {
         "id": "SHAME_PIT",
@@ -29,7 +33,11 @@
         "textColor": "#a5c5f0",
         "background": "#4c77b0",
         "title": "Fireproof",
-        "description": "A Fireproof player can not be incinerated."
+        "description": "A Fireproof Player can not be incinerated.",
+        "descriptions": {
+            "player": "This Player cannot be incinerated.",
+            "team": "This Team and the Players on it cannot be incinerated."
+        }
     },
     {
         "id": "ALTERNATE",
@@ -37,7 +45,11 @@
         "textColor": "#fffd85",
         "background": "#404040",
         "title": "Alternate",
-        "description": "This player is an Alternate..."
+        "description": "This Player is an Alternate...",
+        "descriptions": {
+            "player": "This Player is an Alternate...",
+            "team": "This Team is an Alternate..."
+        }
     },
     {
         "id": "SOUNDPROOF",
@@ -45,7 +57,11 @@
         "textColor": "#c92080",
         "background": "#000000",
         "title": "Soundproof",
-        "description": "A Soundproof player can not be caught in Feedback's reality flickers."
+        "description": "A Soundproof Player can not be caught in Feedback's reality flickers.",
+        "descriptions": {
+            "player": "This Player cannot be caught in Feedback's reality flickers.",
+            "team": "Players on this Team cannot be caught in Feedback's reality flickers."
+        }
     },
     {
         "id": "SHELLED",
@@ -53,7 +69,7 @@
         "textColor": "#fffd85",
         "background": "#404040",
         "title": "Shelled",
-        "description": "A Shelled player is trapped in a big Peanut is unable to bat or pitch."
+        "description": "A Shelled player is trapped in a big Peanut and is unable to bat or pitch."
     },
     {
         "id": "REVERBERATING",
@@ -61,7 +77,7 @@
         "textColor": "#61b3ff",
         "background": "#756773",
         "title": "Reverberating",
-        "description": "A Reverberating player has a small chance of batting again after each of their At-Bats end."
+        "description": "A Reverberating Player has a small chance of batting again after each of their At-Bats end."
     },
     {
         "id": "RETURNED",
@@ -69,7 +85,7 @@
         "textColor": "#fbff8a",
         "background": "#1b1c80",
         "title": "Returned",
-        "description": "This player has Returned from the void. At the end of each season, this player has a chance of being called back to the Void."
+        "description": "At the end of each season, this Player has a chance of being called back to the Void."
     },
     {
         "id": "INVERTED",
@@ -77,7 +93,7 @@
         "textColor": "#d3d8de",
         "background": "#38080d",
         "title": "Inverted",
-        "description": "This player has Inverted."
+        "description": "This Player has Inverted."
     },
     {
         "id": "MARKED",
@@ -85,7 +101,11 @@
         "textColor": "#eaabff",
         "background": "#1b1c80",
         "title": "Unstable",
-        "description": "Unstable players have a much higher chance of being incinerated in a Solar Eclipse."
+        "description": "Unstable players have a much higher chance of being incinerated in a Solar Eclipse.",
+        "descriptons": {
+            "player": "Unstable Players have a much higher chance of being incinerated in a Solar Eclipse.",
+            "team": "Unstable Teams have a chance of being incinerated in a Solar Eclipse."
+        }
     },
     {
         "id": "PARTY_TIME",
@@ -93,7 +113,7 @@
         "textColor": "#ff66f9",
         "background": "#fff947",
         "title": "Party Time",
-        "description": "This team is mathematically eliminated from the Postseason, and will occasionally receive permanent stats boost in their games."
+        "description": "This Team is mathematically eliminated from the Postseason, and will occasionally receive permanent stats boost in their games."
     },
     {
         "id": "LIFE_OF_PARTY",
@@ -101,7 +121,7 @@
         "textColor": "#fff45e",
         "background": "#9141ba",
         "title": "Life of the Party",
-        "description": "This team gets 10% more from their Party Time stat boosts."
+        "description": "This Team gets 10% more from their Party Time stat boosts."
     },
     {
         "id": "DEBT_ZERO",
@@ -109,7 +129,7 @@
         "textColor": "#ff1f3c",
         "background": "#1b1c80",
         "title": "Debt",
-        "description": "This player must fulfill a debt."
+        "description": "This Player must fulfill a debt."
     },
     {
         "id": "DEBT",
@@ -117,7 +137,7 @@
         "textColor": "#ff1f3c",
         "background": "#363738",
         "title": "Refinanced Debt",
-        "description": "This player must fulfill a debt."
+        "description": "This Player must fulfill a debt."
     },
     {
         "id": "DEBT_TWO",
@@ -125,7 +145,7 @@
         "textColor": "#ff1f3c",
         "background": "#612273",
         "title": "Consolidated Debt",
-        "description": "This player must fulfill a debt."
+        "description": "This Player must fulfill a debt."
     },
     {
         "id": "SPICY",
@@ -157,7 +177,7 @@
         "textColor": "#ffda75",
         "background": "#b5831f",
         "title": "Honey Roasted",
-        "description": "This player has been Honey-Roasted."
+        "description": "This Player has been Honey-Roasted."
     },
     {
         "id": "FIRST_BORN",
@@ -165,7 +185,7 @@
         "textColor": "#fffea8",
         "background": "#517063",
         "title": "First Born",
-        "description": "This player was the first born from the New Field of Eggs."
+        "description": "This Player was the first born from the New Field of Eggs."
     },
     {
         "id": "SUPERALLERGIC",
@@ -173,7 +193,7 @@
         "textColor": "#bd224e",
         "background": "#45003d",
         "title": "Superallergic",
-        "description": "This player is Superallergic"
+        "description": "This Player is Superallergic"
     },
     {
         "id": "SUPERYUMMY",
@@ -181,15 +201,19 @@
         "textColor": "#ffdb59",
         "background": "#c96faa",
         "title": "Superyummy",
-        "description": "This player seriously loves peanuts"
+        "description": "This Player seriously loves peanuts"
     },
     {
         "id": "EXTRA_BASE",
         "color": "#d9d9d9",
         "textColor": "#d9d9d9",
         "background": "#4a001a",
-        "title": "Fifth Base",
-        "description": "This team must run five bases instead of four in order to score."
+        "title": "The Fifth Base",
+        "description": "Teams playing in this Ballpark must run five bases instead of four.",
+        "descriptions": {
+            "ballpark": "Teams playing in this Ballpark must run five bases instead of four.",
+            "team": "This Team must run five bases instead of four."
+        }
     },
     {
         "id": "BLESS_OFF",
@@ -197,7 +221,7 @@
         "textColor": "#e0cafa",
         "background": "#7d58a8",
         "title": "Bless Off",
-        "description": "This team cannot win any Blessings in the upcoming Election."
+        "description": "This Team cannot win any Blessings in the upcoming Election."
     },
     {
         "id": "NON_IDOLIZED",
@@ -205,7 +229,7 @@
         "textColor": "#fffaba",
         "background": "#540e43",
         "title": "Idol Immune",
-        "description": "Idol Immune players cannot be Idolized by Fans."
+        "description": "Idol Immune Players cannot be Idolized by Fans."
     },
     {
         "id": "GRAVITY",
@@ -213,7 +237,11 @@
         "textColor": "#759bc9",
         "background": "#4c5052",
         "title": "Gravity",
-        "description": "This player cannot be affected by Reverb."
+        "description": "This Player cannot be affected by Reverb.",
+        "descriptions": {
+            "player": "This Player cannot be affected by Reverb.",
+            "team": "This Team cannot be affected by Reverb."
+        }
     },
     {
         "id": "ELECTRIC",
@@ -221,7 +249,11 @@
         "textColor": "#fff199",
         "background": "#04144a",
         "title": "Electric",
-        "description": "Electric teams have a chance of zapping away Strikes."
+        "description": "Electric Teams have a chance of zapping away Strikes.",
+        "descriptions": {
+            "player": "When this Player is batting, they have a chance of zapping away Strikes.",
+            "team": "When this Team is batting, they have a chance of zapping away Strikes."
+        }
     },
     {
         "id": "DOUBLE_PAYOUTS",
@@ -237,7 +269,7 @@
         "textColor": "#c4ff85",
         "background": "#1f474f",
         "title": "Fire Protector",
-        "description": "This player will protect their team from incinerations."
+        "description": "This Player will protect their teammates from incinerations."
     },
     {
         "id": "RECEIVER",
@@ -245,7 +277,7 @@
         "textColor": "#ff007b",
         "background": "#383838",
         "title": "Receiver",
-        "description": "This player is a Receiver."
+        "description": "This Player is a Receiver."
     },
     {
         "id": "FLICKERING",
@@ -253,7 +285,7 @@
         "textColor": "#ff007b",
         "background": "#383838",
         "title": "Flickering",
-        "description": "Flickering players have a much higher chance of being Feedbacked to their opponent."
+        "description": "Flickering Players have a much higher chance of being Feedbacked to their opponent."
     },
     {
         "id": "GROWTH",
@@ -261,7 +293,11 @@
         "textColor": "#52a17b",
         "background": "#13422b",
         "title": "Growth",
-        "description": "Growth teams will play better as the season goes on, up to a 5% global boost by season's end."
+        "description": "Growth teams will play better as the season goes on, up to a 5% global boost by season's end.",
+        "descriptions": {
+            "player": "Players with Growth play better as the season goes on, up to a 5% boost by Season's end.",
+            "team": "Teams with Growth play better as the season goes on, up to a 5% boost by Season's end."
+        }
     },
     {
         "id": "BASE_INSTINCTS",
@@ -269,7 +305,11 @@
         "textColor": "#dedede",
         "background": "#329c98",
         "title": "Base Instincts",
-        "description": "Batters with Base Instincts will have a chance of heading past first base when getting walked."
+        "description": "Batters with Base Instincts will have a chance of heading past first base when getting walked.",
+        "descriptions": {
+            "player": "This Player has a chance of heading past first base when getting walked.",
+            "team": "Players batting for this Team have a chance of heading past first base when getting walked."
+        }
     },
     {
         "id": "STABLE",
@@ -277,7 +317,11 @@
         "textColor": "#91b5a3",
         "background": "#335980",
         "title": "Stable",
-        "description": "Stable players cannot be made Unstable."
+        "description": "Stable players cannot be made Unstable.",
+        "descriptions": {
+            "player": "This Player cannot be made Unstable.",
+            "team": "This Team and the Players on it cannot be made Unstable."
+        }
     },
     {
         "id": "AFFINITY_FOR_CROWS",
@@ -293,7 +337,11 @@
         "textColor": "#915387",
         "background": "#3d2830",
         "title": "Curse of Crows",
-        "description": "This team or player will be occasionally attacked by Birds."
+        "description": "This team or player will be occasionally attacked by Birds.",
+        "descriptions": {
+            "player": "This Player will be occasionally attacked by Birds.",
+            "team": "Players playing for this Team will be occasionally attacked by Birds."
+        }
     },
     {
         "id": "SQUIDDISH",
@@ -333,7 +381,7 @@
         "textColor": "#61b3ff",
         "background": "#3d5982",
         "title": "Repeating",
-        "description": "In Reverb Weather, this player will Repeat."
+        "description": "In Reverb Weather, this Player will Repeat."
     },
     {
         "id": "SUBJECTION",
@@ -509,7 +557,11 @@
         "textColor": "#cffff0",
         "background": "#485099",
         "title": "0 No",
-        "description": "Players with 0 No cannot be struck out when there are 0 Balls in the Count."
+        "description": "Players with 0 No cannot be struck out when there are 0 Balls in the Count.",
+        "descriptions": {
+            "player": "This Player cannot be struck out when there are 0 Balls in the Count.",
+            "team": "Players batting for this Team cannot be struck out when there are 0 Balls in the Count."
+        }
     },
     {
         "id": "FAIRNESS",
@@ -541,7 +593,7 @@
         "textColor": "#dbce6e",
         "background": "#362803",
         "title": "Tribute",
-        "description": "When Hall of Flame players join this team, they'll add their Tribute as Team Spirit."
+        "description": "When Hall of Flame Players join this team, they'll add their Tribute as Team Spirit."
     },
     {
         "id": "SQUIDDEST",
@@ -549,7 +601,7 @@
         "textColor": "#e6eaeb",
         "background": "#163073",
         "title": "Squiddest",
-        "description": "This Team is the Squiddest. When a player joins the Team, they'll become Squiddish."
+        "description": "This Team is the Squiddest. When a Player joins the Team, they'll become Squiddish."
     },
     {
         "id": "CONTAINMENT",
@@ -557,7 +609,7 @@
         "textColor": "#91ab91",
         "background": "#023802",
         "title": "Containment",
-        "description": "When an Unstable player on this team is incinerated, the Instability cannot chain to their opponent."
+        "description": "This Player cannot spread Instability."
     },
     {
         "id": "RETIRED",
@@ -581,7 +633,7 @@
         "textColor": "#b59c9c",
         "background": "#1c1c1c",
         "title": "Inhabiting",
-        "description": "This player is temporarily Inhabiting a Haunted player."
+        "description": "This Player is temporarily Inhabiting a Haunted Player."
     },
     {
         "id": "WIRED",
@@ -589,7 +641,7 @@
         "textColor": "#511c00",
         "background": "#ffffff",
         "title": "Wired",
-        "description": "When a Run scores, each Wired player involved in the play (the Scoring Baserunner, Current Batter, or Current Pitcher) will make the Run worth 0.5 more."
+        "description": "When a Run scores, each Wired Player involved in the play (the Scoring Baserunner, Current Batter, or Current Pitcher) will make the Run worth 0.5 more."
     },
     {
         "id": "TIRED",
@@ -597,7 +649,7 @@
         "textColor": "#ffffff",
         "background": "#511c00",
         "title": "Tired",
-        "description": "When a Run scores, each Tired player involved in the play (the Scoring Baserunner, Current Batter, or Current Pitcher) with make the Run worth 0.5 less."
+        "description": "When a Run scores, each Tired Player involved in the play (the Scoring Baserunner, Current Batter, or Current Pitcher) with make the Run worth 0.5 less."
     },
     {
         "id": "COFFEE_EXIT",
@@ -605,7 +657,7 @@
         "textColor": "#e9c4ff",
         "background": "#96afd4",
         "title": "Percolated",
-        "description": "This player has been fully and completely Percolated."
+        "description": "This Player has been fully and completely Percolated."
     },
     {
         "id": "COFFEE_SHADOWS",
@@ -613,7 +665,7 @@
         "textColor": "#f0efaa",
         "background": "#031736",
         "title": "Well Rested",
-        "description": "Whenever a player on this team loses the Tired modification, they'll swap with a player in the Shadows."
+        "description": "Whenever a Player on this Team loses the Tired modification, they'll swap with a Player in the Shadows."
     },
     {
         "id": "HARD_BOILED",
@@ -621,7 +673,7 @@
         "textColor": "#9a7b4f",
         "background": "#511c00",
         "title": "Hard Boiled",
-        "description": "This player was boiled a little bit before hatching."
+        "description": "This Player was boiled a little bit before hatching."
     },
     {
         "id": "COFFEE_PERIL",
@@ -629,7 +681,7 @@
         "textColor": "#9a7b4f",
         "background": "#000000",
         "title": "Observed",
-        "description": "This player is being Observed carefully..."
+        "description": "This Player is being Observed carefully..."
     },
     {
         "id": "COFFEE_RALLY",
@@ -653,7 +705,7 @@
         "textColor": "#be4fff",
         "background": "#96afd4",
         "title": "Perk",
-        "description": "This player has been rewarded Percolated energy. They will Overperform in all Coffee weathers."
+        "description": "This Player has been rewarded Percolated energy. They will Overperform in all Coffee weathers."
     },
     {
         "id": "OVERPERFORMING",
@@ -661,7 +713,7 @@
         "textColor": "#32b528",
         "background": "#000000",
         "title": "Overperforming",
-        "description": "This Player will play 20% better than usual.",
+        "description": "This Team or Player will play 20% better than usual.",
         "descriptions": {
             "player": "This Player will play 20% better than usual.",
             "team": "This Team will play 20% better than usual."
@@ -673,7 +725,7 @@
         "textColor": "#ff005d",
         "background": "#3d1539",
         "title": "Shame Donor",
-        "description": "When this team shames their opponent, that opponent will begin their next game with Unruns."
+        "description": "When this Team shames their opponent, that opponent will begin their next game with Unruns."
     },
     {
         "id": "UNDERPERFORMING",
@@ -681,7 +733,7 @@
         "textColor": "#db3616",
         "background": "#000000",
         "title": "Underperforming",
-        "description": "This Player will play 20% worse than usual.",
+        "description": "This Team or Player will play 20% better than usual.",
         "descriptions": {
             "player": "This Player will play 20% worse than usual.",
             "team": "This Team will play 20% worse than usual."
@@ -693,7 +745,7 @@
         "textColor": "#d1c252",
         "background": "#383000",
         "title": "Ego+",
-        "description": "This player has a boosted Ego."
+        "description": "This Player has a boosted Ego."
     },
     {
         "id": "EGO2",
@@ -701,7 +753,7 @@
         "textColor": "#d6c965",
         "background": "#5e5100",
         "title": "Ego++",
-        "description": "This player has a boosted boosted Ego."
+        "description": "This Player has a boosted boosted Ego."
     },
     {
         "id": "EGO3",
@@ -709,7 +761,7 @@
         "textColor": "#e3d77f",
         "background": "#857300",
         "title": "Ego+++",
-        "description": "This player has a boosted boosted boosted Ego."
+        "description": "This Player has a boosted boosted boosted Ego."
     },
     {
         "id": "EGO4",
@@ -717,7 +769,7 @@
         "textColor": "#f5eba2",
         "background": "#a89200",
         "title": "Ego++++",
-        "description": "This player has a boosted boosted boosted boosted Ego."
+        "description": "This Player has a boosted boosted boosted boosted Ego."
     },
     {
         "id": "LEGENDARY",
@@ -725,7 +777,11 @@
         "textColor": "#fff8c7",
         "background": "#bfa600",
         "title": "Legendary",
-        "description": "This player is Legendary."
+        "description": "This Player is Legendary.",
+        "descriptions": {
+            "player": "This Player is Legendary",
+            "team": "This Team is Legendary."
+        }
     },
     {
         "id": "ELSEWHERE",
@@ -733,7 +789,11 @@
         "textColor": "#bdb3c3",
         "background": "#ffffff",
         "title": "Elsewhere",
-        "description": "This player is Elsewhere. They'll find their own way back."
+        "description": "This Player is Elsewhere.",
+        "descriptions": {
+            "player": "This Player is Elsewhere.",
+            "team": "This Team is Elsewhere."
+        }
     },
     {
         "id": "BOTTOM_DWELLER",
@@ -741,7 +801,7 @@
         "textColor": "#ffd7b0",
         "background": "#705336",
         "title": "Bottom Dweller",
-        "description": "If this team finishes last in their division, they'll be boosted up to 5%."
+        "description": "If this Team finishes last in their division, they'll be boosted up to 5%."
     },
     {
         "id": "CARCINIZATION",
@@ -749,7 +809,7 @@
         "textColor": "#ff4258",
         "background": "#38040a",
         "title": "Carcinization",
-        "description": "When the Crabs activate the Black Hole, they will steal the other team's best hitter for the remainder of the game."
+        "description": "When this Team activates the Black Hole, they will steal their opponent's best hitter for the remainder of the game."
     },
     {
         "id": "MAINTENANCE_MODE",
@@ -757,7 +817,7 @@
         "textColor": "#ffed63",
         "background": "#c25429",
         "title": "Maintenance Mode",
-        "description": "Whenever a player on this team is Impaired, they'll receive the Fourth Out for the remainder of the game."
+        "description": "Whenever a Player on this Team is Impaired, they'll receive the Fourth Out for the remainder of the game."
     },
     {
         "id": "AMBUSH",
@@ -765,7 +825,7 @@
         "textColor": "#ff2160",
         "background": "#0c000f",
         "title": "Ambush",
-        "description": "When a player is incinerated in a game this team is playing, a Hall of Flame player will join their Shadows."
+        "description": "When a Player is incinerated in a game this Team is playing, a random Hall of Flame Player will join their Shadows."
     },
     {
         "id": "UNDERSEA",
@@ -773,7 +833,7 @@
         "textColor": "#c2e1ff",
         "background": "#34516e",
         "title": "Undersea",
-        "description": "If this team ever has negative Runs, they'll Overperform for the rest of the game."
+        "description": "If this Team ever has negative Runs, they'll Overperform for the rest of the game."
     },
     {
         "id": "PENANCE",
@@ -781,7 +841,7 @@
         "textColor": "#ca0000",
         "background": "#4a0000",
         "title": "Penance",
-        "description": "This team will start each game by accepting 3 Unruns of penance."
+        "description": "This Team will start each game by accepting 3 Unruns of Penance."
     },
     {
         "id": "EXTRA_OUT",
@@ -789,7 +849,7 @@
         "textColor": "#5ba3eb",
         "background": "#00254a",
         "title": "Fourth Out",
-        "description": "This team plays with a Fourth Out."
+        "description": "This Team plays with a Fourth Out."
     },
     {
         "id": "STUCK",
@@ -797,7 +857,7 @@
         "textColor": "#b5bceb",
         "background": "#5f1e61",
         "title": "Stuck",
-        "description": "This player cannot swing."
+        "description": "This Player cannot swing."
     },
     {
         "id": "SWIM_BLADDER",
@@ -813,7 +873,11 @@
         "textColor": "#ff1f3c",
         "background": "#3b3217",
         "title": "Debt",
-        "description": "This player must fulfill a Debt."
+        "description": "This Player must fulfill a Debt.",
+        "descriptions": {
+            "player": "This Player must fulfill a Debt.",
+            "team": "This Team must fulfill a Debt."
+        }
     },
     {
         "id": "ECHO",
@@ -837,7 +901,11 @@
         "textColor": "#ffc2f9",
         "background": "#0a8ef5",
         "title": "Earlbirds",
-        "description": "This Team or Player will Overperform in the Earlseason."
+        "description": "This Team or Player will Overperform in the Earlseason.",
+        "descriptions": {
+            "player": "This Player will Overperform in the Earlseason.",
+            "team": "This Team will Overperform in the Earlseason."
+        }
     },
     {
         "id": "LATE_TO_PARTY",
@@ -845,7 +913,11 @@
         "textColor": "#addbff",
         "background": "#700065",
         "title": "Late to the Party",
-        "description": "This Team or Player will Overperform in the Lateseason."
+        "description": "This Team or Player will Overperform in the Lateseason.",
+        "descriptions": {
+            "player": "This Player will Overperform in the Lateseason.",
+            "team": "This Team will Overperform in the Lateseason."
+        }
     },
     {
         "id": "OVERUNDER",
@@ -853,7 +925,7 @@
         "textColor": "#ffffff",
         "background": "#000000",
         "title": "Over Under",
-        "description": "Whenever this pitcher's team has Over 5 Runs, they'll Underperform."
+        "description": "Whenever this Player's Team has Over 5 Runs, they'll Underperform."
     },
     {
         "id": "UNDEROVER",
@@ -861,7 +933,7 @@
         "textColor": "#ffffff",
         "background": "#000000",
         "title": "Under Over",
-        "description": "Whenever this player's team has Under 5 Runs, they'll Overperform."
+        "description": "Whenever this Player's Team has Under 5 Runs, they'll Overperform."
     },
     {
         "id": "WANDERER",
@@ -869,7 +941,7 @@
         "textColor": "#fffeeb",
         "background": "#3f1e57",
         "title": "Roamin'",
-        "description": "This player has a chance of Roamin' to a new team at the end of each season."
+        "description": "This Player has a chance to Roam at the end of each Season."
     },
     {
         "id": "SUPERWANDERER",
@@ -877,7 +949,7 @@
         "textColor": "#fcff54",
         "background": "#6b3c8c",
         "title": "Super Roamin'",
-        "description": "This player has a high chance of Roamin' to a new team at the end of each season."
+        "description": "This Player will Roam at the end of each Week and each Season."
     },
     {
         "id": "NEWADVENTURE",
@@ -885,7 +957,7 @@
         "textColor": "#caffc7",
         "background": "#007da3",
         "title": "On an Odyssey",
-        "description": "This player is boosted 5% every team they join a team."
+        "description": "This Player is boosted 2% every team they join a Team."
     },
     {
         "id": "SINKING_SHIP",
@@ -893,7 +965,7 @@
         "textColor": "#78befb",
         "background": "#00250d",
         "title": "Sinking Ship",
-        "description": "This team plays 1% worse for every player above 14 players on their roster, and 1% better for every player below 14 on their roster."
+        "description": "This Team plays 1% worse for every Player above 14 Players on their roster, and 1% better for every Player below 14 on their roster."
     },
     {
         "id": "PARASITE",
@@ -917,7 +989,7 @@
         "textColor": "#8dadb5",
         "background": "#032b12",
         "title": "Homebody",
-        "description": "This player will Overperform when playing in their home Ballpark and Underperform otherwise."
+        "description": "This Player will Overperform when playing in their home Ballpark and Underperform otherwise."
     },
     {
         "id": "KILLER_PIES",
@@ -925,7 +997,7 @@
         "textColor": "#ace8de",
         "background": "#3b524e",
         "title": "Flying Pie",
-        "description": "Whenever this team has lost 3 games in a Row, their pitchers will start throwing Pies."
+        "description": "Whenever this Team has lost 3 games in a Row, their pitchers will start throwing Pies."
     },
     {
         "id": "FRESH",
@@ -933,7 +1005,7 @@
         "textColor": "#ffffff",
         "background": "#000000",
         "title": "Fresh",
-        "description": "When a player joins this Team, they'll be boosted by 2%."
+        "description": "When a Player joins this Team, they'll be boosted by 2%."
     },
     {
         "id": "PARTING_GIFT",
@@ -941,7 +1013,7 @@
         "textColor": "#ffffff",
         "background": "#000000",
         "title": "Parting Gift",
-        "description": "When a player leaves this Team, they'll be boosted by 2%"
+        "description": "When a Player leaves this Team, they'll be boosted by 2%"
     },
     {
         "id": "BLOCKED_BOOST",
@@ -949,7 +1021,7 @@
         "textColor": "#ffffff",
         "background": "#000000",
         "title": "Blocked Boost",
-        "description": "If this player is protected from a Steal or Swap Will, they'll be boosted by 2%."
+        "description": "If this Player is protected from a Steal or Swap Will, they'll be boosted by 2%."
     },
     {
         "id": "HALL_EXIT_BOOST",
@@ -957,7 +1029,7 @@
         "textColor": "#ff943d",
         "background": "#163073",
         "title": "Phoenix",
-        "description": "When this player exits the Hall of Flame, they'll be boosted 10% to 20%."
+        "description": "When this Player exits the Hall of Flame, they'll be boosted 10% to 20%."
     },
     {
         "id": "FLOOD_PUMPS",
@@ -997,7 +1069,7 @@
         "textColor": "#4be397",
         "background": "#330a2a",
         "title": "LCD Soundsystem",
-        "description": "The LCD Soundsystem will boost both players involved in a Feedback swap by 5%."
+        "description": "The LCD Soundsystem will boost both Players involved in a Feedback swap by 5%."
     },
     {
         "id": "ECHO_CHAMBER",
@@ -1005,7 +1077,7 @@
         "textColor": "#61b3ff",
         "background": "#1f061b",
         "title": "Echo Chamber",
-        "description": "In Reverb, Echo Chambers will occasionally provide Reverberating and Repeating modifications to players for game-long use."
+        "description": "In Reverb, Echo Chambers will occasionally provide Reverberating and Repeating modifications to Players for game-long use."
     },
     {
         "id": "FIRE_INSURANCE",
@@ -1021,7 +1093,11 @@
         "textColor": "#f3ff54",
         "background": "#423519",
         "title": "Peanut Mister",
-        "description": "A Peanut Mister will occasionally cure a player of their peanut allergy."
+        "description": "A Peanut Mister will occasionally cure a Player of their peanut allergy.",
+        "descriptions": {
+            "ballpark": "A Peanut Mister will occasionally cure a Player in this Ballpark of their peanut allergy.",
+            "league": "A Peanut Mister will occasionally cure a Player of their peanut allergy."
+        }
     },
     {
         "id": "BLOOD_LUSTER",
@@ -1073,7 +1149,11 @@
         "textColor": "#a8a8a5",
         "background": "#43474a",
         "title": "Grind Rail",
-        "description": "The Grind Rail allows a chance to steal directly from first base to third base, as long as they have the skills."
+        "description": "The Grind Rail allows a chance to steal directly from first base to third base, as long as they have the skills.",
+        "descriptions": {
+            "ballpark": "Players in this Ballpark can use the Grind Rail to steal directly from first base to third base, as long as they have the skills.",
+            "league": "Players can use the Grind Rail to steal directly from first base to third base, as long as they have the skills."
+        }
     },
     {
         "id": "CASINO_ZONE",
@@ -1097,7 +1177,11 @@
         "textColor": "#fffb82",
         "background": "#083a3b",
         "title": "Big Buckets",
-        "description": "If a home run lands in a Big Bucket, it scores an extra Run."
+        "description": "If a home run lands in a Big Bucket, it scores an extra Run.",
+        "descriptions": {
+            "ballpark": "Home runs in this Ballpark have a chance of landing in a Big Bucket, which scores an extra Run.",
+            "league": "Home runs have a chance of landing in a Big Bucket, which scores an extra Run."
+        }
     },
     {
         "id": "SMALL_BUCKET",
@@ -1153,7 +1237,7 @@
         "textColor": "#ffffff",
         "background": "#000000",
         "title": "Redacted",
-        "description": "This player is Redacted."
+        "description": "This Player is Redacted."
     },
     {
         "id": "FUGITIVE",
@@ -1185,7 +1269,7 @@
         "textColor": "#8ae9ff",
         "background": "#423519",
         "title": "Smooth",
-        "description": "This player will have 100% more Speed in Peanut weather."
+        "description": "This Player will have 100% more Speed in Peanut weather."
     },
     {
         "id": "CHUNKY",
@@ -1193,7 +1277,7 @@
         "textColor": "#ff9e08",
         "background": "#423519",
         "title": "Chunky",
-        "description": "This player will have 100% more Power in Peanut weather."
+        "description": "This Player will have 100% more Power in Peanut weather."
     },
     {
         "id": "SUN_KISSED",
@@ -1201,7 +1285,7 @@
         "textColor": "#ffe100",
         "background": "#5c5d45",
         "title": "Sun Dialed",
-        "description": "When this Team activates Sun 2, a random player on their Team will be boosted by 1%."
+        "description": "When this Team activates Sun 2, a random Player on their Team will be boosted by 1%."
     },
     {
         "id": "UNHOLEY",
@@ -1209,7 +1293,7 @@
         "textColor": "#ffffff",
         "background": "#863490",
         "title": "Unholey",
-        "description": "When this Team activates the Black Hole, a random player on their opponent's Team will be impaired by 1%."
+        "description": "When this Team activates the Black Hole, a random Player on their opponent's Team will be impaired by 1%."
     },
     {
         "id": "SUPERCHARGED",
@@ -1225,7 +1309,11 @@
         "textColor": "#fff912",
         "background": "#465f63",
         "title": "High Pressure",
-        "description": "This Team or Player will play 25% better in Flooding weather when runners are on base."
+        "description": "This Team or Player will play 25% better in Flooding weather when runners are on base.",
+        "descriptions": {
+            "player": "This Player will play 25% better in Flooding weather when runners are on base.",
+            "team": "This Team will play 25% better in Flooding weather when runners are on base."
+        }
     },
     {
         "id": "SCATTERED",
@@ -1241,7 +1329,7 @@
         "textColor": "#b3ffa6",
         "background": "#2b304f",
         "title": "Patient",
-        "description": "This batter will never swing when there are 0 Strikes and are 1 Ball away from a Walk."
+        "description": "This Player will never swing when there are 0 Strikes and are 1 Ball away from a Walk."
     },
     {
         "id": "UNCERTAIN",
@@ -1305,7 +1393,11 @@
         "textColor": "#29ffd1",
         "background": "#007a87",
         "title": "Maximalist",
-        "description": "This Player plays 250% better at Maximum Blaseball."
+        "description": "This Player plays 250% better at Maximum Blaseball.",
+        "descriptions": {
+            "player": "This Player plays 250% better at Maximum Blaseball.",
+            "team": "This Team plays 250% better at Maximum Blaseball."
+        }
     },
     {
         "id": "MINIMALIST",
@@ -1313,7 +1405,11 @@
         "textColor": "#80bfb2",
         "background": "#2f4e52",
         "title": "Minimalist",
-        "description": "This Player plays 75% worse at Maximum Blaseball."
+        "description": "This Player plays 75% worse at Maximum Blaseball.",
+        "descriptions": {
+            "player": "This Player plays 75% worse at Maximum Blaseball.",
+            "team": "This Team plays 75% worse at Maximum Blaseball."
+        }
     },
     {
         "id": "FREE_WILL",
@@ -1322,6 +1418,14 @@
         "background": "#9e0000",
         "title": "Free Will",
         "description": "This Team will receive an Extra Will in the upcoming Election."
+    },
+    {
+        "id": "FREE_GIFT",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#9e0000",
+        "title": "Free Gift",
+        "description": "This Team will receive an Extra Gift from the next Gift Shop."
     },
     {
         "id": "CUSTOM_HATCHED",
@@ -1337,7 +1441,7 @@
         "textColor": "#ffffff",
         "background": "#000000",
         "title": "Force",
-        "description": "This Player is Forced into position. They cannot leave their current location."
+        "description": "This Player is Forced into position. They cannot leave their current Location."
     },
     {
         "id": "PSYCHOACOUSTICS",
@@ -1369,7 +1473,11 @@
         "textColor": "#809fff",
         "background": "#002b0f",
         "title": "Middling",
-        "description": "This Team or Player will Overperform in the Midseason."
+        "description": "This Team or Player will Overperform in the Midseason.",
+        "descriptions": {
+            "player": "This Player will Overperform in the Midseason.",
+            "team": "This Team will Overperform in the Midseason."
+        }
     },
     {
         "id": "0",
@@ -1377,7 +1485,11 @@
         "textColor": "#cffff0",
         "background": "#904899",
         "title": "0",
-        "description": "Players with 0 will always swing at strikes while there are 0 Balls and 0 Strikes in the At Bat."
+        "description": "Players with 0 will always swing at strikes while there are 0 Balls and 0 Strikes in the At Bat.",
+        "descriptions": {
+            "player": "This Player will always swing at strikes while there are 0 Balls and 0 Strikes in the At Bat.",
+            "team": "Players batting for this Team will always swin at strikes while there are 0 Balls and 0 Strikes in the At Bat."
+        }
     },
     {
         "id": "H20",
@@ -1385,7 +1497,11 @@
         "textColor": "#cffff0",
         "background": "#489699",
         "title": "H20",
-        "description": "Players with H20 will always swing at strikes while there are 2 Outs."
+        "description": "Players with H20 will always swing at strikes while there are 2 Outs.",
+        "descriptions": {
+            "player": "This Player will always swing at strikes while there are 2 Outs.",
+            "team": "Players batting for this Team will always swing at strikes while there are 2 Outs."
+        }
     },
     {
         "id": "ATTRACTOR",
@@ -1393,7 +1509,7 @@
         "textColor": "#96fdff",
         "background": "#2e0330",
         "title": "Attractor",
-        "description": "When this player scores a Run, they'll join the Shadows of the Team that scored them, if they're not already on their roster."
+        "description": "When this Player scores a Run, they'll join the Shadows of the Team that scored them, if they're not already on their Roster."
     },
     {
         "id": "SCRAMBLED",
@@ -1401,7 +1517,7 @@
         "textColor": "#9a7b4f",
         "background": "#511c00",
         "title": "Scrambled",
-        "description": "This player is Scrambled."
+        "description": "This Player is Scrambled."
     },
     {
         "id": "CAREFUL",
@@ -1409,7 +1525,7 @@
         "textColor": "#fff39c",
         "background": "#ad4b00",
         "title": "Careful",
-        "description": "This player's Items will not be damaged by standard game actions."
+        "description": "This Player's Items will not be damaged by standard game actions."
     },
     {
         "id": "AMBITIOUS",
@@ -1417,7 +1533,11 @@
         "textColor": "#ffcf0f",
         "background": "#247d7a",
         "title": "Ambitious",
-        "description": "This Team or Player will Overperform in the Postseason."
+        "description": "This Team or Player will Overperform in the Postseason.",
+        "descriptions": {
+            "player": "This Player will Overperform in the Postseason.",
+            "team": "This Team will Overperform in the Postseason."
+        }
     },
     {
         "id": "PRO_SKATER",
@@ -1425,7 +1545,7 @@
         "textColor": "#4dbd8b",
         "background": "#1a385c",
         "title": "Pro Skater",
-        "description": "This player cannot bail when using the Grind Rail."
+        "description": "This Player cannot bail when using the Grind Rail."
     },
     {
         "id": "PSYCHIC",
@@ -1433,7 +1553,11 @@
         "textColor": "#ff87ff",
         "background": "#230747",
         "title": "Psychic",
-        "description": "Psychic players have a chance of reversing a bad outcome with a Mind Trick."
+        "description": "Psychic players have a chance of reversing a bad outcome with a Mind Trick.",
+        "descriptions": {
+            "player": "This Player has a chance of reversing a bad outcome with a Mind Trick.",
+            "team": "Players playing for this Team have a chance of reversing a bad outcome with a Mind Trick."
+        }
     },
     {
         "id": "FIERY",
@@ -1441,7 +1565,11 @@
         "textColor": "#ff995e",
         "background": "#940101",
         "title": "Fiery",
-        "description": "Players with Fiery have a small chance of throwing Double Strikes."
+        "description": "Players with Fiery have a chance of throwing Double Strikes.",
+        "descriptions": {
+            "player": "This Player has a chance of throwing Double Strikes.",
+            "team": "Players pitching for this Team have a chance of throwing Double Strikes."
+        }
     },
     {
         "id": "AAA",
@@ -1449,7 +1577,11 @@
         "textColor": "#f1ffa3",
         "background": "#192400",
         "title": "Power Chaaarge",
-        "description": "When this Player hits a Triple, they'll have a chance of Overperforming for the rest of the game."
+        "description": "When this Player hits a Triple, they'll have a chance of Overperforming for the rest of the game.",
+        "descriptions": {
+            "player": "When this Player hits a Triple, they'll have a chance of Overperforming for the rest of the game.",
+            "team": "When a Player batting for this Team hits a Triple, they'll have a chance of Overperforming for the rest of the game."
+        }
     },
     {
         "id": "UNAMBITIOUS",
@@ -1457,7 +1589,11 @@
         "textColor": "#ada26d",
         "background": "#062e2d",
         "title": "Unambitious",
-        "description": "This Team or player will Underperform in the Postseason."
+        "description": "This Team or Player will Underperform in the Postseason.",
+        "descriptions": {
+            "player": "This Player will Underperform in the Postseason.",
+            "team": "This Team will Underperform in the Postseason."
+        }
     },
     {
         "id": "COASTING",
@@ -1465,7 +1601,11 @@
         "textColor": "#809fff",
         "background": "#4a152c",
         "title": "Coasting",
-        "description": "This Team or player will Underperform in the Midseason."
+        "description": "This Team or Player will Underperform in the Midseason.",
+        "descriptions": {
+            "player": "This Player will Underperform in the Midseason.",
+            "team": "This Team will Underperform in the Midseason."
+        }
     },
     {
         "id": "EAT_THE_RICH",
@@ -1473,7 +1613,7 @@
         "textColor": "#f5d64e",
         "background": "#911d00",
         "title": "Eat The Rich",
-        "description": "At the end of each season, the Fans with the top 1% of Coins will have their funds redistributed throughout the 99%."
+        "description": "At the end of each Season, the Fans with the top 1% of Coins will have their funds redistributed throughout the 99%."
     },
     {
         "id": "WILD_CARDS",
@@ -1481,7 +1621,7 @@
         "textColor": "#dda6ed",
         "background": "#291633",
         "title": "Wild Cards",
-        "description": "At the end of the regular season, 1 Wild Card will be drawn at random from the remaining teams in each Sub-League to receive a Postseason Birth."
+        "description": "At the end of the regular season, 1 Wild Card will be drawn at random from the remaining Teams in each Sub-League to receive a Postseason Birth."
     },
     {
         "id": "SIM_FREE_WILL",
@@ -1489,7 +1629,7 @@
         "textColor": "#ffffff",
         "background": "#9e0000",
         "title": "Free Wills",
-        "description": "The bottom four finishing Teams in the League will receive an extra Will in that season's election."
+        "description": "The bottom four finishing Teams in the League will receive an extra Will in that Season's Election."
     },
     {
         "id": "SIM_ALL_YOU_CAN_EAT",
@@ -1589,7 +1729,11 @@
         "textColor": "#40ff89",
         "background": "#015437",
         "title": "Acidic",
-        "description": "Acidic pitchers occasionally throw Acidic pitches, which cause any Runs scored on the play to be worth .1 less."
+        "description": "Acidic pitchers occasionally throw Acidic pitches, which cause any Runs scored on the play to be worth .1 less.",
+        "descriptions": {
+            "player": "This Player will occasionally throw Acidic pitches, which cause any Runs scored on the play to be worth .1 less.",
+            "team": "Players pitching for this Team will occasionally throw Acidic pitches, which cause any Runs scored on the play to be worth .1 less."
+        }
     },
     {
         "id": "AA",
@@ -1597,7 +1741,11 @@
         "textColor": "#40f9ff",
         "background": "#001f2e",
         "title": "Power Chaarge",
-        "description": "When this Player hits a Double, they'll have a chance of Overperforming for the rest of the game."
+        "description": "When this Player hits a Double, they'll have a chance of Overperforming for the rest of the game.",
+        "descriptions": {
+            "player": "When this Player hits a Double, they'll have a chance of Overperforming for the rest of the game.",
+            "team": "When a Player batting for this Team hits a Double, they'll have a chance of Overperforming for the rest of the game."
+        }
     },
     {
         "id": "SMITHY",
@@ -1605,7 +1753,11 @@
         "textColor": "#ff6c3b",
         "background": "#414445",
         "title": "Smithy",
-        "description": "The Smithy will occasionally repair Items for Players playing in this Ballpark."
+        "description": "The Smithy will occasionally repair Items for Players playing in this Ballpark.",
+        "descriptions": {
+            "ballpark": "The Smithy will occasionally repair Items for Players playing in this Ballpark.",
+            "league": "The Smithy will occasionally repair Items during games."
+        }
     },
     {
         "id": "COVERUP",
@@ -1637,7 +1789,11 @@
         "textColor": "#00ff51",
         "background": "#1a0112",
         "title": "Rally",
-        "description": "This Team or Player will play 5% better when losing in the 7th inning or later."
+        "description": "This Team or Player will play 5% better when losing in the 7th inning or later.",
+        "descriptions": {
+            "player": "This Player will play 5% better when losing in the 7th inning or later.",
+            "team": "This Team will play 5% better when losing in the 7th inning or later."
+        }
     },
     {
         "id": "NIGHT_VISION",
@@ -1740,6 +1896,14 @@
         "description": "Teams will build an Additional Renovation at no extra cost each Season."
     },
     {
+        "id": "SIM_HYPE_TRAIN",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#163321",
+        "title": "Hype Train",
+        "description": "Shaming your opponent will build Hype in your Ballpark."
+    },
+    {
         "id": "UNDERTAKER",
         "color": "#ffffff",
         "textColor": "#ffffff",
@@ -1754,5 +1918,114 @@
         "background": "#163321",
         "title": "Seeker",
         "description": "The Player has a chance to bring teammates back from Elsewhere."
+    },
+    {
+        "id": "SUBTRACTOR",
+        "color": "#f70063",
+        "textColor": "#f70063",
+        "background": "#420000",
+        "title": "Subtractor",
+        "description": "When this Player bats in a Run or Unrun, the polarity of the Run or Unrun will be flipped (Runs become Unruns, Unruns become Runs)."
+    },
+    {
+        "id": "UNDERACHIEVER",
+        "color": "#f70063",
+        "textColor": "#f70063",
+        "background": "#362236",
+        "title": "Underachiever",
+        "description": "When this Player hits a Home Run, the polarity of the Runs or Unruns will be flipped (Runs become Unruns, Unruns become Runs)."
+    },
+    {
+        "id": "UNDERHANDED",
+        "color": "#f70063",
+        "textColor": "#f70063",
+        "background": "#362236",
+        "title": "Underhanded",
+        "description": "When this Pitcher allows a Home Run, the polarity of the Runs or Unruns will be flipped (Runs become Unruns, Unruns become Runs)."
+    },
+    {
+        "id": "MODERATION",
+        "color": "#a8fffc",
+        "textColor": "#a8fffc",
+        "background": "#00242e",
+        "title": "Moderation",
+        "description": "This Team will accept Unruns after each non-loss so that they only non-lose by 1 Run."
+    },
+    {
+        "id": "GAUDY",
+        "color": "#dede5f",
+        "textColor": "#dede5f",
+        "background": "#6d3573",
+        "title": "Gaudy",
+        "description": "This Player will play better in Ballparks with more Modifications."
+    },
+    {
+        "id": "GUARDED",
+        "color": "#c3c6c7",
+        "textColor": "#c3c6c7",
+        "background": "#272d30",
+        "title": "Guarded",
+        "description": "This Player will play better in more Fortified Ballparks, and worse in less Fortified Ballparks."
+    },
+    {
+        "id": "CLUTTERED",
+        "color": "#e3cfd6",
+        "textColor": "#e3cfd6",
+        "background": "#3b342e",
+        "title": "Cluttered",
+        "description": "This Player will play better in Filthier Ballparks."
+    },
+    {
+        "id": "OUTDOORSY",
+        "color": "#edd8a6",
+        "textColor": "#edd8a6",
+        "background": "#012e05",
+        "title": "Outdoorsy",
+        "description": "This Player will play better in more Grandiose Ballparks, and worse in less Grandiose Ballparks."
+    },
+    {
+        "id": "YOLKED",
+        "color": "#ebdb34",
+        "textColor": "#ebdb34",
+        "background": "#00242e",
+        "title": "Yolked",
+        "description": "This Player is Yolked!"
+    },
+    {
+        "id": "FIREWALKER",
+        "color": "#a8fffc",
+        "textColor": "#a8fffc",
+        "background": "#00242e",
+        "title": "Firewalker",
+        "description": "When this Player leaves a Location, they'll leave Instability behind."
+    },
+    {
+        "id": "STRANGE_ATTRACTOR",
+        "color": "#a8fffc",
+        "textColor": "#a8fffc",
+        "background": "#00242e",
+        "title": "Strange Attractor",
+        "description": "When this player scores a Run, they'll join the Active Roster of a random other Team in the League."
+    },
+    {
+        "id": "SUNSUN",
+        "color": "#ffca4f",
+        "textColor": "#ffca4f",
+        "background": "#994700",
+        "title": "Sun(Sun)",
+        "description": "All Wins and Unwins earned will be Squared.",
+        "descriptions": {
+            "league": "All Wins and Unwins earned will be Squared.",
+            "ballpark": "All Wins and Unwins earned in this Ballpark will be Squared.",
+            "team": "All Wins and Unwins earned by this Team will be Squared."
+        }
+    },
+    {
+        "id": "SIM_UNDERBRACKET",
+        "color": "#e1adff",
+        "textColor": "#e1adff",
+        "background": "#592975",
+        "title": "The Underbracket",
+        "description": "Every Postseason, the bottom finishing Teams will compete in the Underbracket while the top finishing Teams compete in the standard Overbracket."
     }
 ]

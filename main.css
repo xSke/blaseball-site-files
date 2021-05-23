@@ -11619,6 +11619,13 @@ input[type="number"]::-webkit-outer-spin-button {
 .theme-light .Player-Info-Items-Box-Empty {
   border-color: hsla(0, 0%, 89%, 0.7098039215686275);
 }
+.Player-Info-Items-Box-Legendary {
+  border: 2px solid #ffc81e;
+  box-shadow: inset 0 0 5px 2px #ffc81e;
+}
+.Player-Info-Items-Box-Legendary .Player-Info-Items-Number {
+  color: #ffc81e;
+}
 .Player-Info-Items-Durability {
   font-size: 25px;
   display: -webkit-flex;
@@ -11628,6 +11635,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .Player-Info-Items-Durability-Unbreakable {
   font-size: 28px;
+  line-height: 1rem;
+  color: #ffc81e;
 }
 .Player-Info-Items-Durability-Broken {
   font-size: 13px;
@@ -12081,6 +12090,11 @@ input[type="number"]::-webkit-outer-spin-button {
 .Team-Player-Ratings .AttributeIcon {
   height: 28px;
   width: 28px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.Team-Player-Ratings .AttributeIcon:not(:last-child) {
+  margin-right: 5px;
 }
 .Team-Player-Vibe {
   font-family: "Lora", "Courier New", monospace, serif;
@@ -12100,6 +12114,10 @@ input[type="number"]::-webkit-outer-spin-button {
 .Team-Items-Box {
   position: relative;
   width: 28px;
+  height: 28px;
+}
+.Team-Items-Box:not(:last-child) {
+  margin-right: 5px;
 }
 .Team-Items-Box .Item-Icon {
   height: 28px;
@@ -12112,6 +12130,15 @@ input[type="number"]::-webkit-outer-spin-button {
   top: 5px;
   left: 5px;
   color: #6dc0ff;
+}
+.Team-Items-Box-Legendary {
+  border: 1px solid #ffc81e;
+  border-radius: 50%;
+  padding: 2px;
+}
+.Team-Items-Box-Legendary .Item-Icon {
+  height: 100%;
+  width: 100%;
 }
 .Team-Info-Championships {
   font-size: 26px;
@@ -13788,6 +13815,15 @@ input[type="number"]::-webkit-outer-spin-button {
 .Item {
   min-height: 250px;
   height: auto;
+}
+.Item-Header {
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
 }
 .Item-Icon {
   max-width: 60px;
