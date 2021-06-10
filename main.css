@@ -20769,26 +20769,43 @@ button:focus-visible {
   margin-left: 50px;
   margin-bottom: 12px;
 }
-.TermsOfService ol.alphabetical {
-  counter-reset: unset;
-}
-.TermsOfService ol.alphabetical > li {
-  list-style-type: lower-alpha;
-  counter-increment: unset;
-}
-.TermsOfService ol.alphabetical > li:before {
-  content: "";
-}
 .TermsOfService ol {
   margin-bottom: 12px;
   padding: 0;
+}
+.TermsOfService ol.numbered {
   counter-reset: item;
 }
-.TermsOfService ol > li {
+.TermsOfService ol.numbered > li {
   counter-increment: item;
 }
-.TermsOfService ol > li:before {
-  content: counters(item, ".") " ";
+.TermsOfService ol.numbered > li:before {
+  font-weight: 700;
+  content: counters(item, ".") ". ";
+}
+.TermsOfService .spacer {
+  margin-top: 8px;
+}
+.TermsOfService ol.alphabetical {
+  counter-reset: letters;
+}
+.TermsOfService ol.alphabetical > li {
+  list-style: none;
+  counter-increment: letters;
+}
+.TermsOfService ol.alphabetical > li:before {
+  font-weight: 700;
+  content: "(" counter(letters, lower-alpha) ") ";
+}
+.TermsOfService ol.romans {
+  counter-reset: romans;
+}
+.TermsOfService ol.romans > li {
+  counter-increment: romans;
+}
+.TermsOfService ol.romans > li:before {
+  font-weight: 700;
+  content: "(" counter(romans, lower-roman) ") ";
 }
 .TermsOfService ul {
   margin-bottom: 12px;
