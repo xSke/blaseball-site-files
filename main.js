@@ -12590,107 +12590,119 @@
         var t = Number(e);
         return isNaN(t) ? e : String.fromCodePoint(t);
       }
-      function QA(e, t, a) {
-        var n = void 0 !== t.filters.leagueLocation ? t.filters.leagueLocation : "inLeague",
-          r = [];
-        if (void 0 === e) return r;
-        if ("anywhere" === n) r = e.teams;
+      function QA(e, t, a, n) {
+        var r = void 0 !== t.filters.leagueLocation ? t.filters.leagueLocation : "inLeague",
+          l = [];
+        if (void 0 === e) return l;
+        if ("anywhere" === r) l = e.teams;
         else {
-          if (void 0 === e.leagues || void 0 === e.leagues[0]) return r;
-          var l = e.leagues[0].subleagues,
-            i = [];
+          if (void 0 === e.leagues || void 0 === e.leagues[0]) return l;
+          var i = e.leagues[0].subleagues,
+            o = [];
           if (
             (e.subleagues.map(function (e) {
-              l.includes(e.id) && (i = i.concat(e.divisions));
+              i.includes(e.id) && (o = o.concat(e.divisions));
             }),
-            "inLeague" === n)
+            "inLeague" === r)
           ) {
-            var o = [];
-            e.divisions.map(function (e) {
-              i.includes(e.id) && (o = o.concat(e.teams));
-            });
-            var s = o.indexOf(a);
-            s > -1 && o.splice(s, 1);
-            var c = [];
+            var s = [];
+            if (
+              (e.divisions.map(function (e) {
+                o.includes(e.id) && (s = s.concat(e.teams));
+              }),
+              n)
+            ) {
+              var c = s.indexOf(a);
+              c > -1 && s.splice(c, 1);
+            }
+            var u = [];
             e.teams.map(function (e) {
-              o.includes(e.id) && c.push(e);
+              s.includes(e.id) && u.push(e);
             }),
-              (r = c);
-          } else if ("inSubleague" === n) {
-            var u = "";
+              (l = u);
+          } else if ("inSubleague" === r) {
+            var m = "";
             e.divisions.map(function (e) {
-              i.includes(e.id) &&
+              o.includes(e.id) &&
                 e.teams.find(function (e) {
                   return e === a;
                 }) &&
-                (u = e.id);
+                (m = e.id);
             }),
               e.subleagues.map(function (e) {
-                l.includes(e.id) &&
+                i.includes(e.id) &&
                   e.divisions.find(function (e) {
-                    return e === u;
+                    return e === m;
                   }) &&
-                  (i = e.divisions);
+                  (o = e.divisions);
               });
-            var m = [];
-            e.divisions.map(function (e) {
-              i.includes(e.id) && (m = m.concat(e.teams));
-            });
-            var A = m.indexOf(a);
-            A > -1 && m.splice(A, 1);
-            var d = [];
+            var A = [];
+            if (
+              (e.divisions.map(function (e) {
+                o.includes(e.id) && (A = A.concat(e.teams));
+              }),
+              n)
+            ) {
+              var d = A.indexOf(a);
+              d > -1 && A.splice(d, 1);
+            }
+            var f = [];
             e.teams.map(function (e) {
-              m.includes(e.id) && d.push(e);
+              A.includes(e.id) && f.push(e);
             }),
-              (r = d);
-          } else if ("oppSubleague" === n) {
-            var f = "";
+              (l = f);
+          } else if ("oppSubleague" === r) {
+            var h = "";
             e.divisions.map(function (e) {
-              i.includes(e.id) &&
+              o.includes(e.id) &&
                 e.teams.find(function (e) {
                   return e === a;
                 }) &&
-                (f = e.id);
-            });
-            var h = "";
-            e.subleagues.map(function (e) {
-              l.includes(e.id) && e.divisions.includes(f) && (h = e.id);
+                (h = e.id);
             });
             var g = "";
-            l.map(function (e) {
-              e !== h && (g = e);
+            e.subleagues.map(function (e) {
+              i.includes(e.id) && e.divisions.includes(h) && (g = e.id);
+            });
+            var p = "";
+            i.map(function (e) {
+              e !== g && (p = e);
             }),
               e.subleagues.map(function (e) {
-                g === e.id && (i = e.divisions);
+                p === e.id && (o = e.divisions);
               });
-            var p = [];
-            e.divisions.map(function (e) {
-              i.includes(e.id) && (p = p.concat(e.teams));
-            });
             var E = [];
-            e.teams.map(function (e) {
-              p.includes(e.id) && E.push(e);
-            }),
-              (r = E);
-          } else if ("inDivision" === n) {
-            var v = [];
             e.divisions.map(function (e) {
-              i.includes(e.id) &&
-                e.teams.find(function (e) {
-                  return e === a;
-                }) &&
-                (v = v.concat(e.teams));
+              o.includes(e.id) && (E = E.concat(e.teams));
             });
-            var b = v.indexOf(a);
-            b > -1 && v.splice(b, 1);
-            var w = [];
+            var v = [];
             e.teams.map(function (e) {
-              v.includes(e.id) && w.push(e);
+              E.includes(e.id) && v.push(e);
             }),
-              (r = w);
+              (l = v);
+          } else if ("inDivision" === r) {
+            var b = [];
+            if (
+              (e.divisions.map(function (e) {
+                o.includes(e.id) &&
+                  e.teams.find(function (e) {
+                    return e === a;
+                  }) &&
+                  (b = b.concat(e.teams));
+              }),
+              n)
+            ) {
+              var w = b.indexOf(a);
+              w > -1 && b.splice(w, 1);
+            }
+            var y = [];
+            e.teams.map(function (e) {
+              b.includes(e.id) && y.push(e);
+            }),
+              (l = y);
           }
         }
-        return r;
+        return l;
       }
       function jA(e, t) {
         var a = [];
@@ -26954,8 +26966,8 @@
                 T.info.forEach(function (a, r) {
                   if (a.type === Lb.TeamDropdown)
                     j === [] || void 0 === j || j.length < 1
-                      ? V(QA(A, a, t))
-                      : (G === [] || void 0 === G || G.length < 1) && H(QA(A, a, t));
+                      ? V(QA(A, a, t, !0))
+                      : (G === [] || void 0 === G || G.length < 1) && H(QA(A, a, t, !0));
                   else if (a.type === Lb.PlayerDropdown) {
                     if ("myTeam" === a.filters.leagueLocation && void 0 === a.filters.equivalence) {
                       var l = n.favoriteTeam ? n.favoriteTeam : "";
@@ -34064,7 +34076,7 @@
             function () {
               if ((void 0 === p && P(), T.length < 1)) {
                 var e,
-                  t = QA(n, { filters: {} }, null !== (e = o.favoriteTeam) && void 0 !== e ? e : "");
+                  t = QA(n, { filters: {} }, null !== (e = o.favoriteTeam) && void 0 !== e ? e : "", !1);
                 x(t);
               }
             },
@@ -34794,13 +34806,13 @@
             e.matches ? w(!0) : w(!1);
           },
           B = function (e) {
-            e.matches ? a.motion && p(!0) : a.motion || p(!1);
+            e.matches ? p(!0) : a.motion || p(!1);
           };
         Object(r.useEffect)(
           function () {
             if (u.length < 1) {
               var e,
-                t = QA(n, { filters: {} }, null !== (e = a.favoriteTeam) && void 0 !== e ? e : "");
+                t = QA(n, { filters: {} }, null !== (e = a.favoriteTeam) && void 0 !== e ? e : "", !1);
               m(t);
             }
           },
@@ -35032,8 +35044,14 @@
                           }
                         >
                           <div
-                            style={{ gridColumn: e.x, gridRow: e.y, height: "100%", width: "100%" }}
                             className={"Dale" === e.team.nickname ? "DepthChart-Team-Boat" : ""}
+                            style={{
+                              gridColumn: e.x,
+                              gridRow: e.y,
+                              height: "100%",
+                              width: "100%",
+                              animation: g ? "none" : "",
+                            }}
                           >
                             <A background={d} path={"/team/".concat(e.team.id)} className="DepthChart-Team-Wrapper">
                               <div className="DepthChart-Team">{DA(e.team)}</div>
@@ -35163,7 +35181,11 @@
                             </div>
                             {e.fullName}
                           </div>
-                          <div className="DepthChart-Lists-Number">{e.imPosition[1].toFixed(4)}</div>
+                          <div className="DepthChart-Lists-Number">
+                            {e.imPosition[1] > 0
+                              ? (1 - e.imPosition[1]).toFixed(4)
+                              : (1 + Math.abs(e.imPosition[1])).toFixed(4)}
+                          </div>
                         </A>
                       );
                     })}
@@ -35190,7 +35212,11 @@
                             </div>
                             {e.fullName}
                           </div>
-                          <div className="DepthChart-Lists-Number">{e.imPosition[1].toFixed(4)}</div>
+                          <div className="DepthChart-Lists-Number">
+                            {e.imPosition[1] > 0
+                              ? (1 - e.imPosition[1]).toFixed(4)
+                              : (1 + Math.abs(e.imPosition[1])).toFixed(4)}
+                          </div>
                         </A>
                       );
                     })}
@@ -35217,7 +35243,11 @@
                             </div>
                             {e.fullName}
                           </div>
-                          <div className="DepthChart-Lists-Number">{e.imPosition[1].toFixed(4)}</div>
+                          <div className="DepthChart-Lists-Number">
+                            {e.imPosition[1] > 0
+                              ? (1 - e.imPosition[1]).toFixed(4)
+                              : (1 + Math.abs(e.imPosition[1])).toFixed(4)}
+                          </div>
                         </A>
                       );
                     })}
