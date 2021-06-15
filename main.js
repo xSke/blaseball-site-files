@@ -1043,6 +1043,7 @@
           idol: null,
           packSize: 8,
           snacks: { Votes: 1 },
+          motion: !1,
           lightMode: !1,
           spread: [],
           snackOrder: ["Votes", "E", "E", "E", "E", "E", "E"],
@@ -15440,24 +15441,34 @@
                   ) : null}
                 </div>
                 {(function (e) {
-                  var t, a;
-                  if (
-                    void 0 ===
-                    (null === e ||
-                    void 0 === e ||
-                    null === (t = e.state) ||
-                    void 0 === t ||
-                    null === (a = t.postseason) ||
-                    void 0 === a
-                      ? void 0
-                      : a.bracket)
-                  )
-                    return null;
-                  var n = e.state.postseason.bracket,
-                    r = e.isPostseason
+                  var t,
+                    a,
+                    n = e.isPostseason
                       ? "first to +/-".concat(e.seriesLength)
                       : "".concat(e.seriesIndex, " of ").concat(e.seriesLength);
-                  return 0 === n ? (
+                  if (
+                    void 0 ===
+                      (null === e ||
+                      void 0 === e ||
+                      null === (t = e.state) ||
+                      void 0 === t ||
+                      null === (a = t.postseason) ||
+                      void 0 === a
+                        ? void 0
+                        : a.bracket) ||
+                    !e.isPostseason
+                  )
+                    return (
+                      <div
+                        className="Widget-ScoreLabel Widget-ScoreLabel--Series"
+                        aria-label={n + " Games"}
+                        role="text"
+                      >
+                        {n}
+                      </div>
+                    );
+                  var r = e.state.postseason.bracket;
+                  return 0 === r ? (
                     <Ct.a
                       key="top-1"
                       placement="top"
@@ -15469,16 +15480,16 @@
                     >
                       <div
                         className="Widget-ScoreLabel Widget-ScoreLabel--Series"
-                        aria-label={r + " Games"}
+                        aria-label={n + " Games"}
                         role="text"
                       >
-                        {r}
+                        {n}
                         <ch.b.Provider value={{ color: "orange", size: "20px" }}>
                           <ee.j />
                         </ch.b.Provider>
                       </div>
                     </Ct.a>
-                  ) : 1 === n ? (
+                  ) : 1 === r ? (
                     <Ct.a
                       key="top-1"
                       placement="top"
@@ -15490,10 +15501,10 @@
                     >
                       <div
                         className="Widget-ScoreLabel Widget-ScoreLabel--Series"
-                        aria-label={r + " Games"}
+                        aria-label={n + " Games"}
                         role="text"
                       >
-                        {r}
+                        {n}
                         <ch.b.Provider value={{ color: "purple", size: "20px" }}>
                           <ee.i />
                         </ch.b.Provider>
@@ -23021,31 +23032,37 @@
           );
         };
       var hp = function (e) {
-          var t = Object(ks.useToasts)().addToast,
-            a = Object(r.useContext)(M.context),
-            n = a.user,
-            i = a.setUser,
-            o = (Object(c.f)(), Object(r.useContext)(xo.context)),
-            u = Object(r.useContext)(S.context),
-            d = Object(c.g)(),
-            g = Object(r.useState)(!1),
-            p = Object(s.a)(g, 2),
-            E = p[0],
-            v = p[1],
-            b = Object(r.useState)(),
-            w = Object(s.a)(b, 2),
-            y = w[0],
-            B = w[1],
-            O = Object(r.useState)(n.lightMode || !1),
-            I = Object(s.a)(O, 2),
-            k = I[0],
-            N = I[1],
-            T = o.teams.find(function (e) {
-              return e.id === n.favoriteTeam;
+          var t,
+            a,
+            n = Object(ks.useToasts)().addToast,
+            i = Object(r.useContext)(M.context),
+            o = i.user,
+            u = i.setUser,
+            d = (Object(c.f)(), Object(r.useContext)(xo.context)),
+            g = Object(r.useContext)(S.context),
+            p = Object(c.g)(),
+            E = Object(r.useState)(!1),
+            v = Object(s.a)(E, 2),
+            b = v[0],
+            w = v[1],
+            y = Object(r.useState)(),
+            B = Object(s.a)(y, 2),
+            O = B[0],
+            I = B[1],
+            k = Object(r.useState)(null !== (t = o.lightMode) && void 0 !== t && t),
+            N = Object(s.a)(k, 2),
+            T = N[0],
+            x = N[1],
+            P = Object(r.useState)(null !== (a = o.motion) && void 0 !== a && a),
+            L = Object(s.a)(P, 2),
+            R = L[0],
+            F = L[1],
+            Q = d.teams.find(function (e) {
+              return e.id === o.favoriteTeam;
             }),
-            x = Object(r.useState)({ favNumber: n.favNumber, coffee: n.coffee }),
-            P = Object(s.a)(x, 2);
-          P[0], P[1];
+            j = Object(r.useState)({ favNumber: o.favNumber, coffee: o.coffee }),
+            V = Object(s.a)(j, 2);
+          V[0], V[1];
           Object(r.useEffect)(function () {
             (function () {
               var e = Object(h.a)(
@@ -23055,15 +23072,15 @@
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          if (((t = []), !n.idol)) {
+                          if (((t = []), !o.idol)) {
                             e.next = 5;
                             break;
                           }
-                          return (e.next = 4), Ym([n.idol]);
+                          return (e.next = 4), Ym([o.idol]);
                         case 4:
                           t = e.sent;
                         case 5:
-                          void 0 !== t && 1 == t.length && ((a = t[0]), B(a));
+                          void 0 !== t && 1 == t.length && ((a = t[0]), I(a));
                         case 6:
                         case "end":
                           return e.stop();
@@ -23076,19 +23093,19 @@
               };
             })()();
           }, []);
-          var L = <js />,
-            R = (function () {
+          var W = <js />,
+            U = (function () {
               var e = Object(h.a)(
-                f.a.mark(function e(a) {
+                f.a.mark(function e(t) {
                   return f.a.wrap(function (e) {
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          if ((a.preventDefault(), v(!0), !(n.coins > 0))) {
+                          if ((t.preventDefault(), w(!0), !(o.coins > 0))) {
                             e.next = 6;
                             break;
                           }
-                          return v(!1), t("You don't have 0 coins.", { appearance: "error" }), e.abrupt("return");
+                          return w(!1), n("You don't have 0 coins.", { appearance: "error" }), e.abrupt("return");
                         case 6:
                           return (
                             (e.next = 8),
@@ -23096,24 +23113,24 @@
                               .then(
                                 (function () {
                                   var e = Object(h.a)(
-                                    f.a.mark(function e(a) {
+                                    f.a.mark(function e(t) {
                                       return f.a.wrap(function (e) {
                                         for (;;)
                                           switch ((e.prev = e.next)) {
                                             case 0:
                                               return (
                                                 (e.next = 2),
-                                                a.json().then(function (e) {
+                                                t.json().then(function (e) {
                                                   e.message
-                                                    ? a.status &&
-                                                      200 === a.status &&
-                                                      a.ok &&
-                                                      ((n.trackers.BEGS += 1),
-                                                      (n.coins += e.amount),
-                                                      i(Object(C.a)({}, n)),
-                                                      t(e.message, { appearance: "success" }))
-                                                    : a.json().then(function (e) {
-                                                        t(e.error || "Error", { appearance: "error" });
+                                                    ? t.status &&
+                                                      200 === t.status &&
+                                                      t.ok &&
+                                                      ((o.trackers.BEGS += 1),
+                                                      (o.coins += e.amount),
+                                                      u(Object(C.a)({}, o)),
+                                                      n(e.message, { appearance: "success" }))
+                                                    : t.json().then(function (e) {
+                                                        n(e.error || "Error", { appearance: "error" });
                                                       });
                                                 })
                                               );
@@ -23136,7 +23153,7 @@
                                       for (;;)
                                         switch ((e.prev = e.next)) {
                                           case 0:
-                                            v(!1);
+                                            w(!1);
                                           case 1:
                                           case "end":
                                             return e.stop();
@@ -23157,28 +23174,28 @@
                 return e.apply(this, arguments);
               };
             })();
-          if (void 0 === u || void 0 === u.sim) return <js />;
-          E ||
-            (L = (
+          if (void 0 === g || void 0 === g.sim) return <js />;
+          b ||
+            (W = (
               <Vs.a className="ModalForm-Submit" type="submit" variant="success">
                 Save Changes
               </Vs.a>
             ));
-          var F = null;
-          T &&
-            (F = (
+          var G = null;
+          Q &&
+            (G = (
               <div className="Account-Section-Item">
-                <A background={d} path={"/team/".concat(T.id)}>
-                  <div className="Account-Section-Item-Icon" style={{ background: T.mainColor }}>
-                    {DA(T)}
+                <A background={p} path={"/team/".concat(Q.id)}>
+                  <div className="Account-Section-Item-Icon" style={{ background: Q.mainColor }}>
+                    {DA(Q)}
                   </div>
                 </A>
-                <A className="Account-Section-Item-Name" background={d} path={"/team/".concat(T.id)}>
-                  {T.nickname}
+                <A className="Account-Section-Item-Name" background={p} path={"/team/".concat(Q.id)}>
+                  {Q.nickname}
                 </A>
               </div>
             ));
-          var Q = (
+          var H = (
             <div className="Account-Section-Item">
               <div className="Account-Section-Item-Icon" style={{ background: "#054428" }}>
                 <qs style={{ width: "50px", height: "50px" }} />
@@ -23186,39 +23203,39 @@
               <div className="Account-Section-Item-Name">???</div>
             </div>
           );
-          y &&
-            (Q = (
+          O &&
+            (H = (
               <div className="Account-Section-Item">
-                <A background={d} path={"/player/".concat(y.id)}>
+                <A background={p} path={"/player/".concat(O.id)}>
                   <div className="Account-Section-Item-Icon" style={{ background: "#054428" }}>
                     <qs style={{ width: "50px", height: "50px" }} />
                   </div>
                 </A>
-                <A className="Account-Section-Item-Name" background={d} path={"/player/".concat(y.id)}>
-                  {y.name}
+                <A className="Account-Section-Item-Name" background={p} path={"/player/".concat(O.id)}>
+                  {O.name}
                 </A>
               </div>
             ));
-          var j = (
+          var Y = (
               <div className="Account-Info">
                 <div className="ModalItem-Subheader">Personal Info</div>
                 <ul className="Account-Info-List">
                   <li className="Account-Info-List-Item">
                     <div className="Account-Info-List-Header">Favorite Number</div>
-                    <div className="Account-Info-List-Body">{n.favNumber ? n.favNumber : "Number?"}</div>
+                    <div className="Account-Info-List-Body">{o.favNumber ? o.favNumber : "Number?"}</div>
                     <q.a
                       className="Account-Refresh"
                       onSubmit={function (e) {
-                        e.preventDefault(), v(!0);
-                        var a = Math.floor(1e3 * Math.random()) + 1;
-                        (n.favNumber = a),
-                          i(Object(C.a)({}, n)),
-                          t("New Favorite Number generated", { appearance: "success" }),
-                          v(!1);
+                        e.preventDefault(), w(!0);
+                        var t = Math.floor(1e3 * Math.random()) + 1;
+                        (o.favNumber = t),
+                          u(Object(C.a)({}, o)),
+                          n("New Favorite Number generated", { appearance: "success" }),
+                          w(!1);
                       }}
                     >
                       <div className="Account-Refresh-Wrapper">
-                        {E ? (
+                        {b ? (
                           <Qs />
                         ) : (
                           <Ct.a
@@ -23239,20 +23256,20 @@
                   </li>
                   <li className="Account-Info-List-Item">
                     <div className="Account-Info-List-Header">Coffee Style</div>
-                    <div className="Account-Info-List-Body">{Hs(n.coffee)}</div>
+                    <div className="Account-Info-List-Body">{Hs(o.coffee)}</div>
                     <q.a
                       className="Account-Refresh"
                       onSubmit={function (e) {
                         e.preventDefault(),
-                          v(!0),
-                          (n.coffee = Math.floor(13 * Math.random())),
-                          i(Object(C.a)({}, n)),
-                          t("New Coffee Style generated", { appearance: "success" }),
-                          v(!1);
+                          w(!0),
+                          (o.coffee = Math.floor(13 * Math.random())),
+                          u(Object(C.a)({}, o)),
+                          n("New Coffee Style generated", { appearance: "success" }),
+                          w(!1);
                       }}
                     >
                       <div className="Account-Refresh-Wrapper">
-                        {E ? (
+                        {b ? (
                           <Qs />
                         ) : (
                           <Ct.a
@@ -23273,23 +23290,23 @@
                   </li>
                   <li className="Account-Info-List-Item">
                     <div className="Account-Info-List-Header">Amount of Begs</div>
-                    <div className="Account-Info-List-Body">{n.trackers.BEGS}</div>
+                    <div className="Account-Info-List-Body">{o.trackers.BEGS}</div>
                   </li>
                 </ul>
                 <q.a
                   className="ModalForm-Form"
                   onSubmit={function (e) {
-                    e.preventDefault(), v(!0);
-                    var a = { coffee: n.coffee, favNumber: n.favNumber };
-                    km("/api/updateProfile", JSON.stringify(a))
+                    e.preventDefault(), w(!0);
+                    var t = { coffee: o.coffee, favNumber: o.favNumber };
+                    km("/api/updateProfile", JSON.stringify(t))
                       .then(function (e) {
                         e.status && 200 === e.status && e.ok
-                          ? ((n.coffee = a.coffee),
-                            (n.favNumber = a.favNumber),
-                            i(Object(C.a)({}, n)),
-                            t("Profile saved", { appearance: "success" }))
+                          ? ((o.coffee = t.coffee),
+                            (o.favNumber = t.favNumber),
+                            u(Object(C.a)({}, o)),
+                            n("Profile saved", { appearance: "success" }))
                           : e.json().then(function (e) {
-                              t(e.error || "Error", { appearance: "error" });
+                              n(e.error || "Error", { appearance: "error" });
                             });
                       })
                       .finally(
@@ -23299,7 +23316,7 @@
                               for (;;)
                                 switch ((e.prev = e.next)) {
                                   case 0:
-                                    v(!1);
+                                    w(!1);
                                   case 1:
                                   case "end":
                                     return e.stop();
@@ -23310,28 +23327,28 @@
                       );
                   }}
                 >
-                  <div className="ModalForm-Submit-Wrapper">{L}</div>
+                  <div className="ModalForm-Submit-Wrapper">{W}</div>
                 </q.a>
               </div>
             ),
-            V = 7 - Object.keys(n.snacks).length,
-            W = [];
-          if (V > 0) for (var U = 0; U < V; U++) W.push(<div className="Account-Inventory-Slot" />);
-          var G = u.sim.phase < D.EarlySiesta,
-            H = null;
-          H =
-            n.spread && 3 === n.spread.length ? (
+            z = 7 - Object.keys(o.snacks).length,
+            X = [];
+          if (z > 0) for (var J = 0; J < z; J++) X.push(<div className="Account-Inventory-Slot" />);
+          var Z = g.sim.phase < D.EarlySiesta,
+            K = null;
+          K =
+            o.spread && 3 === o.spread.length ? (
               <div className="Account-Section">
                 <div className="ModalItem-Subheader">Your Reading</div>
                 <div className="Account-Spread">
                   <div className="Account-Spread-Inner">
-                    {n.spread.map(function (e, t) {
+                    {o.spread.map(function (e, t) {
                       return (
                         <div className="Account-Spread-Card">
                           <div className="Account-Spread-Card-Number">{zA(Number(e))[0]}</div>
                           <div className="Account-Spread-Card-Icon">
                             {DA(
-                              o.teams.filter(function (t) {
+                              d.teams.filter(function (t) {
                                 return t.card === Number(e);
                               })[0]
                             )}
@@ -23341,12 +23358,12 @@
                       );
                     })}
                   </div>
-                  <A className="ModalForm-Submit Account-Inventory-Button" background={d} path="/reorder/cards">
+                  <A className="ModalForm-Submit Account-Inventory-Button" background={p} path="/reorder/cards">
                     Reorder
                   </A>
                 </div>
               </div>
-            ) : n.spread && 0 === n.spread.length && G ? (
+            ) : o.spread && 0 === o.spread.length && Z ? (
               <div className="Account-Section">
                 <div className="ModalItem-Subheader">Your Reading</div>
                 <div className="Account-Spread">
@@ -23365,12 +23382,12 @@
                 <div className="Account-Spread">
                   <div className="Account-Spread-NoCards">
                     Tarot Readings are available before the Seasonal Reading each Earlsiesta. Check back after the
-                    Season {u.sim.season + 1} Election for a new Reading.
+                    Season {g.sim.season + 1} Election for a new Reading.
                   </div>
                 </div>
               </div>
             );
-          var Y = (
+          var _ = (
             <Ct.a
               placement="top"
               overlay={
@@ -23387,9 +23404,9 @@
               </m.b>
             </Ct.a>
           );
-          void 0 !== n.snacks[ne.BEG] &&
-            n.coins > 0 &&
-            (Y = (
+          void 0 !== o.snacks[ne.BEG] &&
+            o.coins > 0 &&
+            (_ = (
               <Ct.a
                 placement="top"
                 overlay={
@@ -23401,9 +23418,9 @@
                 <div className="Account-Inventory-BegButton Account-Inventory-BegButton-Disabled">Beg</div>
               </Ct.a>
             )),
-            void 0 !== n.snacks[ne.BEG] &&
-              n.coins <= 0 &&
-              (Y = (
+            void 0 !== o.snacks[ne.BEG] &&
+              o.coins <= 0 &&
+              (_ = (
                 <Ct.a
                   placement="top"
                   overlay={
@@ -23417,19 +23434,19 @@
                   </Vs.a>
                 </Ct.a>
               )),
-            E && (Y = <Qs />);
-          var z = (
+            b && (_ = <Qs />);
+          var te = (
               <ul className="Account-Info-List">
                 <li className="Account-Info-List-Item">
                   <div className="Account-Info-List-Header">Coins</div>
-                  <div className="Account-Info-List-Body">{n.coins}</div>
-                  <q.a className="Account-Refresh" onSubmit={R}>
-                    <div className="Account-Refresh-Wrapper">{Y}</div>
+                  <div className="Account-Info-List-Body">{o.coins}</div>
+                  <q.a className="Account-Refresh" onSubmit={U}>
+                    <div className="Account-Refresh-Wrapper">{_}</div>
                   </q.a>
                 </li>
               </ul>
             ),
-            X = n.snackOrder.map(function (e, t) {
+            ae = o.snackOrder.map(function (e, t) {
               return (
                 <div className="Account-Inventory-WithNum">
                   {e.includes("E") && e.length < 3 ? (
@@ -23448,14 +23465,14 @@
                       <div className="Account-Inventory-Item">
                         <div className="Account-Inventory-Number">{t + 1}</div>
                         {uo(e)}
-                        <div className="Account-Inventory-Amount">{_A(e, n.snacks[e])}</div>
+                        <div className="Account-Inventory-Amount">{_A(e, o.snacks[e])}</div>
                       </div>
                     </Ct.a>
                   )}
                 </div>
               );
             }),
-            J = (
+            re = (
               <Ct.a
                 placement="top"
                 overlay={
@@ -23465,15 +23482,15 @@
                 }
               >
                 <Vs.a className="Account-Unverified" type="submit" variant="link">
-                  <A background={d.state} path="/send-verification-email" className="Auth-CTA">
+                  <A background={p.state} path="/send-verification-email" className="Auth-CTA">
                     <$.b />
                   </A>
                 </Vs.a>
               </Ct.a>
             );
           return (
-            n.verified &&
-              (J = (
+            o.verified &&
+              (re = (
                 <Ct.a
                   placement="top"
                   overlay={
@@ -23493,7 +23510,7 @@
                   <div className="Account-Header">
                     <div className="Account-Title">Your Account</div>
                     <div className="Account-Miniheader">
-                      {n.email} {J}{" "}
+                      {o.email} {re}{" "}
                     </div>
                   </div>
                 </div>
@@ -23519,45 +23536,45 @@
                           <div className="Account-Section-Grid">
                             <div className="ModalItem-Subheader">Favorite Team</div>
                             <div className="ModalItem-Subheader">Idolized Player</div>
-                            {F}
-                            {Q}
+                            {G}
+                            {H}
                           </div>
                         </div>
-                        {j}
+                        {Y}
                       </div>
                     </Us.a.Pane>
                     <Us.a.Pane eventKey="Inventory">
                       <div className="ModalItem-Content">
                         <div className="Account-Section" style={{ padding: "10px 0" }}>
                           <div className="ModalItem-Subheader">Wallet</div>
-                          {z}
+                          {te}
                         </div>
                         <div className="Account-Section">
                           <div className="ModalItem-Subheader">Snack Pack</div>
                           <div className="Account-Inventory">
-                            <div className="Account-Inventory-Inner">{X}</div>
+                            <div className="Account-Inventory-Inner">{ae}</div>
                             <A
                               className="ModalForm-Submit Account-Inventory-Button"
-                              background={d}
+                              background={p}
                               path="/reorder/snacks"
                             >
                               Reorder
                             </A>
                           </div>
                         </div>
-                        {H}
+                        {K}
                       </div>
                     </Us.a.Pane>
                     <Us.a.Pane eventKey="Settings">
                       <div className="ModalItem-Content Account-Content">
-                        {n.verified ? null : (
+                        {o.verified ? null : (
                           <div className="Account-Warning Account-Content-Section">
                             <$.b className="Account-Warning-Icon" />
                             <div className="Account-Warning-Content">
                               Your account must be verified to contribute to the league.
                             </div>
                             <Vs.a className="ModalForm-Submit" type="submit" variant="success">
-                              <A background={d} path="/send-verification-email">
+                              <A background={p} path="/send-verification-email">
                                 Verify Account
                               </A>
                             </Vs.a>
@@ -23566,26 +23583,27 @@
                         <q.a
                           className="ModalForm-Form Account-Content-Section"
                           onSubmit={function (e) {
-                            if ((e.preventDefault(), v(!0), k === n.lightMode))
-                              return v(!1), void t("No Settings Changed", { appearance: "error" });
-                            var a = { lightMode: k };
-                            km("/api/updateSettings", JSON.stringify(a))
+                            if ((e.preventDefault(), w(!0), T === o.lightMode && R === o.motion))
+                              return w(!1), void n("No Settings Changed", { appearance: "error" });
+                            var t = { lightMode: T, motion: R };
+                            km("/api/updateSettings", JSON.stringify(t))
                               .then(function (e) {
                                 e.status && 200 === e.status && e.ok
-                                  ? ((n.lightMode = k),
-                                    i(Object(C.a)({}, n)),
-                                    t("Settings Saved", { appearance: "success" }))
+                                  ? ((o.lightMode = T),
+                                    (o.motion = R),
+                                    u(Object(C.a)({}, o)),
+                                    n("Settings Saved", { appearance: "success" }))
                                   : e.json().then(function (e) {
-                                      t(e.error || "Error", { appearance: "error" });
+                                      n(e.error || "Error", { appearance: "error" });
                                     });
                               })
                               .then(function () {
-                                k
+                                T
                                   ? (document.body.classList.contains("theme-dark") &&
                                       document.body.classList.remove("theme-dark"),
-                                    document.body.classList.contains("theme-light") &&
+                                    document.body.classList.contains("theme-light") ||
                                       document.body.classList.add("theme-light"))
-                                  : (document.body.classList.contains("theme-dark") &&
+                                  : (document.body.classList.contains("theme-dark") ||
                                       document.body.classList.add("theme-dark"),
                                     document.body.classList.contains("theme-light") &&
                                       document.body.classList.remove("theme-light"));
@@ -23597,7 +23615,7 @@
                                       for (;;)
                                         switch ((e.prev = e.next)) {
                                           case 0:
-                                            v(!1);
+                                            w(!1);
                                           case 1:
                                           case "end":
                                             return e.stop();
@@ -23615,21 +23633,31 @@
                               type="switch"
                               id="lm"
                               label="Light Mode"
-                              checked={k}
+                              checked={T}
                               onChange={function () {
-                                return N(!k);
+                                return x(!T);
+                              }}
+                            />
+                            <q.a.Check
+                              className="ModalForm-Switch"
+                              type="switch"
+                              id="mo"
+                              label="Disable Animated Motion"
+                              checked={R}
+                              onChange={function () {
+                                return F(!R);
                               }}
                             />
                           </q.a.Group>
-                          <div className="ModalForm-Submit-Wrapper">{L}</div>
+                          <div className="ModalForm-Submit-Wrapper">{W}</div>
                         </q.a>
                         <div className="Account-Content-Section">
                           <div className="ModalItem-Subheader">Account</div>
-                          {n.facebookId || n.googleId || n.appleId ? (
+                          {o.facebookId || o.googleId || o.appleId ? (
                             <l.a.Fragment />
                           ) : (
                             <li className="Account-Edit-Content">
-                              <div className="Account-Edit-Content-Email">{n.email}</div>
+                              <div className="Account-Edit-Content-Email">{o.email}</div>
                               <Ct.a
                                 placement="top"
                                 overlay={
@@ -23639,7 +23667,7 @@
                                 }
                               >
                                 <Vs.a className="Account-Edit-Wrapper" type="submit" variant="link">
-                                  <A background={d} path="/send-email-change" className="Account-Edit">
+                                  <A background={p} path="/send-email-change" className="Account-Edit">
                                     <se.b className="Account-Edit-Button" /> Edit
                                   </A>
                                 </Vs.a>
@@ -23647,7 +23675,7 @@
                             </li>
                           )}
                           <div className="ModalForm-Submit-Wrapper">
-                            <A background={d} path="/send-delete-account" className="Account-Delete">
+                            <A background={p} path="/send-delete-account" className="Account-Delete">
                               Delete Account
                             </A>
                           </div>
@@ -33153,9 +33181,15 @@
               d = (
                 <div className="Recap">
                   <div className="Recap-Results">
-                    {u.map(function (e) {
-                      return <uy event={e} />;
-                    })}
+                    {u.length > 0 ? (
+                      u.map(function (e) {
+                        return <uy event={e} />;
+                      })
+                    ) : (
+                      <div className="Stubs-All">
+                        <div className="Stubs-Body">No Events.</div>
+                      </div>
+                    )}
                   </div>
                 </div>
               );
@@ -34727,56 +34761,57 @@
         };
       a(254);
       function Py() {
-        var e = Object(r.useContext)(M.context),
-          t = e.user,
-          a = (e.setUser, Object(r.useContext)(xo.context)),
-          n = Object(r.useState)([]),
-          i = Object(s.a)(n, 2),
-          o = i[0],
-          u = i[1],
-          m = Object(c.g)(),
-          d = Object(r.useState)(!1),
-          f = Object(s.a)(d, 2),
-          h = f[0],
-          g = f[1],
-          p = Object(r.useState)(!1),
-          E = Object(s.a)(p, 2),
-          v = E[0],
-          b = E[1];
+        var e,
+          t = Object(r.useContext)(M.context),
+          a = t.user,
+          n = (t.setUser, Object(r.useContext)(xo.context)),
+          i = Object(r.useState)([]),
+          o = Object(s.a)(i, 2),
+          u = o[0],
+          m = o[1],
+          d = Object(c.g)(),
+          f = Object(r.useState)(null !== (e = a.motion) && void 0 !== e && e),
+          h = Object(s.a)(f, 2),
+          g = h[0],
+          p = h[1],
+          E = Object(r.useState)(!1),
+          v = Object(s.a)(E, 2),
+          b = v[0],
+          w = v[1];
         Object(r.useEffect)(function () {
           var e = window.matchMedia("(max-width: 1080px)");
-          e.addListener(w), w(e);
+          e.addListener(y), y(e);
           var t = window.matchMedia("(prefers-reduced-motion: reduce)");
           return (
-            t.addListener(y),
-            y(t),
+            t.addListener(B),
+            B(t),
             function () {
-              e.removeListener(w), t.removeListener(y);
+              e.removeListener(y), t.removeListener(B);
             }
           );
         }, []);
-        var w = function (e) {
-            e.matches ? b(!0) : b(!1);
+        var y = function (e) {
+            e.matches ? w(!0) : w(!1);
           },
-          y = function (e) {
-            e.matches ? g(!0) : g(!1);
+          B = function (e) {
+            e.matches ? a.motion && p(!0) : a.motion || p(!1);
           };
         Object(r.useEffect)(
           function () {
-            if (o.length < 1) {
+            if (u.length < 1) {
               var e,
-                n = QA(a, { filters: {} }, null !== (e = t.favoriteTeam) && void 0 !== e ? e : "");
-              u(n);
+                t = QA(n, { filters: {} }, null !== (e = a.favoriteTeam) && void 0 !== e ? e : "");
+              m(t);
             }
           },
-          [a]
+          [n]
         );
         for (
-          var B = [],
-            O = [],
-            I = v ? 11 : 21,
-            S = 0,
-            C = o
+          var O = [],
+            I = [],
+            S = b ? 11 : 21,
+            C = 0,
+            k = u
               .map(function (e, t) {
                 return {
                   team: e,
@@ -34796,28 +34831,28 @@
               .sort(function (e, t) {
                 return t.x - e.x || t.y - e.y;
               }),
-            k = [],
-            N = 0;
-          N < 24;
-          N++
+            N = [],
+            T = 0;
+          T < 24;
+          T++
         )
-          O.push(
+          I.push(
             <div
               className="DepthChart-Line DepthChart-Line-Vertical"
-              style={{ left: "".concat(N * I + I, "px"), animation: h ? "none" : "" }}
+              style={{ left: "".concat(T * S + S, "px"), animation: g ? "none" : "" }}
             />
           );
-        for (var T = 0; T < 37; T++) {
-          T + 1 === Math.ceil(19) &&
-            ((S = Math.ceil(19) * I - I / 4),
-            B.push(
+        for (var x = 0; x < 37; x++) {
+          x + 1 === Math.ceil(19) &&
+            ((C = Math.ceil(19) * S - S / 4),
+            O.push(
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 role="img"
                 aria-label="MVP Line. This is a wavy gold line."
                 className="MVPLine"
                 viewBox="0 0 650 20"
-                style={{ position: "absolute", top: "".concat(S, "px"), zIndex: 2, margin: 0 }}
+                style={{ position: "absolute", top: "".concat(C, "px"), zIndex: 2, margin: 0 }}
               >
                 <g>
                   <title>MVP Line</title>
@@ -34829,18 +34864,18 @@
                 </g>
               </svg>
             ));
-          var x = !1;
-          [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33].includes(T) && (x = !0),
-            B.push(
+          var P = !1;
+          [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33].includes(x) && (P = !0),
+            O.push(
               <div
                 className={
-                  "DepthChart-Line DepthChart-Line-Horizontal" + (x ? " DepthChart-Line-Horizontal-Thick" : "")
+                  "DepthChart-Line DepthChart-Line-Horizontal" + (P ? " DepthChart-Line-Horizontal-Thick" : "")
                 }
-                style={{ top: "".concat((T + 1) * I, "px"), animation: h ? "none" : "" }}
+                style={{ top: "".concat((x + 1) * S, "px"), animation: g ? "none" : "" }}
               />
             );
         }
-        var P = [5, -5, 5, -5, 5, -5].map(function (e) {
+        var L = [5, -5, 5, -5, 5, -5].map(function (e) {
             return (
               <svg
                 className="DepthChart-Header-Cactus"
@@ -34859,7 +34894,7 @@
               </svg>
             );
           }),
-          L = (
+          R = (
             <svg xmlns="http://www.w3.org/2000/svg" className="DepthChart-BottomFeeders" viewBox="100 0 312 440">
               <path
                 className="DepthChart-BottomFeeders-Image"
@@ -34877,9 +34912,9 @@
                   type="switch"
                   id="motion"
                   label="Turn Chart Motion Off"
-                  checked={h}
+                  checked={g}
                   onChange={function () {
-                    return g(!h);
+                    return p(!g);
                   }}
                 />
               </q.a>
@@ -34935,25 +34970,25 @@
                   </div>
                 </div>
                 <div className="DepthChart-Body">
-                  <div className="DepthChart-EndZone-Top">{P}</div>
-                  {B}
+                  <div className="DepthChart-EndZone-Top">{L}</div>
                   {O}
-                  {C.map(function (e, t) {
+                  {I}
+                  {k.map(function (e, t) {
                     var a = e.team.imPosition[0].toFixed(3),
                       n =
                         e.team.imPosition[1] > 0
                           ? (1 - e.team.imPosition[1]).toFixed(3)
                           : (1 + Math.abs(e.team.imPosition[1])).toFixed(3);
                     return (
-                      0 !== t && C[t - 1].x === e.x && C[t - 1].y === e.y
+                      0 !== t && k[t - 1].x === e.x && k[t - 1].y === e.y
                         ? (!0,
-                          k.push({
-                            nickname: C[t - 1].team.nickname,
-                            mainColor: C[t - 1].team.mainColor,
-                            xValue: C[t - 1].team.imPosition[0].toFixed(3),
-                            yValue: (1 - C[t - 1].team.imPosition[1]).toFixed(3),
+                          N.push({
+                            nickname: k[t - 1].team.nickname,
+                            mainColor: k[t - 1].team.mainColor,
+                            xValue: k[t - 1].team.imPosition[0].toFixed(3),
+                            yValue: (1 - k[t - 1].team.imPosition[1]).toFixed(3),
                           }))
-                        : (k = []),
+                        : (N = []),
                       (
                         <Ct.a
                           key={t}
@@ -34973,7 +35008,7 @@
                                 </div>
                                 <div className="AttributeTooltip-Description">X: {a}</div>
                                 <div className="AttributeTooltip-Description">Y: {n}</div>
-                                {k.reverse().map(function (e) {
+                                {N.reverse().map(function (e) {
                                   return (
                                     <l.a.Fragment>
                                       <div style={{ height: "5px" }} />
@@ -35000,7 +35035,7 @@
                             style={{ gridColumn: e.x, gridRow: e.y, height: "100%", width: "100%" }}
                             className={"Dale" === e.team.nickname ? "DepthChart-Team-Boat" : ""}
                           >
-                            <A background={m} path={"/team/".concat(e.team.id)} className="DepthChart-Team-Wrapper">
+                            <A background={d} path={"/team/".concat(e.team.id)} className="DepthChart-Team-Wrapper">
                               <div className="DepthChart-Team">{DA(e.team)}</div>
                             </A>
                           </div>
@@ -35010,9 +35045,9 @@
                   })}
                   <div
                     className="DepthChart-BottomFeeders-Wrapper"
-                    style={{ height: "".concat(v ? 380 - S - 10 : 760 - S - 60, "px") }}
+                    style={{ height: "".concat(b ? 380 - C - 10 : 760 - C - 60, "px") }}
                   >
-                    {L}
+                    {R}
                   </div>
                   <div className="DepthChart-EndZone-Bottom">
                     {[15, -10, 5, 0, -5, 10, -15].map(function (e) {
@@ -35110,14 +35145,14 @@
               <div className="DepthChart-List">
                 <h3 className="DepthChart-Lists-Header">Top 5</h3>
                 <div className="DepthChart-Lists-Container">
-                  {o
+                  {u
                     .sort(function (e, t) {
                       return t.imPosition[1] - e.imPosition[1];
                     })
                     .slice(0, 5)
                     .map(function (e) {
                       return (
-                        <A background={m} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
+                        <A background={d} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
                           <div className="DepthChart-Lists-Name">
                             <div
                               className="DepthChart-Lists-Color"
@@ -35137,14 +35172,14 @@
               <div className="DepthChart-List">
                 <h3 className="DepthChart-Lists-Header">Middle 5</h3>
                 <div className="DepthChart-Lists-Container">
-                  {o
+                  {u
                     .sort(function (e, t) {
                       return t.imPosition[1] - e.imPosition[1];
                     })
-                    .slice(o.length / 2 - 2, o.length / 2 + 3)
+                    .slice(u.length / 2 - 2, u.length / 2 + 3)
                     .map(function (e) {
                       return (
-                        <A background={m} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
+                        <A background={d} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
                           <div className="DepthChart-Lists-Name">
                             <div
                               className="DepthChart-Lists-Color"
@@ -35164,14 +35199,14 @@
               <div className="DepthChart-List">
                 <h3 className="DepthChart-Lists-Header">Bottom 5</h3>
                 <div className="DepthChart-Lists-Container">
-                  {o
+                  {u
                     .sort(function (e, t) {
                       return e.imPosition[1] - t.imPosition[1];
                     })
                     .slice(0, 5)
                     .map(function (e) {
                       return (
-                        <A background={m} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
+                        <A background={d} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
                           <div className="DepthChart-Lists-Name">
                             <div
                               className="DepthChart-Lists-Color"

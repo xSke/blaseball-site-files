@@ -23268,8 +23268,8 @@ button:focus-visible {
   align-items: center;
 }
 #root .DepthChart-Team-Boat {
-  -webkit-animation: dale 8s ease-in-out infinite alternate;
-  animation: dale 8s ease-in-out infinite alternate;
+  -webkit-animation: dale 6s ease-in-out infinite alternate;
+  animation: dale 6s ease-in-out infinite alternate;
   -webkit-transform-origin: center center;
   transform-origin: center center;
   z-index: 3;
@@ -23426,8 +23426,8 @@ button:focus-visible {
     transform: skew(0deg, 0deg) scale(1.35);
   }
   50% {
-    -webkit-transform: skew(2deg, 2deg) scale(1.35);
-    transform: skew(2deg, 2deg) scale(1.35);
+    -webkit-transform: skew(10deg, 10deg) scale(1.35);
+    transform: skew(10deg, 10deg) scale(1.35);
   }
 }
 @keyframes dale {
@@ -23437,8 +23437,8 @@ button:focus-visible {
     transform: skew(0deg, 0deg) scale(1.35);
   }
   50% {
-    -webkit-transform: skew(2deg, 2deg) scale(1.35);
-    transform: skew(2deg, 2deg) scale(1.35);
+    -webkit-transform: skew(10deg, 10deg) scale(1.35);
+    transform: skew(10deg, 10deg) scale(1.35);
   }
 }
 @media (max-width: 1080px) {
