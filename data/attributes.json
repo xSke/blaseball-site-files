@@ -920,6 +920,18 @@
         }
     },
     {
+        "id": "EARLY_TO_PARTY",
+        "color": "#ff265a",
+        "textColor": "#ff265a",
+        "background": "#061938",
+        "title": "Early to the Party",
+        "description": "This Team or Player will Underperform in the Lateseason.",
+        "descriptions": {
+            "player": "This Player will Underperform in the Lateseason.",
+            "team": "This Team will Underperform in the Lateseason."
+        }
+    },
+    {
         "id": "OVERUNDER",
         "color": "#ffffff",
         "textColor": "#ffffff",
@@ -1209,11 +1221,11 @@
     },
     {
         "id": "SECRET_TUNNELS",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#000000",
-        "title": "Secret Tunnels",
-        "description": "A network of tunnels underneath this Ballpark."
+        "color": "#ffe74d",
+        "textColor": "#ffe74d",
+        "background": "#242322",
+        "title": "Tunnels",
+        "description": "Tunnels allow the Home Team to steal from the Away Team in this Ballpark."
     },
     {
         "id": "SOLAR_PANELS",
@@ -2030,34 +2042,18 @@
     },
     {
         "id": "AIR_BALLOONS",
-        "color": "#e1adff",
-        "textColor": "#e1adff",
-        "background": "#592975",
-        "title": "Air Balloons",
+        "color": "#d4ecff",
+        "textColor": "#d4ecff",
+        "background": "#0a8ef5",
+        "title": "Balloons",
         "description": "A small, permanent amount of negative eDensity is added for each Run or Win earned in this Ballpark."
     },
     {
         "id": "VERY_FOUL_BALLS",
-        "color": "#e1adff",
-        "textColor": "#e1adff",
-        "background": "#592975",
-        "title": "Very Foul Balls",
+        "color": "#87ffb5",
+        "textColor": "#87ffb5",
+        "background": "#0e1f18",
+        "title": "Ball Pit",
         "description": "Every Foul Ball hit in this Ballpark will add 5x the eDensity that it normally would."
-    },
-    {
-        "id": "LIGHT_SWITCH_ON",
-        "color": "#e1adff",
-        "textColor": "#e1adff",
-        "background": "#592975",
-        "title": "Light Switch ON",
-        "description": "Toggle the polarity of your Stadium's eDensity any time the Light Switch is rebuilt. Currently in the ON position."
-    },
-    {
-        "id": "LIGHT_SWITCH_OFF",
-        "color": "#e1adff",
-        "textColor": "#e1adff",
-        "background": "#592975",
-        "title": "Light Switch OFF",
-        "description": "Toggle the polarity of your Stadium's eDensity any time the Light Switch is rebuilt. Currently in the OFF position."
     }
 ]

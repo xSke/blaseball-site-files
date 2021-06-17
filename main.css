@@ -12647,6 +12647,33 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-align-items: stretch;
   align-items: stretch;
 }
+.theme-dark .Team-Stadium-LightSwitch-Off {
+  color: #a7bdd2;
+}
+.theme-light .Team-Stadium-LightSwitch-Off {
+  color: #36414a;
+}
+.theme-dark .Team-Stadium-LightSwitch-On {
+  color: #eeeb4a;
+}
+.theme-light .Team-Stadium-LightSwitch-On {
+  color: #795e0e;
+}
+.Team-Stadium-LightSwitch-On-Bulb {
+  -webkit-filter: drop-shadow(0 0 1px #eeeb4a) drop-shadow(0 0 5px #eeeb4a);
+  filter: drop-shadow(0 0 1px #eeeb4a) drop-shadow(0 0 5px #eeeb4a);
+}
+.Team-Stadium-LightSwitch-Off,
+.Team-Stadium-LightSwitch-On {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.Team-Stadium-LightSwitch-Off svg,
+.Team-Stadium-LightSwitch-On svg {
+  margin-left: 5px;
+}
 .Team-Stadium-Options {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
