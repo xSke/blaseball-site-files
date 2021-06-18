@@ -9540,6 +9540,14 @@ input[type="number"]::-webkit-outer-spin-button {
 .League-Header-Group {
   white-space: nowrap;
 }
+.League-Games .PlayoffSetup-Header {
+  margin-bottom: 40px;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.League-Games .GameWidget:last-child {
+  margin-bottom: 40px;
+}
 .League-Nav {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
@@ -9687,7 +9695,6 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #fff;
 }
 .League-Info {
-  max-width: 550px;
   margin: auto;
   -webkit-flex-direction: column;
   flex-direction: column;
@@ -9710,8 +9717,29 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .League-Info-Body {
   text-align: center;
-  margin-bottom: 24px;
+  margin: 18px 0 24px;
   font-size: 18px;
+}
+.League-Info-Body-Item {
+  padding: 20px 25px;
+  border-radius: 5px;
+}
+.theme-dark .League-Info-Body-Item {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .League-Info-Body-Item {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.League-Info-Body-Item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.League-Info-Body-Overbracket-Callout {
+  border-bottom: 1px solid #ffbe00;
+  width: auto;
+}
+.League-Info-Body-Underbracket-Callout {
+  border-bottom: 1px solid #a16dc3;
+  width: auto;
 }
 .League-Info-Callout {
   font-size: 24px;
@@ -9769,6 +9797,12 @@ input[type="number"]::-webkit-outer-spin-button {
   .League-Body {
     font-size: 14px;
     padding: 0 40px;
+  }
+  .League-Info {
+    font-size: 16px;
+  }
+  .League-Info-Callout {
+    font-size: 22px;
   }
 }
 .Widget-Button {
@@ -10977,6 +11011,57 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 0 !important;
   overflow-y: hidden !important;
   font-family: "Lora", "Courier New", monospace, serif;
+}
+.ModalItem-Certificate {
+  height: auto;
+  padding: 40px !important;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  font-size: 18px;
+}
+.ModalItem-Certificate-Header {
+  font-size: 30px;
+  margin-bottom: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+.ModalItem-Certificate-Text {
+  font-style: italic;
+  text-align: center;
+}
+.ModalItem-Certificate-Callout {
+  font-size: 26px;
+  margin: 14px 0;
+}
+.ModalItem-Certificate-Callout-Overbracket {
+  border-bottom: 1px solid #ffbe00;
+  width: auto;
+}
+.ModalItem-Certificate-Callout-Underbracket {
+  border-bottom: 1px solid #a16dc3;
+  width: auto;
+}
+.ModalItem-Certificate-Signature {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.ModalItem-Certificate-Signature .BigDeal-Equity {
+  width: 60px;
+  height: 60px;
+  margin: 0 0 0 5px;
+}
+.ModalItem-Certificate-Signature-Redacted {
+  background: transparent !important;
 }
 .ModalItem-Icon {
   width: 22px;
@@ -12195,6 +12280,10 @@ input[type="number"]::-webkit-outer-spin-button {
 .theme-light .Team-Info-Championships {
   color: #0014a8;
 }
+.Team-Info-Underchampionships {
+  font-size: 26px;
+  color: #a16dc3 !important;
+}
 .Team-Info-Score {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
@@ -12237,6 +12326,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .theme-light .Team-Info-Score-Undef {
   border-color: #000;
+}
+.Team-Info-Line {
+  grid-template-columns: 200px auto;
 }
 .Team-Construction {
   padding: 20px;
@@ -13075,7 +13167,7 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 0 10px 0 0 !important;
 }
 .Events-List-Home-Item-Squished {
-  grid-template-columns: 30px 30px auto fit-content(50px) !important;
+  grid-template-columns: 30px 30px auto fit-content(25px) fit-content(50px) !important;
 }
 .Events-List-Home-Item-Squished .Events-List-Category {
   display: none;
@@ -13112,7 +13204,7 @@ input[type="number"]::-webkit-outer-spin-button {
   grid-column: 1;
 }
 .Events-List-Item-ParentEvent {
-  grid-template-columns: auto fit-content(50px);
+  grid-template-columns: 1fr fit-content(25px) fit-content(50px);
 }
 .Events-List-Item-ParentEvent .Events-List-Category {
   display: none;
@@ -16631,6 +16723,11 @@ button:focus-visible {
   display: flex;
   -webkit-align-items: center;
   align-items: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
 }
 .Standings-League-Header :last-child {
   margin-left: 10px;
@@ -17081,6 +17178,7 @@ button:focus-visible {
   padding-top: 10px;
   font-size: 24px;
   text-transform: uppercase;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
 }
 .PlayoffSetup-Header,
 .PlayoffSetup-MatchupGroup {
@@ -17129,6 +17227,96 @@ button:focus-visible {
     font-size: 12px;
     height: 32px;
     margin-right: 0;
+  }
+}
+.GodsDay {
+  max-width: 550px;
+  margin: auto auto 20px;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.GodsDay,
+.GodsDay-Header {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.GodsDay-Header {
+  font-size: 32px;
+  font-weight: 700;
+  padding: 20px 0;
+}
+.GodsDay-Body,
+.GodsDay-Header {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.GodsDay-Body {
+  margin: 20px;
+  font-size: 18px;
+  text-align: center;
+  color: #c4c4c4;
+}
+.theme-dark .GodsDay-Body {
+  color: #c4c4c4;
+}
+.theme-light .GodsDay-Body {
+  color: #272727;
+}
+.GodsDay-Votes {
+  margin: 24px 0;
+}
+.GodsDay-Votes-Header {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+.GodsDay-Votes-Description {
+  margin-bottom: 8px;
+}
+.GodsDay-Vote {
+  padding: 12px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  border: 2px solid #fff;
+  margin-bottom: 24px;
+}
+.GodsDay-Vote-Header {
+  color: #ba7300;
+  font-weight: 700;
+}
+.GodsDay-Vote-Count {
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+}
+.GodsDay-Vote-Button {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 18px;
+  background: green;
+  color: #fff;
+}
+.GodsDay-Vote-Bar {
+  background: #fff;
+  display: -webkit-flex;
+  display: flex;
+  margin: 12px -12px -12px;
+  height: 32px;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 0 12px;
+}
+@media (max-width: 768px) {
+  .GodsDay {
+    width: 100%;
+  }
+  .GodsDay-Header {
+    font-size: 24px;
   }
 }
 .EventTicker-Display {
@@ -20728,96 +20916,6 @@ button:focus-visible {
   }
   .Recap-Blessing-Votes {
     font-size: 15px;
-  }
-}
-.GodsDay {
-  max-width: 550px;
-  margin: auto auto 20px;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-}
-.GodsDay,
-.GodsDay-Header {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-}
-.GodsDay-Header {
-  font-size: 32px;
-  font-weight: 700;
-  padding: 20px 0;
-}
-.GodsDay-Body,
-.GodsDay-Header {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.GodsDay-Body {
-  margin: 20px;
-  font-size: 18px;
-  text-align: center;
-  color: #c4c4c4;
-}
-.theme-dark .GodsDay-Body {
-  color: #c4c4c4;
-}
-.theme-light .GodsDay-Body {
-  color: #272727;
-}
-.GodsDay-Votes {
-  margin: 24px 0;
-}
-.GodsDay-Votes-Header {
-  font-size: 18px;
-  margin-bottom: 4px;
-}
-.GodsDay-Votes-Description {
-  margin-bottom: 8px;
-}
-.GodsDay-Vote {
-  padding: 12px;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  border: 2px solid #fff;
-  margin-bottom: 24px;
-}
-.GodsDay-Vote-Header {
-  color: #ba7300;
-  font-weight: 700;
-}
-.GodsDay-Vote-Count {
-  color: #000;
-  font-size: 14px;
-  font-weight: 700;
-}
-.GodsDay-Vote-Button {
-  font-size: 14px;
-  font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 18px;
-  background: green;
-  color: #fff;
-}
-.GodsDay-Vote-Bar {
-  background: #fff;
-  display: -webkit-flex;
-  display: flex;
-  margin: 12px -12px -12px;
-  height: 32px;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  align-items: center;
-  padding: 0 12px;
-}
-@media (max-width: 768px) {
-  .GodsDay {
-    width: 100%;
-  }
-  .GodsDay-Header {
-    font-size: 24px;
   }
 }
 .Privacy {

@@ -13,19 +13,19 @@
 * f. Party Time: A Team will enter Party Time if receiving 1 Win per remaining game would not land them in the Postseason.
 
 ### 2. Postseasons
-* AMENDMENT. As per the Wild Card Decree, the Postseason has been Amended as follows:
-* a. Each Postseason of Blaseball shall consist of 10 teams.
-* b. The 2 Division Winners from each Sub-League will receive a Postseason Birth.
-* c. The next 2 Runnerups from each Sub-League will receive a Postseason Birth based on regular season standings, regardless of Division.
-* d. At the end of the regular season, 1 Wild Card will be drawn at random from the remaining teams in each Sub-League to receive a Postseason Birth.
+* a. Each Postseason of Blaseball shall consist of two brackets: an Overbracket and an Underbracket.
+* b. The winner of the Overbracket shall receive a Championship. The winner of the Underbracket shall receive an Underchampionship. `The two are of equal but opposite values.`
+* c. An Overbracket Birth will be awarded to the following Teams from each Sub-League: the 2 Division winners, the next 2 highest finishers, and 1 randomly selected Wild Card.
+* d. An Underbracket Birth will be awarded to the following Teams from each Sub-League: the 2 Division losers, the next 2 lowest finishers, and 1 randomly selected Wild Card.
 * e. All Postseason teams will be removed from Party Time, if applicable.
-* f. Following the Wild Card draw, all Postseason teams will be seeded 1-5 in their Sub-League according to regular season standings.
-* g. The 4 and 5 Seeds shall play in the Wild Card Round, a 2-Win series.
+* f. Following the Wild Card draw, all Postseason teams will be seeded 1-5 in their Sub-League. The highest seeds in the Overbracket will be awarded to the highest finishing Teams, and the highest seeds in the Underbracket will be awarded to the lowest finishing Teams.
+* g. The Wild Card Round, a 2-Win series, shall be played by the 4th and 5th seeds in each Bracket's Sub-Leagues.
 * h. All other Postseason series shall be 3-Win series.
-* i. Postseason series are decided when, at the conclusion of a game, a Team has reached the specified Win count, and has more Wins than their opponent.
+* i. Postseason series are decided when, at the conclusion of a game, the Absolute Value of either Team's Win count is greater than the specified Win count and is greater than the Absolute Value of their opponent's Win count.
 * j. The home team in each Postseason game shall be `the |||||||||||, if the |||||||||||||||||||.`
-* k. The first two Rounds should begin after the end of the regular season. One full `|||||` hour shall be skipped, and then the Wild Card Round shall begin at the top of the next available `|||||` hour.
+* k. The first two Rounds should begin after the end of the Regular Season. One full `|||||` hour shall be skipped, and then the Wild Card Round shall begin at the top of the next available `|||||` hour.
 * l. The Postseason shall continue early on a "Saturday" and conclude within the same day. If the Postseason lasts into the following day, no `||||| shall be ||||||||, and both teams shall be |||||||||| |||||||| ||||||||||||.`
+* m. If a Round of either Bracket finishes, the next Round will not begin until the other Bracket has also finished its current Round.
 
 ### 3. Elections
 * a. Participants should be allowed to Vote on the rules, rosters, and other effects of the game of Blaseball. `The content of such Votes shall be ||||||||||||||| ||||||||||||||||||| ||||||||| entertainment`.
