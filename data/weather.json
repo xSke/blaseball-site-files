@@ -87,7 +87,7 @@
         "name": "Black Hole",
         "background": "#000000",
         "color": "#ffffff",
-        "description": "When a team collects 10 Runs, Black Hole will swallow the Runs and a Win from the opposing team."
+        "description": "When a Team collects 10 Runs, Black Hole will swallow the Runs and burp at the opposing Team."
     },
     {
         "name": "Coffee",

@@ -2055,5 +2055,93 @@
         "background": "#0e1f18",
         "title": "Ball Pit",
         "description": "Every Foul Ball hit in this Ballpark will add 5x the eDensity that it normally would."
+    },
+    {
+        "id": "GREEN_LIGHT",
+        "color": "#00d131",
+        "textColor": "#00d131",
+        "background": "#00252e",
+        "title": "Green Light",
+        "description": "This Player will play 50% better in Positive Polarity (+) Weather and 50% worse in Negative Polarity (-) Weather."
+    },
+    {
+        "id": "HEAVY_HANDED",
+        "color": "#9cabad",
+        "textColor": "#9cabad",
+        "background": "#120e00",
+        "title": "Heavy-Handed",
+        "description": "All Items held by Players on this Team have positive eDensity."
+    },
+    {
+        "id": "LIGHT_HANDED",
+        "color": "#c2b1c7",
+        "textColor": "#c2b1c7",
+        "background": "#120e00",
+        "title": "Light-Handed",
+        "description": "All Items held by Players on this Team have negative eDensity."
+    },
+    {
+        "id": "SPONGE",
+        "color": "#fffd6e",
+        "textColor": "#fffd6e",
+        "background": "#0a6154",
+        "title": "Sponge",
+        "description": "Floods will be much more likely when this Player is on base."
+    },
+    {
+        "id": "EXTRA_INNING_BONUS",
+        "color": "#ffca4f",
+        "textColor": "#ffca4f",
+        "background": "#992400",
+        "title": "Sun 30",
+        "description": "When a game enters Extra Innings, both Teams will immediately earn 1 Win."
+    },
+    {
+        "id": "SWEEP_BONUS",
+        "color": "#ffca4f",
+        "textColor": "#ffca4f",
+        "background": "#992400",
+        "title": "Sun 3",
+        "description": "If a Team sweeps all 3 games of a Regular Season series, the final non-loss is worth 2 Wins."
+    },
+    {
+        "id": "WEEK_END_BONUS",
+        "color": "#ffca4f",
+        "textColor": "#ffca4f",
+        "background": "#992400",
+        "title": "Sun 9",
+        "description": "Non-losses on the Week End (every 9th Day) are worth 2 Wins."
+    },
+    {
+        "id": "MAGNIFY_2X",
+        "color": "#ebe157",
+        "textColor": "#ebe157",
+        "background": "#041a29",
+        "title": "2x",
+        "description": "Every Run that this Player bats in or allows will be multiplied by 2."
+    },
+    {
+        "id": "MAGNIFY_3X",
+        "color": "#ebe157",
+        "textColor": "#ebe157",
+        "background": "#06263b",
+        "title": "3x",
+        "description": "Every Run that this Player bats in or allows will be multiplied by 3."
+    },
+    {
+        "id": "MAGNIFY_4X",
+        "color": "#ebe157",
+        "textColor": "#ebe157",
+        "background": "#0a3552",
+        "title": "4x",
+        "description": "Every Run that this Player bats in or allows will be multiplied by 4."
+    },
+    {
+        "id": "MAGNIFY_5X",
+        "color": "#ebe157",
+        "textColor": "#ebe157",
+        "background": "#0d4266",
+        "title": "5x",
+        "description": "Every Run that this Player bats in or allows will be multiplied by 5."
     }
 ]
