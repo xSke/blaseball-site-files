@@ -128,9 +128,9 @@
         "title": "Pre-History II",
         "chapters": [
             {
-                "title": "||| ||||| |||| ||| |||||||",
+                "title": "The First Day, 2nd Edition",
                 "id": "3a3062e1-24b1-4cb4-a778-fbb9e5160adf",
-                "redacted": true
+                "redacted": false
             },
             {
                 "title": "|||||| ||",
@@ -423,9 +423,9 @@
                 "redacted": true
             },
             {
-                "title": "| ||||||",
+                "title": "A Return",
                 "id": "9114a2e4-3bc1-40b6-ad8e-76e212b3e2ba",
-                "redacted": true
+                "redacted": false
             },
             {
                 "title": "A Ruby Tuesday",

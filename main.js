@@ -41,7 +41,7 @@
           {
             title: "Pre-History II",
             chapters: [
-              { title: "||| ||||| |||| ||| |||||||", id: "3a3062e1-24b1-4cb4-a778-fbb9e5160adf", redacted: true },
+              { title: "The First Day, 2nd Edition", id: "3a3062e1-24b1-4cb4-a778-fbb9e5160adf", redacted: false },
               { title: "|||||| ||", id: "9757f352-1b33-4478-858d-9248bc4c7e5b", redacted: true },
               { title: "||| ||||| |||", id: "326cc41d-8bad-4bb6-b2ac-a0e9fe435b42", redacted: true },
               { title: "|||||||| ||", id: "420a9f1f-ce20-48c3-affc-3004aa4c0eba", redacted: true },
@@ -108,7 +108,7 @@
               { title: "|||||||| |", id: "ca6a2ed1-4d10-4499-89a6-eeeee639efdf", redacted: true },
               { title: "|||||| || ||||", id: "ecd28e1a-f12a-4653-a74a-027bce64235a", redacted: true },
               { title: "|||||||| |", id: "ef4889da-313f-4959-93d8-40fac011c8be", redacted: true },
-              { title: "| ||||||", id: "9114a2e4-3bc1-40b6-ad8e-76e212b3e2ba", redacted: true },
+              { title: "A Return", id: "9114a2e4-3bc1-40b6-ad8e-76e212b3e2ba", redacted: false },
               { title: "A Ruby Tuesday", id: "dcf7d279-1df0-47d0-a8c1-237a4ae98ebf" },
               { title: "|||||||| |", id: "c787f35e-0ab1-4730-af6f-3bd1f5cb68ec", redacted: true },
               { title: "|||||| || |||| || ||||||||", id: "727de905-481f-4d03-8f40-37675c56cbd3", redacted: true },
