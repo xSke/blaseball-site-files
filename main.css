@@ -11764,6 +11764,16 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #6dc0ff;
   margin-bottom: 2px;
 }
+.Player-Info-Items-Durability-Text {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 12px;
+  -webkit-align-items: center;
+  align-items: center;
+  font-weight: 700;
+  margin-right: 2px;
+}
 .Player-Info-Items-Durability-Unbreakable {
   font-size: 28px;
   line-height: 1rem;
@@ -14066,9 +14076,19 @@ input[type="number"]::-webkit-outer-spin-button {
 .Item-Status-Broken {
   color: #6dc0ff;
 }
+.theme-dark .Item-Status-Replica {
+  color: #c4c4c4;
+}
+.theme-light .Item-Status-Replica {
+  color: #272727;
+}
+.Item-Stats {
+  margin-bottom: 30px;
+}
 .Item-Content {
   padding: 0;
-  margin-bottom: 30px;
+  max-height: 200px;
+  overflow-y: scroll;
 }
 .LeagueInfo-Section {
   display: -webkit-flex;
