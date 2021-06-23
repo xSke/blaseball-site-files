@@ -30717,25 +30717,26 @@
         py = function (e) {
           var t,
             a,
-            n = Object(c.h)().id,
-            i = (Object(r.useContext)(S.context), Object(r.useContext)(Zo.context)),
-            o = Object(r.useState)(!1),
-            u = Object(s.a)(o, 2),
-            m = u[0],
-            A = u[1],
-            d = Object(r.useState)(gy),
-            g = Object(s.a)(d, 2),
-            E = g[0],
-            p = g[1];
+            n,
+            i = Object(c.h)().id,
+            o = (Object(r.useContext)(S.context), Object(r.useContext)(Zo.context)),
+            u = Object(r.useState)(!1),
+            m = Object(s.a)(u, 2),
+            A = m[0],
+            d = m[1],
+            g = Object(r.useState)(gy),
+            E = Object(s.a)(g, 2),
+            p = E[0],
+            v = E[1];
           if (
-            (void 0 !== e.player && (E.player = e.player),
-            void 0 !== e.item && (E.item = e.item),
+            (void 0 !== e.player && (p.player = e.player),
+            void 0 !== e.item && (p.item = e.item),
             Object(r.useEffect)(
               function () {
                 (function () {
                   var t = Object(h.a)(
                     f.a.mark(function t() {
-                      var a, r;
+                      var a, n;
                       return f.a.wrap(function (t) {
                         for (;;)
                           switch ((t.prev = t.next)) {
@@ -30744,19 +30745,19 @@
                                 t.next = 6;
                                 break;
                               }
-                              return A(!0), (t.next = 4), fA([n]);
+                              return d(!0), (t.next = 4), fA([i]);
                             case 4:
-                              void 0 !== (a = t.sent) && 1 == a.length ? (E.item = a[0]) : (E.item = void 0);
+                              void 0 !== (a = t.sent) && 1 == a.length ? (p.item = a[0]) : (p.item = void 0);
                             case 6:
-                              if (void 0 !== e.player || void 0 === E.item) {
+                              if (void 0 !== e.player || void 0 === p.item) {
                                 t.next = 12;
                                 break;
                               }
-                              return A(!0), (t.next = 10), gA(E.item.id);
+                              return d(!0), (t.next = 10), gA(p.item.id);
                             case 10:
-                              void 0 !== (r = t.sent) && 1 == r.length ? (E.player = r[0]) : (E.player = void 0);
+                              void 0 !== (n = t.sent) && 1 == n.length ? (p.player = n[0]) : (p.player = void 0);
                             case 12:
-                              A(!1), p(E);
+                              d(!1), v(p);
                             case 14:
                             case "end":
                               return t.stop();
@@ -30771,15 +30772,15 @@
               },
               [e]
             ),
-            !E.item || !E || m)
+            !p.item || !p || A)
           )
             return <lc />;
-          var v,
-            b = i.teams.find(function (e) {
+          var b,
+            w = o.teams.find(function (e) {
               var t;
-              return e.id === (null === (t = E.player) || void 0 === t ? void 0 : t.leagueTeamId);
+              return e.id === (null === (t = p.player) || void 0 === t ? void 0 : t.leagueTeamId);
             }),
-            w = (function (e) {
+            y = (function (e) {
               if (void 0 === e) return [];
               var t = [];
               null !== e.prePrefix && t.push(e.prePrefix);
@@ -30788,62 +30789,62 @@
               null !== e.suffix && t.push(e.suffix);
               null !== e.root && t.push(e.root);
               return t;
-            })(E.item),
-            y = [],
+            })(p.item),
             B = [],
-            O = "",
-            I = Object(z.a)(w);
+            O = [],
+            I = "",
+            C = Object(z.a)(y);
           try {
-            for (I.s(); !(v = I.n()).done; ) {
-              var C,
-                k = v.value;
-              if (null !== k) {
-                k === (null === (C = E.item) || void 0 === C ? void 0 : C.root) ? (O = k.name) : B.push(k.name);
-                var N,
-                  T = Object(z.a)(k.adjustments);
+            for (C.s(); !(b = C.n()).done; ) {
+              var k,
+                N = b.value;
+              if (null !== N) {
+                N === (null === (k = p.item) || void 0 === k ? void 0 : k.root) ? (I = N.name) : O.push(N.name);
+                var T,
+                  x = Object(z.a)(N.adjustments);
                 try {
-                  for (T.s(); !(N = T.n()).done; ) {
-                    var x = N.value;
-                    0 === x.type && y.push(x);
+                  for (x.s(); !(T = x.n()).done; ) {
+                    var P = T.value;
+                    0 === P.type && B.push(P);
                   }
-                } catch (F) {
-                  T.e(F);
+                } catch (Q) {
+                  x.e(Q);
                 } finally {
-                  T.f();
+                  x.f();
                 }
               }
             }
-          } catch (F) {
-            I.e(F);
+          } catch (Q) {
+            C.e(Q);
           } finally {
-            I.f();
+            C.f();
           }
-          var P =
-              void 0 !== E.item && y.length > 0
-                ? y.map(function (e, t) {
+          var L =
+              void 0 !== p.item && B.length > 0
+                ? B.map(function (e, t) {
                     return <Jt id={e.mod} type={Gt.Item} key={t} />;
                   })
                 : null,
-            L = (
+            M = (
               <div className="Item-Stats-Line-Body">
-                {Fo(E.item.health, E.item.durability)}
+                {Fo(p.item.health, p.item.durability)}
                 <span className="Player-Stars-Num" aria-label="hidden">
-                  ({E.item.health})
+                  ({p.item.health})
                 </span>
               </div>
             ),
-            M = null;
-          0 === E.item.health &&
-            1 !== E.item.durability &&
-            (M = <div className="Item-Status Item-Status-Broken">- Broken</div>),
-            -1 === E.item.durability &&
-              ((L = (
+            R = null;
+          0 === p.item.health &&
+            1 !== p.item.durability &&
+            (R = <div className="Item-Status Item-Status-Broken">- Broken</div>),
+            -1 === p.item.durability &&
+              ((M = (
                 <div className="Item-Stats-Line-Body">
-                  {Fo(E.item.health, E.item.durability)}
+                  {Fo(p.item.health, p.item.durability)}
                   <span className="Player-Stars-Num">(Unbreakable, Undroppable)</span>
                 </div>
               )),
-              (M = (
+              (R = (
                 <Ht.a
                   placement="top"
                   overlay={
@@ -30855,65 +30856,65 @@
                   <div className="Item-Status Item-Status-Legendary">- Legendary</div>
                 </Ht.a>
               ))),
-            E.item.durability > 5 &&
-              (L = <div className="Item-Stats-Line-Body">{Fo(E.item.health, E.item.durability)}</div>),
-            E.item.prefixes.length > 0 &&
-              E.item.prefixes.forEach(function (e) {
-                "Replica" === e.name && (M = <div className="Item-Status Item-Status-Replica">- Replica</div>);
+            p.item.durability > 5 &&
+              (M = <div className="Item-Stats-Line-Body">{Fo(p.item.health, p.item.durability)}</div>),
+            (null === (t = p.item.prefixes) || void 0 === t ? void 0 : t.length) > 0 &&
+              p.item.prefixes.forEach(function (e) {
+                "Replica" === e.name && (R = <div className="Item-Status Item-Status-Replica">- Replica</div>);
               });
-          var R = (
+          var D = (
               <ul className="Player-Info-Stats Item-Stats">
                 <li className="Player-Info-Line Item-Info-Line">
                   <div className="Player-Info-Line-Header">Durability</div>
-                  {L}
+                  {M}
                 </li>
-                {null !== P ? (
+                {null !== L ? (
                   <li className="Player-Info-Line Item-Info-Line">
                     <div className="Player-Info-Line-Header">Mods</div>
-                    <div className="Item-Stats-Line-Body">{P}</div>
+                    <div className="Item-Stats-Line-Body">{L}</div>
                   </li>
                 ) : null}
                 <li className="Player-Info-Line Item-Info-Line">
                   <div className="Player-Info-Line-Header">Type</div>
                   <div className="Item-Stats-Line-Body">
-                    {Qo(O)} {O}
+                    {Qo(I)} {I}
                   </div>
                 </li>
                 <li className="Player-Info-Line Item-Info-Line">
                   <div className="Player-Info-Line-Header">Elements</div>
-                  {B.length > 0 ? B.join(", ") : "None"}
+                  {O.length > 0 ? O.join(", ") : "None"}
                 </li>
               </ul>
             ),
-            D = (
+            F = (
               <l.a.Fragment>
                 <div className="ModalItem-Info Item-Info">
                   <div className="Player-Header Item-Header">
                     <h2 className="ModalItem-Name Item-Name">
-                      {null === (t = E.item) || void 0 === t ? void 0 : t.name}
+                      {null === (a = p.item) || void 0 === a ? void 0 : a.name}
                     </h2>
-                    {M}
+                    {R}
                   </div>
                   <div className="Player-Header-Bottom">
                     <div className="Player-Teams-Section">
                       <div className="Player-Team-Line">
                         <div
                           className="Player-Team-Logo"
-                          style={{ background: void 0 !== b ? b.mainColor : "#999999" }}
+                          style={{ background: void 0 !== w ? w.mainColor : "#999999" }}
                         >
-                          <div className="Player-Team-Emoji">{ld(b)}</div>
+                          <div className="Player-Team-Emoji">{ld(w)}</div>
                         </div>
                         <div className="Player-Team-Name">
-                          {null === (a = E.player) || void 0 === a ? void 0 : a.name}
+                          {null === (n = p.player) || void 0 === n ? void 0 : n.name}
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="ModalItem-Content Item-Content">{R}</div>
+                <div className="ModalItem-Content Item-Content">{D}</div>
               </l.a.Fragment>
             );
-          return <nc {...Object.assign({}, e, { className: "ModalItem Item" })}>{D}</nc>;
+          return <nc {...Object.assign({}, e, { className: "ModalItem Item" })}>{F}</nc>;
         },
         vy = function (e) {
           var t = Object(r.useContext)(Zo.context),
