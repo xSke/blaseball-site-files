@@ -23419,6 +23419,21 @@ button:focus-visible {
   transform-origin: center center;
   z-index: 3;
 }
+#root .DepthChart-Team-2 {
+  border-radius: 50%;
+  height: 20px;
+}
+.theme-dark #root .DepthChart-Team-2 {
+  box-shadow: 0 0 2px 2px #b3b3b3;
+}
+.theme-light #root .DepthChart-Team-2 {
+  box-shadow: 0 0 2px 2px #626262;
+}
+#root .DepthChart-Team-0 {
+  border-radius: 50%;
+  height: 20px;
+  box-shadow: 0 0 2px 2px #a16dc3;
+}
 #root .DepthChart-EndZone-Bottom,
 #root .DepthChart-EndZone-Top {
   width: 100%;

@@ -2005,9 +2005,9 @@
     },
     {
         "id": "FIREWALKER",
-        "color": "#a8fffc",
-        "textColor": "#a8fffc",
-        "background": "#00242e",
+        "color": "#ffdd63",
+        "textColor": "#ffdd63",
+        "background": "#630404",
         "title": "Firewalker",
         "description": "When this Player leaves a Location, they'll leave Instability behind."
     },
@@ -2143,5 +2143,77 @@
         "background": "#0d4266",
         "title": "5x",
         "description": "Every Run that this Player bats in or allows will be multiplied by 5."
+    },
+    {
+        "id": "PROFIT",
+        "color": "#ffdf40",
+        "textColor": "#ffdf40",
+        "background": "#132900",
+        "title": "Profit",
+        "description": "This Player pays out 10x the rewards for all Idol Snacks."
+    },
+    {
+        "id": "NONPROFIT",
+        "color": "#ffdf40",
+        "textColor": "#ffdf40",
+        "background": "#1c2747",
+        "title": "Non-Profit",
+        "description": "This Player does not pay out Snack rewards to Fans of their own Team."
+    },
+    {
+        "id": "NIGHTSHADE",
+        "color": "#d67e6d",
+        "textColor": "#d67e6d",
+        "background": "#281138",
+        "title": "Nightshade",
+        "description": "This Team plays 20% better in Night Weather."
+    },
+    {
+        "id": "TRADER",
+        "color": "#dce3df",
+        "textColor": "#dce3df",
+        "background": "#205c6b",
+        "title": "Trader",
+        "description": "This Player has a chance of swapping Items with an opponent during a game."
+    },
+    {
+        "id": "TRAITOR",
+        "color": "#bfbfbf",
+        "textColor": "#bfbfbf",
+        "background": "#63212c",
+        "title": "Traitor",
+        "description": "This Player has a chance of swapping Items with a teammate during a game."
+    },
+    {
+        "id": "BIRD_HOTEL",
+        "color": "#ff66f9",
+        "textColor": "#ff66f9",
+        "background": "#fff947",
+        "title": "Bird Hotel",
+        "description": "When the Home Team parties, a number of Birds will come join the Party."
+    },
+    {
+        "id": "FLOOD_BALLOONS",
+        "color": "#41feff",
+        "textColor": "#41feff",
+        "background": "#465f63",
+        "title": "Flood Balloons",
+        "description": "A medium, permanent amount of negative eDensity is added for each Flood in this Ballpark."
+    },
+    {
+        "id": "ANTI_FLOOD_PUMPS",
+        "color": "#262500",
+        "textColor": "#78cc7a",
+        "background": "#78cc7a",
+        "title": "Anti Flood Pumps",
+        "description": "Whenever a Flood happens in this Ballpark, its Filthiness is greatly increased."
+    },
+    {
+        "id": "VOICEMAIL",
+        "color": "#19002b",
+        "textColor": "#ffffff",
+        "background": "#465aab",
+        "title": "Voicemail",
+        "description": "When the Home Team is shut out in this Ballpark, they'll swap the worst Batter in their Lineup with the best Batter in their Shadows."
     }
 ]
