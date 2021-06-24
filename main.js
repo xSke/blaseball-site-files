@@ -20894,32 +20894,6 @@
                           modal: !0,
                           params: { snackId: ne.VOTES },
                         });
-                    void 0 !== e.snacks[ne.RED_HERRING]
-                      ? u.push({
-                          id: ne.RED_HERRING,
-                          name: "Pickled Herring",
-                          description: <l.a.Fragment>Go Fish.</l.a.Fragment>,
-                          amount: 1,
-                          available: s.includes(ne.RED_HERRING),
-                          icon: <ll className="Shop-Item-Icon" />,
-                          buyUrl: "",
-                          handleComplete: function () {},
-                          modal: !0,
-                          sell: !0,
-                          params: { snackId: ne.RED_HERRING },
-                        })
-                      : u.push({
-                          id: ne.RED_HERRING,
-                          name: "Pickled Herring",
-                          description: <l.a.Fragment>Go Fish.</l.a.Fragment>,
-                          amount: 1,
-                          available: s.includes(ne.RED_HERRING),
-                          icon: <ll className="Shop-Item-Icon" />,
-                          buyUrl: "/buy/vote",
-                          handleComplete: function () {},
-                          modal: !0,
-                          params: { snackId: ne.RED_HERRING },
-                        });
                     if (void 0 !== e.favoriteTeam && null !== e.favoriteTeam && "" !== e.favoriteTeam) {
                       var m = td(e.favoriteTeam, n) || void 0 !== e.snacks[ne.FLUTES] ? 2e3 : 0,
                         A = ne.FLUTES;
@@ -21472,6 +21446,41 @@
                         },
                       });
                     }
+                    void 0 !== e.snacks[ne.RED_HERRING]
+                      ? u.push({
+                          id: ne.RED_HERRING,
+                          name: "Pickled Herring",
+                          description: <l.a.Fragment>Go Fish.</l.a.Fragment>,
+                          amount: 1e4,
+                          available: s.includes(ne.RED_HERRING),
+                          icon: <ll className="Shop-Item-Icon" />,
+                          buyUrl: "/api/buySnackNoUpgrade",
+                          userUpdate: function () {
+                            (e.trackers.SNACKS_BOUGHT += 1),
+                              (e.snacks[ne.RED_HERRING] += 1e4),
+                              (e.coins -= 1e4),
+                              t(Object(C.a)({}, e));
+                          },
+                          sell: !0,
+                          params: { snackId: ne.RED_HERRING },
+                        })
+                      : u.push({
+                          id: ne.RED_HERRING,
+                          name: "Pickled Herring",
+                          description: <l.a.Fragment>Go Fish.</l.a.Fragment>,
+                          amount: 1e4,
+                          available: s.includes(ne.RED_HERRING),
+                          icon: <ll className="Shop-Item-Icon" />,
+                          buyUrl: "/api/buySnackNoUpgrade",
+                          userUpdate: function () {
+                            (e.trackers.SNACKS_BOUGHT += 1),
+                              (e.snacks[ne.RED_HERRING] = O),
+                              (e.snackOrder = ne.InsertIntoSnackOrder(ne.RED_HERRING, e.snackOrder)),
+                              (e.coins -= 1e4),
+                              t(Object(C.a)({}, e));
+                          },
+                          params: { snackId: ne.RED_HERRING },
+                        });
                     if (void 0 !== e.snacks[ne.TAROT])
                       u.push({
                         id: ne.TAROT,
