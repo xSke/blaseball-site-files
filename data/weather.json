@@ -136,5 +136,23 @@
         "background": "#0e4e8a",
         "color": "#ffc400",
         "description": "???"
+    },
+    {
+        "name": "Sun 90",
+        "background": "#0e4e8a",
+        "color": "#ffc400",
+        "description": "???"
+    },
+    {
+        "name": "Sun .1",
+        "background": "#0e4e8a",
+        "color": "#ffc400",
+        "description": "???"
+    },
+    {
+        "name": "Sum Sun",
+        "background": "#0e4e8a",
+        "color": "#ffc400",
+        "description": "???"
     }
 ]

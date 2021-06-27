@@ -2215,5 +2215,45 @@
         "background": "#465aab",
         "title": "Voicemail",
         "description": "When the Home Team is shut out in this Ballpark, they'll swap the worst Batter in their Lineup with the best Batter in their Shadows."
+    },
+    {
+        "id": "HEIST_EXPERT",
+        "color": "#bf9cd6",
+        "textColor": "#bf9cd6",
+        "background": "#1e2224",
+        "title": "Heist Expert",
+        "description": "This Player is adept at using a Ballpark's Tunnels."
+    },
+    {
+        "id": "PROTOTYPE",
+        "color": "#c6ffc4",
+        "textColor": "#c6ffc4",
+        "background": "#0d4524",
+        "title": "Prototype",
+        "description": "This Team's Postseason Births will arrive with a random modification."
+    },
+    {
+        "id": "SIM_SUN_POINT_ONE",
+        "color": "#ffca4f",
+        "textColor": "#ffca4f",
+        "background": "#36001b",
+        "title": "Sun .1",
+        "description": "Weather. Each Run scored is worth .1 more per Inning."
+    },
+    {
+        "id": "SIM_SUN_NINETY",
+        "color": "#ffca4f",
+        "textColor": "#ffca4f",
+        "background": "#36001b",
+        "title": "Sun 90",
+        "description": "Weather. Scoring Plays will earn an additional Run for each out."
+    },
+    {
+        "id": "SIM_SUM_SUN",
+        "color": "#ffca4f",
+        "textColor": "#ffca4f",
+        "background": "#36001b",
+        "title": "Sum Sun",
+        "description": "Weather. Each successive scoring play by a Team within a half inning is worth an additional Run."
     }
 ]
