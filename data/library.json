@@ -53,11 +53,6 @@
                 "redacted": false
             },
             {
-                "title": "|||||||| |",
-                "id": "427ac722-6330-475f-98f7-08b44e4a27ed",
-                "redacted": true
-            },
-            {
                 "title": "|||||| |",
                 "id": "f313b2bf-c6e4-4f75-9fd7-863820265359",
                 "redacted": true
@@ -103,9 +98,14 @@
                 "redacted": true
             },
             {
-                "title": "| ||||",
-                "id": "3e51714c-6f8e-4725-8345-3f8a1e22a6e1",
-                "redacted": true
+                "title": "A Rivalry",
+                "id": "8e9fbd47-8b2b-44a0-9946-6468a38d1ad5",
+                "redacted": false
+            },
+            {
+                "title": "An Exile",
+                "id": "d5cbdc46-471c-49b7-be19-0a42d12f58d4",
+                "redacted": false
             },
             {
                 "title": "An Alternate",
@@ -113,8 +113,8 @@
                 "redacted": false
             },
             {
-                "title": "|||||||| |",
-                "id": "d44bfe59-e439-4ead-aaf1-233278103971",
+                "title": "| ||||",
+                "id": "3e51714c-6f8e-4725-8345-3f8a1e22a6e1",
                 "redacted": true
             },
             {

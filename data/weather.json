@@ -154,5 +154,17 @@
         "background": "#0e4e8a",
         "color": "#ffc400",
         "description": "???"
+    },
+    {
+        "name": "Jazz",
+        "background": "#570b0b",
+        "color": "#000",
+        "description": "louie-ooie-la-la-la or shoo-doo-shoo-bee-ooo-bee"
+    },
+    {
+        "name": "Night",
+        "background": "#000",
+        "color": "#ff8d13",
+        "description": "Deep dark."
     }
 ]
