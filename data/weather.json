@@ -139,21 +139,21 @@
     },
     {
         "name": "Sun 90",
-        "background": "#0e4e8a",
+        "background": "#36001b",
         "color": "#ffc400",
-        "description": "???"
+        "description": "Scoring Plays are worth an extra Run for each Out."
     },
     {
         "name": "Sun .1",
         "background": "#36001b",
-        "color": "#ffca4f",
-        "description": "Each Run scored is worth .1 more per Inning."
+        "color": "#ffc400",
+        "description": "Each Run scored is worth .1 more per inning."
     },
     {
         "name": "Sum Sun",
-        "background": "#0e4e8a",
+        "background": "#36001b",
         "color": "#ffc400",
-        "description": "???"
+        "description": "Each successive scoring play in a half inning is worth an extra Run."
     },
     {
         "name": "Jazz",
