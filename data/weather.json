@@ -145,9 +145,9 @@
     },
     {
         "name": "Sun .1",
-        "background": "#0e4e8a",
-        "color": "#ffc400",
-        "description": "???"
+        "background": "#36001b",
+        "color": "#ffca4f",
+        "description": "Each Run scored is worth .1 more per Inning."
     },
     {
         "name": "Sum Sun",

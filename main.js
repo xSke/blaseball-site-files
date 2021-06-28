@@ -11034,7 +11034,13 @@
             },
             { name: "???", icon: <_.Z />, background: "#0e4e8a", color: "#ffc400", description: "???" },
             { name: "Sun 90", icon: <$t />, background: "#0e4e8a", color: "#ffc400", description: "???" },
-            { name: "Sun .1", icon: <ra />, background: "#0e4e8a", color: "#ffc400", description: "???" },
+            {
+              name: "Sun .1",
+              icon: <ra />,
+              background: "#36001b",
+              color: "#ffca4f",
+              description: "Each Run scored is worth .1 more per Inning.",
+            },
             { name: "Sum Sun", icon: <Zt />, background: "#0e4e8a", color: "#ffc400", description: "???" },
             {
               name: "Jazz",
