@@ -880,16 +880,16 @@
         s = (a(167), a(3)),
         c = a(16),
         u = (a(26), a(76), a(11), a(36)),
-        A = a(8),
-        m = function (e) {
+        m = a(8),
+        A = function (e) {
           var t = e.path,
             a = e.className,
             n = e.background,
             r = e.params;
           return (
-            <A.b to={{ pathname: t, state: { background: n, params: r } }} className={a}>
+            <m.b to={{ pathname: t, state: { background: n, params: r } }} className={a}>
               {e.children}
-            </A.b>
+            </m.b>
           );
         },
         d = a(2),
@@ -1148,10 +1148,10 @@
             i = Object(s.a)(n, 2),
             o = i[0],
             u = i[1],
-            A = Object(r.useState)(!1),
-            m = Object(s.a)(A, 2),
-            d = m[0],
-            p = m[1],
+            m = Object(r.useState)(!1),
+            A = Object(s.a)(m, 2),
+            d = A[0],
+            p = A[1],
             h = Object(r.useCallback)(
               Object(g.a)(
                 f.a.mark(function e() {
@@ -1621,8 +1621,8 @@
         se = a(259),
         ce = a(260),
         ue = a(39),
-        Ae = a(52),
-        me = ["title", "titleId"];
+        me = a(52),
+        Ae = ["title", "titleId"];
       function de() {
         return (de =
           Object.assign ||
@@ -1657,7 +1657,7 @@
       function ge(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = fe(e, me);
+          l = fe(e, Ae);
         return (
           <svg
             {...de(
@@ -2179,8 +2179,8 @@
         );
       }
       var ut,
-        At = r.forwardRef(ct),
-        mt = (a.p, ["title", "titleId"]);
+        mt = r.forwardRef(ct),
+        At = (a.p, ["title", "titleId"]);
       function dt() {
         return (dt =
           Object.assign ||
@@ -2215,7 +2215,7 @@
       function gt(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = ft(e, mt);
+          l = ft(e, At);
         return (
           <svg
             {...dt(
@@ -2990,7 +2990,7 @@
           case "REPLICA":
             return <_.Nc />;
           case "DUST":
-            return <Ae.c />;
+            return <me.c />;
           case "OFFWORLD":
             return <_.kd />;
           case "ACIDIC":
@@ -3052,7 +3052,7 @@
           case "YOLKED":
             return <_.wd />;
           case "SUNSUN":
-            return <At />;
+            return <mt />;
           case "SIM_UNDERBRACKET":
             return <ht />;
           case "SIM_HYPE_TRAIN":
@@ -3141,7 +3141,7 @@
             (e[(e.League = 4)] = "League");
         })(oa || (oa = {}));
       var ua,
-        Aa = {
+        ma = {
           id: "????",
           color: "#FFFFFF",
           background: "#FFFFFF",
@@ -3149,7 +3149,7 @@
           title: "????",
           description: "This Modification is unknown.",
         };
-      function ma(e) {
+      function Aa(e) {
         var t = e.id,
           a = e.type,
           n = Object(r.useContext)(D.context).user,
@@ -3157,7 +3157,7 @@
           o = u.collection.find(function (e) {
             return e.id === t;
           });
-        void 0 === o && (o = Aa);
+        void 0 === o && (o = ma);
         var s = (function (e) {
           switch (e) {
             case ia.Permanent:
@@ -3194,7 +3194,7 @@
           }
           return { color: "#ffffff", title: "Um", description: "Ummmmmm" };
         })(a);
-        if (a === ia.League && o === Aa) return null;
+        if (a === ia.League && o === ma) return null;
         var c = o.description;
         return (
           o.descriptions &&
@@ -3252,7 +3252,7 @@
             return e.id === t;
           });
         return (
-          void 0 === a && (a = Aa),
+          void 0 === a && (a = ma),
           (
             <div className="AttributeIcon" style={{ color: a.color, background: a.background }}>
               <la id={t} />
@@ -3264,7 +3264,7 @@
         var t = u.collection.find(function (t) {
           return t.id === e;
         });
-        return void 0 === t && (t = Aa), t.title;
+        return void 0 === t && (t = ma), t.title;
       }
       function ga(e) {
         var t = e.id;
@@ -3272,7 +3272,7 @@
         var a = u.collection.find(function (e) {
           return e.id === t;
         });
-        return void 0 === a && (a = Aa), (<span className="AttributeTooltip-Mod">({a.title})</span>);
+        return void 0 === a && (a = ma), (<span className="AttributeTooltip-Mod">({a.title})</span>);
       }
       function pa(e) {
         var t = e.id,
@@ -3282,7 +3282,7 @@
           return e.id === t;
         });
         return (
-          void 0 === n && (n = Aa),
+          void 0 === n && (n = ma),
           (
             <div className="AttributeIcon-AtBat">
               <ca.a
@@ -3864,8 +3864,8 @@
         );
       }
       var un,
-        An = r.forwardRef(cn),
-        mn = (a.p, ["title", "titleId"]);
+        mn = r.forwardRef(cn),
+        An = (a.p, ["title", "titleId"]);
       function dn() {
         return (dn =
           Object.assign ||
@@ -3900,7 +3900,7 @@
       function gn(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = fn(e, mn);
+          l = fn(e, An);
         return (
           <svg
             {...dn(
@@ -4485,8 +4485,8 @@
         );
       }
       var ur,
-        Ar = r.forwardRef(cr),
-        mr = (a.p, ["title", "titleId"]);
+        mr = r.forwardRef(cr),
+        Ar = (a.p, ["title", "titleId"]);
       function dr() {
         return (dr =
           Object.assign ||
@@ -4521,7 +4521,7 @@
       function gr(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = fr(e, mr);
+          l = fr(e, Ar);
         return (
           <svg
             {...dr(
@@ -5098,8 +5098,8 @@
         );
       }
       var ul,
-        Al = r.forwardRef(cl),
-        ml = (a.p, ["title", "titleId"]);
+        ml = r.forwardRef(cl),
+        Al = (a.p, ["title", "titleId"]);
       function dl() {
         return (dl =
           Object.assign ||
@@ -5134,7 +5134,7 @@
       function gl(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = fl(e, ml);
+          l = fl(e, Al);
         return (
           <svg
             {...dl(
@@ -5637,8 +5637,8 @@
         );
       }
       var ui,
-        Ai = r.forwardRef(ci),
-        mi = (a.p, ["title", "titleId"]);
+        mi = r.forwardRef(ci),
+        Ai = (a.p, ["title", "titleId"]);
       function di() {
         return (di =
           Object.assign ||
@@ -5673,7 +5673,7 @@
       function gi(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = fi(e, mi);
+          l = fi(e, Ai);
         return (
           <svg
             {...di(
@@ -6162,8 +6162,8 @@
         );
       }
       var uo,
-        Ao = r.forwardRef(co),
-        mo = (a.p, ["title", "titleId"]);
+        mo = r.forwardRef(co),
+        Ao = (a.p, ["title", "titleId"]);
       function fo() {
         return (fo =
           Object.assign ||
@@ -6198,7 +6198,7 @@
       function po(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = go(e, mo);
+          l = go(e, Ao);
         return (
           <svg
             {...fo(
@@ -6582,7 +6582,7 @@
           case ne.VOTES:
             return <rn />;
           case ne.FLUTES:
-            return <An />;
+            return <mn />;
           case ne.TEAM_LOSS:
             return <hn />;
           case ne.STADIUM:
@@ -6602,7 +6602,7 @@
           case ne.IDOL_STEAL:
             return <hr />;
           case ne.BLACK_HOLE:
-            return <Ar />;
+            return <mr />;
           case ne.INCINERATION:
             return <$r />;
           case ne.IDOL_HOMER_ALLOW:
@@ -6618,7 +6618,7 @@
           case ne.IDOL_PITCHER_WIN:
             return <hl />;
           case ne.IDOL_PITCHER_LOSS:
-            return <Al />;
+            return <ml />;
           case ne.CONSUMER:
             return <ll />;
           case ne.RED_HERRING:
@@ -6651,20 +6651,20 @@
           s = 1 === Math.sign(a),
           c = -1 === Math.sign(a),
           u = ef(e) + (s ? a : 0),
-          A = Math.floor(u),
-          m = Math.ceil(u),
-          d = Number((u - A).toFixed(2)),
+          m = Math.floor(u),
+          A = Math.ceil(u),
+          d = Number((u - m).toFixed(2)),
           f = 18 * Math.max(d, 0.31),
           g = Math.max(f - o * f, f - 0.69 * f),
           p = Number((o - d).toFixed(2)),
           h = Number((Number(u.toFixed(2)) - Number(o.toFixed(2))).toFixed(2)),
           E = "";
         s && !c ? (E = "-Blue") : !s && c && (E = "-Red");
-        for (var v = [], b = 0; b < A; b++)
+        for (var v = [], b = 0; b < m; b++)
           if (b < t && t > 0 && i) v.push(<re.b className="Player-Stars-Gilded" key={b} />);
           else if (o > d && b >= Math.floor(h)) {
             var w = Number((p - Math.floor(p)).toFixed(1));
-            (A === m && w > 0) || (d > 0 && w > 0)
+            (m === A && w > 0) || (d > 0 && w > 0)
               ? (v.push(
                   <div className="Player-Stars-Temp-Wrapper" key={b}>
                     <div style={{ width: "18px", position: "absolute" }} className="Player-Stars-Fractional-Wrapper">
@@ -6683,7 +6683,7 @@
                   </div>
                 ),
                 (p = Number((p - w).toFixed(2))))
-              : ((A === m && 0 === w) || (d > 0 && Math.floor(p) > 0)) &&
+              : ((m === A && 0 === w) || (d > 0 && Math.floor(p) > 0)) &&
                 (v.push(
                   <div className="Player-Stars-Temp-Wrapper" key={b}>
                     <re.b className={"Player-Stars-Temp" + E} />
@@ -6848,7 +6848,7 @@
           case "Jersey":
             return <$l className="Item-Icon" />;
           case "Ring":
-            return <Ai className="Item-Icon" />;
+            return <mi className="Item-Icon" />;
           case "Shoes":
             return <li className="Item-Icon" />;
           case "Cap":
@@ -6868,7 +6868,7 @@
           case "Cape":
             return <Eo className="Item-Icon" />;
           case "Potion":
-            return <Ao className="Item-Icon" />;
+            return <mo className="Item-Icon" />;
           case "Helmet":
             return <$i className="Item-Icon" />;
           case "Pillow":
@@ -6922,20 +6922,20 @@
           n = 0;
         return (
           e.permAttr.map(function (e, r) {
-            a.push(<ma id={e} type={ia.Permanent} key={n} context={t} />), n++;
+            a.push(<Aa id={e} type={ia.Permanent} key={n} context={t} />), n++;
           }),
           e.seasAttr.map(function (e, r) {
-            a.push(<ma id={e} type={ia.Season} key={n} context={t} />), n++;
+            a.push(<Aa id={e} type={ia.Season} key={n} context={t} />), n++;
           }),
           e.weekAttr.map(function (e, r) {
-            a.push(<ma id={e} type={ia.Weekly} key={n} context={t} />), n++;
+            a.push(<Aa id={e} type={ia.Weekly} key={n} context={t} />), n++;
           }),
           e.gameAttr.map(function (e, r) {
-            a.push(<ma id={e} type={ia.Game} key={n} context={t} />), n++;
+            a.push(<Aa id={e} type={ia.Game} key={n} context={t} />), n++;
           }),
           e.itemAttr &&
             e.itemAttr.map(function (e, r) {
-              a.push(<ma id={e} type={ia.Item} key={n} context={t} />), n++;
+              a.push(<Aa id={e} type={ia.Item} key={n} context={t} />), n++;
             }),
           a
         );
@@ -6946,7 +6946,7 @@
             var a = t.description.split("\n");
             return (
               <l.a.Fragment>
-                <ul className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+                <ul className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                   {a.map(function (e) {
                     if (e.length > 0)
                       return (
@@ -6961,7 +6961,7 @@
           }
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 {Zo(t.description)}
               </div>
             </l.a.Fragment>
@@ -6973,20 +6973,20 @@
             n = e.source,
             r = Object(c.g)(),
             i = t.gameTags[0];
-          if (a === i && n === um.Game) return <ls entity={a} event={t} source={n} />;
-          if (n !== um.Team)
+          if (a === i && n === uA.Game) return <ls entity={a} event={t} source={n} />;
+          if (n !== uA.Team)
             return (
               <l.a.Fragment>
                 {void 0 !== i ? (
-                  <m
+                  <A
                     background={r}
                     path={"/game/".concat(t.gameTags[0])}
-                    className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}
+                    className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}
                   >
                     {t.description}
-                  </m>
+                  </A>
                 ) : (
-                  <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+                  <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                     {t.description}
                   </div>
                 )}
@@ -6995,7 +6995,7 @@
           var o = t.metadata.winner === a;
           return (
             <l.a.Fragment>
-              <m
+              <A
                 background={r}
                 path={"/game/".concat(t.gameTags[0])}
                 className={
@@ -7004,7 +7004,7 @@
                 }
               >
                 {t.description}
-              </m>
+              </A>
             </l.a.Fragment>
           );
         };
@@ -7013,7 +7013,7 @@
           <div className="Events-List-Row Events-List-Minor">
             <span className={a ? "Events-List-PositiveText" : "Events-List-NegativeText"}>{a ? "+" : "-"}</span>
             <span className="Events-List-Mod Events-List-Row-Group">
-              <ma id={e} type={t} />
+              <Aa id={e} type={t} />
             </span>
             <span className="Events-List-Row-Group">{fa(e)}</span>
           </div>
@@ -7026,7 +7026,7 @@
             n = 106 === t.type || 146 === t.type || 210 === t.type;
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 <div className="Events-List-Row">{t.description}</div>
                 {os(a.mod, a.type, n)}
               </div>
@@ -7043,7 +7043,7 @@
           tiebreakers: [],
           stats: {},
         }),
-        As = function (e) {
+        ms = function (e) {
           var t = e.children,
             a = Object(r.useState)({
               leagues: [],
@@ -7073,9 +7073,9 @@
             (<us.Provider value={i}>{t}</us.Provider>)
           );
         };
-      As.context = us;
-      var ms,
-        ds = As,
+      ms.context = us;
+      var As,
+        ds = ms,
         fs = function (e) {
           var t = Object(r.useContext)(ds.context),
             a = Object(c.g)(),
@@ -7090,7 +7090,7 @@
             });
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(n.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(n.category)}>
                 <div className="Events-List-Column">
                   <div className="Events-List-Row">{n.description}</div>
                   <div className="Events-List-Row Events-List-Minor">
@@ -7100,9 +7100,9 @@
                       {o.aPlayerId === i ? (
                         <span>{o.aPlayerName}</span>
                       ) : (
-                        <m background={a} path={"/player/".concat(o.aPlayerId)}>
+                        <A background={a} path={"/player/".concat(o.aPlayerId)}>
                           {o.aPlayerName}
-                        </m>
+                        </A>
                       )}
                     </div>
                     <div className="Events-List-Row-Group">
@@ -7110,9 +7110,9 @@
                       {o.bPlayerId === i ? (
                         <span>{o.bPlayerName}</span>
                       ) : (
-                        <m background={a} path={"/player/".concat(o.bPlayerId)}>
+                        <A background={a} path={"/player/".concat(o.bPlayerId)}>
                           {o.bPlayerName}
-                        </m>
+                        </A>
                       )}
                     </div>
                   </div>
@@ -7123,9 +7123,9 @@
                       {o.bPlayerId === i ? (
                         <span>{o.bPlayerName}</span>
                       ) : (
-                        <m background={a} path={"/player/".concat(o.bPlayerId)}>
+                        <A background={a} path={"/player/".concat(o.bPlayerId)}>
                           {o.bPlayerName}
-                        </m>
+                        </A>
                       )}
                     </div>
                     <div className="Events-List-Row-Group">
@@ -7133,9 +7133,9 @@
                       {o.aPlayerId === i ? (
                         <span>{o.aPlayerName}</span>
                       ) : (
-                        <m background={a} path={"/player/".concat(o.aPlayerId)}>
+                        <A background={a} path={"/player/".concat(o.aPlayerId)}>
                           {o.aPlayerName}
-                        </m>
+                        </A>
                       )}
                     </div>
                   </div>
@@ -7171,7 +7171,7 @@
           (e[(e.watchfulness = 23)] = "watchfulness"),
           (e[(e.anticapitalism = 24)] = "anticapitalism"),
           (e[(e.chasiness = 25)] = "chasiness");
-      })(ms || (ms = {}));
+      })(As || (As = {}));
       function gs(e) {
         return xd(5 * e, 1);
       }
@@ -7180,7 +7180,7 @@
             a = t.metadata;
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 {Zo(t.description)}
                 {(function (e, t) {
                   var a = t.after > t.before;
@@ -7189,57 +7189,57 @@
                       <span>
                         {(function (e) {
                           switch (e) {
-                            case ms.anticapitalism:
+                            case As.anticapitalism:
                               return "Anticapitalism";
-                            case ms.baseThirst:
+                            case As.baseThirst:
                               return "Base Thirst";
-                            case ms.buoyancy:
+                            case As.buoyancy:
                               return "Buoyancy";
-                            case ms.chasiness:
+                            case As.chasiness:
                               return "Chasiness";
-                            case ms.cinnamon:
+                            case As.cinnamon:
                               return "Cinnamon";
-                            case ms.coldness:
+                            case As.coldness:
                               return "Coldness";
-                            case ms.continuation:
+                            case As.continuation:
                               return "Continuation";
-                            case ms.divinity:
+                            case As.divinity:
                               return "Divinity";
-                            case ms.groundFriction:
+                            case As.groundFriction:
                               return "Ground Friction";
-                            case ms.indulgence:
+                            case As.indulgence:
                               return "Indulgence";
-                            case ms.laserlikeness:
+                            case As.laserlikeness:
                               return "Laserlikeness";
-                            case ms.martyrdom:
+                            case As.martyrdom:
                               return "Martyrdom";
-                            case ms.moxie:
+                            case As.moxie:
                               return "Moxie";
-                            case ms.musclitude:
+                            case As.musclitude:
                               return "Musclitude";
-                            case ms.omniscience:
+                            case As.omniscience:
                               return "Omniscience";
-                            case ms.overpowerment:
+                            case As.overpowerment:
                               return "Overpowerment";
-                            case ms.patheticism:
+                            case As.patheticism:
                               return "Patheticism";
-                            case ms.pressurization:
+                            case As.pressurization:
                               return "Pressurization";
-                            case ms.ruthlessness:
+                            case As.ruthlessness:
                               return "Ruthlessness";
-                            case ms.shakespearianism:
+                            case As.shakespearianism:
                               return "Shakespearianism";
-                            case ms.suppression:
+                            case As.suppression:
                               return "Suppression";
-                            case ms.tenaciousness:
+                            case As.tenaciousness:
                               return "Tenaciousness";
-                            case ms.thwackability:
+                            case As.thwackability:
                               return "Thwackability";
-                            case ms.tragicness:
+                            case As.tragicness:
                               return "Tragicness";
-                            case ms.unthwackability:
+                            case As.unthwackability:
                               return "Unthwackability";
-                            case ms.watchfulness:
+                            case As.watchfulness:
                               return "Watchfulness";
                           }
                         })(t.type)}
@@ -7293,7 +7293,7 @@
             });
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(n.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(n.category)}>
                 <div className="Events-List-Column">
                   <div className="Events-List-Row">{n.description}</div>
                   <div className="Events-List-Row Events-List-Minor">
@@ -7302,12 +7302,12 @@
                       {o.aPlayerId === i ? (
                         <span>{o.aPlayerName}</span>
                       ) : (
-                        <m background={a} path={"/player/".concat(o.aPlayerId)}>
+                        <A background={a} path={"/player/".concat(o.aPlayerId)}>
                           {o.aPlayerName}
-                        </m>
+                        </A>
                       )}
                       <ce.b className="Events-List-Row-Group" />
-                      <span className="Events-List-Row Events-List-Row-Group">{sm(o.bLocation)}</span>
+                      <span className="Events-List-Row Events-List-Row-Group">{sA(o.bLocation)}</span>
                     </div>
                   </div>
                   <div className="Events-List-Row Events-List-Minor">
@@ -7316,12 +7316,12 @@
                       {o.bPlayerId === i ? (
                         <span>{o.bPlayerName}</span>
                       ) : (
-                        <m background={a} path={"/player/".concat(o.bPlayerId)}>
+                        <A background={a} path={"/player/".concat(o.bPlayerId)}>
                           {o.bPlayerName}
-                        </m>
+                        </A>
                       )}
                       <ce.b className="Events-List-Row-Group" />
-                      <span className="Events-List-Row Events-List-Row-Group">{sm(o.aLocation)}</span>
+                      <span className="Events-List-Row Events-List-Row-Group">{sA(o.aLocation)}</span>
                     </div>
                   </div>
                 </div>
@@ -7343,13 +7343,13 @@
               {t === i ? (
                 <span>{a}</span>
               ) : (
-                <m background={s} path={"/player/".concat(t)}>
+                <A background={s} path={"/player/".concat(t)}>
                   {a}
-                </m>
+                </A>
               )}
               {void 0 === n ? null : <l.a.Fragment>,</l.a.Fragment>}
             </div>
-            <div className="Events-List-Row-Group">{sm(n)}</div>
+            <div className="Events-List-Row-Group">{sA(n)}</div>
           </div>
         );
       }
@@ -7359,7 +7359,7 @@
           n = t.metadata;
         return (
           <l.a.Fragment>
-            <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+            <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
               <div className="Events-List-Column">
                 <div className="Events-List-Row">{t.description}</div>
                 {Es(n.teamId, n.playerId, n.playerName, n.location, a)}
@@ -7382,13 +7382,13 @@
               {t === i ? (
                 <span>{a}</span>
               ) : (
-                <m background={s} path={"/player/".concat(t)}>
+                <A background={s} path={"/player/".concat(t)}>
                   {a}
-                </m>
+                </A>
               )}
               {void 0 === n ? null : <l.a.Fragment>,</l.a.Fragment>}
             </div>
-            <div className="Events-List-Row-Group">{sm(n)}</div>
+            <div className="Events-List-Row-Group">{sA(n)}</div>
           </div>
         );
       }
@@ -7399,7 +7399,7 @@
             n = t.metadata;
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 <div className="Events-List-Column">
                   <div className="Events-List-Row">{t.description}</div>
                   {bs(n.teamId, n.playerId, n.playerName, n.location, a)}
@@ -7414,7 +7414,7 @@
             n = t.metadata;
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 <div className="Events-List-Column">
                   <div className="Events-List-Row">{t.description}</div>
                   {bs(n.sendTeamId, n.playerId, n.playerName, n.location, a)}
@@ -7487,7 +7487,7 @@
             a = t.metadata;
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 {Zo(t.description)}
                 {Os(a)}
               </div>
@@ -7499,7 +7499,7 @@
             a = t.metadata;
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 <div className="Events-List-Row">{t.description}</div>
                 {os("ALTERNATE", 0, !0)}
                 {Os(a)}
@@ -7512,7 +7512,7 @@
             a = t.metadata;
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 <div className="Events-List-Row">{t.description}</div>
                 {a.mods.map(function (e) {
                   return os(e, a.type, !1);
@@ -7528,7 +7528,7 @@
             n = t.metadata;
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 <div className="Events-List-Column">
                   <div className="Events-List-Row">{t.description}</div>
                   {(function (e, t, a) {
@@ -7545,9 +7545,9 @@
                           {e === a ? (
                             <span>{t}</span>
                           ) : (
-                            <m background={i} path={"/team/".concat(e)}>
+                            <A background={i} path={"/team/".concat(e)}>
                               {t}
-                            </m>
+                            </A>
                           )}
                         </div>
                       </div>
@@ -7567,9 +7567,9 @@
                           {e === a ? (
                             <span>{t}</span>
                           ) : (
-                            <m background={i} path={"/team/".concat(e)}>
+                            <A background={i} path={"/team/".concat(e)}>
                               {t}
-                            </m>
+                            </A>
                           )}
                         </div>
                       </div>
@@ -7586,7 +7586,7 @@
             n = t.metadata;
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 <div className="Events-List-Column">
                   <div className="Events-List-Row">{t.description}</div>
                   {bs(n.teamId, n.outPlayerId, n.outPlayerName, n.location, a)}
@@ -7601,16 +7601,16 @@
             a = t.metadata;
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 <div className="Events-List-Row">{t.description}</div>
                 <div className="Events-List-Row Events-List-Minor">
                   <span className="Events-List-Mod Events-List-Row-Group">
-                    <ma id={a.from} type={a.type} />
+                    <Aa id={a.from} type={a.type} />
                   </span>
                   <span className="Events-List-Row-Group">{fa(a.from)}</span>
                   <ce.b className="Events-List-Row-Group" />
                   <span className="Events-List-Mod Events-List-Row-Group">
-                    <ma id={a.to} type={a.type} />
+                    <Aa id={a.to} type={a.type} />
                   </span>
                   <span className="Events-List-Row-Group">{fa(a.to)}</span>
                 </div>
@@ -7916,7 +7916,7 @@
             r = n ? a.adds : a.removes;
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 <div className="Events-List-Row">{t.description}</div>
                 {r
                   ? r.map(function (e) {
@@ -7940,7 +7940,7 @@
           <div className="Events-List-Row Events-List-Minor">
             <span className={a ? "Events-List-PositiveText" : "Events-List-NegativeText"}>{a ? "+" : "-"}</span>
             <span className="Events-List-Mod Events-List-Row-Group">
-              <ma id={e} type={ia.Item} />
+              <Aa id={e} type={ia.Item} />
             </span>
             <span className="Events-List-Row-Group">{fa(e)}</span>
           </div>
@@ -7955,7 +7955,7 @@
             n = 127 === t.type || 187 === t.type;
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 {Zo(t.description)}
                 {(function (e, t) {
                   if (![127, 128].includes(e.type)) return;
@@ -8039,14 +8039,14 @@
           var t = e.event;
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 {Zo(t.description)}
               </div>
             </l.a.Fragment>
           );
         },
-        Ac = a(12),
-        mc =
+        mc = a(12),
+        Ac =
           (a(38),
           function (e) {
             return (
@@ -8063,7 +8063,7 @@
             i = a.setUser,
             o = Object(r.useState)(!1),
             u = Object(s.a)(o, 2),
-            A = u[0],
+            m = u[0],
             d = u[1],
             p = Object(r.useState)(null !== (t = e.nuts) && void 0 !== t ? t : 0),
             h = Object(s.a)(p, 2),
@@ -8073,7 +8073,7 @@
             w = Object(s.a)(b, 2),
             y = w[0],
             B = w[1],
-            O = Object(Ac.useToasts)().addToast,
+            O = Object(mc.useToasts)().addToast,
             I = Object(c.g)();
           Object(r.useEffect)(
             function () {
@@ -8127,7 +8127,7 @@
                             d(!0),
                             B(!0),
                             (t.next = 14),
-                            Nm(r ? "/api/upScale" : "/api/upNut", JSON.stringify({ eventId: e.event.id }))
+                            NA(r ? "/api/upScale" : "/api/upNut", JSON.stringify({ eventId: e.event.id }))
                               .then(
                                 (function () {
                                   var t = Object(g.a)(
@@ -8234,7 +8234,7 @@
           return !0 === e.upnut ? (
             <div className="Events-Feed-Item">
               <span className="Events-Feed-Num">{x}</span>
-              <mc
+              <Ac
                 hover={<strong>You have {N ? "Upscaled" : "Upshelled"} this event.</strong>}
                 id="tooltip"
                 placement="top"
@@ -8248,10 +8248,10 @@
                 }
               />
             </div>
-          ) : A ? (
+          ) : m ? (
             <div className="Events-Feed-Item">
               <span className="Events-Feed-Num">{x}</span>
-              <mc
+              <Ac
                 hover={<strong>You have {N ? "Upscaled" : "Upshelled"} this event.</strong>}
                 id="tooltip"
                 placement="top"
@@ -8269,7 +8269,7 @@
             0 === n.snacks[N ? ne.RED_HERRING : ne.PEANUTS] ? (
             <div className="Events-Feed-Item">
               <span className="Events-Feed-Num">{x}</span>
-              <mc
+              <Ac
                 hover={<strong>No {N ? "Pickled Herring" : "Peanuts"}</strong>}
                 id="tooltip"
                 placement="top"
@@ -8306,14 +8306,14 @@
                   {k}
                 </div>
               ) : (
-                <m
+                <A
                   background={I}
                   className={"Events-Feed Events-Feed-NotLiked Events-Feed".concat(T, "-NotLiked")}
                   aria-label={"".concat(N ? "Upscale" : "Upshell", " this Event.")}
                   path="/send-verification-email"
                 >
                   {k}
-                </m>
+                </A>
               )}
             </div>
           );
@@ -8323,7 +8323,7 @@
             a = t.metadata;
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 <div className="Events-List-Row">{t.description}</div>
                 {os("INVERTED", 0, !0)}
                 {Os(a)}
@@ -8343,14 +8343,14 @@
           o = e.children,
           s = e.dismissable,
           u = e.style,
-          A = Object(r.useRef)(null),
-          m = function () {
+          m = Object(r.useRef)(null),
+          A = function () {
             document.body.classList.remove("noscroll"), t.goBack();
           };
         Object(r.useEffect)(function () {
           n && document.body.classList.add("noscroll");
           var e = function (e) {
-            27 === e.keyCode && n && m();
+            27 === e.keyCode && n && A();
           };
           return (
             window.addEventListener("keydown", e),
@@ -8371,7 +8371,7 @@
             className={f + (n ? "" : " Modal--Static") + (i ? " ".concat(i) : "")}
             aria-hidden="false"
             role="dialogue"
-            ref={A}
+            ref={m}
             aria-modal="true"
           >
             {s && n && (
@@ -8379,7 +8379,7 @@
                 className="Modal-Close"
                 aria-label="Close button."
                 onClick={function () {
-                  return m();
+                  return A();
                 }}
               >
                 <ee.n />
@@ -8393,7 +8393,7 @@
             <div
               className="Modal-Background"
               onClick={function (e) {
-                !s || (A && A.current && A.current.contains(e.target)) || m();
+                !s || (m && m.current && m.current.contains(e.target)) || A();
               }}
             >
               {g}
@@ -8668,7 +8668,7 @@
                   }
                 >
                   <li>
-                    <m
+                    <A
                       background={e}
                       path={"/item/".concat(t.id)}
                       params={{ item: t, player: a }}
@@ -8678,12 +8678,12 @@
                         <$.c />
                       </div>
                       {r}
-                    </m>
+                    </A>
                   </li>
                 </ca.a>
               ) : (
                 <li>
-                  <m
+                  <A
                     background={e}
                     path={"/item/".concat(t.id)}
                     params={{ item: t, player: a }}
@@ -8691,7 +8691,7 @@
                   >
                     <div className="Player-Info-Items-Number">{n + 1}</div>
                     {r}
-                  </m>
+                  </A>
                 </li>
               );
             })(e, t.items[a], t, a)
@@ -8786,7 +8786,7 @@
             i,
             o,
             u,
-            A,
+            m,
             d,
             p,
             h,
@@ -8829,8 +8829,8 @@
             se,
             ce,
             ue,
-            Ae,
             me,
+            Ae,
             de,
             fe,
             ge,
@@ -8846,7 +8846,7 @@
             Ie = Object(s.a)(Oe, 2),
             Se = Ie[0],
             Ce = Ie[1],
-            ke = Object(Ac.useToasts)().addToast,
+            ke = Object(mc.useToasts)().addToast,
             Ne = Object(r.useContext)(D.context),
             Te = Ne.user,
             xe = Ne.setUser,
@@ -8872,7 +8872,7 @@
                       for (;;)
                         switch ((e.prev = e.next)) {
                           case 0:
-                            return (e.next = 2), Ym([we]);
+                            return (e.next = 2), YA([we]);
                           case 2:
                             void 0 !== (t = e.sent) &&
                               1 == t.length &&
@@ -8908,7 +8908,7 @@
                     Le ? (
                       <yc />
                     ) : (
-                      <m
+                      <A
                         className="ModalItem-Button-Tribute"
                         background={Qe}
                         path={
@@ -8918,7 +8918,7 @@
                         }
                       >
                         <Jn className="ModalItem-Icon" /> Pay Tribute
-                      </m>
+                      </A>
                     )
                   ) : (
                     <ca.a
@@ -8977,7 +8977,7 @@
                         case 6:
                           return (
                             (e.next = 8),
-                            Nm(
+                            NA(
                               "/api/chooseIdol",
                               JSON.stringify({ playerId: Se.player.id, playerName: Se.player.name })
                             ).then(
@@ -9091,6 +9091,17 @@
                                     "".concat(Se.player.name, " stretches!"),
                                     "".concat(Se.player.name, " wiggles!"),
                                     "".concat(Se.player.name, " yawns!"),
+                                    "".concat(Se.player.name, " wants to play fetch!"),
+                                    "".concat(Se.player.name, " brings you a stick!"),
+                                    "Huff huff!",
+                                    "".concat(Se.player.name, " sniffs your hand!"),
+                                    "".concat(Se.player.name, " starts digging!"),
+                                    "".concat(Se.player.name, " jumps up and down!"),
+                                    "".concat(Se.player.name, " shakes!"),
+                                    "Pant pant!",
+                                    "".concat(Se.player.name, " rolls around in the grass!"),
+                                    "".concat(Se.player.name, " brings you a toy!"),
+                                    "".concat(Se.player.name, " runs around!"),
                                   ];
                                   if (Ge) {
                                     var t = 100 * Math.random();
@@ -9098,9 +9109,13 @@
                                       ? ke("".concat(e[Math.floor(Math.random() * e.length)]), {
                                           appearance: "success",
                                         })
-                                      : ke("".concat(Se.player.name, t < 99 ? " bites you!" : " pets you back!"), {
-                                          appearance: "error",
-                                        });
+                                      : t < 98
+                                      ? ke("".concat(Se.player.name, " bites you!"), { appearance: "error" })
+                                      : t < 99
+                                      ? ke("".concat(Se.player.name, " pets you back!"), { appearance: "error" })
+                                      : t < 99.8
+                                      ? ke("Meow!", { appearance: "success" })
+                                      : ke("What's Umpdog?", { appearance: "error" });
                                   }
                                 }
                               }
@@ -9383,9 +9398,9 @@
                       c++
                     )
                       for (var u = 0; u < 11; u++) {
-                        var A = 1 / Math.pow(10, c),
-                          m = o[u % o.length] % A,
-                          d = Math.floor((m / A) * 10);
+                        var m = 1 / Math.pow(10, c),
+                          A = o[u % o.length] % m,
+                          d = Math.floor((A / m) * 10);
                         r += a && !t ? d : i[d];
                       }
                     return (
@@ -9456,7 +9471,7 @@
                         <div className={"ModalItem-Content" + (Ue ? " ModalItem-Content-WithAttributes" : "")}>
                           {Ke}
                           {void 0 !== Te.snacks.Forbidden_Knowledge_Access &&
-                          (null === (A = Se.team) || void 0 === A ? void 0 : A.id) === Te.favoriteTeam ? (
+                          (null === (m = Se.team) || void 0 === m ? void 0 : m.id) === Te.favoriteTeam ? (
                             <l.a.Fragment>
                               <h3 className="Player-Info-FK-Subheader">Advanced Stats</h3>
                               <ul className="Player-Info-FK">
@@ -9632,8 +9647,8 @@
                                   <div className="Player-Info-Line-Header">Tenaciousness</div>
                                   <Vc
                                     value={Se.player.tenaciousness}
-                                    color={null === (Ae = Se.team) || void 0 === Ae ? void 0 : Ae.mainColor}
-                                    secondColor={null === (me = Se.team) || void 0 === me ? void 0 : me.secondaryColor}
+                                    color={null === (me = Se.team) || void 0 === me ? void 0 : me.mainColor}
+                                    secondColor={null === (Ae = Se.team) || void 0 === Ae ? void 0 : Ae.secondaryColor}
                                   />
                                 </li>
                                 <li className="Player-Info-Line Player-Info-Line-Advanced">
@@ -9682,11 +9697,11 @@
                       </Sc.a.Pane>
                       <Sc.a.Pane eventKey="Events">
                         <div className="ModalItem-Content">
-                          <pm
+                          <pA
                             entity={Se.player.id}
-                            source={um.Player}
+                            source={uA.Player}
                             defaultCategory={Q.Changes}
-                            defaultSort={Am.NewestFirst}
+                            defaultSort={mA.NewestFirst}
                             categoryOptions={[-1, Q.Changes, Q.Game, Q.Abilities]}
                           />
                         </div>
@@ -9709,7 +9724,7 @@
             (void 0 !== a && void 0 !== a.before) || (a = { before: 0, after: 1 }),
             (
               <l.a.Fragment>
-                <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+                <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                   <div className="Events-List-Row">{t.description}</div>
                   {(function (e) {
                     return (
@@ -9752,7 +9767,7 @@
             s(c);
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(a.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(a.category)}>
                 The {o.nickname} received {n.totalBenefactorCoins.toLocaleString()} coins in contributions and opened{" "}
                 {n.totalGifts} gifts!
                 <br />
@@ -9981,8 +9996,8 @@
           </svg>
         );
       }
-      var Au,
-        mu = r.forwardRef(uu),
+      var mu,
+        Au = r.forwardRef(uu),
         du = (a.p, ["title", "titleId"]);
       function fu() {
         return (fu =
@@ -10035,8 +10050,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Au ||
-              (Au = (
+            {mu ||
+              (mu = (
                 <image
                   id="_05-Peanuts"
                   data-name="05-Peanuts"
@@ -10465,10 +10480,10 @@
         );
       }
       var $u,
-        eA = r.forwardRef(_u),
-        tA = (a.p, ["title", "titleId"]);
-      function aA() {
-        return (aA =
+        em = r.forwardRef(_u),
+        tm = (a.p, ["title", "titleId"]);
+      function am() {
+        return (am =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -10478,7 +10493,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function nA(e, t) {
+      function nm(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -10498,13 +10513,13 @@
         }
         return r;
       }
-      function rA(e, t) {
+      function rm(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = nA(e, tA);
+          l = nm(e, tm);
         return (
           <svg
-            {...aA(
+            {...am(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -10533,11 +10548,11 @@
           </svg>
         );
       }
-      var lA,
-        iA = r.forwardRef(rA),
-        oA = (a.p, ["title", "titleId"]);
-      function sA() {
-        return (sA =
+      var lm,
+        im = r.forwardRef(rm),
+        om = (a.p, ["title", "titleId"]);
+      function sm() {
+        return (sm =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -10547,7 +10562,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function cA(e, t) {
+      function cm(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -10567,13 +10582,13 @@
         }
         return r;
       }
-      function uA(e, t) {
+      function um(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = cA(e, oA);
+          l = cm(e, om);
         return (
           <svg
-            {...sA(
+            {...sm(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -10587,8 +10602,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {lA ||
-              (lA = (
+            {lm ||
+              (lm = (
                 <image
                   id="_15-Glitter"
                   data-name="15-Glitter"
@@ -10602,11 +10617,11 @@
           </svg>
         );
       }
-      var AA,
-        mA = r.forwardRef(uA),
-        dA = (a.p, ["title", "titleId"]);
-      function fA() {
-        return (fA =
+      var mm,
+        Am = r.forwardRef(um),
+        dm = (a.p, ["title", "titleId"]);
+      function fm() {
+        return (fm =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -10616,7 +10631,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function gA(e, t) {
+      function gm(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -10636,13 +10651,13 @@
         }
         return r;
       }
-      function pA(e, t) {
+      function pm(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = gA(e, dA);
+          l = gm(e, dm);
         return (
           <svg
-            {...fA(
+            {...fm(
               {
                 id: "Salmon",
                 xmlns: "http://www.w3.org/2000/svg",
@@ -10657,8 +10672,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {AA ||
-              (AA = (
+            {mm ||
+              (mm = (
                 <image
                   id="l_copy_10"
                   data-name="l  copy 10"
@@ -10672,11 +10687,11 @@
           </svg>
         );
       }
-      var hA,
-        EA = r.forwardRef(pA),
-        vA = (a.p, ["title", "titleId"]);
-      function bA() {
-        return (bA =
+      var hm,
+        Em = r.forwardRef(pm),
+        vm = (a.p, ["title", "titleId"]);
+      function bm() {
+        return (bm =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -10686,7 +10701,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function wA(e, t) {
+      function wm(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -10706,13 +10721,13 @@
         }
         return r;
       }
-      function yA(e, t) {
+      function ym(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = wA(e, vA);
+          l = wm(e, vm);
         return (
           <svg
-            {...bA(
+            {...bm(
               {
                 id: "Polarity",
                 xmlns: "http://www.w3.org/2000/svg",
@@ -10727,8 +10742,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {hA ||
-              (hA = (
+            {hm ||
+              (hm = (
                 <image
                   id="l_copy_11"
                   data-name="l  copy 11"
@@ -10742,11 +10757,11 @@
           </svg>
         );
       }
-      var BA,
-        OA = r.forwardRef(yA),
-        IA = (a.p, ["title", "titleId"]);
-      function SA() {
-        return (SA =
+      var Bm,
+        Om = r.forwardRef(ym),
+        Im = (a.p, ["title", "titleId"]);
+      function Sm() {
+        return (Sm =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -10756,7 +10771,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function CA(e, t) {
+      function Cm(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -10776,13 +10791,13 @@
         }
         return r;
       }
-      function kA(e, t) {
+      function km(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = CA(e, IA);
+          l = Cm(e, Im);
         return (
           <svg
-            {...SA(
+            {...Sm(
               {
                 id: "Polarity_2",
                 "data-name": "Polarity 2",
@@ -10798,8 +10813,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {BA ||
-              (BA = (
+            {Bm ||
+              (Bm = (
                 <image
                   id="l_copy_12"
                   data-name="l  copy 12"
@@ -10813,11 +10828,11 @@
           </svg>
         );
       }
-      var NA,
-        TA = r.forwardRef(kA),
-        xA = (a.p, ["title", "titleId"]);
-      function PA() {
-        return (PA =
+      var Nm,
+        Tm = r.forwardRef(km),
+        xm = (a.p, ["title", "titleId"]);
+      function Pm() {
+        return (Pm =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -10827,7 +10842,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function DA(e, t) {
+      function Dm(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -10847,13 +10862,13 @@
         }
         return r;
       }
-      function LA(e, t) {
+      function Lm(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = DA(e, xA);
+          l = Dm(e, xm);
         return (
           <svg
-            {...PA(
+            {...Pm(
               {
                 id: "Jazz",
                 xmlns: "http://www.w3.org/2000/svg",
@@ -10868,8 +10883,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {NA ||
-              (NA = (
+            {Nm ||
+              (Nm = (
                 <image
                   id="l_copy_14"
                   data-name="l  copy 14"
@@ -10883,13 +10898,13 @@
           </svg>
         );
       }
-      var MA = r.forwardRef(LA),
-        RA =
+      var Mm = r.forwardRef(Lm),
+        Rm =
           (a.p,
           [
             {
               name: "Void",
-              icon: <Ae.e />,
+              icon: <me.e />,
               background: "#67678a",
               color: "#000000",
               description: "No chance of nothing.",
@@ -10901,11 +10916,11 @@
               color: "#ffffff",
               description: "When a team collects 10 Runs, Sun 2 will collect the Runs, and set a Win upon that team.",
             },
-            { name: "Overcast", icon: <Ae.a />, background: "#cfcfcf", color: "#737373", description: "" },
-            { name: "Rainy", icon: <Ae.f />, background: "#348e9e", color: "#0727a8", description: "" },
-            { name: "Sandstorm", icon: <Ae.g />, background: "#877652", color: "#e0dac3", description: "" },
-            { name: "Snowy", icon: <Ae.h />, background: "#68969e", color: "#ffffff", description: "" },
-            { name: "Acidic", icon: <Ae.d />, background: "#92ad58", color: "#235917", description: "" },
+            { name: "Overcast", icon: <me.a />, background: "#cfcfcf", color: "#737373", description: "" },
+            { name: "Rainy", icon: <me.f />, background: "#348e9e", color: "#0727a8", description: "" },
+            { name: "Sandstorm", icon: <me.g />, background: "#877652", color: "#e0dac3", description: "" },
+            { name: "Snowy", icon: <me.h />, background: "#68969e", color: "#ffffff", description: "" },
+            { name: "Acidic", icon: <me.d />, background: "#92ad58", color: "#235917", description: "" },
             {
               name: "Solar Eclipse",
               icon: (
@@ -10922,7 +10937,7 @@
             {
               name: "Glitter",
               icon: (
-                <mA aria-label="A collection of pink and purple circles imitating glitter" role="img" id="Glitter" />
+                <Am aria-label="A collection of pink and purple circles imitating glitter" role="img" id="Glitter" />
               ),
               background: "#ff94ff",
               color: "#ffffff",
@@ -10930,7 +10945,7 @@
             },
             {
               name: "Blooddrain",
-              icon: <mu aria-label="A red cloud with red rain falling from it" role="img" id="Blooddrain" />,
+              icon: <Au aria-label="A red cloud with red rain falling from it" role="img" id="Blooddrain" />,
               background: "#52050f",
               color: "#ffffff",
               description: "A chance of transfusions between players.",
@@ -10993,7 +11008,7 @@
             },
             {
               name: "Coffee 3s",
-              icon: <eA aria-label="A pink and blue coffee cup with steam coming off it" role="img" id="Coffee3s" />,
+              icon: <em aria-label="A pink and blue coffee cup with steam coming off it" role="img" id="Coffee3s" />,
               background: "#5fa9f1",
               color: "#ffffff",
               description: "Pitchers will become Triple Threats.",
@@ -11001,7 +11016,7 @@
             {
               name: "Flooding",
               icon: (
-                <iA
+                <im
                   aria-label="A blue-gray overflowing waterfall with yellow sparkles surrounding it and lightning at the base"
                   role="img"
                   id="Flooding"
@@ -11013,21 +11028,21 @@
             },
             {
               name: "Salmon",
-              icon: <EA aria-label="A salmon" role="img" id="Salmon" />,
+              icon: <Em aria-label="A salmon" role="img" id="Salmon" />,
               background: "#ba7b97",
               color: "#f2c7e3",
               description: "Salmon have been known to swim Upstream.",
             },
             {
               name: "Polarity +",
-              icon: <OA />,
+              icon: <Om />,
               background: "#042e16",
               color: "#d3e3e2",
               description: "Numbers go up.",
             },
             {
               name: "Polarity -",
-              icon: <TA />,
+              icon: <Tm />,
               background: "#3b0422",
               color: "#ff6be6",
               description: "Numbers go down.",
@@ -11056,18 +11071,18 @@
             },
             {
               name: "Jazz",
-              icon: <MA aria-label="A golden saxophone" role="img" id="Jazz" />,
+              icon: <Mm aria-label="A golden saxophone" role="img" id="Jazz" />,
               background: "#570b0b",
               color: "#000",
               description: "louie-ooie-la-la-la or shoo-doo-shoo-bee-ooo-bee",
             },
             { name: "Night", icon: <ee.d />, background: "#000", color: "#ff8d13", description: "Deep dark." },
           ]);
-      function QA(e) {
+      function Qm(e) {
         Object(r.useContext)(D.context).user;
         var t = Object(c.g)(),
           a = e.type,
-          n = RA[a],
+          n = Rm[a],
           i = n.icon,
           o = n.name;
         "Sun 2" === n.name && (o = "Sun Two");
@@ -11076,7 +11091,7 @@
             className="WeatherIcon"
             id={o}
             aria-label={"".concat(o, " Weather")}
-            style={{ color: jA(a), background: WA(a) }}
+            style={{ color: jm(a), background: Wm(a) }}
           >
             <span id="definition" aria-labelledby={o} role="definition" className="sr-only">
               {n.description}
@@ -11099,64 +11114,64 @@
                 className="WeatherIcon"
                 id={o}
                 aria-label={"".concat(o, " Weather")}
-                style={{ color: jA(a), background: WA(a) }}
+                style={{ color: jm(a), background: Wm(a) }}
               >
-                <m className="WeatherIcon" background={t} path={n.path}>
+                <A className="WeatherIcon" background={t} path={n.path}>
                   <span id="definition" aria-labelledby={o} role="definition" className="sr-only">
                     {n.description}
                   </span>
                   {i}
-                </m>
+                </A>
               </div>
             ) : (
               s
             )}
           </ca.a>
         ) : n.link && void 0 !== n.path ? (
-          <m background={t} path={n.path}>
+          <A background={t} path={n.path}>
             {s}
-          </m>
+          </A>
         ) : (
           s
         );
       }
-      function FA(e) {
-        return RA[e].name;
+      function Fm(e) {
+        return Rm[e].name;
       }
-      function jA(e) {
-        return RA[e].color;
+      function jm(e) {
+        return Rm[e].color;
       }
-      function WA(e) {
-        return RA[e].background;
+      function Wm(e) {
+        return Rm[e].background;
       }
-      var UA = function (e) {
+      var Um = function (e) {
           var t = e.event,
             a = (e.entity, e.source, t.metadata.weather);
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 <div className="Events-List-Row">{t.description}</div>
                 <span className="Events-List-Row Events-List-Minor">
-                  <QA type={a} tooltip={!0} />
-                  <span className="Events-Time Events-List-Row-Group">{FA(a)}</span>
+                  <Qm type={a} tooltip={!0} />
+                  <span className="Events-Time Events-List-Row-Group">{Fm(a)}</span>
                 </span>
               </div>
             </l.a.Fragment>
           );
         },
-        GA = l.a.createContext([]),
-        VA = function (e) {
+        Gm = l.a.createContext([]),
+        Vm = function (e) {
           var t = e.children,
             a = Object(c.g)().pathname,
             n = Object(r.useState)([]),
             i = Object(s.a)(n, 2),
             o = i[0],
             u = i[1];
-          function A() {
-            return m.apply(this, arguments);
-          }
           function m() {
-            return (m = Object(g.a)(
+            return A.apply(this, arguments);
+          }
+          function A() {
+            return (A = Object(g.a)(
               f.a.mark(function e() {
                 var t;
                 return f.a.wrap(function (e) {
@@ -11176,20 +11191,20 @@
           }
           return (
             Object(r.useEffect)(function () {
-              A();
+              m();
             }, []),
             Object(r.useEffect)(
               function () {
-                "/search" === a && A();
+                "/search" === a && m();
               },
               [a]
             ),
-            (<GA.Provider value={o}>{t}</GA.Provider>)
+            (<Gm.Provider value={o}>{t}</Gm.Provider>)
           );
         };
-      VA.context = GA;
-      var HA = VA;
-      var zA = function (e) {
+      Vm.context = Gm;
+      var Hm = Vm;
+      var zm = function (e) {
         var t = e.event,
           a = Object(r.useState)(!1),
           n = Object(s.a)(a, 2),
@@ -11198,7 +11213,7 @@
           c = t.metadata;
         return (
           <l.a.Fragment>
-            <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+            <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
               {Zo(t.description)}
               {i
                 ? c.ledger.split("\n").map(function (e) {
@@ -11232,7 +11247,7 @@
           </l.a.Fragment>
         );
       };
-      var YA = function (e) {
+      var Ym = function (e) {
         var t = e.event,
           a = Object(r.useState)(!1),
           n = Object(s.a)(a, 2),
@@ -11242,7 +11257,7 @@
           u = 215 === t.type;
         return (
           <l.a.Fragment>
-            <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+            <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
               {Zo(t.description)}
               <div className="Events-List-Row-Group">
                 <div className="Widget-Log-Ledger">
@@ -11275,7 +11290,7 @@
           </l.a.Fragment>
         );
       };
-      function JA() {
+      function Jm() {
         var e = Object(r.useState)({ current: 0, maximum: 1, recharge: 0 }),
           t = Object(s.a)(e, 2),
           a = t[0],
@@ -11305,10 +11320,10 @@
           Object(r.useEffect)(function () {
             i();
           }, []),
-          (<ZA data={a} />)
+          (<Zm data={a} />)
         );
       }
-      function ZA(e) {
+      function Zm(e) {
         var t = (e.data.current / e.data.maximum) * 100;
         return (
           <ca.a
@@ -11346,32 +11361,32 @@
           </ca.a>
         );
       }
-      var XA,
-        KA = function (e) {
+      var Xm,
+        Km = function (e) {
           var t = e.event,
             a = t.metadata;
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 {Zo(t.description)}
                 <div className="Events-List-Row Events-List-Row-Group" style={{ margin: 0 }}>
-                  <At style={{ width: "50px", height: "50px" }} />
-                  <ZA data={a} />
+                  <mt style={{ width: "50px", height: "50px" }} />
+                  <Zm data={a} />
                 </div>
               </div>
             </l.a.Fragment>
           );
         },
-        qA = function (e) {
+        qm = function (e) {
           var t = e.event,
             a = t.metadata;
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 <div className="Events-List-Row">{t.description}</div>
                 <div className="Events-List-Row Events-List-Minor">
                   <span className="Events-List-Mod Events-List-Row-Group">
-                    <QA type={a.weather} tooltip={!1} />
+                    <Qm type={a.weather} tooltip={!1} />
                   </span>
                   <span className="Events-List-Row-Group">{a.effect}</span>
                 </div>
@@ -11379,27 +11394,27 @@
             </l.a.Fragment>
           );
         },
-        _A = function (e) {
+        _m = function (e) {
           var t = e.event,
             a = Object(c.g)();
           return (
             console.log(t),
             t.season < 11 ? (
               <l.a.Fragment>
-                <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+                <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                   {Zo(t.description)}
                 </div>
               </l.a.Fragment>
             ) : (
               <l.a.Fragment>
-                <m
+                <A
                   background={a}
                   path="/certificate"
                   params={{ event: t }}
-                  className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}
+                  className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}
                 >
                   {Zo(t.description)}
-                </m>
+                </A>
               </l.a.Fragment>
             )
           );
@@ -11411,25 +11426,25 @@
           (e[(e.Baserunning = 3)] = "Baserunning"),
           (e[(e.Combined = 4)] = "Combined"),
           (e[(e.Overall = 5)] = "Overall");
-      })(XA || (XA = {}));
-      function $A(e, t) {
+      })(Xm || (Xm = {}));
+      function $m(e, t) {
         if (void 0 !== e) {
-          for (var a = [], n = 0; n < e.length; n++) a.push(em(e[n], 3, t));
+          for (var a = [], n = 0; n < e.length; n++) a.push(eA(e[n], 3, t));
           return a;
         }
       }
-      function em(e, t, a) {
+      function eA(e, t, a) {
         return (
           <div className="Events-List-Row Events-List-Minor">
             <span className={a ? "Events-List-PositiveText" : "Events-List-NegativeText"}>{a ? "+" : "-"}</span>
             <span className="Events-List-Mod Events-List-Row-Group">
-              <ma id={e} type={ia.Item} />
+              <Aa id={e} type={ia.Item} />
             </span>
             <span className="Events-List-Row-Group">{fa(e)}</span>
           </div>
         );
       }
-      function tm(e, t) {
+      function tA(e, t) {
         return (
           <div className="Events-List-Row Events-List-Minor">
             <span className={t ? "Events-List-PositiveText" : "Events-List-NegativeText"}>{t ? "+" : "-"}</span>
@@ -11437,31 +11452,31 @@
           </div>
         );
       }
-      function am(e) {
+      function aA(e) {
         return xd(5 * e, 1);
       }
-      var nm = function (e) {
+      var nA = function (e) {
           var t = e.event,
             a = t.metadata;
           return (
             <l.a.Fragment>
-              <div className={"Events-List-Desc Events-List-Background-Standard" + wm(t.category)}>
+              <div className={"Events-List-Desc Events-List-Background-Standard" + wA(t.category)}>
                 {Zo(t.description)}
-                {tm(a.itemTradedName, !1)}
-                {$A(a.modsLost, !1)}
-                {tm(a.itemReceivedName, !0)}
-                {$A(a.modsGained, !0)}
+                {tA(a.itemTradedName, !1)}
+                {$m(a.modsLost, !1)}
+                {tA(a.itemReceivedName, !0)}
+                {$m(a.modsGained, !0)}
                 {(function (e) {
                   e.playerItemRatingAfter, e.playerItemRatingBefore;
-                  var t = +Math.abs(am(e.playerItemRatingBefore)).toFixed(2),
-                    a = +Math.abs(am(e.playerItemRatingAfter)).toFixed(2);
+                  var t = +Math.abs(aA(e.playerItemRatingBefore)).toFixed(2),
+                    a = +Math.abs(aA(e.playerItemRatingAfter)).toFixed(2);
                   if (t === a) return;
                   return (
                     <span className="Events-List-Row Events-List-Minor">
                       <span>Overall</span>
                       <span className="Events-List-Row Events-List-Row-Group">
                         <span className="Events-List-Row Events-List-Row-Group">
-                          {am(e.playerRating) + (0 === t ? "" : e.playerItemRatingBefore >= 0 ? " + " : " - ")}
+                          {aA(e.playerRating) + (0 === t ? "" : e.playerItemRatingBefore >= 0 ? " + " : " - ")}
                           <span className={e.playerItemRatingAfter >= 0 ? "Player-Stars-Blue" : "Player-Stars-Red"}>
                             {0 === t ? "" : <l.a.Fragment> {t}</l.a.Fragment>}
                           </span>
@@ -11469,7 +11484,7 @@
                         </span>
                         <ce.b className="Events-List-Row-Group" />
                         <span className="Events-List-Row Events-List-Row-Group ">
-                          {am(e.playerRating) + (0 === a ? "" : e.playerItemRatingAfter >= 0 ? " + " : " - ")}
+                          {aA(e.playerRating) + (0 === a ? "" : e.playerItemRatingAfter >= 0 ? " + " : " - ")}
                           <span className={e.playerItemRatingAfter >= 0 ? "Player-Stars-Blue" : "Player-Stars-Red"}>
                             {0 === a ? "" : <l.a.Fragment> {a}</l.a.Fragment>}
                           </span>
@@ -11483,7 +11498,7 @@
             </l.a.Fragment>
           );
         },
-        rm = (function () {
+        rA = (function () {
           function e() {
             Object(J.a)(this, e);
           }
@@ -11527,7 +11542,7 @@
             e
           );
         })();
-      function lm(e) {
+      function lA(e) {
         var t = e.metadata,
           a = 4 === e.type || t.coinsAfter > t.coinsBefore;
         if (4 === e.type || t.coinsAfter !== t.coinsBefore) {
@@ -11554,7 +11569,7 @@
           );
         }
       }
-      var im = function (e) {
+      var iA = function (e) {
           var t = e.event,
             a = t.description.replace("You", ""),
             n = t.description.split(" ")[0],
@@ -11565,24 +11580,24 @@
                 <div className="Events-List-Row" style={{ display: "block" }}>
                   <span className={"BigDeal-Message-Style-".concat(r)}>{n}</span> {a}
                 </div>
-                {lm(t)}
+                {lA(t)}
               </div>
             </l.a.Fragment>
           );
         },
-        om = function (e) {
+        oA = function (e) {
           var t = e.event,
-            a = rm.DoParse(t.metadata.toast);
+            a = rA.DoParse(t.metadata.toast);
           return (
             <l.a.Fragment>
               <div className="Events-List-Desc Events-List-Background-Standard">
                 <div className="Events-List-Row">{a}</div>
-                {lm(t)}
+                {lA(t)}
               </div>
             </l.a.Fragment>
           );
         };
-      function sm(e) {
+      function sA(e) {
         switch (e) {
           case ae.Lineup:
             return (
@@ -11606,15 +11621,15 @@
         }
         return <l.a.Fragment />;
       }
-      function cm(e) {
+      function cA(e) {
         var t = Object(r.useContext)(ds.context),
-          a = Object(r.useContext)(HA.context),
+          a = Object(r.useContext)(Hm.context),
           n = Object(c.g)(),
           i = Object(r.useState)(e.id),
           o = Object(s.a)(i, 2),
           u = o[0],
-          A = (o[1], Object(r.useState)(!1)),
-          d = Object(s.a)(A, 2),
+          m = (o[1], Object(r.useState)(!1)),
+          d = Object(s.a)(m, 2),
           f = d[0],
           g = d[1];
         return (
@@ -11644,9 +11659,9 @@
                         return t.id === e;
                       });
                       return (
-                        <m background={n} className="Events-List-Links-Link" path={"/player/".concat(e)}>
+                        <A background={n} className="Events-List-Links-Link" path={"/player/".concat(e)}>
                           <ee.e /> {r ? r.name : "Player"}
-                        </m>
+                        </A>
                       );
                     })
                   : null}
@@ -11656,22 +11671,22 @@
                         return t.id === e;
                       });
                       return a > 1 ? null : (
-                        <m background={n} className="Events-List-Links-Link" path={"/team/".concat(e)}>
+                        <A background={n} className="Events-List-Links-Link" path={"/team/".concat(e)}>
                           <ee.e /> {r ? r.nickname : "Team"}
-                        </m>
+                        </A>
                       );
                     })
                   : null}
                 {e.gameTags
                   ? e.gameTags.map(function (e, t) {
                       return (
-                        <m
+                        <A
                           background={n}
                           className="Events-List-Links-Link Events-List-Links-Link-Game"
                           path={"/game/".concat(e)}
                         >
                           <ee.e /> Game
-                        </m>
+                        </A>
                       );
                     })
                   : null}
@@ -11680,9 +11695,9 @@
           )
         );
       }
-      var um,
-        Am,
-        mm = function (e) {
+      var uA,
+        mA,
+        AA = function (e) {
           var t,
             a = e.event,
             n = e.entity,
@@ -11691,7 +11706,7 @@
             s = [];
           switch (a.type) {
             case 0:
-              s.push(<UA entity={n} event={a} source={i} />);
+              s.push(<Um entity={n} event={a} source={i} />);
               break;
             case 11:
               s.push(<is event={a} entity={n} source={i} />);
@@ -11745,7 +11760,7 @@
               s.push(<Jc entity={n} event={a} source={i} />);
               break;
             case 141:
-              s.push(<_A entity={n} event={a} source={i} />);
+              s.push(<_m entity={n} event={a} source={i} />);
               break;
             case 144:
             case 148:
@@ -11778,23 +11793,23 @@
               s.push(<Zc entity={n} event={a} source={i} />);
               break;
             case 209:
-              s.push(<zA entity={n} event={a} source={i} />);
+              s.push(<zm entity={n} event={a} source={i} />);
               break;
             case 214:
             case 215:
-              s.push(<YA entity={n} event={a} source={i} />);
+              s.push(<Ym entity={n} event={a} source={i} />);
               break;
             case 217:
-              s.push(<KA entity={n} event={a} source={i} />);
+              s.push(<Km entity={n} event={a} source={i} />);
               break;
             case 223:
-              s.push(<qA entity={n} event={a} source={i} />);
+              s.push(<qm entity={n} event={a} source={i} />);
               break;
             case 236:
-              s.push(<nm entity={n} event={a} source={i} />);
+              s.push(<nA entity={n} event={a} source={i} />);
               break;
             case 238:
-              s.push(<im entity={n} event={a} source={i} />);
+              s.push(<iA entity={n} event={a} source={i} />);
               break;
             default:
               s.push(<ls event={a} entity={n} source={i} />);
@@ -11808,7 +11823,7 @@
                   nuts={+a.nuts}
                 />
               ),
-            s.push(cm(a)),
+            s.push(cA(a)),
             (<l.a.Fragment>{s}</l.a.Fragment>)
           );
         };
@@ -11821,18 +11836,18 @@
           (e[(e.User = 5)] = "User"),
           (e[(e.Home = 6)] = "Home"),
           (e[(e.Story = 7)] = "Story");
-      })(um || (um = {})),
+      })(uA || (uA = {})),
         (function (e) {
           (e[(e.NewestFirst = 0)] = "NewestFirst"),
             (e[(e.OldestFirst = 1)] = "OldestFirst"),
             (e[(e.Top = 2)] = "Top"),
             (e[(e.Hot = 3)] = "Hot");
-        })(Am || (Am = {}));
-      var dm = function e() {
+        })(mA || (mA = {}));
+      var dA = function e() {
           Object(J.a)(this, e), (this.events = []), (this.loading = !0), (this.noMoreToLoad = !1);
         },
-        fm = { events: [], loading: !0, noMoreToLoad: !1 },
-        gm = (function () {
+        fA = { events: [], loading: !0, noMoreToLoad: !1 },
+        gA = (function () {
           function e() {
             Object(J.a)(this, e), (this.byCategory = new Map());
           }
@@ -11859,7 +11874,7 @@
                     r = this.byCategory.get(e);
                   void 0 === r && (r = new Map());
                   var l = r.get(t);
-                  void 0 === l && (l = new dm()),
+                  void 0 === l && (l = new dA()),
                     (n = l.events).push.apply(n, Object(Z.a)(a)),
                     r.set(t, l),
                     this.byCategory.set(e, r);
@@ -11876,12 +11891,12 @@
                     a.forEach(function (e) {
                       var a = Object(Z.a)(r);
                       switch (e) {
-                        case Am.NewestFirst:
+                        case mA.NewestFirst:
                           a.sort(function (e, t) {
                             return e.created > t.created ? -1 : 1;
                           });
                           break;
-                        case Am.OldestFirst:
+                        case mA.OldestFirst:
                           a.sort(function (e, t) {
                             return e.created < t.created ? -1 : 1;
                           });
@@ -11895,7 +11910,7 @@
             e
           );
         })(),
-        pm = function (e) {
+        pA = function (e) {
           var t,
             a,
             n,
@@ -11903,27 +11918,27 @@
             o,
             c = e.entity,
             u = e.source,
-            A = e.preloadEvents,
-            m = e.defaultCategory,
+            m = e.preloadEvents,
+            A = e.defaultCategory,
             d = e.defaultSort,
             p = e.consolidated,
-            h = Object(r.useRef)(new gm()),
-            E = Object(r.useState)(null !== m && void 0 !== m ? m : -1),
+            h = Object(r.useRef)(new gA()),
+            E = Object(r.useState)(null !== A && void 0 !== A ? A : -1),
             v = Object(s.a)(E, 2),
             b = v[0],
             w = v[1],
-            y = Object(r.useState)(null !== d && void 0 !== d ? d : Am.NewestFirst),
+            y = Object(r.useState)(null !== d && void 0 !== d ? d : mA.NewestFirst),
             B = Object(s.a)(y, 2),
             O = B[0],
             I = B[1],
-            k = Object(r.useState)(fm),
+            k = Object(r.useState)(fA),
             N = Object(s.a)(k, 2),
             T = N[0],
             x = N[1],
             P = null === (t = e.showButtons) || void 0 === t || t,
             D = null === (a = e.showSort) || void 0 === a || a,
             L = null === (n = e.showCategory) || void 0 === n || n,
-            M = null !== (i = e.sortOptions) && void 0 !== i ? i : [Am.Hot, Am.NewestFirst, Am.OldestFirst, Am.Top],
+            M = null !== (i = e.sortOptions) && void 0 !== i ? i : [mA.Hot, mA.NewestFirst, mA.OldestFirst, mA.Top],
             R = null !== (o = e.categoryOptions) && void 0 !== o ? o : [-1, Q.Outcomes, Q.Changes],
             F = Object(r.useContext)(S.context);
           function j() {
@@ -11938,20 +11953,20 @@
                           e.next = 32;
                           break;
                         }
-                        (t = new dm()),
+                        (t = new dA()),
                           (e.t0 = u),
                           (e.next =
-                            e.t0 === um.Player
+                            e.t0 === uA.Player
                               ? 6
-                              : e.t0 === um.Team
+                              : e.t0 === uA.Team
                               ? 10
-                              : e.t0 === um.Game
+                              : e.t0 === uA.Game
                               ? 14
-                              : e.t0 === um.Book
+                              : e.t0 === uA.Book
                               ? 18
-                              : e.t0 === um.Home
+                              : e.t0 === uA.Home
                               ? 22
-                              : e.t0 === um.Story
+                              : e.t0 === uA.Story
                               ? 26
                               : 30);
                         break;
@@ -11968,11 +11983,11 @@
                       case 16:
                         return (a = e.sent), e.abrupt("break", 30);
                       case 18:
-                        return (e.next = 20), _m(O, b);
+                        return (e.next = 20), _A(O, b);
                       case 20:
                         return (a = e.sent), e.abrupt("break", 30);
                       case 22:
-                        return (e.next = 24), _m(O, b);
+                        return (e.next = 24), _A(O, b);
                       case 24:
                         return (a = e.sent), e.abrupt("break", 30);
                       case 26:
@@ -11982,7 +11997,7 @@
                       case 30:
                         (t.loading = !1),
                           void 0 !== a &&
-                            ((t.noMoreToLoad = a.length < 50 || O === Am.Hot), (t.events = a), h.current.Set(b, O, t));
+                            ((t.noMoreToLoad = a.length < 50 || O === mA.Hot), (t.events = a), h.current.Set(b, O, t));
                       case 32:
                         x(t);
                       case 33:
@@ -12021,36 +12036,36 @@
                           x(r),
                           (e.t0 = u),
                           (e.next =
-                            e.t0 === um.Player
+                            e.t0 === uA.Player
                               ? 13
-                              : e.t0 === um.Team
+                              : e.t0 === uA.Team
                               ? 17
-                              : e.t0 === um.Game
+                              : e.t0 === uA.Game
                               ? 21
-                              : e.t0 === um.Book
+                              : e.t0 === uA.Book
                               ? 25
-                              : e.t0 === um.Home
+                              : e.t0 === uA.Home
                               ? 29
                               : 33);
                         break;
                       case 13:
-                        return (e.next = 15), rd(c, O, b, O === Am.Top ? a : t.created);
+                        return (e.next = 15), rd(c, O, b, O === mA.Top ? a : t.created);
                       case 15:
                         return (l = e.sent), e.abrupt("break", 33);
                       case 17:
-                        return (e.next = 19), id(c, O, b, O === Am.Top ? a : t.created);
+                        return (e.next = 19), id(c, O, b, O === mA.Top ? a : t.created);
                       case 19:
                         return (l = e.sent), e.abrupt("break", 33);
                       case 21:
-                        return (e.next = 23), sd(c, O, b, O === Am.Top ? a : t.created);
+                        return (e.next = 23), sd(c, O, b, O === mA.Top ? a : t.created);
                       case 23:
                         return (l = e.sent), e.abrupt("break", 33);
                       case 25:
-                        return (e.next = 27), _m(O, b, O === Am.Top ? a : t.created);
+                        return (e.next = 27), _A(O, b, O === mA.Top ? a : t.created);
                       case 27:
                         return (l = e.sent), e.abrupt("break", 33);
                       case 29:
-                        return (e.next = 31), _m(O, b, O === Am.Top ? a : t.created);
+                        return (e.next = 31), _A(O, b, O === mA.Top ? a : t.created);
                       case 31:
                         return (l = e.sent), e.abrupt("break", 33);
                       case 33:
@@ -12079,7 +12094,7 @@
           }
           if (
             (Object(r.useEffect)(function () {
-              A && h.current.SetPreload(A, R, M);
+              m && h.current.SetPreload(m, R, M);
             }, []),
             Object(r.useEffect)(
               function () {
@@ -12095,7 +12110,7 @@
           var U,
             G,
             V = P ? (
-              <K.a className={"Events-ButtonList" + (u === um.Home ? " Events-ButtonList-Home" : "")}>
+              <K.a className={"Events-ButtonList" + (u === uA.Home ? " Events-ButtonList-Home" : "")}>
                 {L ? (
                   <q.a
                     as="select"
@@ -12152,27 +12167,27 @@
                   >
                     {M.map(function (e, t) {
                       switch (e) {
-                        case Am.Hot:
+                        case mA.Hot:
                           return (
-                            <option value={Am.Hot} key={t}>
+                            <option value={mA.Hot} key={t}>
                               Hot
                             </option>
                           );
-                        case Am.NewestFirst:
+                        case mA.NewestFirst:
                           return (
-                            <option value={Am.NewestFirst} key={t}>
+                            <option value={mA.NewestFirst} key={t}>
                               Newest First
                             </option>
                           );
-                        case Am.OldestFirst:
+                        case mA.OldestFirst:
                           return (
-                            <option value={Am.OldestFirst} key={t}>
+                            <option value={mA.OldestFirst} key={t}>
                               Oldest First
                             </option>
                           );
-                        case Am.Top:
+                        case mA.Top:
                           return (
-                            <option value={Am.Top} key={t}>
+                            <option value={mA.Top} key={t}>
                               Top
                             </option>
                           );
@@ -12186,7 +12201,7 @@
           if (
             ((U = T.loading ? (
               <Bc />
-            ) : A || u === um.Story ? null : (
+            ) : m || u === uA.Story ? null : (
               <div className="Events-Load">
                 {T.noMoreToLoad ? (
                   "End of Feed"
@@ -12202,7 +12217,7 @@
                 )}
               </div>
             )),
-            u === um.Home)
+            u === uA.Home)
           ) {
             var H = null;
             return (
@@ -12236,7 +12251,7 @@
                   </div>
                   {H}
                   <div className="Events-List-Home">
-                    <Em source={u} entity={c} events={T.events} consolidated={p} />
+                    <EA source={u} entity={c} events={T.events} consolidated={p} />
                     {U}
                   </div>
                 </l.a.Fragment>
@@ -12247,13 +12262,13 @@
             <l.a.Fragment>
               <div className="Events">
                 {V}
-                <Em source={u} entity={c} events={T.events} />
+                <EA source={u} entity={c} events={T.events} />
                 {U}
               </div>
             </l.a.Fragment>
           );
         },
-        hm = function (e) {
+        hA = function (e) {
           var t = e.event,
             a = e.subEvents,
             n = t.metadata.children;
@@ -12276,9 +12291,9 @@
           } finally {
             o.f();
           }
-          return <Em events={i} entity="" source={um.ParentEvent} />;
+          return <EA events={i} entity="" source={uA.ParentEvent} />;
         },
-        Em = function (e) {
+        EA = function (e) {
           var t = e.events,
             a = e.entity,
             n = e.source,
@@ -12286,39 +12301,39 @@
           return t ? (
             <ul className="Events-List">
               {t.map(function (e, t) {
-                if (n === um.Game) {
+                if (n === uA.Game) {
                   var i = e.metadata.play;
                   return (
                     <li className="Events-List-Item Events-List-Item-Game" key={t}>
-                      <mm event={e} entity={a} source={n} />
+                      <AA event={e} entity={a} source={n} />
                       <div className="Events-List-Play">{void 0 !== i ? i + 1 : ""}</div>
                     </li>
                   );
                 }
-                return n === um.ParentEvent ? (
+                return n === uA.ParentEvent ? (
                   <li className="Events-List-Item Events-List-Item-ParentEvent" key={t}>
-                    <mm event={e} entity={a} source={n} />
+                    <AA event={e} entity={a} source={n} />
                   </li>
                 ) : (
                   <li
                     className={
                       "Events-List-Item" +
-                      (n === um.Home ? " Events-List-Home-Item" + (r ? " Events-List-Home-Item-Squished" : "") : "")
+                      (n === uA.Home ? " Events-List-Home-Item" + (r ? " Events-List-Home-Item-Squished" : "") : "")
                     }
                     key={t}
                   >
-                    <div className="Events-List-Season">{Bm(e.phase, e.tournament, e.season)}</div>
-                    <div className={Om(e.phase, e.day).length <= 2 ? "Events-List-Date" : "Events-List-Date-Long"}>
-                      {Om(e.phase, e.day)}
+                    <div className="Events-List-Season">{BA(e.phase, e.tournament, e.season)}</div>
+                    <div className={OA(e.phase, e.day).length <= 2 ? "Events-List-Date" : "Events-List-Date-Long"}>
+                      {OA(e.phase, e.day)}
                     </div>
-                    <mm event={e} entity={a} source={n} />
+                    <AA event={e} entity={a} source={n} />
                   </li>
                 );
               })}
             </ul>
           ) : null;
         };
-      function vm(e) {
+      function vA(e) {
         switch (e.type) {
           case 82:
             return "Emergency Alert";
@@ -12327,7 +12342,7 @@
         }
         return null;
       }
-      function bm(e) {
+      function bA(e) {
         if (e.category === Q.Changes) return <$.a />;
         var t = e.metadata.being ? parseInt(e.metadata.being) : -1;
         if (t > -1) return nc(t);
@@ -12339,7 +12354,7 @@
             return e.type <= 15 ? <ee.l /> : <_.Sc />;
         }
       }
-      function wm(e) {
+      function wA(e) {
         var t = e === Q.Game,
           a = e === Q.Changes,
           n = e === Q.Outcomes,
@@ -12357,8 +12372,8 @@
           ? " Events-List-Desc-Abilities"
           : "";
       }
-      var ym = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      function Bm(e, t, a) {
+      var yA = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      function BA(e, t, a) {
         switch (e) {
           case 15:
           case 16:
@@ -12366,9 +12381,9 @@
           case 18:
             return -1 === t ? "CC" : "T";
         }
-        return a <= -95 && a >= -99 ? ym[a + 99] : a >= -94 && a < -1 ? "A" + ym[a + 94] : a + 1;
+        return a <= -95 && a >= -99 ? yA[a + 99] : a >= -94 && a < -1 ? "A" + yA[a + 94] : a + 1;
       }
-      function Om(e, t) {
+      function OA(e, t) {
         switch (e) {
           case 0:
             return "G";
@@ -12381,22 +12396,22 @@
         }
         return (t + 1).toString();
       }
-      var Im,
-        Sm =
+      var IA,
+        SA =
           (null ===
-            (Im = Object({
+            (IA = Object({
               NODE_ENV: "production",
               PUBLIC_URL: "https://d35iw2jmbg6ut8.cloudfront.net",
               WDS_SOCKET_HOST: void 0,
               WDS_SOCKET_PATH: void 0,
               WDS_SOCKET_PORT: void 0,
               FAST_REFRESH: !0,
-            })) || void 0 === Im
+            })) || void 0 === IA
             ? void 0
-            : Im.REACT_APP_API_URL) || "",
-        Cm = 50,
-        km = 200,
-        Nm = function (e) {
+            : IA.REACT_APP_API_URL) || "",
+        CA = 50,
+        kA = 200,
+        NA = function (e) {
           var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
           return fetch(e, {
             method: "POST",
@@ -12409,11 +12424,11 @@
             body: t,
           });
         };
-      function Tm(e) {
-        return xm.apply(this, arguments);
+      function TA(e) {
+        return xA.apply(this, arguments);
       }
-      function xm() {
-        return (xm = Object(g.a)(
+      function xA() {
+        return (xA = Object(g.a)(
           f.a.mark(function e(t) {
             var a;
             return f.a.wrap(
@@ -12422,7 +12437,7 @@
                   switch ((e.prev = e.next)) {
                     case 0:
                       return (
-                        (e.prev = 0), (e.next = 3), fetch("".concat(Sm, "/auth/validate-reset-token?token=").concat(t))
+                        (e.prev = 0), (e.next = 3), fetch("".concat(SA, "/auth/validate-reset-token?token=").concat(t))
                       );
                     case 3:
                       return (a = e.sent), e.abrupt("return", a.status);
@@ -12440,11 +12455,11 @@
           })
         )).apply(this, arguments);
       }
-      function Pm() {
-        return Dm.apply(this, arguments);
+      function PA() {
+        return DA.apply(this, arguments);
       }
-      function Dm() {
-        return (Dm = Object(g.a)(
+      function DA() {
+        return (DA = Object(g.a)(
           f.a.mark(function e() {
             var t, a;
             return f.a.wrap(
@@ -12452,7 +12467,7 @@
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (e.prev = 0), (e.next = 3), fetch("".concat(Sm, "/database/globalEvents"));
+                      return (e.prev = 0), (e.next = 3), fetch("".concat(SA, "/database/globalEvents"));
                     case 3:
                       return (t = e.sent), (e.next = 6), t.json();
                     case 6:
@@ -12471,11 +12486,11 @@
           })
         )).apply(this, arguments);
       }
-      function Lm() {
-        return Mm.apply(this, arguments);
+      function LA() {
+        return MA.apply(this, arguments);
       }
-      function Mm() {
-        return (Mm = Object(g.a)(
+      function MA() {
+        return (MA = Object(g.a)(
           f.a.mark(function e() {
             var t, a;
             return f.a.wrap(
@@ -12483,7 +12498,7 @@
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (e.prev = 0), (e.next = 3), fetch("".concat(Sm, "/database/offseasonSetup"));
+                      return (e.prev = 0), (e.next = 3), fetch("".concat(SA, "/database/offseasonSetup"));
                     case 3:
                       return (t = e.sent), (e.next = 6), t.json();
                     case 6:
@@ -12502,11 +12517,11 @@
           })
         )).apply(this, arguments);
       }
-      function Rm(e) {
-        return Qm.apply(this, arguments);
+      function RA(e) {
+        return QA.apply(this, arguments);
       }
-      function Qm() {
-        return (Qm = Object(g.a)(
+      function QA() {
+        return (QA = Object(g.a)(
           f.a.mark(function e(t) {
             var a, n;
             return f.a.wrap(
@@ -12515,7 +12530,7 @@
                   switch ((e.prev = e.next)) {
                     case 0:
                       return (
-                        (e.prev = 0), (e.next = 3), fetch("".concat(Sm, "/database/offseasonRecap?season=").concat(t))
+                        (e.prev = 0), (e.next = 3), fetch("".concat(SA, "/database/offseasonRecap?season=").concat(t))
                       );
                     case 3:
                       return (a = e.sent), (e.next = 6), a.json();
@@ -12535,11 +12550,11 @@
           })
         )).apply(this, arguments);
       }
-      function Fm() {
-        return jm.apply(this, arguments);
+      function FA() {
+        return jA.apply(this, arguments);
       }
-      function jm() {
-        return (jm = Object(g.a)(
+      function jA() {
+        return (jA = Object(g.a)(
           f.a.mark(function e() {
             var t, a;
             return f.a.wrap(
@@ -12547,7 +12562,7 @@
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (e.prev = 0), (e.next = 3), fetch("".concat(Sm, "/database/shopSetup"));
+                      return (e.prev = 0), (e.next = 3), fetch("".concat(SA, "/database/shopSetup"));
                     case 3:
                       return (t = e.sent), (e.next = 6), t.json();
                     case 6:
@@ -12566,11 +12581,11 @@
           })
         )).apply(this, arguments);
       }
-      function Wm(e) {
-        return Um.apply(this, arguments);
+      function WA(e) {
+        return UA.apply(this, arguments);
       }
-      function Um() {
-        return (Um = Object(g.a)(
+      function UA() {
+        return (UA = Object(g.a)(
           f.a.mark(function e(t) {
             var a, n;
             return f.a.wrap(
@@ -12578,7 +12593,7 @@
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (e.prev = 0), (e.next = 3), fetch("".concat(Sm, "/database/eventResults?ids=").concat(t));
+                      return (e.prev = 0), (e.next = 3), fetch("".concat(SA, "/database/eventResults?ids=").concat(t));
                     case 3:
                       return (a = e.sent), (e.next = 6), a.json();
                     case 6:
@@ -12597,11 +12612,11 @@
           })
         )).apply(this, arguments);
       }
-      function Gm(e) {
-        return Vm.apply(this, arguments);
+      function GA(e) {
+        return VA.apply(this, arguments);
       }
-      function Vm() {
-        return (Vm = Object(g.a)(
+      function VA() {
+        return (VA = Object(g.a)(
           f.a.mark(function e(t) {
             var a, n;
             return f.a.wrap(
@@ -12609,7 +12624,7 @@
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (e.prev = 0), (e.next = 3), fetch("".concat(Sm, "/database/bonusResults?ids=").concat(t));
+                      return (e.prev = 0), (e.next = 3), fetch("".concat(SA, "/database/bonusResults?ids=").concat(t));
                     case 3:
                       return (a = e.sent), (e.next = 6), a.json();
                     case 6:
@@ -12628,11 +12643,11 @@
           })
         )).apply(this, arguments);
       }
-      function Hm(e) {
-        return zm.apply(this, arguments);
+      function HA(e) {
+        return zA.apply(this, arguments);
       }
-      function zm() {
-        return (zm = Object(g.a)(
+      function zA() {
+        return (zA = Object(g.a)(
           f.a.mark(function e(t) {
             var a, n;
             return f.a.wrap(
@@ -12640,7 +12655,7 @@
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (e.prev = 0), (e.next = 3), fetch("".concat(Sm, "/database/decreeResults?ids=").concat(t));
+                      return (e.prev = 0), (e.next = 3), fetch("".concat(SA, "/database/decreeResults?ids=").concat(t));
                     case 3:
                       return (a = e.sent), (e.next = 6), a.json();
                     case 6:
@@ -12659,11 +12674,11 @@
           })
         )).apply(this, arguments);
       }
-      function Ym(e) {
-        return Jm.apply(this, arguments);
+      function YA(e) {
+        return JA.apply(this, arguments);
       }
-      function Jm() {
-        return (Jm = Object(g.a)(
+      function JA() {
+        return (JA = Object(g.a)(
           f.a.mark(function e(t) {
             var a, n;
             return f.a.wrap(
@@ -12671,7 +12686,7 @@
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (e.prev = 0), (e.next = 3), fetch("".concat(Sm, "/database/players?ids=").concat(t));
+                      return (e.prev = 0), (e.next = 3), fetch("".concat(SA, "/database/players?ids=").concat(t));
                     case 3:
                       return (a = e.sent), (e.next = 6), a.json();
                     case 6:
@@ -12690,11 +12705,11 @@
           })
         )).apply(this, arguments);
       }
-      function Zm(e) {
-        return Xm.apply(this, arguments);
+      function ZA(e) {
+        return XA.apply(this, arguments);
       }
-      function Xm() {
-        return (Xm = Object(g.a)(
+      function XA() {
+        return (XA = Object(g.a)(
           f.a.mark(function e(t) {
             var a, n;
             return f.a.wrap(
@@ -12702,7 +12717,7 @@
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (e.prev = 0), (e.next = 3), fetch("".concat(Sm, "/database/items?ids=").concat(t));
+                      return (e.prev = 0), (e.next = 3), fetch("".concat(SA, "/database/items?ids=").concat(t));
                     case 3:
                       return (a = e.sent), (e.next = 6), a.json();
                     case 6:
@@ -12721,11 +12736,11 @@
           })
         )).apply(this, arguments);
       }
-      function Km(e) {
-        return qm.apply(this, arguments);
+      function KA(e) {
+        return qA.apply(this, arguments);
       }
-      function qm() {
-        return (qm = Object(g.a)(
+      function qA() {
+        return (qA = Object(g.a)(
           f.a.mark(function e(t) {
             var a, n;
             return f.a.wrap(
@@ -12734,7 +12749,7 @@
                   switch ((e.prev = e.next)) {
                     case 0:
                       return (
-                        (e.prev = 0), (e.next = 3), fetch("".concat(Sm, "/database/playersByItemId?id=").concat(t))
+                        (e.prev = 0), (e.next = 3), fetch("".concat(SA, "/database/playersByItemId?id=").concat(t))
                       );
                     case 3:
                       return (a = e.sent), (e.next = 6), a.json();
@@ -12754,11 +12769,11 @@
           })
         )).apply(this, arguments);
       }
-      function _m(e) {
-        return $m.apply(this, arguments);
+      function _A(e) {
+        return $A.apply(this, arguments);
       }
-      function $m() {
-        return ($m = Object(g.a)(
+      function $A() {
+        return ($A = Object(g.a)(
           f.a.mark(function e(t) {
             var a,
               n,
@@ -12781,9 +12796,9 @@
                         (r = -1 != n ? "&start=".concat(n.toString()) : ""),
                         (l = a >= 0 ? "&category=".concat(a) : ""),
                         (i = "&sort=".concat(t)),
-                        (o = "&limit=".concat(t === Am.Hot ? km : Cm)),
+                        (o = "&limit=".concat(t === mA.Hot ? kA : CA)),
                         (e.next = 9),
-                        fetch("".concat(Sm, "/database/feed/global?").concat(o).concat(i).concat(l).concat(r), {
+                        fetch("".concat(SA, "/database/feed/global?").concat(o).concat(i).concat(l).concat(r), {
                           credentials: "include",
                         })
                       );
@@ -12820,23 +12835,23 @@
               s,
               c,
               u,
-              A = arguments;
+              m = arguments;
             return f.a.wrap(
               function (e) {
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
                       return (
-                        (a = A.length > 1 && void 0 !== A[1] ? A[1] : 0),
-                        (n = A.length > 2 && void 0 !== A[2] ? A[2] : -1),
-                        (r = A.length > 3 && void 0 !== A[3] ? A[3] : -1),
+                        (a = m.length > 1 && void 0 !== m[1] ? m[1] : 0),
+                        (n = m.length > 2 && void 0 !== m[2] ? m[2] : -1),
+                        (r = m.length > 3 && void 0 !== m[3] ? m[3] : -1),
                         (e.prev = 3),
                         (l = -1 != r ? "&start=".concat(r.toString()) : ""),
                         (i = "&sort=".concat(a)),
                         (o = n >= 0 ? "&category=".concat(n) : ""),
-                        (s = "&limit=".concat(a === Am.Hot ? km : Cm)),
+                        (s = "&limit=".concat(a === mA.Hot ? kA : CA)),
                         (e.next = 10),
-                        fetch("".concat(Sm, "/api/userfeed/?").concat(s).concat(l).concat(i).concat(o), {
+                        fetch("".concat(SA, "/api/userfeed/?").concat(s).concat(l).concat(i).concat(o), {
                           credentials: "include",
                         })
                       );
@@ -12873,7 +12888,7 @@
                       return (
                         (e.prev = 0),
                         (e.next = 3),
-                        fetch("".concat(Sm, "/database/feed/story?id=").concat(t), { credentials: "include" })
+                        fetch("".concat(SA, "/database/feed/story?id=").concat(t), { credentials: "include" })
                       );
                     case 3:
                       return (a = e.sent), (e.next = 6), a.json();
@@ -12907,23 +12922,23 @@
               s,
               c,
               u,
-              A = arguments;
+              m = arguments;
             return f.a.wrap(
               function (e) {
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
                       return (
-                        (n = A.length > 2 && void 0 !== A[2] ? A[2] : -1),
-                        (r = A.length > 3 && void 0 !== A[3] ? A[3] : -1),
+                        (n = m.length > 2 && void 0 !== m[2] ? m[2] : -1),
+                        (r = m.length > 3 && void 0 !== m[3] ? m[3] : -1),
                         (e.prev = 2),
                         (l = -1 != r ? "&start=".concat(r.toString()) : ""),
                         (i = n >= 0 ? "&category=".concat(n) : ""),
                         (o = "&sort=".concat(a)),
-                        (s = "&limit=".concat(a === Am.Hot ? km : Cm)),
+                        (s = "&limit=".concat(a === mA.Hot ? kA : CA)),
                         (e.next = 9),
                         fetch(
-                          "".concat(Sm, "/database/feed/player?id=").concat(t).concat(s).concat(o).concat(i).concat(l),
+                          "".concat(SA, "/database/feed/player?id=").concat(t).concat(s).concat(o).concat(i).concat(l),
                           { credentials: "include" }
                         )
                       );
@@ -12959,23 +12974,23 @@
               s,
               c,
               u,
-              A = arguments;
+              m = arguments;
             return f.a.wrap(
               function (e) {
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
                       return (
-                        (n = A.length > 2 && void 0 !== A[2] ? A[2] : -1),
-                        (r = A.length > 3 && void 0 !== A[3] ? A[3] : -1),
+                        (n = m.length > 2 && void 0 !== m[2] ? m[2] : -1),
+                        (r = m.length > 3 && void 0 !== m[3] ? m[3] : -1),
                         (e.prev = 2),
                         (l = -1 != r ? "&start=".concat(r.toString()) : ""),
                         (i = n >= 0 ? "&category=".concat(n) : ""),
                         (o = "&sort=".concat(a)),
-                        (s = "&limit=".concat(a === Am.Hot ? km : Cm)),
+                        (s = "&limit=".concat(a === mA.Hot ? kA : CA)),
                         (e.next = 9),
                         fetch(
-                          "".concat(Sm, "/database/feed/team?id=").concat(t).concat(s).concat(o).concat(i).concat(l),
+                          "".concat(SA, "/database/feed/team?id=").concat(t).concat(s).concat(o).concat(i).concat(l),
                           { credentials: "include" }
                         )
                       );
@@ -13024,7 +13039,7 @@
                         (i = n >= 0 ? "&category=".concat(n) : ""),
                         (o = "&sort=".concat(a)),
                         (e.next = 8),
-                        fetch("".concat(Sm, "/database/feed/game?id=").concat(t).concat(o).concat(i).concat(l), {
+                        fetch("".concat(SA, "/database/feed/game?id=").concat(t).concat(o).concat(i).concat(l), {
                           credentials: "include",
                         })
                       );
@@ -13047,10 +13062,10 @@
         )).apply(this, arguments);
       }
       function ud(e, t) {
-        return Ad.apply(this, arguments);
+        return md.apply(this, arguments);
       }
-      function Ad() {
-        return (Ad = Object(g.a)(
+      function md() {
+        return (md = Object(g.a)(
           f.a.mark(function e(t, a) {
             var n, r;
             return f.a.wrap(
@@ -13061,7 +13076,7 @@
                       return (
                         (e.prev = 0),
                         (e.next = 3),
-                        fetch("".concat(Sm, "/database/feedbyphase?phase=").concat(a, "&season=").concat(t), {
+                        fetch("".concat(SA, "/database/feedbyphase?phase=").concat(a, "&season=").concat(t), {
                           credentials: "include",
                         })
                       );
@@ -13083,7 +13098,7 @@
           })
         )).apply(this, arguments);
       }
-      function md(e) {
+      function Ad(e) {
         return dd.apply(this, arguments);
       }
       function dd() {
@@ -13098,7 +13113,7 @@
                       return (
                         (e.prev = 0),
                         (e.next = 3),
-                        fetch("".concat(Sm, "/database/renovations?ids=").concat(t), { credentials: "include" })
+                        fetch("".concat(SA, "/database/renovations?ids=").concat(t), { credentials: "include" })
                       );
                     case 3:
                       return (a = e.sent), (e.next = 6), a.json();
@@ -13130,7 +13145,7 @@
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (e.prev = 0), (e.next = 3), fetch("".concat(Sm, "/database/giftProgress"));
+                      return (e.prev = 0), (e.next = 3), fetch("".concat(SA, "/database/giftProgress"));
                     case 3:
                       return (t = e.sent), (e.next = 6), t.json();
                     case 6:
@@ -13164,7 +13179,7 @@
                       return (
                         (e.prev = 0),
                         (e.next = 3),
-                        fetch("".concat(Sm, "/database/renovationProgress?id=").concat(t), { credentials: "include" })
+                        fetch("".concat(SA, "/database/renovationProgress?id=").concat(t), { credentials: "include" })
                       );
                     case 3:
                       return (a = e.sent), (e.next = 6), a.json();
@@ -13197,7 +13212,7 @@
                   switch ((e.prev = e.next)) {
                     case 0:
                       return (
-                        (e.prev = 0), (e.next = 3), fetch("".concat(Sm, "/database/teamElectionStats?id=").concat(t))
+                        (e.prev = 0), (e.next = 3), fetch("".concat(SA, "/database/teamElectionStats?id=").concat(t))
                       );
                     case 3:
                       return (a = e.sent), (e.next = 6), a.json();
@@ -13230,7 +13245,7 @@
                   switch ((e.prev = e.next)) {
                     case 0:
                       return (
-                        (e.prev = 0), (e.next = 3), fetch("".concat(Sm, "/database/getPreviousChamp?season=").concat(t))
+                        (e.prev = 0), (e.next = 3), fetch("".concat(SA, "/database/getPreviousChamp?season=").concat(t))
                       );
                     case 3:
                       return (a = e.sent), (e.next = 6), a.json();
@@ -13262,7 +13277,7 @@
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (e.prev = 0), (e.next = 3), fetch("".concat(Sm, "/database/sunsun"));
+                      return (e.prev = 0), (e.next = 3), fetch("".concat(SA, "/database/sunsun"));
                     case 3:
                       return (t = e.sent), (e.next = 6), t.json();
                     case 6:
@@ -13293,7 +13308,7 @@
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (e.prev = 0), (e.next = 3), fetch("".concat(Sm, "/database/playerNamesIds"));
+                      return (e.prev = 0), (e.next = 3), fetch("".concat(SA, "/database/playerNamesIds"));
                     case 3:
                       return (t = e.sent), (e.next = 6), t.json();
                     case 6:
@@ -13321,18 +13336,18 @@
             o = Object(s.a)(i, 2),
             c = o[0],
             u = o[1];
-          function A() {
-            return m.apply(this, arguments);
-          }
           function m() {
-            return (m = Object(g.a)(
+            return A.apply(this, arguments);
+          }
+          function A() {
+            return (A = Object(g.a)(
               f.a.mark(function e() {
                 var t;
                 return f.a.wrap(function (e) {
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        return (e.next = 2), Fm();
+                        return (e.next = 2), FA();
                       case 2:
                         (t = e.sent), u(t);
                       case 4:
@@ -13345,11 +13360,11 @@
           }
           return (
             Object(r.useEffect)(function () {
-              A();
+              m();
             }, []),
             Object(r.useEffect)(
               function () {
-                A();
+                m();
               },
               [null === (t = n.sim) || void 0 === t ? void 0 : t.menu]
             ),
@@ -13499,34 +13514,34 @@
             }),
               (l = u);
           } else if ("inSubleague" === r) {
-            var A = "";
+            var m = "";
             e.divisions.map(function (e) {
               o.includes(e.id) &&
                 e.teams.find(function (e) {
                   return e === a;
                 }) &&
-                (A = e.id);
+                (m = e.id);
             }),
               e.subleagues.map(function (e) {
                 i.includes(e.id) &&
                   e.divisions.find(function (e) {
-                    return e === A;
+                    return e === m;
                   }) &&
                   (o = e.divisions);
               });
-            var m = [];
+            var A = [];
             if (
               (e.divisions.map(function (e) {
-                o.includes(e.id) && (m = m.concat(e.teams));
+                o.includes(e.id) && (A = A.concat(e.teams));
               }),
               n)
             ) {
-              var d = m.indexOf(a);
-              d > -1 && m.splice(d, 1);
+              var d = A.indexOf(a);
+              d > -1 && A.splice(d, 1);
             }
             var f = [];
             e.teams.map(function (e) {
-              m.includes(e.id) && f.push(e);
+              A.includes(e.id) && f.push(e);
             }),
               (l = f);
           } else if ("oppSubleague" === r) {
@@ -13655,14 +13670,14 @@
                         items: i.items,
                       });
                 },
-                A = 0;
-              A < e.rotation.length;
-              A++
+                m = 0;
+              m < e.rotation.length;
+              m++
             )
-              u(A);
+              u(m);
           if ("shadows" === t || "any" === t)
             for (
-              var m = function (t) {
+              var A = function (t) {
                   var i = a.find(function (a) {
                     return e.shadows[t] === a.id;
                   });
@@ -13691,7 +13706,7 @@
               d < e.shadows.length;
               d++
             )
-              m(d);
+              A(d);
         }
         return o;
       }
@@ -13953,7 +13968,7 @@
         }
         return r;
       }
-      function Af(e, t) {
+      function mf(e, t) {
         var a = e.title,
           n = e.titleId,
           l = uf(e, sf);
@@ -13988,8 +14003,8 @@
           </svg>
         );
       }
-      var mf,
-        df = r.forwardRef(Af),
+      var Af,
+        df = r.forwardRef(mf),
         ff = (a.p, ["title", "titleId"]);
       function gf() {
         return (gf =
@@ -14042,8 +14057,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {mf ||
-              (mf = (
+            {Af ||
+              (Af = (
                 <image
                   id="_01-Rodeo_B"
                   data-name="01-Rodeo_B"
@@ -14574,7 +14589,7 @@
         }
         return r;
       }
-      function Ag(e, t) {
+      function mg(e, t) {
         var a = e.title,
           n = e.titleId,
           l = ug(e, sg);
@@ -14609,8 +14624,8 @@
           </svg>
         );
       }
-      var mg,
-        dg = r.forwardRef(Ag),
+      var Ag,
+        dg = r.forwardRef(mg),
         fg = (a.p, ["title", "titleId"]);
       function gg() {
         return (gg =
@@ -14663,8 +14678,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {mg ||
-              (mg = (
+            {Ag ||
+              (Ag = (
                 <image
                   id="_06-Silverada_A"
                   data-name="06-Silverada_A"
@@ -15170,7 +15185,7 @@
       var sp = function (e) {
           return (
             <div className={up(e.style)} aria-label={e.stadium.nickname} style={{ background: e.stadium.mainColor }}>
-              <div className="Team-Stadium-IconA" aria-hidden={!0} style={{ filter: Ap(e.stadium.secondaryColor) }}>
+              <div className="Team-Stadium-IconA" aria-hidden={!0} style={{ filter: mp(e.stadium.secondaryColor) }}>
                 {(function (e) {
                   switch (e) {
                     case 0:
@@ -15195,7 +15210,7 @@
                   return <ce.d />;
                 })(e.index)}
               </div>
-              <div className="Team-Stadium-IconB" aria-hidden={!0} style={{ filter: Ap(e.stadium.tertiaryColor) }}>
+              <div className="Team-Stadium-IconB" aria-hidden={!0} style={{ filter: mp(e.stadium.tertiaryColor) }}>
                 {(function (e) {
                   switch (e) {
                     case 0:
@@ -15239,7 +15254,7 @@
         }
         return "";
       }
-      function Ap(e) {
+      function mp(e) {
         switch (e) {
           case "#ab8287":
             return "brightness(0) saturate(100%) invert(75%) sepia(9%) saturate(1312%) hue-rotate(304deg) brightness(75%) contrast(69%)";
@@ -15341,7 +15356,7 @@
             return "";
         }
       }
-      var mp = function (e) {
+      var Ap = function (e) {
         var t = e.stadium;
         return void 0 === t || null === t.model ? (
           <cp style={e.style} stadium={e.stadium} />
@@ -15448,26 +15463,26 @@
                 ) : void 0 !== o.snacks.Max_Bet ? (
                   o.coins ? (
                     <Oc.a className="Widget-Button" variant="success">
-                      <m background={p} path={"/bet/".concat(n.id)}>
+                      <A background={p} path={"/bet/".concat(n.id)}>
                         Place a Bet
-                      </m>
+                      </A>
                     </Oc.a>
                   ) : (
                     <Oc.a className="Widget-Button" variant="secondary" disabled={!0}>
-                      <A.b to={{ pathname: "/shop/".concat(ne.BEG) }}>No Coins</A.b>
+                      <m.b to={{ pathname: "/shop/".concat(ne.BEG) }}>No Coins</m.b>
                     </Oc.a>
                   )
                 ) : (
-                  <mc
+                  <Ac
                     hover={<strong>Snake Oil is required to bet on games.</strong>}
                     id="tooltip-stadium"
                     placement="top"
                     children={
-                      <A.b to={{ pathname: "/shop/".concat(ne.MAX_BET) }}>
+                      <m.b to={{ pathname: "/shop/".concat(ne.MAX_BET) }}>
                         <Oc.a className="Widget-Button" variant="secondary" disabled={!0}>
                           No Snake Oil
                         </Oc.a>
-                      </A.b>
+                      </m.b>
                     }
                   />
                 )}
@@ -15489,7 +15504,7 @@
             return e.id === n.stadiumId;
           });
           P &&
-            ((T = <mp stadium={P} style={ip.GameWidget} />),
+            ((T = <Ap stadium={P} style={ip.GameWidget} />),
             (x = P.nickname),
             (N = (
               <div className="GameWidget-Upcoming-Body">
@@ -15608,7 +15623,7 @@
                     );
                   var r = e.state.postseason.bracket;
                   return 0 === r ? (
-                    <mc
+                    <Ac
                       hover={<strong>Overbracket</strong>}
                       id="tooltip-top"
                       placement="top"
@@ -15624,7 +15639,7 @@
                       }
                     />
                   ) : 1 === r ? (
-                    <mc
+                    <Ac
                       hover={<strong>Underbracket</strong>}
                       id="tooltip-top"
                       placement="top"
@@ -15701,9 +15716,9 @@
           o = e.lightMode,
           s = e.index,
           u = e.stadiumSection,
-          A = e.betSection;
+          m = e.betSection;
         Object(c.g)();
-        function m() {
+        function A() {
           return n.homeScore > n.awayScore ? n.homeTeam : n.awayTeam;
         }
         function d() {
@@ -15736,7 +15751,7 @@
             t.outsNeeded - 1 === t.outs &&
             t.strikesNeeded - 1 === t.strikes;
         if (t.complete) {
-          var w = m() === n.homeTeam ? n.homeOdds - n.awayOdds : n.awayOdds - n.homeOdds;
+          var w = A() === n.homeTeam ? n.homeOdds - n.awayOdds : n.awayOdds - n.homeOdds;
           return (
             <div className="GameWidget-Outcome" role="list" aria-label="Outcomes">
               <div className="GameWidget-Outcome-Blurb">
@@ -15813,7 +15828,7 @@
                     {p(a.targets[0])}
                   </span>
                    and{" "}
-                  {m() == a.targets[0] ? (
+                  {A() == a.targets[0] ? (
                     <span>
                       won{" "}
                       <span className="GameWidget-Outcome-Callout">
@@ -15878,7 +15893,7 @@
               <div className="GameWidget-Upcoming-InfoBody">
                 <Op data={n} metaInfo={i} lightMode={o} />
                 <div className="GameWidget-Upcoming-Body">
-                  <Ae.b className="GameWidget-Upcoming-Icon" />
+                  <me.b className="GameWidget-Upcoming-Icon" />
                   <div className="GameWidget-Upcoming-Label" aria-hidden="true">
                     WEATHER
                   </div>
@@ -15886,11 +15901,11 @@
                     <span
                       className="GameWidget-Upcoming-WeatherLabel"
                       aria-hidden="true"
-                      aria-label={"Sun 2" === FA(t.weather) ? "Sun Two" : ""}
+                      aria-label={"Sun 2" === Fm(t.weather) ? "Sun Two" : ""}
                     >
-                      {FA(t.weather)}
+                      {Fm(t.weather)}
                     </span>
-                    <QA type={t.weather} tooltip={!0} />
+                    <Qm type={t.weather} tooltip={!0} />
                   </div>
                 </div>
                 {u}
@@ -15901,7 +15916,7 @@
                 Chances of Winning
               </div>
               <vp data={n} lightMode={o} />
-              <div className="GameWidget-Upcoming-BetButtons">{A}</div>
+              <div className="GameWidget-Upcoming-BetButtons">{m}</div>
             </div>
           </l.a.Fragment>
         );
@@ -15928,7 +15943,7 @@
               {t}
               <div className="Widget-StadiumLabel">
                 {a ? (
-                  <mc
+                  <Ac
                     hover={<strong>{n}</strong>}
                     id="tooltip-stadium"
                     placement="top"
@@ -15938,7 +15953,7 @@
               </div>
               {i ? (
                 <div className="Widget-State">
-                  <mc
+                  <Ac
                     hover={<strong>Holiday Inning</strong>}
                     id="tooltip-stadium"
                     placement="top"
@@ -15952,8 +15967,8 @@
               ) : null}
               {o ? (
                 <div className="Widget-State">
-                  <m background={u} path={"/item/".concat(o.itemId)}>
-                    <mc
+                  <A background={u} path={"/item/".concat(o.itemId)}>
+                    <Ac
                       hover={
                         <l.a.Fragment>
                           <strong>Prize Match</strong>
@@ -15969,7 +15984,7 @@
                         </div>
                       }
                     />
-                  </m>
+                  </A>
                 </div>
               ) : null}
             </div>
@@ -16006,7 +16021,7 @@
           o = e.light,
           s = e.partyTime,
           u = e.record,
-          A = e.lightMode,
+          m = e.lightMode,
           d = e.isPostseason,
           f = e.odds,
           g = e.score,
@@ -16014,7 +16029,7 @@
           h = e.betsSection,
           E = Object(c.g)();
         return (
-          <m background={E} path={"/team/".concat(t)} className="GameWidget-ScoreLine">
+          <A background={E} path={"/team/".concat(t)} className="GameWidget-ScoreLine">
             <div className="GameWidget-ScoreTeamColorBar" aria-hidden={!0} style={{ background: a }}>
               {Wd(r)}
             </div>
@@ -16022,10 +16037,10 @@
               <div
                 className="GameWidget-ScoreName"
                 style={{
-                  color: A ? Td(a) : n,
-                  background: A ? n : "none",
-                  padding: A ? "2px 8px" : "initial",
-                  lineHeight: A ? "1.6rem" : "initial",
+                  color: m ? Td(a) : n,
+                  background: m ? n : "none",
+                  padding: m ? "2px 8px" : "initial",
+                  lineHeight: m ? "1.6rem" : "initial",
                 }}
               >
                 {i}
@@ -16050,7 +16065,7 @@
                 <div
                   className="GameWidget-WinChance"
                   aria-label={"".concat(Math.round(100 * f), "% Chance of Winning")}
-                  style={{ color: A ? "#000000" : n }}
+                  style={{ color: m ? "#000000" : n }}
                 >
                   {Math.round(100 * f)}%
                 </div>
@@ -16060,7 +16075,7 @@
             <div className="GameWidget-ScoreNumber" aria-label={"".concat(g, " Runs")} style={p}>
               {g}
             </div>
-          </m>
+          </A>
         );
       }
       function vp(e) {
@@ -16195,16 +16210,16 @@
           </div>
         );
       }
-      function wp(e, t, a, n, r, i, o, s, c, u, A) {
+      function wp(e, t, a, n, r, i, o, s, c, u, m) {
         return (
-          <mc
+          <Ac
             hover={
               <l.a.Fragment>
                 <strong>{t}</strong> <ga id={a} />
               </l.a.Fragment>
             }
-            id={"tooltip-".concat(A)}
-            placement={A}
+            id={"tooltip-".concat(m)}
+            placement={m}
             children={
               <g
                 aria-label={"".concat(t ? "First Base, ".concat(t, " On").concat(a ? " With ".concat(a) : "") : "")}
@@ -16231,8 +16246,8 @@
           s = e.awayColor,
           c = e.homeEmoji,
           u = e.awayEmoji,
-          A = e.lightMode,
-          m = "",
+          m = e.lightMode,
+          A = "",
           d = "",
           f = "",
           g = "",
@@ -16244,7 +16259,7 @@
           w = "";
         return (
           t
-            ? ((m = a.name),
+            ? ((A = a.name),
               (d = i.name),
               (f = a.mod),
               (g = i.mod),
@@ -16254,7 +16269,7 @@
               (v = c),
               (b = a.id),
               (w = i.id))
-            : ((m = n.name),
+            : ((A = n.name),
               (d = r.name),
               (f = n.mod),
               (g = r.mod),
@@ -16266,7 +16281,7 @@
               (w = r.id)),
           (
             <ul className="Widget-AtBat" aria-label="Current Pitcher and Batter">
-              <Bp playerType="Pitching" name={m} id={b} mod={f} color={h} emoji={v} lightMode={A} noPlayer="" />
+              <Bp playerType="Pitching" name={A} id={b} mod={f} color={h} emoji={v} lightMode={m} noPlayer="" />
               <Bp
                 playerType="Batting"
                 name={d}
@@ -16274,7 +16289,7 @@
                 mod={g}
                 color={p}
                 emoji={E}
-                lightMode={A}
+                lightMode={m}
                 noPlayer="No One at Bat"
               />
             </ul>
@@ -16290,7 +16305,7 @@
           o = e.emoji,
           s = e.lightMode,
           u = e.noPlayer,
-          A = Object(c.g)();
+          m = Object(c.g)();
         return (
           <li className="Widget-PlayerLine" role="text">
             <div className={"Widget-PlayerStatusIcon Widget-PlayerStatusIcon--".concat(t)} aria-label={t} />
@@ -16303,9 +16318,9 @@
                 style={{ background: Nd(i, s ? 0.25 : 0.5) }}
               >
                 {a ? (
-                  <m background={A} path={"/player/".concat(n)} className="Widget-PlayerLineName">
+                  <A background={m} path={"/player/".concat(n)} className="Widget-PlayerLineName">
                     {Wd(o)} {a}
-                  </m>
+                  </A>
                 ) : (
                   <div className="Widget-PlayerLineName" role="text" aria-label={u}>
                     -
@@ -16358,10 +16373,10 @@
         return (
           <div className="Widget-PlayerLine" role="text">
             <div className="GameWidget-Upcoming-Pitchers-Wrapper" style={{ background: Nd(n, o ? 0.25 : 0.5) }}>
-              <m background={s} path={"/player/".concat(a)} className="Widget-PlayerLineName">
+              <A background={s} path={"/player/".concat(a)} className="Widget-PlayerLineName">
                 {Wd(r)} {t}
                 <div className="sr-only" aria-label={"for the " + i} role="text" />
-              </m>
+              </A>
             </div>
           </div>
         );
@@ -16406,7 +16421,7 @@
             <div className={"Widget-Status Widget-Status--".concat(a)} aria-label={n} role="text">
               {t}
             </div>
-            {e.started ? <QA type={e.weather} tooltip={!0} /> : null}
+            {e.started ? <Qm type={e.weather} tooltip={!0} /> : null}
           </div>
         );
       }
@@ -16536,10 +16551,10 @@
             o = e.className,
             c = e.buttonClassname,
             u = e.handleClick,
-            A = Object(r.useState)(!1),
-            m = Object(s.a)(A, 2),
-            d = m[0],
-            f = m[1],
+            m = Object(r.useState)(!1),
+            A = Object(s.a)(m, 2),
+            d = A[0],
+            f = A[1],
             g = Object(r.useState)(!1),
             p = Object(s.a)(g, 2),
             h = p[0],
@@ -16725,16 +16740,16 @@
             c = o[0],
             u = o[1];
           Object(r.useEffect)(function () {
-            window.addEventListener("scroll", m);
+            window.addEventListener("scroll", A);
           }, []),
             Object(r.useEffect)(function () {
               var e = window.matchMedia("(max-width: 1080px)");
-              e.addListener(A), A(e);
+              e.addListener(m), m(e);
             }, []);
-          var A = function (e) {
+          var m = function (e) {
               e.matches ? u(!0) : u(!1);
             },
-            m = function () {
+            A = function () {
               window.pageYOffset > 550 ? n(!0) : n(!1);
             };
           return (
@@ -16762,8 +16777,8 @@
             i = (Object(c.f)(), Object(r.useState)(!1)),
             o = Object(s.a)(i, 2),
             u = o[0],
-            A = o[1],
-            d = Object(Ac.useToasts)().addToast,
+            m = o[1],
+            d = Object(mc.useToasts)().addToast,
             p = Object(c.g)(),
             h = ["PEANUTS", "EVERYONE LOVES PEANUTS", "CRACK IT OPEN", "CRACK IT OPEN NOW"],
             E = ["SO GOOD", "YUMMY", "SO GREAT"],
@@ -16797,9 +16812,9 @@
                   style={{ background: I.mainColor }}
                   aria-label={"Your Favorite Team: ".concat(I.location, " ").concat(I.nickname)}
                 >
-                  <m background={p} path={"/team/".concat(I.id)} className="Navigation-Icon-Link">
+                  <A background={p} path={"/team/".concat(I.id)} className="Navigation-Icon-Link">
                     {k}
-                  </m>
+                  </A>
                 </div>
               );
             }
@@ -16807,9 +16822,9 @@
           var N = null;
           null !== t.idol &&
             (N = (
-              <m background={p} path={"/player/".concat(t.idol)} className="Navigation-IdolizedPlayer">
+              <A background={p} path={"/player/".concat(t.idol)} className="Navigation-IdolizedPlayer">
                 <Lc className="Navigation-Icon" aria-label="Your Idol" />
-              </m>
+              </A>
             ));
           return (
             <l.a.Fragment>
@@ -16847,13 +16862,13 @@
                                               break;
                                             }
                                             return (
-                                              A(!0),
+                                              m(!0),
                                               (r = (n = [1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144])[
                                                 Math.min(t.squirrels, n.length - 1)
                                               ]),
                                               (l = Math.min(r, t.snacks.Peanuts)),
                                               (e.next = 7),
-                                              Nm("/api/eatADangPeanut", JSON.stringify({ amount: l }))
+                                              NA("/api/eatADangPeanut", JSON.stringify({ amount: l }))
                                                 .then(
                                                   Object(g.a)(
                                                     f.a.mark(function e() {
@@ -16893,7 +16908,7 @@
                                                                     .concat(l > 1 ? "s" : "", "."),
                                                                   { appearance: "success" }
                                                                 ),
-                                                                A(!1);
+                                                                m(!1);
                                                             case 4:
                                                             case "end":
                                                               return e.stop();
@@ -16942,9 +16957,9 @@
                     </div>
                   }
                 >
-                  <m background={p} path="/account" className="Navigation-Inventory">
+                  <A background={p} path="/account" className="Navigation-Inventory">
                     <Yp className="Navigation-Icon" aria-label="Account" />
-                  </m>
+                  </A>
                 </Up>
                 <Xp />
               </div>
@@ -16995,7 +17010,7 @@
           i = Object(s.a)(n, 2),
           o = (i[0], i[1], Object(r.useState)(!1)),
           u = Object(s.a)(o, 2),
-          A = u[0],
+          m = u[0],
           d = u[1],
           f = Object(r.useState)(!1),
           g = Object(s.a)(f, 2),
@@ -17131,7 +17146,7 @@
             T(!N);
           },
           V = function () {
-            d(!A);
+            d(!m);
           },
           H = function () {
             h(!p);
@@ -17149,7 +17164,7 @@
                   s = void 0;
                 return (
                   "League" === e.text
-                    ? ((i = P), (o = V), (s = A))
+                    ? ((i = P), (o = V), (s = m))
                     : "Vote" === e.text
                     ? ((i = L), (o = H), (s = p))
                     : "Info" === e.text && ((i = M), (o = z), (s = b)),
@@ -17227,18 +17242,18 @@
           ) : (
             <div className="Navigation-Main">
               {J}
-              <m key={0} path="/search" background={Q} className="Navigation-CurrencyButton Navigation-Search">
+              <A key={0} path="/search" background={Q} className="Navigation-CurrencyButton Navigation-Search">
                 <ee.p />
-              </m>
+              </A>
             </div>
           );
         return (
           <nav className="Navigation" ref={x}>
             {Z}
             <div className="Navigation-Top Navigation-Toggle">
-              <m key={-1} path="/search" background={Q} className="Navigation-CurrencyButton Navigation-Search">
+              <A key={-1} path="/search" background={Q} className="Navigation-CurrencyButton Navigation-Search">
                 <ee.p />
-              </m>
+              </A>
               {Y}
             </div>
             {O ? null : <div className="Navigation-User">{Y}</div>}
@@ -17254,7 +17269,7 @@
           o = (e.onClick, Object(c.g)()),
           s = o.pathname,
           u = !("/login" === s || "/signup" === s),
-          A =
+          m =
             s === t ||
             void 0 !==
               (null === n || void 0 === n
@@ -17270,7 +17285,7 @@
                 : n.find(function (e) {
                     return !0 === e.ids;
                   }))) &&
-            (A =
+            (m =
               s.includes(t) ||
               void 0 !==
                 (null === n || void 0 === n
@@ -17279,18 +17294,18 @@
                       return s.includes(e.path);
                     }))),
           (
-            <m
+            <A
               background={u && a && o}
               path={t}
               className={
                 "Navigation-Button" +
-                (A ? " Navigation-Button-Current" : "") +
-                (i === Zp.Blue && A ? " Navigation-Button-Blue" : "") +
+                (m ? " Navigation-Button-Current" : "") +
+                (i === Zp.Blue && m ? " Navigation-Button-Blue" : "") +
                 (i === Zp.Purple ? " Navigation-Button-Purple" : "")
               }
             >
               {e.children}
-            </m>
+            </A>
           )
         );
       }
@@ -17310,14 +17325,14 @@
           i = n[0],
           o = n[1],
           u = Object(r.useState)([]),
-          A = Object(s.a)(u, 2),
-          d = A[0],
-          f = A[1],
+          m = Object(s.a)(u, 2),
+          d = m[0],
+          f = m[1],
           g = Object(r.useState)(""),
           p = Object(s.a)(g, 2),
           h = p[0],
           E = p[1],
-          v = Object(r.useContext)(HA.context);
+          v = Object(r.useContext)(Hm.context);
         Object(r.useEffect)(
           function () {
             if (v) {
@@ -17359,9 +17374,9 @@
                 {b.map(function (e) {
                   return (
                     <div className="Search-Results-Line">
-                      <m background={t} path={"/player/" + e.id} className="Search-Results-Link">
+                      <A background={t} path={"/player/" + e.id} className="Search-Results-Link">
                         {e.name}
-                      </m>
+                      </A>
                     </div>
                   );
                 })}
@@ -17485,7 +17500,7 @@
           </l.a.Fragment>
         );
       }
-      function Ah() {
+      function mh() {
         return (
           <l.a.Fragment>
             <div className="League-Nav">
@@ -17496,7 +17511,7 @@
           </l.a.Fragment>
         );
       }
-      function mh() {
+      function Ah() {
         return (
           <l.a.Fragment>
             <div className="League-Nav">
@@ -17610,8 +17625,8 @@
           o = Object(r.useContext)(ph.context),
           c = Object(r.useState)([]),
           u = Object(s.a)(c, 2),
-          A = u[0],
-          m = u[1];
+          m = u[0],
+          A = u[1];
         function d(e) {
           if (null !== e.leagueTeamId)
             return i.teams.find(function (t) {
@@ -17633,7 +17648,7 @@
                             t.next = 6;
                             break;
                           }
-                          return (t.next = 3), Ym(e);
+                          return (t.next = 3), YA(e);
                         case 3:
                           if (((a = t.sent), (n = []), void 0 !== a)) {
                             for (
@@ -17651,7 +17666,7 @@
                               l--
                             )
                               r();
-                            m(
+                            A(
                               n.sort(function (e, t) {
                                 return e.place > t.place ? 1 : -1;
                               })
@@ -17682,11 +17697,11 @@
           b = o.data;
         void 0 !== b && (b = Object.values(o.data)[0]);
         var w =
-          A.length < 1 || void 0 === A ? (
+          m.length < 1 || void 0 === m ? (
             <Bc />
           ) : (
             <Eh
-              info={A}
+              info={m}
               playoffs={E}
               icons={!1}
               line={v}
@@ -17784,7 +17799,7 @@
           void 0 !== e.info)
         ) {
           var u,
-            A,
+            m,
             d,
             f,
             g,
@@ -17799,7 +17814,7 @@
             O = [];
           return (
             a.idol === (null === (u = e.info.player) || void 0 === u ? void 0 : u.id) && O.push("Your Idol"),
-            (null === (A = e.info.player) || void 0 === A ? void 0 : A.permAttr.includes("SHELLED")) &&
+            (null === (m = e.info.player) || void 0 === m ? void 0 : m.permAttr.includes("SHELLED")) &&
               O.push("Shelled"),
             (null === (d = e.info.player) || void 0 === d ? void 0 : d.permAttr.includes("ELSEWHERE")) &&
               O.push("Elsewhere"),
@@ -17814,17 +17829,17 @@
                 <div className="Leaderboard-Icon-Wrapper">
                   {e.showIcons && [].includes(e.info.place) ? <_.mc className="Leaderboard-Icon-Microphone" /> : null}
                   {e.showIcons && i.includes(e.info.place) ? (
-                    <Ae.i className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Eclipse"} />
+                    <me.i className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Eclipse"} />
                   ) : null}
                   {e.showIcons && o.includes(e.info.place) ? (
-                    <Ae.f className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Blood"} />
+                    <me.f className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Blood"} />
                   ) : null}
                   {e.showIcons && n.includes(e.info.place) ? (
                     <_.u className={e.info.deceased ? "Leaderboard-Icon-Confirmed" : "Leaderboard-Icon-Birds"} />
                   ) : null}
                   {e.showIcons && e.monitor ? <_.Gb className="Leaderboard-Icon-Monitor" /> : null}
                 </div>
-                <m
+                <A
                   background={t}
                   path={"/player/".concat(null === (p = e.info.player) || void 0 === p ? void 0 : p.id)}
                   className="Leaderboard-Player"
@@ -17888,7 +17903,7 @@
                     className="sr-only"
                     aria-label={"." + (O.length > 0 ? " Current Status: " + O.join(", ") + "." : "")}
                   />
-                </m>
+                </A>
               </div>
             )
           );
@@ -17912,8 +17927,8 @@
         if (void 0 === o) return null;
         var u = [];
         if (t)
-          for (var A = 0; A < o.subleagues.length; A++)
-            u.push(<Bh key={A} league={o} subleague={o.subleagues[A]} standings={e.standings} />);
+          for (var m = 0; m < o.subleagues.length; m++)
+            u.push(<Bh key={m} league={o} subleague={o.subleagues[m]} standings={e.standings} />);
         var d =
           void 0 !== o ? (
             <ul role="list" className="Standings-Subleague-Container" aria-label={o.name}>
@@ -17926,18 +17941,18 @@
           <div className="Standings-League">
             <div className="Standings-League-Header">
               <h3>{o.name}</h3>
-              <m
+              <A
                 background={i}
                 path="/leagueinfo"
                 className="Navigation-Button Navigation-Button-Current Standings-Button"
               >
                 Info
-              </m>
+              </A>
             </div>
             {Dd(e.sim, "SUNSUN") ? (
               <div className="League-Sunsun">
-                <At />
-                <JA />
+                <mt />
+                <Jm />
               </div>
             ) : null}
             {d}
@@ -18010,7 +18025,7 @@
             return t.id === e.team;
           });
         return void 0 === o ? null : (
-          <m background={t} path={"/team/".concat(o.id)} className="Standings-Team">
+          <A background={t} path={"/team/".concat(o.id)} className="Standings-Team">
             <div className="Standings-Team-Name-Container">
               <div className="Standings-Team-Color" aria-hidden="true" style={{ background: o.mainColor }}>
                 <div className="Standings-Team-Emoji">{jd(o)}</div>
@@ -18033,7 +18048,7 @@
             >
               {Ho(e.record)}
             </div>
-          </m>
+          </A>
         );
       }
       !(function (e) {
@@ -18064,10 +18079,10 @@
         }
         if (!n.sim) return null;
         var u,
-          A = c() === wh.Upcoming ? { schedule: n.tomorrowSchedule, sort: 0 } : { schedule: n.schedule, sort: 1 },
-          m = c() === wh.Upcoming ? n.sim.day + 1 : n.sim.day,
+          m = c() === wh.Upcoming ? { schedule: n.tomorrowSchedule, sort: 0 } : { schedule: n.schedule, sort: 1 },
+          A = c() === wh.Upcoming ? n.sim.day + 1 : n.sim.day,
           d =
-            void 0 === A.schedule ? null : (
+            void 0 === m.schedule ? null : (
               <ul>
                 {null ===
                   (t = (function () {
@@ -18098,7 +18113,7 @@
                         return Math.max(e.homeOdds, e.awayOdds) > Math.max(a.homeOdds, a.awayOdds) ? -1 : 1;
                       }))
                     );
-                  })(A.schedule, A.sort)) || void 0 === t
+                  })(m.schedule, m.sort)) || void 0 === t
                   ? void 0
                   : t.map(function (e, t) {
                       return <Lp index={t} key={t} data={e} />;
@@ -18106,8 +18121,8 @@
               </ul>
             ),
           f =
-            void 0 === A.schedule || (void 0 !== A.schedule && A.schedule.length <= 0) ? (
-              <div className="League-Body">There are no season games scheduled for Day {m + 1}.</div>
+            void 0 === m.schedule || (void 0 !== m.schedule && m.schedule.length <= 0) ? (
+              <div className="League-Body">There are no season games scheduled for Day {A + 1}.</div>
             ) : (
               <div>
                 <div className="League-Countdown">
@@ -18132,7 +18147,7 @@
         return (
           <l.a.Fragment>
             <h2 className="League-Header">
-              Season<span className="League-Number">{g + 1}</span>Day<span className="League-Number">{m + 1}</span>
+              Season<span className="League-Number">{g + 1}</span>Day<span className="League-Number">{A + 1}</span>
             </h2>
             <ih />
             {u}
@@ -18270,7 +18285,7 @@
                 c = null !== e.awaySeed ? e.awaySeed : void 0;
               return void 0 === r && a ? (
                 <div className="PlayoffSetup-Matchup" key={t}>
-                  <m background={o} path={"/team/".concat(a.id)} className="PlayoffSetup-MatchupTeam-Group">
+                  <A background={o} path={"/team/".concat(a.id)} className="PlayoffSetup-MatchupTeam-Group">
                     <div className="PlayoffSetup-MatchupTeam-Info">
                       {void 0 !== s ? <div className="PlayoffSetup-Seed">{s + 1}</div> : null}
                       {a ? (
@@ -18287,11 +18302,11 @@
                     <div className="PlayoffSetup-MatchupTeam-Info">
                       <div className="PlayoffSetup-Bye">idling...</div>
                     </div>
-                  </m>
+                  </A>
                 </div>
               ) : (
                 <div className="PlayoffSetup-Matchup" key={t}>
-                  <m
+                  <A
                     background={o}
                     path={"/team/".concat(null === a || void 0 === a ? void 0 : a.id)}
                     className="PlayoffSetup-MatchupTeam-Group"
@@ -18323,8 +18338,8 @@
                         {e.homeWins}
                       </div>
                     </div>
-                  </m>
-                  <m
+                  </A>
+                  <A
                     background={o}
                     path={"/team/".concat(null === r || void 0 === r ? void 0 : r.id)}
                     className="PlayoffSetup-MatchupTeam-Group"
@@ -18356,7 +18371,7 @@
                         {e.awayWins}
                       </div>
                     </div>
-                  </m>
+                  </A>
                 </div>
               );
             });
@@ -18402,8 +18417,8 @@
           s,
           c,
           u,
-          A,
           m,
+          A,
           d,
           f = e.path,
           g = Object(r.useContext)(S.context),
@@ -18593,9 +18608,9 @@
           <l.a.Fragment>
             <h2 className="League-Header">
               <div className="League-Header-Group">
-                {(null === (A = g.postseasons[0].round) || void 0 === A ? void 0 : A.special) ? (
+                {(null === (m = g.postseasons[0].round) || void 0 === m ? void 0 : m.special) ? (
                   <l.a.Fragment>
-                    {null === (m = g.postseasons[0].round) || void 0 === m ? void 0 : m.name} 
+                    {null === (A = g.postseasons[0].round) || void 0 === A ? void 0 : A.name} 
                   </l.a.Fragment>
                 ) : (
                   "Postseason Round"
@@ -18632,11 +18647,11 @@
                 {t} {s}
               </span>{" "}
               Champions are the{" "}
-              <m path={"/team/".concat(a.id)} background={i}>
+              <A path={"/team/".concat(a.id)} background={i}>
                 <span className="League-Info-Callout" style={Xo(n, a)}>
                   {a.fullName}
                 </span>
-              </m>
+              </A>
               !
             </div>
           )
@@ -18711,20 +18726,20 @@
           c = o[0],
           u = o[1];
         Object(r.useEffect)(function () {
-          A();
+          m();
         }, []);
-        function A() {
-          return m.apply(this, arguments);
-        }
         function m() {
-          return (m = Object(g.a)(
+          return A.apply(this, arguments);
+        }
+        function A() {
+          return (A = Object(g.a)(
             f.a.mark(function e() {
               var t, a, r;
               return f.a.wrap(function (e) {
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (e.next = 2), Pm();
+                      return (e.next = 2), PA();
                     case 2:
                       if (((t = e.sent), (a = []), void 0 !== t)) {
                         e.next = 6;
@@ -18764,7 +18779,7 @@
               <div
                 className={d}
                 onAnimationEnd={function () {
-                  u(!1), A();
+                  u(!1), m();
                 }}
               >
                 {a.map(function (e, t) {
@@ -18789,10 +18804,10 @@
             o = Object(s.a)(i, 2),
             c = o[0],
             u = o[1],
-            A = Object(r.useState)(0),
-            m = Object(s.a)(A, 2),
-            d = m[0],
-            f = m[1];
+            m = Object(r.useState)(0),
+            A = Object(s.a)(m, 2),
+            d = A[0],
+            f = A[1];
           return (
             <header className="Header">
               <div className="Header-Links">
@@ -18969,8 +18984,8 @@
           o = n[1],
           c = Object(r.useState)([]),
           u = Object(s.a)(c, 2),
-          A = u[0],
-          m = u[1],
+          m = u[0],
+          A = u[1],
           d = Object(r.useState)(0),
           p = Object(s.a)(d, 2),
           h = p[0],
@@ -18992,7 +19007,7 @@
                             e.next = 6;
                             break;
                           }
-                          return (e.next = 3), Ym(a);
+                          return (e.next = 3), YA(a);
                         case 3:
                           if (((n = e.sent), (r = []), void 0 !== n)) {
                             for (
@@ -19040,7 +19055,7 @@
                   l.push({ team: a, peanuts: i.peanuts, place: i.place });
               };
             for (n = r.length - 1; n >= 0; n--) i();
-            m(
+            A(
               l.sort(function (e, t) {
                 return e.place > t.place ? 1 : -1;
               })
@@ -19054,7 +19069,7 @@
         var b = <Bc />;
         return (
           (i.length >= 1 || void 0 !== i) && 0 === h && (b = <zh playerInfo={i} showLine={!1} />),
-          (A.length >= 1 || void 0 !== A) && 1 === h && (b = <Yh teamInfo={A} />),
+          (m.length >= 1 || void 0 !== m) && 1 === h && (b = <Yh teamInfo={m} />),
           (
             <div className="HallOfFlame">
               <div className="HallOfFlame-Header">
@@ -19151,7 +19166,7 @@
           s = Object(c.g)(),
           u = Object(r.useContext)(D.context).user;
         return void 0 !== e.playerInfo ? (
-          <m
+          <A
             background={s}
             path={"/player/".concat(null === (t = e.playerInfo.player) || void 0 === t ? void 0 : t.id)}
             className="HallOfFlame-Player"
@@ -19177,7 +19192,7 @@
             <div className="HallOfFlame-Player-Tributes">
               {e.playerInfo.peanuts} <span aria-label="Tributes." />
             </div>
-          </m>
+          </A>
         ) : null;
       }
       function Zh(e) {
@@ -19186,7 +19201,7 @@
           n = Object(c.g)();
         Object(r.useContext)(D.context).user;
         return void 0 !== e.teamInfo ? (
-          <m
+          <A
             background={n}
             path={"/team/".concat(null === (t = e.teamInfo.team) || void 0 === t ? void 0 : t.id)}
             className="HallOfFlame-Player"
@@ -19210,7 +19225,7 @@
             <div className="HallOfFlame-Player-Tributes">
               {e.teamInfo.peanuts} <span aria-label="Tributes." />
             </div>
-          </m>
+          </A>
         ) : null;
       }
       a(198);
@@ -19284,9 +19299,9 @@
                   The Paris Review
                 </a>
               </div>
-              <m background={e} path="/signup" className="About-TicketLink">
+              <A background={e} path="/signup" className="About-TicketLink">
                 <div className="About-Ticket" />
-              </m>
+              </A>
               <div className="About-Quote">
                 <a
                   href="https://www.polygon.com/22174009/blaseball-game-of-the-year-2020"
@@ -19533,8 +19548,8 @@
           return void 0 === t || 0 === t ? null : (
             <div className="Player-Info-Line" key={e.index}>
               <div className="Player-Info-Line-Header">
-                <QA type={e.index} tooltip={!0} />
-                <div className="Team-Stadium-Weather-Name">{FA(e.index)}</div>
+                <Qm type={e.index} tooltip={!0} />
+                <div className="Team-Stadium-Weather-Name">{Fm(e.index)}</div>
               </div>
               <div className="Player-Info-Line-Body">
                 <rE value={t} index={e.index} />
@@ -19548,10 +19563,10 @@
             n = "#aaaaaa";
           if (e.value < 0) {
             for (var r = Math.abs(e.value); r > 0; r--) t.push(<le.b />);
-            (a = RA[e.index].background), (n = RA[e.index].color);
+            (a = Rm[e.index].background), (n = Rm[e.index].color);
           } else {
             for (r = e.value; r > 0; r--) t.push(<le.c />);
-            (a = RA[e.index].color), (n = RA[e.index].background);
+            (a = Rm[e.index].color), (n = Rm[e.index].background);
           }
           return (
             <div className="Team-Stadium-Weather-Arrows" style={{ color: a, background: n }} key={e.index}>
@@ -19575,7 +19590,7 @@
                   Pizza Snack. Head to the shop to buy access.
                 </div>
                 <Oc.a className="Decrees-Submit-Button">
-                  <A.b to={"/shop/".concat(ne.STADIUM)}>Go To Shop</A.b>
+                  <m.b to={"/shop/".concat(ne.STADIUM)}>Go To Shop</m.b>
                 </Oc.a>
               </div>
             );
@@ -19586,7 +19601,7 @@
                   Construction is now available for {a.nickname}. Help break ground on your team's Ballpark.
                 </div>
                 <Oc.a variant="success" className="Offseason-Button">
-                  <A.b to="/renovation">Contribute</A.b>
+                  <m.b to="/renovation">Contribute</m.b>
                 </Oc.a>
               </div>
             );
@@ -19597,7 +19612,7 @@
                 <div className="Player-Info-Line-Header">Renovation</div>
                 <div className="Player-Info-Line-Body">
                   <Oc.a className="Decrees-Submit-Button">
-                    <A.b to={"/shop/".concat(ne.STADIUM)}>Go To Shop</A.b>
+                    <m.b to={"/shop/".concat(ne.STADIUM)}>Go To Shop</m.b>
                   </Oc.a>
                   <_h
                     lines={[
@@ -19614,7 +19629,7 @@
                 <div className="Player-Info-Line-Header">Renovation</div>
                 <div className="Player-Info-Line-Body">
                   <Oc.a variant="success" className="Offseason-Button">
-                    <A.b to="/renovation">Contribute</A.b>
+                    <m.b to="/renovation">Contribute</m.b>
                   </Oc.a>
                   <_h lines={["The Construction phase is active! Go help your Team build its next Renovations."]} />
                 </div>
@@ -19655,7 +19670,7 @@
                   <div className="ModalItem-Attributes">
                     <div className="AttributeBar">
                       {o.mods.map(function (e, t) {
-                        return <ma id={e} type={ia.Permanent} key={t} context={oa.Ballpark} />;
+                        return <Aa id={e} type={ia.Permanent} key={t} context={oa.Ballpark} />;
                       })}
                     </div>
                   </div>
@@ -19741,13 +19756,13 @@
                   </div>
                   <div className="ModalItem-Subheader">Weather</div>
                   <div className="Team-Section">
-                    {RA.map(function (e, t) {
+                    {Rm.map(function (e, t) {
                       return <nE stadium={o} key={t} index={t} user={n} weather={e} />;
                     })}
                   </div>
                 </l.a.Fragment>
               ) : null,
-            A =
+            m =
               null !== o.model ? (
                 <div className="Player-Info-Line">
                   <div className="Player-Info-Line-Header">Nickname</div>
@@ -19758,7 +19773,7 @@
               ) : (
                 <div className="Team-Stadium-Subheader">"{o.nickname}"</div>
               ),
-            m = Rd(o, "light_switch_toggle") ? (
+            A = Rd(o, "light_switch_toggle") ? (
               <div className="Player-Info-Line">
                 <div className="Player-Info-Line-Header">Light Switch</div>
                 {1 === Qd(o, "light_switch_toggle") ? (
@@ -19821,13 +19836,13 @@
                 <div className={"ModalItem-Content" + (s ? " ModalItem-Content-WithAttributes" : "")}>
                   <div className="Team-Stadium-Header-Line">
                     <div className="Player-Info-Line-Header">
-                      <mp stadium={o} style={ip.TeamModal} />
+                      <Ap stadium={o} style={ip.TeamModal} />
                     </div>
                     <div className="Team-Stadium-Header">{o.name}</div>
                   </div>
                   <div className="Team-Section">
-                    {A}
                     {m}
+                    {A}
                     {d}
                     {g}
                     {p}
@@ -19999,16 +20014,16 @@
               );
               break;
             default:
-              var A = <l.a.Fragment />;
-              (A = o ? qo(e) : i ? <l.a.Fragment>{Kd(e, !0)}</l.a.Fragment> : <l.a.Fragment>{qd(e, !0)}</l.a.Fragment>),
+              var m = <l.a.Fragment />;
+              (m = o ? qo(e) : i ? <l.a.Fragment>{Kd(e, !0)}</l.a.Fragment> : <l.a.Fragment>{qd(e, !0)}</l.a.Fragment>),
                 (c = (
                   <div className="Team-Player-Ratings" aria-hidden="true">
-                    {A}
+                    {m}
                   </div>
                 ));
           }
           return o ? (
-            <m background={r} path={"/player/".concat(e.id)} className="Team-Player-Line Team-Player-Line-Shadows">
+            <A background={r} path={"/player/".concat(e.id)} className="Team-Player-Line Team-Player-Line-Shadows">
               {c}
               <div className={"Team-Player-Header " + (e.permAttr.includes("ELSEWHERE") ? " Team-Player-Away" : "")}>
                 {e.permAttr.includes("SHELLED") ? (
@@ -20038,9 +20053,9 @@
               </div>
               <div className="sr-only" aria-label={"with " + ef($d(e)) + " Stars."} />
               <div className="sr-only" aria-label={s.length > 0 ? "Current Status: " + s.join(", ") + "." : ""} />
-            </m>
+            </A>
           ) : (
-            <m background={r} path={"/player/".concat(e.id)} className="Team-Player-Line">
+            <A background={r} path={"/player/".concat(e.id)} className="Team-Player-Line">
               <div className={"Team-Player-Header " + (e.permAttr.includes("ELSEWHERE") ? " Team-Player-Away" : "")}>
                 {e.permAttr.includes("SHELLED") ? (
                   <div className={"Team-Player-Shelled" + (Math.floor(5 * Math.random()) + 1)} aria-hidden="true">
@@ -20072,11 +20087,11 @@
               <div className="sr-only" aria-label=" and " />
               {c}
               <div className="sr-only" aria-label={s.length > 0 ? "Current Status: " + s.join(", ") + "." : ""} />
-            </m>
+            </A>
           );
         });
       }
-      function AE(e) {
+      function mE(e) {
         return (
           <div className="Player-Info-Line Team-Info-Line">
             <div className="Player-Info-Line-Header">{e.header}</div>
@@ -20084,14 +20099,14 @@
           </div>
         );
       }
-      var mE = function (e) {
+      var AE = function (e) {
         var t,
           a,
           n,
           i,
           o,
           u,
-          A,
+          m,
           d,
           p = Object(c.h)().nickname,
           h = Object(r.useContext)(S.context),
@@ -20100,7 +20115,7 @@
           b = v.user,
           w = v.setUser,
           y = Object(c.g)(),
-          B = Object(Ac.useToasts)().addToast,
+          B = Object(mc.useToasts)().addToast,
           O = Object(r.useState)({ lineup: [], rotation: [], shadows: [] }),
           I = Object(s.a)(O, 2),
           k = I[0],
@@ -20130,7 +20145,7 @@
           Y = (function () {
             var e = Object(g.a)(
               f.a.mark(function e() {
-                var t, a, n, r, l, i, o, s, c, u, A, m, d, g;
+                var t, a, n, r, l, i, o, s, c, u, m, A, d, g;
                 return f.a.wrap(function (e) {
                   for (;;)
                     switch ((e.prev = e.next)) {
@@ -20144,7 +20159,7 @@
                         for (t = [], a = 0; a < H.lineup.length; a++) t.push(H.lineup[a]);
                         for (n = 0; n < H.rotation.length; n++) t.push(H.rotation[n]);
                         for (r = 0; r < H.shadows.length; r++) t.push(H.shadows[r]);
-                        return (e.next = 8), Ym(t);
+                        return (e.next = 8), YA(t);
                       case 8:
                         for (
                           l = e.sent,
@@ -20168,25 +20183,25 @@
                               });
                               t && c.push(t);
                             },
-                            A = 0;
-                          A < H.rotation.length;
-                          A++
+                            m = 0;
+                          m < H.rotation.length;
+                          m++
                         )
-                          u(A);
+                          u(m);
                         for (
-                          m = [],
+                          A = [],
                             d = function (e) {
                               var t = l.find(function (t) {
                                 return H.shadows[e] === t.id;
                               });
-                              t && m.push(t);
+                              t && A.push(t);
                             },
                             g = 0;
                           g < H.shadows.length;
                           g++
                         )
                           d(g);
-                        N({ lineup: i, rotation: c, shadows: m });
+                        N({ lineup: i, rotation: c, shadows: A });
                       case 19:
                       case "end":
                         return e.stop();
@@ -20219,7 +20234,7 @@
                       case 6:
                         return (
                           (e.next = 8),
-                          Nm("/api/updateFavoriteTeam", JSON.stringify({ newTeamId: H.id, teamName: H.fullName })).then(
+                          NA("/api/updateFavoriteTeam", JSON.stringify({ newTeamId: H.id, teamName: H.fullName })).then(
                             (function () {
                               var e = Object(g.a)(
                                 f.a.mark(function e(t) {
@@ -20301,13 +20316,13 @@
                   V ? (
                     <yc />
                   ) : (
-                    <m
+                    <A
                       className="ModalItem-Button-Tribute"
                       background={y}
                       path={b.verified ? "/tribute/".concat(H.id) : "/send-verification-email"}
                     >
                       <Jn className="ModalItem-Icon" /> Pay Tribute
-                    </m>
+                    </A>
                   )
                 ) : (
                   <ca.a
@@ -20397,7 +20412,7 @@
         ((null === (i = h.sim) || void 0 === i ? void 0 : i.phase) !== R.Earlseason &&
           (null === (o = h.sim) || void 0 === o ? void 0 : o.phase) !== R.Midseason &&
           (null === (u = h.sim) || void 0 === u ? void 0 : u.phase) !== R.Lateseason &&
-          (null === (A = h.sim) || void 0 === A ? void 0 : A.phase) !== R.EarlyPostseason &&
+          (null === (m = h.sim) || void 0 === m ? void 0 : m.phase) !== R.EarlyPostseason &&
           (null === (d = h.sim) || void 0 === d ? void 0 : d.phase) !== R.Postseason) ||
           null === h ||
           void 0 === h ||
@@ -20406,7 +20421,7 @@
           ee.forEach(function (e) {
             e.gameComplete || (ce = !0);
           });
-        var Ae = (
+        var me = (
           <K.a className="ModalItem-Button-Form ModalItem-Button-Flute-Wrapper" onSubmit={Z}>
             <Oc.a
               className="ModalItem-Button-Flute"
@@ -20414,12 +20429,12 @@
               variant="success"
               style={{ background: H.mainColor, color: Td(H.mainColor) }}
             >
-              <An style={{ width: "20px", height: "20px" }} /> Choose Team
+              <mn style={{ width: "20px", height: "20px" }} /> Choose Team
             </Oc.a>
           </K.a>
         );
         b.favoriteTeam === H.id
-          ? (Ae = (
+          ? (me = (
               <div
                 className="ModalItem-Button-Flute-Current"
                 style={{ background: H.mainColor, color: Td(H.mainColor) }}
@@ -20428,7 +20443,7 @@
               </div>
             ))
           : void 0 !== h && void 0 !== h.sim && h.sim.phase >= 3
-          ? (Ae = (
+          ? (me = (
               <ca.a
                 placement="top"
                 overlay={
@@ -20444,13 +20459,13 @@
                     variant="dark"
                     style={{ background: Nd(H.mainColor, 0.8), color: Td(H.mainColor), pointerEvents: "none" }}
                   >
-                    <An style={{ width: "20px", height: "20px" }} /> Choose Team
+                    <mn style={{ width: "20px", height: "20px" }} /> Choose Team
                   </Oc.a>
                 </span>
               </ca.a>
             ))
           : void 0 === b.snacks.Flutes || b.snacks.Flutes < 0
-          ? (Ae = (
+          ? (me = (
               <ca.a
                 placement="top"
                 overlay={
@@ -20466,14 +20481,14 @@
                     variant="dark"
                     style={{ background: Nd(H.mainColor, 0.8), color: Td(H.mainColor), pointerEvents: "none" }}
                   >
-                    <An style={{ width: "20px", height: "20px" }} /> Choose Team
+                    <mn style={{ width: "20px", height: "20px" }} /> Choose Team
                   </Oc.a>
                 </span>
               </ca.a>
             ))
           : ce &&
             b.favoriteTeam !== H.id &&
-            (Ae = (
+            (me = (
               <ca.a
                 placement="top"
                 overlay={
@@ -20489,12 +20504,12 @@
                     variant="dark"
                     style={{ background: Nd(H.mainColor, 0.8), color: Td(H.mainColor), pointerEvents: "none" }}
                   >
-                    <An style={{ width: "20px", height: "20px" }} /> Choose Team
+                    <mn style={{ width: "20px", height: "20px" }} /> Choose Team
                   </Oc.a>
                 </span>
               </ca.a>
             ));
-        var me = null;
+        var Ae = null;
         if (null !== b.favoriteTeam && H.id === b.favoriteTeam) {
           var de = E.teams.find(function (e) {
             return e.id === b.favoriteTeam;
@@ -20504,7 +20519,7 @@
               ge = encodeURIComponent("".concat(de.slogan || "", " ").concat(fe, " #blaseball")),
               pe = "http://twitter.com/intent/tweet?text=".concat(ge, "&url=https%3A%2F%2Fblaseball.com"),
               he = { "--team-color": de.secondaryColor };
-            me = (
+            Ae = (
               <a target="_blank" href={pe} className="Team-Tweet" style={he} aria-label="Tweet your favorite team.">
                 <ue.j className="Team-Tweet-Icon" />
               </a>
@@ -20535,7 +20550,7 @@
                     </div>
                     <div className="ModalItem-Name-Wrapper">
                       <h2 className="ModalItem-Name">
-                        {H.fullName} {me}
+                        {H.fullName} {Ae}
                       </h2>
                       <div className="Team-Slogan">"{H.slogan}"</div>
                     </div>
@@ -20543,7 +20558,7 @@
                   <div className="ModalItem-Name-Wrapper">
                     <div className="Team-Card-Wrapper">
                       {se}
-                      {Ae}
+                      {me}
                     </div>
                   </div>
                 </div>
@@ -20582,9 +20597,9 @@
                     <div className={"ModalItem-Content" + (le ? " ModalItem-Content-WithAttributes" : "")}>
                       <div className="Team-Section">
                         <ul>
-                          <AE header="Wins" body={Vo(oe)} />
-                          <AE header="Record" body={Ho(oe)} />
-                          <AE header="Runs" body={tf(H.id, null === h || void 0 === h ? void 0 : h.standings)} />
+                          <mE header="Wins" body={Vo(oe)} />
+                          <mE header="Record" body={Ho(oe)} />
+                          <mE header="Runs" body={tf(H.id, null === h || void 0 === h ? void 0 : h.standings)} />
                           {Dd(h.sim, "SIM_SHOW_LEVELS") ? (
                             <div className="Player-Info-Line Team-Info-Line">
                               <ca.a
@@ -20650,16 +20665,16 @@
                               </div>
                             </div>
                           ) : null}
-                          <AE header="eDensity" body={<l.a.Fragment>{H.eDensity.toFixed(5)} bl/m³</l.a.Fragment>} />
-                          <AE header="Tiebreaker Place" body={sE(p, h, E)} />
-                          {z ? <AE header="Tarot Card" body={Xd(H.card).join(" ")} /> : null}
-                          <AE header="Championships" body={cE(H.championships, !1)} />
-                          <AE header="Underchampionships" body={cE(H.underchampionships, !0)} />
+                          <mE header="eDensity" body={<l.a.Fragment>{H.eDensity.toFixed(5)} bl/m³</l.a.Fragment>} />
+                          <mE header="Tiebreaker Place" body={sE(p, h, E)} />
+                          {z ? <mE header="Tarot Card" body={Xd(H.card).join(" ")} /> : null}
+                          <mE header="Championships" body={cE(H.championships, !1)} />
+                          <mE header="Underchampionships" body={cE(H.underchampionships, !0)} />
                           {Dd(h.sim, "SIM_EVOLUTION_CONCEPTUALIZED") ? (
-                            <AE header="Times Evolved" body={H.evolution} />
+                            <mE header="Times Evolved" body={H.evolution} />
                           ) : null}
-                          <AE header="Net Shame" body={H.totalShamings - H.totalShames} />
-                          <AE
+                          <mE header="Net Shame" body={H.totalShamings - H.totalShames} />
+                          <mE
                             header="Number of Players"
                             body={H.rotation.length + H.lineup.length + H.shadows.length}
                           />
@@ -20674,11 +20689,11 @@
                   ) : null}
                   <Sc.a.Pane eventKey="Events">
                     <div className="ModalItem-Content">
-                      <pm
+                      <pA
                         entity={H.id}
-                        source={um.Team}
+                        source={uA.Team}
                         defaultCategory={Q.Outcomes}
-                        defaultSort={Am.NewestFirst}
+                        defaultSort={mA.NewestFirst}
                         categoryOptions={[-1, Q.Outcomes, Q.Changes, Q.Game, Q.Abilities]}
                       />
                     </div>
@@ -20692,15 +20707,15 @@
       };
       a(33), a(35);
       var dE = function (e) {
-          var t = Object(Ac.useToasts)().addToast,
+          var t = Object(mc.useToasts)().addToast,
             a = Object(r.useContext)(D.context),
             n = a.user,
             i = a.setUser,
             o = Object(c.f)(),
             u = Object(r.useState)(!1),
-            A = Object(s.a)(u, 2),
-            m = A[0],
-            d = A[1],
+            m = Object(s.a)(u, 2),
+            A = m[0],
+            d = m[1],
             f = Object(r.useContext)(z.context),
             g = f.activeBets,
             p = f.setActiveBets,
@@ -20859,7 +20874,7 @@
                         return t("Game has already started.", { appearance: "error" }), void o.goBack();
                       d(!0);
                       var r = { amount: b, userId: n.id, targets: [O, h], type: 0 };
-                      Nm("/api/bet", JSON.stringify(r)).then(function (e) {
+                      NA("/api/bet", JSON.stringify(r)).then(function (e) {
                         d(!1),
                           e.ok && e.status && 200 === e.status
                             ? ((n.trackers.BETS += 1),
@@ -20926,7 +20941,7 @@
                   </K.a.Group>
                   {G}
                   <div className="ModalForm-Submit-Wrapper">
-                    {m ? (
+                    {A ? (
                       <Bc />
                     ) : (
                       <Oc.a className="ModalForm-Submit" type="submit" variant="success" disabled={!O}>
@@ -20941,16 +20956,16 @@
         },
         fE = a(53),
         gE = function (e) {
-          var t = Object(Ac.useToasts)().addToast,
+          var t = Object(mc.useToasts)().addToast,
             a = Object(r.useContext)(D.context),
             n = a.user,
             i = a.setUser,
             o = Object(r.useContext)(ds.context),
             u = (Object(c.f)(), Object(c.h)().type),
-            A = Object(r.useState)(!0),
-            m = Object(s.a)(A, 2),
-            d = m[0],
-            p = m[1],
+            m = Object(r.useState)(!0),
+            A = Object(s.a)(m, 2),
+            d = A[0],
+            p = A[1],
             h = Object(r.useState)([]),
             E = Object(s.a)(h, 2),
             v = E[0],
@@ -21117,7 +21132,7 @@
                         )
                           return p(!1), void t("Original Snack Order preserved", { appearance: "error" });
                         var r = { snackOrder: a };
-                        Nm("/api/reorderSnacks", JSON.stringify(r))
+                        NA("/api/reorderSnacks", JSON.stringify(r))
                           .then(function (e) {
                             e.status && 200 === e.status && e.ok
                               ? ((n.snackOrder = a),
@@ -21254,7 +21269,7 @@
                         )
                           return p(!1), void t("Original Spread preserved", { appearance: "error" });
                         var r = { spread: a };
-                        Nm("/api/reorderCards", JSON.stringify(r))
+                        NA("/api/reorderCards", JSON.stringify(r))
                           .then(function (e) {
                             e.status && 200 === e.status && e.ok
                               ? ((n.spread = a),
@@ -21301,13 +21316,13 @@
       a(200);
       function pE() {
         var e = Object(c.h)().id,
-          t = Object(Ac.useToasts)().addToast,
+          t = Object(mc.useToasts)().addToast,
           a = Object(r.useState)(),
           n = Object(s.a)(a, 2),
           i = (n[0], n[1]),
           o = Object(r.useContext)(D.context),
           u = o.user,
-          A = o.setUser,
+          m = o.setUser,
           d = Object(r.useContext)(ds.context).teams,
           p = Object(r.useContext)(kd.context),
           h = p.snackData,
@@ -21435,9 +21450,9 @@
                           params: { snackId: ne.VOTES },
                         });
                     if (void 0 !== e.favoriteTeam && null !== e.favoriteTeam && "" !== e.favoriteTeam) {
-                      var A = Md(e.favoriteTeam, n) || void 0 !== e.snacks[ne.FLUTES] ? 2e3 : 0,
-                        m = ne.FLUTES;
-                      void 0 !== e.snacks[m]
+                      var m = Md(e.favoriteTeam, n) || void 0 !== e.snacks[ne.FLUTES] ? 2e3 : 0,
+                        A = ne.FLUTES;
+                      void 0 !== e.snacks[A]
                         ? u.push({
                             id: ne.FLUTES,
                             name: "Flute",
@@ -21447,16 +21462,16 @@
                                 understand. Fluting is Restricted between Earlsiesta and the Election.
                               </l.a.Fragment>
                             ),
-                            amount: A,
-                            toast: "You now own ".concat(e.snacks[m] + 2, " flutes."),
-                            available: s.includes(m),
-                            icon: <An className="Shop-Item-Icon" />,
+                            amount: m,
+                            toast: "You now own ".concat(e.snacks[A] + 2, " flutes."),
+                            available: s.includes(A),
+                            icon: <mn className="Shop-Item-Icon" />,
                             buyUrl: "/api/buySnackNoUpgrade",
-                            params: { snackId: m },
+                            params: { snackId: A },
                             userUpdate: function () {
                               (e.trackers.SNACKS_BOUGHT += 1),
-                                (e.snacks[m] += 1),
-                                (e.coins -= A),
+                                (e.snacks[A] += 1),
+                                (e.coins -= m),
                                 t(Object(C.a)({}, e));
                             },
                             sell: !0,
@@ -21470,17 +21485,17 @@
                                 understand. Fluting is Restricted between Earlsiesta and the Election.
                               </l.a.Fragment>
                             ),
-                            amount: A,
+                            amount: m,
                             toast: "You now own a flute.",
-                            available: s.includes(m),
-                            icon: <An className="Shop-Item-Icon" />,
+                            available: s.includes(A),
+                            icon: <mn className="Shop-Item-Icon" />,
                             buyUrl: "/api/buySnackNoUpgrade",
-                            params: { snackId: m },
+                            params: { snackId: A },
                             userUpdate: function () {
                               (e.SNACKS_BOUGHT += 1),
-                                (e.snacks[m] = 1),
-                                (e.snackOrder = ne.InsertIntoSnackOrder(m, e.snackOrder)),
-                                (e.coins -= A),
+                                (e.snacks[A] = 1),
+                                (e.snackOrder = ne.InsertIntoSnackOrder(A, e.snackOrder)),
+                                (e.coins -= m),
                                 t(Object(C.a)({}, e));
                             },
                           });
@@ -21682,7 +21697,7 @@
                           "Cold Fries",
                           o.idolPitcherLoseTiers,
                           s,
-                          <Al className="Shop-Item-Icon" />,
+                          <ml className="Shop-Item-Icon" />,
                           "Cold. Earn {FT} coins when your Idol is the losing pitcher.",
                           "Cold. Earn {NT} coins when your Idol is the losing pitcher. You currently earn {CT} coins per loss.",
                           "Cold. Earn {CT} coins when your Idol is the losing pitcher. You are maxed out.",
@@ -21799,7 +21814,7 @@
                           "Wet Pretzel",
                           o.blackHoleTiers,
                           s,
-                          <Ar className="Shop-Item-Icon" />,
+                          <mr className="Shop-Item-Icon" />,
                           "Earn {FT} coins for every time the Black Hole swallows a Win from any Team.",
                           "Earn {NT} coins for every time the Black Hole swallows a Win from any Team. You currently earn {CT} coins per Black Hole.",
                           "Earn {CT} coins for every time the Black Hole swallows a Win from any Team. You are maxed out."
@@ -22102,7 +22117,7 @@
                       });
                     }
                     return u;
-                  })(u, A, E.sim, I, 0, O, h, X)
+                  })(u, m, E.sim, I, 0, O, h, X)
                 ),
                 F(hE(u, x)));
             },
@@ -22132,7 +22147,7 @@
                     case 6:
                       return (
                         (e.next = 8),
-                        Nm("/api/buyUnlockShop")
+                        NA("/api/buyUnlockShop")
                           .then(
                             (function () {
                               var e = Object(g.a)(
@@ -22142,7 +22157,7 @@
                                       switch ((e.prev = e.next)) {
                                         case 0:
                                           a.ok && a.status && 200 === a.status
-                                            ? ((u.coins = u.coins - 20), (u.unlockedShop = !0), A(Object(C.a)({}, u)))
+                                            ? ((u.coins = u.coins - 20), (u.unlockedShop = !0), m(Object(C.a)({}, u)))
                                             : a.json().then(function (e) {
                                                 t(e.message || "Error", { appearance: "error" });
                                               });
@@ -22206,7 +22221,7 @@
                       }
                       return (
                         (e.next = 7),
-                        Nm(a.buyUrl, JSON.stringify(a.params))
+                        NA(a.buyUrl, JSON.stringify(a.params))
                           .then(
                             (function () {
                               var e = Object(g.a)(
@@ -22293,7 +22308,7 @@
                     case 3:
                       return (
                         (e.next = 5),
-                        Nm("/api/logBeg", JSON.stringify({})).then(
+                        NA("/api/logBeg", JSON.stringify({})).then(
                           (function () {
                             var e = Object(g.a)(
                               f.a.mark(function e(a) {
@@ -22310,7 +22325,7 @@
                                                 a.ok &&
                                                 ((u.trackers.BEGS += 1),
                                                 (u.coins = u.coins + e.amount),
-                                                A(Object(C.a)({}, u)),
+                                                m(Object(C.a)({}, u)),
                                                 t(e.message, { appearance: "success" }))
                                               : a.json().then(function (e) {
                                                   t(e.error || "Error", { appearance: "error" });
@@ -22450,9 +22465,9 @@
               return t.includes(e.params.snackId) || t.length < u.packSize;
             })(e) ? (
             e.modal && void 0 !== e.buyUrl ? (
-              <m className="Shop-Item-Button Shop-Item-Modal" background={k} path={e.buyUrl}>
+              <A className="Shop-Item-Button Shop-Item-Modal" background={k} path={e.buyUrl}>
                 {le(e)}
-              </m>
+              </A>
             ) : (
               <Oc.a
                 className="Shop-Item-Button"
@@ -22554,27 +22569,27 @@
                           Payout Modifier
                         </div>
                         <div className="Shop-Icons-Section-Pack-ButtonList">
-                          <m
+                          <A
                             className="Shop-Item-Button Shop-Icons-Section-Pack-Button"
                             background={k}
                             path="/pack/sell"
                           >
                             - Discard Slots
-                          </m>
-                          <m
+                          </A>
+                          <A
                             className="Shop-Item-Button Shop-Icons-Section-Pack-Button"
                             background={k}
                             path="/reorder/snacks"
                           >
                             Reorder
-                          </m>
-                          <m
+                          </A>
+                          <A
                             className="Shop-Item-Button Shop-Icons-Section-Pack-Button"
                             background={k}
                             path="/pack/buy"
                           >
                             + Buy Slots
-                          </m>
+                          </A>
                         </div>
                       </div>
                     </div>
@@ -22655,21 +22670,21 @@
                                       p.snackData
                                     ) ||
                                   (oe && e.id === ne.FLUTES && u.snacks[ne.FLUTES] < 2) ? (
-                                    <m
+                                    <A
                                       className="Shop-Item-Button Shop-Item-Modal Shop-Item-Button-Sell"
                                       background={k}
                                       path={"/sell/".concat(e.params.snackId)}
                                     >
                                       Discard
-                                    </m>
+                                    </A>
                                   ) : (
-                                    <m
+                                    <A
                                       className="Shop-Item-Button Shop-Item-Modal Shop-Item-Button-Sell"
                                       background={k}
                                       path={"/sell/".concat(e.params.snackId)}
                                     >
                                       Sell
-                                    </m>
+                                    </A>
                                   )
                                 ) : null;
                               })(se)}
@@ -22704,7 +22719,7 @@
             ) : (
               <Bc />
             ),
-          Ae = (
+          me = (
             <K.a className="Offseason-Description" onSubmit={_} style={{ color: "white" }}>
               <div className="Shop-CloseUp-Body" style={{ fontSize: "18px", marginTop: "20px" }}>
                 Purchase your Membership Card to unlock the Shop
@@ -22733,7 +22748,7 @@
                 in.
               </div>
             ) : null}
-            {u.unlockedShop ? ue : Ae}
+            {u.unlockedShop ? ue : me}
           </div>
         );
       }
@@ -22775,12 +22790,12 @@
         );
       }
       function vE(e, t, a, n, r, i, o, s, c, u) {
-        var A = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
+        var m = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
         if (void 0 !== t.snacks[e]) {
-          var m = r[Math.min(t.snacks[e], r.length - 1)],
+          var A = r[Math.min(t.snacks[e], r.length - 1)],
             d = r[t.snacks[e] + 1];
           if (void 0 !== d) {
-            var f = m.amount,
+            var f = A.amount,
               g = d.amount,
               p = c.split("{NT}"),
               h = p[1].split("{CT}");
@@ -22804,7 +22819,7 @@
               sell: !0,
             };
           }
-          var E = m.amount,
+          var E = A.amount,
             v = u.split("{CT}");
           return {
             id: e,
@@ -22825,7 +22840,7 @@
           w = s.split("{FT}"),
           y = i.includes(e);
         return (
-          !A || ("" != t.idol && null != t.idol) || (w.push(" Go to a Player page to choose an Idol."), (y = !1)),
+          !m || ("" != t.idol && null != t.idol) || (w.push(" Go to a Player page to choose an Idol."), (y = !1)),
           {
             id: e,
             name: n,
@@ -22851,16 +22866,16 @@
         );
       }
       var bE = function (e) {
-          var t = Object(Ac.useToasts)().addToast,
+          var t = Object(mc.useToasts)().addToast,
             a = Object(r.useContext)(D.context),
             n = a.user,
             i = a.setUser,
             o = Object(c.f)(),
             u = Object(c.h)().itemName,
-            A = Object(r.useState)(1),
-            m = Object(s.a)(A, 2),
-            d = m[0],
-            p = m[1],
+            m = Object(r.useState)(1),
+            A = Object(s.a)(m, 2),
+            d = A[0],
+            p = A[1],
             h = Object(r.useState)(!1),
             E = Object(s.a)(h, 2),
             v = E[0],
@@ -22894,7 +22909,7 @@
                       : d < 1
                       ? t("Invalid input", { appearance: "error" })
                       : (b(!0),
-                        Nm("/api/buyVote", JSON.stringify({ amount: d }))
+                        NA("/api/buyVote", JSON.stringify({ amount: d }))
                           .then(function (e) {
                             if (e.status && 200 === e.status && e.ok) {
                               var a = Object(C.a)({}, n.snacks),
@@ -22975,15 +22990,15 @@
           );
         },
         wE = function (e) {
-          var t = Object(Ac.useToasts)().addToast,
+          var t = Object(mc.useToasts)().addToast,
             a = Object(r.useContext)(ds.context),
             n = Object(r.useContext)(D.context),
             i = n.user,
             o = n.setUser,
             u = Object(c.f)(),
-            A = Object(r.useContext)(kd.context),
-            m = Object(c.h)().id,
-            d = ne.GetSellValue(m, i.snacks[m], i.snacks[m], A.snackData),
+            m = Object(r.useContext)(kd.context),
+            A = Object(c.h)().id,
+            d = ne.GetSellValue(A, i.snacks[A], i.snacks[A], m.snackData),
             p = Object(r.useState)(0 === d ? 1 : 0),
             h = Object(s.a)(p, 2),
             E = h[0],
@@ -22991,45 +23006,45 @@
             b = Object(r.useState)(!1),
             w = Object(s.a)(b, 2),
             y = (w[0], w[1]),
-            B = void 0 !== ne.GetTiers(m, A.snackData),
+            B = void 0 !== ne.GetTiers(A, m.snackData),
             O = function (e) {
               var t = e.target.value;
               v(parseInt(t));
             },
-            I = ne.GetSellValue(m, i.snacks[m], E, A.snackData);
+            I = ne.GetSellValue(A, i.snacks[A], E, m.snackData);
           i.favoriteTeam &&
             !Md(i.favoriteTeam, a) &&
-            m === ne.FLUTES &&
-            (I = i.snacks[ne.FLUTES] < 2 ? 0 : ne.GetSellValue(m, i.snacks[m] - 1, E, A.snackData));
-          var S = B ? i.snacks[m] + 1 : i.snacks[m];
+            A === ne.FLUTES &&
+            (I = i.snacks[ne.FLUTES] < 2 ? 0 : ne.GetSellValue(A, i.snacks[A] - 1, E, m.snackData));
+          var S = B ? i.snacks[A] + 1 : i.snacks[A];
           return (
             <wc {...Object.assign({}, e, { className: "BatchBuy" })}>
               <div className="ModalForm-Header Sell-Question">
-                you wanna {0 === d ? "discard" : "sell"} your {ne.GetName(m).toLowerCase()}?
+                you wanna {0 === d ? "discard" : "sell"} your {ne.GetName(A).toLowerCase()}?
               </div>
               <K.a
                 className="ModalForm-Form"
                 onSubmit={function (e) {
                   e.preventDefault();
-                  var a = B ? i.snacks[m] + 1 : i.snacks[m];
+                  var a = B ? i.snacks[A] + 1 : i.snacks[A];
                   E > a
                     ? t("Insufficent snacks", { appearance: "error" })
                     : E < 1 || null === E || void 0 === E || isNaN(E)
                     ? t("Invalid input", { appearance: "error" })
                     : (y(!0),
-                      Nm("/api/sellSnack", JSON.stringify({ snackId: m, amount: E }))
+                      NA("/api/sellSnack", JSON.stringify({ snackId: A, amount: E }))
                         .then(function (e) {
                           if (e.status && 200 === e.status && e.ok && e.body) {
                             var a = Object(C.a)({}, i.snacks);
-                            if ((i.snacks[m] - E === 0 && !B) || (i.snacks[m] - E === -1 && B)) {
-                              delete a[m];
-                              var n = ne.RemoveFromSnackOrder(m, i.snackOrder);
+                            if ((i.snacks[A] - E === 0 && !B) || (i.snacks[A] - E === -1 && B)) {
+                              delete a[A];
+                              var n = ne.RemoveFromSnackOrder(A, i.snackOrder);
                               i.snackOrder = n;
-                            } else a[m] = a[m] - E;
+                            } else a[A] = a[A] - E;
                             (i.snacks = a),
                               (i.coins += I),
                               o(Object(C.a)({}, i)),
-                              t("You sold ".concat(E, " ").concat(ne.GetName(m)), { appearance: "success" }),
+                              t("You sold ".concat(E, " ").concat(ne.GetName(A)), { appearance: "success" }),
                               u.goBack();
                           } else
                             e.json().then(function (e) {
@@ -23067,7 +23082,7 @@
                 ) : (
                   <K.a.Group controlId="amount">
                     <K.a.Label className="Sell-Earnings">
-                      how many {ne.GetName(m).toLowerCase()} do you wanna sell?
+                      how many {ne.GetName(A).toLowerCase()} do you wanna sell?
                     </K.a.Label>
                     <div
                       className={
@@ -23103,7 +23118,7 @@
                         <span>
                           <jc style={{ width: "22px", height: "22px" }} /> {0 === E ? 0 : I}
                         </span>{" "}
-                        back for your <span>{E}</span> {ne.GetName(m).toLowerCase()}
+                        back for your <span>{E}</span> {ne.GetName(A).toLowerCase()}
                       </div>
                     </div>
                   </K.a.Group>
@@ -23127,15 +23142,15 @@
           );
         },
         yE = function (e) {
-          var t = Object(Ac.useToasts)().addToast,
+          var t = Object(mc.useToasts)().addToast,
             a = (Object(r.useContext)(ds.context), Object(r.useContext)(D.context)),
             n = a.user,
             i = a.setUser,
             o = Object(c.f)(),
             u = Object(c.h)().ver,
-            A = Object(r.useState)(!1),
-            m = Object(s.a)(A, 2),
-            d = (m[0], m[1]),
+            m = Object(r.useState)(!1),
+            A = Object(s.a)(m, 2),
+            d = (A[0], A[1]),
             p = Object(r.useState)(-1),
             h = Object(s.a)(p, 2),
             E = h[0],
@@ -23152,7 +23167,7 @@
                   onSubmit={function (e) {
                     e.preventDefault(),
                       d(!0),
-                      Nm("/api/sellSlot", JSON.stringify({ slotIndex: E }))
+                      NA("/api/sellSlot", JSON.stringify({ slotIndex: E }))
                         .then(function (e) {
                           e.status && 200 === e.status && e.ok && e.body
                             ? (n.snackOrder.splice(E, 1),
@@ -23272,7 +23287,7 @@
                   onSubmit={function (e) {
                     e.preventDefault(),
                       d(!0),
-                      Nm("/api/buySlot")
+                      NA("/api/buySlot")
                         .then(function (e) {
                           e.status && 200 === e.status && e.ok && e.body
                             ? (n.snackOrder.push("E"),
@@ -23616,7 +23631,7 @@
               return BE(e);
             case 3:
             case 4:
-              return om(e);
+              return oA(e);
             case 0:
             case 1:
             case 5:
@@ -23689,10 +23704,10 @@
             o = e.defaultCategory,
             c = e.defaultSort,
             u = Object(r.useRef)(new xE()),
-            A = Object(r.useState)(null !== o && void 0 !== o ? o : -1),
-            m = Object(s.a)(A, 2),
-            d = m[0],
-            p = m[1],
+            m = Object(r.useState)(null !== o && void 0 !== o ? o : -1),
+            A = Object(s.a)(m, 2),
+            d = A[0],
+            p = A[1],
             h = Object(r.useState)(null !== c && void 0 !== c ? c : IE.NewestFirst),
             E = Object(s.a)(h, 2),
             v = E[0],
@@ -23904,7 +23919,7 @@
       var LE = function (e) {
           var t,
             a,
-            n = Object(Ac.useToasts)().addToast,
+            n = Object(mc.useToasts)().addToast,
             i = Object(r.useContext)(D.context),
             o = i.user,
             u = i.setUser,
@@ -23946,7 +23961,7 @@
                             e.next = 5;
                             break;
                           }
-                          return (e.next = 4), Ym([o.idol]);
+                          return (e.next = 4), YA([o.idol]);
                         case 4:
                           t = e.sent;
                         case 5:
@@ -23979,7 +23994,7 @@
                         case 6:
                           return (
                             (e.next = 8),
-                            Nm("/api/logBeg", JSON.stringify({}))
+                            NA("/api/logBeg", JSON.stringify({}))
                               .then(
                                 (function () {
                                   var e = Object(g.a)(
@@ -24055,14 +24070,14 @@
           F &&
             (V = (
               <div className="Account-Section-Item">
-                <m background={h} path={"/team/".concat(F.id)}>
+                <A background={h} path={"/team/".concat(F.id)}>
                   <div className="Account-Section-Item-Icon" style={{ background: F.mainColor }}>
                     {jd(F)}
                   </div>
-                </m>
-                <m className="Account-Section-Item-Name" background={h} path={"/team/".concat(F.id)}>
+                </A>
+                <A className="Account-Section-Item-Name" background={h} path={"/team/".concat(F.id)}>
                   {F.nickname}
-                </m>
+                </A>
               </div>
             ));
           var H = (
@@ -24076,14 +24091,14 @@
           O &&
             (H = (
               <div className="Account-Section-Item">
-                <m background={h} path={"/player/".concat(O.id)}>
+                <A background={h} path={"/player/".concat(O.id)}>
                   <div className="Account-Section-Item-Icon" style={{ background: "#054428" }}>
                     <Lc style={{ width: "50px", height: "50px" }} />
                   </div>
-                </m>
-                <m className="Account-Section-Item-Name" background={h} path={"/player/".concat(O.id)}>
+                </A>
+                <A className="Account-Section-Item-Name" background={h} path={"/player/".concat(O.id)}>
                   {O.name}
-                </m>
+                </A>
               </div>
             ));
           var z = (
@@ -24108,7 +24123,7 @@
                         {b ? (
                           <yc />
                         ) : (
-                          <mc
+                          <Ac
                             hover={<l.a.Fragment>Get new Favorite Number.</l.a.Fragment>}
                             id="tooltip"
                             placement="top"
@@ -24140,7 +24155,7 @@
                         {b ? (
                           <yc />
                         ) : (
-                          <mc
+                          <Ac
                             hover={<l.a.Fragment>Get new Coffee Style.</l.a.Fragment>}
                             id="tooltip"
                             placement="bottom"
@@ -24164,7 +24179,7 @@
                   onSubmit={function (e) {
                     e.preventDefault(), w(!0);
                     var t = { coffee: o.coffee, favNumber: o.favNumber };
-                    Nm("/api/updateProfile", JSON.stringify(t))
+                    NA("/api/updateProfile", JSON.stringify(t))
                       .then(function (e) {
                         e.status && 200 === e.status && e.ok
                           ? ((o.coffee = t.coffee),
@@ -24224,9 +24239,9 @@
                       );
                     })}
                   </div>
-                  <m className="ModalForm-Submit Account-Inventory-Button" background={h} path="/reorder/cards">
+                  <A className="ModalForm-Submit Account-Inventory-Button" background={h} path="/reorder/cards">
                     Reorder
-                  </m>
+                  </A>
                 </div>
               </div>
             ) : o.spread && 0 === o.spread.length && X ? (
@@ -24236,9 +24251,9 @@
                   <div className="Account-Spread-NoCards">
                     Tarot Readings are available before the Seasonal Reading each Earlsiesta. Buy Tarot Spread from
                     Concessions to receive a Reading.
-                    <A.b className="ModalForm-Submit Account-Inventory-Button" to="/shop/25">
+                    <m.b className="ModalForm-Submit Account-Inventory-Button" to="/shop/25">
                       Get Cards
-                    </A.b>
+                    </m.b>
                   </div>
                 </div>
               </div>
@@ -24254,26 +24269,26 @@
               </div>
             );
           var _ = (
-            <mc
+            <Ac
               hover={
                 <l.a.Fragment>Beg the Blaseball Gods for coins. You must own Bread Crumbs to do this.</l.a.Fragment>
               }
               id="tooltip"
               placement="top"
               children={
-                <A.b
+                <m.b
                   className="Account-Inventory-BegButton Account-Inventory-BegButton-Disabled"
                   to={"/shop/".concat(ne.BEG)}
                 >
                   Beg
-                </A.b>
+                </m.b>
               }
             />
           );
           void 0 !== o.snacks[ne.BEG] &&
             o.coins > 0 &&
             (_ = (
-              <mc
+              <Ac
                 hover={<l.a.Fragment>Beg the Blaseball Gods for coins. You must have 0 coins to do this.</l.a.Fragment>}
                 id="tooltip"
                 placement="top"
@@ -24283,7 +24298,7 @@
             void 0 !== o.snacks[ne.BEG] &&
               o.coins <= 0 &&
               (_ = (
-                <mc
+                <Ac
                   hover={<l.a.Fragment>Beg the Blaseball Gods for coins.</l.a.Fragment>}
                   id="tooltip"
                   placement="top"
@@ -24314,7 +24329,7 @@
                       <div className="Account-Inventory-Number">{t + 1}</div>
                     </div>
                   ) : (
-                    <mc
+                    <Ac
                       hover={<div className="Account-Inventory-Item-Title">{ne.GetName(e)}</div>}
                       id="tooltip"
                       placement="bottom"
@@ -24331,15 +24346,15 @@
               );
             }),
             re = (
-              <mc
+              <Ac
                 hover={<l.a.Fragment>Verify account.</l.a.Fragment>}
                 id="tooltip"
                 placement="top"
                 children={
                   <Oc.a className="Account-Unverified" type="submit" variant="link">
-                    <m background={h.state} path="/send-verification-email" className="Auth-CTA">
+                    <A background={h.state} path="/send-verification-email" className="Auth-CTA">
                       <$.b />
-                    </m>
+                    </A>
                   </Oc.a>
                 }
               />
@@ -24347,7 +24362,7 @@
           return (
             o.verified &&
               (re = (
-                <mc
+                <Ac
                   hover={<l.a.Fragment>Account Verified.</l.a.Fragment>}
                   id="tooltip"
                   placement="top"
@@ -24407,13 +24422,13 @@
                           <div className="ModalItem-Subheader">Snack Pack</div>
                           <div className="Account-Inventory">
                             <div className="Account-Inventory-Inner">{ae}</div>
-                            <m
+                            <A
                               className="ModalForm-Submit Account-Inventory-Button"
                               background={h}
                               path="/reorder/snacks"
                             >
                               Reorder
-                            </m>
+                            </A>
                           </div>
                         </div>
                         {q}
@@ -24428,9 +24443,9 @@
                               Your account must be verified to contribute to the league.
                             </div>
                             <Oc.a className="ModalForm-Submit" type="submit" variant="success">
-                              <m background={h} path="/send-verification-email">
+                              <A background={h} path="/send-verification-email">
                                 Verify Account
-                              </m>
+                              </A>
                             </Oc.a>
                           </div>
                         )}
@@ -24440,7 +24455,7 @@
                             if ((e.preventDefault(), w(!0), T === o.lightMode && M === o.motion))
                               return w(!1), void n("No Settings Changed", { appearance: "error" });
                             var t = { lightMode: T, motion: M };
-                            Nm("/api/updateSettings", JSON.stringify(t))
+                            NA("/api/updateSettings", JSON.stringify(t))
                               .then(function (e) {
                                 e.status && 200 === e.status && e.ok
                                   ? ((o.lightMode = T),
@@ -24512,24 +24527,24 @@
                           ) : (
                             <li className="Account-Edit-Content">
                               <div className="Account-Edit-Content-Email">{o.email}</div>
-                              <mc
+                              <Ac
                                 hover={<l.a.Fragment>Change your email.</l.a.Fragment>}
                                 id="tooltip"
                                 placement="top"
                                 children={
                                   <Oc.a className="Account-Edit-Wrapper" type="submit" variant="link">
-                                    <m background={h} path="/send-email-change" className="Account-Edit">
+                                    <A background={h} path="/send-email-change" className="Account-Edit">
                                       <se.b className="Account-Edit-Button" /> Edit
-                                    </m>
+                                    </A>
                                   </Oc.a>
                                 }
                               />
                             </li>
                           )}
                           <div className="ModalForm-Submit-Wrapper">
-                            <m background={h} path="/send-delete-account" className="Account-Delete">
+                            <A background={h} path="/send-delete-account" className="Account-Delete">
                               Delete Account
-                            </m>
+                            </A>
                           </div>
                         </div>
                       </div>
@@ -24555,8 +24570,8 @@
               o = Object(r.useContext)(S.context),
               c = Object(r.useState)(),
               u = Object(s.a)(c, 2),
-              A = u[0],
-              m = u[1],
+              m = u[0],
+              A = u[1],
               d = (function () {
                 var t = Object(g.a)(
                   f.a.mark(function t() {
@@ -24566,8 +24581,8 @@
                           case 0:
                             return (
                               (t.next = 2),
-                              Nm("/api/setFavoriteTeam", JSON.stringify({ teamId: A })).then(function (e) {
-                                e.status && 200 === e.status && e.ok && ((a.favoriteTeam = A), n(Object(C.a)({}, a)));
+                              NA("/api/setFavoriteTeam", JSON.stringify({ teamId: m })).then(function (e) {
+                                e.status && 200 === e.status && e.ok && ((a.favoriteTeam = m), n(Object(C.a)({}, a)));
                               })
                             );
                           case 2:
@@ -24611,11 +24626,11 @@
                             })(e.id, o.tournament)
                         )
                           return null;
-                        var a = A === e.id;
+                        var a = m === e.id;
                         return (
                           <div
                             onClick={function () {
-                              return m(e.id);
+                              return A(e.id);
                             }}
                             key={t}
                             className={"Welcome-Team" + (a ? " Welcome-Team--Selected" : "")}
@@ -24636,7 +24651,7 @@
                 </div>
                 <div className="Welcome-Message"> </div>
                 <div className="Welcome-Submit-Wrapper">
-                  <button onClick={d} disabled={!A} className={"Welcome-Submit" + (A ? " Welcome-Submit--Ready" : "")}>
+                  <button onClick={d} disabled={!m} className={"Welcome-Submit" + (m ? " Welcome-Submit--Ready" : "")}>
                     Submit
                   </button>
                 </div>
@@ -24650,7 +24665,7 @@
             i = n[0],
             o = n[1],
             u = Object(c.f)(),
-            A = Object(c.g)();
+            m = Object(c.g)();
           return (
             Object(r.useEffect)(function () {
               t.isSignedIn && !t.isFetching && null === t.favoriteTeam ? o(!0) : o(!1);
@@ -24664,7 +24679,7 @@
                         for (;;)
                           switch ((e.prev = e.next)) {
                             case 0:
-                              o(!1), t.verified || u.push("/send-verification-email", A);
+                              o(!1), t.verified || u.push("/send-verification-email", m);
                             case 2:
                             case "end":
                               return e.stop();
@@ -24682,11 +24697,11 @@
           function (e) {
             var t = Object(r.useContext)(D.context).initUser,
               a = Object(c.f)(),
-              n = Object(Ac.useToasts)().addToast,
+              n = Object(mc.useToasts)().addToast,
               i = Object(r.useState)(!1),
               o = Object(s.a)(i, 2),
               u = o[0],
-              A = o[1],
+              m = o[1],
               d = Object(r.useState)(null),
               f = Object(s.a)(d, 2),
               g = (f[0], f[1], Object(c.g)()),
@@ -24705,7 +24720,7 @@
                   <form
                     onSubmit={function (e) {
                       var r, l;
-                      e.preventDefault(), A(!0);
+                      e.preventDefault(), m(!0);
                       var i = {
                         username: v.current.value.trim(),
                         password: b.current.value.trim(),
@@ -24716,8 +24731,8 @@
                         code: y,
                         isLogin: E,
                       };
-                      Nm("/auth/local", JSON.stringify(i)).then(function (e) {
-                        A(!1),
+                      NA("/auth/local", JSON.stringify(i)).then(function (e) {
+                        m(!1),
                           e.ok && e.status && 200 === e.status
                             ? (E || n("Account Created", { appearance: "success" }), t(), a.push("/"))
                             : e.json().then(function (e) {
@@ -24745,9 +24760,9 @@
                     )}
                     <div>{u ? <Bc /> : <input className="Auth-Submit" type="submit" value="Continue" />}</div>
                     {E ? (
-                      <m background={g.state} path="/forgot" className="Auth-CTA">
+                      <A background={g.state} path="/forgot" className="Auth-CTA">
                         Forgot password?
-                      </m>
+                      </A>
                     ) : null}
                   </form>
                   <div className="Auth-Divider">OR</div>
@@ -24780,10 +24795,10 @@
           var t = Object(c.h)().token,
             a = Object(r.useContext)(D.context).initUser,
             n = Object(c.f)(),
-            i = Object(Ac.useToasts)().addToast,
+            i = Object(mc.useToasts)().addToast,
             o = Object(r.useState)(!1),
             u = Object(s.a)(o, 2),
-            A = u[0],
+            m = u[0],
             d = u[1],
             p = Object(r.useState)(!1),
             h = Object(s.a)(p, 2),
@@ -24801,7 +24816,7 @@
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          return (e.next = 2), Tm(t);
+                          return (e.next = 2), TA(t);
                         case 2:
                           200 === e.sent ? v(!0) : i("Not a valid reset token.", { appearance: "error" });
                         case 4:
@@ -24826,7 +24841,7 @@
                   onSubmit={function (e) {
                     e.preventDefault(), d(!0);
                     var r = { password: y.current.value.trim(), passwordConfirm: B.current.value.trim() };
-                    Nm("/auth/reset-password/".concat(t), JSON.stringify(r)).then(function (e) {
+                    NA("/auth/reset-password/".concat(t), JSON.stringify(r)).then(function (e) {
                       d(!1),
                         e.ok && e.status && 200 === e.status
                           ? (i("Password Changed", { appearance: "success" }), a(), n.push("/"))
@@ -24846,7 +24861,7 @@
                       name="passwordConfirm"
                     />
                   </div>
-                  <div>{A ? <Bc /> : <input className="Auth-Submit" type="submit" value="Reset Password" />}</div>
+                  <div>{m ? <Bc /> : <input className="Auth-Submit" type="submit" value="Reset Password" />}</div>
                 </form>
               </wc>
             </div>
@@ -24855,9 +24870,9 @@
               <wc {...Object.assign({}, e, { className: "Auth" })}>
                 <header className="Auth-Header">Reset Password</header>The link you used was invalid or expired. Please
                 try again.
-                <m background={b} path="/forgot" className="Auth-CTA">
+                <A background={b} path="/forgot" className="Auth-CTA">
                   Forgot password?
-                </m>
+                </A>
               </wc>
             </div>
           );
@@ -24865,15 +24880,15 @@
         jE = function (e) {
           Object(r.useContext)(D.context).initUser;
           var t = Object(c.f)(),
-            a = Object(Ac.useToasts)().addToast,
+            a = Object(mc.useToasts)().addToast,
             n = Object(r.useState)(!1),
             i = Object(s.a)(n, 2),
             o = i[0],
             u = i[1],
-            A = Object(r.useState)(!1),
-            m = Object(s.a)(A, 2),
-            d = m[0],
-            f = m[1],
+            m = Object(r.useState)(!1),
+            A = Object(s.a)(m, 2),
+            d = A[0],
+            f = A[1],
             g = (Object(c.g)(), e.isModal, Object(r.useRef)(null));
           return (
             <wc {...Object.assign({}, e, { className: "Auth" })}>
@@ -24912,7 +24927,7 @@
                   onSubmit={function (e) {
                     e.preventDefault(), u(!0);
                     var t = { email: g.current.value };
-                    Nm("/auth/forgot-password", JSON.stringify(t)).then(function (e) {
+                    NA("/auth/forgot-password", JSON.stringify(t)).then(function (e) {
                       u(!1),
                         f(!0),
                         e.ok && e.status && 200 === e.status
@@ -24948,18 +24963,18 @@
             o = Object(s.a)(i, 2),
             c = o[0],
             u = o[1];
-          function A() {
-            return m.apply(this, arguments);
-          }
           function m() {
-            return (m = Object(g.a)(
+            return A.apply(this, arguments);
+          }
+          function A() {
+            return (A = Object(g.a)(
               f.a.mark(function e() {
                 var t;
                 return f.a.wrap(function (e) {
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        return (e.next = 2), Lm();
+                        return (e.next = 2), LA();
                       case 2:
                         (t = e.sent), u(t);
                       case 4:
@@ -24972,11 +24987,11 @@
           }
           return (
             Object(r.useEffect)(function () {
-              A();
+              m();
             }, []),
             Object(r.useEffect)(
               function () {
-                A();
+                m();
               },
               [null === (t = n.sim) || void 0 === t ? void 0 : t.phase]
             ),
@@ -25130,7 +25145,7 @@
             i = Object(s.a)(n, 2),
             o = i[0],
             u = i[1],
-            A = Object(c.g)(),
+            m = Object(c.g)(),
             d = !!a.favoriteTeam && Md(a.favoriteTeam, t),
             f = <qE />;
           a.isFetching || !a.isSignedIn || a.favoriteTeam || (f = <_E />),
@@ -25158,12 +25173,12 @@
                   }}
                 >
                   {o ? (
-                    <m
-                      background={A}
+                    <A
+                      background={m}
                       path={a.verified ? "/vote/".concat(ZE.BONUS, "/").concat(o) : "/send-verification-email"}
                     >
                       Submit Blessing Vote
-                    </m>
+                    </A>
                   ) : (
                     <l.a.Fragment>Select a Blessing</l.a.Fragment>
                   )}
@@ -25266,8 +25281,8 @@
       var sv,
         cv = r.forwardRef(ov),
         uv = (a.p, ["title", "titleId"]);
-      function Av() {
-        return (Av =
+      function mv() {
+        return (mv =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -25277,7 +25292,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function mv(e, t) {
+      function Av(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -25300,10 +25315,10 @@
       function dv(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = mv(e, uv);
+          l = Av(e, uv);
         return (
           <svg
-            {...Av(
+            {...mv(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -25824,8 +25839,8 @@
       var sb,
         cb = r.forwardRef(ob),
         ub = (a.p, ["title", "titleId"]);
-      function Ab() {
-        return (Ab =
+      function mb() {
+        return (mb =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -25835,7 +25850,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function mb(e, t) {
+      function Ab(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -25858,10 +25873,10 @@
       function db(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = mb(e, ub);
+          l = Ab(e, ub);
         return (
           <svg
-            {...Ab(
+            {...mb(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -26350,8 +26365,8 @@
       var sw,
         cw = r.forwardRef(ow),
         uw = (a.p, ["title", "titleId"]);
-      function Aw() {
-        return (Aw =
+      function mw() {
+        return (mw =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -26361,7 +26376,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function mw(e, t) {
+      function Aw(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -26384,10 +26399,10 @@
       function dw(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = mw(e, uw);
+          l = Aw(e, uw);
         return (
           <svg
-            {...Aw(
+            {...mw(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -26543,9 +26558,9 @@
         },
         Tw = function () {
           return (
-            <A.b to={{ pathname: "/shop/".concat(ne.VOTES) }}>
+            <m.b to={{ pathname: "/shop/".concat(ne.VOTES) }}>
               <Oc.a className="Decrees-Submit-Button">Buy Another Vote</Oc.a>
-            </A.b>
+            </m.b>
           );
         },
         xw = function (e) {
@@ -26669,14 +26684,14 @@
             i = n[0],
             o = n[1],
             u = Object(c.g)(),
-            A = <kw />;
-          t.isFetching || !t.isSignedIn || t.favoriteTeam || (A = <Nw />),
-            t.isFetching || !t.isSignedIn || t.snacks[ne.VOTES] || (A = <Tw />),
+            m = <kw />;
+          t.isFetching || !t.isSignedIn || t.favoriteTeam || (m = <Nw />),
+            t.isFetching || !t.isSignedIn || t.snacks[ne.VOTES] || (m = <Tw />),
             !t.isFetching &&
               t.isSignedIn &&
               t.favoriteTeam &&
               void 0 !== t.snacks[ne.VOTES] &&
-              (A = (
+              (m = (
                 <Oc.a
                   className="Offseason-Button"
                   variant="success"
@@ -26686,12 +26701,12 @@
                   }}
                 >
                   {i ? (
-                    <m
+                    <A
                       background={u}
                       path={t.verified ? "/vote/".concat(Sw.DECREE, "/").concat(i) : "/send-verification-email"}
                     >
                       Submit Decree Vote
-                    </m>
+                    </A>
                   ) : (
                     <l.a.Fragment>Choose a Decree</l.a.Fragment>
                   )}
@@ -26725,7 +26740,7 @@
                   );
                 })}
               </ul>
-              {A}
+              {m}
             </div>
           );
         },
@@ -26902,12 +26917,12 @@
                   }}
                 >
                   {o ? (
-                    <m
+                    <A
                       background={d}
                       path={a.verified ? "/vote/".concat(Ww.WILL, "/").concat(o) : "/send-verification-email"}
                     >
                       Submit Will Vote
-                    </m>
+                    </A>
                   ) : (
                     <l.a.Fragment>Select a Will</l.a.Fragment>
                   )}
@@ -26935,7 +26950,7 @@
                   </h3>
                   <_h header="Wills" lines={p} />
                   <Oc.a className="Wills-Submit-Button Wills-Submit-Button-ToShop">
-                    <A.b to={"/shop/".concat(ne.WILLS)}>Get Wills Access</A.b>
+                    <m.b to={"/shop/".concat(ne.WILLS)}>Get Wills Access</m.b>
                   </Oc.a>
                 </div>
               ) : (
@@ -26992,7 +27007,7 @@
                   <div className="Recap-Blessing-Team" style={{ background: i.mainColor }}>
                     {jd(i)}
                   </div>
-                  <div className="Recap-Blessing-Description">{hm(e)}</div>
+                  <div className="Recap-Blessing-Description">{hA(e)}</div>
                 </div>
                 <div className="Recap-Blessing-VoteContainer">
                   <div className="Recap-Blessing-Votes">
@@ -27035,7 +27050,7 @@
                 <div className="Recap-Blessing-Team" style={{ background: i.mainColor }}>
                   {jd(i)}
                 </div>
-                <div className="Recap-Decree-Description">{hm(e)}</div>
+                <div className="Recap-Decree-Description">{hA(e)}</div>
               </div>
               <div className="Recap-Blessing-VoteContainer">
                 <div className="Recap-Blessing-Votes">
@@ -27067,7 +27082,7 @@
               </div>
               <div className="Recap-Blessing-Content">
                 <div className="Recap-Decree-Icon">{Pw(a.id)}</div>
-                <div className="Recap-Blessing-Description">{hm(e)}</div>
+                <div className="Recap-Blessing-Description">{hA(e)}</div>
               </div>
             </div>
           );
@@ -27089,9 +27104,9 @@
               </div>
               <div className="Recap-Decree-Content">
                 <div className="Recap-Blessing-Team" style={{ background: "#000000" }}>
-                  {bm(e.event)}
+                  {bA(e.event)}
                 </div>
-                <div className="Recap-Decree-Description">{hm(e)}</div>
+                <div className="Recap-Decree-Description">{hA(e)}</div>
               </div>
             </div>
           );
@@ -27102,7 +27117,7 @@
             <div className="Recap-Decree-Container">
               <div className="Recap-Decree-Content">
                 <div className="Recap-Decree-Description">
-                  <Em events={t} source={um.Home} entity="" />
+                  <EA events={t} source={uA.Home} entity="" />
                 </div>
               </div>
             </div>
@@ -27122,8 +27137,8 @@
             decreeResults: void 0,
           }),
           u = Object(s.a)(c, 2),
-          A = u[0],
-          m = u[1],
+          m = u[0],
+          A = u[1],
           d = Object(r.useState)(!1),
           p = Object(s.a)(d, 2),
           h = p[0],
@@ -27140,7 +27155,7 @@
         function N() {
           return (N = Object(g.a)(
             f.a.mark(function e() {
-              var t, r, l, i, o, s, c, u, A;
+              var t, r, l, i, o, s, c, u, m;
               return f.a.wrap(function (e) {
                 for (;;)
                   switch ((e.prev = e.next)) {
@@ -27148,7 +27163,7 @@
                       return (e.next = 2), ud(n, 13);
                     case 2:
                       return (
-                        (r = e.sent), y(r), (e.next = 6), Rm(null === (t = a.sim) || void 0 === t ? void 0 : t.season)
+                        (r = e.sent), y(r), (e.next = 6), RA(null === (t = a.sim) || void 0 === t ? void 0 : t.season)
                       );
                     case 6:
                       if (((l = e.sent), (i = []), (o = []), (s = void 0), !l)) {
@@ -27159,7 +27174,7 @@
                         e.next = 15;
                         break;
                       }
-                      return (e.next = 14), Wm(l.eventResults);
+                      return (e.next = 14), WA(l.eventResults);
                     case 14:
                       o = e.sent;
                     case 15:
@@ -27167,7 +27182,7 @@
                         e.next = 22;
                         break;
                       }
-                      return (e.next = 18), Gm(l.bonusResults);
+                      return (e.next = 18), GA(l.bonusResults);
                     case 18:
                       for (
                         c = e.sent,
@@ -27178,21 +27193,21 @@
                             });
                             t && i.push(t);
                           },
-                          A = 0;
-                        A < l.bonusResults.length;
-                        A++
+                          m = 0;
+                        m < l.bonusResults.length;
+                        m++
                       )
-                        u(A);
+                        u(m);
                     case 22:
                       if (!(l.decreeResults.length > 0)) {
                         e.next = 26;
                         break;
                       }
-                      return (e.next = 25), Hm(l.decreeResults);
+                      return (e.next = 25), HA(l.decreeResults);
                     case 25:
                       s = e.sent;
                     case 26:
-                      m({ recap: l, eventResults: o, blessingResults: i, decreeResults: s });
+                      A({ recap: l, eventResults: o, blessingResults: i, decreeResults: s });
                     case 27:
                     case "end":
                       return e.stop();
@@ -27212,10 +27227,10 @@
         var T = function (e) {
           e.scrollIntoView({ behavior: "smooth", block: "start" });
         };
-        if (!a || !a.sim || !A || !A.recap) return null;
+        if (!a || !a.sim || !m || !m.recap) return null;
         var x,
           P =
-            A.eventResults && A.recap && A.recap.eventResults.length > 0 ? (
+            m.eventResults && m.recap && m.recap.eventResults.length > 0 ? (
               <div className="Recap-Results">
                 <h2 className="Recap-ResultsHeader">Tidings</h2>
                 {w.map(function (e) {
@@ -27337,7 +27352,7 @@
               <Bc />
             ) : (
               <div className="Recap-Inner">
-                <div className="Recap-Name">{A.recap.name}</div>
+                <div className="Recap-Name">{m.recap.name}</div>
                 <K.a className="Recap-Filters">
                   <Oc.a
                     className="Bulletin-Actions-Item-Button Recap-Filters-Button"
@@ -27430,7 +27445,7 @@
         var e = Object(r.useContext)(D.context),
           t = e.user,
           a = e.setUser,
-          n = Object(Ac.useToasts)().addToast,
+          n = Object(mc.useToasts)().addToast,
           i = (function () {
             var e = Object(g.a)(
               f.a.mark(function e(r) {
@@ -27451,7 +27466,7 @@
                       case 6:
                         return (
                           (e.next = 8),
-                          Nm("/api/buyUnlockElection")
+                          NA("/api/buyUnlockElection")
                             .then(
                               (function () {
                                 var e = Object(g.a)(
@@ -27531,16 +27546,16 @@
         iy,
         oy,
         sy = function (e) {
-          var t = Object(Ac.useToasts)().addToast,
+          var t = Object(mc.useToasts)().addToast,
             a = Object(r.useContext)(D.context),
             n = a.user,
             i = a.setUser,
             o = Object(c.f)(),
             u = Object(c.h)().entityId,
-            A = Object(r.useState)(0),
-            m = Object(s.a)(A, 2),
-            d = m[0],
-            p = m[1],
+            m = Object(r.useState)(0),
+            A = Object(s.a)(m, 2),
+            d = A[0],
+            p = A[1],
             h = Object(r.useState)(!1),
             E = Object(s.a)(h, 2),
             v = E[0],
@@ -27575,7 +27590,7 @@
                           return (
                             b(!0),
                             (e.next = 12),
-                            Nm("/api/payTribute", JSON.stringify({ entityId: u, amount: d }))
+                            NA("/api/payTribute", JSON.stringify({ entityId: u, amount: d }))
                               .then(
                                 (function () {
                                   var e = Object(g.a)(
@@ -27713,13 +27728,13 @@
           (e[(e.Lineup = 0)] = "Lineup"), (e[(e.Rotation = 1)] = "Rotation"), (e[(e.Shadows = 2)] = "Shadows");
         })(oy || (oy = {}));
       var cy = function (e) {
-        var t = Object(Ac.useToasts)().addToast,
+        var t = Object(mc.useToasts)().addToast,
           a = Object(r.useContext)(D.context),
           n = a.user,
           i = a.setUser,
           o = Object(c.f)(),
-          A = Object(r.useContext)(VE.context),
-          m = Object(r.useContext)(ds.context),
+          m = Object(r.useContext)(VE.context),
+          A = Object(r.useContext)(ds.context),
           d = Object(r.useContext)(ph.context),
           p = Object(r.useState)(0),
           h = Object(s.a)(p, 2),
@@ -27766,8 +27781,8 @@
           se = ie[1],
           ce = Object(r.useState)(""),
           ue = Object(s.a)(ce, 2),
-          Ae = ue[0],
-          me = ue[1],
+          me = ue[0],
+          Ae = ue[1],
           de = Object(r.useState)(""),
           fe = Object(s.a)(de, 2),
           ge = fe[0],
@@ -27808,19 +27823,19 @@
           "" === T.id &&
             ("0" === I &&
               x(
-                A.decrees.find(function (e) {
+                m.decrees.find(function (e) {
                   return e.id === S;
                 })
               ),
             "1" === I &&
               x(
-                A.blessings.find(function (e) {
+                m.blessings.find(function (e) {
                   return e.id === S;
                 })
               ),
             "2" === I &&
               x(
-                A.wills.find(function (e) {
+                m.wills.find(function (e) {
                   return e.id === S;
                 })
               ));
@@ -27855,8 +27870,8 @@
                 T.info.forEach(function (a, r) {
                   if (a.type === ly.TeamDropdown)
                     j === [] || void 0 === j || j.length < 1
-                      ? W(Ud(m, a, t, !0))
-                      : (V === [] || void 0 === V || V.length < 1) && H(Ud(m, a, t, !0));
+                      ? W(Ud(A, a, t, !0))
+                      : (V === [] || void 0 === V || V.length < 1) && H(Ud(A, a, t, !0));
                   else if (a.type === ly.PlayerDropdown) {
                     if ("myTeam" === a.filters.leagueLocation && void 0 === a.filters.equivalence) {
                       var l = n.favoriteTeam ? n.favoriteTeam : "";
@@ -27954,7 +27969,7 @@
                 if (e.type === ly.ModDropdown && void 0 === e.filters.mods) {
                   var a = [],
                     r = J.find(function (e) {
-                      return e.id === Ae;
+                      return e.id === me;
                     });
                   if (void 0 === r) return;
                   u.collection.map(function (e) {
@@ -27969,14 +27984,14 @@
                 ) {
                   var l = n.favoriteTeam ? n.favoriteTeam : "",
                     i = J.find(function (e) {
-                      return e.id === Ae;
+                      return e.id === me;
                     }),
                     o = i ? i.stars.batting + i.stars.pitching + i.stars.defense + i.stars.baserunning : void 0;
                   Ke(l, e.filters.position, 2, void 0, e.filters.equivalence, o);
                 }
               });
             },
-            [Ae]
+            [me]
           );
         var Xe = function (e, t) {
             1 === e ? Z(t) : 2 === e && $(t);
@@ -27990,12 +28005,12 @@
                     switch ((e.prev = e.next)) {
                       case 0:
                         return (
-                          (o = m.teams.find(function (e) {
+                          (o = A.teams.find(function (e) {
                             return e.id === t;
                           })),
                           (s = Gd(o, a)),
                           (e.next = 4),
-                          Ym(s)
+                          YA(s)
                         );
                       case 4:
                         (c = e.sent), (u = Vd(o, a, c, r, l, i)), Xe(n, u);
@@ -28018,7 +28033,7 @@
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        return (e.next = 2), Ym(t);
+                        return (e.next = 2), YA(t);
                       case 2:
                         (n = e.sent),
                           (r = []),
@@ -28058,12 +28073,12 @@
                     switch ((e.prev = e.next)) {
                       case 0:
                         return (
-                          (r = m.teams.find(function (e) {
+                          (r = A.teams.find(function (e) {
                             return e.id === n;
                           })),
                           (l = Gd(r, a)),
                           (e.next = 4),
-                          Ym(l)
+                          YA(l)
                         );
                       case 4:
                         (i = e.sent),
@@ -28096,7 +28111,7 @@
           },
           tt = function (e) {
             var t = e.target.value.split(",");
-            "1" === t[1] ? me(t[0]) : "2" === t[1] && pe(t[0]);
+            "1" === t[1] ? Ae(t[0]) : "2" === t[1] && pe(t[0]);
           },
           at = function (e) {
             var t = e.target.value;
@@ -28188,13 +28203,13 @@
                             className="ModalForm-Dropdown"
                             disabled={!(J.length > 0)}
                           >
-                            <option value="" defaultValue={Ae} key={-1}>
+                            <option value="" defaultValue={me} key={-1}>
                               Choose a player.
                             </option>
                             {J.map(function (e, t) {
                               if (e.id !== ge)
                                 return (
-                                  <option value={[e.id, 1]} defaultValue={Ae} key={t}>
+                                  <option value={[e.id, 1]} defaultValue={me} key={t}>
                                     {e.fullName}
                                   </option>
                                 );
@@ -28217,7 +28232,7 @@
                               {_.length < 1 ? "No valid players." : "Choose a player."}
                             </option>
                             {_.map(function (e, t) {
-                              if (e.id !== Ae)
+                              if (e.id !== me)
                                 return (
                                   <option value={[e.id, 2]} defaultValue={ge} key={t}>
                                     {e.fullName}
@@ -28329,13 +28344,13 @@
                 })}
               </l.a.Fragment>
             ) : null,
-          At =
+          mt =
             null === M || void 0 === M
               ? void 0
               : M.wills.find(function (e) {
                   return e.id === T.id;
                 }),
-          mt = At ? At.percent : 0;
+          At = mt ? mt.percent : 0;
         return (
           <wc {...Object.assign({}, e, { className: "Vote" })}>
             <div className="ModalForm-Header">Cast Your Votes</div>
@@ -28360,7 +28375,7 @@
                     s = 0,
                     c = 0,
                     u = 0,
-                    A = 0;
+                    m = 0;
                   if (
                     (T.info.forEach(function (e) {
                       e.type === ly.TeamDropdown && (l += 1),
@@ -28368,25 +28383,25 @@
                         e.type === ly.ModDropdown && (s += 1),
                         e.type === ly.PositionDropdown && (c += 1),
                         e.type === ly.RatingDropdown && (u += 1),
-                        e.type === ly.ItemDropdown && (A += 1);
+                        e.type === ly.ItemDropdown && (m += 1);
                     }),
                     2 === l && ("" === ae || "" === oe))
                   )
                     return t("You must select both teams!", { appearance: "error" }), void B(!1);
                   if (1 === l && "" === ae) return t("You must select a team!", { appearance: "error" }), void B(!1);
-                  if (2 === r && ("" === Ae || "" === ge))
+                  if (2 === r && ("" === me || "" === ge))
                     return t("You must select both players!", { appearance: "error" }), void B(!1);
-                  if (2 === r && Ae === ge)
+                  if (2 === r && me === ge)
                     return t("You cannot select the same player twice!", { appearance: "error" }), void B(!1);
-                  if (1 === r && "" === Ae) return t("You must select a player!", { appearance: "error" }), void B(!1);
+                  if (1 === r && "" === me) return t("You must select a player!", { appearance: "error" }), void B(!1);
                   if (1 === s && "" === Be) return t("You must select a mod!", { appearance: "error" }), void B(!1);
                   if (1 === c && "" === xe)
                     return t("You must select a location!", { appearance: "error" }), void B(!1);
                   if (1 === u && "" === je) return t("You must select a rating!", { appearance: "error" }), void B(!1);
-                  if (1 === A && "" === Je) return t("You must select an item!", { appearance: "error" }), void B(!1);
+                  if (1 === m && "" === Je) return t("You must select an item!", { appearance: "error" }), void B(!1);
                   "" !== ae && (a = Object(C.a)(Object(C.a)({}, a), {}, { teamTarget0: ae })),
                     "" !== oe && (a = Object(C.a)(Object(C.a)({}, a), {}, { teamTarget1: oe })),
-                    "" !== Ae && (a = Object(C.a)(Object(C.a)({}, a), {}, { playerTarget0: Ae })),
+                    "" !== me && (a = Object(C.a)(Object(C.a)({}, a), {}, { playerTarget0: me })),
                     "" !== ge && (a = Object(C.a)(Object(C.a)({}, a), {}, { playerTarget1: ge })),
                     "" !== Be && (a = Object(C.a)(Object(C.a)({}, a), {}, { modTarget0: Be })),
                     "" !== xe && (a = Object(C.a)(Object(C.a)({}, a), {}, { locationTarget0: xe })),
@@ -28394,8 +28409,8 @@
                     "" !== Je && (a = Object(C.a)(Object(C.a)({}, a), {}, { itemTarget0: Je }));
                 }
                 a = Object(C.a)(Object(C.a)({}, a), {}, { team1: n.favoriteTeam });
-                var m = { amount: E, entityId: S, voteType: I, data: a };
-                Nm("/api/vote", JSON.stringify(m))
+                var A = { amount: E, entityId: S, voteType: I, data: a };
+                NA("/api/vote", JSON.stringify(A))
                   .then(function (e) {
                     if (e.status && 200 === e.status && e.ok) {
                       var a = Object(C.a)({}, n.snacks),
@@ -28473,10 +28488,10 @@
                   <div className="Team-Construction-Renovation-Percent-Line">
                     <div
                       className="Team-Construction-Renovation-Percent-Line-Fill"
-                      style={{ width: "".concat(mt, "%") }}
+                      style={{ width: "".concat(At, "%") }}
                     />
                   </div>
-                  <div className="Team-Construction-Renovation-Percent">{mt}% of Your Team's Will Votes</div>
+                  <div className="Team-Construction-Renovation-Percent">{At}% of Your Team's Will Votes</div>
                 </l.a.Fragment>
               ) : null}
               <div className="ModalForm-Submit-Wrapper">{ot}</div>
@@ -28509,8 +28524,8 @@
         );
       }
       a(202);
-      var Ay,
-        my = function () {
+      var my,
+        Ay = function () {
           return (
             <div className="Privacy">
               <h1 className="Privacy-Header">Privacy Policy</h1>
@@ -29498,7 +29513,7 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Ay || (Ay = <image id="Ball" x={87} y={75} width={784} height={911} xlinkHref="<img/png blob>" />)}
+            {my || (my = <image id="Ball" x={87} y={75} width={784} height={911} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
@@ -29546,8 +29561,8 @@
             o = Object(r.useState)([]),
             c = Object(s.a)(o, 2),
             u = c[0],
-            A = (c[1], Object(Ac.useToasts)().addToast),
-            m = (Object(r.useRef)(void 0), Object(r.useRef)()),
+            m = (c[1], Object(mc.useToasts)().addToast),
+            A = (Object(r.useRef)(void 0), Object(r.useRef)()),
             d = Object(r.useCallback)(
               Object(g.a)(
                 f.a.mark(function e() {
@@ -29578,7 +29593,7 @@
                                               i(Object(C.a)({}, n)),
                                               a.toasts &&
                                                 a.toasts.forEach(function (e) {
-                                                  A(rm.DoParse(e), { appearance: "info", autoDismiss: !0 });
+                                                  m(rA.DoParse(e), { appearance: "info", autoDismiss: !0 });
                                                 }));
                                           case 5:
                                           case "end":
@@ -29623,14 +29638,14 @@
               };
             })();
           Object(r.useEffect)(function () {
-            p(), void 0 === m.current && (m.current = setInterval(p, 3e5));
+            p(), void 0 === A.current && (A.current = setInterval(p, 3e5));
           }, []),
             Object(r.useEffect)(
               function () {
                 if (u)
                   for (var e = 0; e < u.length; e++) {
                     var t = u[e];
-                    A(t.message, { appearance: "info", autoDismiss: !0 });
+                    m(t.message, { appearance: "info", autoDismiss: !0 });
                   }
               },
               [u]
@@ -29644,7 +29659,7 @@
         Sy = function () {
           return (
             <div className="ModalItem-Content">
-              <pm entity="" source={um.Book} defaultCategory={4} defaultSort={Am.NewestFirst} showCategory={!1} />
+              <pA entity="" source={uA.Book} defaultCategory={4} defaultSort={mA.NewestFirst} showCategory={!1} />
             </div>
           );
         };
@@ -30310,7 +30325,7 @@
                 <h4 className="TheBook-Subheader Library-Subheader">{a > 0 ? n[a - 1].title : ""}</h4>
                 {n.map(function (e, t) {
                   return e.id && !e.redacted && a === t + 1 ? (
-                    <pm entity={e.id} source={um.Story} showButtons={!1} key={t} />
+                    <pA entity={e.id} source={uA.Story} showButtons={!1} key={t} />
                   ) : null;
                 })}
               </div>
@@ -30333,12 +30348,12 @@
             </div>
           </div>
         ) : (
-          <m background={!1} path={"/library/".concat(n, "/").concat(r + 1)} className="Library-Chapters-Item" key={t}>
+          <A background={!1} path={"/library/".concat(n, "/").concat(r + 1)} className="Library-Chapters-Item" key={t}>
             {t}.{" "}
             <div className="Library-Chapters-Item-Body">
               <Yo str={[a]} /> {o ? <ee.i className="Library-Chapters-Item-Arrow" /> : null}
             </div>
-          </m>
+          </A>
         );
       }
       a(205);
@@ -30558,11 +30573,11 @@
           </l.a.Fragment>
         )),
           (C = (
-            <pm
+            <pA
               entity=""
               defaultCategory={-1}
-              source={um.Home}
-              defaultSort={Am.Hot}
+              source={uA.Home}
+              defaultSort={mA.Hot}
               categoryOptions={[-1, Q.Outcomes, Q.Changes, Q.Game, Q.Abilities, Q.Narrative]}
               consolidated={!!x}
             />
@@ -30613,13 +30628,13 @@
               {L ? null : (
                 <l.a.Fragment>
                   {Dd(a.sim, "SIM_COMMUNITY_CHEST") ? ns(<Me />, "LeagueInfo-Bar", b, 3e3) : null}
-                  <m
+                  <A
                     background={i}
                     path="/leagueinfo"
                     className="Bulletin-Widget-Button btn btn-success Bulletin-Widget-Button-White"
                   >
                     See More
-                  </m>
+                  </A>
                 </l.a.Fragment>
               )}
             </div>
@@ -30720,7 +30735,7 @@
             <li className="Bulletin-Actions-Item">
               <div className="Bulletin-Actions-Item-Title">Place Your First Bet</div>
               <Oc.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Games">
-                <A.b to="/upcoming">Try It</A.b>
+                <m.b to="/upcoming">Try It</m.b>
               </Oc.a>
               <div className="Bulletin-Actions-Item-Text">Bet on Upcoming Games to earn more Coins.</div>
             </li>
@@ -30732,7 +30747,7 @@
               <li className="Bulletin-Actions-Item">
                 <div className="Bulletin-Actions-Item-Title">Beg to the Gods</div>
                 <Oc.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Shop">
-                  <A.b to={"/shop/".concat(ne.BEG)}>Try It</A.b>
+                  <m.b to={"/shop/".concat(ne.BEG)}>Try It</m.b>
                 </Oc.a>
                 <div className="Bulletin-Actions-Item-Text">
                   When you are out of coins, use Bread Crumbs to beg for more.
@@ -30744,7 +30759,7 @@
               <li className="Bulletin-Actions-Item">
                 <div className="Bulletin-Actions-Item-Title">Choose Your First Idol</div>
                 <Oc.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Idols Board">
-                  <A.b to="/leaderboard">Try It</A.b>
+                  <m.b to="/leaderboard">Try It</m.b>
                 </Oc.a>
                 <div className="Bulletin-Actions-Item-Text">Go to a Player's page to Idolize them.</div>
               </li>
@@ -30755,7 +30770,7 @@
               <li className="Bulletin-Actions-Item">
                 <div className="Bulletin-Actions-Item-Title">Unlock the Shop</div>
                 <Oc.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Shop">
-                  <A.b to="/shop/">Try It</A.b>
+                  <m.b to="/shop/">Try It</m.b>
                 </Oc.a>
                 <div className="Bulletin-Actions-Item-Text">
                   In the Shop, you will find Snacks that help you earn Coins.
@@ -30767,7 +30782,7 @@
               <li className="Bulletin-Actions-Item">
                 <div className="Bulletin-Actions-Item-Title">Buy a Snack</div>
                 <Oc.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Shop">
-                  <A.b to={"/shop/" + (void 0 === n.snacks.Team_Win ? "".concat(ne.TEAM_WIN) : "")}>Try It</A.b>
+                  <m.b to={"/shop/" + (void 0 === n.snacks.Team_Win ? "".concat(ne.TEAM_WIN) : "")}>Try It</m.b>
                 </Oc.a>
                 <div className="Bulletin-Actions-Item-Text">Buy Snacks. They'll help you earn Coins.</div>
               </li>
@@ -30778,7 +30793,7 @@
               <li className="Bulletin-Actions-Item">
                 <div className="Bulletin-Actions-Item-Title">Unlock the Election</div>
                 <Oc.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Election">
-                  <A.b to="/offseason">Try It</A.b>
+                  <m.b to="/offseason">Try It</m.b>
                 </Oc.a>
                 <div className="Bulletin-Actions-Item-Text">Vote in the Election to create Change.</div>
               </li>
@@ -30798,7 +30813,7 @@
                   </div>
                 </div>
                 <Oc.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Games">
-                  <A.b to="/upcoming">Try It</A.b>
+                  <m.b to="/upcoming">Try It</m.b>
                 </Oc.a>
                 <div className="Bulletin-Actions-Item-Text">Bet on Upcoming Games. Takes Coins to make Coins.</div>
               </li>
@@ -30825,7 +30840,7 @@
                   </div>
                 </div>
                 <Oc.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Shop">
-                  <A.b to={"/shop/" + (void 0 !== n.snacks.Max_Bet ? "".concat(ne.MAX_BET) : "")}>Try It</A.b>
+                  <m.b to={"/shop/" + (void 0 !== n.snacks.Max_Bet ? "".concat(ne.MAX_BET) : "")}>Try It</m.b>
                 </Oc.a>
                 <div className="Bulletin-Actions-Item-Text">Buying more of a Snack earns you more Coins.</div>
               </li>
@@ -30837,7 +30852,7 @@
                   <li className="Bulletin-Actions-Item">
                     <div className="Bulletin-Actions-Item-Title">Buy Votes</div>
                     <Oc.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Shop">
-                      <A.b to={"/shop/".concat(ne.VOTES)}>Try It</A.b>
+                      <m.b to={"/shop/".concat(ne.VOTES)}>Try It</m.b>
                     </Oc.a>
                     <div className="Bulletin-Actions-Item-Text">Buy Votes in order to participate in the Election.</div>
                   </li>
@@ -30846,7 +30861,7 @@
                   <li className="Bulletin-Actions-Item">
                     <div className="Bulletin-Actions-Item-Title">Cast Votes</div>
                     <Oc.a className="Bulletin-Actions-Item-Button" variant="info" aria-label="Go To Election">
-                      <A.b to="/offseason">Try It</A.b>
+                      <m.b to="/offseason">Try It</m.b>
                     </Oc.a>
                     <div className="Bulletin-Actions-Item-Text">The Future is in your hands. Democracy now!</div>
                   </li>
@@ -30914,7 +30929,7 @@
         if (void 0 === U) {
           var H = x ? null : (
             <Oc.a className="Bulletin-Widget-Button" variant="success">
-              <A.b to="/league">Go To Games</A.b>
+              <m.b to="/league">Go To Games</m.b>
             </Oc.a>
           );
           T =
@@ -30932,7 +30947,7 @@
             ) : (
               <div className="Bulletin-Item" style={{ gridRow: 3 }}>
                 <div className="Bulletin-Widget-NoGame">
-                  <m background={i} path={"/team/".concat(G.id)} className="Bulletin-Widget-Team">
+                  <A background={i} path={"/team/".concat(G.id)} className="Bulletin-Widget-Team">
                     <div className="Bulletin-Widget-ScoreTeamColorBar" style={{ background: G.mainColor }}>
                       {Wd(G.emoji)}
                     </div>
@@ -30946,7 +30961,7 @@
                     >
                       {G.fullName}
                     </div>
-                  </m>
+                  </A>
                   <div className="GameWidget-ScoreRecord">
                     {void 0 !== a.standings && n.favoriteTeam ? Ho(V) : "?? - ??"}
                   </div>
@@ -30973,7 +30988,7 @@
             var te = o.stadiums.find(function (e) {
               return e.id === U.stadiumId;
             });
-            te && (($ = <mp stadium={te} style={ip.GameWidget} />), (ee = te.nickname));
+            te && (($ = <Ap stadium={te} style={ip.GameWidget} />), (ee = te.nickname));
           }
           T = (
             <div
@@ -31005,7 +31020,7 @@
                   </div>
                 </div>
                 <div className="Bulletin-Widget-ScoreBacking" role="group" aria-label="The Teams">
-                  <m background={i} path={"/team/".concat(U.awayTeam)} className="GameWidget-ScoreLine">
+                  <A background={i} path={"/team/".concat(U.awayTeam)} className="GameWidget-ScoreLine">
                     <div
                       className="GameWidget-ScoreTeamColorBar"
                       aria-hidden={!0}
@@ -31051,8 +31066,8 @@
                     <div className="GameWidget-ScoreNumber" style={X} aria-label={"".concat(K.awayTeamScore, " Runs")}>
                       {K.awayTeamScore}
                     </div>
-                  </m>
-                  <m background={i} path={"/team/".concat(U.homeTeam)} className="GameWidget-ScoreLine">
+                  </A>
+                  <A background={i} path={"/team/".concat(U.homeTeam)} className="GameWidget-ScoreLine">
                     <div
                       className="GameWidget-ScoreTeamColorBar"
                       aria-hidden={!0}
@@ -31098,7 +31113,7 @@
                     <div className="GameWidget-ScoreNumber" style={Z} aria-label={"".concat(K.homeTeamScore, " Runs")}>
                       {K.homeTeamScore}
                     </div>
-                  </m>
+                  </A>
                 </div>
               </div>
               <div className="Bulletin-Widget-Log" aria-label="Log">
@@ -31131,7 +31146,7 @@
                 </div>
               </div>
               <Oc.a className="Bulletin-Widget-Button" variant="success">
-                <A.b to="/league">Go To Games</A.b>
+                <m.b to="/league">Go To Games</m.b>
               </Oc.a>
             </div>
           );
@@ -31285,9 +31300,9 @@
             i = Object(c.h)().id,
             o = (Object(r.useContext)(S.context), Object(r.useContext)(ds.context)),
             u = Object(r.useState)(!1),
-            A = Object(s.a)(u, 2),
-            m = A[0],
-            d = A[1],
+            m = Object(s.a)(u, 2),
+            A = m[0],
+            d = m[1],
             p = Object(r.useState)(eB),
             h = Object(s.a)(p, 2),
             E = h[0],
@@ -31309,7 +31324,7 @@
                                 t.next = 6;
                                 break;
                               }
-                              return d(!0), (t.next = 4), Zm([i]);
+                              return d(!0), (t.next = 4), ZA([i]);
                             case 4:
                               void 0 !== (a = t.sent) && 1 == a.length ? (E.item = a[0]) : (E.item = void 0);
                             case 6:
@@ -31317,7 +31332,7 @@
                                 t.next = 12;
                                 break;
                               }
-                              return d(!0), (t.next = 10), Km(E.item.id);
+                              return d(!0), (t.next = 10), KA(E.item.id);
                             case 10:
                               void 0 !== (n = t.sent) && 1 == n.length ? (E.player = n[0]) : (E.player = void 0);
                             case 12:
@@ -31336,7 +31351,7 @@
               },
               [e]
             ),
-            !E.item || !E || m)
+            !E.item || !E || A)
           )
             return <Bc />;
           var b,
@@ -31386,7 +31401,7 @@
           var D =
               void 0 !== E.item && B.length > 0
                 ? B.map(function (e, t) {
-                    return <ma id={e.mod} type={ia.Item} key={t} />;
+                    return <Aa id={e.mod} type={ia.Item} key={t} />;
                   })
                 : null,
             L = (
@@ -31487,9 +31502,9 @@
             i = n[0],
             o = n[1],
             u = Object(r.useState)([]),
-            A = Object(s.a)(u, 2),
-            m = A[0],
-            d = A[1],
+            m = Object(s.a)(u, 2),
+            A = m[0],
+            d = m[1],
             p = Object(c.h)().id;
           if (
             (Object(r.useEffect)(function () {
@@ -31501,7 +31516,7 @@
                       for (;;)
                         switch ((e.prev = e.next)) {
                           case 0:
-                            return (e.next = 2), sd(p, Am.OldestFirst);
+                            return (e.next = 2), sd(p, mA.OldestFirst);
                           case 2:
                             (t = e.sent) &&
                               (d(t),
@@ -31540,20 +31555,20 @@
                     {E.nickname} at {h.nickname}
                   </div>
                   <div className="Events-List-Row Events-Time">
-                    Season {Bm(i.phase, i.tournament, i.season)}, Day {Om(i.phase, i.day)}
+                    Season {BA(i.phase, i.tournament, i.season)}, Day {OA(i.phase, i.day)}
                   </div>
                   <span className="Events-List-Row">
-                    <QA type={v} tooltip={!0} />
-                    <span className="Events-Time Events-List-Row-Group">{FA(v)}</span>
+                    <Qm type={v} tooltip={!0} />
+                    <span className="Events-Time Events-List-Row-Group">{Fm(v)}</span>
                   </span>
                 </div>
                 <div className="ModalItem-Content ModalItem-Scroll">
-                  <pm
+                  <pA
                     entity={p}
-                    source={um.Game}
+                    source={uA.Game}
                     defaultCategory={-1}
-                    defaultSort={Am.OldestFirst}
-                    preloadEvents={m}
+                    defaultSort={mA.OldestFirst}
+                    preloadEvents={A}
                     categoryOptions={[-1, Q.Changes, Q.Game, Q.Abilities]}
                   />
                 </div>
@@ -32766,7 +32781,7 @@
       function uB(e) {
         return e > 70 ? "success" : e > 20 ? "warning" : "danger";
       }
-      function AB(e, t) {
+      function mB(e, t) {
         var a = 0,
           n = {
             Steal: 0,
@@ -32930,7 +32945,7 @@
           )
         );
       }
-      function mB(e) {
+      function AB(e) {
         return <dB data={e.data} />;
       }
       function dB(e) {
@@ -32967,7 +32982,7 @@
             return (
               <div className="BossFightWidget-StatusBar">
                 <div className={"BossFightWidget-Status BossFightWidget-Status--".concat(a)}>{t}</div>
-                {e.started ? <QA type={e.weather} tooltip={!0} /> : null}
+                {e.started ? <Qm type={e.weather} tooltip={!0} /> : null}
               </div>
             );
           })(i),
@@ -33007,7 +33022,7 @@
               </l.a.Fragment>
             );
           })(i),
-          A = Object(r.useContext)(_s.context),
+          m = Object(r.useContext)(_s.context),
           d = Object(r.useState)([]),
           f = Object(s.a)(d, 2),
           g = f[0],
@@ -33120,13 +33135,13 @@
                   <div className="BossFightWidget-PlayerStatusIcon BossFightWidget-PlayerStatusIcon--Pitching" />
                   <div className="BossFightWidget-PlayerStatusLabel">Pitching</div>
                   <div className="BossFightWidget-PlayerLineNameWrapper" style={{ background: Nd(S, 0.5) }}>
-                    <m
+                    <A
                       background={j}
                       path={"/player/".concat(n.topOfInning ? n.homePitcher : n.awayPitcher)}
                       className="BossFightWidget-PlayerLineName"
                     >
                       {n.topOfInning ? n.homePitcherName : n.awayPitcherName}
-                    </m>
+                    </A>
                   </div>
                 </div>
                 <div className="BossFightWidget-PlayerLine">
@@ -33134,13 +33149,13 @@
                   <div className="BossFightWidget-PlayerStatusLabel">Batting</div>
                   <div className="BossFightWidget-PlayerLineNameWrapper" style={{ background: Nd(I, 0.5) }}>
                     {n.homeBatterName || n.awayBatterName ? (
-                      <m
+                      <A
                         background={j}
                         path={"/player/".concat(n.topOfInning ? n.awayBatter : n.homeBatter)}
                         className="BossFightWidget-PlayerLineName"
                       >
                         {n.topOfInning ? n.awayBatterName : n.homeBatterName}
-                      </m>
+                      </A>
                     ) : (
                       <div className="BossFightWidget-PlayerLineName">-</div>
                     )}
@@ -33341,7 +33356,7 @@
               {n.awayTeamName}
             </div>
           ),
-          ee = FA(n.weather);
+          ee = Fm(n.weather);
         ee.includes(" ") && (ee = ee.replace(" ", ""));
         var te,
           ae = " BossFightWidget-Weather-" + ee,
@@ -33371,7 +33386,7 @@
                 </div>
                 <div className="BossFightWidget-Enemy-Body">
                   <div className="BossFightWidget-Enemy-RedLine">
-                    {null === A || void 0 === A || null === (t = A.doc) || void 0 === t ? void 0 : t.zeta}
+                    {null === m || void 0 === m || null === (t = m.doc) || void 0 === t ? void 0 : t.zeta}
                   </div>
                 </div>
               </div>
@@ -33383,7 +33398,7 @@
                   <div className="BossFightWidget-ScoreLabel BossFightWidget-ScoreLabel--Series">{V}</div>
                 </div>
                 <div className="BossFightWidget-Names">
-                  <m background={j} path={"/team/".concat(n.awayTeam)} className="BossFightWidget-ScoreLine">
+                  <A background={j} path={"/team/".concat(n.awayTeam)} className="BossFightWidget-ScoreLine">
                     {q}
                     <div className="BossFightWidget-ScoreTeam">
                       {$}
@@ -33392,12 +33407,12 @@
                       </div>
                     </div>
                     <div className="BossFightWidget-SpiritDamage">
-                      {null !== n.damageResults && "" !== n.damageResults ? AB(g, n.awayTeam) : null}
+                      {null !== n.damageResults && "" !== n.damageResults ? mB(g, n.awayTeam) : null}
                     </div>
-                  </m>
+                  </A>
                 </div>
                 <div className="BossFightWidget-Names">
-                  <m background={j} path={"/team/".concat(n.homeTeam)} className="BossFightWidget-ScoreLine">
+                  <A background={j} path={"/team/".concat(n.homeTeam)} className="BossFightWidget-ScoreLine">
                     {X}
                     <div className="BossFightWidget-ScoreTeam">
                       {K}
@@ -33406,9 +33421,9 @@
                       </div>
                     </div>
                     <div className="BossFightWidget-SpiritDamage">
-                      {null !== n.damageResults && "" !== n.damageResults ? AB(g, n.homeTeam) : null}
+                      {null !== n.damageResults && "" !== n.damageResults ? mB(g, n.homeTeam) : null}
                     </div>
-                  </m>
+                  </A>
                 </div>
               </div>
               <div className="BossFightWidget-Log-Container">
@@ -33439,7 +33454,7 @@
                   {null === (t = a.schedule) || void 0 === t
                     ? void 0
                     : t.map(function (e) {
-                        return <mB data={e} />;
+                        return <AB data={e} />;
                       })}
                 </ul>
               ),
@@ -33491,7 +33506,7 @@
             return t.id === e.team;
           });
         return void 0 === i ? null : (
-          <m
+          <A
             background={t}
             path={"/team/".concat(i.id)}
             className={"Standings-Team" + (n.lightMode ? " Standings-Team-LightMode" : "")}
@@ -33511,7 +33526,7 @@
                 {i.fullName}
               </div>
             </div>
-          </m>
+          </A>
         );
       }
       !(function (e) {
@@ -33546,12 +33561,12 @@
             }
           }
           if (!n.sim) return null;
-          var A,
-            m = u() === fB.Upcoming ? n.tomorrowSchedule : n.schedule,
+          var m,
+            A = u() === fB.Upcoming ? n.tomorrowSchedule : n.schedule,
             d = u() === fB.Live ? n.postseasons[0].matchups : n.postseasons[0].tomorrowMatchups,
             f = u() === fB.Upcoming ? n.sim.day + 1 : n.sim.day,
             g =
-              void 0 === m ? null : (
+              void 0 === A ? null : (
                 <ul>
                   {null ===
                     (t = (function () {
@@ -33581,7 +33596,7 @@
                           return Math.max(e.homeOdds, e.awayOdds) > Math.max(t.homeOdds, t.awayOdds) ? -1 : 1;
                         }))
                       );
-                    })(m)) || void 0 === t
+                    })(A)) || void 0 === t
                     ? void 0
                     : t.map(function (e, t) {
                         return <Mp index={t} key={t} data={e} matchups={d} />;
@@ -33589,7 +33604,7 @@
                 </ul>
               ),
             p =
-              void 0 === m || (void 0 !== m && m.length <= 0) ? (
+              void 0 === A || (void 0 !== A && A.length <= 0) ? (
                 <div className="League-Body">There are no tournament games scheduled for Day {f + 1}.</div>
               ) : (
                 <div>
@@ -33602,24 +33617,24 @@
           void 0 !== n && void 0 !== n.sim && n.sim.season;
           switch (u()) {
             case fB.Leaderboard:
-              A = <hh />;
+              m = <hh />;
               break;
             case fB.Tournament:
-              A = <pB />;
+              m = <pB />;
               break;
             case fB.Bracket:
               for (var h = [], E = 0; E < n.postseasons.length; E++) h.push(<Dh playoffIndex={E} />);
-              A = <l.a.Fragment>{h}</l.a.Fragment>;
+              m = <l.a.Fragment>{h}</l.a.Fragment>;
               break;
             case fB.Live:
             case fB.Upcoming:
-              A = s ? <Bc /> : p;
+              m = s ? <Bc /> : p;
           }
           return (
             <div>
               <h2 className="League-Header">{null === c || void 0 === c ? void 0 : c.name}</h2>
               <uh />
-              {A}
+              {m}
             </div>
           );
         },
@@ -33656,7 +33671,7 @@
                 text="Offseason. Check for updates on the Discord!"
               />
               <lh />
-              <Ah />
+              <mh />
               {o}
             </l.a.Fragment>
           );
@@ -33694,7 +33709,7 @@
                 text="Offseason. Check for updates on the Discord!"
               />
               <lh />
-              <Ah />
+              <mh />
               {o}
             </l.a.Fragment>
           );
@@ -33718,8 +33733,8 @@
               o = <l.a.Fragment>{s}</l.a.Fragment>;
           }
           var u = [],
-            A = [],
             m = [],
+            A = [],
             d = [];
           if (
             (a.postseasons.forEach(function (e) {
@@ -33734,7 +33749,7 @@
                     (null === e || void 0 === e || null === (a = e.playoffs) || void 0 === a ? void 0 : a.winner)
                   );
                 });
-                void 0 !== a && (u.push(a), A.push(a.secondaryColor), m.push(a.fullName), d.push(e.playoffs.name));
+                void 0 !== a && (u.push(a), m.push(a.secondaryColor), A.push(a.fullName), d.push(e.playoffs.name));
               }
             }),
             u.length <= 0)
@@ -33750,15 +33765,15 @@
                       <_.S className="Stubs-Cup" />
                       <div className="League-Info-Body">
                         Congratulations to your {d[g]} Champions{" "}
-                        <div className="League-Info-Callout" style={{ color: A[g] }}>
-                          {m[g]}
+                        <div className="League-Info-Callout" style={{ color: m[g] }}>
+                          {A[g]}
                         </div>
                       </div>
                     </div>
                   }
                   text="Offseason. Check for updates on the Discord!"
                 />
-                <Ah />
+                <mh />
                 {o}
               </l.a.Fragment>
             );
@@ -33866,7 +33881,7 @@
                       return <div className="Recap-Blessing-Description-Line">{e}</div>;
                     })}
                   </div>
-                  {cm(n)}
+                  {cA(n)}
                   <fc
                     event={n}
                     upnut={null === n || void 0 === n || null === (t = n.metadata) || void 0 === t ? void 0 : t.upnut}
@@ -33887,7 +33902,7 @@
           return void 0 === n ? null : (
             <div className="Recap-Decree-Container Events-Container">
               <div className="Recap-Decree-Info">
-                <div className="Recap-Decree-Header">{vm(a)}</div>
+                <div className="Recap-Decree-Header">{vA(a)}</div>
               </div>
               <div className="Recap-Decree-Content">
                 <div className="Recap-Blessing-Team" style={{ background: n.mainColor }}>
@@ -33899,7 +33914,7 @@
                   })}
                 </div>
               </div>
-              {cm(a)}
+              {cA(a)}
             </div>
           );
         },
@@ -33914,15 +33929,15 @@
           return void 0 === n ? null : (
             <div className="Recap-Decree-Container Events-Container">
               <div className="Recap-Decree-Info">
-                <div className="Recap-Decree-Header">{vm(a)}</div>
+                <div className="Recap-Decree-Header">{vA(a)}</div>
               </div>
               <div className="Events-Solo-Content">
                 <div className="Recap-Blessing-Team" style={{ background: n.mainColor }}>
                   {jd(n)}
                 </div>
-                <cs entity="" event={a} source={um.ParentEvent} />
+                <cs entity="" event={a} source={uA.ParentEvent} />
               </div>
-              {cm(a)}
+              {cA(a)}
             </div>
           );
         },
@@ -33961,7 +33976,7 @@
                   </div>
                 </div>
               </div>
-              {cm(n)}
+              {cA(n)}
             </div>
           );
         },
@@ -33984,7 +33999,7 @@
                     </div>
                   ) : null}
                   <div className="Recap-Decree-Description">
-                    <Em events={[t]} source={um.ParentEvent} entity="" />
+                    <EA events={[t]} source={uA.ParentEvent} entity="" />
                   </div>
                 </div>
               </div>
@@ -34018,19 +34033,19 @@
             o = Object(r.useState)([]),
             c = Object(s.a)(o, 2),
             u = c[0],
-            A = c[1];
+            m = c[1];
           Object(r.useContext)(D.context).user, Object(r.useContext)(ds.context);
           Object(r.useEffect)(function () {
-            m();
+            A();
           }, []);
-          var m = (function () {
+          var A = (function () {
               var e = Object(g.a)(
                 f.a.mark(function e() {
                   return f.a.wrap(function (e) {
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          return (e.t0 = A), (e.next = 3), ud(i, 3);
+                          return (e.t0 = m), (e.next = 3), ud(i, 3);
                         case 3:
                           (e.t1 = e.sent), (0, e.t0)(e.t1);
                         case 5:
@@ -34083,7 +34098,7 @@
                 }
                 text=""
               />
-              <mh />
+              <Ah />
               {d}
             </div>
           );
@@ -34108,7 +34123,7 @@
                 <div className="Recap-Blessing-Team" style={{ background: n.mainColor }}>
                   {jd(n)}
                 </div>
-                <div className="Recap-Decree-Description">{hm(e)}</div>
+                <div className="Recap-Decree-Description">{hA(e)}</div>
               </div>
             </div>
           );
@@ -34121,8 +34136,8 @@
             o = void 0 !== i.sim && void 0 !== i.sim.season ? i.sim.season : -1,
             c = Object(r.useState)([]),
             u = Object(s.a)(c, 2),
-            A = u[0],
-            m = u[1],
+            m = u[0],
+            A = u[1],
             d = Object(r.useState)(!0),
             p = Object(s.a)(d, 2),
             h = p[0],
@@ -34151,7 +34166,7 @@
                           return (e.next = 2), ud(o, 5);
                         case 2:
                           (t = e.sent),
-                            m(
+                            A(
                               t.filter(function (e) {
                                 return 29 !== e.type;
                               })
@@ -34168,13 +34183,13 @@
               };
             })(),
             x = null !== (t = N.favoriteTeam) && void 0 !== t ? t : "",
-            P = A.filter(function (e) {
+            P = m.filter(function (e) {
               return [56, 57, 58, 163, 164].includes(e.type);
             }),
-            L = A.filter(function (e) {
+            L = m.filter(function (e) {
               return 194 === e.type;
             }),
-            M = A.filter(function (e) {
+            M = m.filter(function (e) {
               return (
                 !P.includes(e) &&
                 !L.includes(e) &&
@@ -34277,7 +34292,7 @@
                             </div>
                           </div>
                           {null ===
-                            (t = A.filter(function (e) {
+                            (t = m.filter(function (e) {
                               var t;
                               return null === e || void 0 === e || null === (t = e.teamTags) || void 0 === t
                                 ? void 0
@@ -34289,7 +34304,7 @@
                                 Q && (Q = !1);
                                 var t = e.metadata.children,
                                   a = t
-                                    ? A.filter(function (e) {
+                                    ? m.filter(function (e) {
                                         return t.includes(e.id);
                                       })
                                     : [];
@@ -34344,7 +34359,7 @@
                 }
                 text=""
               />
-              <mh />
+              <Ah />
               {j}
               <Kp />
             </div>
@@ -34352,14 +34367,14 @@
         },
         jB = a(158),
         WB = function (e) {
-          var t = Object(Ac.useToasts)().addToast,
+          var t = Object(mc.useToasts)().addToast,
             a = Object(r.useContext)(D.context),
             n = a.user,
             i = a.setUser,
             o = Object(c.f)(),
             u = Object(c.h)(),
-            A = u.stadiumId,
-            m = u.renovationId,
+            m = u.stadiumId,
+            A = u.renovationId,
             d = Object(r.useState)(25),
             p = Object(s.a)(d, 2),
             h = p[0],
@@ -34392,8 +34407,8 @@
                     else if (h > O) t("Max contribution is ".concat(O, "!"), { appearance: "error" });
                     else {
                       y(!0);
-                      var a = { amount: h, stadiumId: A, renovationId: m };
-                      Nm("/api/renovate", JSON.stringify(a))
+                      var a = { amount: h, stadiumId: m, renovationId: A };
+                      NA("/api/renovate", JSON.stringify(a))
                         .then(function (e) {
                           e.status && 200 === e.status && e.ok
                             ? ((n.coins = n.coins - h),
@@ -34470,7 +34485,7 @@
               null !== t.model ? (
                 <div className="Team-Stadium-Header-Line">
                   <div className="Player-Info-Line-Header">
-                    <mp stadium={t} style={ip.TeamModal} />
+                    <Ap stadium={t} style={ip.TeamModal} />
                   </div>
                   <div className="Team-Stadium-Header">{t.name}</div>
                 </div>
@@ -34701,9 +34716,9 @@
                 }}
               >
                 {a ? (
-                  <m background={i} path={"/contribute/".concat(t, "/").concat(a)}>
+                  <A background={i} path={"/contribute/".concat(t, "/").concat(a)}>
                     Contribute
-                  </m>
+                  </A>
                 ) : (
                   <l.a.Fragment>Select an Option</l.a.Fragment>
                 )}
@@ -34761,9 +34776,9 @@
             o = i[0],
             c = i[1],
             u = Object(r.useState)(void 0),
-            m = Object(s.a)(u, 2),
-            d = m[0],
-            p = m[1],
+            A = Object(s.a)(u, 2),
+            d = A[0],
+            p = A[1],
             h = Object(r.useState)([]),
             E = Object(s.a)(h, 2),
             v = E[0],
@@ -34818,7 +34833,7 @@
                         }
                         return O(!1), e.abrupt("return");
                       case 12:
-                        return (e.t0 = $o), (e.next = 15), md(n.renoHand);
+                        return (e.t0 = $o), (e.next = 15), Ad(n.renoHand);
                       case 15:
                         return (e.t1 = e.sent), (r = (0, e.t0)(e.t1)), (e.next = 19), pd(n.id);
                       case 19:
@@ -34883,7 +34898,7 @@
                         own a Pizza Snack. Head to the shop to buy access.
                       </div>
                       <Oc.a className="Decrees-Submit-Button">
-                        <A.b to={"/shop/".concat(ne.STADIUM)}>Go To Shop</A.b>
+                        <m.b to={"/shop/".concat(ne.STADIUM)}>Go To Shop</m.b>
                       </Oc.a>
                     </div>
                   </div>
@@ -34924,7 +34939,7 @@
             n = Object(r.useContext)(ds.context),
             i = Object(r.useContext)(D.context),
             o = i.user,
-            u = (i.setUser, Object(Ac.useToasts)().addToast, Object(c.g)()),
+            u = (i.setUser, Object(mc.useToasts)().addToast, Object(c.g)()),
             d = Object(r.useState)(void 0),
             p = Object(s.a)(d, 2),
             h = p[0],
@@ -35095,7 +35110,7 @@
                     the shop to buy access.
                   </div>
                   <Oc.a className="Decrees-Submit-Button">
-                    <A.b to={"/shop/".concat(ne.STADIUM)}>Go To Shop</A.b>
+                    <m.b to={"/shop/".concat(ne.STADIUM)}>Go To Shop</m.b>
                   </Oc.a>
                 </div>
               </div>
@@ -35149,9 +35164,9 @@
                     }}
                   >
                     {W ? (
-                      <m background={u} path={"/wish/".concat(W.id)}>
+                      <A background={u} path={"/wish/".concat(W.id)}>
                         Contribute
-                      </m>
+                      </A>
                     ) : (
                       <l.a.Fragment>Select an Option</l.a.Fragment>
                     )}
@@ -35215,9 +35230,9 @@
                             e.id === o.favoriteTeam ? "GiftShop-Gifts-Item-View" : "GiftShop-Gifts-Item-Button"
                           }
                         >
-                          <m background={u} path={"/gift/".concat(e.id)} params={h}>
+                          <A background={u} path={"/gift/".concat(e.id)} params={h}>
                             {e.id === o.favoriteTeam ? "View" : "Gift"}
-                          </m>
+                          </A>
                         </button>
                       </li>
                     );
@@ -35328,11 +35343,11 @@
           var t,
             a,
             n = Object(c.h)().teamId,
-            i = Object(Ac.useToasts)().addToast,
+            i = Object(mc.useToasts)().addToast,
             o = Object(r.useContext)(D.context),
             u = o.user,
-            A = o.setUser,
-            m = Object(c.f)(),
+            m = o.setUser,
+            A = Object(c.f)(),
             d = Object(r.useContext)(ds.context),
             p = (Object(r.useContext)(VE.context), Object(r.useState)(0)),
             h = Object(s.a)(p, 2),
@@ -35447,21 +35462,21 @@
                       if (
                         (e.preventDefault(),
                         B(!0),
-                        Md(n, d) || (i("Team not accepting gifts", { appearance: "error" }), m.goBack()),
+                        Md(n, d) || (i("Team not accepting gifts", { appearance: "error" }), A.goBack()),
                         E < 25)
                       )
                         i("The minimum Gift contribution is 25 Coins.", { appearance: "error" });
                       else if (E > x) i("Max contribution is ".concat(x, "!"), { appearance: "error" });
                       else {
                         var t = { amount: E, entityId: n, data: { team1: u.favoriteTeam } };
-                        Nm("/api/gift", JSON.stringify(t))
+                        NA("/api/gift", JSON.stringify(t))
                           .then(function (e) {
                             e.status && 200 === e.status && e.ok
                               ? ((u.coins = u.coins - E),
-                                A(Object(C.a)({}, u)),
-                                A(Object(C.a)({}, u)),
+                                m(Object(C.a)({}, u)),
+                                m(Object(C.a)({}, u)),
                                 i("Coins Gifted", { appearance: "success" }),
-                                m.goBack())
+                                A.goBack())
                               : e.json().then(function (e) {
                                   i(e.error || "Error", { appearance: "error" });
                                 });
@@ -35520,16 +35535,16 @@
           );
         },
         aO = function (e) {
-          var t = Object(Ac.useToasts)().addToast,
+          var t = Object(mc.useToasts)().addToast,
             a = Object(r.useContext)(D.context),
             n = a.user,
             i = a.setUser,
             o = Object(c.f)(),
             u = Object(r.useContext)(VE.context),
-            A = (Object(c.h)().id, Object(r.useState)(25)),
-            m = Object(s.a)(A, 2),
-            d = m[0],
-            p = m[1],
+            m = (Object(c.h)().id, Object(r.useState)(25)),
+            A = Object(s.a)(m, 2),
+            d = A[0],
+            p = A[1],
             h = Object(r.useState)(!1),
             E = Object(s.a)(h, 2),
             v = E[0],
@@ -35570,7 +35585,7 @@
                     else {
                       b(!0);
                       var a = { amount: d, entityId: w, data: { team1: n.favoriteTeam } };
-                      Nm("/api/wishlist", JSON.stringify(a))
+                      NA("/api/wishlist", JSON.stringify(a))
                         .then(function (e) {
                           e.status && 200 === e.status && e.ok
                             ? ((n.coins = n.coins - d),
@@ -35649,7 +35664,7 @@
           i = Object(r.useState)([]),
           o = Object(s.a)(i, 2),
           u = o[0],
-          A = o[1],
+          m = o[1],
           d = Object(c.g)(),
           f = Object(r.useState)(null !== (e = a.motion) && void 0 !== e && e),
           g = Object(s.a)(f, 2),
@@ -35682,7 +35697,7 @@
             if (u.length < 1) {
               var e,
                 t = Ud(n, { filters: {} }, null !== (e = a.favoriteTeam) && void 0 !== e ? e : "", !1);
-              A(t);
+              m(t);
             }
           },
           [n]
@@ -35701,7 +35716,7 @@
                     e.imPosition[0] <= 0
                       ? Math.floor(Math.abs(e.imPosition[0]) * Math.floor(12.5)) + Math.ceil(12.5)
                       : Math.ceil(12.5) - Math.floor(e.imPosition[0] * Math.floor(12.5)),
-                  y: Math.ceil(Math.max(Math.min(19 - 15 * e.imPosition[1], C), 0)),
+                  y: Math.ceil(Math.max(Math.min(19 - 15 * e.imPosition[1], C), 1)),
                 };
               })
               .sort(function (e, t) {
@@ -35920,9 +35935,9 @@
                               animation: p ? "none" : "",
                             }}
                           >
-                            <m background={d} path={"/team/".concat(e.team.id)} className="DepthChart-Team-Wrapper">
+                            <A background={d} path={"/team/".concat(e.team.id)} className="DepthChart-Team-Wrapper">
                               <div className={"DepthChart-Team " + r}>{jd(e.team)}</div>
-                            </m>
+                            </A>
                           </div>
                         </ca.a>
                       )
@@ -36037,7 +36052,7 @@
                     .slice(0, 5)
                     .map(function (e) {
                       return (
-                        <m background={d} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
+                        <A background={d} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
                           <div className="DepthChart-Lists-Name">
                             <div
                               className="DepthChart-Lists-Color"
@@ -36053,7 +36068,7 @@
                               ? (1 - e.imPosition[1]).toFixed(4)
                               : (1 + Math.abs(e.imPosition[1])).toFixed(4)}
                           </div>
-                        </m>
+                        </A>
                       );
                     })}
                 </div>
@@ -36068,7 +36083,7 @@
                     .slice(u.length / 2 - 2, u.length / 2 + 3)
                     .map(function (e) {
                       return (
-                        <m background={d} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
+                        <A background={d} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
                           <div className="DepthChart-Lists-Name">
                             <div
                               className="DepthChart-Lists-Color"
@@ -36084,7 +36099,7 @@
                               ? (1 - e.imPosition[1]).toFixed(4)
                               : (1 + Math.abs(e.imPosition[1])).toFixed(4)}
                           </div>
-                        </m>
+                        </A>
                       );
                     })}
                 </div>
@@ -36099,7 +36114,7 @@
                     .slice(0, 5)
                     .map(function (e) {
                       return (
-                        <m background={d} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
+                        <A background={d} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
                           <div className="DepthChart-Lists-Name">
                             <div
                               className="DepthChart-Lists-Color"
@@ -36115,7 +36130,7 @@
                               ? (1 - e.imPosition[1]).toFixed(4)
                               : (1 + Math.abs(e.imPosition[1])).toFixed(4)}
                           </div>
-                        </m>
+                        </A>
                       );
                     })}
                 </div>
@@ -36132,9 +36147,9 @@
             i = (n.user, n.setUser, Object(r.useState)(0)),
             o = Object(s.a)(i, 2),
             u = o[0],
-            A = o[1],
-            m = Object(r.useState)(0),
-            d = Object(s.a)(m, 2),
+            m = o[1],
+            A = Object(r.useState)(0),
+            d = Object(s.a)(A, 2),
             p = d[0],
             h = d[1],
             E = Object(r.useState)(),
@@ -36208,7 +36223,7 @@
                 a.teams.forEach(function (e) {
                   Md(e.id, a) && (r += e.eDensity);
                 }),
-                  A(Number(r.toFixed(5)));
+                  m(Number(r.toFixed(5)));
               },
               [a]
             ),
@@ -36251,7 +36266,7 @@
                         <div className="ModalItem-Subheader">Active Rules</div>
                         <div className="ModalItem-Attributes LeagueInfo-Attributes">
                           {t.sim.attr.map(function (e, t) {
-                            return <ma id={e} type={ia.League} key={t} context={oa.League} />;
+                            return <Aa id={e} type={ia.League} key={t} context={oa.League} />;
                           })}
                         </div>
                       </div>
@@ -36302,13 +36317,13 @@
         lO = function (e) {
           var t = Object(r.useContext)(D.context),
             a = (t.user, t.setUser, Object(c.f)()),
-            n = Object(Ac.useToasts)().addToast,
+            n = Object(mc.useToasts)().addToast,
             i = Object(r.useState)(!1),
             o = Object(s.a)(i, 2),
             u = o[0],
-            A = o[1],
-            m = Object(r.useState)(!1),
-            d = Object(s.a)(m, 2),
+            m = o[1],
+            A = Object(r.useState)(!1),
+            d = Object(s.a)(A, 2),
             f = d[0],
             g = d[1];
           Object(c.g)(), e.isModal, Object(r.useRef)(null);
@@ -36347,9 +36362,9 @@
                 <form
                   onSubmit={function (t) {
                     t.preventDefault(),
-                      A(!0),
-                      Nm("/auth/verify-account").then(function (e) {
-                        A(!1),
+                      m(!0),
+                      NA("/auth/verify-account").then(function (e) {
+                        m(!1),
                           g(!0),
                           e.ok && e.status && 200 === e.status
                             ? n("Email sent", { appearance: "success" })
@@ -36372,11 +36387,11 @@
             n = a.user,
             i = a.setUser,
             o = Object(c.f)(),
-            u = Object(Ac.useToasts)().addToast,
-            A = Object(r.useState)(!1),
-            m = Object(s.a)(A, 2),
-            d = m[0],
-            p = m[1],
+            u = Object(mc.useToasts)().addToast,
+            m = Object(r.useState)(!1),
+            A = Object(s.a)(m, 2),
+            d = A[0],
+            p = A[1],
             h = Object(r.useState)(!1),
             E = Object(s.a)(h, 2);
           E[0], E[1], Object(c.g)(), e.isModal, Object(r.useRef)(null), Object(r.useRef)(null);
@@ -36393,7 +36408,7 @@
                           for (;;)
                             switch ((e.prev = e.next)) {
                               case 0:
-                                Nm("/auth/verify-account/".concat(t)).then(function (e) {
+                                NA("/auth/verify-account/".concat(t)).then(function (e) {
                                   p(!1),
                                     e.ok && e.status && 200 === e.status
                                       ? (u("Account Verified", { appearance: "success" }),
@@ -36422,15 +36437,15 @@
       var oO = function (e) {
           Object(r.useContext)(D.context).initUser;
           var t = Object(c.f)(),
-            a = Object(Ac.useToasts)().addToast,
+            a = Object(mc.useToasts)().addToast,
             n = Object(r.useState)(!1),
             i = Object(s.a)(n, 2),
             o = i[0],
             u = i[1],
-            A = Object(r.useState)(!1),
-            m = Object(s.a)(A, 2),
-            d = m[0],
-            f = m[1],
+            m = Object(r.useState)(!1),
+            A = Object(s.a)(m, 2),
+            d = A[0],
+            f = A[1],
             g = (Object(c.g)(), e.isModal, Object(r.useRef)(null));
           return (
             <wc {...Object.assign({}, e, { className: "Auth" })}>
@@ -36477,7 +36492,7 @@
                       var t;
                       u(!0);
                       var n = { newEmail: g.current.value.toLowerCase() };
-                      Nm("/auth/change-email", JSON.stringify(n)).then(function (e) {
+                      NA("/auth/change-email", JSON.stringify(n)).then(function (e) {
                         u(!1),
                           f(!0),
                           e.ok && e.status && 200 === e.status
@@ -36503,17 +36518,17 @@
             a = Object(r.useContext)(D.context),
             n = (a.user, a.initUser),
             i = Object(c.f)(),
-            o = Object(Ac.useToasts)().addToast,
+            o = Object(mc.useToasts)().addToast,
             u = Object(r.useState)(!1),
-            A = Object(s.a)(u, 2),
-            m = A[0],
-            d = A[1],
+            m = Object(s.a)(u, 2),
+            A = m[0],
+            d = m[1],
             p = Object(r.useState)(!1),
             h = Object(s.a)(p, 2);
           h[0], h[1], Object(c.g)(), e.isModal, Object(r.useRef)(null), Object(r.useRef)(null);
           return (
             Object(r.useEffect)(function () {
-              m ||
+              A ||
                 (d(!0),
                 (function () {
                   var e = Object(g.a)(
@@ -36522,7 +36537,7 @@
                         for (;;)
                           switch ((e.prev = e.next)) {
                             case 0:
-                              Nm("/auth/change-email/".concat(t)).then(function (e) {
+                              NA("/auth/change-email/".concat(t)).then(function (e) {
                                 d(!1),
                                   e.ok && e.status && 200 === e.status
                                     ? (o("Email Changed", { appearance: "success" }), n())
@@ -36543,21 +36558,21 @@
                   };
                 })()());
             }, []),
-            (<div>{m ? <Bc /> : <l.a.Fragment />}</div>)
+            (<div>{A ? <Bc /> : <l.a.Fragment />}</div>)
           );
         },
         cO = function (e) {
           Object(r.useContext)(D.context).initUser;
           var t = Object(c.f)(),
-            a = Object(Ac.useToasts)().addToast,
+            a = Object(mc.useToasts)().addToast,
             n = Object(r.useState)(!1),
             i = Object(s.a)(n, 2),
             o = i[0],
             u = i[1],
-            A = Object(r.useState)(!1),
-            m = Object(s.a)(A, 2),
-            d = m[0],
-            f = m[1],
+            m = Object(r.useState)(!1),
+            A = Object(s.a)(m, 2),
+            d = A[0],
+            f = A[1],
             g = Object(r.useState)(!1),
             p = Object(s.a)(g, 2),
             h = p[0],
@@ -36610,7 +36625,7 @@
                     onSubmit={function (e) {
                       e.preventDefault(),
                         u(!0),
-                        Nm("/auth/delete-account", JSON.stringify({})).then(function (e) {
+                        NA("/auth/delete-account", JSON.stringify({})).then(function (e) {
                           u(!1),
                             E(!0),
                             e.ok && e.status && 200 === e.status
@@ -36646,17 +36661,17 @@
             a = Object(r.useContext)(D.context),
             n = (a.user, a.setUser),
             i = (a.initUser, Object(c.f)()),
-            o = Object(Ac.useToasts)().addToast,
+            o = Object(mc.useToasts)().addToast,
             u = Object(r.useState)(!1),
-            A = Object(s.a)(u, 2),
-            m = A[0],
-            d = A[1],
+            m = Object(s.a)(u, 2),
+            A = m[0],
+            d = m[1],
             p = Object(r.useState)(!1),
             h = Object(s.a)(p, 2);
           h[0], h[1], Object(c.g)(), e.isModal, Object(r.useRef)(null), Object(r.useRef)(null);
           return (
             Object(r.useEffect)(function () {
-              m ||
+              A ||
                 (d(!0),
                 (function () {
                   var e = Object(g.a)(
@@ -36665,7 +36680,7 @@
                         for (;;)
                           switch ((e.prev = e.next)) {
                             case 0:
-                              Nm("/auth/delete-account/".concat(t)).then(function (e) {
+                              NA("/auth/delete-account/".concat(t)).then(function (e) {
                                 d(!1),
                                   e.ok && e.status && 200 === e.status
                                     ? (o("Account Deleted", { appearance: "success" }), n({}), i.push("/auth/logout"))
@@ -36685,10 +36700,10 @@
                   };
                 })()());
             }, []),
-            (<div>{m ? <Bc /> : <l.a.Fragment />}</div>)
+            (<div>{A ? <Bc /> : <l.a.Fragment />}</div>)
           );
         },
-        AO = function (e) {
+        mO = function (e) {
           var t = e.event,
             a = Object(r.useContext)(ds.context),
             n = (Object(c.g)(), Object(r.useContext)(D.context).user),
@@ -36699,8 +36714,8 @@
           var o = t.season + 1,
             s = "",
             u = null,
-            A = "-Overbracket",
-            m = nc(2),
+            m = "-Overbracket",
+            A = nc(2),
             d = "Season",
             f = "";
           return (
@@ -36709,8 +36724,8 @@
             1 === e.event.metadata.bracket &&
               ((s = ac(3)),
               (u = <ee.j className={s} />),
-              (A = "-Underbracket"),
-              (m = (
+              (m = "-Underbracket"),
+              (A = (
                 <span
                   className="TheBook-RedactGroup"
                   aria-label="Redacted"
@@ -36728,19 +36743,19 @@
               <wc {...Object.assign({}, e, { className: "ModalItem ModalItem-Certificate" })}>
                 <div className="ModalItem-Certificate-Header">Certificate of Championship</div>
                 <div className="ModalItem-Certificate-Text">This certifies that the</div>
-                <div className={"ModalItem-Certificate-Callout ModalItem-Certificate-Callout" + A} style={Xo(n, i)}>
+                <div className={"ModalItem-Certificate-Callout ModalItem-Certificate-Callout" + m} style={Xo(n, i)}>
                   {i.fullName}
                 </div>
                 <div className="ModalItem-Certificate-Text">are the successful Champions of{f}</div>
                 <div className={"ModalItem-Certificate-Callout " + s}>
                   {d} {o} {u}
                 </div>
-                <div className="ModalItem-Certificate-Signature">Signed, {m}</div>
+                <div className="ModalItem-Certificate-Signature">Signed, {A}</div>
               </wc>
             )
           );
         };
-      function mO() {
+      function AO() {
         var e = Object(r.useContext)(_s.context);
         return (
           <div className={"Main" + (e && e.doc && e.doc.epsilon ? " Main-BigDeal" : "")}>
@@ -36787,7 +36802,7 @@
                   <dy />
                 </c.a>
                 <c.a path="/privacy">
-                  <my />
+                  <Ay />
                 </c.a>
                 <c.a path="/login">
                   <QE isLogin={!0} />
@@ -36811,7 +36826,7 @@
                   <c.a path="/login" children={<QE isModal={!0} isLogin={!0} />} />
                   <c.a path="/reset/:token" children={<FE isModal={!0} />} />
                   <c.a path="/forgot" children={<jE isModal={!0} />} />
-                  <c.a path="/team/:nickname" children={<mE isModal={!0} />} />
+                  <c.a path="/team/:nickname" children={<AE isModal={!0} />} />
                   <c.a path="/bet/:gameId" children={<dE isModal={!0} />} />
                   <c.a path="/vote/:voteType/:entityId" children={<cy isModal={!0} />} />
                   <c.a path="/tribute/:entityId" children={<sy isModal={!0} />} />
@@ -36872,8 +36887,8 @@
           o,
           s,
           u,
-          A,
           m,
+          A,
           d,
           f,
           g = Object(r.useContext)(S.context),
@@ -36923,7 +36938,7 @@
             return <div />;
           };
         return (
-          <HA value={[]}>
+          <Hm value={[]}>
             <Oy>
               <z>
                 <$p state={g} />
@@ -36933,7 +36948,7 @@
                       <dy />
                     </c.a>
                     <c.a path="/privacy">
-                      <my />
+                      <Ay />
                     </c.a>
                     <c.a path="/about">
                       <Xh />
@@ -36978,7 +36993,7 @@
                       <QE />
                     </c.a>
                     <c.a path="/team/:nickname">
-                      <mE />
+                      <AE />
                     </c.a>
                     <c.a path="/player/:id">
                       <Hc />
@@ -37052,7 +37067,7 @@
                       <c.a path="/send-email-change" children={<oO isModal={!0} />} />
                       <c.a path="/send-delete-account" children={<cO isModal={!0} />} />
                       <c.a path="/reset/:token" children={<FE isModal={!0} />} />
-                      <c.a path="/team/:nickname" children={<mE isModal={!0} />} />
+                      <c.a path="/team/:nickname" children={<AE isModal={!0} />} />
                       <c.a path="/player/:id" children={<Hc isModal={!0} />} />
                       <c.a
                         path="/item/:id"
@@ -37065,9 +37080,9 @@
                                 : s.item
                             }
                             player={
-                              null === (u = h.state) || void 0 === u || null === (A = u.params) || void 0 === A
+                              null === (u = h.state) || void 0 === u || null === (m = u.params) || void 0 === m
                                 ? void 0
-                                : A.player
+                                : m.player
                             }
                           />
                         }
@@ -37096,14 +37111,14 @@
                       <c.a
                         path="/gift/:teamId"
                         children={
-                          <tO isModal={!0} progress={null === (m = h.state) || void 0 === m ? void 0 : m.params} />
+                          <tO isModal={!0} progress={null === (A = h.state) || void 0 === A ? void 0 : A.params} />
                         }
                       />
                       <c.a path="/wish/:entityId" children={<aO isModal={!0} />} />
                       <c.a
                         path="/certificate"
                         children={
-                          <AO
+                          <mO
                             isModal={!0}
                             event={
                               null === (d = h.state) || void 0 === d || null === (f = d.params) || void 0 === f
@@ -37147,7 +37162,7 @@
                 </footer>
               </z>
             </Oy>
-          </HA>
+          </Hm>
         );
       }
       function EO() {
@@ -37158,7 +37173,7 @@
       var vO = function () {
         return (
           <D>
-            <mO />
+            <AO />
           </D>
         );
       };
@@ -37179,7 +37194,7 @@
           }),
         o.a.render(
           <l.a.StrictMode>
-            <Ac.ToastProvider autoDismiss={!0} autoDismissTimeout={3e3} placement="bottom-right">
+            <mc.ToastProvider autoDismiss={!0} autoDismissTimeout={3e3} placement="bottom-right">
               <B value={{}}>
                 <S value={bO}>
                   <ds value={{}}>
@@ -37188,16 +37203,16 @@
                         value={{ blessings: [], decrees: [], wills: [], gifts: [], willsToPass: 0, decreesToPass: 0 }}
                       >
                         <kd value={wO}>
-                          <A.a>
+                          <m.a>
                             <vO />
-                          </A.a>
+                          </m.a>
                         </kd>
                       </VE>
                     </_s>
                   </ds>
                 </S>
               </B>
-            </Ac.ToastProvider>
+            </mc.ToastProvider>
           </l.a.StrictMode>,
           document.getElementById("root")
         );
