@@ -3017,7 +3017,7 @@
             return <_.ec />;
           case "OPEN_FLOOR_PLAN":
             return <_.Qd />;
-          case "CLOSED_FLOOR_PLAN":
+          case "CONDENSED_FLOOR_PLAN":
             return <_.Qd className="ModalItem-Icons-Flipped" />;
           case "TURNTABLES":
             return <lt />;
@@ -39360,7 +39360,7 @@
               "A large, permanent amount of negative eDensity is added for each Incineration in this Ballpark.",
           },
           {
-            id: "CONDENSED_FLOOR_PLANS",
+            id: "CONDENSED_FLOOR_PLAN",
             color: "#87ffb5",
             textColor: "#87ffb5",
             background: "#0e1f18",

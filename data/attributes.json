@@ -2065,7 +2065,7 @@
         "description": "A large, permanent amount of negative eDensity is added for each Incineration in this Ballpark."
     },
     {
-        "id": "CONDENSED_FLOOR_PLANS",
+        "id": "CONDENSED_FLOOR_PLAN",
         "color": "#87ffb5",
         "textColor": "#87ffb5",
         "background": "#0e1f18",
