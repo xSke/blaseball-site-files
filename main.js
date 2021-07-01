@@ -22022,7 +22022,7 @@
                           buyUrl: "/api/buySnackNoUpgrade",
                           userUpdate: function () {
                             (e.trackers.SNACKS_BOUGHT += 1),
-                              (e.snacks[ne.RED_HERRING] += 1e4),
+                              e.snacks[ne.RED_HERRING]++,
                               (e.coins -= 1e4),
                               t(Object(C.a)({}, e));
                           },
@@ -22039,7 +22039,7 @@
                           buyUrl: "/api/buySnackNoUpgrade",
                           userUpdate: function () {
                             (e.trackers.SNACKS_BOUGHT += 1),
-                              (e.snacks[ne.RED_HERRING] = O),
+                              (e.snacks[ne.RED_HERRING] = 1),
                               (e.snackOrder = ne.InsertIntoSnackOrder(ne.RED_HERRING, e.snackOrder)),
                               (e.coins -= 1e4),
                               t(Object(C.a)({}, e));
