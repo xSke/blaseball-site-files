@@ -2287,5 +2287,77 @@
         "background": "#36001b",
         "title": "Sum Sun",
         "description": "Weather. Each successive scoring play by a Team within a half inning is worth an additional Run."
+    },
+    {
+        "id": "SKIPPING",
+        "color": "#a3fff0",
+        "textColor": "#a3fff0",
+        "background": "#910079",
+        "title": "Skipping",
+        "description": "When this Player steps up to bat, they'll start with a randomized count."
+    },
+    {
+        "id": "RELOAD",
+        "color": "#9fd98d",
+        "textColor": "#9fd98d",
+        "background": "#101e30",
+        "title": "Reload",
+        "description": "When this Player hits a Grand Slam, they'll reload the bases."
+    },
+    {
+        "id": "SIM_EQUAL_SUN",
+        "color": "#ffca4f",
+        "textColor": "#ffca4f",
+        "background": "#36001b",
+        "title": "Equal Sun",
+        "description": "A home run during a game's final out ties the game."
+    },
+    {
+        "id": "SIM_MAX_SUN",
+        "color": "#ffca4f",
+        "textColor": "#ffca4f",
+        "background": "#36001b",
+        "title": "MAXIMUM SUN",
+        "description": "Scoring plays in Maximum Blaseball are worth 3x the Runs."
+    },
+    {
+        "id": "NEGATIVE_WIN_BOOST",
+        "color": "#ffca4f",
+        "textColor": "#ffca4f",
+        "background": "#36001b",
+        "title": "-Sun",
+        "description": "Non-losing with Negative Runs earns you 2 Wins."
+    },
+    {
+        "id": "ZERO_WIN_BOOST",
+        "color": "#ffca4f",
+        "textColor": "#ffca4f",
+        "background": "#36001b",
+        "title": "Sun 0",
+        "description": "Non-losing with Zero Runs earns you 2 Wins."
+    },
+    {
+        "id": "SUN_STARING",
+        "color": "#000000",
+        "textColor": "#ffee80",
+        "background": "#ffee80",
+        "title": "Sun Staring",
+        "description": "Whenever another Team in the League activates Sun 2, this Team will gain .1 Runs (in their current game, or saved for next game)."
+    },
+    {
+        "id": "SOFT_SHELLED",
+        "color": "#ff4258",
+        "textColor": "#ff4258",
+        "background": "#38040a",
+        "title": "Soft Shelled",
+        "description": "Shelled Players on this Team will play, 20% better."
+    },
+    {
+        "id": "WAVE_POOL",
+        "color": "#61b3ff",
+        "textColor": "#61b3ff",
+        "background": "#383838",
+        "title": "Wave Pool",
+        "description": "This Player is a Wave Pool."
     }
 ]
