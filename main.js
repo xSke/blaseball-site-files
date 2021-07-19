@@ -13851,25 +13851,23 @@
           })
         )).apply(this, arguments);
       }
-      function wf(e) {
+      function wf() {
         return yf.apply(this, arguments);
       }
       function yf() {
         return (yf = Object(g.a)(
-          f.a.mark(function e(t) {
-            var a, n;
+          f.a.mark(function e() {
+            var t, a;
             return f.a.wrap(
               function (e) {
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (
-                        (e.prev = 0), (e.next = 3), fetch("".concat(Sd, "/database/getPreviousChamp?season=").concat(t))
-                      );
+                      return (e.prev = 0), (e.next = 3), fetch("".concat(Sd, "/database/getPreviousChamp"));
                     case 3:
-                      return (a = e.sent), (e.next = 6), a.json();
+                      return (t = e.sent), (e.next = 6), t.json();
                     case 6:
-                      return (n = e.sent), e.abrupt("return", n);
+                      return (a = e.sent), e.abrupt("return", a);
                     case 10:
                       (e.prev = 10), (e.t0 = e.catch(0)), console.log(e.t0);
                     case 13:
@@ -36747,25 +36745,29 @@
         );
       }
       var rI = function (e) {
-          var t = Object(r.useContext)(S.context),
-            a = Object(r.useContext)(mc.context),
-            n = (Object(c.g)(), Object(r.useContext)(L.context)),
-            i = (n.user, n.setUser, Object(r.useState)(0)),
-            o = Object(s.a)(i, 2),
-            u = o[0],
-            m = o[1],
-            A = Object(r.useState)(0),
+          var t,
+            a,
+            n,
+            i,
+            o = Object(r.useContext)(S.context),
+            u = Object(r.useContext)(mc.context),
+            m = (Object(c.g)(), Object(r.useContext)(L.context)),
+            A = (m.user, m.setUser, Object(r.useState)(0)),
             d = Object(s.a)(A, 2),
             p = d[0],
             h = d[1],
-            E = Object(r.useState)(),
+            E = Object(r.useState)(0),
             v = Object(s.a)(E, 2),
             b = v[0],
             w = v[1],
-            y = <wu />,
-            B = a.leagues.find(function (e) {
-              var a;
-              return e.id === (null === (a = t.season) || void 0 === a ? void 0 : a.league);
+            y = Object(r.useState)(),
+            B = Object(s.a)(y, 2),
+            O = B[0],
+            I = B[1],
+            C = <wu />,
+            k = u.leagues.find(function (e) {
+              var t;
+              return e.id === (null === (t = o.season) || void 0 === t ? void 0 : t.league);
             });
           return (
             Object(r.useEffect)(
@@ -36773,16 +36775,16 @@
                 var e = (function () {
                     var e = Object(g.a)(
                       f.a.mark(function e() {
-                        var t, n;
+                        var t, a;
                         return f.a.wrap(function (e) {
                           for (;;)
                             switch ((e.prev = e.next)) {
                               case 0:
                                 void 0 !==
-                                  (n =
-                                    null === a || void 0 === a || null === (t = a.stats) || void 0 === t
+                                  (a =
+                                    null === u || void 0 === u || null === (t = u.stats) || void 0 === t
                                       ? void 0
-                                      : t.communityChest) && h(n.runs);
+                                      : t.communityChest) && w(a.runs);
                               case 2:
                               case "end":
                                 return e.stop();
@@ -36794,25 +36796,17 @@
                       return e.apply(this, arguments);
                     };
                   })(),
-                  n = (function () {
+                  t = (function () {
                     var e = Object(g.a)(
                       f.a.mark(function e() {
-                        var a, n, r;
+                        var t;
                         return f.a.wrap(function (e) {
                           for (;;)
                             switch ((e.prev = e.next)) {
                               case 0:
-                                return (
-                                  (e.next = 2),
-                                  wf(
-                                    null !== (a = null === (n = t.sim) || void 0 === n ? void 0 : n.season) &&
-                                      void 0 !== a
-                                      ? a
-                                      : 0
-                                  )
-                                );
+                                return (e.next = 2), wf();
                               case 2:
-                                void 0 !== (r = e.sent) && w(r);
+                                void 0 !== (t = e.sent) && I(t);
                               case 4:
                               case "end":
                                 return e.stop();
@@ -36824,19 +36818,19 @@
                       return e.apply(this, arguments);
                     };
                   })();
-                e(), n();
-                var r = 0;
-                a.teams.forEach(function (e) {
-                  Mf(e.id, a) && (r += e.eDensity);
+                e(), t();
+                var a = 0;
+                u.teams.forEach(function (e) {
+                  Mf(e.id, u) && (a += e.eDensity);
                 }),
-                  m(Number(r.toFixed(5)));
+                  h(Number(a.toFixed(5)));
               },
-              [a]
+              [u]
             ),
-            t &&
-              t.sim &&
-              B &&
-              (y = (
+            o &&
+              o.sim &&
+              k &&
+              (C = (
                 <l.a.Fragment>
                   <div className="ModalItem-Info">
                     <div className="Team-Header">
@@ -36845,7 +36839,7 @@
                           <ZB className="LeagueInfo-Header-Icon" />
                         </div>
                         <div className="ModalItem-Name-Wrapper">
-                          <h2 className="ModalItem-Name">{B.name}</h2>
+                          <h2 className="ModalItem-Name">{k.name}</h2>
                         </div>
                       </div>
                     </div>
@@ -36871,7 +36865,7 @@
                       <div className="Team-Section">
                         <div className="ModalItem-Subheader">Active Rules</div>
                         <div className="ModalItem-Attributes LeagueInfo-Attributes">
-                          {t.sim.attr.map(function (e, t) {
+                          {o.sim.attr.map(function (e, t) {
                             return <mn id={e} type={rn.League} key={t} context={ln.League} />;
                           })}
                         </div>
@@ -36881,33 +36875,59 @@
                         <ul className="Player-Info-Stats">
                           <li className="Player-Info-Line LeagueInfo-Line">
                             <div className="Player-Info-Line-Header LeagueInfo-Line-Header">Seasons</div>
-                            {t.sim.season + 1}
+                            {o.sim.season + 1}
                           </li>
                           <li className="Player-Info-Line LeagueInfo-Line">
                             <div className="Player-Info-Line-Header LeagueInfo-Line-Header">Reigning Champion</div>
                             <div className="Player-Info-Line-Body">
                               <div
-                                style={{ backgroundColor: null === b || void 0 === b ? void 0 : b.mainColor }}
+                                style={{
+                                  backgroundColor:
+                                    null === O || void 0 === O || null === (t = O.over) || void 0 === t
+                                      ? void 0
+                                      : t.mainColor,
+                                }}
                                 className="Team-Logo LeagueInfo-Team-Icon"
                               >
-                                {Vf(b)}
+                                {Vf(null === O || void 0 === O ? void 0 : O.over)}
                               </div>{" "}
-                              {null === b || void 0 === b ? void 0 : b.fullName}
+                              {null === O || void 0 === O || null === (a = O.over) || void 0 === a
+                                ? void 0
+                                : a.fullName}
+                            </div>
+                          </li>
+                          <li className="Player-Info-Line LeagueInfo-Line">
+                            <div className="Player-Info-Line-Header LeagueInfo-Line-Header">Reigning Underchampion</div>
+                            <div className="Player-Info-Line-Body">
+                              <div
+                                style={{
+                                  backgroundColor:
+                                    null === O || void 0 === O || null === (n = O.under) || void 0 === n
+                                      ? void 0
+                                      : n.mainColor,
+                                }}
+                                className="Team-Logo LeagueInfo-Team-Icon"
+                              >
+                                {Vf(null === O || void 0 === O ? void 0 : O.under)}
+                              </div>{" "}
+                              {null === O || void 0 === O || null === (i = O.under) || void 0 === i
+                                ? void 0
+                                : i.fullName}
                             </div>
                           </li>
                           <li className="Player-Info-Line LeagueInfo-Line">
                             <div className="Player-Info-Line-Header LeagueInfo-Line-Header">Total eDensity</div>
-                            {u} bl/m³
+                            {p} bl/m³
                           </li>
                         </ul>
                       </div>
                       <div className="Team-Section">
-                        {Df(t.sim, "SIM_COMMUNITY_CHEST") ? (
+                        {Df(o.sim, "SIM_COMMUNITY_CHEST") ? (
                           <l.a.Fragment>
                             <div className="ModalItem-Subheader">Next Crate</div>
                             <ul className="Player-Info-Stats">
                               <li className="Player-Info-Line LeagueInfo-Line-Bar">
-                                {tc(<Re />, "LeagueInfo-Bar", p, 3e3)}
+                                {tc(<Re />, "LeagueInfo-Bar", b, 3e3)}
                               </li>
                             </ul>
                           </l.a.Fragment>
@@ -36917,7 +36937,7 @@
                   </div>
                 </l.a.Fragment>
               )),
-            (<vu {...Object.assign({}, e, { className: "ModalItem" })}>{y}</vu>)
+            (<vu {...Object.assign({}, e, { className: "ModalItem" })}>{C}</vu>)
           );
         },
         lI = function (e) {
