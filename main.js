@@ -16304,7 +16304,7 @@
             y = A() === n.homeTeam ? n.homeOdds - n.awayOdds : n.awayOdds - n.homeOdds;
           return (
             <div className="GameWidget-Outcome" role="list" aria-label="Outcomes">
-              {n.State && !(null === (w = n.State) || void 0 === w ? void 0 : w.game_cancelled) ? (
+              {n.state && !(null === (w = n.state) || void 0 === w ? void 0 : w.game_cancelled) ? (
                 <div className="GameWidget-Outcome-Blurb">
                   The{" "}
                   {
