@@ -156,10 +156,22 @@
         "description": "Each successive scoring play in a half inning is worth an extra Run."
     },
     {
+        "name": "????",
+        "background": "#36001b",
+        "color": "#ffc400",
+        "description": ""
+    },
+    {
+        "name": "????",
+        "background": "#36001b",
+        "color": "#ffc400",
+        "description": ""
+    },
+    {
         "name": "Jazz",
-        "background": "#570b0b",
+        "background": "#0f592f",
         "color": "#000",
-        "description": "louie-ooie-la-la-la or shoo-doo-shoo-bee-ooo-bee"
+        "description": "louie-ooie-la-la-la; shoo-doo-shoo-bee-ooo-bee."
     },
     {
         "name": "Night",
