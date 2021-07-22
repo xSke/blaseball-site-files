@@ -2391,5 +2391,37 @@
         "background": "#ffffff",
         "title": "Weather Reports",
         "description": "When the Weather changes in this Ballpark, it will pick based on \"History\"."
+    },
+    {
+        "id": "ROAMLESS",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#ffffff",
+        "title": "Roamless",
+        "description": "Players cannot Roam to this Team."
+    },
+    {
+        "id": "AVOIDANCE",
+        "color": "#ffffff",
+        "textColor": "#ffffff",
+        "background": "#ffffff",
+        "title": "Avoidance",
+        "description": "This Team will not swing with 9+ Runs."
+    },
+    {
+        "id": "STEELED",
+        "color": "#dbdbdb",
+        "textColor": "#dbdbdb",
+        "background": "#313c47",
+        "title": "Steeled",
+        "description": "This Player has Steeled themselves against incoming attacks."
+    },
+    {
+        "id": "STABLES",
+        "color": "#eaabff",
+        "textColor": "#eaabff",
+        "background": "#1b1c80",
+        "title": "Stables",
+        "description": "When any Team scores 25+ in this Ballpark, any Instability in the Ballpark will be stabled."
     }
 ]
