@@ -9,8 +9,8 @@
           {
             title: "Root",
             chapters: [
-              { title: "| ||||", id: "b56d96ea-92e7-4895-8cb4-f8a9d9a03804", redacted: true },
-              { title: "| |||||", id: "84ade43c-a724-40cc-9459-5b6340f9e528", redacted: true },
+              { title: "The First Day, Zeroth Edition", id: "8de249bd-804e-48f1-95aa-aba95060896c", redacted: false },
+              { title: "An Ascension", id: "e2b3ded6-2f92-4933-b8a4-0f1abef6bdc3", redacted: false },
               { title: "| |||||||", id: "8a74b84b-233e-4128-a2ef-b8871b65525b", redacted: true },
             ],
           },
@@ -8490,18 +8490,20 @@
           t = Object(r.useContext)(su.context),
           a = (null === t || void 0 === t ? void 0 : t.doc) ? t.doc.gamma : -1,
           n = du(a),
-          i = Au(a),
-          o = t && t.doc ? t.doc.zeta : "";
+          i = Object(r.useState)(Au(a)),
+          o = Object(s.a)(i, 2),
+          c = o[0],
+          u = (o[1], t && t.doc ? t.doc.zeta : "");
         return (
           <div className="BigDeal-All">
             {null !== n ? (
               <div className={"BigDeal-Icon " + ((e = a), "BigDeal-Icon-".concat(e))}>
-                {i}
+                {c}
                 {n}
               </div>
             ) : null}
             <div className="BigDeal-Body">
-              <div className={"BigDeal-Message-Style-FullScreen ".concat(mu(a), " ").concat(uu(a))}>{rc(o)}</div>
+              <div className={"BigDeal-Message-Style-FullScreen ".concat(mu(a), " ").concat(uu(a))}>{rc(u)}</div>
             </div>
           </div>
         );
@@ -13125,7 +13127,7 @@
           case 18:
             return -1 === t ? "CC" : "T";
         }
-        return a <= -95 && a >= -99 ? Dd[a + 99] : a >= -94 && a < -1 ? "A" + Dd[a + 94] : a + 1;
+        return a <= -95 && a >= -99 ? Dd[a + 99] : a >= -94 && a < -89 ? "A" + Dd[a + 94] : -88 == a ? "\u03b1" : a + 1;
       }
       function Md(e, t) {
         switch (e) {
@@ -31339,7 +31341,9 @@
                 })}
               </div>
               <div className={"Library-Story " + (a > 0 ? "Library-Story-Open" : "")}>
-                <h4 className="TheBook-Subheader Library-Subheader">{a > 0 ? n[a - 1].title : ""}</h4>
+                <h4 className={"TheBook-Subheader Library-Subheader" + (0 === t ? " Library-Purple" : "")}>
+                  {a > 0 ? n[a - 1].title : ""}
+                </h4>
                 {n.map(function (e, t) {
                   return e.id && !e.redacted && a === t + 1 ? (
                     <kd entity={e.id} source={yd.Story} showButtons={!1} key={t} />
@@ -31365,7 +31369,12 @@
             </div>
           </div>
         ) : (
-          <A background={!1} path={"/library/".concat(n, "/").concat(r + 1)} className="Library-Chapters-Item" key={t}>
+          <A
+            background={!1}
+            path={"/library/".concat(n, "/").concat(r + 1)}
+            className={"Library-Chapters-Item" + (0 === n ? " Library-Purple" : "")}
+            key={t}
+          >
             {t}.{" "}
             <div className="Library-Chapters-Item-Body">
               <ac str={[a]} /> {o ? <ee.i className="Library-Chapters-Item-Arrow" /> : null}

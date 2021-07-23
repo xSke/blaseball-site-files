@@ -19857,6 +19857,10 @@ button:focus-visible {
   align-items: center;
   font-family: "Lora", "Courier New", monospace, serif;
 }
+#root .Library-Purple {
+  color: #a16dc3;
+  text-shadow: 0 0 10px #a16dc3;
+}
 #root .Library-Description {
   width: 50%;
   text-align: center;
