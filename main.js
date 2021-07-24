@@ -33951,29 +33951,28 @@
           L = P[1],
           R = Object(r.useState)(p.stats.sunsun.current),
           M = Object(s.a)(R, 2),
-          Q = M[0],
-          j = M[1],
-          F = Object(r.useState)(!1),
-          H = Object(s.a)(F, 2),
-          G = H[0],
-          V = H[1],
-          z =
+          Q = (M[0], M[1]),
+          j = Object(r.useState)(!1),
+          F = Object(s.a)(j, 2),
+          H = F[0],
+          G = F[1],
+          V =
             null !== (t = null === v || void 0 === v || null === (a = v.doc) || void 0 === a ? void 0 : a.gamma) &&
             void 0 !== t
               ? t
               : -1,
-          W = Object(r.useState)(Fc(5)),
-          U = Object(s.a)(W, 2),
-          Y = U[0],
-          J = (U[1], Object(r.useState)(!1)),
-          q = Object(s.a)(J, 2),
-          Z = q[0],
-          X = q[1],
-          K = Object(r.useState)(""),
-          _ = Object(s.a)(K, 2),
-          $ = _[0],
-          ee = _[1],
-          te = p.stats.sunsun.current >= p.stats.sunsun.maximum;
+          z = Object(r.useState)(Fc(5)),
+          W = Object(s.a)(z, 2),
+          U = W[0],
+          Y = (W[1], Object(r.useState)(!1)),
+          J = Object(s.a)(Y, 2),
+          q = J[0],
+          Z = J[1],
+          X = Object(r.useState)(""),
+          K = Object(s.a)(X, 2),
+          _ = K[0],
+          $ = K[1],
+          ee = p.stats.sunsun.current >= p.stats.sunsun.maximum;
         Object(r.useEffect)(
           function () {
             if (void 0 !== f.damageResults) {
@@ -34013,65 +34012,65 @@
               f.lastUpdate.includes("!") ||
               f.lastUpdate.includes("Outing") ||
               f.lastUpdate.includes("SEASON")
-                ? X(!0)
-                : X(!1);
+                ? Z(!0)
+                : Z(!1);
             },
             [f]
           ),
           Object(r.useEffect)(
             function () {
-              (G && $ === f.lastUpdate) || p.stats.sunsun.current > Q ? V(!0) : V(!1),
-                j(p.stats.sunsun.current),
-                ee(f.lastUpdate);
+              var e =
+                (H && _ === f.lastUpdate) || f.lastUpdate.includes("collected") || f.lastUpdate.includes("Balloons");
+              G(e), Q(p.stats.sunsun.current), $(f.lastUpdate);
             },
             [f]
           ),
           Object(r.useEffect)(
             function () {
-              te && document.body.classList.add("no-x");
+              ee && document.body.classList.add("no-x");
             },
             [p.stats.sunsun]
           );
-        var ae = gv(f),
-          ne =
+        var te = gv(f),
+          ae =
             (f.topOfInning ? f.homePitcherMod : f.awayPitcherMod,
             f.topOfInning ? f.awayBatterMod : f.homeBatterMod,
             f.topOfInning ? f.awayTeamColor : f.homeTeamColor),
-          re = f.topOfInning ? f.homeTeamColor : f.awayTeamColor,
-          le =
+          ne = f.topOfInning ? f.homeTeamColor : f.awayTeamColor,
+          re =
             (h.complete ||
               !h.started ||
-              (Bf(re, 0.5),
+              (Bf(ne, 0.5),
               "/player/".concat(f.topOfInning ? f.homePitcher : f.awayPitcher),
               f.topOfInning ? f.homePitcherName : f.awayPitcherName,
-              Bf(ne, 0.5),
+              Bf(ae, 0.5),
               (f.homeBatterName || f.awayBatterName) &&
                 ("/player/".concat(f.topOfInning ? f.awayBatter : f.homeBatter),
                 f.topOfInning ? f.awayBatterName : f.homeBatterName)),
             !1);
-        f.lastUpdate.includes("CONSUMER") && (le = !0);
-        var ie = null;
+        f.lastUpdate.includes("CONSUMER") && (re = !0);
+        var le = null;
         h.started &&
-          (ie = (
+          (le = (
             <div className="BossFightWidget-Log" aria-label="Log">
-              {le ? <lv /> : null}
-              <Ov data={f} attack={le} withLedger={!1} />
+              {re ? <lv /> : null}
+              <Ov data={f} attack={re} withLedger={!1} />
               <div className="Widget-Log-PlayCount" role="text" aria-label={"Play #" + h.playCount}>
                 {h.playCount}
               </div>
             </div>
           ));
-        var oe = null,
-          se = null,
-          ce = "";
+        var ie = null,
+          oe = null,
+          se = "";
         if (null !== f.stadiumId) {
-          var Ae = p.stadiums.find(function (e) {
+          var ce = p.stadiums.find(function (e) {
             return e.id === f.stadiumId;
           });
-          Ae &&
-            ((se = <rv stadium={Ae} style={_E.GameWidget} />),
-            (ce = Ae.nickname),
-            (oe = (
+          ce &&
+            ((oe = <rv stadium={ce} style={_E.GameWidget} />),
+            (se = ce.nickname),
+            (ie = (
               <div className="GameWidget-Upcoming-Body">
                 <Kf.a className="GameWidget-Upcoming-Icon" style={{ filter: "invert(1)", padding: "5px" }} />
                 <div className="GameWidget-Upcoming-Label" aria-hidden="true">
@@ -34080,23 +34079,23 @@
                 <div className="GameWidget-Upcoming-Content">
                   <div className="GameWidget-Upcoming-Stadium">
                     <span className="GameWidget-Upcoming-StadiumLabel" aria-hidden="true">
-                      {ce}
+                      {se}
                     </span>
                     <div className="sr-only" role="text" aria-label="Playing at: " />
-                    {se}
+                    {oe}
                   </div>
                 </div>
               </div>
             )));
         }
-        var ue = BO(f.homeHp, f.homeMaxHp),
-          me = BO(f.awayHp, f.awayMaxHp),
-          de = (
+        var Ae = BO(f.homeHp, f.homeMaxHp),
+          ue = BO(f.awayHp, f.awayMaxHp),
+          me = (
             <div className={"BossFightWidget-ScoreTeamColorBar" + k} style={{ background: f.homeTeamColor }}>
               {xf(f.homeTeamEmoji)}
             </div>
           ),
-          fe = (
+          de = (
             <div
               className={"BossFightWidget-ScoreName" + k}
               style={{
@@ -34109,12 +34108,12 @@
               {f.homeTeamName}
             </div>
           ),
-          ge = (
+          fe = (
             <div className={"BossFightWidget-ScoreTeamColorBar" + D} style={{ background: f.awayTeamColor }}>
               {xf(f.awayTeamEmoji)}
             </div>
           ),
-          Ee = (
+          ge = (
             <div
               className={"BossFightWidget-ScoreName" + D}
               style={{
@@ -34127,66 +34126,66 @@
               {f.awayTeamName}
             </div>
           ),
-          ve = km(f.weather);
-        ve.includes(" ") && (ve = ve.replace(" ", "")),
-          ve.includes(".") && (ve = ve.replace(".", "")),
-          ve.includes("+") && (ve = ve.replace("+", ""));
-        var pe = " BossFightWidget-Weather-" + ve;
-        te && (pe = "");
-        var he =
-            ae.onFirst &&
-            ae.onSecond &&
-            ae.onThird &&
-            (!(h.bases > 4) || ae.onFourth) &&
+          Ee = km(f.weather);
+        Ee.includes(" ") && (Ee = Ee.replace(" ", "")),
+          Ee.includes(".") && (Ee = Ee.replace(".", "")),
+          Ee.includes("+") && (Ee = Ee.replace("+", ""));
+        var ve = " BossFightWidget-Weather-" + Ee;
+        ee && (ve = "");
+        var pe =
+            te.onFirst &&
+            te.onSecond &&
+            te.onThird &&
+            (!(h.bases > 4) || te.onFourth) &&
             h.ballsNeeded - 1 === h.balls &&
             h.outsNeeded - 1 === h.outs &&
             h.strikesNeeded - 1 === h.strikes,
-          be = "50px",
-          we = "16px",
-          Be = "200px",
-          ye = "50px";
+          he = "50px",
+          be = "16px",
+          we = "200px",
+          Be = "50px";
         return (
-          p.stats.sunsun.current >= 95e3 && ((be = "75px"), (we = "20px"), (Be = "250px"), (ye = "75px")),
-          p.stats.sunsun.current >= 99e3 && ((be = "100px"), (we = "24px"), (Be = "300px"), (ye = "100px")),
+          p.stats.sunsun.current >= 95e3 && ((he = "75px"), (be = "20px"), (we = "250px"), (Be = "75px")),
+          p.stats.sunsun.current >= 99e3 && ((he = "100px"), (be = "24px"), (we = "300px"), (Be = "100px")),
           (
             <li
               className={"".concat(h.complete ? "IsComplete" : "")}
               aria-label={"".concat(g.awayTeamName, " versus ").concat(g.homeTeamName)}
             >
-              <div className={"BossFightWidget-Weather" + pe}>
+              <div className={"BossFightWidget-Weather" + ve}>
                 <div
                   className={
                     "BossFightWidget-SunSun" +
-                    (G ? " BossFightWidget-SunSun-Visible" : " BossFightWidget-SunSun-Hidden")
+                    (H ? " BossFightWidget-SunSun-Visible" : " BossFightWidget-SunSun-Hidden")
                   }
-                  style={{ height: ye, width: Be }}
+                  style={{ height: Be, width: we }}
                 >
-                  <div className="BossFightWidget-SunSun-Sun" style={{ height: be, width: be }}>
-                    <ut style={{ position: "absolute", height: be, width: be }} />
+                  <div className="BossFightWidget-SunSun-Sun" style={{ height: he, width: he }}>
+                    <ut style={{ position: "absolute", height: he, width: he }} />
                   </div>
-                  <Qm style={we} />
+                  <Qm style={be} />
                 </div>
-                {Z ? (
+                {q ? (
                   <l.a.Fragment>
                     <div className="BossFightWidget-Fireworks-First" />
                     <div className="BossFightWidget-Fireworks-Second" />
                   </l.a.Fragment>
                 ) : null}
-                {te ? <Cp className="BossFightWidget-UnknownEntity" /> : null}
+                {ee ? <Cp className="BossFightWidget-UnknownEntity" /> : null}
                 <div
-                  className={"BossFightWidget-Enemy" + (te ? " BossFightWidget-Enemy-Eclipse" : "")}
-                  style={{ zIndex: te ? 16 : 4 }}
+                  className={"BossFightWidget-Enemy" + (ee ? " BossFightWidget-Enemy-Eclipse" : "")}
+                  style={{ zIndex: ee ? 16 : 4 }}
                 >
-                  <div className={"BossFightWidget-Enemy-Icon " + Mc(z)}>
-                    {te || "Glitter" !== ve ? null : Y}
-                    {Hc(z)}
+                  <div className={"BossFightWidget-Enemy-Icon " + Mc(V)}>
+                    {ee || "Glitter" !== Ee ? null : U}
+                    {Hc(V)}
                   </div>
                   {"" === (null === v || void 0 === v || null === (n = v.doc) || void 0 === n ? void 0 : n.zeta) ||
                   void 0 ===
                     (null === v || void 0 === v || null === (i = v.doc) || void 0 === i ? void 0 : i.zeta) ? null : (
                     <div className="BossFightWidget-Enemy-Body">
-                      <div className={"".concat(jc(z), " ").concat(Qc(z))}>
-                        {Gc(z, null === v || void 0 === v || null === (o = v.doc) || void 0 === o ? void 0 : o.zeta)}
+                      <div className={"".concat(jc(V), " ").concat(Qc(V))}>
+                        {Gc(V, null === v || void 0 === v || null === (o = v.doc) || void 0 === o ? void 0 : o.zeta)}
                       </div>
                     </div>
                   )}
@@ -34197,8 +34196,8 @@
                   <cv
                     statusDisplay={b}
                     started={h.started}
-                    stadiumName={ce}
-                    stadiumIcon={se}
+                    stadiumName={se}
+                    stadiumIcon={oe}
                     holidayInning={null === (A = f.state) || void 0 === A ? void 0 : A.holidayInning}
                     prizeMatch={null === (u = f.state) || void 0 === u ? void 0 : u.prizeMatch}
                     seriesLabel={
@@ -34213,15 +34212,15 @@
                   />
                   <div className="BossFightWidget-Names">
                     <m background={w} path={"/team/".concat(f.awayTeam)} className="BossFightWidget-ScoreLine">
-                      {ge}
+                      {fe}
                       <div className="BossFightWidget-ScoreTeam">
-                        {Ee}
+                        {ge}
                         {void 0 !== f.awayHp ? (
                           <div className="BossFightWidget-Names-Spirit">
                             <hO.a
-                              now={me}
+                              now={ue}
                               label={$f(f.awayHp)}
-                              variant={yO(me)}
+                              variant={yO(ue)}
                               className="BossFightWidget-SpiritBar"
                             />
                           </div>
@@ -34232,15 +34231,15 @@
                   </div>
                   <div className="BossFightWidget-Names">
                     <m background={w} path={"/team/".concat(f.homeTeam)} className="BossFightWidget-ScoreLine">
-                      {de}
+                      {me}
                       <div className="BossFightWidget-ScoreTeam">
-                        {fe}
+                        {de}
                         {void 0 !== f.homeHp ? (
                           <div className="BossFightWidget-Names-Spirit">
                             <hO.a
-                              now={ue}
+                              now={Ae}
                               label={$f(f.homeHp)}
-                              variant={yO(ue)}
+                              variant={yO(Ae)}
                               className="BossFightWidget-SpiritBar"
                             />
                           </div>
@@ -34251,20 +34250,20 @@
                   </div>
                 </div>
                 <div className="BossFightWidget-Log-Container">
-                  <div className={he ? " BossFightWidget-Log-Container-Max" : ""}>
+                  <div className={pe ? " BossFightWidget-Log-Container-Max" : ""}>
                     <ov
                       statusInfo={h}
                       activeBet={void 0}
                       data={f}
-                      baserunners={ae}
+                      baserunners={te}
                       lightMode={E.lightMode}
                       metaInfo={g}
                       index={0}
                       betSection={null}
-                      stadiumSection={oe}
+                      stadiumSection={ie}
                     />
                   </div>
-                  {ie}
+                  {le}
                 </div>
               </div>
             </li>
