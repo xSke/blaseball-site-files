@@ -9084,6 +9084,20 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 20px;
   background-color: red;
 }
+.League-Supernova {
+  margin: 50px 0;
+}
+.League-Supernova-Eclipse {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.League-Supernova-Eclipse .BigDeal-Equity {
+  position: absolute;
+  height: 60%;
+  width: 60%;
+}
 .League-Number {
   margin: 0 10px;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
@@ -9273,6 +9287,8 @@ input[type="number"]::-webkit-outer-spin-button {
 @media (max-width: 1080px) {
   .League-Header {
     font-size: 24px;
+    height: auto !important;
+    margin-bottom: 25px;
   }
   .League-Number {
     margin: 0 10px;
@@ -13853,15 +13869,28 @@ input[type="number"]::-webkit-outer-spin-button {
 .BigDeal-Icon-5 svg {
   z-index: 2;
 }
+.BigDeal-Icon-6 {
+  font-size: 40vh;
+  width: 54vh;
+  height: 54vh;
+  display: flex;
+}
 .BigDeal-Equity {
   background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/Equity.c533a2ae.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50%;
+  height: 100%;
+}
+.BigDeal-Equity,
+.BigDeal-Fire {
   margin: auto;
   width: 100%;
-  height: 100%;
   max-width: 80vw;
+}
+.BigDeal-Fire {
+  height: 100%;
+  height: 40vh;
 }
 .BigDeal-Body {
   max-width: 550px;
@@ -13907,6 +13936,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .BigDeal-Message-Style-2,
 .BigDeal-Message-Style-3,
 .BigDeal-Message-Style-4,
+.BigDeal-Message-Style-6,
 .BigDeal-Message-Style--1 {
   font-family: "Lora", "Courier New", monospace, serif;
   font-weight: 700;
@@ -13947,6 +13977,42 @@ input[type="number"]::-webkit-outer-spin-button {
 .theme-light .BigDeal-Message-Style-5 {
   color: #626262;
 }
+.BigDeal-Message-Style-6 {
+  color: #e83a00;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  background: -webkit-linear-gradient(#f29825, #e83a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.BigDeal-Message-Style-6-Letters {
+  white-space: nowrap;
+}
+.BigDeal-Message-Style-6-Letters > span {
+  display: inline-block;
+  -webkit-animation: wave 1.125s ease-in-out infinite alternate;
+  animation: wave 1.125s ease-in-out infinite alternate;
+}
+.BigDeal-Message-Style-6-Letters > span:nth-child(5n + 0) {
+  -webkit-animation-delay: -2.25s;
+  animation-delay: -2.25s;
+}
+.BigDeal-Message-Style-6-Letters > span:nth-child(5n + 1) {
+  -webkit-animation-delay: -1.8s;
+  animation-delay: -1.8s;
+}
+.BigDeal-Message-Style-6-Letters > span:nth-child(5n + 2) {
+  -webkit-animation-delay: -1.35s;
+  animation-delay: -1.35s;
+}
+.BigDeal-Message-Style-6-Letters > span:nth-child(5n + 3) {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+.BigDeal-Message-Style-6-Letters > span:nth-child(5n + 4) {
+  -webkit-animation-delay: -0.45s;
+  animation-delay: -0.45s;
+}
 .BigDeal-Message-Size-0,
 .BigDeal-Message-Size-1,
 .BigDeal-Message-Size-4,
@@ -13962,6 +14028,10 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .BigDeal-Message-Size-5 {
   font-size: 28px;
+}
+.BigDeal-Message-Size-6 {
+  font-size: 30px;
+  font-style: normal;
 }
 .BigDeal-Message-Icon--1 {
   background: #000;
@@ -14061,6 +14131,54 @@ input[type="number"]::-webkit-outer-spin-button {
   to {
     -webkit-transform: scale(1);
     transform: scale(1);
+  }
+}
+@-webkit-keyframes undulate {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(0.95);
+    transform: scaleY(0.95);
+  }
+  to {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+@keyframes undulate {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(0.95);
+    transform: scaleY(0.95);
+  }
+  to {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: translateY(1.5px);
+    transform: translateY(1.5px);
+  }
+  to {
+    -webkit-transform: translateY(-1.5px);
+    transform: translateY(-1.5px);
+  }
+}
+@keyframes wave {
+  0% {
+    -webkit-transform: translateY(1.5px);
+    transform: translateY(1.5px);
+  }
+  to {
+    -webkit-transform: translateY(-1.5px);
+    transform: translateY(-1.5px);
   }
 }
 @media (max-width: 1080px) {
@@ -14338,6 +14456,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .CoinOverlay {
   width: 150px;
+  z-index: 5 !important;
 }
 .CoinOverlay-Content {
   display: flex;
@@ -15032,6 +15151,7 @@ button:focus-visible {
 }
 .Main-Body {
   margin-top: 40px;
+  width: 100%;
 }
 .Main-Body,
 .Main-Body-Intro {
@@ -15220,6 +15340,7 @@ button:focus-visible {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .Advertisement-SiteHeader-Callout {
   text-align: center;
@@ -15757,6 +15878,17 @@ button:focus-visible {
 }
 .Standings-League-Header :last-child {
   margin-left: 10px;
+}
+.Standings-Supernova-Eclipse {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.Standings-Supernova-Eclipse .BigDeal-Equity {
+  position: absolute;
+  height: 50vh;
+  width: 50vh;
 }
 .Standings-Button {
   height: 32px;
@@ -20673,7 +20805,7 @@ button:focus-visible {
   padding: 10px;
   display: flex;
   align-items: center;
-  z-index: 3;
+  z-index: 4;
 }
 .theme-dark .BossFightWidget-SunSun {
   background: #000;
@@ -20709,52 +20841,83 @@ button:focus-visible {
   margin-bottom: 10px;
 }
 .BossFightWidget-Weather-Feedback {
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/02-Feedback.2e302bf1.svg);
-  background-size: 100px;
+  background-size: 100px !important;
   -webkit-animation: scrollLeftTop 5s linear infinite;
   animation: scrollLeftTop 5s linear infinite;
 }
+.theme-dark .BossFightWidget-Weather-Feedback {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/02-Feedback.2e302bf1.svg);
+}
+.theme-light .BossFightWidget-Weather-Feedback {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.75), hsla(0, 0%, 100%, 0.75)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/02-Feedback.2e302bf1.svg);
+}
 .BossFightWidget-Weather-Reverb {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/03-Reverb.c01ade37.svg);
-  background-size: 140px;
+  background-size: 140px !important;
   -webkit-animation: scrollRight 3s linear infinite;
   animation: scrollRight 3s linear infinite;
 }
+.theme-dark .BossFightWidget-Weather-Reverb {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/03-Reverb.c01ade37.svg);
+}
+.theme-light .BossFightWidget-Weather-Reverb {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0.8)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/03-Reverb.c01ade37.svg);
+}
 .BossFightWidget-Weather-Peanuts {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/05-Peanuts.ffd440fd.svg);
-  background-size: 75px;
+  background-size: 75px !important;
   -webkit-animation: scrollDown 3s linear infinite;
   animation: scrollDown 3s linear infinite;
 }
+.theme-dark .BossFightWidget-Weather-Peanuts {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/05-Peanuts.ffd440fd.svg);
+}
+.theme-light .BossFightWidget-Weather-Peanuts {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.7), hsla(0, 0%, 100%, 0.7)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/05-Peanuts.ffd440fd.svg);
+}
 .BossFightWidget-Weather-Birds {
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/08-Birds.49e3d6d0.svg);
-  background-size: 100px;
+  background-size: 100px !important;
   -webkit-animation: scrollRightTop 5s linear infinite;
   animation: scrollRightTop 5s linear infinite;
 }
-.BossFightWidget-Weather-Blooddrain {
+.theme-dark .BossFightWidget-Weather-Birds {
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/04-Blooddrain.a05f3b7c.svg);
-  background-size: 130px;
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/08-Birds.49e3d6d0.svg);
+}
+.theme-light .BossFightWidget-Weather-Birds {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.75), hsla(0, 0%, 100%, 0.75)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/08-Birds.49e3d6d0.svg);
+}
+.BossFightWidget-Weather-Blooddrain {
+  background-size: 130px !important;
   -webkit-animation: scrollRightBottom 5s linear infinite;
   animation: scrollRightBottom 5s linear infinite;
 }
-.BossFightWidget-Weather-Glitter {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/15-Glitter.d0a694fa.svg);
-  background-size: 130px;
+.theme-dark .BossFightWidget-Weather-Blooddrain {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/04-Blooddrain.a05f3b7c.svg);
+}
+.theme-light .BossFightWidget-Weather-Blooddrain {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.75), hsla(0, 0%, 100%, 0.75)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/04-Blooddrain.a05f3b7c.svg);
 }
 .BossFightWidget-Weather-SolarEclipse {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/01-SolarEclipse.517ee7b4.svg);
-  background-position: 50%;
-  background-repeat: no-repeat;
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
   -webkit-animation: sizeChange 15s linear infinite;
   animation: sizeChange 15s linear infinite;
+}
+.theme-dark .BossFightWidget-Weather-SolarEclipse {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/01-SolarEclipse.517ee7b4.svg);
+}
+.theme-light .BossFightWidget-Weather-SolarEclipse {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0.6)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/01-SolarEclipse.517ee7b4.svg);
 }
 .BossFightWidget-Weather-BlackHole:before {
   content: "";
@@ -20762,77 +20925,130 @@ button:focus-visible {
   width: 400px;
   position: absolute;
   height: 400px;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/06-BlackHole.a443c944.svg);
-  background-position: 50%;
-  background-repeat: no-repeat;
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
   -webkit-animation: spinny 15s linear infinite;
   animation: spinny 15s linear infinite;
-  background-size: 500px;
+  background-size: 500px !important;
+  right: 50vh;
+}
+.theme-dark .BossFightWidget-Weather-BlackHole:before {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/06-BlackHole.a443c944.svg);
+}
+.theme-light .BossFightWidget-Weather-BlackHole:before {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0.6)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/06-BlackHole.a443c944.svg);
 }
 .BossFightWidget-Weather-Sun2 {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/07-Sun2.ec93f6e3.svg);
-  background-position: 0 0;
-  background-repeat: no-repeat;
+  background-position: 0 0 !important;
+  background-repeat: no-repeat !important;
   -webkit-animation: tinySizeChange 15s linear infinite;
   animation: tinySizeChange 15s linear infinite;
 }
-.BossFightWidget-Weather-Coffee {
+.theme-dark .BossFightWidget-Weather-Sun2 {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/09-Coffee.22d57d8a.svg);
-  background-size: 260px;
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/07-Sun2.ec93f6e3.svg);
+}
+.theme-light .BossFightWidget-Weather-Sun2 {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0.6)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/07-Sun2.ec93f6e3.svg);
+}
+.BossFightWidget-Weather-Coffee {
+  background-size: 260px !important;
   -webkit-animation: backAndForth 5s linear infinite;
   animation: backAndForth 5s linear infinite;
 }
-.BossFightWidget-Weather-Coffee2 {
+.theme-dark .BossFightWidget-Weather-Coffee {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/10-Coffee2.c6ff0b3b.svg);
-  background-size: 260px;
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/09-Coffee.22d57d8a.svg);
+}
+.theme-light .BossFightWidget-Weather-Coffee {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0.6)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/09-Coffee.22d57d8a.svg);
+}
+.BossFightWidget-Weather-Coffee2 {
+  background-size: 260px !important;
   -webkit-animation: upAndDown 5s linear infinite;
   animation: upAndDown 5s linear infinite;
 }
-.BossFightWidget-Weather-Coffee3s {
+.theme-dark .BossFightWidget-Weather-Coffee2 {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/11-Coffee3s.6d9b0658.svg);
-  background-size: 260px;
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/10-Coffee2.c6ff0b3b.svg);
+}
+.theme-light .BossFightWidget-Weather-Coffee2 {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0.6)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/10-Coffee2.c6ff0b3b.svg);
+}
+.BossFightWidget-Weather-Coffee3s {
+  background-size: 260px !important;
   -webkit-animation: upAndForth 5s linear infinite;
   animation: upAndForth 5s linear infinite;
 }
-.BossFightWidget-Weather-Flooding:before {
-  content: "";
-  z-index: 2;
-  width: 430px;
-  position: absolute;
-  height: 430px;
+.theme-dark .BossFightWidget-Weather-Coffee3s {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/12-Flooding.1ef2de2e.svg);
-  background-position: 50%;
-  background-repeat: no-repeat;
-  -webkit-animation: tinySpinny 5s linear infinite;
-  animation: tinySpinny 5s linear infinite;
-  background-size: 500px;
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/11-Coffee3s.6d9b0658.svg);
 }
-.BossFightWidget-Weather-Salmon {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/13-Salmon.9a6b3d04.svg);
-  background-size: 75px;
+.theme-light .BossFightWidget-Weather-Coffee3s {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0.6)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/11-Coffee3s.6d9b0658.svg);
+}
+.BossFightWidget-Weather-Flooding {
+  background-size: 75px !important;
   -webkit-animation: scrollDown 3s linear infinite;
   animation: scrollDown 3s linear infinite;
 }
-.BossFightWidget-Weather-Polarity {
+.theme-dark .BossFightWidget-Weather-Flooding {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/12-Flooding.1ef2de2e.svg);
+}
+.theme-light .BossFightWidget-Weather-Flooding {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0.6)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/12-Flooding.1ef2de2e.svg);
+}
+.BossFightWidget-Weather-Salmon {
+  background-size: 75px !important;
+  -webkit-animation: scrollLeftTopSmall 3s linear infinite;
+  animation: scrollLeftTopSmall 3s linear infinite;
+}
+.theme-dark .BossFightWidget-Weather-Salmon {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/14-Polarity_P.565ec466.svg);
-  background-position: 50%;
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/13-Salmon.9a6b3d04.svg);
+}
+.theme-light .BossFightWidget-Weather-Salmon {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.7), hsla(0, 0%, 100%, 0.7)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/13-Salmon.9a6b3d04.svg);
+}
+.BossFightWidget-Weather-Jazz {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/16-Jazz.a398dbc8.svg);
+  background-size: 140px;
+  -webkit-animation: scrollLeft 3s linear infinite;
+  animation: scrollLeft 3s linear infinite;
+}
+.BossFightWidget-Weather-Polarity {
   -webkit-animation: scrollUpBig 10s linear infinite;
   animation: scrollUpBig 10s linear infinite;
 }
-.BossFightWidget-Weather-Polarity- {
+.theme-dark .BossFightWidget-Weather-Polarity {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/14-Polarity_N.aeb8c2da.svg);
-  background-position: 50%;
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/14-Polarity_P.565ec466.svg);
+}
+.theme-light .BossFightWidget-Weather-Polarity {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.7), hsla(0, 0%, 100%, 0.7)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/14-Polarity_P.565ec466.svg);
+}
+.BossFightWidget-Weather-Polarity- {
   -webkit-animation: scrollDownBig 10s linear infinite;
   animation: scrollDownBig 10s linear infinite;
+}
+.theme-dark .BossFightWidget-Weather-Polarity- {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/14-Polarity_N.aeb8c2da.svg);
+}
+.theme-light .BossFightWidget-Weather-Polarity- {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.7), hsla(0, 0%, 100%, 0.7)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/14-Polarity_N.aeb8c2da.svg);
 }
 .BossFightWidget-Weather-Sun90:before {
   content: "";
@@ -20840,23 +21056,34 @@ button:focus-visible {
   width: 400px;
   position: absolute;
   height: 400px;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/06-BlackHole.a443c944.svg);
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/sunennea.4e4a8277.svg);
-  background-position: 50%;
-  background-repeat: no-repeat;
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
   -webkit-animation: spinny 25s linear infinite;
   animation: spinny 25s linear infinite;
-  background-size: 550px;
+  background-size: 550px !important;
+  right: 50vh;
+}
+.theme-dark .BossFightWidget-Weather-Sun90:before {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/sunennea.4e4a8277.svg);
+}
+.theme-light .BossFightWidget-Weather-Sun90:before {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0.6)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/sunennea.4e4a8277.svg);
 }
 .BossFightWidget-Weather-Sun1 {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/sunpoint1.861a8bd0.svg);
-  background-position: 0 0;
-  background-repeat: no-repeat;
+  background-position: 0 0 !important;
+  background-repeat: no-repeat !important;
   -webkit-animation: tinySizeChange 15s linear infinite;
   animation: tinySizeChange 15s linear infinite;
+}
+.theme-dark .BossFightWidget-Weather-Sun1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/sunpoint1.861a8bd0.svg);
+}
+.theme-light .BossFightWidget-Weather-Sun1 {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0.6)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/sunpoint1.861a8bd0.svg);
 }
 .BossFightWidget-Weather-SumSun:before {
   content: "";
@@ -20864,19 +21091,28 @@ button:focus-visible {
   width: 430px;
   position: absolute;
   height: 430px;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/sumsun.54d81d90.svg);
-  background-position: 50%;
-  background-repeat: no-repeat;
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
   -webkit-animation: tinySpinny 5s linear infinite;
   animation: tinySpinny 5s linear infinite;
-  background-size: 500px;
+  background-size: 500px !important;
+  right: 50vh;
+}
+.theme-dark .BossFightWidget-Weather-SumSun:before {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/sumsun.54d81d90.svg);
+}
+.theme-light .BossFightWidget-Weather-SumSun:before {
+  background: linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0.6)),
+    url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/sumsun.54d81d90.svg);
 }
 .BossFightWidget-UnknownEntity {
-  width: 100vh;
-  height: 100vh;
+  width: 135vh;
+  height: 135vh;
   position: absolute;
-  z-index: 1;
+  z-index: 15;
+  -webkit-animation: fadein 10s;
+  animation: fadein 10s;
 }
 .BossFightWidget-Enemy {
   display: flex;
@@ -20884,9 +21120,10 @@ button:focus-visible {
   margin: 85px 0 20px;
   align-items: center;
   opacity: 1;
-  z-index: 2;
+  z-index: 4;
   width: 100%;
   overflow: hidden;
+  min-height: 440px;
 }
 .BossFightWidget-Enemy-Icon {
   position: relative;
@@ -20906,16 +21143,24 @@ button:focus-visible {
 }
 .BossFightWidget-Enemy-Body {
   max-width: 550px;
-  margin: 40px 0 20px;
+  margin: 30px 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 3;
+  text-align: center;
 }
 .theme-dark .BossFightWidget-Enemy-Body {
   background: #000;
 }
 .theme-light .BossFightWidget-Enemy-Body {
   background: #fff;
+}
+.BossFightWidget-Enemy-Eclipse {
+  height: 570px;
+  transition: height 5s;
 }
 .BossFightWidget-Names {
   display: flex;
@@ -20930,8 +21175,13 @@ button:focus-visible {
   border-radius: 5px;
   overflow: hidden;
   padding: 10px 20px;
-  background: #111;
   width: 100%;
+}
+.theme-dark .BossFightWidget-Names-Wrapper {
+  background: #000;
+}
+.theme-light .BossFightWidget-Names-Wrapper {
+  background: #fff;
 }
 .BossFightWidget-Names-Spirit {
   margin-top: 5px;
@@ -20951,7 +21201,6 @@ button:focus-visible {
   padding-left: 5px;
 }
 .BossFightWidget-Button {
-  color: #fff;
   font-weight: 700;
   font-size: 14px;
   height: 32px;
@@ -20959,13 +21208,30 @@ button:focus-visible {
   border-radius: 30px;
   white-space: nowrap;
   align-items: center;
-  border: 1px solid #fff !important;
+}
+.theme-dark .BossFightWidget-Button {
+  border-color: #fff;
+}
+.theme-light .BossFightWidget-Button {
+  border-color: #000;
+}
+.theme-dark .BossFightWidget-Button {
+  color: #fff;
+}
+.theme-light .BossFightWidget-Button {
+  color: #000;
 }
 .BossFightWidget-Button:not(:first-child) {
   border-left: none;
 }
 .BossFightWidget-Button:hover {
   border: 1px solid #fff;
+}
+.theme-dark .BossFightWidget-Button:hover {
+  border-color: #fff;
+}
+.theme-light .BossFightWidget-Button:hover {
+  border-color: #000;
 }
 .BossFightWidget-Button-Wrapper {
   display: flex;
@@ -20989,15 +21255,33 @@ button:focus-visible {
   grid-gap: 10px;
   gap: 10px;
 }
-.BossFightWidget-Display,
+.BossFightWidget-Display {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.theme-dark .BossFightWidget-Display {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .BossFightWidget-Display {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
 .BossFightWidget-Display-Visual {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background: #111;
   overflow: hidden;
+}
+.theme-dark .BossFightWidget-Display-Visual {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .BossFightWidget-Display-Visual {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
 }
 .BossFightWidget-Display-Body {
   display: grid;
@@ -21028,9 +21312,14 @@ button:focus-visible {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background: #111;
   overflow: hidden;
   padding: 5px;
+}
+.theme-dark .BossFightWidget-Outcome {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .BossFightWidget-Outcome {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
 }
 .BossFightWidget-Outcome-Blurb {
   font-family: "Lora", "Courier New", monospace, serif;
@@ -21053,19 +21342,29 @@ button:focus-visible {
   align-items: center;
   font-size: 14px;
   text-transform: uppercase;
-  background: rgba(30, 30, 30, 0.6392156862745098);
   width: 100%;
   margin-bottom: 10px;
   border-radius: 5px;
+}
+.theme-dark .BossFightWidget-Header {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .BossFightWidget-Header {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
 }
 .BossFightWidget-Header-Wrapper {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
   overflow: hidden;
-  background-color: #111;
   align-self: stretch;
   padding-bottom: 10px;
+}
+.theme-dark .BossFightWidget-Header-Wrapper {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .BossFightWidget-Header-Wrapper {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
 }
 .BossFightWidget-ScoreBacking {
   display: flex;
@@ -21118,6 +21417,10 @@ button:focus-visible {
   font-size: 26px;
   font-family: "Lora", "Courier New", monospace, serif;
   line-height: 1em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
 }
 .BossFightWidget-ScoreName-Fight {
   font-size: 20px;
@@ -21225,10 +21528,15 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   position: relative;
-  background: #111;
   border-radius: 5px;
   overflow: hidden;
   min-height: 135px;
+}
+.theme-dark .BossFightWidget-Log {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .BossFightWidget-Log {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
 }
 .BossFightWidget-Log .GameWidget-DunDun {
   right: 36%;
@@ -21392,6 +21700,71 @@ button:focus-visible {
   line-height: 20px;
   padding: 0 12px;
   border-radius: 5px;
+}
+.BossFightWidget-Fireworks-First,
+.BossFightWidget-Fireworks-Second {
+  position: absolute;
+  top: 25%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
+    0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
+    0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
+    0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
+    0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
+    0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
+    0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
+    0 0 #fff, 0 0 #fff, 0 0 #fff;
+  z-index: 2;
+  -webkit-animation: bang 1s ease-out infinite backwards,
+    gravity 1s ease-in infinite backwards, position 5s linear infinite backwards,
+    fadein 1s ease-out infinite backwards;
+  animation: bang 1s ease-out infinite backwards,
+    gravity 1s ease-in infinite backwards, position 5s linear infinite backwards,
+    fadein 1s ease-out infinite backwards;
+}
+.BossFightWidget-Fireworks-First {
+  left: 0;
+}
+.BossFightWidget-Fireworks-Second {
+  -webkit-animation-duration: 1.25s, 1.25s, 6.25s;
+  animation-duration: 1.25s, 1.25s, 6.25s;
+}
+.no-x {
+  overflow-x: hidden;
+}
+.SemiCentennial-Banner {
+  text-align: center;
+  background: #ffc107;
+  background: linear-gradient(0deg, #ffc107 30%, #ffdf81);
+  color: #fff8c7;
+  box-shadow: 0 20px #ffc107;
+  width: 150px;
+  padding: 8px 0;
+  margin: auto;
+  position: relative;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  font-size: 100px;
+}
+.SemiCentennial-Banner:before {
+  content: "";
+  bottom: -20px;
+  border-bottom: 20px solid;
+  border-left: 75px solid transparent !important;
+  border-right: 75px solid transparent !important;
+  position: absolute;
+  left: 0;
+}
+.theme-dark .SemiCentennial-Banner:before {
+  border-color: #000;
+}
+.theme-light .SemiCentennial-Banner:before {
+  border-color: #fff;
 }
 .st0 {
   fill: none;
@@ -21595,6 +21968,22 @@ button:focus-visible {
     background-position: 130px 130px;
   }
 }
+@-webkit-keyframes scrollLeftTopSmall {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -75px -75px;
+  }
+}
+@keyframes scrollLeftTopSmall {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -75px -75px;
+  }
+}
 @-webkit-keyframes scrollDown {
   0% {
     background-position: 0 0;
@@ -21685,6 +22074,22 @@ button:focus-visible {
   }
   to {
     background-size: 20%;
+  }
+}
+@-webkit-keyframes scrollLeft {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -140px 0;
+  }
+}
+@keyframes scrollLeft {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -140px 0;
   }
 }
 @-webkit-keyframes scrollRight {
@@ -21887,13 +22292,143 @@ button:focus-visible {
     display: none;
   }
 }
+@-webkit-keyframes bang {
+  to {
+    box-shadow: 69px 9.33333px #08f, 19px -89.66667px #ff1e00,
+      177px 49.33333px #00ffb3, 140px -78.66667px #00ff59,
+      202px -295.66667px #d0ff00, -223px -15.66667px #ff000d,
+      15px 41.33333px #007bff, 11px -38.66667px #00ff09,
+      -19px 10.33333px #d900ff, -76px -89.66667px #005eff,
+      -211px -166.66667px #ff2f00, 189px -398.66667px #1eff00,
+      -118px -206.66667px #f04, 34px 52.33333px #0900ff,
+      -33px -69.66667px #1e00ff, 182px -200.66667px #15ff00,
+      -76px -103.66667px #73ff00, -188px 37.33333px #aeff00,
+      -54px 52.33333px #5100ff, -199px -42.66667px #ff00c4,
+      -161px -301.66667px #ff004d, -118px -394.66667px #ff006a,
+      -249px -396.66667px #ff00f7, 79px 69.33333px #ffa200,
+      -16px 44.33333px #00ffc4, 10px 54.33333px #ff0, 179px -216.66667px #00fff2,
+      -169px -331.66667px #f07, 10px -323.66667px #00ffd5,
+      -6px -188.66667px #ff0040, -187px -380.66667px #00ffc4,
+      94px 73.33333px #00f, 156px -289.66667px #c8ff00, 228px 64.33333px #8000ff,
+      166px -174.66667px #00ff51, 212px -296.66667px #004dff,
+      231px 37.33333px #ff7b00, 29px -27.66667px #bf0, -96px 14.33333px #5eff00,
+      -164px -167.66667px #0037ff, -94px 12.33333px #ff00e6,
+      -145px -68.66667px #ff00c4, -203px -401.66667px #2600ff,
+      122px -189.66667px #00ff1a, 3px 32.33333px #ffa600, 233px -10.66667px #05f,
+      -76px -156.66667px #1e00ff, -38px 80.33333px #62ff00,
+      -96px 60.33333px #0f2, 89px -192.66667px #00a6ff,
+      -229px -296.66667px #ff00f2;
+  }
+}
+@keyframes bang {
+  to {
+    box-shadow: 69px 9.33333px #08f, 19px -89.66667px #ff1e00,
+      177px 49.33333px #00ffb3, 140px -78.66667px #00ff59,
+      202px -295.66667px #d0ff00, -223px -15.66667px #ff000d,
+      15px 41.33333px #007bff, 11px -38.66667px #00ff09,
+      -19px 10.33333px #d900ff, -76px -89.66667px #005eff,
+      -211px -166.66667px #ff2f00, 189px -398.66667px #1eff00,
+      -118px -206.66667px #f04, 34px 52.33333px #0900ff,
+      -33px -69.66667px #1e00ff, 182px -200.66667px #15ff00,
+      -76px -103.66667px #73ff00, -188px 37.33333px #aeff00,
+      -54px 52.33333px #5100ff, -199px -42.66667px #ff00c4,
+      -161px -301.66667px #ff004d, -118px -394.66667px #ff006a,
+      -249px -396.66667px #ff00f7, 79px 69.33333px #ffa200,
+      -16px 44.33333px #00ffc4, 10px 54.33333px #ff0, 179px -216.66667px #00fff2,
+      -169px -331.66667px #f07, 10px -323.66667px #00ffd5,
+      -6px -188.66667px #ff0040, -187px -380.66667px #00ffc4,
+      94px 73.33333px #00f, 156px -289.66667px #c8ff00, 228px 64.33333px #8000ff,
+      166px -174.66667px #00ff51, 212px -296.66667px #004dff,
+      231px 37.33333px #ff7b00, 29px -27.66667px #bf0, -96px 14.33333px #5eff00,
+      -164px -167.66667px #0037ff, -94px 12.33333px #ff00e6,
+      -145px -68.66667px #ff00c4, -203px -401.66667px #2600ff,
+      122px -189.66667px #00ff1a, 3px 32.33333px #ffa600, 233px -10.66667px #05f,
+      -76px -156.66667px #1e00ff, -38px 80.33333px #62ff00,
+      -96px 60.33333px #0f2, 89px -192.66667px #00a6ff,
+      -229px -296.66667px #ff00f2;
+  }
+}
+@-webkit-keyframes gravity {
+  to {
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+    opacity: 0;
+  }
+}
+@keyframes gravity {
+  to {
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes position {
+  0%,
+  19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  20%,
+  39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+  40%,
+  59.9% {
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+  60%,
+  79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+  80%,
+  99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+@keyframes position {
+  0%,
+  19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  20%,
+  39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+  40%,
+  59.9% {
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+  60%,
+  79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+  80%,
+  99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
 @media (max-width: 1080px) {
   .BossFightWidget {
     border-radius: 5px;
     width: 95%;
   }
-  .BossFightWidget-Container {
-    background: #111;
+  .theme-dark .BossFightWidget-Container {
+    background: rgba(30, 30, 30, 0.6392156862745098);
+  }
+  .theme-light .BossFightWidget-Container {
+    background: hsla(0, 0%, 89%, 0.7098039215686275);
+  }
+  .BossFightWidget-Enemy {
+    min-height: 200px;
   }
   .BossFightWidget-Enemy svg {
     height: 30vh;
@@ -22093,6 +22628,19 @@ button:focus-visible {
     padding: 2px 0;
   }
   .BossFightWidget.IsComplete .BossFightWidget-Log {
+    display: none;
+  }
+  .SemiCentennial-Banner {
+    width: 75px;
+    height: 100px;
+    font-size: 50px;
+    margin: 0 10px;
+  }
+  .SemiCentennial-Banner:before {
+    border-left: 37px solid transparent !important;
+    border-right: 38px solid transparent !important;
+  }
+  .SemiCentennial-Banner:last-child {
     display: none;
   }
 }

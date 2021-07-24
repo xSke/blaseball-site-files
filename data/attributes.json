@@ -2254,7 +2254,11 @@
         "textColor": "#bf9cd6",
         "background": "#1e2224",
         "title": "Heist Expert",
-        "description": "This Player is adept at using a Ballpark's Tunnels."
+        "description": "This Player is adept at using a Ballpark's Tunnels.",
+        "descriptions": {
+            "team": "This Team is adept at using a Ballpark's Tunnels.",
+            "player": "This Player is adept at using a Ballpark's Tunnels."
+        }
     },
     {
         "id": "PROTOTYPE",
@@ -2362,33 +2366,33 @@
     },
     {
         "id": "CYCLING",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#ffffff",
+        "color": "#f5e58c",
+        "textColor": "#f5e58c",
+        "background": "#352842",
         "title": "Cycling",
         "description": "Pitchers cycle out at the end of every inning."
     },
     {
         "id": "FORGERY",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#ffffff",
+        "color": "#fff8c7",
+        "textColor": "#fff8c7",
+        "background": "#bfa600",
         "title": "Forgery",
         "description": "When Players join this Team, they will be Artificially Forged."
     },
     {
         "id": "CLIMATE_CONTROL",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#ffffff",
+        "color": "#ff4a26",
+        "textColor": "#ff4a26",
+        "background": "#3a3d40",
         "title": "Climate Control",
         "description": "The Weather will change every inning in this Ballpark."
     },
     {
         "id": "WEATHER_REPORTS",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#ffffff",
+        "color": "#754974",
+        "textColor": "#d6d6d6",
+        "background": "#d6d6d6",
         "title": "Weather Reports",
         "description": "When the Weather changes in this Ballpark, it will pick based on \"History\"."
     },
