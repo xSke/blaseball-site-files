@@ -104,7 +104,7 @@
         "description": "Unstable players have a much higher chance of being incinerated in a Solar Eclipse.",
         "descriptions": {
             "player": "Unstable Players have a much higher chance of being incinerated in a Solar Eclipse.",
-            "team": "Unstable Teams have a chance of being incinerated in a Solar Eclipse."
+            "team": "Unstable Teams have a much higher chance of being incinerated in a Solar Eclipse."
         }
     },
     {
@@ -2398,17 +2398,17 @@
     },
     {
         "id": "ROAMLESS",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#ffffff",
+        "color": "#fffeeb",
+        "textColor": "#fffeeb",
+        "background": "#3f1e57",
         "title": "Roamless",
         "description": "Players cannot Roam to this Team."
     },
     {
         "id": "AVOIDANCE",
-        "color": "#ffffff",
-        "textColor": "#ffffff",
-        "background": "#ffffff",
+        "color": "#130042",
+        "textColor": "#85d6ff",
+        "background": "#85d6ff",
         "title": "Avoidance",
         "description": "This Team will not swing with 9+ Runs."
     },
@@ -2427,5 +2427,21 @@
         "background": "#1b1c80",
         "title": "Stables",
         "description": "When any Team scores 25+ in this Ballpark, any Instability in the Ballpark will be stabled."
+    },
+    {
+        "id": "MINIMIZED",
+        "color": "#d3d8de",
+        "textColor": "#d3d8de",
+        "background": "#38080d",
+        "title": "Minimized",
+        "description": "This Player has been Minimized."
+    },
+    {
+        "id": "UNDER_REVIEW",
+        "color": "#d297f9",
+        "textColor": "#a16dc3",
+        "background": "#180027",
+        "title": "Under Review",
+        "description": "This Team is Under Review..."
     }
 ]
