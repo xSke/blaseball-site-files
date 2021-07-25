@@ -34008,10 +34008,11 @@
         ),
           Object(r.useEffect)(
             function () {
-              "" !== f.scoreUpdate ||
-              f.lastUpdate.includes("!") ||
-              f.lastUpdate.includes("Outing") ||
-              f.lastUpdate.includes("SEASON")
+              ("" !== f.scoreUpdate ||
+                f.lastUpdate.includes("!") ||
+                f.lastUpdate.includes("Outing") ||
+                f.lastUpdate.includes("SEASON")) &&
+              !E.motion
                 ? Z(!0)
                 : Z(!1);
             },
