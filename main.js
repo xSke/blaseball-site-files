@@ -11712,7 +11712,7 @@
                 </div>
                 <span className="Events-List-Row">
                   <span className="Events-List-Row-Group Widget-Log-Score">
-                    {c.amount > 0 ? "+" : "-"} {c.amount}
+                    {c.amount > 0 ? "+" : "-"} {Math.abs(c.amount)}
                   </span>
                   <span
                     className="Events-List-Row-Group Widget-Log-IconButton"
@@ -16038,8 +16038,8 @@
           (F = A.teams.find(function (e) {
             return e.id === n.awayTeam;
           })),
-          j && (R = j.level > 4),
-          F && (Q = F.level > 4));
+          j && (R = j.level <= 4),
+          F && (Q = F.level <= 4));
         var z = j && j.seasAttr.includes("PARTY_TIME"),
           H = F && F.seasAttr.includes("PARTY_TIME");
         return (
@@ -35973,54 +35973,55 @@
           a = t.user,
           n = (t.setUser, Object(r.useContext)(I.context)),
           i = Object(r.useContext)(Vs.context),
-          o = Object(r.useState)([]),
-          A = Object(s.a)(o, 2),
-          u = A[0],
-          d = A[1],
-          f = Object(c.g)(),
-          g = Object(r.useState)(null !== (e = a.motion) && void 0 !== e && e),
-          E = Object(s.a)(g, 2),
-          v = E[0],
-          p = E[1],
-          h = Object(r.useState)(!1),
-          b = Object(s.a)(h, 2),
-          w = b[0],
-          B = b[1];
+          o = Object(r.useContext)(kc.context),
+          A = Object(r.useState)([]),
+          u = Object(s.a)(A, 2),
+          d = u[0],
+          f = u[1],
+          g = Object(c.g)(),
+          E = Object(r.useState)(null !== (e = a.motion) && void 0 !== e && e),
+          v = Object(s.a)(E, 2),
+          p = v[0],
+          h = v[1],
+          b = Object(r.useState)(!1),
+          w = Object(s.a)(b, 2),
+          B = w[0],
+          y = w[1];
         Object(r.useEffect)(function () {
           var e = window.matchMedia("(max-width: 1080px)");
-          e.addListener(y), y(e);
+          e.addListener(O), O(e);
           var t = window.matchMedia("(prefers-reduced-motion: reduce)");
           return (
-            t.addListener(O),
-            O(t),
+            t.addListener(C),
+            C(t),
             function () {
-              e.removeListener(y), t.removeListener(O);
+              e.removeListener(O), t.removeListener(C);
             }
           );
         }, []);
-        var y = function (e) {
-            e.matches ? B(!0) : B(!1);
+        var O = function (e) {
+            e.matches ? y(!0) : y(!1);
           },
-          O = function (e) {
-            e.matches ? p(!0) : a.motion || p(!1);
+          C = function (e) {
+            e.matches ? h(!0) : a.motion || h(!1);
           };
         Object(r.useEffect)(
           function () {
-            if (u.length < 1) {
+            if (d.length < 1) {
               var e,
                 t = Tf(i, { filters: {} }, null !== (e = a.favoriteTeam) && void 0 !== e ? e : "", !1);
-              d(t);
+              f(t);
             }
           },
           [i]
         );
         for (
-          var C = [],
-            S = [],
-            k = w ? 11 : 21,
-            N = 38,
-            T = 0,
-            P = u
+          var S = [],
+            k = [],
+            N = B ? 11 : 21,
+            T = 38,
+            P = 0,
+            D = d
               .map(function (e, t) {
                 return {
                   team: e,
@@ -36028,34 +36029,34 @@
                     e.imPosition[0] <= 0
                       ? Math.floor(Math.abs(e.imPosition[0]) * Math.floor(12.5)) + Math.ceil(12.5)
                       : Math.ceil(12.5) - Math.floor(e.imPosition[0] * Math.floor(12.5)),
-                  y: Math.ceil(Math.max(Math.min(19 - 15 * e.imPosition[1], N), 1)),
+                  y: Math.ceil(Math.max(Math.min(19 - 15 * e.imPosition[1], T), 1)),
                 };
               })
               .sort(function (e, t) {
                 return t.x - e.x || t.y - e.y;
               }),
-            D = [],
-            L = 0;
-          L < 24;
-          L++
+            L = [],
+            M = 0;
+          M < 24;
+          M++
         )
-          S.push(
+          k.push(
             <div
               className="DepthChart-Line DepthChart-Line-Vertical"
-              style={{ left: "".concat(L * k + k, "px"), animation: v ? "none" : "" }}
+              style={{ left: "".concat(M * N + N, "px"), animation: p ? "none" : "" }}
             />
           );
-        for (var M = 0; M < 37; M++) {
-          M + 1 === Math.ceil(19) &&
-            ((T = Math.ceil(19) * k - k / 4),
-            C.push(
+        for (var R = 0; R < 37; R++) {
+          R + 1 === Math.ceil(19) &&
+            ((P = Math.ceil(19) * N - N / 4),
+            S.push(
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 role="img"
                 aria-label="MVP Line. This is a wavy gold line."
                 className="MVPLine"
                 viewBox="0 0 650 20"
-                style={{ position: "absolute", top: "".concat(T, "px"), zIndex: 2, margin: 0 }}
+                style={{ position: "absolute", top: "".concat(P, "px"), zIndex: 2, margin: 0 }}
               >
                 <g>
                   <title>MVP Line</title>
@@ -36067,18 +36068,18 @@
                 </g>
               </svg>
             ));
-          var R = !1;
-          [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33].includes(M) && (R = !0),
-            C.push(
+          var Q = !1;
+          [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33].includes(R) && (Q = !0),
+            S.push(
               <div
                 className={
-                  "DepthChart-Line DepthChart-Line-Horizontal" + (R ? " DepthChart-Line-Horizontal-Thick" : "")
+                  "DepthChart-Line DepthChart-Line-Horizontal" + (Q ? " DepthChart-Line-Horizontal-Thick" : "")
                 }
-                style={{ top: "".concat((M + 1) * k, "px"), animation: v ? "none" : "" }}
+                style={{ top: "".concat((R + 1) * N, "px"), animation: p ? "none" : "" }}
               />
             );
         }
-        var Q = [5, -5, 5, -5, 5, -5].map(function (e) {
+        var j = [5, -5, 5, -5, 5, -5].map(function (e) {
             return (
               <svg
                 className="DepthChart-Header-Cactus"
@@ -36097,7 +36098,7 @@
               </svg>
             );
           }),
-          j = [15, -10, 5, 0, -5, 10, -15].map(function (e) {
+          F = [15, -10, 5, 0, -5, 10, -15].map(function (e) {
             return 0 === e ? (
               <svg xmlns="http://www.w3.org/2000/svg" className="DepthChart-Footer" viewBox="50 15 400 512">
                 <path d="M0 0h512v512H0z" fill="#000000" fill-opacity="0.01" />
@@ -36172,7 +36173,7 @@
               </svg>
             );
           }),
-          F = (
+          z = (
             <svg xmlns="http://www.w3.org/2000/svg" className="DepthChart-BottomFeeders" viewBox="100 0 312 440">
               <path
                 className="DepthChart-BottomFeeders-Image"
@@ -36181,7 +36182,8 @@
               />
             </svg>
           ),
-          z = Bf(n.sim, "SIM_COIN_FLIP");
+          H = Bf(n.sim, "SIM_COIN_FLIP");
+        o.doc && o.doc.zeta;
         return (
           <div className="DepthChart" id="Main-Body">
             <div className="DepthChart-Body-Wrapper">
@@ -36191,14 +36193,14 @@
                   type="switch"
                   id="motion"
                   label="Turn Chart Motion Off"
-                  checked={v}
+                  checked={p}
                   onChange={function () {
-                    return p(!v);
+                    return h(!p);
                   }}
                 />
               </X.a>
               <div className="DepthChart-Body-Wrapper-Inner">
-                {z ? (
+                {H ? (
                   <div className="DepthChart-Labels">
                     <div className="DepthChart-DepthMarker" style={{ gridRow: "4/6" }}>
                       2
@@ -36302,24 +36304,24 @@
                   </div>
                 )}
                 <div className="DepthChart-Body">
-                  <div className="DepthChart-EndZone-Top">{z ? j : Q}</div>
-                  {C}
+                  <div className="DepthChart-EndZone-Top">{H ? F : j}</div>
                   {S}
-                  {P.map(function (e, t) {
+                  {k}
+                  {D.map(function (e, t) {
                     var a = e.team.imPosition[0].toFixed(3),
                       n =
                         e.team.imPosition[1] > 0
                           ? (1 - e.team.imPosition[1]).toFixed(3)
                           : (1 + Math.abs(e.team.imPosition[1])).toFixed(3);
-                    0 !== t && P[t - 1].x === e.x && P[t - 1].y === e.y
+                    0 !== t && D[t - 1].x === e.x && D[t - 1].y === e.y
                       ? (!0,
-                        D.push({
-                          nickname: P[t - 1].team.nickname,
-                          mainColor: P[t - 1].team.mainColor,
-                          xValue: P[t - 1].team.imPosition[0].toFixed(3),
-                          yValue: (1 - P[t - 1].team.imPosition[1]).toFixed(3),
+                        L.push({
+                          nickname: D[t - 1].team.nickname,
+                          mainColor: D[t - 1].team.mainColor,
+                          xValue: D[t - 1].team.imPosition[0].toFixed(3),
+                          yValue: (1 - D[t - 1].team.imPosition[1]).toFixed(3),
                         }))
-                      : (D = []);
+                      : (L = []);
                     var r = "";
                     return (
                       parseFloat(n) >= 2 && (r = "DepthChart-Team-0"),
@@ -36343,7 +36345,7 @@
                                 </div>
                                 <div className="AttributeTooltip-Description">X: {a}</div>
                                 <div className="AttributeTooltip-Description">Y: {n}</div>
-                                {D.reverse().map(function (e) {
+                                {L.reverse().map(function (e) {
                                   return (
                                     <l.a.Fragment>
                                       <div style={{ height: "5px" }} />
@@ -36373,10 +36375,10 @@
                               gridRow: e.y,
                               height: "100%",
                               width: "100%",
-                              animation: v ? "none" : "",
+                              animation: p ? "none" : "",
                             }}
                           >
-                            <m background={f} path={"/team/".concat(e.team.id)} className="DepthChart-Team-Wrapper">
+                            <m background={g} path={"/team/".concat(e.team.id)} className="DepthChart-Team-Wrapper">
                               <div className={"DepthChart-Team " + r}>{kf(e.team)}</div>
                             </m>
                           </div>
@@ -36384,15 +36386,19 @@
                       )
                     );
                   })}
+                  <div className="League-Supernova-Eclipse">
+                    <wp className="League-Supernova-Icon" />
+                    {Rc(2)}
+                  </div>
                   <div
                     className={
-                      "DepthChart-BottomFeeders-Wrapper" + (z ? " DepthChart-BottomFeeders-Wrapper-Flipped" : "")
+                      "DepthChart-BottomFeeders-Wrapper" + (H ? " DepthChart-BottomFeeders-Wrapper-Flipped" : "")
                     }
-                    style={{ height: "".concat(w ? 380 - T - 10 : 760 - T - 60, "px") }}
+                    style={{ height: "".concat(B ? 380 - P - 10 : 760 - P - 60, "px") }}
                   >
-                    {F}
+                    {z}
                   </div>
-                  <div className="DepthChart-EndZone-Bottom">{z ? Q : j}</div>
+                  <div className="DepthChart-EndZone-Bottom">{H ? j : F}</div>
                 </div>
               </div>
             </div>
@@ -36400,14 +36406,14 @@
               <div className="DepthChart-List">
                 <h3 className="DepthChart-Lists-Header">Top 5</h3>
                 <div className="DepthChart-Lists-Container">
-                  {u
+                  {d
                     .sort(function (e, t) {
                       return t.imPosition[1] - e.imPosition[1];
                     })
                     .slice(0, 5)
                     .map(function (e) {
                       return (
-                        <m background={f} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
+                        <m background={g} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
                           <div className="DepthChart-Lists-Name">
                             <div
                               className="DepthChart-Lists-Color"
@@ -36431,14 +36437,14 @@
               <div className="DepthChart-List">
                 <h3 className="DepthChart-Lists-Header">Middle 5</h3>
                 <div className="DepthChart-Lists-Container">
-                  {u
+                  {d
                     .sort(function (e, t) {
                       return t.imPosition[1] - e.imPosition[1];
                     })
-                    .slice(u.length / 2 - 2, u.length / 2 + 3)
+                    .slice(d.length / 2 - 2, d.length / 2 + 3)
                     .map(function (e) {
                       return (
-                        <m background={f} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
+                        <m background={g} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
                           <div className="DepthChart-Lists-Name">
                             <div
                               className="DepthChart-Lists-Color"
@@ -36462,14 +36468,14 @@
               <div className="DepthChart-List">
                 <h3 className="DepthChart-Lists-Header">Bottom 5</h3>
                 <div className="DepthChart-Lists-Container">
-                  {u
+                  {d
                     .sort(function (e, t) {
                       return e.imPosition[1] - t.imPosition[1];
                     })
                     .slice(0, 5)
                     .map(function (e) {
                       return (
-                        <m background={f} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
+                        <m background={g} path={"/team/".concat(e.id)} className="DepthChart-Lists-Item">
                           <div className="DepthChart-Lists-Name">
                             <div
                               className="DepthChart-Lists-Color"
