@@ -2150,7 +2150,11 @@
         "textColor": "#ebe157",
         "background": "#041a29",
         "title": "2x",
-        "description": "Every Run that this Player bats in or allows will be multiplied by 2."
+        "description": "Every Run that this Player bats in or allows will be multiplied by 2.",
+        "descriptions": {
+            "player": "Every Run that this Player bats in or allows will be multiplied by 2.",
+            "team": "Every Run that this Team bats in or allows will be multiplied by 2."
+        }
     },
     {
         "id": "MAGNIFY_3X",
@@ -2158,7 +2162,11 @@
         "textColor": "#ebe157",
         "background": "#06263b",
         "title": "3x",
-        "description": "Every Run that this Player bats in or allows will be multiplied by 3."
+        "description": "Every Run that this Player bats in or allows will be multiplied by 3.",
+        "descriptions": {
+            "player": "Every Run that this Player bats in or allows will be multiplied by 3.",
+            "team": "Every Run that this Team bats in or allows will be multiplied by 3."
+        }
     },
     {
         "id": "MAGNIFY_4X",
