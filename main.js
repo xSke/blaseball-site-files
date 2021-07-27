@@ -36986,11 +36986,11 @@
                       x:
                         e.imPosition[0] <= 0
                           ? Math.max(Math.min(Math.round(D * Math.abs(e.imPosition[0])), D), 1)
-                          : D - Math.max(Math.min(Math.round(D * Math.abs(e.imPosition[0])), D), 1),
+                          : Math.max(D - Math.min(Math.round(D * Math.abs(e.imPosition[0])), D), 1),
                       y:
                         e.imPosition[1] <= 0
                           ? Math.max(Math.min(Math.round(P * Math.abs(e.imPosition[1])), P), 1)
-                          : P - Math.max(Math.min(Math.round(P * Math.abs(e.imPosition[1])), P), 1),
+                          : Math.max(P - Math.min(Math.round(P * Math.abs(e.imPosition[1])), P), 1),
                     };
                   })
                   .sort(function (e, t) {
@@ -37099,7 +37099,7 @@
                                 nickname: G[t - 1].team.nickname,
                                 mainColor: G[t - 1].team.mainColor,
                                 xValue: G[t - 1].team.imPosition[0].toFixed(3),
-                                yValue: (1 - G[t - 1].team.imPosition[1]).toFixed(3),
+                                yValue: G[t - 1].team.imPosition[1].toFixed(3),
                               }))
                             : (U = []),
                           (
@@ -37177,7 +37177,7 @@
                                 nickname: z[t - 1].team.nickname,
                                 mainColor: z[t - 1].team.mainColor,
                                 xValue: z[t - 1].team.imPosition[0].toFixed(3),
-                                yValue: (1 - z[t - 1].team.imPosition[1]).toFixed(3),
+                                yValue: z[t - 1].team.imPosition[1].toFixed(3),
                               }))
                             : (U = []),
                           (
@@ -37255,7 +37255,7 @@
                                 nickname: W[t - 1].team.nickname,
                                 mainColor: W[t - 1].team.mainColor,
                                 xValue: W[t - 1].team.imPosition[0].toFixed(3),
-                                yValue: (1 - W[t - 1].team.imPosition[1]).toFixed(3),
+                                yValue: W[t - 1].team.imPosition[1].toFixed(3),
                               }))
                             : (U = []),
                           (
@@ -37385,7 +37385,7 @@
                                 nickname: V[t - 1].team.nickname,
                                 mainColor: V[t - 1].team.mainColor,
                                 xValue: V[t - 1].team.imPosition[0].toFixed(3),
-                                yValue: (1 - V[t - 1].team.imPosition[1]).toFixed(3),
+                                yValue: V[t - 1].team.imPosition[1].toFixed(3),
                               }))
                             : (U = []),
                           (
@@ -39075,43 +39075,42 @@
         },
         LO = function (e) {
           var t = Object(r.useContext)(nb.context),
-            a = Object(r.useContext)(S.context),
-            n = Object(r.useContext)(oc.context),
-            i = Object(r.useContext)(x.context),
-            o = i.user,
-            A = (i.setUser, Object(cA.useToasts)().addToast, Object(c.g)()),
-            u = Object(r.useState)(void 0),
-            m = Object(s.a)(u, 2),
-            g = m[0],
-            v = m[1],
-            p = Object(r.useState)(!1),
-            h = Object(s.a)(p, 2),
-            b = h[0],
-            w = h[1],
-            B = Object(r.useState)([]),
-            y = Object(s.a)(B, 2),
-            C = (y[0], y[1]),
-            O = Object(r.useState)([]),
-            I = Object(s.a)(O, 2),
-            N = I[0],
-            k = I[1];
+            a = (Object(r.useContext)(S.context), Object(r.useContext)(oc.context)),
+            n = Object(r.useContext)(x.context),
+            i = n.user,
+            o = (n.setUser, Object(cA.useToasts)().addToast, Object(c.g)()),
+            A = Object(r.useState)(void 0),
+            u = Object(s.a)(A, 2),
+            m = u[0],
+            g = u[1],
+            v = Object(r.useState)(!1),
+            p = Object(s.a)(v, 2),
+            h = p[0],
+            b = p[1],
+            w = Object(r.useState)([]),
+            B = Object(s.a)(w, 2),
+            y = (B[0], B[1]),
+            C = Object(r.useState)([]),
+            O = Object(s.a)(C, 2),
+            I = O[0],
+            N = O[1];
           Object(r.useEffect)(
             function () {
-              if ((void 0 === g && T(), N.length < 1)) {
+              if ((void 0 === m && k(), I.length < 1)) {
                 var e,
-                  t = qg(n, { filters: {} }, null !== (e = o.favoriteTeam) && void 0 !== e ? e : "", !1);
-                k(t);
+                  t = qg(a, { filters: {} }, null !== (e = i.favoriteTeam) && void 0 !== e ? e : "", !1);
+                N(t);
               }
             },
-            [n]
+            [a]
           ),
             Object(r.useEffect)(
               function () {
-                C(Js(t.gifts));
+                y(Js(t.gifts));
               },
               [t]
             );
-          var T = (function () {
+          var k = (function () {
               var e = Object(E.a)(
                 f.a.mark(function e() {
                   var t;
@@ -39119,15 +39118,15 @@
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          if ((w(!0), void 0 !== M)) {
+                          if ((b(!0), void 0 !== Q)) {
                             e.next = 4;
                             break;
                           }
-                          return w(!1), e.abrupt("return");
+                          return b(!1), e.abrupt("return");
                         case 4:
                           return (e.next = 6), wg();
                         case 6:
-                          void 0 !== (t = e.sent) && v(t), w(!1);
+                          void 0 !== (t = e.sent) && g(t), b(!1);
                         case 9:
                         case "end":
                           return e.stop();
@@ -39139,63 +39138,61 @@
                 return e.apply(this, arguments);
               };
             })(),
-            P = Object(r.useState)(0),
-            D = Object(s.a)(P, 2),
-            L = D[0],
-            R = (D[1], Object(r.useState)(void 0)),
-            Q = Object(s.a)(R, 2),
-            M =
-              (Q[0],
-              Q[1],
-              n.teams.find(function (e) {
-                return e.id === o.favoriteTeam;
+            T = Object(r.useState)(0),
+            P = Object(s.a)(T, 2),
+            D = P[0],
+            L = (P[1], Object(r.useState)(void 0)),
+            R = Object(s.a)(L, 2),
+            Q =
+              (R[0],
+              R[1],
+              a.teams.find(function (e) {
+                return e.id === i.favoriteTeam;
               })),
-            j = Ug(a.sim),
-            F = (
+            M = (
               <l.a.Fragment>
                 <div className="Offseason-Header">Gift Shop</div>
                 <div className="Team-Stadium-Header-Line">
                   <div className="Team-LogoLine">
                     <div
-                      style={{ backgroundColor: void 0 !== M ? M.mainColor : "#ffffff" }}
+                      style={{ backgroundColor: void 0 !== Q ? Q.mainColor : "#ffffff" }}
                       className="Player-Team-Logo"
                     >
-                      {Yg(M)}
+                      {Yg(Q)}
                     </div>
                   </div>
-                  <div className="Team-Stadium-Header">{void 0 !== M ? M.fullName : "Null Team"}</div>
+                  <div className="Team-Stadium-Header">{void 0 !== Q ? Q.fullName : "Null Team"}</div>
                 </div>
                 <div role="text" style={{ textAlign: "center" }}>
                   <div className="Offseason-Description">
                     This Season, Teams will Aid one another to navigate the End Zones.
                   </div>
-                  {j ? null : <div className="Offseason-Description">The Aid Shop will open next Earlsiesta.</div>}
                 </div>
               </l.a.Fragment>
             );
-          if (void 0 === M || b || void 0 === n)
+          if (void 0 === Q || h || void 0 === a)
             return (
               <div className="Renovation">
                 <div className="Offseason-Info">
-                  {F}
+                  {M}
                   <wA />
                 </div>
               </div>
             );
-          function H(e) {
+          function j(e) {
             switch (e.page) {
               case 0:
-                return <G />;
+                return <H />;
             }
             return null;
           }
-          function V(e) {
+          function F(e) {
             var t,
               a =
-                null === g ||
-                void 0 === g ||
+                null === m ||
+                void 0 === m ||
                 null ===
-                  (t = g.find(function (t) {
+                  (t = m.find(function (t) {
                     return t.id === e;
                   })) ||
                 void 0 === t
@@ -39203,18 +39200,18 @@
                   : t.amount;
             return void 0 !== a ? Math.round(a) : 0;
           }
-          function G() {
+          function H() {
             return (
               <div className="GiftShop-Body">
                 <div role="text" style={{ textAlign: "center", marginBottom: 24 }}>
                   <div className="Offseason-Description">Contribute to a Team to Aid them on their Journey.</div>
                 </div>
                 <div className="Team-Section">
-                  {N.sort(function (e, t) {
+                  {I.sort(function (e, t) {
                     var a = (t.id, 1),
                       n = (e.id, 1),
-                      r = V(t.id),
-                      l = V(e.id);
+                      r = F(t.id),
+                      l = F(e.id);
                     return n === a && r === l
                       ? e.nickname < t.nickname
                         ? -1
@@ -39235,17 +39232,17 @@
                         </div>
                         <div className="Player-Info-Line-Body GiftShop-Gifts-Item-Body">
                           {Jg("0x1F680")}
-                          <xO percent={V(e.id)} color={e.mainColor} />
+                          <xO percent={F(e.id)} color={e.mainColor} />
                         </div>
                         <button
                           className={
-                            e.id === o.favoriteTeam ? "GiftShop-Gifts-Item-Disabled" : "GiftShop-Gifts-Item-Button"
+                            e.id === i.favoriteTeam ? "GiftShop-Gifts-Item-Disabled" : "GiftShop-Gifts-Item-Button"
                           }
                         >
-                          {e.id === o.favoriteTeam ? (
+                          {e.id === i.favoriteTeam ? (
                             <l.a.Fragment>Gift</l.a.Fragment>
                           ) : (
-                            <d background={A} path={"/fuel/".concat(e.id)} params={g}>
+                            <d background={o} path={"/fuel/".concat(e.id)} params={m}>
                               Gift
                             </d>
                           )}
@@ -39257,21 +39254,16 @@
               </div>
             );
           }
-          var W = null;
+          var V = (
+            <l.a.Fragment>
+              <j page={D} />
+            </l.a.Fragment>
+          );
           return (
-            j &&
-              (W = (
-                <l.a.Fragment>
-                  <H page={L} />
-                </l.a.Fragment>
-              )),
-            j || (W = null),
-            (
-              <div className="Renovation">
-                <div className="Offseason-Info">{F}</div>
-                {W}
-              </div>
-            )
+            <div className="Renovation">
+              <div className="Offseason-Info">{M}</div>
+              {V}
+            </div>
           );
         };
       function RO() {
