@@ -2451,5 +2451,29 @@
         "background": "#180027",
         "title": "Under Review",
         "description": "This Team is Under Review..."
+    },
+    {
+        "id": "SUPERNOVA",
+        "color": "#ffca4f",
+        "textColor": "#ffca4f",
+        "background": "#000000",
+        "title": "Sun(Sun) Supernova",
+        "description": ""
+    },
+    {
+        "id": "SMBH",
+        "color": "#ffca4f",
+        "textColor": "#ffca4f",
+        "background": "#000000",
+        "title": "Black Hole (Black Hole)",
+        "description": ""
+    },
+    {
+        "id": "PULSAR",
+        "color": "#ffca4f",
+        "textColor": "#ffca4f",
+        "background": "#000000",
+        "title": "Pulsar (Pulsar)",
+        "description": ""
     }
 ]

@@ -162,10 +162,11 @@
         "description": ""
     },
     {
-        "name": "????",
-        "background": "#36001b",
+        "name": "Black Hole (Black Hole)",
+        "background": "#000000",
         "color": "#ffc400",
-        "description": ""
+        "description": "",
+        "anim": "WeatherIcon-Twirl"
     },
     {
         "name": "Jazz",

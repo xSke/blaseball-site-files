@@ -14513,7 +14513,9 @@ input[type="number"]::-webkit-outer-spin-button {
   text-shadow: 0 0 10px #a16dc3;
 }
 .BigDeal-Message-Style-4 {
-  color: #c50c55;
+  color: #fff;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
 }
 .BigDeal-Message-Style-5 {
   font-family: "Lora", "Courier New", monospace, serif;
@@ -15019,6 +15021,37 @@ input[type="number"]::-webkit-outer-spin-button {
 .WeatherIcon a > svg {
   height: 32px;
   width: 32px;
+}
+.WeatherIcon-Twirl {
+  -webkit-animation-name: spinny;
+  animation-name: spinny;
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+}
+@-webkit-keyframes twirl {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+@keyframes twirl {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
 }
 .Weather-Tooltip-Header {
   font-weight: 700;
@@ -17853,7 +17886,7 @@ button:focus-visible {
 .GiftShop-Gifts-Item-Body {
   width: 100%;
   display: grid;
-  grid-template-columns: auto 20px 1fr;
+  grid-template-columns: auto 1fr;
   grid-gap: 10px;
   gap: 10px;
   font-size: 18px;
@@ -17886,6 +17919,28 @@ button:focus-visible {
   color: #000;
 }
 .theme-light .GiftShop-Gifts-Item-Button {
+  color: #fff;
+}
+.GiftShop-Gifts-Item-Disabled {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: 10px;
+  max-height: 20px;
+  margin: auto;
+  opacity: 0.5;
+  cursor: default !important;
+}
+.theme-dark .GiftShop-Gifts-Item-Disabled {
+  background: #ffeb57;
+}
+.theme-light .GiftShop-Gifts-Item-Disabled {
+  background: #0014a8;
+}
+.theme-dark .GiftShop-Gifts-Item-Disabled {
+  color: #000;
+}
+.theme-light .GiftShop-Gifts-Item-Disabled {
   color: #fff;
 }
 .GiftShop-Gifts-Item-View {
@@ -17941,7 +17996,7 @@ button:focus-visible {
 }
 .Decrees-Container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   margin-bottom: 24px;
   grid-gap: 20px;
   gap: 20px;
@@ -18132,9 +18187,9 @@ button:focus-visible {
   font-size: 14px;
   font-weight: 700;
   padding: 10px 16px;
-  margin-top: auto;
   border-radius: 20px;
   text-transform: uppercase;
+  margin-top: 10px;
 }
 .theme-dark .Blessings-Option-Button,
 .theme-dark .Decrees-Option-Button,
@@ -19528,6 +19583,611 @@ button:focus-visible {
   }
   .Auth-SignupWrapper {
     flex-direction: column;
+  }
+}
+#root .DepthChart {
+  font-family: "Lora", "Courier New", monospace, serif;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+#root .DepthChart-Body {
+  display: grid;
+  position: relative;
+  justify-items: center;
+  align-items: center;
+  overflow: hidden;
+  grid-template-columns: repeat(25, 20px);
+  grid-template-rows: repeat(38, 20px);
+  border: 10px solid;
+  grid-gap: 1px;
+  gap: 1px;
+}
+.theme-dark #root .DepthChart-Body {
+  border-color: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light #root .DepthChart-Body {
+  border-color: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.theme-dark #root .DepthChart-Body {
+  background: #000;
+}
+.theme-light #root .DepthChart-Body {
+  background: #fff;
+}
+#root .DepthChart-Body .MVPLine {
+  height: auto;
+}
+#root .DepthChart-Body-Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+#root .DepthChart-Body-Wrapper-Inner {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 5px;
+  gap: 5px;
+}
+#root .DepthChart-Body .League-Supernova-Eclipse {
+  center: 0;
+  position: absolute;
+  width: 15%;
+  z-index: 5;
+}
+#root .DepthChart-Body .BigDeal-Body {
+  left: 0;
+  right: 0;
+  bottom: 40%;
+  position: absolute;
+}
+#root .DepthChart-List {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#root .DepthChart-List:not(:first-child) {
+  margin-top: 25px;
+}
+#root .DepthChart-Lists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#root .DepthChart-Lists-Header {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+#root .DepthChart-Lists-Container {
+  display: flex;
+  max-width: 550px;
+  flex-direction: column;
+  margin: 0 5px;
+  width: 100%;
+}
+#root .DepthChart-Lists-Item {
+  font-size: 20px;
+  padding: 5px;
+  margin: 0 6px;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.theme-dark #root .DepthChart-Lists-Item:nth-child(odd) {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light #root .DepthChart-Lists-Item:nth-child(odd) {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.theme-dark #root .DepthChart-Lists-Item:hover {
+  background: hsla(0, 0%, 39.6%, 0.6509803921568628);
+}
+.theme-light #root .DepthChart-Lists-Item:hover {
+  background: hsla(0, 0%, 72.5%, 0.6509803921568628);
+}
+#root .DepthChart-Lists-Name {
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+}
+#root .DepthChart-Lists-Color {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  margin: 3px 10px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+#root .DepthChart-Lists-Number {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+#root .DepthChart-Settings {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.theme-dark #root .DepthChart-Settings {
+  color: #c4c4c4;
+}
+.theme-light #root .DepthChart-Settings {
+  color: #272727;
+}
+#root .DepthChart-Line {
+  position: absolute;
+  -webkit-animation: waves 6s ease-in-out infinite alternate;
+  animation: waves 6s ease-in-out infinite alternate;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+.theme-dark #root .DepthChart-Line {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light #root .DepthChart-Line {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+#root .DepthChart-Line-Vertical {
+  width: 1px;
+  height: 100%;
+}
+#root .DepthChart-Line-Horizontal {
+  width: 100%;
+  height: 1px;
+}
+#root .DepthChart-Line-Horizontal-Thick {
+  height: 3px;
+}
+#root .DepthChart-DepthMarker {
+  font-weight: 700;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  font-style: italic;
+  z-index: 3;
+  font-size: 20px;
+}
+.theme-dark #root .DepthChart-DepthMarker {
+  color: #c4c4c4;
+}
+.theme-light #root .DepthChart-DepthMarker {
+  color: #272727;
+}
+#root .DepthChart-Labels {
+  display: grid;
+  grid-template-rows: repeat(38, 20px);
+  margin-top: 10px;
+  align-items: center;
+  grid-gap: 1px;
+  gap: 1px;
+  justify-items: right;
+  margin-right: 10px;
+}
+#root .DepthChart-Team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  font-size: 20px;
+}
+.theme-dark #root .DepthChart-Team {
+  color: #fff;
+}
+.theme-light #root .DepthChart-Team {
+  color: #000;
+}
+#root .DepthChart-Team-Wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .DepthChart-Team-Boat {
+  -webkit-animation: dale 6s ease-in-out infinite alternate;
+  animation: dale 6s ease-in-out infinite alternate;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  z-index: 3;
+}
+#root .DepthChart-Team-2 {
+  border-radius: 50%;
+  height: 20px;
+}
+.theme-dark #root .DepthChart-Team-2 {
+  box-shadow: 0 0 2px 2px #b3b3b3;
+}
+.theme-light #root .DepthChart-Team-2 {
+  box-shadow: 0 0 2px 2px #626262;
+}
+#root .DepthChart-Team-0 {
+  border-radius: 50%;
+  height: 20px;
+  box-shadow: 0 0 2px 2px #a16dc3;
+}
+#root .DepthChart-EndZone-Bottom,
+#root .DepthChart-EndZone-Top {
+  width: 100%;
+  z-index: 2;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: 1rem;
+  font-weight: 700;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  font-style: italic;
+  grid-column: 1/26;
+  height: 100%;
+}
+.theme-dark #root .DepthChart-EndZone-Bottom,
+.theme-dark #root .DepthChart-EndZone-Top {
+  color: #000;
+}
+.theme-light #root .DepthChart-EndZone-Bottom,
+.theme-light #root .DepthChart-EndZone-Top {
+  color: #fff;
+}
+.theme-dark #root .DepthChart-EndZone-Bottom,
+.theme-dark #root .DepthChart-EndZone-Top {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light #root .DepthChart-EndZone-Bottom,
+.theme-light #root .DepthChart-EndZone-Top {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+#root .DepthChart-EndZone-Top {
+  grid-row: 1/5;
+}
+#root .DepthChart-EndZone-Bottom {
+  grid-row: 35/39;
+}
+#root .DepthChart-BottomFeeders {
+  height: 400px;
+  width: 100%;
+}
+.theme-dark #root .DepthChart-BottomFeeders-Image {
+  fill: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light #root .DepthChart-BottomFeeders-Image {
+  fill: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+#root .DepthChart-BottomFeeders-Wrapper {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  bottom: 84px;
+}
+#root .DepthChart-BottomFeeders-Wrapper-Flipped {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  top: 84px;
+  bottom: auto;
+}
+#root .DepthChart-Header {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+#root .DepthChart-Header-Cactus {
+  max-width: 40px;
+}
+.theme-dark #root .DepthChart-Header-Cactus path {
+  fill: #000;
+}
+.theme-light #root .DepthChart-Header-Cactus path {
+  fill: #fff;
+}
+#root .DepthChart-Header-Cactus:not(:last-child) {
+  margin-right: 30px;
+}
+#root .DepthChart-Footer {
+  max-width: 60px;
+  margin-right: 30px;
+}
+#root .DepthChart-Footer-Cloud {
+  max-width: 40px;
+}
+.theme-dark #root .DepthChart-Footer-Cloud path {
+  fill: #000;
+}
+.theme-light #root .DepthChart-Footer-Cloud path {
+  fill: #fff;
+}
+#root .DepthChart-Footer-Cloud:not(:last-child) {
+  margin-right: 30px;
+}
+.theme-dark #root .DepthChart-Footer path {
+  fill: #000;
+}
+.theme-light #root .DepthChart-Footer path {
+  fill: #fff;
+}
+#root .QuadrantChart {
+  display: flex;
+  justify-content: center;
+}
+#root .QuadrantChart-Chart {
+  display: grid;
+  grid-template-columns: 40px 280px 280px 40px;
+  grid-template-rows: 40px 280px 280px 40px;
+  grid-gap: 10px;
+  gap: 10px;
+  position: relative;
+  padding: 100px 0;
+}
+#root .QuadrantChart-Quadrant {
+  width: 280px;
+  height: 280px;
+  border: 5px solid;
+  display: grid;
+  grid-template-rows: repeat(14, 19.25px);
+  grid-template-columns: repeat(14, 19.25px);
+  position: relative;
+}
+.theme-dark #root .QuadrantChart-Quadrant {
+  border-color: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light #root .QuadrantChart-Quadrant {
+  border-color: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+#root .QuadrantChart-Quadrant-Icon {
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  z-index: 3;
+}
+#root .QuadrantChart-Quadrant-Icon-Small {
+  width: 75px;
+  height: 75px;
+}
+#root .QuadrantChart-Quadrant-Icon-Tiny {
+  width: 50px;
+  height: 50px;
+}
+#root .QuadrantChart-Quadrant-Icon-Center {
+  top: calc(50% - 60px);
+  left: calc(50% - 60px);
+}
+#root .QuadrantChart-Quadrant-Icon-Right {
+  left: -60px;
+  top: -25px;
+}
+#root .QuadrantChart-Quadrant-Icon-Left {
+  left: -30px;
+  top: -55px;
+}
+#root .QuadrantChart-Quadrant-Icon-TopLeft {
+  top: 5px;
+  left: 5px;
+}
+#root .QuadrantChart-Quadrant-Icon-BottomRight {
+  top: -35px;
+  left: -35px;
+}
+#root .QuadrantChart-Quadrant-Locales-Small {
+  width: 50px;
+  height: 50px;
+}
+.theme-dark #root .QuadrantChart-Quadrant-Locales-Small path {
+  fill: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light #root .QuadrantChart-Quadrant-Locales-Small path {
+  fill: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+#root .QuadrantChart-Quadrant-Locales-Smaller {
+  width: 30px;
+  height: 30px;
+}
+.theme-dark #root .QuadrantChart-Quadrant-Locales-Smaller path {
+  fill: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light #root .QuadrantChart-Quadrant-Locales-Smaller path {
+  fill: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+#root .QuadrantChart-Line {
+  position: absolute;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+.theme-dark #root .QuadrantChart-Line {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light #root .QuadrantChart-Line {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+#root .QuadrantChart-Line-Vertical {
+  width: 1px;
+  height: 100%;
+}
+#root .QuadrantChart-Line-Horizontal {
+  width: 100%;
+  height: 1px;
+}
+#root .QuadrantChart-Line-Horizontal-Thick {
+  height: 3px;
+}
+#root .QuadrantChart-Team {
+  font-size: 19.25px;
+}
+#root .QuadrantChart-2 {
+  background: url(https://d35iw2jmbg6ut8.cloudfront.net/static/media/crategate.79560264.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+}
+@-webkit-keyframes waves {
+  0%,
+  to {
+    -webkit-transform: skew(0deg, 0deg) scale(1.35);
+    transform: skew(0deg, 0deg) scale(1.35);
+    -webkit-filter: saturate(100%) invert(0);
+    filter: saturate(100%) invert(0);
+  }
+  25% {
+    -webkit-filter: saturate(180%) invert(5%);
+    filter: saturate(180%) invert(5%);
+  }
+  50% {
+    -webkit-transform: skew(2deg, 2deg) scale(1.35);
+    transform: skew(2deg, 2deg) scale(1.35);
+    -webkit-filter: saturate(100%) invert(0);
+    filter: saturate(100%) invert(0);
+  }
+  75% {
+    -webkit-filter: saturate(150%) invert(10%);
+    filter: saturate(150%) invert(10%);
+  }
+}
+@keyframes waves {
+  0%,
+  to {
+    -webkit-transform: skew(0deg, 0deg) scale(1.35);
+    transform: skew(0deg, 0deg) scale(1.35);
+    -webkit-filter: saturate(100%) invert(0);
+    filter: saturate(100%) invert(0);
+  }
+  25% {
+    -webkit-filter: saturate(180%) invert(5%);
+    filter: saturate(180%) invert(5%);
+  }
+  50% {
+    -webkit-transform: skew(2deg, 2deg) scale(1.35);
+    transform: skew(2deg, 2deg) scale(1.35);
+    -webkit-filter: saturate(100%) invert(0);
+    filter: saturate(100%) invert(0);
+  }
+  75% {
+    -webkit-filter: saturate(150%) invert(10%);
+    filter: saturate(150%) invert(10%);
+  }
+}
+@-webkit-keyframes dale {
+  0%,
+  to {
+    -webkit-transform: skew(0deg, 0deg) scale(1.35);
+    transform: skew(0deg, 0deg) scale(1.35);
+  }
+  50% {
+    -webkit-transform: skew(10deg, 10deg) scale(1.35);
+    transform: skew(10deg, 10deg) scale(1.35);
+  }
+}
+@keyframes dale {
+  0%,
+  to {
+    -webkit-transform: skew(0deg, 0deg) scale(1.35);
+    transform: skew(0deg, 0deg) scale(1.35);
+  }
+  50% {
+    -webkit-transform: skew(10deg, 10deg) scale(1.35);
+    transform: skew(10deg, 10deg) scale(1.35);
+  }
+}
+@media (max-width: 1080px) {
+  #root .DepthChart {
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: column;
+  }
+  #root .DepthChart-Team {
+    font-size: 10px;
+  }
+  #root .DepthChart-Labels {
+    grid-template-rows: repeat(38, 10px);
+  }
+  #root .DepthChart-EndZone-Bottom,
+  #root .DepthChart-EndZone-Top {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.6rem;
+  }
+  #root .DepthChart-EndZone-Bottom {
+    grid-row: 35/39;
+  }
+  #root .DepthChart-BottomFeeders {
+    height: 200px;
+  }
+  #root .DepthChart-BottomFeeders-Wrapper {
+    bottom: 38px;
+  }
+  #root .DepthChart-BottomFeeders-Wrapper-Flipped {
+    top: 43px;
+    margin: 0;
+  }
+  #root .DepthChart-DepthMarker {
+    font-size: 10px;
+  }
+  #root .DepthChart-Body {
+    grid-template-columns: repeat(25, 10px);
+    grid-template-rows: repeat(38, 10px);
+    border: 10px solid;
+    grid-gap: 1px;
+    gap: 1px;
+  }
+  #root .DepthChart-Body-Wrapper {
+    margin-bottom: 30px;
+  }
+  #root .DepthChart-Header-Cactus {
+    max-width: 20px;
+  }
+  #root .DepthChart-Header-Cactus:not(:last-child) {
+    margin-right: 20px;
+  }
+  #root .DepthChart-Footer {
+    max-width: 30px;
+    margin-right: 20px;
+  }
+  #root .DepthChart-Footer-Cloud {
+    max-width: 20px;
+  }
+  #root .DepthChart-Footer-Cloud:not(:last-child) {
+    margin-right: 20px;
+  }
+  #root .QuadrantChart-Chart {
+    grid-template-columns: 20px 120px 120px 20px;
+    grid-template-rows: 20px 120px 120px 20px;
+    grid-gap: 10px;
+    grid-gap: 5px;
+    gap: 5px;
+    padding: 20px 0;
+  }
+  #root .QuadrantChart-Quadrant {
+    width: 120px;
+    height: 120px;
+    border-width: 3px;
+    grid-template-rows: repeat(7, 15.5px);
+    grid-template-columns: repeat(7, 15.5px);
+  }
+  #root .QuadrantChart-Quadrant-Icon {
+    width: 75px;
+    height: 75px;
+  }
+  #root .QuadrantChart-Quadrant-Icon-Center {
+    top: calc(50% - 38px);
+    left: calc(50% - 38px);
+  }
+  #root .QuadrantChart-Quadrant-Icon-Right {
+    left: -34px;
+    top: -20px;
+  }
+  #root .QuadrantChart-Quadrant-Icon-Left {
+    left: -22px;
+    top: -30px;
+  }
+  #root {
+    overflow-x: hidden;
   }
 }
 .Recap {
@@ -22340,60 +23000,58 @@ button:focus-visible {
 }
 @-webkit-keyframes bang {
   to {
-    box-shadow: 190px -65.66667px #5100ff, 40px -172.66667px #00fffb,
-      229px -359.66667px #00ff6a, 106px -169.66667px #48ff00,
-      238px -89.66667px #2f00ff, 111px -300.66667px #91ff00,
-      -165px -114.66667px #5eff00, -166px -277.66667px #90f,
-      192px -224.66667px #ff009d, -193px -82.66667px #f30,
-      60px -102.66667px #40f, -6px -27.66667px #3c00ff, 142px 21.33333px red,
-      33px -180.66667px #00ffbf, -37px -110.66667px #008cff,
-      -11px -412.66667px #0040ff, -232px -55.66667px #b3ff00,
-      -196px -287.66667px #ff000d, 69px -307.66667px #00ff6a,
-      117px -253.66667px #ffe100, -163px -143.66667px #7bff00,
-      -178px -37.66667px #ffd500, 71px -81.66667px #ffd000,
-      -52px 5.33333px #ff00d9, -235px -360.66667px #ff005e,
-      218px -29.66667px #00ffa6, -168px -100.66667px #00eaff,
-      3px -324.66667px #ff0095, -217px 53.33333px #00ff1a,
-      33px -156.66667px #d900ff, -67px -62.66667px #ff0009,
-      -116px 57.33333px #f0b, -110px -402.66667px #73ff00,
-      21px -326.66667px #f06, -230px 68.33333px #f40, 90px -189.66667px #00ffae,
-      205px -280.66667px #00ff26, -148px -374.66667px #00d5ff,
-      174px 16.33333px #ff8000, 62px -55.66667px #0059ff,
-      -159px -325.66667px #ff006a, -60px -361.66667px #00e1ff,
-      -143px 44.33333px #0fd, -12px -275.66667px #00a2ff,
-      -160px -411.66667px #0df, -187px -245.66667px #0009ff,
-      -162px -277.66667px #6aff00, -105px -50.66667px #fff200,
-      -37px -20.66667px #007bff, 165px -352.66667px #00ff4d,
-      179px -289.66667px #00ff48;
+    box-shadow: 106px -139.66667px #00ffd5, 236px -342.66667px #3cff00,
+      -202px -195.66667px #0fd, -200px -90.66667px #ff006a,
+      -229px -253.66667px #4dff00, 115px -348.66667px #af0,
+      -24px 34.33333px #ff0095, 219px -256.66667px #0fc,
+      -130px -192.66667px #ff9500, -191px -78.66667px #006aff,
+      -102px -224.66667px #ff005e, 9px -319.66667px #ff4800,
+      206px -95.66667px #ff0015, -29px 63.33333px #00fff2,
+      -247px -121.66667px #7f0, -52px -11.66667px #ff00d9,
+      -45px -188.66667px #30f, -26px -29.66667px #ff2b00,
+      -167px -16.66667px #f10, -135px -315.66667px #0095ff,
+      -27px -354.66667px #ffb700, 236px -207.66667px #0051ff,
+      57px -16.66667px #00ff51, 149px 42.33333px #f05, 168px 14.33333px #ff7300,
+      95px -11.66667px #0400ff, -107px -89.66667px #20f, -134px 77.33333px #b0f,
+      -145px -180.66667px #0fe, 27px -262.66667px #0f2, 0 -151.66667px #ff0084,
+      -65px -201.66667px #60f, 129px -315.66667px #ff001a,
+      -84px -3.66667px #ff009d, -167px -225.66667px #00ffb7,
+      -195px -236.66667px #00ff6a, -189px -243.66667px #00ffc8,
+      201px -62.66667px #0009ff, -246px -371.66667px #0400ff,
+      168px -185.66667px #fb00ff, 229px -84.66667px #a6ff00,
+      -222px -396.66667px #ff0009, 40px -318.66667px #e0f,
+      247px -85.66667px #0048ff, -49px 0.33333px #0f9, 241px -80.66667px #59ff00,
+      -97px -30.66667px #04ff00, 200px -347.66667px #73ff00,
+      -242px -59.66667px #48ff00, 192px 38.33333px #ff7b00,
+      39px 15.33333px #002bff;
   }
 }
 @keyframes bang {
   to {
-    box-shadow: 190px -65.66667px #5100ff, 40px -172.66667px #00fffb,
-      229px -359.66667px #00ff6a, 106px -169.66667px #48ff00,
-      238px -89.66667px #2f00ff, 111px -300.66667px #91ff00,
-      -165px -114.66667px #5eff00, -166px -277.66667px #90f,
-      192px -224.66667px #ff009d, -193px -82.66667px #f30,
-      60px -102.66667px #40f, -6px -27.66667px #3c00ff, 142px 21.33333px red,
-      33px -180.66667px #00ffbf, -37px -110.66667px #008cff,
-      -11px -412.66667px #0040ff, -232px -55.66667px #b3ff00,
-      -196px -287.66667px #ff000d, 69px -307.66667px #00ff6a,
-      117px -253.66667px #ffe100, -163px -143.66667px #7bff00,
-      -178px -37.66667px #ffd500, 71px -81.66667px #ffd000,
-      -52px 5.33333px #ff00d9, -235px -360.66667px #ff005e,
-      218px -29.66667px #00ffa6, -168px -100.66667px #00eaff,
-      3px -324.66667px #ff0095, -217px 53.33333px #00ff1a,
-      33px -156.66667px #d900ff, -67px -62.66667px #ff0009,
-      -116px 57.33333px #f0b, -110px -402.66667px #73ff00,
-      21px -326.66667px #f06, -230px 68.33333px #f40, 90px -189.66667px #00ffae,
-      205px -280.66667px #00ff26, -148px -374.66667px #00d5ff,
-      174px 16.33333px #ff8000, 62px -55.66667px #0059ff,
-      -159px -325.66667px #ff006a, -60px -361.66667px #00e1ff,
-      -143px 44.33333px #0fd, -12px -275.66667px #00a2ff,
-      -160px -411.66667px #0df, -187px -245.66667px #0009ff,
-      -162px -277.66667px #6aff00, -105px -50.66667px #fff200,
-      -37px -20.66667px #007bff, 165px -352.66667px #00ff4d,
-      179px -289.66667px #00ff48;
+    box-shadow: 106px -139.66667px #00ffd5, 236px -342.66667px #3cff00,
+      -202px -195.66667px #0fd, -200px -90.66667px #ff006a,
+      -229px -253.66667px #4dff00, 115px -348.66667px #af0,
+      -24px 34.33333px #ff0095, 219px -256.66667px #0fc,
+      -130px -192.66667px #ff9500, -191px -78.66667px #006aff,
+      -102px -224.66667px #ff005e, 9px -319.66667px #ff4800,
+      206px -95.66667px #ff0015, -29px 63.33333px #00fff2,
+      -247px -121.66667px #7f0, -52px -11.66667px #ff00d9,
+      -45px -188.66667px #30f, -26px -29.66667px #ff2b00,
+      -167px -16.66667px #f10, -135px -315.66667px #0095ff,
+      -27px -354.66667px #ffb700, 236px -207.66667px #0051ff,
+      57px -16.66667px #00ff51, 149px 42.33333px #f05, 168px 14.33333px #ff7300,
+      95px -11.66667px #0400ff, -107px -89.66667px #20f, -134px 77.33333px #b0f,
+      -145px -180.66667px #0fe, 27px -262.66667px #0f2, 0 -151.66667px #ff0084,
+      -65px -201.66667px #60f, 129px -315.66667px #ff001a,
+      -84px -3.66667px #ff009d, -167px -225.66667px #00ffb7,
+      -195px -236.66667px #00ff6a, -189px -243.66667px #00ffc8,
+      201px -62.66667px #0009ff, -246px -371.66667px #0400ff,
+      168px -185.66667px #fb00ff, 229px -84.66667px #a6ff00,
+      -222px -396.66667px #ff0009, 40px -318.66667px #e0f,
+      247px -85.66667px #0048ff, -49px 0.33333px #0f9, 241px -80.66667px #59ff00,
+      -97px -30.66667px #04ff00, 200px -347.66667px #73ff00,
+      -242px -59.66667px #48ff00, 192px 38.33333px #ff7b00,
+      39px 15.33333px #002bff;
   }
 }
 @-webkit-keyframes gravity {
@@ -22699,486 +23357,27 @@ button:focus-visible {
   }
 }
 .Tournament-List {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 20px 0;
   max-width: 600px;
   margin: auto;
 }
-#root .DepthChart {
-  font-family: "Lora", "Courier New", monospace, serif;
-  display: grid;
-  grid-template-columns: auto auto;
-}
-#root .DepthChart-Body {
-  display: grid;
-  position: relative;
-  justify-items: center;
-  align-items: center;
-  overflow: hidden;
-  grid-template-columns: repeat(25, 20px);
-  grid-template-rows: repeat(38, 20px);
-  border: 10px solid;
-  grid-gap: 1px;
-  gap: 1px;
-}
-.theme-dark #root .DepthChart-Body {
-  border-color: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light #root .DepthChart-Body {
-  border-color: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.theme-dark #root .DepthChart-Body {
-  background: #000;
-}
-.theme-light #root .DepthChart-Body {
-  background: #fff;
-}
-#root .DepthChart-Body .MVPLine {
-  height: auto;
-}
-#root .DepthChart-Body-Wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-#root .DepthChart-Body-Wrapper-Inner {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 5px;
-  gap: 5px;
-}
-#root .DepthChart-Body .League-Supernova-Eclipse {
-  center: 0;
-  position: absolute;
-  width: 15%;
-  z-index: 5;
-}
-#root .DepthChart-Body .BigDeal-Body {
-  left: 0;
-  right: 0;
-  bottom: 40%;
-  position: absolute;
-}
-#root .DepthChart-List {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-#root .DepthChart-List:not(:first-child) {
-  margin-top: 25px;
-}
-#root .DepthChart-Lists {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#root .DepthChart-Lists-Header {
-  font-weight: 700;
-  margin-bottom: 10px;
-  font-size: 26px;
-}
-#root .DepthChart-Lists-Container {
-  display: flex;
-  max-width: 550px;
-  flex-direction: column;
-  margin: 0 5px;
-  width: 100%;
-}
-#root .DepthChart-Lists-Item {
-  font-size: 20px;
-  padding: 5px;
-  margin: 0 6px;
-  border-radius: 5px;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.theme-dark #root .DepthChart-Lists-Item:nth-child(odd) {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light #root .DepthChart-Lists-Item:nth-child(odd) {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.theme-dark #root .DepthChart-Lists-Item:hover {
-  background: hsla(0, 0%, 39.6%, 0.6509803921568628);
-}
-.theme-light #root .DepthChart-Lists-Item:hover {
-  background: hsla(0, 0%, 72.5%, 0.6509803921568628);
-}
-#root .DepthChart-Lists-Name {
-  align-items: center;
-  display: flex;
-  font-size: 18px;
-}
-#root .DepthChart-Lists-Color {
-  display: flex;
-  width: 30px;
-  height: 30px;
-  margin: 3px 10px;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-}
-#root .DepthChart-Lists-Number {
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  margin-right: 10px;
-}
-#root .DepthChart-Settings {
-  width: 100%;
+.TeamLogo,
+.Tournament-List {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
-  font-style: italic;
-}
-.theme-dark #root .DepthChart-Settings {
-  color: #c4c4c4;
-}
-.theme-light #root .DepthChart-Settings {
-  color: #272727;
-}
-#root .DepthChart-Line {
-  position: absolute;
-  -webkit-animation: waves 6s ease-in-out infinite alternate;
-  animation: waves 6s ease-in-out infinite alternate;
-  -webkit-transform-origin: center center;
-  transform-origin: center center;
-}
-.theme-dark #root .DepthChart-Line {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light #root .DepthChart-Line {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-#root .DepthChart-Line-Vertical {
-  width: 1px;
-  height: 100%;
-}
-#root .DepthChart-Line-Horizontal {
-  width: 100%;
-  height: 1px;
-}
-#root .DepthChart-Line-Horizontal-Thick {
-  height: 3px;
-}
-#root .DepthChart-DepthMarker {
-  font-weight: 700;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  text-align: center;
-  font-style: italic;
-  z-index: 3;
-  font-size: 20px;
-}
-.theme-dark #root .DepthChart-DepthMarker {
-  color: #c4c4c4;
-}
-.theme-light #root .DepthChart-DepthMarker {
-  color: #272727;
-}
-#root .DepthChart-Labels {
-  display: grid;
-  grid-template-rows: repeat(38, 20px);
-  margin-top: 10px;
-  align-items: center;
-  grid-gap: 1px;
-  gap: 1px;
-  justify-items: right;
-  margin-right: 10px;
-}
-#root .DepthChart-Team {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 4;
-  font-size: 20px;
-}
-.theme-dark #root .DepthChart-Team {
-  color: #fff;
-}
-.theme-light #root .DepthChart-Team {
-  color: #000;
-}
-#root .DepthChart-Team-Wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#root .DepthChart-Team-Boat {
-  -webkit-animation: dale 6s ease-in-out infinite alternate;
-  animation: dale 6s ease-in-out infinite alternate;
-  -webkit-transform-origin: center center;
-  transform-origin: center center;
-  z-index: 3;
-}
-#root .DepthChart-Team-2 {
-  border-radius: 50%;
-  height: 20px;
-}
-.theme-dark #root .DepthChart-Team-2 {
-  box-shadow: 0 0 2px 2px #b3b3b3;
-}
-.theme-light #root .DepthChart-Team-2 {
-  box-shadow: 0 0 2px 2px #626262;
-}
-#root .DepthChart-Team-0 {
-  border-radius: 50%;
-  height: 20px;
-  box-shadow: 0 0 2px 2px #a16dc3;
-}
-#root .DepthChart-EndZone-Bottom,
-#root .DepthChart-EndZone-Top {
-  width: 100%;
-  z-index: 2;
-  font-size: 60px;
-  line-height: 60px;
-  letter-spacing: 1rem;
-  font-weight: 700;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  text-align: center;
-  font-style: italic;
-  grid-column: 1/26;
-  height: 100%;
-}
-.theme-dark #root .DepthChart-EndZone-Bottom,
-.theme-dark #root .DepthChart-EndZone-Top {
-  color: #000;
-}
-.theme-light #root .DepthChart-EndZone-Bottom,
-.theme-light #root .DepthChart-EndZone-Top {
-  color: #fff;
-}
-.theme-dark #root .DepthChart-EndZone-Bottom,
-.theme-dark #root .DepthChart-EndZone-Top {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light #root .DepthChart-EndZone-Bottom,
-.theme-light #root .DepthChart-EndZone-Top {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-#root .DepthChart-EndZone-Top {
-  grid-row: 1/5;
-}
-#root .DepthChart-EndZone-Bottom {
-  grid-row: 35/39;
-}
-#root .DepthChart-BottomFeeders {
-  height: 400px;
-  width: 100%;
-}
-.theme-dark #root .DepthChart-BottomFeeders-Image {
-  fill: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light #root .DepthChart-BottomFeeders-Image {
-  fill: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-#root .DepthChart-BottomFeeders-Wrapper {
-  position: absolute;
-  margin: auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  bottom: 84px;
-}
-#root .DepthChart-BottomFeeders-Wrapper-Flipped {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  top: 84px;
-  bottom: auto;
-}
-#root .DepthChart-Header {
-  margin: 20px 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-#root .DepthChart-Header-Cactus {
-  max-width: 40px;
-}
-.theme-dark #root .DepthChart-Header-Cactus path {
-  fill: #000;
-}
-.theme-light #root .DepthChart-Header-Cactus path {
-  fill: #fff;
-}
-#root .DepthChart-Header-Cactus:not(:last-child) {
-  margin-right: 30px;
-}
-#root .DepthChart-Footer {
-  max-width: 60px;
-  margin-right: 30px;
-}
-#root .DepthChart-Footer-Cloud {
-  max-width: 40px;
-}
-.theme-dark #root .DepthChart-Footer-Cloud path {
-  fill: #000;
-}
-.theme-light #root .DepthChart-Footer-Cloud path {
-  fill: #fff;
-}
-#root .DepthChart-Footer-Cloud:not(:last-child) {
-  margin-right: 30px;
-}
-.theme-dark #root .DepthChart-Footer path {
-  fill: #000;
-}
-.theme-light #root .DepthChart-Footer path {
-  fill: #fff;
-}
-@-webkit-keyframes waves {
-  0%,
-  to {
-    -webkit-transform: skew(0deg, 0deg) scale(1.35);
-    transform: skew(0deg, 0deg) scale(1.35);
-    -webkit-filter: saturate(100%) invert(0);
-    filter: saturate(100%) invert(0);
-  }
-  25% {
-    -webkit-filter: saturate(180%) invert(5%);
-    filter: saturate(180%) invert(5%);
-  }
-  50% {
-    -webkit-transform: skew(2deg, 2deg) scale(1.35);
-    transform: skew(2deg, 2deg) scale(1.35);
-    -webkit-filter: saturate(100%) invert(0);
-    filter: saturate(100%) invert(0);
-  }
-  75% {
-    -webkit-filter: saturate(150%) invert(10%);
-    filter: saturate(150%) invert(10%);
-  }
-}
-@keyframes waves {
-  0%,
-  to {
-    -webkit-transform: skew(0deg, 0deg) scale(1.35);
-    transform: skew(0deg, 0deg) scale(1.35);
-    -webkit-filter: saturate(100%) invert(0);
-    filter: saturate(100%) invert(0);
-  }
-  25% {
-    -webkit-filter: saturate(180%) invert(5%);
-    filter: saturate(180%) invert(5%);
-  }
-  50% {
-    -webkit-transform: skew(2deg, 2deg) scale(1.35);
-    transform: skew(2deg, 2deg) scale(1.35);
-    -webkit-filter: saturate(100%) invert(0);
-    filter: saturate(100%) invert(0);
-  }
-  75% {
-    -webkit-filter: saturate(150%) invert(10%);
-    filter: saturate(150%) invert(10%);
-  }
-}
-@-webkit-keyframes dale {
-  0%,
-  to {
-    -webkit-transform: skew(0deg, 0deg) scale(1.35);
-    transform: skew(0deg, 0deg) scale(1.35);
-  }
-  50% {
-    -webkit-transform: skew(10deg, 10deg) scale(1.35);
-    transform: skew(10deg, 10deg) scale(1.35);
-  }
-}
-@keyframes dale {
-  0%,
-  to {
-    -webkit-transform: skew(0deg, 0deg) scale(1.35);
-    transform: skew(0deg, 0deg) scale(1.35);
-  }
-  50% {
-    -webkit-transform: skew(10deg, 10deg) scale(1.35);
-    transform: skew(10deg, 10deg) scale(1.35);
-  }
-}
-@media (max-width: 1080px) {
-  #root .DepthChart {
-    overflow-x: scroll;
-    display: flex;
-    flex-direction: column;
-  }
-  #root .DepthChart-Team {
-    font-size: 10px;
-  }
-  #root .DepthChart-Labels {
-    grid-template-rows: repeat(38, 10px);
-  }
-  #root .DepthChart-EndZone-Bottom,
-  #root .DepthChart-EndZone-Top {
-    font-size: 20px;
-    line-height: 20px;
-    letter-spacing: 0.6rem;
-  }
-  #root .DepthChart-EndZone-Bottom {
-    grid-row: 35/39;
-  }
-  #root .DepthChart-BottomFeeders {
-    height: 200px;
-  }
-  #root .DepthChart-BottomFeeders-Wrapper {
-    bottom: 38px;
-  }
-  #root .DepthChart-BottomFeeders-Wrapper-Flipped {
-    top: 43px;
-    margin: 0;
-  }
-  #root .DepthChart-DepthMarker {
-    font-size: 10px;
-  }
-  #root .DepthChart-Body {
-    grid-template-columns: repeat(25, 10px);
-    grid-template-rows: repeat(38, 10px);
-    border: 10px solid;
-    grid-gap: 1px;
-    gap: 1px;
-  }
-  #root .DepthChart-Body-Wrapper {
-    margin-bottom: 30px;
-  }
-  #root .DepthChart-Header-Cactus {
-    max-width: 20px;
-  }
-  #root .DepthChart-Header-Cactus:not(:last-child) {
-    margin-right: 20px;
-  }
-  #root .DepthChart-Footer {
-    max-width: 30px;
-    margin-right: 20px;
-  }
-  #root .DepthChart-Footer-Cloud {
-    max-width: 20px;
-  }
-  #root .DepthChart-Footer-Cloud:not(:last-child) {
-    margin-right: 20px;
-  }
 }
 .TeamLogo {
   border-radius: 50%;
   height: 44px;
   width: 44px;
   font-size: 26px;
-  justify-content: center;
-}
-#root .Vault,
-.TeamLogo {
-  display: flex;
-  align-items: center;
 }
 #root .Vault {
+  display: flex;
   flex-direction: column;
+  align-items: center;
   margin: auto;
   max-width: 100%;
   font-family: "Lora", "Courier New", monospace, serif;
