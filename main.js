@@ -970,8 +970,8 @@
         );
       };
       y.context = w;
-      var O = y,
-        C = l.a.createContext({
+      var C = y,
+        O = l.a.createContext({
           sim: void 0,
           standings: void 0,
           season: void 0,
@@ -1026,10 +1026,10 @@
                 }
               );
             }, []),
-            (<C.Provider value={i}>{t}</C.Provider>)
+            (<O.Provider value={i}>{t}</O.Provider>)
           );
         };
-      I.context = C;
+      I.context = O;
       var S = I,
         N = {
           id: "",
@@ -1757,9 +1757,9 @@
       }
       var Be,
         ye = r.forwardRef(we),
-        Oe = (a.p, ["title", "titleId"]);
-      function Ce() {
-        return (Ce =
+        Ce = (a.p, ["title", "titleId"]);
+      function Oe() {
+        return (Oe =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -1792,10 +1792,10 @@
       function Se(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Ie(e, Oe);
+          l = Ie(e, Ce);
         return (
           <svg
-            {...Ce(
+            {...Oe(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -2302,9 +2302,9 @@
       }
       var Bt,
         yt = r.forwardRef(wt),
-        Ot = (a.p, ["title", "titleId"]);
-      function Ct() {
-        return (Ct =
+        Ct = (a.p, ["title", "titleId"]);
+      function Ot() {
+        return (Ot =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -2337,10 +2337,10 @@
       function St(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = It(e, Ot);
+          l = It(e, Ct);
         return (
           <svg
-            {...Ct(
+            {...Ot(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -2824,9 +2824,9 @@
       }
       var Ba,
         ya = r.forwardRef(wa),
-        Oa = (a.p, ["title", "titleId"]);
-      function Ca() {
-        return (Ca =
+        Ca = (a.p, ["title", "titleId"]);
+      function Oa() {
+        return (Oa =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -2859,10 +2859,10 @@
       function Sa(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Ia(e, Oa);
+          l = Ia(e, Ca);
         return (
           <svg
-            {...Ca(
+            {...Oa(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -3984,9 +3984,9 @@
       }
       var Bn,
         yn = r.forwardRef(wn),
-        On = (a.p, ["title", "titleId"]);
-      function Cn() {
-        return (Cn =
+        Cn = (a.p, ["title", "titleId"]);
+      function On() {
+        return (On =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -4019,10 +4019,10 @@
       function Sn(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = In(e, On);
+          l = In(e, Cn);
         return (
           <svg
-            {...Cn(
+            {...On(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -4605,9 +4605,9 @@
       }
       var Br,
         yr = r.forwardRef(wr),
-        Or = (a.p, ["title", "titleId"]);
-      function Cr() {
-        return (Cr =
+        Cr = (a.p, ["title", "titleId"]);
+      function Or() {
+        return (Or =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -4640,10 +4640,10 @@
       function Sr(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Ir(e, Or);
+          l = Ir(e, Cr);
         return (
           <svg
-            {...Cr(
+            {...Or(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -5218,9 +5218,9 @@
       }
       var Bl,
         yl = r.forwardRef(wl),
-        Ol = (a.p, ["title", "titleId"]);
-      function Cl() {
-        return (Cl =
+        Cl = (a.p, ["title", "titleId"]);
+      function Ol() {
+        return (Ol =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -5253,10 +5253,10 @@
       function Sl(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Il(e, Ol);
+          l = Il(e, Cl);
         return (
           <svg
-            {...Cl(
+            {...Ol(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -5797,9 +5797,9 @@
       }
       var Bi,
         yi = r.forwardRef(wi),
-        Oi = (a.p, ["title", "titleId"]);
-      function Ci() {
-        return (Ci =
+        Ci = (a.p, ["title", "titleId"]);
+      function Oi() {
+        return (Oi =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -5832,10 +5832,10 @@
       function Si(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Ii(e, Oi);
+          l = Ii(e, Ci);
         return (
           <svg
-            {...Ci(
+            {...Oi(
               {
                 id: "Glove",
                 xmlns: "http://www.w3.org/2000/svg",
@@ -6325,8 +6325,8 @@
         );
       }
       var yo,
-        Oo = r.forwardRef(Bo),
-        Co = (a.p, ["title", "titleId"]);
+        Co = r.forwardRef(Bo),
+        Oo = (a.p, ["title", "titleId"]);
       function Io() {
         return (Io =
           Object.assign ||
@@ -6361,7 +6361,7 @@
       function No(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = So(e, Co);
+          l = So(e, Oo);
         return (
           <svg
             {...Io(
@@ -6847,8 +6847,8 @@
         );
       }
       var ys,
-        Os = r.forwardRef(Bs),
-        Cs = (a.p, ["title", "titleId"]);
+        Cs = r.forwardRef(Bs),
+        Os = (a.p, ["title", "titleId"]);
       function Is() {
         return (Is =
           Object.assign ||
@@ -6883,7 +6883,7 @@
       function Ns(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Ss(e, Cs);
+          l = Ss(e, Os);
         return (
           <svg
             {...Is(
@@ -7386,7 +7386,7 @@
           case "Board":
             return <po className="Item-Icon" />;
           case "Field":
-            return <Oo className="Item-Icon" />;
+            return <Co className="Item-Icon" />;
           case "Cannon":
             return <To className="Item-Icon" />;
           case "Broom":
@@ -7404,7 +7404,7 @@
           case "Quill":
             return <ps className="Item-Icon" />;
           case "Phone":
-            return <Os className="Item-Icon" />;
+            return <Cs className="Item-Icon" />;
           case "Egg":
             return <Ts className="Item-Icon" />;
           case "Chair":
@@ -8052,7 +8052,7 @@
           );
         };
       var yc,
-        Oc = function (e) {
+        Cc = function (e) {
           var t = e.event,
             a = e.entity,
             n = t.metadata;
@@ -8110,7 +8110,7 @@
             </l.a.Fragment>
           );
         },
-        Cc = function (e) {
+        Oc = function (e) {
           var t = e.event,
             a = e.entity,
             n = t.metadata;
@@ -8632,8 +8632,8 @@
             w = Object(r.useState)(!1),
             B = Object(s.a)(w, 2),
             y = B[0],
-            O = B[1],
-            C = Object(cA.useToasts)().addToast,
+            C = B[1],
+            O = Object(cA.useToasts)().addToast,
             I = Object(c.g)();
           Object(r.useEffect)(
             function () {
@@ -8651,7 +8651,7 @@
                   ? r
                   : 0
               ),
-                !0 === e.upnut && O(!1);
+                !0 === e.upnut && C(!1);
             },
             [e]
           );
@@ -8671,7 +8671,7 @@
                             t.next = 6;
                             break;
                           }
-                          return (t.next = 5), C("Insufficient ".concat(ne.GetName(l)), { appearance: "error" });
+                          return (t.next = 5), O("Insufficient ".concat(ne.GetName(l)), { appearance: "error" });
                         case 5:
                           return t.abrupt("return");
                         case 6:
@@ -8679,13 +8679,13 @@
                             t.next = 10;
                             break;
                           }
-                          return (t.next = 9), C("Invalid event", { appearance: "error" });
+                          return (t.next = 9), O("Invalid event", { appearance: "error" });
                         case 9:
                           return t.abrupt("return");
                         case 10:
                           return (
                             g(!0),
-                            O(!0),
+                            C(!0),
                             (t.next = 14),
                             Ld(r ? "/api/upScale" : "/api/upNut", JSON.stringify({ eventId: e.event.id }))
                               .then(
@@ -8725,7 +8725,7 @@
                                                 (n.snacks = r),
                                                 (n.snackOrder = o),
                                                 i(Object(A.a)({}, n)),
-                                                (t.t0 = C),
+                                                (t.t0 = O),
                                                 (t.next = 11),
                                                 a.json()
                                               );
@@ -8737,7 +8737,7 @@
                                               break;
                                             case 16:
                                               a.json().then(function (e) {
-                                                C(e.error || "Error", { appearance: "error" }), g(!1), O(!1);
+                                                O(e.error || "Error", { appearance: "error" }), g(!1), C(!1);
                                               });
                                             case 17:
                                             case "end":
@@ -8841,8 +8841,8 @@
                       .concat(k ? "Pickled Herring" : "Peanuts", ".")}
                     onClick={function () {
                       return k
-                        ? void C("You have no Pickled Herring.", { appearance: "error" })
-                        : void C("You have no Peanuts.", { appearance: "error" });
+                        ? void O("You have no Pickled Herring.", { appearance: "error" })
+                        : void O("You have no Peanuts.", { appearance: "error" });
                     }}
                   >
                     <div className="Events-Feed-Disabled-Line" />
@@ -8981,8 +8981,8 @@
         },
         BA = a(9),
         yA = a(154),
-        OA = a(265),
-        CA = a(264);
+        CA = a(265),
+        OA = a(264);
       function IA(e) {
         switch (e) {
           case vA.Black:
@@ -9355,8 +9355,8 @@
             w,
             B,
             y,
-            O,
             C,
+            O,
             I,
             N,
             k,
@@ -9402,10 +9402,10 @@
             we = Object(c.h)().id,
             Be = Object(r.useContext)(S.context),
             ye = Object(r.useContext)(oc.context),
-            Oe = Object(r.useState)(jA),
-            Ce = Object(s.a)(Oe, 2),
-            Ie = Ce[0],
-            Se = Ce[1],
+            Ce = Object(r.useState)(jA),
+            Oe = Object(s.a)(Ce, 2),
+            Ie = Oe[0],
+            Se = Oe[1],
             Ne = Object(cA.useToasts)().addToast,
             ke = Object(r.useContext)(x.context),
             Te = ke.user,
@@ -10007,26 +10007,26 @@
                     </div>
                   </div>
                   {He}
-                  <OA.a.Container id="ModalTabs-Container" defaultActiveKey="Interview">
-                    <CA.a variant="tabs" className={"ModalTabs" + (Te.lightMode ? " ModalTabs-LightMode" : "")}>
-                      <CA.a.Item>
-                        <CA.a.Link eventKey="Interview">Info</CA.a.Link>
-                      </CA.a.Item>
-                      <CA.a.Item>
+                  <CA.a.Container id="ModalTabs-Container" defaultActiveKey="Interview">
+                    <OA.a variant="tabs" className={"ModalTabs" + (Te.lightMode ? " ModalTabs-LightMode" : "")}>
+                      <OA.a.Item>
+                        <OA.a.Link eventKey="Interview">Info</OA.a.Link>
+                      </OA.a.Item>
+                      <OA.a.Item>
                         {Hg(Be.sim, "SIM_ITEM_SYSTEM") ? (
-                          <CA.a.Link eventKey="Items">Items</CA.a.Link>
+                          <OA.a.Link eventKey="Items">Items</OA.a.Link>
                         ) : (
-                          <CA.a.Link eventKey="Items">
+                          <OA.a.Link eventKey="Items">
                             Items <$.c />
-                          </CA.a.Link>
+                          </OA.a.Link>
                         )}
-                      </CA.a.Item>
-                      <CA.a.Item>
-                        <CA.a.Link eventKey="Events">Feed</CA.a.Link>
-                      </CA.a.Item>
-                    </CA.a>
-                    <OA.a.Content>
-                      <OA.a.Pane eventKey="Interview">
+                      </OA.a.Item>
+                      <OA.a.Item>
+                        <OA.a.Link eventKey="Events">Feed</OA.a.Link>
+                      </OA.a.Item>
+                    </OA.a>
+                    <CA.a.Content>
+                      <CA.a.Pane eventKey="Interview">
                         {Ve}
                         <div className={"ModalItem-Content" + (Ve ? " ModalItem-Content-WithAttributes" : "")}>
                           {Ze}
@@ -10071,8 +10071,8 @@
                                   <div className="Player-Info-Line-Header">Cinnamon</div>
                                   <VA
                                     value={Ie.player.cinnamon}
-                                    color={null === (O = Ie.team) || void 0 === O ? void 0 : O.mainColor}
-                                    secondColor={null === (C = Ie.team) || void 0 === C ? void 0 : C.secondaryColor}
+                                    color={null === (C = Ie.team) || void 0 === C ? void 0 : C.mainColor}
+                                    secondColor={null === (O = Ie.team) || void 0 === O ? void 0 : O.secondaryColor}
                                   />
                                 </li>
                                 <li className="Player-Info-Line Player-Info-Line-Advanced">
@@ -10251,11 +10251,11 @@
                             </l.a.Fragment>
                           ) : null}
                         </div>
-                      </OA.a.Pane>
-                      <OA.a.Pane eventKey="Items">
+                      </CA.a.Pane>
+                      <CA.a.Pane eventKey="Items">
                         <div className="ModalItem-Content">{Ke}</div>
-                      </OA.a.Pane>
-                      <OA.a.Pane eventKey="Events">
+                      </CA.a.Pane>
+                      <CA.a.Pane eventKey="Events">
                         <div className="ModalItem-Content">
                           <Bd
                             entity={Ie.player.id}
@@ -10265,9 +10265,9 @@
                             categoryOptions={[-1, M.Changes, M.Game, M.Abilities]}
                           />
                         </div>
-                      </OA.a.Pane>
-                    </OA.a.Content>
-                  </OA.a.Container>
+                      </CA.a.Pane>
+                    </CA.a.Content>
+                  </CA.a.Container>
                 </l.a.Fragment>
               );
           return <hA {...Object.assign({}, e, { className: "ModalItem" })}>{_e}</hA>;
@@ -10697,8 +10697,8 @@
       var wu,
         Bu = r.forwardRef(bu),
         yu = (a.p, ["title", "titleId"]);
-      function Ou() {
-        return (Ou =
+      function Cu() {
+        return (Cu =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -10708,7 +10708,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Cu(e, t) {
+      function Ou(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -10731,10 +10731,10 @@
       function Iu(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Cu(e, yu);
+          l = Ou(e, yu);
         return (
           <svg
-            {...Ou(
+            {...Cu(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -11320,8 +11320,8 @@
       var wm,
         Bm = r.forwardRef(bm),
         ym = (a.p, ["title", "titleId"]);
-      function Om() {
-        return (Om =
+      function Cm() {
+        return (Cm =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -11331,7 +11331,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Cm(e, t) {
+      function Om(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -11354,10 +11354,10 @@
       function Im(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Cm(e, ym);
+          l = Om(e, ym);
         return (
           <svg
-            {...Om(
+            {...Cm(
               {
                 id: "Polarity_2",
                 "data-name": "Polarity 2",
@@ -12453,7 +12453,7 @@
               s.push(<vc entity={n} event={a} source={i} />);
               break;
             case 116:
-              s.push(<Cc entity={n} event={a} source={i} />);
+              s.push(<Oc entity={n} event={a} source={i} />);
               break;
             case 117:
             case 118:
@@ -12466,7 +12466,7 @@
               s.push(<dA entity={n} event={a} source={i} />);
               break;
             case 133:
-              s.push(<Oc entity={n} event={a} source={i} />);
+              s.push(<Cc entity={n} event={a} source={i} />);
               break;
             case 139:
               s.push(<UA entity={n} event={a} source={i} />);
@@ -12640,9 +12640,9 @@
             w = b[0],
             B = b[1],
             y = Object(r.useState)(null !== g && void 0 !== g ? g : vd.NewestFirst),
-            O = Object(s.a)(y, 2),
-            C = O[0],
-            I = O[1],
+            C = Object(s.a)(y, 2),
+            O = C[0],
+            I = C[1],
             N = Object(r.useState)(bd),
             k = Object(s.a)(N, 2),
             T = k[0],
@@ -12661,7 +12661,7 @@
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        if (void 0 !== (t = p.current.Get(w, C))) {
+                        if (void 0 !== (t = p.current.Get(w, O))) {
                           e.next = 32;
                           break;
                         }
@@ -12683,23 +12683,23 @@
                               : 30);
                         break;
                       case 6:
-                        return (e.next = 8), cg(c, C, w);
+                        return (e.next = 8), cg(c, O, w);
                       case 8:
                         return (a = e.sent), e.abrupt("break", 30);
                       case 10:
-                        return (e.next = 12), ug(c, C, w);
+                        return (e.next = 12), ug(c, O, w);
                       case 12:
                         return (a = e.sent), e.abrupt("break", 30);
                       case 14:
-                        return (e.next = 16), dg(c, C, w);
+                        return (e.next = 16), dg(c, O, w);
                       case 16:
                         return (a = e.sent), e.abrupt("break", 30);
                       case 18:
-                        return (e.next = 20), ng(C, w);
+                        return (e.next = 20), ng(O, w);
                       case 20:
                         return (a = e.sent), e.abrupt("break", 30);
                       case 22:
-                        return (e.next = 24), ng(C, w);
+                        return (e.next = 24), ng(O, w);
                       case 24:
                         return (a = e.sent), e.abrupt("break", 30);
                       case 26:
@@ -12709,7 +12709,7 @@
                       case 30:
                         (t.loading = !1),
                           void 0 !== a &&
-                            ((t.noMoreToLoad = a.length < 50 || C === vd.Hot), (t.events = a), p.current.Set(w, C, t));
+                            ((t.noMoreToLoad = a.length < 50 || O === vd.Hot), (t.events = a), p.current.Set(w, O, t));
                       case 32:
                         P(t);
                       case 33:
@@ -12738,13 +12738,13 @@
                         }
                         return (
                           (n = Object(A.a)(Object(A.a)({}, T), {}, { noMoreToLoad: !0 })),
-                          p.current.Set(w, C, n),
+                          p.current.Set(w, O, n),
                           P(n),
                           e.abrupt("return")
                         );
                       case 7:
                         (r = Object(A.a)(Object(A.a)({}, T), {}, { loading: !0 })),
-                          p.current.Set(w, C, r),
+                          p.current.Set(w, O, r),
                           P(r),
                           (e.t0 = u),
                           (e.next =
@@ -12761,23 +12761,23 @@
                               : 33);
                         break;
                       case 13:
-                        return (e.next = 15), cg(c, C, w, C === vd.Top ? a : t.created);
+                        return (e.next = 15), cg(c, O, w, O === vd.Top ? a : t.created);
                       case 15:
                         return (l = e.sent), e.abrupt("break", 33);
                       case 17:
-                        return (e.next = 19), ug(c, C, w, C === vd.Top ? a : t.created);
+                        return (e.next = 19), ug(c, O, w, O === vd.Top ? a : t.created);
                       case 19:
                         return (l = e.sent), e.abrupt("break", 33);
                       case 21:
-                        return (e.next = 23), dg(c, C, w, C === vd.Top ? a : t.created);
+                        return (e.next = 23), dg(c, O, w, O === vd.Top ? a : t.created);
                       case 23:
                         return (l = e.sent), e.abrupt("break", 33);
                       case 25:
-                        return (e.next = 27), ng(C, w, C === vd.Top ? a : t.created);
+                        return (e.next = 27), ng(O, w, O === vd.Top ? a : t.created);
                       case 27:
                         return (l = e.sent), e.abrupt("break", 33);
                       case 29:
-                        return (e.next = 31), ng(C, w, C === vd.Top ? a : t.created);
+                        return (e.next = 31), ng(O, w, O === vd.Top ? a : t.created);
                       case 31:
                         return (l = e.sent), e.abrupt("break", 33);
                       case 33:
@@ -12787,7 +12787,7 @@
                         }
                         return (
                           (i = Object(A.a)(Object(A.a)({}, T), {}, { noMoreToLoad: !0 })),
-                          p.current.Set(w, C, i),
+                          p.current.Set(w, O, i),
                           P(i),
                           e.abrupt("return")
                         );
@@ -12795,7 +12795,7 @@
                         (o = T.events ? [].concat(Object(q.a)(T.events), Object(q.a)(l)) : l),
                           ((s = Object(A.a)(Object(A.a)({}, T), {}, { events: o })).noMoreToLoad = l.length < 50),
                           P(s),
-                          p.current.Set(w, C, s);
+                          p.current.Set(w, O, s);
                       case 43:
                       case "end":
                         return e.stop();
@@ -12814,7 +12814,7 @@
                   F.apply(this, arguments);
                 })();
               },
-              [C, w]
+              [O, w]
             ),
             void 0 === T.events)
           )
@@ -12871,7 +12871,7 @@
                 {x ? (
                   <K.a
                     as="select"
-                    value={C}
+                    value={O}
                     className="Events-Dropdown"
                     onChange={function (e) {
                       I(parseInt(e.target.value));
@@ -12963,7 +12963,7 @@
                   </div>
                   {z}
                   <div className="Events-List-Home">
-                    <Od source={u} entity={c} events={T.events} consolidated={v} />
+                    <Cd source={u} entity={c} events={T.events} consolidated={v} />
                     {V}
                   </div>
                 </l.a.Fragment>
@@ -12974,7 +12974,7 @@
             <l.a.Fragment>
               <div className="Events">
                 {W}
-                <Od source={u} entity={c} events={T.events} />
+                <Cd source={u} entity={c} events={T.events} />
                 {V}
               </div>
             </l.a.Fragment>
@@ -13003,9 +13003,9 @@
           } finally {
             o.f();
           }
-          return <Od events={i} entity="" source={Ed.ParentEvent} />;
+          return <Cd events={i} entity="" source={Ed.ParentEvent} />;
         },
-        Od = function (e) {
+        Cd = function (e) {
           var t = e.events,
             a = e.entity,
             n = e.source,
@@ -13045,7 +13045,7 @@
             </ul>
           ) : null;
         };
-      function Cd(e) {
+      function Od(e) {
         if (e.category === M.Changes) return <$.a />;
         if (e.metadata.icon) return <Ja id={e.metadata.icon} />;
         var t = e.metadata.being ? parseInt(e.metadata.being) : -1;
@@ -13900,10 +13900,10 @@
         )).apply(this, arguments);
       }
       function yg(e) {
-        return Og.apply(this, arguments);
+        return Cg.apply(this, arguments);
       }
-      function Og() {
-        return (Og = Object(E.a)(
+      function Cg() {
+        return (Cg = Object(E.a)(
           f.a.mark(function e(t) {
             var a, n;
             return f.a.wrap(
@@ -13934,7 +13934,7 @@
           })
         )).apply(this, arguments);
       }
-      function Cg(e) {
+      function Og(e) {
         return Ig.apply(this, arguments);
       }
       function Ig() {
@@ -14770,7 +14770,7 @@
         }
         return r;
       }
-      function Of(e, t) {
+      function Cf(e, t) {
         var a = e.title,
           n = e.titleId,
           l = yf(e, wf);
@@ -14805,8 +14805,8 @@
           </svg>
         );
       }
-      var Cf,
-        If = r.forwardRef(Of),
+      var Of,
+        If = r.forwardRef(Cf),
         Sf = (a.p, ["title", "titleId"]);
       function Nf() {
         return (Nf =
@@ -14859,8 +14859,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Cf ||
-              (Cf = (
+            {Of ||
+              (Of = (
                 <image
                   id="_02-Loge_A"
                   data-name="02-Loge_A"
@@ -15391,7 +15391,7 @@
         }
         return r;
       }
-      function OE(e, t) {
+      function CE(e, t) {
         var a = e.title,
           n = e.titleId,
           l = yE(e, wE);
@@ -15426,8 +15426,8 @@
           </svg>
         );
       }
-      var CE,
-        IE = r.forwardRef(OE),
+      var OE,
+        IE = r.forwardRef(CE),
         SE = (a.p, ["title", "titleId"]);
       function NE() {
         return (NE =
@@ -15480,8 +15480,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {CE ||
-              (CE = (
+            {OE ||
+              (OE = (
                 <image
                   id="_06-Silverada_B"
                   data-name="06-Silverada_B"
@@ -16178,8 +16178,8 @@
             </a>
           );
         var y = null,
-          O = null,
-          C = "";
+          C = null,
+          O = "";
         if (null !== n.stadiumId) {
           var I = A.stadiums.find(function (e) {
               return e.id === n.stadiumId;
@@ -16187,8 +16187,8 @@
             N = n.homeTeamData.card <= -2;
           I &&
             !N &&
-            ((O = <hv stadium={I} style={dv.GameWidget} />),
-            (C = I.nickname),
+            ((C = <hv stadium={I} style={dv.GameWidget} />),
+            (O = I.nickname),
             (y = (
               <div className="GameWidget-Upcoming-Body">
                 <mf.a className="GameWidget-Upcoming-Icon" style={{ filter: "invert(1)", padding: "5px" }} />
@@ -16198,10 +16198,10 @@
                 <div className="GameWidget-Upcoming-Content">
                   <div className="GameWidget-Upcoming-Stadium">
                     <span className="GameWidget-Upcoming-StadiumLabel" aria-hidden="true">
-                      {C}
+                      {O}
                     </span>
                     <div className="sr-only" role="text" aria-label="Playing at: " />
-                    {O}
+                    {C}
                   </div>
                 </div>
               </div>
@@ -16213,8 +16213,8 @@
           D = ((null === P || void 0 === P ? void 0 : P.length) || 0) > 0 ? P[0] : void 0;
         if (g.started) {
           void 0 !== D && D.payout;
-          (k = void 0 !== D && D.targets[0] === n.homeTeam ? <Cv activeBet={D} /> : null),
-            (T = void 0 !== D && D.targets[0] === n.awayTeam ? <Cv activeBet={D} /> : null);
+          (k = void 0 !== D && D.targets[0] === n.homeTeam ? <Ov activeBet={D} /> : null),
+            (T = void 0 !== D && D.targets[0] === n.awayTeam ? <Ov activeBet={D} /> : null);
         }
         var L = !1;
         n.lastUpdate.includes("CONSUMER") && (L = !0);
@@ -16253,11 +16253,11 @@
             aria-label={"".concat(i.awayTeamName, " versus ").concat(i.homeTeamName)}
           >
             <div className="Widget-Header-Wrapper">
-              <Ov
+              <Cv
                 statusDisplay={f}
                 started={g.started}
-                stadiumName={C}
-                stadiumIcon={O}
+                stadiumName={O}
+                stadiumIcon={C}
                 holidayInning={null === (t = n.state) || void 0 === t ? void 0 : t.holidayInning}
                 prizeMatch={null === (a = n.state) || void 0 === a ? void 0 : a.prizeMatch}
                 seriesLabel={(function (e) {
@@ -16597,7 +16597,7 @@
           0 === a && (n = "#ffbe00"), 1 === a && (n = "#a16dc3"), { border: 2, borderColor: n, borderStyle: "solid" }
         );
       }
-      function Ov(e) {
+      function Cv(e) {
         var t = e.statusDisplay,
           a = e.started,
           n = e.stadiumName,
@@ -16661,7 +16661,7 @@
           </div>
         );
       }
-      function Cv(e) {
+      function Ov(e) {
         var t = e.activeBet,
           a = void 0 !== t ? t.payout : 0;
         return (
@@ -17372,12 +17372,12 @@
             y = function () {
               clearTimeout(w), f(!0);
             },
-            O = function () {
+            C = function () {
               w = setTimeout(function () {
                 f(!1);
               }, 100);
             },
-            C = (
+            O = (
               <Xv.a target={t.current} show={g} placement="bottom">
                 {function (e) {
                   e.placement, e.scheduleUpdate, e.arrowProps, e.outOfBoundaries, e.show;
@@ -17388,7 +17388,7 @@
                         style: Object(A.a)(Object(A.a)({}, t.style), {}, { top: "12px" }),
                         className: "Overlay ".concat(o) + (b.lightMode ? " Overlay-LightMode" : ""),
                         onMouseOver: y,
-                        onMouseOut: O,
+                        onMouseOut: C,
                       })}
                     >
                       <div className={"Overlay-Arrow" + (b.lightMode ? " Overlay-Arrow-LightMode" : "")} />
@@ -17400,7 +17400,7 @@
             );
           return (
             p &&
-              (C = (
+              (O = (
                 <Xv.a target={t.current} show={g} placement="top">
                   {function (e) {
                     e.placement, e.scheduleUpdate, e.arrowProps, e.outOfBoundaries, e.show;
@@ -17411,7 +17411,7 @@
                           style: Object(A.a)(Object(A.a)({}, t.style), {}, { bottom: "12px" }),
                           className: "Overlay ".concat(o) + (b.lightMode ? " Overlay-LightMode" : ""),
                           onMouseOver: y,
-                          onMouseOut: O,
+                          onMouseOut: C,
                         })}
                       >
                         <div
@@ -17427,24 +17427,24 @@
               )),
             i ? (
               <l.a.Fragment>
-                <a href={i} ref={t} onMouseOver={y} onMouseOut={O} className={c}>
+                <a href={i} ref={t} onMouseOver={y} onMouseOut={C} className={c}>
                   {n}
                 </a>
-                {C}
+                {O}
               </l.a.Fragment>
             ) : u ? (
               <l.a.Fragment>
-                <button ref={t} onMouseOver={y} onMouseOut={O} onClick={u} className={c}>
+                <button ref={t} onMouseOver={y} onMouseOut={C} onClick={u} className={c}>
                   {n}
                 </button>
-                {C}
+                {O}
               </l.a.Fragment>
             ) : (
               <l.a.Fragment>
-                <div ref={t} onMouseOver={y} onMouseOut={O} className={c}>
+                <div ref={t} onMouseOver={y} onMouseOut={C} className={c}>
                   {n}
                 </div>
-                {C}
+                {O}
               </l.a.Fragment>
             )
           );
@@ -17589,19 +17589,19 @@
                 <div className="CoinOverlay-Content-Body">Buy Votes at Concessions to spend in the Offseason</div>
               </div>
             ),
-            O = (
+            C = (
               <div className="CoinOverlay-Content">
                 <div className="CoinOverlay-Content-Body">{u ? h[w.current] : p[b.current]}</div>
               </div>
             ),
-            C = null;
+            O = null;
           if (null !== t.favoriteTeam) {
             var I = n.teams.find(function (e) {
               return e.id === t.favoriteTeam;
             });
             if (I) {
               var N = Yg(I);
-              C = (
+              O = (
                 <div
                   className="Navigation-FavoriteTeamEmoji"
                   style={{ background: I.mainColor }}
@@ -17639,7 +17639,7 @@
                     <_v
                       className="CoinOverlay"
                       buttonClassname="Navigation-CurrencyButton"
-                      content={O}
+                      content={C}
                       handleClick={
                         u
                           ? void 0
@@ -17767,7 +17767,7 @@
                     </div>
                   }
                 >
-                  {C}
+                  {O}
                 </_v>
                 <_v
                   className="CoinOverlay"
@@ -17817,8 +17817,8 @@
           w = h[1],
           B = Object(r.useState)(!1),
           y = Object(s.a)(B, 2),
-          O = y[0],
-          C = y[1],
+          C = y[0],
+          O = y[1],
           I = Object(r.useState)(!1),
           N = Object(s.a)(I, 2),
           k = N[0],
@@ -17840,7 +17840,7 @@
           );
         }, []);
         var j = function (e) {
-            e.matches ? C(!0) : C(!1);
+            e.matches ? O(!0) : O(!1);
           },
           F = function (e) {
             P.current && !P.current.contains(e.target) && T(!1),
@@ -18110,7 +18110,7 @@
                 return (
                   "League" === e.text
                     ? ((i = D), (o = z), (s = u))
-                    : "Vote" === e.text
+                    : "Vote" === e.text || "Navigate" === e.text
                     ? ((i = L), (o = U), (s = E))
                     : "Info" === e.text && ((i = R), (o = Y), (s = b)),
                   (n += 1),
@@ -18129,7 +18129,7 @@
                         className={"Navigation-Dropdown-Content Navigation-Dropdown-Content-" + e.text}
                         style={s ? { maxHeight: "230px" } : {}}
                         onClick={function (e) {
-                          O && W();
+                          C && W();
                         }}
                       >
                         {e.subpaths.map(function (e, a) {
@@ -18169,8 +18169,8 @@
                 )
               );
             });
-          })(H, O),
-          X = O ? (
+          })(H, C),
+          X = C ? (
             <l.a.Fragment>
               <div className="Navigation-Header Navigation-Header-Dropdown" onClick={W}>
                 <_.Tb className="Navigation-Toggle-Icon" />
@@ -18201,7 +18201,7 @@
               </d>
               {J}
             </div>
-            {O ? null : <div className="Navigation-User">{J}</div>}
+            {C ? null : <div className="Navigation-User">{J}</div>}
           </nav>
         );
       }
@@ -18458,7 +18458,7 @@
           </l.a.Fragment>
         );
       }
-      function Op() {
+      function Cp() {
         return (
           <l.a.Fragment>
             <div className="League-Nav">
@@ -18488,7 +18488,7 @@
         }).REACT_APP_CLIENT_ANALYTICS_ENABLED) &&
         gp.a.initialize("UA-171524925-1");
       a(242);
-      var Cp = function (e) {
+      var Op = function (e) {
           var t = e.dateString,
             a = Object(r.useState)(),
             n = Object(s.a)(a, 2),
@@ -18606,7 +18606,7 @@
           w = Object(s.a)(b, 2),
           B = w[0],
           y = w[1];
-        function O(e) {
+        function C(e) {
           if (null !== e.leagueTeamId)
             return o.teams.find(function (t) {
               return t.id === e.leagueTeamId;
@@ -18635,7 +18635,7 @@
                               for (
                                 r = function () {
                                   var e = a[l],
-                                    t = O(e),
+                                    t = C(e),
                                     r = c.topIdols.find(function (t) {
                                       return t.id === e.id;
                                     });
@@ -18682,7 +18682,7 @@
                               for (
                                 r = function () {
                                   var e = t[l],
-                                    a = O(e),
+                                    a = C(e),
                                     r = c.risingStars.find(function (t) {
                                       return t.id === e.id;
                                     });
@@ -18715,14 +18715,14 @@
           },
           [c]
         );
-        var C = Object(r.useContext)(S.context);
-        if (!C || !C.sim) return null;
-        var I = void 0 !== C.sim.season ? C.sim.season : -1,
-          N = 7 == (null === (e = C.sim) || void 0 === e ? void 0 : e.phase),
+        var O = Object(r.useContext)(S.context);
+        if (!O || !O.sim) return null;
+        var I = void 0 !== O.sim.season ? O.sim.season : -1,
+          N = 7 == (null === (e = O.sim) || void 0 === e ? void 0 : e.phase),
           k =
             I > 11 &&
-            (null === (t = C.sim) || void 0 === t ? void 0 : t.phase) >= 2 &&
-            (null === (a = C.sim) || void 0 === a ? void 0 : a.phase) <= 7,
+            (null === (t = O.sim) || void 0 === t ? void 0 : t.phase) >= 2 &&
+            (null === (a = O.sim) || void 0 === a ? void 0 : a.phase) <= 7,
           T = c.data;
         void 0 !== T && (T = Object.values(c.data)[0]);
         var P = null;
@@ -18736,7 +18736,7 @@
                 icons={!1}
                 line={k}
                 lineIndex={T}
-                prepostseason={null === (n = C.sim) || void 0 === n ? void 0 : n.endseasonDate}
+                prepostseason={null === (n = O.sim) || void 0 === n ? void 0 : n.endseasonDate}
               />
             )),
           1 === B && Hg(i.sim, "SIM_RISING_STARS") && (P = <Pp info={p} />),
@@ -18806,7 +18806,7 @@
               </div>
               <div className="Leaderboard-Description">Go to a Player's page to choose them as your Idol.</div>
             </div>
-            <Cp dateString={e.prepostseason} />
+            <Op dateString={e.prepostseason} />
             <div className="Leaderboard-List">
               <ul
                 className={"Leaderboard-Player-Container" + (e.icons ? " Leaderboard-Player-Container-WithIcon" : "")}
@@ -18900,17 +18900,17 @@
             w,
             B,
             y,
-            O = [];
+            C = [];
           return (
-            a.idol === (null === (A = e.info.player) || void 0 === A ? void 0 : A.id) && O.push("Your Idol"),
+            a.idol === (null === (A = e.info.player) || void 0 === A ? void 0 : A.id) && C.push("Your Idol"),
             (null === (u = e.info.player) || void 0 === u ? void 0 : u.permAttr.includes("SHELLED")) &&
-              O.push("Shelled"),
+              C.push("Shelled"),
             (null === (m = e.info.player) || void 0 === m ? void 0 : m.permAttr.includes("ELSEWHERE")) &&
-              O.push("Elsewhere"),
-            (null === (g = e.info.player) || void 0 === g ? void 0 : g.deceased) && O.push("Dead"),
-            void 0 !== e.numStyle && O.push("MVP"),
+              C.push("Elsewhere"),
+            (null === (g = e.info.player) || void 0 === g ? void 0 : g.deceased) && C.push("Dead"),
+            void 0 !== e.numStyle && C.push("MVP"),
             (null === (f = e.info.player) || void 0 === f ? void 0 : f.permAttr.includes("SCATTERED")) &&
-              O.push("Scattered"),
+              C.push("Scattered"),
             (
               <div
                 className={"Leaderboard-Player-Wrapper" + (e.showIcons ? " Leaderboard-Player-Wrapper-WithIcon" : "")}
@@ -18990,7 +18990,7 @@
                   </div>
                   <div
                     className="sr-only"
-                    aria-label={"." + (O.length > 0 ? " Current Status: " + O.join(", ") + "." : "")}
+                    aria-label={"." + (C.length > 0 ? " Current Status: " + C.join(", ") + "." : "")}
                   />
                 </d>
               </div>
@@ -19020,25 +19020,25 @@
             w,
             B,
             y,
-            O = [],
-            C = "",
+            C = [],
+            O = "",
             I = 1;
           return (
-            a.idol === (null === (n = e.info.player) || void 0 === n ? void 0 : n.id) && O.push("Your Idol"),
-            (null === (i = e.info.player) || void 0 === i ? void 0 : i.permAttr.includes("EGO1")) && (C = "EGO1"),
+            a.idol === (null === (n = e.info.player) || void 0 === n ? void 0 : n.id) && C.push("Your Idol"),
+            (null === (i = e.info.player) || void 0 === i ? void 0 : i.permAttr.includes("EGO1")) && (O = "EGO1"),
             (null === (o = e.info.player) || void 0 === o ? void 0 : o.permAttr.includes("EGO2")) &&
-              ((C = "EGO2"), (I = 2)),
+              ((O = "EGO2"), (I = 2)),
             (null === (s = e.info.player) || void 0 === s ? void 0 : s.permAttr.includes("EGO3")) &&
-              ((C = "EGO3"), (I = 3)),
+              ((O = "EGO3"), (I = 3)),
             (null === (A = e.info.player) || void 0 === A ? void 0 : A.permAttr.includes("EGO4")) &&
-              ((C = "EGO4"), (I = 4)),
+              ((O = "EGO4"), (I = 4)),
             (null === (u = e.info.player) || void 0 === u ? void 0 : u.permAttr.includes("SHELLED")) &&
-              O.push("Shelled"),
+              C.push("Shelled"),
             (null === (m = e.info.player) || void 0 === m ? void 0 : m.permAttr.includes("ELSEWHERE")) &&
-              O.push("Elsewhere"),
-            (null === (g = e.info.player) || void 0 === g ? void 0 : g.deceased) && O.push("Dead"),
+              C.push("Elsewhere"),
+            (null === (g = e.info.player) || void 0 === g ? void 0 : g.deceased) && C.push("Dead"),
             (null === (f = e.info.player) || void 0 === f ? void 0 : f.permAttr.includes("SCATTERED")) &&
-              O.push("Scattered"),
+              C.push("Scattered"),
             (
               <div className="Leaderboard-Player-Wrapper">
                 <d
@@ -19102,14 +19102,14 @@
                     <div className="sr-only" aria-label=" with " role="text" />
                   </div>
                   <div className="Leaderboard-Player-Star-Container">
-                    <en id={C} type={qa.Permanent} context={Xa.Player} />
+                    <en id={O} type={qa.Permanent} context={Xa.Player} />
                     <div className="sr-only" aria-label=" and " role="text" />
                     {Us(e.info.player)}
                     <div className="sr-only" aria-label=" combined stars " role="text" />
                   </div>
                   <div
                     className="sr-only"
-                    aria-label={"." + (O.length > 0 ? " Current Status: " + O.join(", ") + "." : "")}
+                    aria-label={"." + (C.length > 0 ? " Current Status: " + C.join(", ") + "." : "")}
                   />
                 </d>
               </div>
@@ -19370,7 +19370,7 @@
             ) : (
               <div>
                 <div className="League-Countdown">
-                  {c() === Rp.Upcoming ? <Cp dateString={Fg().toString()} /> : null}
+                  {c() === Rp.Upcoming ? <Op dateString={Fg().toString()} /> : null}
                   <div role="text" aria-label="Until Next Set of Games" className="sr-only" />
                 </div>
                 {d}
@@ -19732,22 +19732,22 @@
         var w,
           B = b() === Yp.Upcoming ? f.sim.day + 1 : f.sim.day,
           y = [],
-          O = [],
-          C = Object(Y.a)(f.postseasons);
+          C = [],
+          O = Object(Y.a)(f.postseasons);
         try {
-          for (C.s(); !(w = C.n()).done; ) {
+          for (O.s(); !(w = O.n()).done; ) {
             var I = w.value;
             void 0 !== (null === I || void 0 === I ? void 0 : I.matchups) && y.push.apply(y, Object(q.a)(I.matchups)),
               void 0 !== (null === I || void 0 === I ? void 0 : I.tomorrowMatchups) &&
-                O.push.apply(O, Object(q.a)(I.tomorrowMatchups));
+                C.push.apply(C, Object(q.a)(I.tomorrowMatchups));
           }
         } catch (z) {
-          C.e(z);
+          O.e(z);
         } finally {
-          C.f();
+          O.f();
         }
         var N = b() === Yp.Live ? f.schedule : f.tomorrowSchedule,
-          k = b() === Yp.Live ? y : O,
+          k = b() === Yp.Live ? y : C,
           T = null;
         if (void 0 !== N && N.length > 0) {
           var P,
@@ -19835,7 +19835,7 @@
                 {null !== T ? (
                   <div>
                     <div className="League-Countdown">
-                      {b() === Yp.Upcoming ? <Cp dateString={Fg().toString()} /> : null}
+                      {b() === Yp.Upcoming ? <Op dateString={Fg().toString()} /> : null}
                     </div>
                     {T}
                   </div>
@@ -21202,7 +21202,7 @@
           );
         return a;
       }
-      function Oh(e, t, a, n, r, i, o) {
+      function Ch(e, t, a, n, r, i, o) {
         return e.map(function (e) {
           var s = [];
           t.idol === e.id && s.push("Your Idol"),
@@ -21340,7 +21340,7 @@
           );
         });
       }
-      function Ch(e) {
+      function Oh(e) {
         return (
           <div className="Player-Info-Line Team-Info-Line">
             <div className="Player-Info-Line-Header">{e.header}</div>
@@ -21357,41 +21357,42 @@
           u,
           m,
           g,
-          v = Object(c.h)().nickname,
-          p = Object(r.useContext)(S.context),
-          h = Object(r.useContext)(oc.context),
-          b = Object(r.useContext)(x.context),
-          w = b.user,
-          B = b.setUser,
-          y = Object(c.g)(),
+          v,
+          p = Object(c.h)().nickname,
+          h = Object(r.useContext)(S.context),
+          b = Object(r.useContext)(oc.context),
+          w = Object(r.useContext)(x.context),
+          B = w.user,
+          y = w.setUser,
+          C = Object(c.g)(),
           O = Object(cA.useToasts)().addToast,
-          C = Object(r.useState)({ lineup: [], rotation: [], shadows: [] }),
-          I = Object(s.a)(C, 2),
-          N = I[0],
-          k = I[1],
-          T = Object(r.useState)(!1),
-          P = Object(s.a)(T, 2),
-          D = P[0],
-          L = P[1],
-          R = Object(r.useState)(0),
-          j = Object(s.a)(R, 2),
-          F = j[0],
-          H = j[1],
-          V = Object(r.useState)(!1),
-          G = Object(s.a)(V, 2),
-          W = G[0];
-        G[1];
+          I = Object(r.useState)({ lineup: [], rotation: [], shadows: [] }),
+          N = Object(s.a)(I, 2),
+          k = N[0],
+          T = N[1],
+          P = Object(r.useState)(!1),
+          D = Object(s.a)(P, 2),
+          L = D[0],
+          R = D[1],
+          j = Object(r.useState)(0),
+          F = Object(s.a)(j, 2),
+          H = F[0],
+          V = F[1],
+          G = Object(r.useState)(!1),
+          W = Object(s.a)(G, 2),
+          z = W[0];
+        W[1];
         Object(r.useEffect)(
           function () {
-            Y();
+            J();
           },
-          [h]
+          [b]
         );
-        var z = h.teams.find(function (e) {
-            return e.id === v;
+        var U = b.teams.find(function (e) {
+            return e.id === p;
           }),
-          U = Gg(v, h),
-          Y = (function () {
+          Y = Gg(p, b),
+          J = (function () {
             var e = Object(E.a)(
               f.a.mark(function e() {
                 var t, a, n, r, l, i, o, s, c, A, u, m, d, g;
@@ -21399,15 +21400,15 @@
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        if (void 0 !== z) {
+                        if (void 0 !== U) {
                           e.next = 2;
                           break;
                         }
                         return e.abrupt("return");
                       case 2:
-                        for (t = [], a = 0; a < z.lineup.length; a++) t.push(z.lineup[a]);
-                        for (n = 0; n < z.rotation.length; n++) t.push(z.rotation[n]);
-                        for (r = 0; r < z.shadows.length; r++) t.push(z.shadows[r]);
+                        for (t = [], a = 0; a < U.lineup.length; a++) t.push(U.lineup[a]);
+                        for (n = 0; n < U.rotation.length; n++) t.push(U.rotation[n]);
+                        for (r = 0; r < U.shadows.length; r++) t.push(U.shadows[r]);
                         return (e.next = 8), Kd(t);
                       case 8:
                         for (
@@ -21415,12 +21416,12 @@
                             i = [],
                             o = function (e) {
                               var t = l.find(function (t) {
-                                return z.lineup[e] === t.id;
+                                return U.lineup[e] === t.id;
                               });
                               t && i.push(t);
                             },
                             s = 0;
-                          s < z.lineup.length;
+                          s < U.lineup.length;
                           s++
                         )
                           o(s);
@@ -21428,12 +21429,12 @@
                           c = [],
                             A = function (e) {
                               var t = l.find(function (t) {
-                                return z.rotation[e] === t.id;
+                                return U.rotation[e] === t.id;
                               });
                               t && c.push(t);
                             },
                             u = 0;
-                          u < z.rotation.length;
+                          u < U.rotation.length;
                           u++
                         )
                           A(u);
@@ -21441,16 +21442,16 @@
                           m = [],
                             d = function (e) {
                               var t = l.find(function (t) {
-                                return z.shadows[e] === t.id;
+                                return U.shadows[e] === t.id;
                               });
                               t && m.push(t);
                             },
                             g = 0;
-                          g < z.shadows.length;
+                          g < U.shadows.length;
                           g++
                         )
                           d(g);
-                        k({ lineup: i, rotation: c, shadows: m });
+                        T({ lineup: i, rotation: c, shadows: m });
                       case 19:
                       case "end":
                         return e.stop();
@@ -21462,19 +21463,19 @@
               return e.apply(this, arguments);
             };
           })(),
-          J = z && "71c621eb-85dc-4bd7-a690-0c68c0e6fb90" === z.id,
-          q = (function () {
+          q = U && "71c621eb-85dc-4bd7-a690-0c68c0e6fb90" === U.id,
+          X = (function () {
             var e = Object(E.a)(
               f.a.mark(function e(t) {
                 return f.a.wrap(function (e) {
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        if ((t.preventDefault(), !z || z.id === w.favoriteTeam)) {
+                        if ((t.preventDefault(), !U || U.id === B.favoriteTeam)) {
                           e.next = 10;
                           break;
                         }
-                        if (!(void 0 === w.snacks.Flutes || w.snacks.Flutes < 0) && w.snackOrder.includes("Flutes")) {
+                        if (!(void 0 === B.snacks.Flutes || B.snacks.Flutes < 0) && B.snackOrder.includes("Flutes")) {
                           e.next = 6;
                           break;
                         }
@@ -21483,7 +21484,7 @@
                       case 6:
                         return (
                           (e.next = 8),
-                          Ld("/api/updateFavoriteTeam", JSON.stringify({ newTeamId: z.id, teamName: z.fullName })).then(
+                          Ld("/api/updateFavoriteTeam", JSON.stringify({ newTeamId: U.id, teamName: U.fullName })).then(
                             (function () {
                               var e = Object(E.a)(
                                 f.a.mark(function e(t) {
@@ -21493,8 +21494,8 @@
                                       switch ((e.prev = e.next)) {
                                         case 0:
                                           t.ok && t.status && 200 === t.status
-                                            ? ((a = JSON.parse(JSON.stringify(w.snacks))),
-                                              (n = JSON.parse(JSON.stringify(w.snackOrder))),
+                                            ? ((a = JSON.parse(JSON.stringify(B.snacks))),
+                                              (n = JSON.parse(JSON.stringify(B.snackOrder))),
                                               1 === a.Flutes
                                                 ? (delete a.Flutes,
                                                   n.includes("Flutes") &&
@@ -21503,11 +21504,11 @@
                                                     })),
                                                     n.splice(r, 1, "E")))
                                                 : (a.Flutes -= 1),
-                                              (w.favoriteTeam = z.id),
-                                              (w.snacks = a),
-                                              (w.snackOrder = n),
-                                              B(Object(A.a)({}, w)),
-                                              O("You abandon your old team for the ".concat(z.fullName, "."), {
+                                              (B.favoriteTeam = U.id),
+                                              (B.snacks = a),
+                                              (B.snackOrder = n),
+                                              y(Object(A.a)({}, B)),
+                                              O("You abandon your old team for the ".concat(U.fullName, "."), {
                                                 appearance: "success",
                                               }))
                                             : t.json().then(function (e) {
@@ -21542,33 +21543,33 @@
               return e.apply(this, arguments);
             };
           })();
-        if (void 0 === p) return null;
-        if (void 0 === h || void 0 === h.teams) return null;
-        if (void 0 === z) return null;
-        var X,
-          $ = h.stadiums.find(function (e) {
-            return e.id === z.stadium;
+        if (void 0 === h) return null;
+        if (void 0 === b || void 0 === b.teams) return null;
+        if (void 0 === U) return null;
+        var $,
+          ee = b.stadiums.find(function (e) {
+            return e.id === U.stadium;
           });
-        if (void 0 === N) return <wA />;
-        var ee,
-          te = Oh(N.lineup, w, F, null === (t = p.sim) || void 0 === t ? void 0 : t.day, y, !0, !1),
-          ae = Oh(N.rotation, w, F, null === (a = p.sim) || void 0 === a ? void 0 : a.day, y, !1, !1),
-          ne = Oh(N.shadows, w, F, null === (n = p.sim) || void 0 === n ? void 0 : n.day, y, !0, !0),
-          re =
-            void 0 !== z && z.deceased ? (
+        if (void 0 === k) return <wA />;
+        var te,
+          ae = Ch(k.lineup, B, H, null === (t = h.sim) || void 0 === t ? void 0 : t.day, C, !0, !1),
+          ne = Ch(k.rotation, B, H, null === (a = h.sim) || void 0 === a ? void 0 : a.day, C, !1, !1),
+          re = Ch(k.shadows, B, H, null === (n = h.sim) || void 0 === n ? void 0 : n.day, C, !0, !0),
+          le =
+            void 0 !== U && U.deceased ? (
               <div className="ModalItem-Status">
                 <div className="ModalItem-Status-Line">
-                  <div className={"Player-Deceased-Icon" + (w.lightMode ? " Player-Deceased-Icon-LightMode" : "")} />
+                  <div className={"Player-Deceased-Icon" + (B.lightMode ? " Player-Deceased-Icon-LightMode" : "")} />
                   <div className="ModalItem-Status-Name">Deceased</div>
                 </div>
-                {void 0 !== w.snacks.Peanuts ? (
-                  W ? (
+                {void 0 !== B.snacks.Peanuts ? (
+                  z ? (
                     <bA />
                   ) : (
                     <d
                       className="ModalItem-Button-Tribute"
-                      background={y}
-                      path={w.verified ? "/tribute/".concat(z.id) : "/send-verification-email"}
+                      background={C}
+                      path={B.verified ? "/tribute/".concat(U.id) : "/send-verification-email"}
                     >
                       <Rr className="ModalItem-Icon" /> Pay Tribute
                     </d>
@@ -21596,23 +21597,23 @@
                 )}
               </div>
             ) : null,
-          le =
-            z.permAttr.length > 0 || z.seasAttr.length > 0 || z.weekAttr.length > 0 || z.gameAttr.length > 0 ? (
+          ie =
+            U.permAttr.length > 0 || U.seasAttr.length > 0 || U.weekAttr.length > 0 || U.gameAttr.length > 0 ? (
               <l.a.Fragment>
                 <div className="ModalItem-Attributes">
-                  <div className="AttributeBar">{_s(z, Xa.Team)}</div>
+                  <div className="AttributeBar">{_s(U, Xa.Team)}</div>
                 </div>
               </l.a.Fragment>
             ) : null,
-          ie = (
-            <div className={"ModalItem-Content" + (le ? " ModalItem-Content-WithAttributes" : "")}>
+          oe = (
+            <div className={"ModalItem-Content" + (ie ? " ModalItem-Content-WithAttributes" : "")}>
               <Z.a className="Events-ButtonList">
                 <K.a
                   as="select"
-                  value={F}
+                  value={H}
                   className="Events-Dropdown"
                   onChange={function (e) {
-                    H(parseInt(e.target.value));
+                    V(parseInt(e.target.value));
                   }}
                 >
                   <option value={0} key={0}>
@@ -21631,68 +21632,71 @@
               </Z.a>
               <div className="Team-Section">
                 <div className="ModalItem-Subheader">Lineup</div>
-                <ul role="list">{te}</ul>
+                <ul role="list">{ae}</ul>
               </div>
               <div className="Team-Section">
                 <div className="ModalItem-Subheader">Rotation</div>
-                <ul>{ae}</ul>
+                <ul>{ne}</ul>
               </div>
-              {void 0 !== w.snacks.Forbidden_Knowledge_Access && z.id === w.favoriteTeam ? (
+              {void 0 !== B.snacks.Forbidden_Knowledge_Access && U.id === B.favoriteTeam ? (
                 <div className="Team-Section-Shadows">
                   <_.fe
                     onClick={function (e) {
-                      L(!0);
+                      R(!0);
                     }}
-                    className={"Team-Section-Shadows-Icon" + (D ? " is-hidden" : "")}
+                    className={"Team-Section-Shadows-Icon" + (L ? " is-hidden" : "")}
                   />
-                  <div className={"Team-Section-Shadows-Content" + (D ? "" : " is-hidden")}>
+                  <div className={"Team-Section-Shadows-Content" + (L ? "" : " is-hidden")}>
                     <div className="Team-Section Team-Section-Shadows-Players">
                       <div className="ModalItem-Subheader">Shadows</div>
-                      <ul>{ne}</ul>
+                      <ul>{re}</ul>
                     </div>
                   </div>
                 </div>
               ) : null}
             </div>
           ),
-          oe = Qs(z.id, p.standings),
-          se = (U && (js(oe), Bh(v, p, h)), U ? <div className="Team-Card"> {af(z.card).join(" ")} </div> : null),
-          ce = !1;
-        ((null === (i = p.sim) || void 0 === i ? void 0 : i.phase) !== Q.Earlseason &&
-          (null === (o = p.sim) || void 0 === o ? void 0 : o.phase) !== Q.Midseason &&
-          (null === (u = p.sim) || void 0 === u ? void 0 : u.phase) !== Q.Lateseason &&
-          (null === (m = p.sim) || void 0 === m ? void 0 : m.phase) !== Q.EarlyPostseason &&
-          (null === (g = p.sim) || void 0 === g ? void 0 : g.phase) !== Q.Postseason) ||
-          null === p ||
-          void 0 === p ||
-          null === (ee = p.schedule) ||
-          void 0 === ee ||
-          ee.forEach(function (e) {
-            e.gameComplete || (ce = !0);
+          se = Qs(U.id, h.standings),
+          ce = (Y && (js(se), Bh(p, h, b)), Y ? <div className="Team-Card"> {af(U.card).join(" ")} </div> : null),
+          ue = !1;
+        ((null === (i = h.sim) || void 0 === i ? void 0 : i.phase) !== Q.Earlseason &&
+          (null === (o = h.sim) || void 0 === o ? void 0 : o.phase) !== Q.Midseason &&
+          (null === (u = h.sim) || void 0 === u ? void 0 : u.phase) !== Q.Lateseason &&
+          (null === (m = h.sim) || void 0 === m ? void 0 : m.phase) !== Q.EarlyPostseason &&
+          (null === (g = h.sim) || void 0 === g ? void 0 : g.phase) !== Q.Postseason) ||
+          null === h ||
+          void 0 === h ||
+          null === (te = h.schedule) ||
+          void 0 === te ||
+          te.forEach(function (e) {
+            e.gameComplete || (ue = !0);
           });
-        var ue = (
-          <Z.a className="ModalItem-Button-Form ModalItem-Button-Flute-Wrapper" onSubmit={q}>
+        var me = (
+          <Z.a className="ModalItem-Button-Form ModalItem-Button-Flute-Wrapper" onSubmit={X}>
             <BA.a
               className="ModalItem-Button-Flute"
               type="submit"
               variant="success"
-              style={{ background: z.mainColor, color: Mg(z.mainColor) }}
+              style={{ background: U.mainColor, color: Mg(U.mainColor) }}
             >
               <$n style={{ width: "20px", height: "20px" }} /> Choose Team
             </BA.a>
           </Z.a>
         );
-        w.favoriteTeam === z.id
-          ? (ue = (
+        B.favoriteTeam === U.id
+          ? (me = (
               <div
                 className="ModalItem-Button-Flute-Current"
-                style={{ background: z.mainColor, color: Mg(z.mainColor) }}
+                style={{ background: U.mainColor, color: Mg(U.mainColor) }}
               >
                 Favorite Team
               </div>
             ))
-          : void 0 !== p && void 0 !== p.sim && p.sim.phase >= 3
-          ? (ue = (
+          : void 0 !== h &&
+            void 0 !== h.sim &&
+            h.sim.phase >= 3 &&
+            Gg(null !== (v = B.favoriteTeam) && void 0 !== v ? v : "", b)
+          ? (me = (
               <Ka.a
                 placement="top"
                 overlay={
@@ -21706,15 +21710,15 @@
                     disabled={!0}
                     className="ModalItem-Button-Idol"
                     variant="dark"
-                    style={{ background: Qg(z.mainColor, 0.8), color: Mg(z.mainColor), pointerEvents: "none" }}
+                    style={{ background: Qg(U.mainColor, 0.8), color: Mg(U.mainColor), pointerEvents: "none" }}
                   >
                     <$n style={{ width: "20px", height: "20px" }} /> Choose Team
                   </BA.a>
                 </span>
               </Ka.a>
             ))
-          : void 0 === w.snacks.Flutes || w.snacks.Flutes < 0
-          ? (ue = (
+          : void 0 === B.snacks.Flutes || B.snacks.Flutes < 0
+          ? (me = (
               <Ka.a
                 placement="top"
                 overlay={
@@ -21728,16 +21732,16 @@
                     disabled={!0}
                     className="ModalItem-Button-Idol"
                     variant="dark"
-                    style={{ background: Qg(z.mainColor, 0.8), color: Mg(z.mainColor), pointerEvents: "none" }}
+                    style={{ background: Qg(U.mainColor, 0.8), color: Mg(U.mainColor), pointerEvents: "none" }}
                   >
                     <$n style={{ width: "20px", height: "20px" }} /> Choose Team
                   </BA.a>
                 </span>
               </Ka.a>
             ))
-          : ce &&
-            w.favoriteTeam !== z.id &&
-            (ue = (
+          : ue &&
+            B.favoriteTeam !== U.id &&
+            (me = (
               <Ka.a
                 placement="top"
                 overlay={
@@ -21751,99 +21755,99 @@
                     disabled={!0}
                     className="ModalItem-Button-Idol"
                     variant="dark"
-                    style={{ background: Qg(z.mainColor, 0.8), color: Mg(z.mainColor), pointerEvents: "none" }}
+                    style={{ background: Qg(U.mainColor, 0.8), color: Mg(U.mainColor), pointerEvents: "none" }}
                   >
                     <$n style={{ width: "20px", height: "20px" }} /> Choose Team
                   </BA.a>
                 </span>
               </Ka.a>
             ));
-        var me = null;
-        if (null !== w.favoriteTeam && z.id === w.favoriteTeam) {
-          var de = h.teams.find(function (e) {
-            return e.id === w.favoriteTeam;
+        var de = null;
+        if (null !== B.favoriteTeam && U.id === B.favoriteTeam) {
+          var ge = b.teams.find(function (e) {
+            return e.id === B.favoriteTeam;
           });
-          if (de) {
-            var ge = Yg(de),
-              fe = encodeURIComponent("".concat(de.slogan || "", " ").concat(ge, " #blaseball")),
-              Ee = "http://twitter.com/intent/tweet?text=".concat(fe, "&url=https%3A%2F%2Fblaseball.com"),
-              ve = { "--team-color": de.secondaryColor };
-            me = (
-              <a target="_blank" href={Ee} className="Team-Tweet" style={ve} aria-label="Tweet your favorite team.">
+          if (ge) {
+            var fe = Yg(ge),
+              Ee = encodeURIComponent("".concat(ge.slogan || "", " ").concat(fe, " #blaseball")),
+              ve = "http://twitter.com/intent/tweet?text=".concat(Ee, "&url=https%3A%2F%2Fblaseball.com"),
+              pe = { "--team-color": ge.secondaryColor };
+            de = (
+              <a target="_blank" href={ve} className="Team-Tweet" style={pe} aria-label="Tweet your favorite team.">
                 <Ae.j className="Team-Tweet-Icon" />
               </a>
             );
           }
         }
         return (
-          (X = (
+          ($ = (
             <l.a.Fragment>
               <div className="ModalItem-Info">
-                {U ? null : <div className="Team-Header-NotInLeague">WARNING: ACCESS RESTRICTED</div>}
+                {Y ? null : <div className="Team-Header-NotInLeague">WARNING: ACCESS RESTRICTED</div>}
                 <div className="Team-Header">
                   <div className="Team-LogoLine-Wrapper">
                     <div className="Team-LogoLine">
                       <div
-                        style={{ backgroundColor: z.mainColor, cursor: J ? "grab" : "" }}
+                        style={{ backgroundColor: U.mainColor, cursor: q ? "grab" : "" }}
                         className="Team-Logo"
                         onClick={
-                          J
+                          q
                             ? function () {
-                                J && O("You pet the Dogs!", { appearance: "success" });
+                                q && O("You pet the Dogs!", { appearance: "success" });
                               }
                             : void 0
                         }
                       >
-                        {Yg(z)}
+                        {Yg(U)}
                       </div>
                     </div>
                     <div className="ModalItem-Name-Wrapper">
                       <h2 className="ModalItem-Name">
-                        {z.fullName} {me}
+                        {U.fullName} {de}
                       </h2>
-                      <div className="Team-Slogan">"{z.slogan}"</div>
+                      <div className="Team-Slogan">"{U.slogan}"</div>
                     </div>
                   </div>
                   <div className="ModalItem-Name-Wrapper">
                     <div className="Team-Card-Wrapper">
-                      {se}
-                      {ue}
+                      {ce}
+                      {me}
                     </div>
                   </div>
                 </div>
               </div>
-              {re}
-              <OA.a.Container id="ModalTabs-Container" defaultActiveKey="Roster">
-                <CA.a variant="tabs" className="ModalTabs">
-                  <CA.a.Item>
-                    <CA.a.Link eventKey="Roster">Roster</CA.a.Link>
-                  </CA.a.Item>
-                  <CA.a.Item>
-                    <CA.a.Link eventKey="Info">Info</CA.a.Link>
-                  </CA.a.Item>
-                  {$ ? (
-                    <CA.a.Item>
-                      <CA.a.Link eventKey="Stadium">Ballpark</CA.a.Link>
-                    </CA.a.Item>
+              {le}
+              <CA.a.Container id="ModalTabs-Container" defaultActiveKey="Roster">
+                <OA.a variant="tabs" className="ModalTabs">
+                  <OA.a.Item>
+                    <OA.a.Link eventKey="Roster">Roster</OA.a.Link>
+                  </OA.a.Item>
+                  <OA.a.Item>
+                    <OA.a.Link eventKey="Info">Info</OA.a.Link>
+                  </OA.a.Item>
+                  {ee ? (
+                    <OA.a.Item>
+                      <OA.a.Link eventKey="Stadium">Ballpark</OA.a.Link>
+                    </OA.a.Item>
                   ) : null}
-                  <CA.a.Item>
-                    <CA.a.Link eventKey="Events">Feed</CA.a.Link>
-                  </CA.a.Item>
-                </CA.a>
-                <OA.a.Content>
-                  <OA.a.Pane eventKey="Roster">
-                    {le}
+                  <OA.a.Item>
+                    <OA.a.Link eventKey="Events">Feed</OA.a.Link>
+                  </OA.a.Item>
+                </OA.a>
+                <CA.a.Content>
+                  <CA.a.Pane eventKey="Roster">
                     {ie}
-                  </OA.a.Pane>
-                  <OA.a.Pane eventKey="Info">
-                    {le}
-                    <div className={"ModalItem-Content" + (le ? " ModalItem-Content-WithAttributes" : "")}>
+                    {oe}
+                  </CA.a.Pane>
+                  <CA.a.Pane eventKey="Info">
+                    {ie}
+                    <div className={"ModalItem-Content" + (ie ? " ModalItem-Content-WithAttributes" : "")}>
                       <div className="Team-Section">
                         <ul>
-                          <Ch header="Wins" body={Ms(oe)} />
-                          <Ch header="Record" body={js(oe)} />
-                          <Ch header="Runs" body={cf(z.id, null === p || void 0 === p ? void 0 : p.standings)} />
-                          {U && Hg(p.sim, "SIM_SHOW_LEVELS") ? (
+                          <Oh header="Wins" body={Ms(se)} />
+                          <Oh header="Record" body={js(se)} />
+                          <Oh header="Runs" body={cf(U.id, null === h || void 0 === h ? void 0 : h.standings)} />
+                          {Y && Hg(h.sim, "SIM_SHOW_LEVELS") ? (
                             <div className="Player-Info-Line Team-Info-Line">
                               <Ka.a
                                 placement="top"
@@ -21904,52 +21908,52 @@
                                         : " Team-Info-Score-Undef"),
                                     (<span className={a}>{t}</span>)
                                   );
-                                })(z.level)}
+                                })(U.level)}
                               </div>
                             </div>
                           ) : null}
-                          {U ? (
-                            <Ch header="eDensity" body={<l.a.Fragment>{z.eDensity.toFixed(5)} bl/m³</l.a.Fragment>} />
+                          {Y ? (
+                            <Oh header="eDensity" body={<l.a.Fragment>{U.eDensity.toFixed(5)} bl/m³</l.a.Fragment>} />
                           ) : null}
-                          {U ? <Ch header="Tiebreaker Place" body={Bh(v, p, h)} /> : null}
-                          {U ? <Ch header="Tarot Card" body={af(z.card).join(" ")} /> : null}
-                          <Ch header="Championships" body={yh(z.championships, !1)} />
-                          <Ch header="Underchampionships" body={yh(z.underchampionships, !0)} />
-                          {Hg(p.sim, "SIM_EVOLUTION_CONCEPTUALIZED") ? (
-                            <Ch header="Times Evolved" body={z.evolution} />
+                          {Y ? <Oh header="Tiebreaker Place" body={Bh(p, h, b)} /> : null}
+                          {Y ? <Oh header="Tarot Card" body={af(U.card).join(" ")} /> : null}
+                          <Oh header="Championships" body={yh(U.championships, !1)} />
+                          <Oh header="Underchampionships" body={yh(U.underchampionships, !0)} />
+                          {Hg(h.sim, "SIM_EVOLUTION_CONCEPTUALIZED") ? (
+                            <Oh header="Times Evolved" body={U.evolution} />
                           ) : null}
-                          <Ch header="Net Shame" body={z.totalShamings - z.totalShames} />
-                          <Ch
+                          <Oh header="Net Shame" body={U.totalShamings - U.totalShames} />
+                          <Oh
                             header="Number of Players"
-                            body={z.rotation.length + z.lineup.length + z.shadows.length}
+                            body={U.rotation.length + U.lineup.length + U.shadows.length}
                           />
                         </ul>
                       </div>
                     </div>
-                  </OA.a.Pane>
-                  {$ ? (
-                    <OA.a.Pane eventKey="Stadium">
-                      <bh team={z} />
-                    </OA.a.Pane>
+                  </CA.a.Pane>
+                  {ee ? (
+                    <CA.a.Pane eventKey="Stadium">
+                      <bh team={U} />
+                    </CA.a.Pane>
                   ) : null}
-                  {z.card >= -1 ? (
-                    <OA.a.Pane eventKey="Events">
+                  {U.card >= -1 ? (
+                    <CA.a.Pane eventKey="Events">
                       <div className="ModalItem-Content">
                         <Bd
-                          entity={z.id}
+                          entity={U.id}
                           source={Ed.Team}
                           defaultCategory={M.Outcomes}
                           defaultSort={vd.NewestFirst}
                           categoryOptions={[-1, M.Outcomes, M.Changes, M.Game, M.Abilities]}
                         />
                       </div>
-                    </OA.a.Pane>
+                    </CA.a.Pane>
                   ) : null}
-                </OA.a.Content>
-              </OA.a.Container>
+                </CA.a.Content>
+              </CA.a.Container>
             </l.a.Fragment>
           )),
-          (<hA {...Object.assign({}, e, { className: "ModalItem" })}>{X}</hA>)
+          (<hA {...Object.assign({}, e, { className: "ModalItem" })}>{$}</hA>)
         );
       };
       a(32), a(35);
@@ -21972,9 +21976,9 @@
             w = b[0],
             B = b[1],
             y = Object(r.useState)(""),
-            O = Object(s.a)(y, 2),
-            C = O[0],
-            I = O[1],
+            C = Object(s.a)(y, 2),
+            O = C[0],
+            I = C[1],
             N = Object(r.useState)(void 0),
             k = Object(s.a)(N, 2),
             T = k[0],
@@ -22011,7 +22015,7 @@
               Math.min(L.maxBetTiers[n.snacks[ne.MAX_BET]].amount * ne.GetPackMultiplier(n, D.sim), n.coins)
             ),
             M = function () {
-              return T ? (C === T.homeTeam ? T.homeOdds : T.awayOdds) : 0.5;
+              return T ? (O === T.homeTeam ? T.homeOdds : T.awayOdds) : 0.5;
             },
             j = function (e) {
               I(e);
@@ -22028,7 +22032,7 @@
                 <div
                   className={"ModalForm-Form-Team "
                     .concat(a, " ")
-                    .concat(C === t ? "is-selected" : C ? "is-not-selected" : "")}
+                    .concat(O === t ? "is-selected" : O ? "is-not-selected" : "")}
                   onClick={function (e) {
                     return j(t);
                   }}
@@ -22096,7 +22100,7 @@
             ),
             G = <div className="ModalForm-Outcome-Wrapper">Choose a team to bet on.</div>;
           return (
-            C &&
+            O &&
               (G = (
                 <div className="ModalForm-Outcome-Wrapper">
                   You'll have a {H} chance to win {V} coins.
@@ -22122,7 +22126,7 @@
                       )
                         return t("Game has already started.", { appearance: "error" }), void o.goBack();
                       g(!0);
-                      var r = { amount: w, userId: n.id, targets: [C, p], type: 0 };
+                      var r = { amount: w, userId: n.id, targets: [O, p], type: 0 };
                       Ld("/api/bet", JSON.stringify(r)).then(function (e) {
                         g(!1),
                           e.ok && e.status && 200 === e.status
@@ -22161,7 +22165,7 @@
                       odds={T.awayOdds}
                     />
                   </Z.a.Group>
-                  <Z.a.Group className={"ModalForm-Form-Amount ".concat(C ? "" : "is-hidden")} controlId="amount">
+                  <Z.a.Group className={"ModalForm-Form-Amount ".concat(O ? "" : "is-hidden")} controlId="amount">
                     <Z.a.Label>How much do you want to wager?</Z.a.Label>
                     <div className="ModalForm-Form-Inputs-Amount">
                       <div className="ModalForm-Coin-Wrapper">
@@ -22193,7 +22197,7 @@
                     {d ? (
                       <wA />
                     ) : (
-                      <BA.a className="ModalForm-Submit" type="submit" variant="success" disabled={!C}>
+                      <BA.a className="ModalForm-Submit" type="submit" variant="success" disabled={!O}>
                         Submit
                       </BA.a>
                     )}
@@ -22221,8 +22225,8 @@
             w = h[1],
             B = Object(r.useState)(n.snackOrder),
             y = Object(s.a)(B, 2),
-            O = y[0],
-            C = y[1],
+            C = y[0],
+            O = y[1],
             I = Object(r.useState)(!1),
             S = Object(s.a)(I, 2),
             N = S[0],
@@ -22269,12 +22273,12 @@
             ),
             Object(r.useEffect)(
               function () {
-                if (O.includes("E")) {
-                  var e = O;
+                if (C.includes("E")) {
+                  var e = C;
                   e.forEach(function (t, a) {
                     "E" === t && (e[a] = t + a);
                   }),
-                    C(e);
+                    O(e);
                 }
                 v(!1);
               },
@@ -22304,10 +22308,10 @@
                         e.source;
                         var t = e.destination;
                         if ((e.draggableId, t)) {
-                          var a = Array.from(O),
+                          var a = Array.from(C),
                             n = a.splice(e.source.index, 1),
                             r = Object(s.a)(n, 1)[0];
-                          a.splice(e.destination.index, 0, r), C(a);
+                          a.splice(e.destination.index, 0, r), O(a);
                         }
                       }}
                     >
@@ -22315,7 +22319,7 @@
                         {function (e) {
                           return (
                             <div {...Object.assign({ className: "Reorder-Snacks", ref: e.innerRef }, e.droppableProps)}>
-                              {O.map(function (e, t) {
+                              {C.map(function (e, t) {
                                 return (
                                   <Nh.b key={e} draggableId={e} index={t}>
                                     {function (t, a) {
@@ -22355,7 +22359,7 @@
                                 );
                               })}
                               {e.placeholder}
-                              {O.map(function (e, t) {
+                              {C.map(function (e, t) {
                                 return (
                                   <div className="Reorder-Number" style={{ gridRow: N ? t + 1 : 2 }}>
                                     {t + 1}
@@ -22371,7 +22375,7 @@
                       className="ModalForm-Form ModalForm-Form-Wrapper"
                       onSubmit={function (e) {
                         e.preventDefault(), v(!0);
-                        var a = O.map(function (e) {
+                        var a = C.map(function (e) {
                           return e.includes("E") ? "E" : e;
                         });
                         if (
@@ -22417,8 +22421,8 @@
                             onClick={function () {
                               return (function () {
                                 v(!0);
-                                var e = Js(Array.from(O));
-                                C(e), v(!1);
+                                var e = Js(Array.from(C));
+                                O(e), v(!1);
                               })();
                             }}
                             className="ModalForm-Submit"
@@ -22583,8 +22587,8 @@
           w = Object(r.useState)(!1),
           B = Object(s.a)(w, 2),
           y = B[0],
-          O = B[1],
-          C = Object(r.useContext)(Yc.context),
+          C = B[1],
+          O = Object(r.useContext)(Yc.context),
           I = Object(r.useContext)(oc.context),
           N = Object(c.g)(),
           k = Object(r.useState)([]),
@@ -23194,7 +23198,7 @@
                         sell: !0,
                       });
                     else {
-                      var O = ne.FORBIDDEN_KNOWLEDGE;
+                      var C = ne.FORBIDDEN_KNOWLEDGE;
                       u.push({
                         id: ne.FORBIDDEN_KNOWLEDGE,
                         name: "Apple",
@@ -23205,45 +23209,45 @@
                         ),
                         amount: 100,
                         toast: "",
-                        available: s.includes(O),
+                        available: s.includes(C),
                         icon: <yr className="Shop-Item-Icon" />,
                         buyUrl: "/api/buySnackNoUpgrade",
-                        params: { snackId: O },
+                        params: { snackId: C },
                         userUpdate: function () {
                           (e.trackers.SNACKS_BOUGHT += 1),
-                            (e.snacks[O] = 0),
-                            (e.snackOrder = ne.InsertIntoSnackOrder(O, e.snackOrder)),
+                            (e.snacks[C] = 0),
+                            (e.snackOrder = ne.InsertIntoSnackOrder(C, e.snackOrder)),
                             (e.coins -= 100),
                             t(Object(A.a)({}, e));
                         },
                       });
                     }
-                    var C = 1e3;
-                    void 0 !== c && void 0 !== c.alpha && (C = c.alpha);
+                    var O = 1e3;
+                    void 0 !== c && void 0 !== c.alpha && (O = c.alpha);
                     var I = function () {
-                      return C < 0
-                        ? "Purchase ".concat(C, " peanuts")
-                        : 0 == C
+                      return O < 0
+                        ? "Purchase ".concat(O, " peanuts")
+                        : 0 == O
                         ? "Purchase zero peanuts."
-                        : 1 == C
+                        : 1 == O
                         ? "Purchase a peanut."
-                        : C <= 10
-                        ? "Purchase a pack of ".concat(C, " peanuts.")
-                        : "Purchase a bucket of ".concat(C, " peanuts.");
+                        : O <= 10
+                        ? "Purchase a pack of ".concat(O, " peanuts.")
+                        : "Purchase a bucket of ".concat(O, " peanuts.");
                     };
                     if (void 0 !== e.snacks[ne.PEANUTS]) {
                       var S = ne.PEANUTS;
                       u.push({
                         id: ne.PEANUTS,
-                        name: "Peanut".concat(C > 1 ? "s" : ""),
+                        name: "Peanut".concat(O > 1 ? "s" : ""),
                         description: <l.a.Fragment>{I()}</l.a.Fragment>,
-                        amount: C,
+                        amount: O,
                         available: s.includes(S),
                         icon: <Rr className="Shop-Item-Icon" />,
                         buyUrl: "/api/buySnackNoUpgrade",
                         params: { snackId: S },
                         userUpdate: function () {
-                          (e.trackers.SNACKS_BOUGHT += 1), (e.snacks[S] += C), (e.coins -= C), t(Object(A.a)({}, e));
+                          (e.trackers.SNACKS_BOUGHT += 1), (e.snacks[S] += O), (e.coins -= O), t(Object(A.a)({}, e));
                         },
                         sell: !0,
                       });
@@ -23251,9 +23255,9 @@
                       var N = ne.PEANUTS;
                       u.push({
                         id: ne.PEANUTS,
-                        name: "Peanut".concat(C > 1 ? "s" : ""),
+                        name: "Peanut".concat(O > 1 ? "s" : ""),
                         description: <l.a.Fragment>{I()}</l.a.Fragment>,
-                        amount: C,
+                        amount: O,
                         toast: "",
                         available: s.includes(N),
                         icon: <Rr className="Shop-Item-Icon" />,
@@ -23261,9 +23265,9 @@
                         params: { snackId: N },
                         userUpdate: function () {
                           (e.trackers.SNACKS_BOUGHT += 1),
-                            (e.snacks[N] = C),
+                            (e.snacks[N] = O),
                             (e.snackOrder = ne.InsertIntoSnackOrder(N, e.snackOrder)),
-                            (e.coins -= C),
+                            (e.coins -= O),
                             t(Object(A.a)({}, e));
                         },
                       });
@@ -23384,7 +23388,7 @@
                       });
                     }
                     return u;
-                  })(u, m, h.sim, I, 0, C, p, X)
+                  })(u, m, h.sim, I, 0, O, p, X)
                 ),
                 j(Ph(u, P)));
             },
@@ -23473,10 +23477,10 @@
                   switch ((e.prev = e.next)) {
                     case 0:
                       if (
-                        (O(!0),
+                        (C(!0),
                         X.includes(a.id) ||
                           void 0 !== u.snacks[a.params.snackId] ||
-                          (O(!1), t("That Snack is unavailable!", { appearance: "error" })),
+                          (C(!1), t("That Snack is unavailable!", { appearance: "error" })),
                         !(a.amount <= u.coins || 0 === a.amount))
                       ) {
                         e.next = 14;
@@ -23520,7 +23524,7 @@
                             })()
                           )
                           .then(function () {
-                            a.handleComplete && a.handleComplete(), O(!1);
+                            a.handleComplete && a.handleComplete(), C(!1);
                           })
                           .catch(function (e) {
                             t(e, { appearance: "error" });
@@ -23546,12 +23550,12 @@
                       e.next = 12;
                       break;
                     case 9:
-                      a.handleComplete && a.handleComplete(), i({ purchaseItem: void 0 }), O(!1);
+                      a.handleComplete && a.handleComplete(), i({ purchaseItem: void 0 }), C(!1);
                     case 12:
                       e.next = 16;
                       break;
                     case 14:
-                      O(!1), t("Insufficient coins!", { appearance: "error" });
+                      C(!1), t("Insufficient coins!", { appearance: "error" });
                     case 16:
                     case "end":
                       return e.stop();
@@ -23759,7 +23763,7 @@
         var se,
           ce = Math.floor(100 * ne.GetPackMultiplier(u, h.sim)),
           Ae =
-            void 0 !== (null === C || void 0 === C ? void 0 : C.doc) ? (
+            void 0 !== (null === O || void 0 === O ? void 0 : O.doc) ? (
               <div className="Shop-Grid">
                 <div className="Shop-Icons">
                   <div className="Shop-Icons-Section">
@@ -24111,9 +24115,9 @@
         }
         var B = r[0],
           y = c.split("{FT}"),
-          O = i.includes(e);
+          C = i.includes(e);
         return (
-          !d || ("" != t.idol && null != t.idol) || (y.push(" Go to a Player page to choose an Idol."), (O = !1)),
+          !d || ("" != t.idol && null != t.idol) || (y.push(" Go to a Player page to choose an Idol."), (C = !1)),
           {
             id: e,
             name: n,
@@ -24124,7 +24128,7 @@
             ),
             amount: B.price,
             toast: "",
-            available: O,
+            available: C,
             buyUrl: "/api/buySnack",
             icon: s,
             params: { snackId: e },
@@ -24162,14 +24166,14 @@
             case "vote":
               y = 100;
           }
-          var O = <wA />;
+          var C = <wA />;
           b ||
-            (O = (
+            (C = (
               <BA.a className="ModalForm-Submit" type="submit" variant="success">
                 Buy
               </BA.a>
             ));
-          var C = Math.floor(n.coins / y);
+          var O = Math.floor(n.coins / y);
           return (
             <hA {...Object.assign({}, e, { className: "BatchBuy" })}>
               <div className="ModalForm-Header">Buy Votes</div>
@@ -24235,7 +24239,7 @@
                       type="range"
                       className="ModalForm-Range"
                       min={1}
-                      max={C}
+                      max={O}
                       value={g}
                       onChange={B}
                       step="1"
@@ -24246,10 +24250,10 @@
                         (n.lightMode ? " ModalForm-Form-Inputs-Amount-Max-LightMode" : "")
                       }
                       onClick={function (e) {
-                        e.preventDefault(), v(C);
+                        e.preventDefault(), v(O);
                       }}
                     >
-                      Max: {C}
+                      Max: {O}
                     </a>
                   </div>
                   <div className="ModalForm-Outcome-Wrapper">
@@ -24257,7 +24261,7 @@
                     <span className="ModalForm-Outcome-Winnings">{g * y}</span> coins.
                   </div>
                 </Z.a.Group>
-                <div className="ModalForm-Submit-Wrapper">{O}</div>
+                <div className="ModalForm-Submit-Wrapper">{C}</div>
               </Z.a>
             </hA>
           );
@@ -24279,8 +24283,8 @@
             w = Object(r.useState)(!1),
             B = Object(s.a)(w, 2),
             y = (B[0], B[1]),
-            O = void 0 !== ne.GetTiers(d, m.snackData),
-            C = function (e) {
+            C = void 0 !== ne.GetTiers(d, m.snackData),
+            O = function (e) {
               var t = e.target.value;
               b(parseInt(t));
             },
@@ -24289,7 +24293,7 @@
             !Gg(i.favoriteTeam, a) &&
             d === ne.FLUTES &&
             (I = i.snacks[ne.FLUTES] < 2 ? 0 : ne.GetSellValue(d, i.snacks[d] - 1, h, m.snackData));
-          var S = O ? i.snacks[d] + 1 : i.snacks[d];
+          var S = C ? i.snacks[d] + 1 : i.snacks[d];
           return (
             <hA {...Object.assign({}, e, { className: "BatchBuy" })}>
               <div className="ModalForm-Header Sell-Question">
@@ -24299,7 +24303,7 @@
                 className="ModalForm-Form"
                 onSubmit={function (e) {
                   e.preventDefault();
-                  var a = O ? i.snacks[d] + 1 : i.snacks[d];
+                  var a = C ? i.snacks[d] + 1 : i.snacks[d];
                   h > a
                     ? t("Insufficent snacks", { appearance: "error" })
                     : h < 1 || null === h || void 0 === h || isNaN(h)
@@ -24309,7 +24313,7 @@
                         .then(function (e) {
                           if (e.status && 200 === e.status && e.ok && e.body) {
                             var a = Object(A.a)({}, i.snacks);
-                            if ((i.snacks[d] - h === 0 && !O) || (i.snacks[d] - h === -1 && O)) {
+                            if ((i.snacks[d] - h === 0 && !C) || (i.snacks[d] - h === -1 && C)) {
                               delete a[d];
                               var n = ne.RemoveFromSnackOrder(d, i.snackOrder);
                               i.snackOrder = n;
@@ -24363,14 +24367,14 @@
                       }
                     >
                       <div className="ModalForm-Ticket-Wrapper">{S}</div>
-                      <Z.a.Control type="number" value={h} onChange={C} />
+                      <Z.a.Control type="number" value={h} onChange={O} />
                       <Z.a.Control
                         type="range"
                         className="ModalForm-Range"
                         min={1}
                         max={S}
                         value={h}
-                        onChange={C}
+                        onChange={O}
                         step="1"
                       />
                       <a
@@ -24432,7 +24436,7 @@
             B = null,
             y = Math.floor(100 * ne.GetPackMultiplier(i, a.sim));
           if ("sell" === m) {
-            var O = Math.floor(100 * ne.GetPrevPackMultiplier(i, a.sim));
+            var C = Math.floor(100 * ne.GetPrevPackMultiplier(i, a.sim));
             B = (
               <l.a.Fragment>
                 <div className="ModalForm-Header">Discard a Snack Slot</div>
@@ -24527,10 +24531,10 @@
                     <span
                       className={
                         "Pack-Snacks-Scale" +
-                        (O > 100 ? " Pack-Snacks-Scale-Up" : O < 100 ? " Pack-Snacks-Scale-Down" : "")
+                        (C > 100 ? " Pack-Snacks-Scale-Up" : C < 100 ? " Pack-Snacks-Scale-Down" : "")
                       }
                     >
-                      {O}%
+                      {C}%
                     </span>
                     .
                   </div>
@@ -24552,7 +24556,7 @@
               </l.a.Fragment>
             );
           } else if ("buy" === m) {
-            var C = Math.floor(100 * ne.GetNextPackMultiplier(i, a.sim));
+            var O = Math.floor(100 * ne.GetNextPackMultiplier(i, a.sim));
             B = (
               <l.a.Fragment>
                 <div className="ModalForm-Header">Buy a Snack Slot</div>
@@ -24629,10 +24633,10 @@
                     <span
                       className={
                         "Pack-Snacks-Scale" +
-                        (C > 100 ? " Pack-Snacks-Scale-Up" : C < 100 ? " Pack-Snacks-Scale-Down" : "")
+                        (O > 100 ? " Pack-Snacks-Scale-Up" : O < 100 ? " Pack-Snacks-Scale-Down" : "")
                       }
                     >
-                      {C}%
+                      {O}%
                     </span>
                     .
                   </div>
@@ -24988,8 +24992,8 @@
             w = h[1],
             B = Object(r.useState)(zh),
             y = Object(s.a)(B, 2),
-            O = y[0],
-            C = y[1],
+            C = y[0],
+            O = y[1],
             I = null === (t = e.showButtons) || void 0 === t || t,
             S = null === (a = e.showSort) || void 0 === a || a,
             N = null === (n = e.showCategory) || void 0 === n || n,
@@ -25013,7 +25017,7 @@
                           (t.loading = !1),
                           void 0 !== a && ((t.noMoreToLoad = a.length < Gh), (t.events = a), u.current.Set(g, b, t));
                       case 8:
-                        C(t);
+                        O(t);
                       case 9:
                       case "end":
                         return e.stop();
@@ -25031,24 +25035,24 @@
                     switch ((e.prev = e.next)) {
                       case 0:
                         if (
-                          ((t = O.events && O.events.length > 0 ? O.events[O.events.length - 1] : void 0),
-                          (a = O.events && O.events.length > 0 ? O.events.length : 0),
+                          ((t = C.events && C.events.length > 0 ? C.events[C.events.length - 1] : void 0),
+                          (a = C.events && C.events.length > 0 ? C.events.length : 0),
                           void 0 !== t)
                         ) {
                           e.next = 7;
                           break;
                         }
                         return (
-                          (n = Object(A.a)(Object(A.a)({}, O), {}, { noMoreToLoad: !0 })),
+                          (n = Object(A.a)(Object(A.a)({}, C), {}, { noMoreToLoad: !0 })),
                           u.current.Set(g, b, n),
-                          C(n),
+                          O(n),
                           e.abrupt("return")
                         );
                       case 7:
                         return (
-                          (r = Object(A.a)(Object(A.a)({}, O), {}, { loading: !0 })),
+                          (r = Object(A.a)(Object(A.a)({}, C), {}, { loading: !0 })),
                           u.current.Set(g, b, r),
-                          C(r),
+                          O(r),
                           (e.next = 12),
                           lg(Gh, b, g, a)
                         );
@@ -25058,15 +25062,15 @@
                           break;
                         }
                         return (
-                          (i = Object(A.a)(Object(A.a)({}, O), {}, { noMoreToLoad: !0 })),
+                          (i = Object(A.a)(Object(A.a)({}, C), {}, { noMoreToLoad: !0 })),
                           u.current.Set(g, b, i),
-                          C(i),
+                          O(i),
                           e.abrupt("return")
                         );
                       case 18:
-                        (o = O.events ? [].concat(Object(q.a)(O.events), Object(q.a)(l)) : l),
-                          ((s = Object(A.a)(Object(A.a)({}, O), {}, { events: o })).noMoreToLoad = l.length < Gh),
-                          C(s),
+                        (o = C.events ? [].concat(Object(q.a)(C.events), Object(q.a)(l)) : l),
+                          ((s = Object(A.a)(Object(A.a)({}, C), {}, { events: o })).noMoreToLoad = l.length < Gh),
+                          O(s),
                           u.current.Set(g, b, s);
                       case 23:
                       case "end":
@@ -25085,7 +25089,7 @@
               },
               [b, g]
             ),
-            void 0 === O.events)
+            void 0 === C.events)
           )
             return <l.a.Fragment>Error loading events.</l.a.Fragment>;
           var x,
@@ -25139,11 +25143,11 @@
               </Z.a>
             ) : null;
           return (
-            (x = O.loading ? (
+            (x = C.loading ? (
               <wA />
             ) : (
               <div className="Events-Load">
-                {O.noMoreToLoad ? (
+                {C.noMoreToLoad ? (
                   "End of Feed"
                 ) : (
                   <BA.a
@@ -25161,7 +25165,7 @@
               <l.a.Fragment>
                 <div className="Events">
                   {L}
-                  <Jh events={O.events} />
+                  <Jh events={C.events} />
                   {x}
                 </div>
               </l.a.Fragment>
@@ -25205,9 +25209,9 @@
             w = b[0],
             B = b[1],
             y = Object(r.useState)(),
-            O = Object(s.a)(y, 2),
-            C = O[0],
-            I = O[1],
+            C = Object(s.a)(y, 2),
+            O = C[0],
+            I = C[1],
             N = Object(r.useState)(null !== (t = o.lightMode) && void 0 !== t && t),
             k = Object(s.a)(N, 2),
             T = k[0],
@@ -25362,16 +25366,16 @@
               <div className="Account-Section-Item-Name">???</div>
             </div>
           );
-          C &&
+          O &&
             (z = (
               <div className="Account-Section-Item">
-                <d background={p} path={"/player/".concat(C.id)}>
+                <d background={p} path={"/player/".concat(O.id)}>
                   <div className="Account-Section-Item-Icon" style={{ background: "#054428" }}>
                     <DA style={{ width: "50px", height: "50px" }} />
                   </div>
                 </d>
-                <d className="Account-Section-Item-Name" background={p} path={"/player/".concat(C.id)}>
-                  {C.name}
+                <d className="Account-Section-Item-Name" background={p} path={"/player/".concat(O.id)}>
+                  {O.name}
                 </d>
               </div>
             ));
@@ -25657,23 +25661,23 @@
                     </div>
                   </div>
                 </div>
-                <OA.a.Container id="ModalTabs-Container" defaultActiveKey="Profile">
-                  <CA.a variant="tabs" className="ModalTabs">
-                    <CA.a.Item>
-                      <CA.a.Link eventKey="Profile">Profile</CA.a.Link>
-                    </CA.a.Item>
-                    <CA.a.Item>
-                      <CA.a.Link eventKey="Inventory">Inventory</CA.a.Link>
-                    </CA.a.Item>
-                    <CA.a.Item>
-                      <CA.a.Link eventKey="UserFeed">Feed</CA.a.Link>
-                    </CA.a.Item>
-                    <CA.a.Item>
-                      <CA.a.Link eventKey="Settings">Settings</CA.a.Link>
-                    </CA.a.Item>
-                  </CA.a>
-                  <OA.a.Content>
-                    <OA.a.Pane eventKey="Profile">
+                <CA.a.Container id="ModalTabs-Container" defaultActiveKey="Profile">
+                  <OA.a variant="tabs" className="ModalTabs">
+                    <OA.a.Item>
+                      <OA.a.Link eventKey="Profile">Profile</OA.a.Link>
+                    </OA.a.Item>
+                    <OA.a.Item>
+                      <OA.a.Link eventKey="Inventory">Inventory</OA.a.Link>
+                    </OA.a.Item>
+                    <OA.a.Item>
+                      <OA.a.Link eventKey="UserFeed">Feed</OA.a.Link>
+                    </OA.a.Item>
+                    <OA.a.Item>
+                      <OA.a.Link eventKey="Settings">Settings</OA.a.Link>
+                    </OA.a.Item>
+                  </OA.a>
+                  <CA.a.Content>
+                    <CA.a.Pane eventKey="Profile">
                       <div className="ModalItem-Content">
                         <div className="Account-Section">
                           <div className="Account-Section-Grid">
@@ -25685,8 +25689,8 @@
                         </div>
                         {U}
                       </div>
-                    </OA.a.Pane>
-                    <OA.a.Pane eventKey="Inventory">
+                    </CA.a.Pane>
+                    <CA.a.Pane eventKey="Inventory">
                       <div className="ModalItem-Content">
                         <div className="Account-Section" style={{ padding: "10px 0" }}>
                           <div className="ModalItem-Subheader">Wallet</div>
@@ -25707,8 +25711,8 @@
                         </div>
                         {K}
                       </div>
-                    </OA.a.Pane>
-                    <OA.a.Pane eventKey="Settings">
+                    </CA.a.Pane>
+                    <CA.a.Pane eventKey="Settings">
                       <div className="ModalItem-Content Account-Content">
                         {o.verified ? null : (
                           <div className="Account-Warning Account-Content-Section">
@@ -25822,14 +25826,14 @@
                           </div>
                         </div>
                       </div>
-                    </OA.a.Pane>
-                    <OA.a.Pane eventKey="UserFeed">
+                    </CA.a.Pane>
+                    <CA.a.Pane eventKey="UserFeed">
                       <div className="ModalItem-Content">
                         <Yh defaultCategory={-1} showCategory={!0} />
                       </div>
-                    </OA.a.Pane>
-                  </OA.a.Content>
-                </OA.a.Container>
+                    </CA.a.Pane>
+                  </CA.a.Content>
+                </CA.a.Container>
               </hA>
             )
           );
@@ -26560,9 +26564,9 @@
       }
       var Bb,
         yb = r.forwardRef(wb),
-        Ob = (a.p, ["title", "titleId"]);
-      function Cb() {
-        return (Cb =
+        Cb = (a.p, ["title", "titleId"]);
+      function Ob() {
+        return (Ob =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -26595,10 +26599,10 @@
       function Sb(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Ib(e, Ob);
+          l = Ib(e, Cb);
         return (
           <svg
-            {...Cb(
+            {...Ob(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -27118,9 +27122,9 @@
       }
       var Bw,
         yw = r.forwardRef(ww),
-        Ow = (a.p, ["title", "titleId"]);
-      function Cw() {
-        return (Cw =
+        Cw = (a.p, ["title", "titleId"]);
+      function Ow() {
+        return (Ow =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -27153,10 +27157,10 @@
       function Sw(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Iw(e, Ow);
+          l = Iw(e, Cw);
         return (
           <svg
-            {...Cw(
+            {...Ow(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -27644,9 +27648,9 @@
       }
       var BB,
         yB = r.forwardRef(wB),
-        OB = (a.p, ["title", "titleId"]);
-      function CB() {
-        return (CB =
+        CB = (a.p, ["title", "titleId"]);
+      function OB() {
+        return (OB =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -27679,10 +27683,10 @@
       function SB(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = IB(e, OB);
+          l = IB(e, CB);
         return (
           <svg
-            {...CB(
+            {...OB(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -28419,7 +28423,7 @@
               <div className="Recap-Decree-Content">
                 {s ? null : (
                   <div className="Recap-Blessing-Team" style={{ background: "#000000" }}>
-                    {Cd(e.event)}
+                    {Od(e.event)}
                   </div>
                 )}
                 <div className="Recap-Decree-Description">{yd(e)}</div>
@@ -28433,7 +28437,7 @@
             <div className="Recap-Decree-Container">
               <div className="Recap-Decree-Content">
                 <div className="Recap-Decree-Description">
-                  <Od events={t} source={Ed.Home} entity="" />
+                  <Cd events={t} source={Ed.Home} entity="" />
                 </div>
               </div>
             </div>
@@ -28464,10 +28468,10 @@
           w = Object(s.a)(b, 2),
           B = w[0],
           y = w[1],
-          O = Object(r.useState)(!0),
-          C = Object(s.a)(O, 2),
-          I = C[0],
-          N = C[1],
+          C = Object(r.useState)(!0),
+          O = Object(s.a)(C, 2),
+          I = O[0],
+          N = O[1],
           k = (Object(r.useContext)(oc.context), null !== (e = a.favoriteTeam) && void 0 !== e ? e : "");
         function T() {
           return (T = Object(E.a)(
@@ -28764,7 +28768,7 @@
                 <div className="Offseason-Description">
                   In Light of Recent Events, the Season {a + 1} Election has been delayed by Executive Action.
                 </div>
-                <Cp dateString={null === (e = t.sim) || void 0 === e ? void 0 : e.earlsiestaDate} />
+                <Op dateString={null === (e = t.sim) || void 0 === e ? void 0 : e.earlsiestaDate} />
               </div>
             </div>
           </div>
@@ -28998,10 +29002,10 @@
                 return e.apply(this, arguments);
               };
             })(),
-            O = <wA />;
+            C = <wA />;
           return (
             b ||
-              (O = (
+              (C = (
                 <BA.a className="ModalForm-Submit" type="submit" variant="success">
                   Pay Tribute
                 </BA.a>
@@ -29044,7 +29048,7 @@
                       </a>
                     </div>
                   </Z.a.Group>
-                  <div className="ModalForm-Submit-Wrapper">{O}</div>
+                  <div className="ModalForm-Submit-Wrapper">{C}</div>
                 </Z.a>
               </hA>
             )
@@ -29085,10 +29089,10 @@
           w = Object(r.useState)(!1),
           B = Object(s.a)(w, 2),
           y = B[0],
-          O = B[1],
-          C = Object(c.h)(),
-          I = C.voteType,
-          S = C.entityId,
+          C = B[1],
+          O = Object(c.h)(),
+          I = O.voteType,
+          S = O.entityId,
           N = Object(r.useState)({ id: "", title: "", description: "", info: [] }),
           k = Object(s.a)(N, 2),
           T = k[0],
@@ -29136,9 +29140,9 @@
           we = Object(r.useState)(""),
           Be = Object(s.a)(we, 2),
           ye = Be[0],
-          Oe = Be[1],
-          Ce = Object(r.useState)([]),
-          Ie = Object(s.a)(Ce, 2),
+          Ce = Be[1],
+          Oe = Object(r.useState)([]),
+          Ie = Object(s.a)(Oe, 2),
           Se = Ie[0],
           Ne = Ie[1],
           ke = Object(r.useState)(""),
@@ -29193,7 +29197,7 @@
                         for (;;)
                           switch ((e.prev = e.next)) {
                             case 0:
-                              return (t = ""), n.favoriteTeam && (t = n.favoriteTeam), (e.next = 4), Cg(t);
+                              return (t = ""), n.favoriteTeam && (t = n.favoriteTeam), (e.next = 4), Og(t);
                             case 4:
                               void 0 !== (a = e.sent) && Q(a);
                             case 6:
@@ -29457,7 +29461,7 @@
           },
           at = function (e) {
             var t = e.target.value;
-            Oe(t);
+            Ce(t);
           },
           nt = function (e) {
             var t = e.target.value;
@@ -29707,9 +29711,9 @@
             <Z.a
               className="ModalForm-Form"
               onSubmit={function (e) {
-                if ((e.preventDefault(), O(!0), h > it))
-                  return t("Max vote is ".concat(it, "!"), { appearance: "error" }), void O(!1);
-                if (h < 1) return t("You must cast at least 1 vote!", { appearance: "error" }), void O(!1);
+                if ((e.preventDefault(), C(!0), h > it))
+                  return t("Max vote is ".concat(it, "!"), { appearance: "error" }), void C(!1);
+                if (h < 1) return t("You must cast at least 1 vote!", { appearance: "error" }), void C(!1);
                 var a = {};
                 if ("2" === I) {
                   var r = 0,
@@ -29729,18 +29733,18 @@
                     }),
                     2 === l && ("" === ae || "" === oe))
                   )
-                    return t("You must select both teams!", { appearance: "error" }), void O(!1);
-                  if (1 === l && "" === ae) return t("You must select a team!", { appearance: "error" }), void O(!1);
+                    return t("You must select both teams!", { appearance: "error" }), void C(!1);
+                  if (1 === l && "" === ae) return t("You must select a team!", { appearance: "error" }), void C(!1);
                   if (2 === r && ("" === ue || "" === fe))
-                    return t("You must select both players!", { appearance: "error" }), void O(!1);
+                    return t("You must select both players!", { appearance: "error" }), void C(!1);
                   if (2 === r && ue === fe)
-                    return t("You cannot select the same player twice!", { appearance: "error" }), void O(!1);
-                  if (1 === r && "" === ue) return t("You must select a player!", { appearance: "error" }), void O(!1);
-                  if (1 === s && "" === ye) return t("You must select a mod!", { appearance: "error" }), void O(!1);
+                    return t("You cannot select the same player twice!", { appearance: "error" }), void C(!1);
+                  if (1 === r && "" === ue) return t("You must select a player!", { appearance: "error" }), void C(!1);
+                  if (1 === s && "" === ye) return t("You must select a mod!", { appearance: "error" }), void C(!1);
                   if (1 === c && "" === Pe)
-                    return t("You must select a location!", { appearance: "error" }), void O(!1);
-                  if (1 === u && "" === Fe) return t("You must select a rating!", { appearance: "error" }), void O(!1);
-                  if (1 === m && "" === Je) return t("You must select an item!", { appearance: "error" }), void O(!1);
+                    return t("You must select a location!", { appearance: "error" }), void C(!1);
+                  if (1 === u && "" === Fe) return t("You must select a rating!", { appearance: "error" }), void C(!1);
+                  if (1 === m && "" === Je) return t("You must select an item!", { appearance: "error" }), void C(!1);
                   "" !== ae && (a = Object(A.a)(Object(A.a)({}, a), {}, { teamTarget0: ae })),
                     "" !== oe && (a = Object(A.a)(Object(A.a)({}, a), {}, { teamTarget1: oe })),
                     "" !== ue && (a = Object(A.a)(Object(A.a)({}, a), {}, { playerTarget0: ue })),
@@ -29777,7 +29781,7 @@
                           for (;;)
                             switch ((e.prev = e.next)) {
                               case 0:
-                                O(!1);
+                                C(!1);
                               case 1:
                               case "end":
                                 return e.stop();
@@ -29841,7 +29845,7 @@
           </hA>
         );
       };
-      function Oy(e) {
+      function Cy(e) {
         var t,
           a = e.path,
           n = Object(r.useContext)(oc.context),
@@ -29853,7 +29857,7 @@
             <div className="GodsDay">
               <div className="GodsDay-Header">Blaseball Gods' Day</div>
               <Kp teams={n.teams} postseasons={i.postseasons} />
-              <Cp dateString={null === (t = i.sim) || void 0 === t ? void 0 : t.earlseasonDate} />
+              <Op dateString={null === (t = i.sim) || void 0 === t ? void 0 : t.earlseasonDate} />
               <div className="GodsDay-Body">
                 Welcome to Blaseball. Season {o + 2} will begin on July 19th at 8am PST. Check the{" "}
                 <a href="https://twitter.com/blaseball">Twitter</a> or <a href="https://discord.gg/3uFgJhu">Discord</a>{" "}
@@ -29866,7 +29870,7 @@
         );
       }
       a(250);
-      var Cy,
+      var Oy,
         Iy = function () {
           return (
             <div className="Privacy">
@@ -30855,7 +30859,7 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Cy || (Cy = <image id="Ball" x={87} y={75} width={784} height={911} xlinkHref="<img/png blob>" />)}
+            {Oy || (Oy = <image id="Ball" x={87} y={75} width={784} height={911} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
@@ -30882,7 +30886,7 @@
                 element={
                   <div className="Stubs-All">
                     <div className="Stubs-Header">The Season is Over!</div>
-                    <Cp dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
+                    <Op dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
                     <div className="Stubs-Body">The Wild Card teams will be chosen soon.</div>
                   </div>
                 }
@@ -31709,12 +31713,12 @@
       var Ky,
         _y,
         $y,
-        eO,
-        tO = a(159),
-        aO = a(160),
-        nO = ["title", "titleId"];
-      function rO() {
-        return (rO =
+        eC,
+        tC = a(159),
+        aC = a(160),
+        nC = ["title", "titleId"];
+      function rC() {
+        return (rC =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -31724,7 +31728,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function lO(e, t) {
+      function lC(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -31744,13 +31748,13 @@
         }
         return r;
       }
-      function iO(e, t) {
+      function iC(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = lO(e, nO);
+          l = lC(e, nC);
         return (
           <svg
-            {...rO(
+            {...rC(
               {
                 id: "Layer_1",
                 xmlns: "http://www.w3.org/2000/svg",
@@ -31797,8 +31801,8 @@
                   height={70.31}
                 />
               ))}
-            {eO ||
-              (eO = (
+            {eC ||
+              (eC = (
                 <rect
                   id="base3"
                   x={27.38}
@@ -31812,9 +31816,9 @@
           </svg>
         );
       }
-      var oO = r.forwardRef(iO);
+      var oC = r.forwardRef(iC);
       a.p;
-      function sO() {
+      function sC() {
         var e,
           t,
           a = Object(r.useContext)(S.context),
@@ -31860,8 +31864,8 @@
         );
         var B,
           y,
-          O,
           C,
+          O,
           I,
           N,
           k,
@@ -31940,9 +31944,9 @@
                 </h2>
               </div>
               <div className="Bulletin-Item-Contents Bulletin-Item-ImageGrid">
-                {cO.map(function (e) {
+                {cC.map(function (e) {
                   return (
-                    <tO.a
+                    <tC.a
                       id={e}
                       options={{ theme: n.lightMode ? "light" : "dark", conversation: "none", dnt: !0 }}
                       className="Bulletin-Tweet"
@@ -31971,7 +31975,7 @@
                 </h3>
               )}
               <Ep />
-              <oO className="Bulletin-Item-League-Icon" />
+              <oC className="Bulletin-Item-League-Icon" />
               {L ? null : (
                 <l.a.Fragment>
                   {Hg(a.sim, "SIM_COMMUNITY_CHEST") ? Ks(<Re />, "LeagueInfo-Bar", b, 3e3) : null}
@@ -31999,7 +32003,7 @@
           { datetime: a.sim.earlpostseasonDate, phase: [9, 10], name: "Earlpostseason" },
           { datetime: a.sim.latepostseasonDate, phase: [11, 12, 13], name: "Latepostseason" },
         ];
-        O = (
+        C = (
           <l.a.Fragment>
             <div className="Bulletin-Item-Header">
               <div className="Bulletin-Item-Header-Icon" style={{ background: "#ffcb49", color: "#e30050" }}>
@@ -32049,10 +32053,10 @@
                         ref={a ? u : null}
                       >
                         <span className="Bulletin-Schedule-Date" aria-hidden="true">
-                          {AO(e.datetime)}
+                          {AC(e.datetime)}
                         </span>
                         <span className="Bulletin-Schedule-Name" role="text">
-                          {e.name} <span className="sr-only" aria-label={" starts at " + uO(e.datetime)} role="text" />
+                          {e.name} <span className="sr-only" aria-label={" starts at " + uC(e.datetime)} role="text" />
                         </span>
                         <mh header={e.name} lines={Yy(e.name)} noMargin={!0} />
                       </div>
@@ -32064,11 +32068,11 @@
                   aria-hidden={a.sim.phase > 13}
                 >
                   <span className="Bulletin-Schedule-Date" aria-hidden="true">
-                    {AO(a.sim.electionDate)}
+                    {AC(a.sim.electionDate)}
                   </span>
                   <span className="Bulletin-Schedule-Name" role="text">
                     Election
-                    <span className="sr-only" aria-label={" starts at " + uO(a.sim.electionDate)} role="text" />
+                    <span className="sr-only" aria-label={" starts at " + uC(a.sim.electionDate)} role="text" />
                   </span>
                   <mh header="Election" lines={Yy("Election")} noMargin={!0} />
                 </div>
@@ -32213,7 +32217,7 @@
                     <div className="Bulletin-Actions-Item-Text">The Future is in your hands. Democracy now!</div>
                   </li>
                 )),
-          (C =
+          (O =
             0 === F.length || 0 === (null === (e = a.sim) || void 0 === e ? void 0 : e.phase) || P ? (
               <l.a.Fragment>
                 <div className="Bulletin-Item-Header">
@@ -32525,7 +32529,7 @@
                 aria-labelledby="actions"
                 style={{ gridRow: 3 }}
               >
-                {C}
+                {O}
               </div>
               {T}
               <div role="article" className="Bulletin-Item" style={{ gridRow: 3 }}>
@@ -32555,7 +32559,7 @@
                   aria-labelledby="schedule"
                   style={{ gridRow: 2, gridColumn: 1, minWidth: "350px" }}
                 >
-                  {O}
+                  {C}
                 </div>
               )}
               <div role="article" aria-labelledby="community" className="Bulletin-Item Bulletin-Wide-Bottom">
@@ -32568,7 +32572,7 @@
           <div className="Bulletin" id="Main-Body">
             <div className="Bulletin-Rows Bulletin-Rows-Siesta">
               <div role="article" className="Bulletin-Item" aria-labelledby="schedule" style={{ gridRow: 1 }}>
-                {O}
+                {C}
               </div>
               <div
                 role="article"
@@ -32592,7 +32596,7 @@
                 aria-labelledby="actions"
                 style={{ gridRow: 3 }}
               >
-                {C}
+                {O}
               </div>
               {T}
               <div role="article" aria-labelledby="community" className="Bulletin-Item Bulletin-Wide-Bottom">
@@ -32604,13 +32608,13 @@
           ae
         );
       }
-      var cO = (function (e) {
+      var cC = (function (e) {
         var t,
           a = [];
         for (; a.length <= 2; ) (t = Math.floor(Math.random() * e.length)), a.includes(t) || a.push(t);
         return [e[a[0]], e[a[1]], e[a[2]]];
-      })(aO.collection);
-      function AO(e) {
+      })(aC.collection);
+      function AC(e) {
         var t = new Date(e),
           a = (t.getMonth() + 1).toString(),
           n = t.getDate().toString(),
@@ -32624,7 +32628,7 @@
           a + "." + n + " " + r + ":" + l + i
         );
       }
-      function uO(e) {
+      function uC(e) {
         var t = new Date(e),
           a = (t.getMonth() + 1).toString(),
           n = t.getDate().toString(),
@@ -32638,9 +32642,9 @@
           a + "/" + n + " " + r + i
         );
       }
-      var mO = { player: void 0, item: void 0 };
-      var dO,
-        gO = function (e) {
+      var mC = { player: void 0, item: void 0 };
+      var dC,
+        gC = function (e) {
           var t,
             a,
             n,
@@ -32650,7 +32654,7 @@
             u = Object(s.a)(A, 2),
             m = u[0],
             d = u[1],
-            g = Object(r.useState)(mO),
+            g = Object(r.useState)(mC),
             v = Object(s.a)(g, 2),
             p = v[0],
             h = v[1];
@@ -32717,15 +32721,15 @@
               return t;
             })(p.item),
             y = [],
-            O = [],
-            C = "",
+            C = [],
+            O = "",
             I = Object(Y.a)(B);
           try {
             for (I.s(); !(b = I.n()).done; ) {
               var N,
                 k = b.value;
               if (null !== k) {
-                k === (null === (N = p.item) || void 0 === N ? void 0 : N.root) ? (C = k.name) : O.push(k.name);
+                k === (null === (N = p.item) || void 0 === N ? void 0 : N.root) ? (O = k.name) : C.push(k.name);
                 var T,
                   P = Object(Y.a)(k.adjustments);
                 try {
@@ -32803,12 +32807,12 @@
                 <li className="Player-Info-Line Item-Info-Line">
                   <div className="Player-Info-Line-Header">Type</div>
                   <div className="Item-Stats-Line-Body">
-                    {Zs(C)} {C}
+                    {Zs(O)} {O}
                   </div>
                 </li>
                 <li className="Player-Info-Line Item-Info-Line">
                   <div className="Player-Info-Line-Header">Elements</div>
-                  {O.length > 0 ? O.join(", ") : "None"}
+                  {C.length > 0 ? C.join(", ") : "None"}
                 </li>
               </ul>
             ),
@@ -32842,7 +32846,7 @@
             );
           return <hA {...Object.assign({}, e, { className: "ModalItem Item" })}>{M}</hA>;
         },
-        fO = function (e) {
+        fC = function (e) {
           var t = Object(r.useContext)(oc.context),
             a = Object(r.useState)(void 0),
             n = Object(s.a)(a, 2),
@@ -32923,7 +32927,7 @@
             );
           return <hA {...Object.assign({}, e, { className: "ModalItem" })}>{b}</hA>;
         },
-        EO = function (e) {
+        EC = function (e) {
           var t,
             a = e.path,
             n = Object(r.useContext)(S.context),
@@ -32934,7 +32938,7 @@
                 element={
                   <div className="Stubs-All">
                     <div className="Stubs-Header">It's the Pre-Season.</div>
-                    <Cp dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
+                    <Op dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
                     <div className="Stubs-Body">Season {i + 1} will begin soon.</div>
                   </div>
                 }
@@ -32945,7 +32949,7 @@
             </div>
           );
         },
-        vO = function (e) {
+        vC = function (e) {
           var t,
             a = e.path,
             n = Object(r.useContext)(S.context),
@@ -32968,7 +32972,7 @@
                 element={
                   <div className="Stubs-All">
                     <div className="Stubs-Header">The Season is Over!</div>
-                    <Cp dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
+                    <Op dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
                     <div className="Stubs-Body">Postseason {i + 1} will begin soon.</div>
                   </div>
                 }
@@ -32979,7 +32983,7 @@
             </div>
           );
         },
-        pO =
+        pC =
           (a(254),
           function () {
             var e = (
@@ -34084,7 +34088,7 @@
               </div>
             );
           }),
-        hO = function (e) {
+        hC = function (e) {
           var t,
             a = e.path,
             n = Object(r.useContext)(S.context),
@@ -34107,7 +34111,7 @@
                 element={
                   <div className="Stubs-All">
                     <div className="Stubs-Header">Wild Card Evening</div>
-                    <Cp dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
+                    <Op dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
                     <div className="Stubs-Body">
                       The Wild Card round has ended. Postseason {i + 1} will continue soon.
                     </div>
@@ -34120,9 +34124,9 @@
             </div>
           );
         },
-        bO = (a(147), a(17)),
-        wO = a(126);
-      function BO(e) {
+        bC = (a(147), a(17)),
+        wC = a(126);
+      function BC(e) {
         var t,
           a,
           n,
@@ -34158,9 +34162,9 @@
           w = Object(c.g)(),
           B = Object(r.useState)([]),
           y = Object(s.a)(B, 2),
-          O = (y[0], y[1]),
-          C = Object(r.useState)(""),
-          I = Object(s.a)(C, 2),
+          C = (y[0], y[1]),
+          O = Object(r.useState)(""),
+          I = Object(s.a)(O, 2),
           N = I[0],
           k = I[1],
           T = Object(r.useState)(""),
@@ -34196,7 +34200,7 @@
             if (void 0 !== g.damageResults) {
               var e = JSON.parse(g.damageResults);
               if (void 0 !== e) {
-                O(e);
+                C(e);
                 for (
                   var t = -1,
                     a = -1,
@@ -34307,8 +34311,8 @@
               </div>
             )));
         }
-        var Ae = OO(g.homeHp, g.homeMaxHp),
-          ue = OO(g.awayHp, g.awayMaxHp),
+        var Ae = CC(g.homeHp, g.homeMaxHp),
+          ue = CC(g.awayHp, g.awayMaxHp),
           me = (
             <div className={"BossFightWidget-ScoreTeamColorBar" + N} style={{ background: g.homeTeamColor }}>
               {Jg(g.homeTeamEmoji)}
@@ -34412,7 +34416,7 @@
               </div>
               <div className="BossFightWidget-Container">
                 <div className="BossFightWidget-Header-Wrapper">
-                  <Ov
+                  <Cv
                     statusDisplay={b}
                     started={h.started}
                     stadiumName={se}
@@ -34436,16 +34440,16 @@
                         {fe}
                         {void 0 !== g.awayHp ? (
                           <div className="BossFightWidget-Names-Spirit">
-                            <wO.a
+                            <wC.a
                               now={ue}
                               label={gf(g.awayHp)}
-                              variant={CO(ue)}
+                              variant={OC(ue)}
                               className="BossFightWidget-SpiritBar"
                             />
                           </div>
                         ) : null}
                       </div>
-                      <yO score={df(g.awayScore)} />
+                      <yC score={df(g.awayScore)} />
                     </d>
                   </div>
                   <div className="BossFightWidget-Names">
@@ -34455,16 +34459,16 @@
                         {de}
                         {void 0 !== g.homeHp ? (
                           <div className="BossFightWidget-Names-Spirit">
-                            <wO.a
+                            <wC.a
                               now={Ae}
                               label={gf(g.homeHp)}
-                              variant={CO(Ae)}
+                              variant={OC(Ae)}
                               className="BossFightWidget-SpiritBar"
                             />
                           </div>
                         ) : null}
                       </div>
-                      <yO score={df(g.homeScore)} />
+                      <yC score={df(g.homeScore)} />
                     </d>
                   </div>
                 </div>
@@ -34489,7 +34493,7 @@
           )
         );
       }
-      function yO(e) {
+      function yC(e) {
         var t = e.score,
           a = e.damageResults,
           n = e.team;
@@ -34501,39 +34505,39 @@
                 r = {},
                 i =
                   ((a = {}),
-                  Object(bO.a)(a, G.Steal, "Steal"),
-                  Object(bO.a)(a, G.HomeSteal, "Steal Home"),
-                  Object(bO.a)(a, G.Run, "Run"),
-                  Object(bO.a)(a, G.HomeRun, "Home Run"),
-                  Object(bO.a)(a, G.Strike, "Strike"),
-                  Object(bO.a)(a, G.FoulBall, "Foul"),
-                  Object(bO.a)(a, G.StrikeOut, "Strike Out"),
-                  Object(bO.a)(a, G.FlyOut, "Fly Out"),
-                  Object(bO.a)(a, G.GroundOut, "Ground Out"),
-                  Object(bO.a)(a, G.Single, "Single"),
-                  Object(bO.a)(a, G.Double, "Double"),
-                  Object(bO.a)(a, G.Triple, "Triple"),
-                  Object(bO.a)(a, G.Quadruple, "Quadruple"),
-                  Object(bO.a)(a, G.Walk, "Walk"),
-                  Object(bO.a)(a, G.CaughtStealing, "Caught Stealing"),
-                  Object(bO.a)(a, G.Ball, "Ball"),
-                  Object(bO.a)(a, G.SacrificeFly, "Sacrifice Fly"),
-                  Object(bO.a)(a, G.Out, "Out"),
-                  Object(bO.a)(a, G.CurseOfCrows, "Crows"),
-                  Object(bO.a)(a, G.GiveSpirit, "Give Spirit"),
-                  Object(bO.a)(a, G.BigPeanut, "Big Peanut"),
-                  Object(bO.a)(a, G.BloodDrain, "Blooddrain"),
-                  Object(bO.a)(a, G.PeanutSwallowed, "Allergy"),
-                  Object(bO.a)(a, G.Incineration, "Incineration"),
-                  Object(bO.a)(a, G.Feedback, "Feedback"),
-                  Object(bO.a)(a, G.Reverb, "Reverb"),
-                  Object(bO.a)(a, G.Unshelled, "Unshelled"),
-                  Object(bO.a)(a, G.Partying, "Partying"),
-                  Object(bO.a)(a, G.LoveSpell, "Love Spell"),
-                  Object(bO.a)(a, G.PeanutYummy, "Yummy"),
-                  Object(bO.a)(a, G.SuperPeanutYummy, "Super Yummy"),
-                  Object(bO.a)(a, G.SuperPeanutAllergic, "Super Allergy"),
-                  Object(bO.a)(a, G.Rebirth, "Rise"),
+                  Object(bC.a)(a, G.Steal, "Steal"),
+                  Object(bC.a)(a, G.HomeSteal, "Steal Home"),
+                  Object(bC.a)(a, G.Run, "Run"),
+                  Object(bC.a)(a, G.HomeRun, "Home Run"),
+                  Object(bC.a)(a, G.Strike, "Strike"),
+                  Object(bC.a)(a, G.FoulBall, "Foul"),
+                  Object(bC.a)(a, G.StrikeOut, "Strike Out"),
+                  Object(bC.a)(a, G.FlyOut, "Fly Out"),
+                  Object(bC.a)(a, G.GroundOut, "Ground Out"),
+                  Object(bC.a)(a, G.Single, "Single"),
+                  Object(bC.a)(a, G.Double, "Double"),
+                  Object(bC.a)(a, G.Triple, "Triple"),
+                  Object(bC.a)(a, G.Quadruple, "Quadruple"),
+                  Object(bC.a)(a, G.Walk, "Walk"),
+                  Object(bC.a)(a, G.CaughtStealing, "Caught Stealing"),
+                  Object(bC.a)(a, G.Ball, "Ball"),
+                  Object(bC.a)(a, G.SacrificeFly, "Sacrifice Fly"),
+                  Object(bC.a)(a, G.Out, "Out"),
+                  Object(bC.a)(a, G.CurseOfCrows, "Crows"),
+                  Object(bC.a)(a, G.GiveSpirit, "Give Spirit"),
+                  Object(bC.a)(a, G.BigPeanut, "Big Peanut"),
+                  Object(bC.a)(a, G.BloodDrain, "Blooddrain"),
+                  Object(bC.a)(a, G.PeanutSwallowed, "Allergy"),
+                  Object(bC.a)(a, G.Incineration, "Incineration"),
+                  Object(bC.a)(a, G.Feedback, "Feedback"),
+                  Object(bC.a)(a, G.Reverb, "Reverb"),
+                  Object(bC.a)(a, G.Unshelled, "Unshelled"),
+                  Object(bC.a)(a, G.Partying, "Partying"),
+                  Object(bC.a)(a, G.LoveSpell, "Love Spell"),
+                  Object(bC.a)(a, G.PeanutYummy, "Yummy"),
+                  Object(bC.a)(a, G.SuperPeanutYummy, "Super Yummy"),
+                  Object(bC.a)(a, G.SuperPeanutAllergic, "Super Allergy"),
+                  Object(bC.a)(a, G.Rebirth, "Rise"),
                   a);
               if (
                 (e.forEach(function (e) {
@@ -34571,26 +34575,26 @@
           </div>
         );
       }
-      function OO(e, t) {
+      function CC(e, t) {
         var a = (e / t) * 100;
         return e >= 1e3 && a < 8 ? 8 : e >= 100 && a < 6 ? 6 : e >= 10 && a < 4 ? 4 : a < 2.5 ? 2.5 : a;
       }
-      function CO(e) {
+      function OC(e) {
         return e > 70 ? "success" : e > 20 ? "warning" : "danger";
       }
-      function IO(e) {
+      function IC(e) {
         var t = Object(r.useContext)(S.context),
           a = Fv(e.data, t.standings);
-        return <BO data={e.data} metaInfo={a} />;
+        return <BC data={e.data} metaInfo={a} />;
       }
       !(function (e) {
         (e[(e.Live = 0)] = "Live"),
           (e[(e.Upcoming = 1)] = "Upcoming"),
           (e[(e.Standings = 2)] = "Standings"),
           (e[(e.Leaderboard = 3)] = "Leaderboard");
-      })(dO || (dO = {}));
-      var SO,
-        NO = function (e) {
+      })(dC || (dC = {}));
+      var SC,
+        NC = function (e) {
           var t,
             a = e.path,
             n = Object(r.useContext)(oc.context),
@@ -34606,7 +34610,7 @@
                   {null === (t = i.schedule) || void 0 === t
                     ? void 0
                     : t.map(function (e) {
-                        return <IO data={e} />;
+                        return <IC data={e} />;
                       })}
                 </ul>
               ),
@@ -34623,21 +34627,21 @@
             (function () {
               switch (a) {
                 case "/leaderboard":
-                  return dO.Leaderboard;
+                  return dC.Leaderboard;
                 case "/standings":
-                  return dO.Standings;
+                  return dC.Standings;
                 default:
-                  return dO.Live;
+                  return dC.Live;
               }
             })()
           ) {
-            case dO.Leaderboard:
+            case dC.Leaderboard:
               s = <kp />;
               break;
-            case dO.Standings:
+            case dC.Standings:
               s = <Qp />;
               break;
-            case dO.Live:
+            case dC.Live:
               s = o ? <wA /> : m;
           }
           return (
@@ -34658,9 +34662,9 @@
                 <l.a.Fragment>
                   <div className="League-Body">
                     The Semi Centennial will begin in{" "}
-                    <Cp dateString={new Date(i.sim.state.scheduled_game_event).toString()} />.
+                    <Op dateString={new Date(i.sim.state.scheduled_game_event).toString()} />.
                   </div>
-                  <Op />
+                  <Cp />
                   {s}
                 </l.a.Fragment>
               )}
@@ -34668,19 +34672,19 @@
           );
         };
       a(83);
-      function kO() {
+      function kC() {
         var e = Object(r.useContext)(S.context);
         if (!e || !e.sim) return null;
         var t = e.tournament;
         return t ? (
           <div className="Tournament-List">
-            <TO teams={null === t || void 0 === t ? void 0 : t.teams} />
+            <TC teams={null === t || void 0 === t ? void 0 : t.teams} />
           </div>
         ) : null;
       }
-      function TO(e) {
+      function TC(e) {
         var t = e.teams.map(function (e, t) {
-          return <PO key={t} team={e} />;
+          return <PC key={t} team={e} />;
         });
         return (
           <div className="Standings-Division">
@@ -34688,7 +34692,7 @@
           </div>
         );
       }
-      function PO(e) {
+      function PC(e) {
         var t = Object(c.g)(),
           a = Object(r.useContext)(oc.context),
           n = Object(r.useContext)(x.context).user,
@@ -34725,9 +34729,9 @@
           (e[(e.Tournament = 2)] = "Tournament"),
           (e[(e.Leaderboard = 3)] = "Leaderboard"),
           (e[(e.Bracket = 4)] = "Bracket");
-      })(SO || (SO = {}));
-      var DO,
-        xO = function (e) {
+      })(SC || (SC = {}));
+      var DC,
+        xC = function (e) {
           var t,
             a = e.path,
             n = Object(r.useContext)(S.context),
@@ -34739,22 +34743,22 @@
           function A() {
             switch (a) {
               case "/upcoming":
-                return SO.Upcoming;
+                return SC.Upcoming;
               case "/leaderboard":
-                return SO.Leaderboard;
+                return SC.Leaderboard;
               case "/tournament":
-                return SO.Tournament;
+                return SC.Tournament;
               case "/bracket":
-                return SO.Bracket;
+                return SC.Bracket;
               default:
-                return SO.Live;
+                return SC.Live;
             }
           }
           if (!n.sim) return null;
           var u,
-            m = A() === SO.Upcoming ? n.tomorrowSchedule : n.schedule,
-            d = A() === SO.Live ? n.postseasons[0].matchups : n.postseasons[0].tomorrowMatchups,
-            g = A() === SO.Upcoming ? n.sim.day + 1 : n.sim.day,
+            m = A() === SC.Upcoming ? n.tomorrowSchedule : n.schedule,
+            d = A() === SC.Live ? n.postseasons[0].matchups : n.postseasons[0].tomorrowMatchups,
+            g = A() === SC.Upcoming ? n.sim.day + 1 : n.sim.day,
             f =
               void 0 === m ? null : (
                 <ul>
@@ -34799,25 +34803,25 @@
               ) : (
                 <div>
                   <div className="League-Countdown">
-                    {A() === SO.Upcoming ? <Cp dateString={Fg().toString()} /> : null}
+                    {A() === SC.Upcoming ? <Op dateString={Fg().toString()} /> : null}
                   </div>
                   {f}
                 </div>
               );
           void 0 !== n && void 0 !== n.sim && n.sim.season;
           switch (A()) {
-            case SO.Leaderboard:
+            case SC.Leaderboard:
               u = <kp />;
               break;
-            case SO.Tournament:
-              u = <kO />;
+            case SC.Tournament:
+              u = <kC />;
               break;
-            case SO.Bracket:
+            case SC.Bracket:
               for (var v = [], p = 0; p < n.postseasons.length; p++) v.push(<Jp playoffIndex={p} />);
               u = <l.a.Fragment>{v}</l.a.Fragment>;
               break;
-            case SO.Live:
-            case SO.Upcoming:
+            case SC.Live:
+            case SC.Upcoming:
               u = s ? <wA /> : E;
           }
           return (
@@ -34828,7 +34832,7 @@
             </div>
           );
         },
-        LO = function (e) {
+        LC = function (e) {
           var t,
             a = e.path,
             n = Object(r.useContext)(S.context),
@@ -34840,7 +34844,7 @@
               o = <kp />;
               break;
             case "/tournament":
-              o = <kO />;
+              o = <kC />;
               break;
             case "/league":
               for (var s = [], c = 0; c < n.postseasons.length; c++) s.push(<Jp playoffIndex={c} />);
@@ -34852,7 +34856,7 @@
                 element={
                   <div className="Stubs-All">
                     <h2 className="League-Header">{null === i || void 0 === i ? void 0 : i.name}</h2>
-                    <Cp dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
+                    <Op dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
                     <div className="Stubs-Body">
                       {null === i || void 0 === i ? void 0 : i.name} will begin soon. Cool!
                     </div>
@@ -34866,7 +34870,7 @@
             </l.a.Fragment>
           );
         },
-        RO = function (e) {
+        RC = function (e) {
           var t,
             a = e.path,
             n = Object(r.useContext)(S.context),
@@ -34878,7 +34882,7 @@
               o = <kp />;
               break;
             case "/tournament":
-              o = <kO />;
+              o = <kC />;
               break;
             case "/league":
               for (var s = [], c = 0; c < n.postseasons.length; c++) s.push(<Jp playoffIndex={c} />);
@@ -34890,7 +34894,7 @@
                 element={
                   <div className="Stubs-All">
                     <h2 className="League-Header">{null === i || void 0 === i ? void 0 : i.name}</h2>
-                    <Cp dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
+                    <Op dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
                     <div className="Stubs-Body">
                       Coffee Break! {null === i || void 0 === i ? void 0 : i.name} will continue soon. Cool!
                     </div>
@@ -34904,7 +34908,7 @@
             </l.a.Fragment>
           );
         },
-        QO = function (e) {
+        QC = function (e) {
           var t = e.path,
             a = Object(r.useContext)(S.context),
             n = a.tournament,
@@ -34916,7 +34920,7 @@
               o = <kp />;
               break;
             case "/tournament":
-              o = <kO />;
+              o = <kC />;
               break;
             case "/league":
               for (var s = [], c = 0; c < a.postseasons.length; c++) s.push(<Jp playoffIndex={c} />);
@@ -34969,7 +34973,7 @@
             );
           return <l.a.Fragment>{g}</l.a.Fragment>;
         };
-      function MO() {
+      function MC() {
         var e = Object(r.useContext)(oc.context),
           t = Object(r.useContext)(S.context);
         return void 0 === e || void 0 === t ? null : (
@@ -34985,9 +34989,9 @@
           </div>
         );
       }
-      var jO = ["title", "titleId"];
-      function FO() {
-        return (FO =
+      var jC = ["title", "titleId"];
+      function FC() {
+        return (FC =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -34997,7 +35001,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function HO(e, t) {
+      function HC(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -35017,13 +35021,13 @@
         }
         return r;
       }
-      function VO(e, t) {
+      function VC(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = HO(e, jO);
+          l = HC(e, jC);
         return (
           <svg
-            {...FO(
+            {...FC(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -35037,13 +35041,13 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {DO || (DO = <image id="siesta" x={9.5} y={55} width={237} height={146} xlinkHref="<img/png blob>" />)}
+            {DC || (DC = <image id="siesta" x={9.5} y={55} width={237} height={146} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var GO,
-        WO = r.forwardRef(VO),
-        zO =
+      var GC,
+        WC = r.forwardRef(VC),
+        zC =
           (a.p,
           function (e) {
             Object(r.useContext)(x.context).user;
@@ -35082,7 +35086,7 @@
               </div>
             );
           }),
-        UO = function (e) {
+        UC = function (e) {
           Object(r.useContext)(x.context).user;
           var t = Object(r.useContext)(oc.context),
             a = e.event;
@@ -35115,7 +35119,7 @@
             </div>
           );
         },
-        YO = function (e) {
+        YC = function (e) {
           var t = Object(r.useContext)(x.context).user,
             a = Object(r.useContext)(oc.context),
             n = e.event;
@@ -35154,7 +35158,7 @@
             </div>
           );
         },
-        JO = function (e) {
+        JC = function (e) {
           var t = e.event,
             a = Object(r.useContext)(oc.context),
             n = void 0;
@@ -35173,30 +35177,30 @@
                     </div>
                   ) : null}
                   <div className="Recap-Decree-Description">
-                    <Od events={[t]} source={Ed.ParentEvent} entity="" />
+                    <Cd events={[t]} source={Ed.ParentEvent} entity="" />
                   </div>
                 </div>
               </div>
             )
           );
         },
-        qO = function (e) {
+        qC = function (e) {
           var t = e.event;
           switch (t.type) {
             case 56:
             case 57:
-              return <zO event={t} />;
+              return <zC event={t} />;
             case 81:
-              return <YO event={t} />;
+              return <YC event={t} />;
             case 106:
             case 107:
             case 146:
             case 147:
-              return <UO event={t} />;
+              return <UC event={t} />;
           }
-          return <JO event={t} />;
+          return <JC event={t} />;
         },
-        XO = function (e) {
+        XC = function (e) {
           var t,
             a = e.path,
             n = Object(r.useContext)(S.context),
@@ -35255,7 +35259,7 @@
                           return n.length > 0 ? <my event={e} subEvents={n} /> : null;
                         }
                         return (null === (t = e.metadata) || void 0 === t ? void 0 : t.parent) ? null : (
-                          <qO event={e} />
+                          <qC event={e} />
                         );
                       })
                     ) : (
@@ -35272,10 +35276,10 @@
               <xy
                 element={
                   <div className="Stubs-All">
-                    <WO style={{ width: "250px", height: "250px" }} />
+                    <WC style={{ width: "250px", height: "250px" }} />
                     <div className="Stubs-Header">Earlsiesta</div>
                     <Ep />
-                    <Cp dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
+                    <Op dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
                     <div className="Stubs-Body">Midseason {i + 1} will begin soon.</div>
                   </div>
                 }
@@ -35286,7 +35290,7 @@
             </div>
           );
         },
-        ZO = function (e) {
+        ZC = function (e) {
           Object(r.useContext)(x.context).user;
           var t = Object(r.useContext)(oc.context),
             a = e.event;
@@ -35311,7 +35315,7 @@
             </div>
           );
         },
-        KO = function (e) {
+        KC = function (e) {
           var t,
             a,
             n = e.path,
@@ -35330,9 +35334,9 @@
             w = b[0],
             B = b[1],
             y = Object(r.useState)(!0),
-            O = Object(s.a)(y, 2),
-            C = O[0],
-            I = O[1],
+            C = Object(s.a)(y, 2),
+            O = C[0],
+            I = C[1],
             N = Object(r.useContext)(oc.context),
             k = Object(r.useContext)(x.context).user;
           Object(r.useEffect)(function () {
@@ -35379,7 +35383,7 @@
                 60 !== e.type &&
                 -1 !== e.type &&
                 (void 0 === e.metadata || void 0 === e.metadata.parent) &&
-                (!C || e.teamTags.includes(P))
+                (!O || e.teamTags.includes(P))
               );
             }),
             Q = !0,
@@ -35401,7 +35405,7 @@
                     />
                   </Z.a>
                   {D.map(function (e) {
-                    return v && !e.teamTags.includes(P) ? null : (Q && (Q = !1), (<qO event={e} />));
+                    return v && !e.teamTags.includes(P) ? null : (Q && (Q = !1), (<qC event={e} />));
                   })}
                   {Q ? <div className="Recap-NoneFound">No events found...</div> : null}
                 </div>
@@ -35491,7 +35495,7 @@
                                         return t.includes(e.id);
                                       })
                                     : [];
-                                return <ZO event={e} subEvents={a} />;
+                                return <ZC event={e} subEvents={a} />;
                               })}
                         </div>
                       </div>
@@ -35507,9 +35511,9 @@
                       type="switch"
                       id="otherFaveTeam"
                       label="Favorite Team's Results Only"
-                      checked={C}
+                      checked={O}
                       onChange={function () {
-                        return I(!C);
+                        return I(!O);
                       }}
                     />
                     <dy subEvents={R} />
@@ -35533,10 +35537,10 @@
               <xy
                 element={
                   <div className="Stubs-All">
-                    <WO style={{ width: "250px", height: "250px" }} />
+                    <WC style={{ width: "250px", height: "250px" }} />
                     <div className="Stubs-Header">Latesiesta</div>
                     <Ep />
-                    <Cp dateString={null === (a = i.sim) || void 0 === a ? void 0 : a.nextPhaseTime} />
+                    <Op dateString={null === (a = i.sim) || void 0 === a ? void 0 : a.nextPhaseTime} />
                     <div className="Stubs-Body">Lateseason {o + 1} will begin soon.</div>
                   </div>
                 }
@@ -35548,8 +35552,8 @@
             </div>
           );
         },
-        _O = a(161),
-        $O = function (e) {
+        _C = a(161),
+        $C = function (e) {
           var t = Object(cA.useToasts)().addToast,
             a = Object(r.useContext)(x.context),
             n = a.user,
@@ -35566,11 +35570,11 @@
             w = Object(s.a)(b, 2),
             B = w[0],
             y = w[1],
-            O = function (e) {
+            C = function (e) {
               var t = e.target.value;
               h(t);
             },
-            C = n.coins,
+            O = n.coins,
             I = <wA />;
           return (
             B ||
@@ -35587,7 +35591,7 @@
                   onSubmit={function (e) {
                     if ((e.preventDefault(), p < 25))
                       t("The minimum Ballpark contribution is 25 Coins.", { appearance: "error" });
-                    else if (p > C) t("Max contribution is ".concat(C, "!"), { appearance: "error" });
+                    else if (p > O) t("Max contribution is ".concat(O, "!"), { appearance: "error" });
                     else {
                       y(!0);
                       var a = { amount: p, stadiumId: m, renovationId: d };
@@ -35632,14 +35636,14 @@
                         <MA className="ModalForm-Ticket-Icon" />
                         {n.coins}
                       </div>
-                      <Z.a.Control type="number" value={p} onChange={O} />
+                      <Z.a.Control type="number" value={p} onChange={C} />
                       <Z.a.Control
                         type="range"
                         className="ModalForm-Range"
                         min={25}
-                        max={Math.min(n.coins, C)}
+                        max={Math.min(n.coins, O)}
                         value={p}
-                        onChange={O}
+                        onChange={C}
                         step="1"
                       />
                       <a
@@ -35648,10 +35652,10 @@
                           (n.lightMode ? " ModalForm-Form-Inputs-Amount-Max-LightMode" : "")
                         }
                         onClick={function (e) {
-                          e.preventDefault(), h(Math.min(n.coins, C));
+                          e.preventDefault(), h(Math.min(n.coins, O));
                         }}
                       >
-                        Max: {C}
+                        Max: {O}
                       </a>
                     </div>
                   </Z.a.Group>
@@ -35661,7 +35665,7 @@
             )
           );
         },
-        eC = function (e) {
+        eO = function (e) {
           var t = e.stadium,
             a =
               (Object(r.useContext)(x.context).user,
@@ -35695,7 +35699,7 @@
             </div>
           );
         },
-        tC = function (e) {
+        tO = function (e) {
           var t = e.loading,
             a = e.progress,
             n = e.stadium;
@@ -35760,7 +35764,7 @@
             )
           );
         },
-        aC = function (e) {
+        aO = function (e) {
           var t = e.loading,
             a = e.renovations,
             n = e.user,
@@ -35770,8 +35774,8 @@
             s = e.renoStats;
           return t || !a ? null : null === r.model ? (
             <div className="Team-Construction-Options">
-              {_O.collection.map(function (e, t) {
-                return <rC prefab={e} stadium={r} index={t} selected={i} setSelected={o} user={n} />;
+              {_C.collection.map(function (e, t) {
+                return <rO prefab={e} stadium={r} index={t} selected={i} setSelected={o} user={n} />;
               })}
             </div>
           ) : (
@@ -35781,7 +35785,7 @@
                 : a.map(function (e) {
                     var t;
                     return (
-                      <nC
+                      <nO
                         stadium={r}
                         reno={e}
                         selected={i}
@@ -35801,7 +35805,7 @@
             </div>
           );
         },
-        nC = function (e) {
+        nO = function (e) {
           var t = e.reno,
             a = e.selected,
             n = e.setSelected,
@@ -35848,7 +35852,7 @@
             )
           );
         },
-        rC = function (e) {
+        rO = function (e) {
           var t = e.index,
             a = e.stadium,
             n = e.prefab,
@@ -35876,16 +35880,16 @@
             )
           );
         },
-        lC = function (e) {
+        lO = function (e) {
           var t = e.stadiumId,
             a = e.selected,
             n = e.setSelected,
             r = e.user,
             i = Object(c.g)(),
-            o = <iC />;
+            o = <iO />;
           if (
-            (r.isFetching || !r.isSignedIn || r.favoriteTeam || (o = <oC />),
-            !r.isFetching && r.isSignedIn && (r.coins <= 0 || !r.coins) && (o = <sC />),
+            (r.isFetching || !r.isSignedIn || r.favoriteTeam || (o = <oO />),
+            !r.isFetching && r.isSignedIn && (r.coins <= 0 || !r.coins) && (o = <sO />),
             !r.isFetching && r.isSignedIn && r.favoriteTeam && r.coins > 0)
           ) {
             var s = r.coins >= 25;
@@ -35930,28 +35934,28 @@
           }
           return o;
         },
-        iC = function () {
+        iO = function () {
           return (
             <a href="/login">
               <BA.a className="Blessings-Submit-Button">Login to Vote</BA.a>
             </a>
           );
         },
-        oC = function () {
+        oO = function () {
           return (
             <a href="/welcome">
               <BA.a className="Blessings-Submit-Button">Pick a Favorite Team to Vote</BA.a>
             </a>
           );
         },
-        sC = function () {
+        sO = function () {
           return (
             <a href={"/shop/".concat(ne.BEG)}>
               <BA.a className="Blessings-Submit-Button">No Coins</BA.a>
             </a>
           );
         },
-        cC = function (e) {
+        cO = function (e) {
           var t = Object(r.useContext)(S.context),
             a = Object(r.useContext)(oc.context),
             n = Object(r.useState)(void 0),
@@ -35969,9 +35973,9 @@
             w = Object(r.useState)(!1),
             B = Object(s.a)(w, 2),
             y = B[0],
-            O = B[1],
-            C = Object(r.useState)(void 0),
-            I = Object(s.a)(C, 2),
+            C = B[1],
+            O = Object(r.useState)(void 0),
+            I = Object(s.a)(O, 2),
             N = I[0],
             k = I[1],
             T = Object(r.useContext)(x.context).user,
@@ -35993,17 +35997,17 @@
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        if ((O(!0), void 0 !== D)) {
+                        if ((C(!0), void 0 !== D)) {
                           e.next = 4;
                           break;
                         }
-                        return O(!1), e.abrupt("return");
+                        return C(!1), e.abrupt("return");
                       case 4:
                         if (null !== (t = D.stadium)) {
                           e.next = 8;
                           break;
                         }
-                        return O(!1), e.abrupt("return");
+                        return C(!1), e.abrupt("return");
                       case 8:
                         if (
                           void 0 !==
@@ -36014,13 +36018,13 @@
                           e.next = 12;
                           break;
                         }
-                        return O(!1), e.abrupt("return");
+                        return C(!1), e.abrupt("return");
                       case 12:
                         return (e.t0 = Js), (e.next = 15), vg(n.renoHand);
                       case 15:
                         return (e.t1 = e.sent), (r = (0, e.t0)(e.t1)), (e.next = 19), yg(n.id);
                       case 19:
-                        (l = e.sent), c(r), g(l.progress), b(l.stats), O(!1);
+                        (l = e.sent), c(r), g(l.progress), b(l.stats), C(!1);
                       case 24:
                       case "end":
                         return e.stop();
@@ -36044,10 +36048,10 @@
             <wA />
           ) : d ? (
             <div className="Renovation-Body">
-              <tC loading={y} progress={d} stadium={Q} />
-              <aC loading={y} renovations={o} renoStats={h} user={T} stadium={Q} selected={N} setSelected={k} />
+              <tO loading={y} progress={d} stadium={Q} />
+              <aO loading={y} renovations={o} renoStats={h} user={T} stadium={Q} selected={N} setSelected={k} />
               <div className="Team-Construction-Bottom">
-                <lC stadiumId={Q.id} selected={N} setSelected={k} user={T} />
+                <lO stadiumId={Q.id} selected={N} setSelected={k} user={T} />
               </div>
             </div>
           ) : (
@@ -36058,7 +36062,7 @@
             P ||
               (M = (
                 <l.a.Fragment>
-                  <eC stadium={Q} />
+                  <eO stadium={Q} />
                   <div className="Renovation-Body">
                     <div className="Offseason-Info">
                       <div className="Offseason-Description">
@@ -36073,7 +36077,7 @@
               void 0 === T.snacks.Stadium_Access &&
               (M = (
                 <l.a.Fragment>
-                  <eC stadium={Q} />
+                  <eO stadium={Q} />
                   <div className="Renovation-Body">
                     <div className="Offseason-Info">
                       <div className="Offseason-Description">
@@ -36091,14 +36095,14 @@
               void 0 !== T.snacks.Stadium_Access &&
               (M = (
                 <l.a.Fragment>
-                  <eC stadium={Q} />
+                  <eO stadium={Q} />
                   {R}
                 </l.a.Fragment>
               )),
             (<div className="Renovation">{M}</div>)
           );
         },
-        AC = function (e) {
+        AO = function (e) {
           var t = e.percent,
             a = e.color;
           return (
@@ -36116,7 +36120,7 @@
             </div>
           );
         },
-        uC = function (e) {
+        uO = function (e) {
           var t = Object(r.useContext)(nb.context),
             a = Object(r.useContext)(S.context),
             n = Object(r.useContext)(oc.context),
@@ -36132,9 +36136,9 @@
             w = b[0],
             B = b[1],
             y = Object(r.useState)([]),
-            O = Object(s.a)(y, 2),
-            C = O[0],
-            I = O[1],
+            C = Object(s.a)(y, 2),
+            O = C[0],
+            I = C[1],
             N = Object(r.useState)([]),
             k = Object(s.a)(N, 2),
             T = k[0],
@@ -36306,7 +36310,7 @@
                   </div>
                 </div>
                 <div className="Team-Construction-Options">
-                  {C.map(function (e, t) {
+                  {O.map(function (e, t) {
                     return (
                       <div
                         className={
@@ -36406,7 +36410,7 @@
                               ? "(+1)"
                               : ""}
                           </span>
-                          <AC percent={J(e.id)} color={e.mainColor} />
+                          <AO percent={J(e.id)} color={e.mainColor} />
                         </div>
                         <button
                           className={
@@ -36476,7 +36480,7 @@
             )
           );
         },
-        mC = function (e) {
+        mO = function (e) {
           var t = Object(r.useContext)(x.context),
             a = t.user,
             n = (t.setUser, Object(r.useContext)(nb.context)),
@@ -36507,7 +36511,7 @@
             </Ka.a>
           );
         },
-        dC = function (e) {
+        dO = function (e) {
           var t = Object(r.useContext)(x.context),
             a = (t.user, t.setUser, Object(r.useContext)(nb.context)),
             n = (e.color, e.index);
@@ -36522,7 +36526,7 @@
             </div>
           );
         },
-        gC = function (e) {
+        gO = function (e) {
           var t,
             a,
             n = Object(c.h)().teamId,
@@ -36539,9 +36543,9 @@
             w = Object(r.useState)(!1),
             B = Object(s.a)(w, 2),
             y = B[0],
-            O = B[1],
-            C = Object(r.useState)(void 0),
-            I = Object(s.a)(C, 2),
+            C = B[1],
+            O = Object(r.useState)(void 0),
+            I = Object(s.a)(O, 2),
             S =
               (I[0],
               I[1],
@@ -36549,17 +36553,17 @@
                 return e.id === n;
               }));
           Object(r.useEffect)(function () {
-            O(!0);
+            C(!0);
           }, []),
             Object(r.useEffect)(
               function () {
-                O(!1);
+                C(!1);
               },
               [g]
             ),
             Object(r.useEffect)(
               function () {
-                O(!1);
+                C(!1);
               },
               [S]
             );
@@ -36609,7 +36613,7 @@
                       : t.map(function (e, t) {
                           var a;
                           return (
-                            <dC
+                            <dO
                               index={t + 1}
                               id={e}
                               color={
@@ -36625,7 +36629,7 @@
                       : a.map(function (e, t) {
                           var a;
                           return (
-                            <mC
+                            <mO
                               index={t + 1}
                               id={e}
                               color={
@@ -36644,7 +36648,7 @@
                     onSubmit={function (e) {
                       if (
                         (e.preventDefault(),
-                        O(!0),
+                        C(!0),
                         Gg(n, g) || (i("Team not accepting gifts", { appearance: "error" }), d.goBack()),
                         h < 25)
                       )
@@ -36671,7 +36675,7 @@
                                   for (;;)
                                     switch ((e.prev = e.next)) {
                                       case 0:
-                                        O(!1);
+                                        C(!1);
                                       case 1:
                                       case "end":
                                         return e.stop();
@@ -36717,7 +36721,7 @@
             )
           );
         },
-        fC = function (e) {
+        fO = function (e) {
           var t = Object(cA.useToasts)().addToast,
             a = Object(r.useContext)(x.context),
             n = a.user,
@@ -36737,10 +36741,10 @@
               var t = e.target.value;
               v(t);
             },
-            O = n.coins,
-            C = <wA />;
+            C = n.coins,
+            O = <wA />;
           b ||
-            (C = (
+            (O = (
               <BA.a className="ModalForm-Submit" type="submit" variant="success">
                 Submit
               </BA.a>
@@ -36764,7 +36768,7 @@
                 onSubmit={function (e) {
                   if ((e.preventDefault(), void 0 !== n.snacks.Stadium_Access))
                     if (g < 25) t("The minimum Wishlist contribution is 25 Coins.", { appearance: "error" });
-                    else if (g > O) t("Max contribution is ".concat(O, "!"), { appearance: "error" });
+                    else if (g > C) t("Max contribution is ".concat(C, "!"), { appearance: "error" });
                     else {
                       w(!0);
                       var a = { amount: g, entityId: B, data: { team1: n.favoriteTeam } };
@@ -36815,7 +36819,7 @@
                       type="range"
                       className="ModalForm-Range"
                       min={25}
-                      max={Math.min(n.coins, O)}
+                      max={Math.min(n.coins, C)}
                       value={g}
                       onChange={y}
                       step="1"
@@ -36826,21 +36830,21 @@
                         (n.lightMode ? " ModalForm-Form-Inputs-Amount-Max-LightMode" : "")
                       }
                       onClick={function (e) {
-                        e.preventDefault(), v(Math.min(n.coins, O));
+                        e.preventDefault(), v(Math.min(n.coins, C));
                       }}
                     >
-                      Max: {O}
+                      Max: {C}
                     </a>
                   </div>
                 </Z.a.Group>
-                <div className="ModalForm-Submit-Wrapper">{C}</div>
+                <div className="ModalForm-Submit-Wrapper">{O}</div>
               </Z.a>
             </hA>
           );
         },
-        EC = ["title", "titleId"];
-      function vC() {
-        return (vC =
+        EO = ["title", "titleId"];
+      function vO() {
+        return (vO =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -36850,7 +36854,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function pC(e, t) {
+      function pO(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -36870,13 +36874,13 @@
         }
         return r;
       }
-      function hC(e, t) {
+      function hO(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = pC(e, EC);
+          l = pO(e, EO);
         return (
           <svg
-            {...vC(
+            {...vO(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -36890,13 +36894,13 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {GO || (GO = <image x={56} y={56} width={389} height={389} xlinkHref="<img/png blob>" />)}
+            {GC || (GC = <image x={56} y={56} width={389} height={389} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var bC = r.forwardRef(hC);
+      var bO = r.forwardRef(hO);
       a.p;
-      function wC() {
+      function wO() {
         return Hg(Object(r.useContext)(S.context).sim, "SIM_PANIC")
           ? (function () {
               var e,
@@ -36918,28 +36922,28 @@
                 w = Object(s.a)(b, 2),
                 B = w[0],
                 y = w[1],
-                O = Object(r.useContext)(oc.context);
+                C = Object(r.useContext)(oc.context);
               Object(r.useEffect)(function () {
                 document.body.classList.add("no-x");
                 var e = window.matchMedia("(max-width: 1080px)");
-                e.addListener(C), C(e);
+                e.addListener(O), O(e);
                 window.matchMedia("(prefers-reduced-motion: reduce)");
                 return function () {
-                  e.removeListener(C);
+                  e.removeListener(O);
                 };
               }, []);
-              var C = function (e) {
+              var O = function (e) {
                 e.matches ? y(!0) : y(!1);
               };
               Object(r.useEffect)(
                 function () {
                   if (g.length < 1) {
                     var e,
-                      t = qg(O, { filters: {} }, null !== (e = o.favoriteTeam) && void 0 !== e ? e : "", !1);
+                      t = qg(C, { filters: {} }, null !== (e = o.favoriteTeam) && void 0 !== e ? e : "", !1);
                     f(t);
                   }
                 },
-                [O]
+                [C]
               );
               for (
                 var I =
@@ -37009,49 +37013,82 @@
                 U = [];
               return (
                 <div className="QuadrantChart" id="Main-Body">
+                  <Ep />
                   <div className="QuadrantChart-Chart" style={{ transform: "rotate(".concat(I, "deg)") }}>
                     <div className="QuadrantChart-Quadrant" style={{ gridColumn: 2, gridRow: 2 }}>
                       {N}
                       {k}
-                      {[
-                        [2, 3],
-                        [2, 7],
-                        [5, 1],
-                        [6, 5],
-                        [4, 10],
-                        [7, 12],
-                        [8, 8],
-                        [10, 4],
-                        [11, 10],
-                        [12, 2],
-                        [12, 7],
-                        [2, 12],
-                        [12, 13],
-                      ].map(function (e) {
-                        return (
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="QuadrantChart-Quadrant-Locales-Small"
-                            viewBox="50 15 400 512"
-                            style={{ gridColumn: e[0], gridRow: e[1], transform: "rotate(".concat(-I, "deg)") }}
-                          >
-                            <g transform="translate(-1,-31)">
-                              <g>
-                                <path
-                                  d="M256 106C222.19 106 194.113 128.69 184.75 159.438C174.532 154.22 163.258 151 151 151C109.58 151 76 184.58 76 226C76 227.784 76.346 229.405 76.468 231.157C41.284 243.387 16 276.65 16 316C16 365.706 56.294 406 106 406L406 406C455.706 406 496 365.706 496 316C496 276.65 470.716 243.386 435.532 231.157C435.655 229.405 436 227.783 436 226C436 184.58 402.42 151 361 151C348.742 151 337.468 154.222 327.25 159.437C317.887 128.69 289.81 106 256 106Z"
-                                  fill="#fff"
-                                  fill-opacity="1"
-                                />
-                                <path
-                                  d="M196 196L256 256L316 196L346 226L286 286L346 346L316 376L256 316L196 376L166 346L226 286L166 226Z"
-                                  fill="#ffffff"
-                                  fill-opacity="0"
-                                />
-                              </g>
-                            </g>
-                          </svg>
-                        );
-                      })}
+                      {B
+                        ? [
+                            [2, 3],
+                            [2, 7],
+                            [5, 1],
+                            [7, 4],
+                            [4, 5],
+                          ].map(function (e) {
+                            return (
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="QuadrantChart-Quadrant-Locales-Small"
+                                viewBox="50 15 400 512"
+                                style={{ gridColumn: e[0], gridRow: e[1], transform: "rotate(".concat(-I, "deg)") }}
+                              >
+                                <g transform="translate(-1,-31)">
+                                  <g>
+                                    <path
+                                      d="M256 106C222.19 106 194.113 128.69 184.75 159.438C174.532 154.22 163.258 151 151 151C109.58 151 76 184.58 76 226C76 227.784 76.346 229.405 76.468 231.157C41.284 243.387 16 276.65 16 316C16 365.706 56.294 406 106 406L406 406C455.706 406 496 365.706 496 316C496 276.65 470.716 243.386 435.532 231.157C435.655 229.405 436 227.783 436 226C436 184.58 402.42 151 361 151C348.742 151 337.468 154.222 327.25 159.437C317.887 128.69 289.81 106 256 106Z"
+                                      fill="#fff"
+                                      fill-opacity="1"
+                                    />
+                                    <path
+                                      d="M196 196L256 256L316 196L346 226L286 286L346 346L316 376L256 316L196 376L166 346L226 286L166 226Z"
+                                      fill="#ffffff"
+                                      fill-opacity="0"
+                                    />
+                                  </g>
+                                </g>
+                              </svg>
+                            );
+                          })
+                        : [
+                            [2, 3],
+                            [2, 7],
+                            [5, 1],
+                            [6, 5],
+                            [4, 10],
+                            [7, 12],
+                            [8, 8],
+                            [10, 4],
+                            [11, 10],
+                            [12, 2],
+                            [12, 7],
+                            [2, 12],
+                            [12, 13],
+                          ].map(function (e) {
+                            return (
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="QuadrantChart-Quadrant-Locales-Small"
+                                viewBox="50 15 400 512"
+                                style={{ gridColumn: e[0], gridRow: e[1], transform: "rotate(".concat(-I, "deg)") }}
+                              >
+                                <g transform="translate(-1,-31)">
+                                  <g>
+                                    <path
+                                      d="M256 106C222.19 106 194.113 128.69 184.75 159.438C174.532 154.22 163.258 151 151 151C109.58 151 76 184.58 76 226C76 227.784 76.346 229.405 76.468 231.157C41.284 243.387 16 276.65 16 316C16 365.706 56.294 406 106 406L406 406C455.706 406 496 365.706 496 316C496 276.65 470.716 243.386 435.532 231.157C435.655 229.405 436 227.783 436 226C436 184.58 402.42 151 361 151C348.742 151 337.468 154.222 327.25 159.437C317.887 128.69 289.81 106 256 106Z"
+                                      fill="#fff"
+                                      fill-opacity="1"
+                                    />
+                                    <path
+                                      d="M196 196L256 256L316 196L346 226L286 286L346 346L316 376L256 316L196 376L166 346L226 286L166 226Z"
+                                      fill="#ffffff"
+                                      fill-opacity="0"
+                                    />
+                                  </g>
+                                </g>
+                              </svg>
+                            );
+                          })}
                       {G.map(function (e, t) {
                         var a = e.team.imPosition[0].toFixed(3),
                           n = e.team.imPosition[1].toFixed(3);
@@ -37286,33 +37323,58 @@
                     <div className="QuadrantChart-Quadrant" style={{ gridColumn: 3, gridRow: 3 }}>
                       {N}
                       {k}
-                      {[
-                        [3, 11],
-                        [2, 5],
-                        [5, 2],
-                        [12, 3],
-                        [7, 8],
-                        [11, 7],
-                        [13, 12],
-                      ].map(function (e) {
-                        return (
-                          <svg
-                            className="QuadrantChart-Quadrant-Locales-Smaller"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"
-                            style={{ gridColumn: e[0], gridRow: e[1], transform: "rotate(".concat(-I, "deg)") }}
-                          >
-                            <path d="M0 0h512v512H0z" fill="#000000" fill-opacity="0.01" />
-                            <g transform="translate(0,0)">
-                              <path
-                                d="M348.77 14.06l-5.854 17.163C332.126 22.93 318.623 18.01 304 18c-15.35.016-29.457 5.454-40.496 14.512l-15.602-13.567-11.81 13.584 15.228 13.238c-5.303 7.707-8.958 16.64-10.465 26.306h-23.263v18H240V192h-16.023c-24.42 0-31.977-5.767-31.977-31.857v-26.127h9.064v-18h-10.59c-1.455-5.342-3.874-9.798-6.947-13.358l-7.373 13.358h-3.334l-13.203-7.286 8.63-15.636c-9.775-2.624-20.645-.482-28.624 6.412l-13.264-11.53-11.81 13.583 15.31 13.31c-1.187 3.886-1.86 8.254-1.86 13.13v21.71h-19.46v18H128V192c0 31.09 6.727 48.742 24.484 57.33L141.5 267.068l15.303 9.477 13.62-21.99c6.328.98 13.464 1.445 21.522 1.445 21.323-.077 42.648.162 63.97 0l.17 18s-8.49.07-16.085.137v75.052h-25.68v18H240v60.587h-15.488v18H240v49.368h128v-12.057h13.7v-18H368v-26.48h23.572v-18H368V316.62h-25.99v-18H368v-15.71h14.97v-18H368v-28.89h25.504v-18H368V137h16v-18h-16V88.008h-23.488v-18h22.314c-1.662-8.766-5.116-16.88-9.945-23.975l8.927-26.16-17.036-5.812zM309.35 43.093l.875 31.986-17.994.492-.876-31.988 17.994-.49zm-46.627 61.306h32v18h-32v-18zm53.852 69.182h32v18h-32v-18zm-169.717 11.035h32v18h-32v-18zm88.553 30.184h32v18h-32v-18zm230.022 12.733l-9.116 20.48c-.105 0-.21-.013-.314-.013-6.622 0-13.238 2.44-17.844 7.313l-12.76-11.094-11.81 13.583L432 273.813v46.275c0 12.18-7.97 15.912-16.395 15.912H386v48h32.994l.12 19.742 18-.11-.12-19.786C465.712 382.176 480 366.232 480 336v-18.223h16.512v-18H480V272c0-7.636-2.736-13.446-6.898-17.438l8.773-19.71-16.445-7.32zm-19.61 83.985l18 .113-.2 32-18-.112.2-32zm-152.472 19.574l.875 31.986-17.994.492-.876-31.988 17.994-.49zm26.312 49.496h32v18h-32v-18zm-62.574 32.453h32v18h-32v-18z"
-                                fill="#fff"
-                                fill-opacity="1"
-                              />
-                            </g>
-                          </svg>
-                        );
-                      })}
+                      {B
+                        ? [
+                            [6, 2],
+                            [2, 5],
+                            [5, 6],
+                            [4, 3],
+                          ].map(function (e) {
+                            return (
+                              <svg
+                                className="QuadrantChart-Quadrant-Locales-Smaller"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"
+                                style={{ gridColumn: e[0], gridRow: e[1], transform: "rotate(".concat(-I, "deg)") }}
+                              >
+                                <path d="M0 0h512v512H0z" fill="#000000" fill-opacity="0.01" />
+                                <g transform="translate(0,0)">
+                                  <path
+                                    d="M348.77 14.06l-5.854 17.163C332.126 22.93 318.623 18.01 304 18c-15.35.016-29.457 5.454-40.496 14.512l-15.602-13.567-11.81 13.584 15.228 13.238c-5.303 7.707-8.958 16.64-10.465 26.306h-23.263v18H240V192h-16.023c-24.42 0-31.977-5.767-31.977-31.857v-26.127h9.064v-18h-10.59c-1.455-5.342-3.874-9.798-6.947-13.358l-7.373 13.358h-3.334l-13.203-7.286 8.63-15.636c-9.775-2.624-20.645-.482-28.624 6.412l-13.264-11.53-11.81 13.583 15.31 13.31c-1.187 3.886-1.86 8.254-1.86 13.13v21.71h-19.46v18H128V192c0 31.09 6.727 48.742 24.484 57.33L141.5 267.068l15.303 9.477 13.62-21.99c6.328.98 13.464 1.445 21.522 1.445 21.323-.077 42.648.162 63.97 0l.17 18s-8.49.07-16.085.137v75.052h-25.68v18H240v60.587h-15.488v18H240v49.368h128v-12.057h13.7v-18H368v-26.48h23.572v-18H368V316.62h-25.99v-18H368v-15.71h14.97v-18H368v-28.89h25.504v-18H368V137h16v-18h-16V88.008h-23.488v-18h22.314c-1.662-8.766-5.116-16.88-9.945-23.975l8.927-26.16-17.036-5.812zM309.35 43.093l.875 31.986-17.994.492-.876-31.988 17.994-.49zm-46.627 61.306h32v18h-32v-18zm53.852 69.182h32v18h-32v-18zm-169.717 11.035h32v18h-32v-18zm88.553 30.184h32v18h-32v-18zm230.022 12.733l-9.116 20.48c-.105 0-.21-.013-.314-.013-6.622 0-13.238 2.44-17.844 7.313l-12.76-11.094-11.81 13.583L432 273.813v46.275c0 12.18-7.97 15.912-16.395 15.912H386v48h32.994l.12 19.742 18-.11-.12-19.786C465.712 382.176 480 366.232 480 336v-18.223h16.512v-18H480V272c0-7.636-2.736-13.446-6.898-17.438l8.773-19.71-16.445-7.32zm-19.61 83.985l18 .113-.2 32-18-.112.2-32zm-152.472 19.574l.875 31.986-17.994.492-.876-31.988 17.994-.49zm26.312 49.496h32v18h-32v-18zm-62.574 32.453h32v18h-32v-18z"
+                                    fill="#fff"
+                                    fill-opacity="1"
+                                  />
+                                </g>
+                              </svg>
+                            );
+                          })
+                        : [
+                            [3, 11],
+                            [2, 5],
+                            [5, 2],
+                            [12, 3],
+                            [7, 8],
+                            [11, 7],
+                            [13, 12],
+                          ].map(function (e) {
+                            return (
+                              <svg
+                                className="QuadrantChart-Quadrant-Locales-Smaller"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"
+                                style={{ gridColumn: e[0], gridRow: e[1], transform: "rotate(".concat(-I, "deg)") }}
+                              >
+                                <path d="M0 0h512v512H0z" fill="#000000" fill-opacity="0.01" />
+                                <g transform="translate(0,0)">
+                                  <path
+                                    d="M348.77 14.06l-5.854 17.163C332.126 22.93 318.623 18.01 304 18c-15.35.016-29.457 5.454-40.496 14.512l-15.602-13.567-11.81 13.584 15.228 13.238c-5.303 7.707-8.958 16.64-10.465 26.306h-23.263v18H240V192h-16.023c-24.42 0-31.977-5.767-31.977-31.857v-26.127h9.064v-18h-10.59c-1.455-5.342-3.874-9.798-6.947-13.358l-7.373 13.358h-3.334l-13.203-7.286 8.63-15.636c-9.775-2.624-20.645-.482-28.624 6.412l-13.264-11.53-11.81 13.583 15.31 13.31c-1.187 3.886-1.86 8.254-1.86 13.13v21.71h-19.46v18H128V192c0 31.09 6.727 48.742 24.484 57.33L141.5 267.068l15.303 9.477 13.62-21.99c6.328.98 13.464 1.445 21.522 1.445 21.323-.077 42.648.162 63.97 0l.17 18s-8.49.07-16.085.137v75.052h-25.68v18H240v60.587h-15.488v18H240v49.368h128v-12.057h13.7v-18H368v-26.48h23.572v-18H368V316.62h-25.99v-18H368v-15.71h14.97v-18H368v-28.89h25.504v-18H368V137h16v-18h-16V88.008h-23.488v-18h22.314c-1.662-8.766-5.116-16.88-9.945-23.975l8.927-26.16-17.036-5.812zM309.35 43.093l.875 31.986-17.994.492-.876-31.988 17.994-.49zm-46.627 61.306h32v18h-32v-18zm53.852 69.182h32v18h-32v-18zm-169.717 11.035h32v18h-32v-18zm88.553 30.184h32v18h-32v-18zm230.022 12.733l-9.116 20.48c-.105 0-.21-.013-.314-.013-6.622 0-13.238 2.44-17.844 7.313l-12.76-11.094-11.81 13.583L432 273.813v46.275c0 12.18-7.97 15.912-16.395 15.912H386v48h32.994l.12 19.742 18-.11-.12-19.786C465.712 382.176 480 366.232 480 336v-18.223h16.512v-18H480V272c0-7.636-2.736-13.446-6.898-17.438l8.773-19.71-16.445-7.32zm-19.61 83.985l18 .113-.2 32-18-.112.2-32zm-152.472 19.574l.875 31.986-17.994.492-.876-31.988 17.994-.49zm26.312 49.496h32v18h-32v-18zm-62.574 32.453h32v18h-32v-18z"
+                                    fill="#fff"
+                                    fill-opacity="1"
+                                  />
+                                </g>
+                              </svg>
+                            );
+                          })}
                       {V.map(function (e, t) {
                         var a = e.team.imPosition[0].toFixed(3),
                           n = e.team.imPosition[1].toFixed(3);
@@ -37396,7 +37458,7 @@
                       className="QuadrantChart-Quadrant-Icon QuadrantChart-Quadrant-Icon-Right"
                       style={{ gridColumn: 4, gridRow: 1, transform: "rotate(".concat(-I, "deg)") }}
                     />
-                    <bC
+                    <bO
                       className="QuadrantChart-Quadrant-Icon QuadrantChart-Quadrant-Icon-Center"
                       style={{ transform: "rotate(".concat(-I, "deg)") }}
                     />
@@ -37434,20 +37496,20 @@
                 y = w[1];
               Object(r.useEffect)(function () {
                 var e = window.matchMedia("(max-width: 1080px)");
-                e.addListener(O), O(e);
+                e.addListener(C), C(e);
                 var t = window.matchMedia("(prefers-reduced-motion: reduce)");
                 return (
-                  t.addListener(C),
-                  C(t),
+                  t.addListener(O),
+                  O(t),
                   function () {
-                    e.removeListener(O), t.removeListener(C);
+                    e.removeListener(C), t.removeListener(O);
                   }
                 );
               }, []);
-              var O = function (e) {
+              var C = function (e) {
                   e.matches ? y(!0) : y(!1);
                 },
-                C = function (e) {
+                O = function (e) {
                   e.matches ? h(!0) : a.motion || h(!1);
                 };
               Object(r.useEffect)(
@@ -38016,7 +38078,7 @@
               );
             })();
       }
-      var BC = function (e) {
+      var BO = function (e) {
           var t,
             a,
             n,
@@ -38034,8 +38096,8 @@
             w = h[1],
             B = Object(r.useState)(),
             y = Object(s.a)(B, 2),
-            O = y[0],
-            C = y[1],
+            C = y[0],
+            O = y[1],
             I = <wA />,
             N = A.leagues.find(function (e) {
               var t;
@@ -38078,7 +38140,7 @@
                               case 0:
                                 return (e.next = 2), Sg();
                               case 2:
-                                void 0 !== (t = e.sent) && C(t);
+                                void 0 !== (t = e.sent) && O(t);
                               case 4:
                               case "end":
                                 return e.stop();
@@ -38108,7 +38170,7 @@
                     <div className="Team-Header">
                       <div className="Team-LogoLine-Wrapper" style={{ alignItems: "center" }}>
                         <div className="Team-LogoLine">
-                          <oO className="LeagueInfo-Header-Icon" />
+                          <oC className="LeagueInfo-Header-Icon" />
                         </div>
                         <div className="ModalItem-Name-Wrapper">
                           <h2 className="ModalItem-Name">{N.name}</h2>
@@ -38155,15 +38217,15 @@
                               <div
                                 style={{
                                   backgroundColor:
-                                    null === O || void 0 === O || null === (t = O.over) || void 0 === t
+                                    null === C || void 0 === C || null === (t = C.over) || void 0 === t
                                       ? void 0
                                       : t.mainColor,
                                 }}
                                 className="Team-Logo LeagueInfo-Team-Icon"
                               >
-                                {Yg(null === O || void 0 === O ? void 0 : O.over)}
+                                {Yg(null === C || void 0 === C ? void 0 : C.over)}
                               </div>{" "}
-                              {null === O || void 0 === O || null === (a = O.over) || void 0 === a
+                              {null === C || void 0 === C || null === (a = C.over) || void 0 === a
                                 ? void 0
                                 : a.fullName}
                             </div>
@@ -38174,15 +38236,15 @@
                               <div
                                 style={{
                                   backgroundColor:
-                                    null === O || void 0 === O || null === (n = O.under) || void 0 === n
+                                    null === C || void 0 === C || null === (n = C.under) || void 0 === n
                                       ? void 0
                                       : n.mainColor,
                                 }}
                                 className="Team-Logo LeagueInfo-Team-Icon"
                               >
-                                {Yg(null === O || void 0 === O ? void 0 : O.under)}
+                                {Yg(null === C || void 0 === C ? void 0 : C.under)}
                               </div>{" "}
-                              {null === O || void 0 === O || null === (i = O.under) || void 0 === i
+                              {null === C || void 0 === C || null === (i = C.under) || void 0 === i
                                 ? void 0
                                 : i.fullName}
                             </div>
@@ -38212,7 +38274,7 @@
             (<hA {...Object.assign({}, e, { className: "ModalItem" })}>{I}</hA>)
           );
         },
-        yC = function (e) {
+        yO = function (e) {
           var t = Object(r.useContext)(x.context),
             a = (t.user, t.setUser, Object(c.f)()),
             n = Object(cA.useToasts)().addToast,
@@ -38279,7 +38341,7 @@
             </hA>
           );
         },
-        OC = function (e) {
+        CO = function (e) {
           var t = Object(c.h)().token,
             a = Object(r.useContext)(x.context),
             n = a.user,
@@ -38332,7 +38394,7 @@
             (<div>{g ? <wA /> : <l.a.Fragment />}</div>)
           );
         };
-      var CC = function (e) {
+      var OO = function (e) {
           Object(r.useContext)(x.context).initUser;
           var t = Object(c.f)(),
             a = Object(cA.useToasts)().addToast,
@@ -38411,7 +38473,7 @@
             </hA>
           );
         },
-        IC = function (e) {
+        IO = function (e) {
           var t = Object(c.h)().token,
             a = Object(r.useContext)(x.context),
             n = (a.user, a.initUser),
@@ -38459,7 +38521,7 @@
             (<div>{m ? <wA /> : <l.a.Fragment />}</div>)
           );
         },
-        SC = function (e) {
+        SO = function (e) {
           Object(r.useContext)(x.context).initUser;
           var t = Object(c.f)(),
             a = Object(cA.useToasts)().addToast,
@@ -38554,7 +38616,7 @@
             </hA>
           );
         },
-        NC = function (e) {
+        NO = function (e) {
           var t = Object(c.h)().token,
             a = Object(r.useContext)(x.context),
             n = (a.user, a.setUser),
@@ -38601,7 +38663,7 @@
             (<div>{m ? <wA /> : <l.a.Fragment />}</div>)
           );
         },
-        kC = function (e) {
+        kO = function (e) {
           var t = e.event,
             a = Object(r.useContext)(oc.context),
             n = (Object(c.g)(), Object(r.useContext)(x.context).user),
@@ -38654,7 +38716,7 @@
           );
         };
       a(255);
-      function TC() {
+      function TO() {
         var e = Object(r.useContext)(x.context),
           t = e.user,
           a = (e.setUser, Object(c.g)(), Object(r.useContext)(oc.context)),
@@ -38772,7 +38834,7 @@
                           1);
                     })
                     .map(function (e) {
-                      return <PC player={e.player} team={e.team} />;
+                      return <PO player={e.player} team={e.team} />;
                     })}
                 </ul>
               </div>
@@ -38781,7 +38843,7 @@
           )
         );
       }
-      function PC(e) {
+      function PO(e) {
         var t = e.player,
           a = e.team,
           n = Object(c.g)(),
@@ -38848,7 +38910,7 @@
           </d>
         ) : null;
       }
-      var DC = function (e) {
+      var DO = function (e) {
           var t = Object(c.h)().teamId,
             a = Object(cA.useToasts)().addToast,
             n = Object(r.useContext)(x.context),
@@ -38865,10 +38927,10 @@
             w = b[0],
             B = b[1],
             y = Object(r.useState)(void 0),
-            O = Object(s.a)(y, 2),
-            C =
-              (O[0],
-              O[1],
+            C = Object(s.a)(y, 2),
+            O =
+              (C[0],
+              C[1],
               m.teams.find(function (e) {
                 return e.id === t;
               }));
@@ -38885,7 +38947,7 @@
               function () {
                 B(!1);
               },
-              [C]
+              [O]
             );
           var I = function (e) {
               var t = e.target.value;
@@ -38902,19 +38964,19 @@
               )),
             (
               <hA {...Object.assign({}, e, { className: "Vote" })}>
-                {(null === C || void 0 === C ? void 0 : C.id) === i.favoriteTeam ? null : (
-                  <h1 className="ModalForm-Header">Provide Aid to the {void 0 !== C ? C.nickname : "Null Team"}</h1>
+                {(null === O || void 0 === O ? void 0 : O.id) === i.favoriteTeam ? null : (
+                  <h1 className="ModalForm-Header">Provide Aid to the {void 0 !== O ? O.nickname : "Null Team"}</h1>
                 )}
                 <div className="Gift-List">
                   <div className="Player-Team-Line" style={{ justifyContent: "center" }}>
-                    <div className="Player-Team-Logo" style={{ background: void 0 !== C ? C.mainColor : "#999999" }}>
-                      <div className="Player-Team-Emoji">{Yg(C)}</div>
+                    <div className="Player-Team-Logo" style={{ background: void 0 !== O ? O.mainColor : "#999999" }}>
+                      <div className="Player-Team-Emoji">{Yg(O)}</div>
                     </div>
-                    <div className="Player-Team-Name">{void 0 !== C ? C.fullName : "Null Team"}</div>
+                    <div className="Player-Team-Name">{void 0 !== O ? O.fullName : "Null Team"}</div>
                   </div>
                   <div className="Gift-List-Items" />
                 </div>
-                {(null === C || void 0 === C ? void 0 : C.id) === i.favoriteTeam ? null : (
+                {(null === O || void 0 === O ? void 0 : O.id) === i.favoriteTeam ? null : (
                   <Z.a
                     className="ModalForm-Form"
                     onSubmit={function (e) {
@@ -38993,7 +39055,7 @@
             )
           );
         },
-        xC = function (e) {
+        xO = function (e) {
           var t = e.percent,
             a = e.color;
           return (
@@ -39011,7 +39073,7 @@
             </div>
           );
         },
-        LC = function (e) {
+        LO = function (e) {
           var t = Object(r.useContext)(nb.context),
             a = Object(r.useContext)(S.context),
             n = Object(r.useContext)(oc.context),
@@ -39028,9 +39090,9 @@
             w = h[1],
             B = Object(r.useState)([]),
             y = Object(s.a)(B, 2),
-            O = (y[0], y[1]),
-            C = Object(r.useState)([]),
-            I = Object(s.a)(C, 2),
+            C = (y[0], y[1]),
+            O = Object(r.useState)([]),
+            I = Object(s.a)(O, 2),
             N = I[0],
             k = I[1];
           Object(r.useEffect)(
@@ -39045,7 +39107,7 @@
           ),
             Object(r.useEffect)(
               function () {
-                O(Js(t.gifts));
+                C(Js(t.gifts));
               },
               [t]
             );
@@ -39173,7 +39235,7 @@
                         </div>
                         <div className="Player-Info-Line-Body GiftShop-Gifts-Item-Body">
                           {Jg("0x1F680")}
-                          <xC percent={V(e.id)} color={e.mainColor} />
+                          <xO percent={V(e.id)} color={e.mainColor} />
                         </div>
                         <button
                           className={
@@ -39212,16 +39274,16 @@
             )
           );
         };
-      function RC() {
+      function RO() {
         var e = Object(r.useContext)(Yc.context);
         return (
           <div className={"Main" + (e && e.doc && e.doc.epsilon ? " Main-BigDeal" : "")}>
             <eh />
-            <QC />
+            <QO />
           </div>
         );
       }
-      function QC() {
+      function QO() {
         var e = Object(r.useContext)(x.context).user,
           t = Object(r.useState)(!1),
           a = Object(s.a)(t, 2),
@@ -39244,10 +39306,10 @@
             },
             [e]
           ),
-          void 0 !== e && e.isFetching ? <jC /> : n ? <HC /> : <MC />
+          void 0 !== e && e.isFetching ? <jO /> : n ? <HO /> : <MO />
         );
       }
-      function MC() {
+      function MO() {
         var e = Object(c.g)(),
           t = e.state && e.state.background;
         return (
@@ -39271,7 +39333,7 @@
                   <Kh />
                 </c.a>
                 <c.a path="/faq">
-                  <pO />
+                  <pC />
                 </c.a>
                 <c.a path="/">
                   <Ah />
@@ -39307,7 +39369,7 @@
               </div>
               <div className="Main-Footer-Advertise">
                 <div className="Main-Footer-Advertise-Inner">
-                  <a className="Main-Footer-Advertise-Icon" href={VC()}>
+                  <a className="Main-Footer-Advertise-Icon" href={VO()}>
                     Become a Sponsor
                   </a>
                 </div>
@@ -39319,14 +39381,14 @@
           </div>
         );
       }
-      function jC() {
+      function jO() {
         return (
           <div>
             <div className="Main-Body" />
           </div>
         );
       }
-      function FC() {
+      function FO() {
         return (
           <div>
             <div className="Main-Body">
@@ -39335,7 +39397,7 @@
           </div>
         );
       }
-      function HC() {
+      function HO() {
         var e,
           t,
           a,
@@ -39356,10 +39418,10 @@
           b = Object(c.g)(),
           w = b.state && b.state.background,
           B = Object(r.useContext)(Yc.context);
-        if (B && B.doc && B.doc.epsilon) return <FC />;
+        if (B && B.doc && B.doc.epsilon) return <FO />;
         var y,
-          O,
           C,
+          O,
           I,
           N,
           k,
@@ -39371,39 +39433,39 @@
           M = function (e, t) {
             switch (e) {
               case 0:
-                return <Oy path={t} />;
+                return <Cy path={t} />;
               case 1:
-                return <EO path={t} />;
+                return <EC path={t} />;
               case 2:
               case 4:
               case 6:
                 return <Hp path={t} />;
               case 3:
-                return <XO path={t} />;
+                return <XC path={t} />;
               case 5:
-                return <KO path={t} />;
+                return <KC path={t} />;
               case 8:
-                return <vO path={t} />;
+                return <vC path={t} />;
               case 7:
                 return <Ly path={t} />;
               case 9:
               case 11:
                 return <Xp path={t} />;
               case 10:
-                return <hO path={t} />;
+                return <hC path={t} />;
               case 12:
               case 13:
                 return <_p path={t} />;
               case 14:
-                return <NO path={t} />;
+                return <NC path={t} />;
               case 15:
-                return <LO path={t} />;
+                return <LC path={t} />;
               case 16:
-                return <xO path={t} />;
+                return <xC path={t} />;
               case 17:
-                return <RO path={t} />;
+                return <RC path={t} />;
               case 18:
-                return <QO path={t} />;
+                return <QC path={t} />;
             }
             return <div />;
           },
@@ -39422,7 +39484,7 @@
               </div>
               <div className="Main-Footer-Advertise">
                 <div className="Main-Footer-Advertise-Inner">
-                  <a className="Main-Footer-Advertise-Icon" href={VC()}>
+                  <a className="Main-Footer-Advertise-Icon" href={VO()}>
                     Become a Sponsor
                   </a>
                 </div>
@@ -39456,7 +39518,7 @@
                       <qh />
                     </c.a>
                     <c.a path="/faq">
-                      <pO />
+                      <pC />
                     </c.a>
                     <c.a path="/login">
                       <Kh isLogin={!0} />
@@ -39465,16 +39527,16 @@
                       <_h />
                     </c.a>
                     <c.a path="/verify-account/:token">
-                      <OC />
+                      <CO />
                     </c.a>
                     <c.a path="/send-verification-email">
-                      <yC isModal={!0} />
+                      <yO isModal={!0} />
                     </c.a>
                     <c.a path="/change-email/:token">
-                      <IC />
+                      <IO />
                     </c.a>
                     <c.a path="/delete-account/:token">
-                      <NC />
+                      <NO />
                     </c.a>
                     <c.a path="/signup">
                       <Kh />
@@ -39486,25 +39548,25 @@
                       <GA />
                     </c.a>
                     <c.a path="/item/:id">
-                      <gO
+                      <gC
                         item={
-                          null === (y = b.state) || void 0 === y || null === (O = y.params) || void 0 === O
+                          null === (y = b.state) || void 0 === y || null === (C = y.params) || void 0 === C
                             ? void 0
-                            : O.item
+                            : C.item
                         }
                         player={
-                          null === (C = b.state) || void 0 === C || null === (I = C.params) || void 0 === I
+                          null === (O = b.state) || void 0 === O || null === (I = O.params) || void 0 === I
                             ? void 0
                             : I.player
                         }
                       />
                     </c.a>
                     <c.a path="/game/:id">
-                      <fO />
+                      <fC />
                     </c.a>
                     <c.a path="/league">{p.sim && M(p.sim.phase, "/league")}</c.a>
                     <c.a path="/leagueinfo">
-                      <BC />
+                      <BO />
                     </c.a>
                     <c.a path="/">{p.sim && M(p.sim.phase, "/league")}</c.a>
                   </c.c>
@@ -39513,16 +39575,16 @@
                       <c.a path="/signup" children={<Kh isModal={!0} />} />
                       <c.a path="/login" children={<Kh isModal={!0} isLogin={!0} />} />
                       <c.a path="/forgot" children={<_h isModal={!0} />} />
-                      <c.a path="/send-verification-email" children={<yC isModal={!0} />} />
-                      <c.a path="/send-email-change" children={<CC isModal={!0} />} />
-                      <c.a path="/send-delete-account" children={<SC isModal={!0} />} />
+                      <c.a path="/send-verification-email" children={<yO isModal={!0} />} />
+                      <c.a path="/send-email-change" children={<OO isModal={!0} />} />
+                      <c.a path="/send-delete-account" children={<SO isModal={!0} />} />
                       <c.a path="/reset/:token" children={<_h isModal={!0} />} />
                       <c.a path="/team/:nickname" children={<Ih isModal={!0} />} />
                       <c.a path="/player/:id" children={<GA isModal={!0} />} />
                       <c.a
                         path="/item/:id"
                         children={
-                          <gO
+                          <gC
                             isModal={!0}
                             item={
                               null === (N = b.state) || void 0 === N || null === (k = N.params) || void 0 === k
@@ -39537,15 +39599,15 @@
                           />
                         }
                       />
-                      <c.a path="/game/:id" children={<fO isModal={!0} />} />
+                      <c.a path="/game/:id" children={<fC isModal={!0} />} />
                       <c.a path="/reorder/:type" children={<kh isModal={!0} />} />
                       <c.a path="/settings" children={<qh isModal={!0} />} />
                       <c.a path="/account" children={<qh isModal={!0} />} />
-                      <c.a path="/leagueinfo" children={<BC isModal={!0} />} />
+                      <c.a path="/leagueinfo" children={<BO isModal={!0} />} />
                       <c.a
                         path="/certificate"
                         children={
-                          <kC
+                          <kO
                             isModal={!0}
                             event={
                               null === (D = b.state) || void 0 === D || null === (L = D.params) || void 0 === L
@@ -39584,7 +39646,7 @@
                       <qh />
                     </c.a>
                     <c.a path="/faq">
-                      <pO />
+                      <pC />
                     </c.a>
                     <c.a path="/shop/:id?">
                       <Th />
@@ -39605,16 +39667,16 @@
                       <_h />
                     </c.a>
                     <c.a path="/verify-account/:token">
-                      <OC />
+                      <CO />
                     </c.a>
                     <c.a path="/send-verification-email">
-                      <yC isModal={!0} />
+                      <yO isModal={!0} />
                     </c.a>
                     <c.a path="/change-email/:token">
-                      <IC />
+                      <IO />
                     </c.a>
                     <c.a path="/delete-account/:token">
-                      <NC />
+                      <NO />
                     </c.a>
                     <c.a path="/signup">
                       <Kh />
@@ -39626,7 +39688,7 @@
                       <GA />
                     </c.a>
                     <c.a path="/item/:id">
-                      <gO
+                      <gC
                         item={
                           null === (e = b.state) || void 0 === e || null === (t = e.params) || void 0 === t
                             ? void 0
@@ -39640,7 +39702,7 @@
                       />
                     </c.a>
                     <c.a path="/game/:id">
-                      <fO />
+                      <fC />
                     </c.a>
                     {Hg(p.sim, "UNLOCKED_HALL") ? (
                       <c.a path="/thehall">
@@ -39658,39 +39720,39 @@
                     <c.a path="/bracket">{p.sim && M(p.sim.phase, "/bracket")}</c.a>
                     {void 0 !== (R = p.sim) && R.phase >= 15 && R.phase <= 18 ? (
                       <c.a path="/league">
-                        <MO />
+                        <MC />
                       </c.a>
                     ) : null}
                     <c.a path="/league">{p.sim && M(p.sim.phase, "/league")}</c.a>
                     <c.a path="/leagueinfo">
-                      <BC />
+                      <BO />
                     </c.a>
                     <c.a path="/giftshop">
-                      {(null === (i = p.sim) || void 0 === i ? void 0 : i.attr.includes("SIM_PANIC")) ? <LC /> : <uC />}
+                      {(null === (i = p.sim) || void 0 === i ? void 0 : i.attr.includes("SIM_PANIC")) ? <LO /> : <uO />}
                     </c.a>
                     <c.a path="/gift/:teamid">
-                      <gC progress={null === (o = b.state) || void 0 === o ? void 0 : o.params} />
+                      <gO progress={null === (o = b.state) || void 0 === o ? void 0 : o.params} />
                     </c.a>
                     <c.a path="/fuel/:teamid">
-                      <DC progress={null === (s = b.state) || void 0 === s ? void 0 : s.params} />
+                      <DO progress={null === (s = b.state) || void 0 === s ? void 0 : s.params} />
                     </c.a>
                     <c.a path="/renovation">
-                      <cC />
+                      <cO />
                     </c.a>
                     {Hg(p.sim, "SIM_DEPTH_CHART") ? (
                       <c.a path="/depth">
                         <Np>
-                          <wC />
+                          <wO />
                         </Np>
                       </c.a>
                     ) : null}
                     {Hg(p.sim, "SIM_MUSEUM_REVEALED") ? (
                       <c.a path="/vault">
-                        <TC />
+                        <TO />
                       </c.a>
                     ) : null}
                     <c.a path="/">
-                      <sO />
+                      <sC />
                     </c.a>
                   </c.c>
                   {w && (
@@ -39698,16 +39760,16 @@
                       <c.a path="/signup" children={<Kh isModal={!0} />} />
                       <c.a path="/login" children={<Kh isModal={!0} isLogin={!0} />} />
                       <c.a path="/forgot" children={<_h isModal={!0} />} />
-                      <c.a path="/send-verification-email" children={<yC isModal={!0} />} />
-                      <c.a path="/send-email-change" children={<CC isModal={!0} />} />
-                      <c.a path="/send-delete-account" children={<SC isModal={!0} />} />
+                      <c.a path="/send-verification-email" children={<yO isModal={!0} />} />
+                      <c.a path="/send-email-change" children={<OO isModal={!0} />} />
+                      <c.a path="/send-delete-account" children={<SO isModal={!0} />} />
                       <c.a path="/reset/:token" children={<_h isModal={!0} />} />
                       <c.a path="/team/:nickname" children={<Ih isModal={!0} />} />
                       <c.a path="/player/:id" children={<GA isModal={!0} />} />
                       <c.a
                         path="/item/:id"
                         children={
-                          <gO
+                          <gC
                             isModal={!0}
                             item={
                               null === (A = b.state) || void 0 === A || null === (u = A.params) || void 0 === u
@@ -39722,7 +39784,7 @@
                           />
                         }
                       />
-                      <c.a path="/game/:id" children={<fO isModal={!0} />} />
+                      <c.a path="/game/:id" children={<fC isModal={!0} />} />
                       {void 0 !== h.snacks.Max_Bet ? <c.a path="/bet/:gameId" children={<Sh isModal={!0} />} /> : null}
                       <c.a
                         path="/vote/:voteType/:entityId"
@@ -39739,27 +39801,27 @@
                       <c.a path="/pack/:ver" children={<Qh isModal={!0} />} />
                       <c.a path="/settings" children={<qh isModal={!0} />} />
                       {void 0 !== h.snacks.Stadium_Access ? (
-                        <c.a path="/contribute/:stadiumId/:renovationId" children={<$O isModal={!0} />} />
+                        <c.a path="/contribute/:stadiumId/:renovationId" children={<$C isModal={!0} />} />
                       ) : null}
                       <c.a path="/account" children={<qh isModal={!0} />} />
-                      <c.a path="/leagueinfo" children={<BC isModal={!0} />} />
+                      <c.a path="/leagueinfo" children={<BO isModal={!0} />} />
                       <c.a
                         path="/gift/:teamId"
                         children={
-                          <gC isModal={!0} progress={null === (g = b.state) || void 0 === g ? void 0 : g.params} />
+                          <gO isModal={!0} progress={null === (g = b.state) || void 0 === g ? void 0 : g.params} />
                         }
                       />
                       <c.a
                         path="/fuel/:teamId"
                         children={
-                          <DC isModal={!0} progress={null === (f = b.state) || void 0 === f ? void 0 : f.params} />
+                          <DO isModal={!0} progress={null === (f = b.state) || void 0 === f ? void 0 : f.params} />
                         }
                       />
-                      <c.a path="/wish/:entityId" children={<fC isModal={!0} />} />
+                      <c.a path="/wish/:entityId" children={<fO isModal={!0} />} />
                       <c.a
                         path="/certificate"
                         children={
-                          <kC
+                          <kO
                             isModal={!0}
                             event={
                               null === (E = b.state) || void 0 === E || null === (v = E.params) || void 0 === v
@@ -39780,15 +39842,15 @@
           </qm>
         );
       }
-      function VC() {
+      function VO() {
         return "mailto:sponsors@thegameband.com?subject=".concat(
           encodeURIComponent("I\u2019d like to sponsor a season of Blaseball")
         );
       }
-      var GC = function () {
+      var GO = function () {
         return (
           <x>
-            <RC />
+            <RO />
           </x>
         );
       };
@@ -39797,8 +39859,8 @@
           "[::1]" === window.location.hostname ||
           window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
       );
-      var WC = { sim: void 0, standings: void 0, season: void 0 },
-        zC = l.a.createContext({ menu: [], snackData: {} });
+      var WO = { sim: void 0, standings: void 0, season: void 0 },
+        zO = l.a.createContext({ menu: [], snackData: {} });
       "serviceWorker" in navigator &&
         navigator.serviceWorker.ready
           .then(function (e) {
@@ -39810,23 +39872,23 @@
         o.a.render(
           <l.a.StrictMode>
             <cA.ToastProvider autoDismiss={!0} autoDismissTimeout={3e3} placement="bottom-right">
-              <O value={{}}>
-                <S value={WC}>
+              <C value={{}}>
+                <S value={WO}>
                   <oc value={{}}>
                     <Yc value={{}}>
                       <nb
                         value={{ blessings: [], decrees: [], wills: [], gifts: [], willsToPass: 0, decreesToPass: 0 }}
                       >
-                        <Rg value={zC}>
+                        <Rg value={zO}>
                           <m.a>
-                            <GC />
+                            <GO />
                           </m.a>
                         </Rg>
                       </nb>
                     </Yc>
                   </oc>
                 </S>
-              </O>
+              </C>
             </cA.ToastProvider>
           </l.a.StrictMode>,
           document.getElementById("root")
