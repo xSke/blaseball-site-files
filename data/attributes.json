@@ -1333,7 +1333,11 @@
         "textColor": "#bdb3c3",
         "background": "#ffffff",
         "title": "Scattered",
-        "description": "This Player returned from Elsewhere a bit Scattered."
+        "description": "This Player returned from Elsewhere a bit Scattered.",
+        "descriptions": {
+            "player": "This Player returned from Elsewhere a bit Scattered.",
+            "team": "This Team is Scattered across the Desert."
+        }
     },
     {
         "id": "PATIENT",

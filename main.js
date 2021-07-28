@@ -37081,7 +37081,7 @@
                 <div className="QuadrantChart" id="Main-Body">
                   <div
                     className="League-Header"
-                    style={{ minWidth: "376.25px", justifyContent: D ? "flex-end" : "flex-start" }}
+                    style={{ minWidth: "376.25px", justifyContent: y ? "center" : D ? "flex-end" : "flex-start" }}
                   >
                     {D ? null : <Ae.a className="QuadrantChart-Arrows" style={{ marginRight: "10px" }} onClick={R} />}
                     <div>
@@ -38284,7 +38284,7 @@
       var CO = function (e) {
           Object(c.g)();
           var t = Object(r.useContext)(x.context),
-            a = (t.user, t.setUser, Object(r.useState)([])),
+            a = (t.user, t.setUser, Object(r.useState)({ rules: [] })),
             n = Object(s.a)(a, 2),
             i = n[0],
             o = n[1],
@@ -38317,7 +38317,7 @@
               <hA {...Object.assign({}, e, { className: "ModalItem-Nullified" })}>
                 <div className="ModalItem-Subheader">Rules</div>
                 <div className="ModalItem-Attributes LeagueInfo-Attributes">
-                  {i.map(function (e, t) {
+                  {i.rules.map(function (e, t) {
                     return <en id={e} type={qa.League} key={t} context={Xa.League} />;
                   })}
                 </div>
@@ -41493,6 +41493,10 @@
             background: "#ffffff",
             title: "Scattered",
             description: "This Player returned from Elsewhere a bit Scattered.",
+            descriptions: {
+              player: "This Player returned from Elsewhere a bit Scattered.",
+              team: "This Team is Scattered across the Desert.",
+            },
           },
           {
             id: "PATIENT",
