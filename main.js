@@ -865,6 +865,7 @@
     246: function (e, t, a) {},
     247: function (e, t, a) {},
     249: function (e, t, a) {},
+    25: function (e, t, a) {},
     250: function (e, t, a) {},
     251: function (e, t, a) {},
     252: function (e, t, a) {},
@@ -881,8 +882,8 @@
         o = a.n(i),
         s = (a(170), a(3)),
         c = a(16),
-        A = (a(27), a(6)),
-        u = (a(75), a(10), a(37)),
+        A = (a(25), a(6)),
+        u = (a(75), a(10), a(38)),
         m = a(8),
         d = function (e) {
           var t = e.path,
@@ -1528,7 +1529,7 @@
               {
                 key: "GetPackMultiplier",
                 value: function (e, t) {
-                  if (!Hg(t, "SIM_ALL_YOU_CAN_EAT")) return 1;
+                  if (!Gg(t, "SIM_ALL_YOU_CAN_EAT")) return 1;
                   var a = e.packSize;
                   return a < 1 || a > 24 ? 0 : this.packMultipliers[e.packSize - 1];
                 },
@@ -1536,7 +1537,7 @@
               {
                 key: "GetNextPackMultiplier",
                 value: function (e, t) {
-                  if (!Hg(t, "SIM_ALL_YOU_CAN_EAT")) return 1;
+                  if (!Gg(t, "SIM_ALL_YOU_CAN_EAT")) return 1;
                   var a = e.packSize;
                   return a < 1 || a > 24 ? 0 : this.packMultipliers[e.packSize];
                 },
@@ -1544,7 +1545,7 @@
               {
                 key: "GetPrevPackMultiplier",
                 value: function (e, t) {
-                  if (!Hg(t, "SIM_ALL_YOU_CAN_EAT")) return 1;
+                  if (!Gg(t, "SIM_ALL_YOU_CAN_EAT")) return 1;
                   var a = e.packSize;
                   return a < 1 || a > 24 ? 0 : this.packMultipliers[e.packSize - 2];
                 },
@@ -1612,7 +1613,7 @@
         ]);
       var ae,
         ne = te,
-        re = (a(131), a(96), a(38)),
+        re = (a(131), a(96), a(39)),
         le = a(94);
       !(function (e) {
         (e[(e.Lineup = 0)] = "Lineup"),
@@ -1626,7 +1627,7 @@
         },
         se = a(260),
         ce = a(261),
-        Ae = a(41),
+        Ae = a(36),
         ue = a(51),
         me = ["title", "titleId"];
       function de() {
@@ -3396,7 +3397,7 @@
           case "FAX_MACHINE":
             return <_.Tc />;
           case "HOTEL_MOTEL":
-            return <Ae.g />;
+            return <Ae.i />;
           case "SMITHY":
             return <_.f />;
           case "REPLICA":
@@ -7164,18 +7165,18 @@
       }
       function Ws(e, t) {
         return {
-          color: e.lightMode ? Mg(t.secondaryColor) : t.secondaryColor,
+          color: e.lightMode ? Fg(t.secondaryColor) : t.secondaryColor,
           background: e.lightMode ? t.secondaryColor : "none",
           padding: e.lightMode ? "0 8px" : "initial",
           borderRadius: e.lightMode ? "10px" : 0,
         };
       }
       function zs(e, t, a, n) {
-        var i = Hg(Object(r.useContext)(S.context).sim, "SIM_EVOLUTION_CONCEPTUALIZED"),
+        var i = Gg(Object(r.useContext)(S.context).sim, "SIM_EVOLUTION_CONCEPTUALIZED"),
           o = Math.abs(a),
           s = 1 === Math.sign(a),
           c = -1 === Math.sign(a),
-          A = sf(e) + (s ? a : 0),
+          A = Af(e) + (s ? a : 0),
           u = Math.floor(A),
           m = Math.ceil(A),
           d = Number((A - u).toFixed(2)),
@@ -7261,7 +7262,7 @@
               <span style={{ display: "flex" }} aria-label={B}>
                 {h}{" "}
                 <span className="Player-Stars-Num">
-                  ({sf(e).toFixed(1)}
+                  ({Af(e).toFixed(1)}
                   {o > 0 ? (
                     <l.a.Fragment>
                       {" "}
@@ -7278,8 +7279,8 @@
         );
       }
       function Us(e) {
-        var t = jg(5 * (e.hittingRating + e.pitchingRating + e.baserunningRating + e.defenseRating), 1),
-          a = lf(4, e.items);
+        var t = Hg(5 * (e.hittingRating + e.pitchingRating + e.baserunningRating + e.defenseRating), 1),
+          a = sf(4, e.items);
         return (
           <div className="Player-Stars-Combined">
             {t}
@@ -7624,7 +7625,7 @@
                 <div className="Events-List-Column">
                   <div className="Events-List-Row">{n.description}</div>
                   <div className="Events-List-Row Events-List-Minor">
-                    {Yg(s)}
+                    {qg(s)}
                     <div className="Events-List-Row-Group">
                       <span className="Events-List-NegativeText">-</span>{" "}
                       {o.aPlayerId === i ? (
@@ -7647,7 +7648,7 @@
                     </div>
                   </div>
                   <div className="Events-List-Row Events-List-Minor">
-                    {Yg(A)}
+                    {qg(A)}
                     <div className="Events-List-Row-Group">
                       <span className="Events-List-NegativeText">-</span>{" "}
                       {o.bPlayerId === i ? (
@@ -7703,7 +7704,7 @@
           (e[(e.chasiness = 25)] = "chasiness");
       })(ic || (ic = {}));
       function cc(e) {
-        return jg(5 * e, 1);
+        return Hg(5 * e, 1);
       }
       var Ac = function (e) {
           var t = e.event,
@@ -7827,7 +7828,7 @@
                 <div className="Events-List-Column">
                   <div className="Events-List-Row">{n.description}</div>
                   <div className="Events-List-Row Events-List-Minor">
-                    {Yg(s)}
+                    {qg(s)}
                     <div className="Events-List-Row Events-List-Row-Group">
                       {o.aPlayerId === i ? (
                         <span>{o.aPlayerName}</span>
@@ -7841,7 +7842,7 @@
                     </div>
                   </div>
                   <div className="Events-List-Row Events-List-Minor">
-                    {Yg(s)}
+                    {qg(s)}
                     <div className="Events-List-Row Events-List-Row-Group">
                       {o.bPlayerId === i ? (
                         <span>{o.bPlayerName}</span>
@@ -7867,7 +7868,7 @@
           });
         return (
           <div className="Events-List-Row Events-List-Minor">
-            {Yg(A)}
+            {qg(A)}
             <div className="Events-List-Row-Group">
               <span className="Events-List-PositiveText">+</span>{" "}
               {t === i ? (
@@ -7906,7 +7907,7 @@
           });
         return (
           <div className="Events-List-Row Events-List-Minor">
-            {Yg(A)}
+            {qg(A)}
             <div className="Events-List-Row-Group">
               <span className="Events-List-NegativeText">-</span>{" "}
               {t === i ? (
@@ -8010,7 +8011,7 @@
         );
       }
       function hc(e) {
-        return jg(5 * e, 1);
+        return Hg(5 * e, 1);
       }
       var bc = function (e) {
           var t = e.event,
@@ -8069,7 +8070,7 @@
                       });
                     return (
                       <div className="Events-List-Row Events-List-Minor">
-                        {Yg(o)}
+                        {qg(o)}
                         <div className="Events-List-Row-Group">
                           <span className="Events-List-NegativeText">-</span>{" "}
                           {e === a ? (
@@ -8091,7 +8092,7 @@
                       });
                     return (
                       <div className="Events-List-Row Events-List-Minor">
-                        {Yg(o)}
+                        {qg(o)}
                         <div className="Events-List-Row-Group">
                           <span className="Events-List-PositiveText">+</span>{" "}
                           {e === a ? (
@@ -8507,7 +8508,7 @@
         );
       }
       function iA(e) {
-        return jg(5 * e, 1);
+        return Hg(5 * e, 1);
       }
       var oA = function (e) {
           var t = e.event,
@@ -8607,7 +8608,7 @@
         },
         cA = a(12),
         AA =
-          (a(39),
+          (a(40),
           function (e) {
             return (
               <Ka.a placement={e.placement} overlay={<Za.a id={e.id}>{e.hover}</Za.a>}>
@@ -9164,7 +9165,7 @@
       var MA = r.forwardRef(QA),
         jA = (a.p, { player: void 0, team: void 0, tourneyTeam: void 0 });
       function FA(e) {
-        var t = Hg(Object(r.useContext)(S.context).sim, "SIM_EVOLUTION_CONCEPTUALIZED") && e >= 1,
+        var t = Gg(Object(r.useContext)(S.context).sim, "SIM_EVOLUTION_CONCEPTUALIZED") && e >= 1,
           a = <l.a.Fragment>Base</l.a.Fragment>;
         switch (e) {
           case 0:
@@ -9456,7 +9457,7 @@
           );
           var Fe,
             He =
-              Hg(null === Be || void 0 === Be ? void 0 : Be.sim, "UNLOCKED_HALL") &&
+              Gg(null === Be || void 0 === Be ? void 0 : Be.sim, "UNLOCKED_HALL") &&
               void 0 !== (null === Ie || void 0 === Ie ? void 0 : Ie.player) &&
               Ie.player.deceased ? (
                 <div className={"ModalItem-Status" + (Te.lightMode ? " ModalItem-Status-LightMode" : "")}>
@@ -9591,8 +9592,8 @@
               };
             })(),
             ze =
-              Vg(null === Ie || void 0 === Ie ? void 0 : Ie.player, "RETIRED") ||
-              Vg(null === Ie || void 0 === Ie ? void 0 : Ie.player, "COFFEE_EXIT"),
+              Wg(null === Ie || void 0 === Ie ? void 0 : Ie.player, "RETIRED") ||
+              Wg(null === Ie || void 0 === Ie ? void 0 : Ie.player, "COFFEE_EXIT"),
             Ue = !1;
           ((null === (t = Be.sim) || void 0 === t ? void 0 : t.phase) !== Q.Earlseason &&
             (null === (a = Be.sim) || void 0 === a ? void 0 : a.phase) !== Q.Midseason &&
@@ -9608,10 +9609,10 @@
             });
           var Ye,
             Je =
-              Vg(null === Ie || void 0 === Ie ? void 0 : Ie.player, "NON_IDOLIZED") ||
-              Vg(null === Ie || void 0 === Ie ? void 0 : Ie.player, "COFFEE_EXIT") ||
-              Vg(null === Ie || void 0 === Ie ? void 0 : Ie.player, "STATIC") ||
-              Vg(null === Ie || void 0 === Ie ? void 0 : Ie.player, "LEGENDARY"),
+              Wg(null === Ie || void 0 === Ie ? void 0 : Ie.player, "NON_IDOLIZED") ||
+              Wg(null === Ie || void 0 === Ie ? void 0 : Ie.player, "COFFEE_EXIT") ||
+              Wg(null === Ie || void 0 === Ie ? void 0 : Ie.player, "STATIC") ||
+              Wg(null === Ie || void 0 === Ie ? void 0 : Ie.player, "LEGENDARY"),
             qe = Te.idol,
             Xe =
               !ze && (null === Ie || void 0 === Ie ? void 0 : Ie.player) ? (
@@ -9682,12 +9683,12 @@
                             : void 0
                         }
                       >
-                        <div className="Player-Team-Emoji">{Yg(Ie.team)}</div>
+                        <div className="Player-Team-Emoji">{qg(Ie.team)}</div>
                       </div>
                       <div className="Player-Team-Name">{void 0 !== Ie.team ? Ie.team.fullName : "Null Team"}</div>
                     </div>
                   </div>
-                  {Hg(Be.sim, "UNLOCKED_IDOLS") ? (
+                  {Gg(Be.sim, "UNLOCKED_IDOLS") ? (
                     <yA.a className="ModalItem-Button">
                       {(Ue || Je) && qe !== Ie.player.id ? (
                         <div className="ModalItem-Tooltip">
@@ -9842,11 +9843,11 @@
                     </li>
                     <li className="Player-Info-Line">
                       <div className="Player-Info-Line-Header">Batting</div>
-                      <div className="ModalItem-Ratings">{nf(Ie.player)}</div>
+                      <div className="ModalItem-Ratings">{lf(Ie.player)}</div>
                     </li>
                     <li className="Player-Info-Line">
                       <div className="Player-Info-Line-Header">Pitching</div>
-                      <div className="ModalItem-Ratings">{rf(Ie.player)}</div>
+                      <div className="ModalItem-Ratings">{of(Ie.player)}</div>
                     </li>
                     <li className="Player-Info-Line">
                       <div className="Player-Info-Line-Header">Baserunning</div>
@@ -9857,7 +9858,7 @@
                               return e.baserunningRating;
                             })(e),
                             n = null !== (t = e.evolution) && void 0 !== t ? t : 0,
-                            r = lf(0, e.items);
+                            r = sf(0, e.items);
                           return zs(a, n, r);
                         })(Ie.player)}
                       </div>
@@ -9871,7 +9872,7 @@
                               return e.defenseRating;
                             })(e),
                             n = null !== (t = e.evolution) && void 0 !== t ? t : 0,
-                            r = lf(3, e.items);
+                            r = sf(3, e.items);
                           return zs(a, n, r);
                         })(Ie.player)}
                       </div>
@@ -9938,17 +9939,17 @@
                 </li>
                 <li className="Player-Info-Line">
                   <div className="Player-Info-Line-Header">
-                    {Vg(null === Ie || void 0 === Ie ? void 0 : Ie.player, "RETIRED")
+                    {Wg(null === Ie || void 0 === Ie ? void 0 : Ie.player, "RETIRED")
                       ? "Soulsong"
-                      : Vg(null === Ie || void 0 === Ie ? void 0 : Ie.player, "REPLICA")
+                      : Wg(null === Ie || void 0 === Ie ? void 0 : Ie.player, "REPLICA")
                       ? "Serial"
                       : "Soulscream"}
                   </div>
                   {(function (e) {
                     for (
-                      var t = Vg(e, "RETIRED"),
-                        a = Vg(e, "REPLICA"),
-                        n = Vg(e, "NEGATIVE"),
+                      var t = Wg(e, "RETIRED"),
+                        a = Wg(e, "REPLICA"),
+                        n = Wg(e, "NEGATIVE"),
                         r = "",
                         i = ["A", "E", "I", "O", "U", "X", "H", "A", "E", "I"],
                         o = [e.pressurization, e.divinity, e.tragicness, e.shakespearianism, e.ruthlessness],
@@ -9983,7 +9984,7 @@
               </ul>
             ) : null,
             Ke =
-              (null === Ie || void 0 === Ie ? void 0 : Ie.player) && Hg(Be.sim, "SIM_ITEM_SYSTEM") ? (
+              (null === Ie || void 0 === Ie ? void 0 : Ie.player) && Gg(Be.sim, "SIM_ITEM_SYSTEM") ? (
                 <div className="Player-Info-Items-Wrapper">
                   <div className="Player-Info-Items">
                     {(function (e, t) {
@@ -10013,7 +10014,7 @@
                         <OA.a.Link eventKey="Interview">Info</OA.a.Link>
                       </OA.a.Item>
                       <OA.a.Item>
-                        {Hg(Be.sim, "SIM_ITEM_SYSTEM") ? (
+                        {Gg(Be.sim, "SIM_ITEM_SYSTEM") ? (
                           <OA.a.Link eventKey="Items">Items</OA.a.Link>
                         ) : (
                           <OA.a.Link eventKey="Items">
@@ -10338,7 +10339,7 @@
                     return (
                       <li className="Events-List-Item Events-List-Item-Game">
                         <div className="Recap-Gift-Contributer" style={{ background: e.team.mainColor }}>
-                          {Yg(e.team)}
+                          {qg(e.team)}
                         </div>
                         <div className="Recap-Gift-Description">
                           {e.team.nickname} - {Math.round((e.coins / n.totalBenefactorCoins) * 100)}%.
@@ -11804,7 +11805,7 @@
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        return (e.next = 2), Pg();
+                        return (e.next = 2), xg();
                       case 2:
                         (t = e.sent), A(t);
                       case 4:
@@ -11856,15 +11857,15 @@
                     o(!i);
                   }}
                 >
-                  <Ae.c />
+                  <Ae.e />
                 </span>
               </div>
               {(function (e) {
                 return (
                   <div className="Events-List-Row">
-                    <span>{Jg(e.homeEmoji)}</span>
+                    <span>{Xg(e.homeEmoji)}</span>
                     <span className="Events-List-Row-Group">{e.homeScore}</span>,
-                    <span className="Events-List-Row-Group">{Jg(e.awayEmoji)}</span>
+                    <span className="Events-List-Row-Group">{Xg(e.awayEmoji)}</span>
                     <span className="Events-List-Row-Group">{e.awayScore}</span>
                   </div>
                 );
@@ -11905,7 +11906,7 @@
                       o(!i);
                     }}
                   >
-                    <Ae.c />
+                    <Ae.e />
                   </span>
                   <span className="Events-List-Row-Group Widget-Log-Ledger">
                     {A ? "Series" : "Season"} Total: {c.after.toString()}
@@ -12063,7 +12064,7 @@
         );
       }
       function id(e) {
-        return jg(5 * e, 1);
+        return Hg(5 * e, 1);
       }
       var od = function (e) {
           var t = e.event,
@@ -12230,7 +12231,7 @@
                   )
                     o.push(
                       <div className="Events-List-Row Events-List-Minor">
-                        {Yg(i)}
+                        {qg(i)}
                         <div className="Events-List-Row-Group">
                           <span className="Events-List-PositiveText">+</span>{" "}
                           {e.playerIds[s] === t ? (
@@ -12275,7 +12276,7 @@
                   )
                     o.push(
                       <div className="Events-List-Row Events-List-Minor">
-                        {Yg(i)}
+                        {qg(i)}
                         <div className="Events-List-Row-Group">
                           <span className="Events-List-NegativeText">-</span>{" "}
                           {e.playerIds[s] === t ? (
@@ -12527,7 +12528,7 @@
               s.push(<$s event={a} entity={n} source={i} />);
           }
           return (
-            (!Hg(o.sim, "SIM_PICKLED_HERRING") && [175, -1].includes(a.type)) ||
+            (!Gg(o.sim, "SIM_PICKLED_HERRING") && [175, -1].includes(a.type)) ||
               s.push(
                 <mA
                   event={a}
@@ -12933,7 +12934,7 @@
           ) {
             var z = null;
             return (
-              Hg(j.sim, "SIM_FORUM") &&
+              Gg(j.sim, "SIM_FORUM") &&
                 ((G = "The Forum improvements will be made available soon."),
                 (z = !0 ? (
                   <l.a.Fragment>
@@ -14010,7 +14011,7 @@
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (e.prev = 0), (e.next = 3), fetch("".concat(Pd, "/database/vault"));
+                      return (e.prev = 0), (e.next = 3), fetch("".concat(Pd, "/database/nullified"));
                     case 3:
                       return (t = e.sent), (e.next = 6), t.json();
                     case 6:
@@ -14041,6 +14042,37 @@
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
+                      return (e.prev = 0), (e.next = 3), fetch("".concat(Pd, "/database/vault"));
+                    case 3:
+                      return (t = e.sent), (e.next = 6), t.json();
+                    case 6:
+                      return (a = e.sent), e.abrupt("return", a);
+                    case 10:
+                      (e.prev = 10), (e.t0 = e.catch(0)), console.log(e.t0);
+                    case 13:
+                    case "end":
+                      return e.stop();
+                  }
+              },
+              e,
+              null,
+              [[0, 10]]
+            );
+          })
+        )).apply(this, arguments);
+      }
+      function xg() {
+        return Lg.apply(this, arguments);
+      }
+      function Lg() {
+        return (Lg = Object(E.a)(
+          f.a.mark(function e() {
+            var t, a;
+            return f.a.wrap(
+              function (e) {
+                for (;;)
+                  switch ((e.prev = e.next)) {
+                    case 0:
                       return (e.prev = 0), (e.next = 3), fetch("".concat(Pd, "/database/playerNamesIds"));
                     case 3:
                       return (t = e.sent), (e.next = 6), t.json();
@@ -14060,8 +14092,8 @@
           })
         )).apply(this, arguments);
       }
-      var xg = l.a.createContext({ menu: [], snackData: {} }),
-        Lg = function (e) {
+      var Rg = l.a.createContext({ menu: [], snackData: {} }),
+        Qg = function (e) {
           var t,
             a = e.children,
             n = Object(r.useContext)(S.context),
@@ -14101,12 +14133,12 @@
               },
               [null === (t = n.sim) || void 0 === t ? void 0 : t.menu]
             ),
-            (<xg.Provider value={c}>{a}</xg.Provider>)
+            (<Rg.Provider value={c}>{a}</Rg.Provider>)
           );
         };
-      Lg.context = xg;
-      var Rg = Lg;
-      function Qg(e) {
+      Qg.context = Rg;
+      var Mg = Qg;
+      function jg(e) {
         var t,
           a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0.2;
         if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(e))
@@ -14116,7 +14148,7 @@
           );
         throw new Error("Bad Hex");
       }
-      function Mg(e) {
+      function Fg(e) {
         e = e.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, function (e, t, a, n) {
           return t + t + a + a + n + n;
         });
@@ -14130,11 +14162,11 @@
           r = 0.2126 * n[0] + 0.7152 * n[1] + 0.0722 * n[2];
         return (r + 0.05) / 0.05 > 1.05 / (r + 0.05) ? "#000000" : "#ffffff";
       }
-      function jg(e, t) {
+      function Hg(e, t) {
         var a = Math.pow(10, t);
         return Math.round(e * a) / a;
       }
-      function Fg() {
+      function Vg() {
         var e = [0],
           t = new Date();
         if ((t.setMinutes(t.getMinutes() + 1, 0, 0), 0 == e.length)) return t;
@@ -14148,12 +14180,12 @@
         }
         return t;
       }
-      function Hg(e, t) {
+      function Gg(e, t) {
         if (void 0 === e) return !1;
         for (var a = 0; a < e.attr.length; a++) if (e.attr[a] === t) return !0;
         return !1;
       }
-      function Vg(e, t) {
+      function Wg(e, t) {
         return (
           void 0 !== e &&
           (e.permAttr.includes(t) ||
@@ -14163,7 +14195,7 @@
             e.itemAttr.includes(t))
         );
       }
-      function Gg(e, t) {
+      function zg(e, t) {
         var a = t.leagues[0];
         if (void 0 === a) return !1;
         var n = !1;
@@ -14186,7 +14218,7 @@
           n
         );
       }
-      function Wg(e, t) {
+      function Ug(e, t) {
         var a = !1;
         return (
           e.renoLog &&
@@ -14196,7 +14228,7 @@
           a
         );
       }
-      function zg(e, t) {
+      function Yg(e, t) {
         var a = 0;
         return (
           e.renoLog &&
@@ -14206,17 +14238,17 @@
           a
         );
       }
-      function Ug(e) {
+      function Jg(e) {
         return void 0 !== e && e.phase >= 3 && e.phase <= 4;
       }
-      function Yg(e) {
-        return void 0 === e ? String.fromCodePoint(Number("0x2753")) : Jg(e.emoji);
+      function qg(e) {
+        return void 0 === e ? String.fromCodePoint(Number("0x2753")) : Xg(e.emoji);
       }
-      function Jg(e) {
+      function Xg(e) {
         var t = Number(e);
         return isNaN(t) ? e : String.fromCodePoint(t);
       }
-      function qg(e, t, a, n) {
+      function Zg(e, t, a, n) {
         var r = void 0 !== t.filters.leagueLocation ? t.filters.leagueLocation : "inLeague",
           l = [];
         if (void 0 === e) return l;
@@ -14330,7 +14362,7 @@
         }
         return l;
       }
-      function Xg(e, t) {
+      function Kg(e, t) {
         var a = [];
         if (void 0 !== e && null !== e) {
           if ("batter" === t || "all" === t || "any" === t)
@@ -14341,7 +14373,7 @@
         }
         return a;
       }
-      function Zg(e, t, a, n, r, l, i) {
+      function _g(e, t, a, n, r, l, i) {
         var o = [];
         if (void 0 !== e && null !== e) {
           if ("batter" === t || "all" === t || "any" === t)
@@ -14350,12 +14382,12 @@
                   var i = a.find(function (a) {
                     return e.lineup[t] === a.id;
                   });
-                  if (void 0 !== i && $g(i))
+                  if (void 0 !== i && tf(i))
                     if (n) {
-                      var s = ef(i);
+                      var s = af(i);
                       s && o.push(s);
                     } else if (l && r) {
-                      var c = tf(i, r, l);
+                      var c = nf(i, r, l);
                       c && o.push(c);
                     } else
                       o.push({
@@ -14382,12 +14414,12 @@
                   var i = a.find(function (a) {
                     return e.rotation[t] === a.id;
                   });
-                  if (void 0 !== i && $g(i))
+                  if (void 0 !== i && tf(i))
                     if (n) {
-                      var s = ef(i);
+                      var s = af(i);
                       s && o.push(s);
                     } else if (l && r) {
-                      var c = tf(i, r, l);
+                      var c = nf(i, r, l);
                       c && o.push(c);
                     } else
                       o.push({
@@ -14414,12 +14446,12 @@
                   var i = a.find(function (a) {
                     return e.shadows[t] === a.id;
                   });
-                  if (void 0 !== i && $g(i))
+                  if (void 0 !== i && tf(i))
                     if (n) {
-                      var s = ef(i);
+                      var s = af(i);
                       s && o.push(s);
                     } else if (l && r) {
-                      var c = tf(i, r, l);
+                      var c = nf(i, r, l);
                       c && o.push(c);
                     } else
                       o.push({
@@ -14443,7 +14475,7 @@
         }
         return o;
       }
-      var Kg = [
+      var $g = [
           "RETURNED",
           "ALTERNATE",
           "SHELLED",
@@ -14484,18 +14516,18 @@
           "REPLICA",
           "DUST",
         ],
-        _g = ["REPLICA"];
-      function $g(e) {
+        ef = ["REPLICA"];
+      function tf(e) {
         var t = !0;
         return (
           e.permAttr.length > 0 &&
             e.permAttr.forEach(function (e) {
-              _g.includes(e) && (t = !1);
+              ef.includes(e) && (t = !1);
             }),
           t
         );
       }
-      function ef(e) {
+      function af(e) {
         if (e.permAttr.length > 0) {
           var t = [];
           if (
@@ -14504,7 +14536,7 @@
                   void 0 === e.state.permModSources ||
                   void 0 === e.state.permModSources[a] ||
                   e.state.permModSources[a].length < 1,
-                r = !Kg.includes(a);
+                r = !$g.includes(a);
               n && r && t.push(a);
             }),
             t.length > 0)
@@ -14523,7 +14555,7 @@
             };
         }
       }
-      function tf(e, t, a) {
+      function nf(e, t, a) {
         var n = e.hittingRating + e.pitchingRating + e.baserunningRating + e.defenseRating;
         if (Math.abs(n - a) <= t)
           return {
@@ -14539,7 +14571,7 @@
             items: e.items,
           };
       }
-      function af(e) {
+      function rf(e) {
         switch (e) {
           case W.Magician:
             return ["I", "The Magician"];
@@ -14587,23 +14619,23 @@
             return ["", "----"];
         }
       }
-      function nf(e, t) {
+      function lf(e, t) {
         var a,
-          n = of(e),
+          n = cf(e),
           r = null !== (a = e.evolution) && void 0 !== a ? a : 0,
-          l = lf(2, e.items);
+          l = sf(2, e.items);
         return t ? zs(n, r, l, t) : zs(n, r, l);
       }
-      function rf(e, t) {
+      function of(e, t) {
         var a,
           n = (function (e) {
             return e.pitchingRating;
           })(e),
           r = null !== (a = e.evolution) && void 0 !== a ? a : 0,
-          l = lf(1, e.items);
+          l = sf(1, e.items);
         return t ? zs(n, r, l, t) : zs(n, r, l);
       }
-      function lf(e, t) {
+      function sf(e, t) {
         var a = 0;
         if (void 0 === t || 0 === t.length) return a;
         var n,
@@ -14637,15 +14669,15 @@
         } finally {
           r.f();
         }
-        return jg(5 * a, 1);
+        return Hg(5 * a, 1);
       }
-      function of(e) {
+      function cf(e) {
         return e.hittingRating;
       }
-      function sf(e) {
+      function Af(e) {
         return Number((e / 0.2).toFixed(1));
       }
-      function cf(e, t) {
+      function uf(e, t) {
         var a = 0;
         if (void 0 !== t)
           for (var n in t.runs)
@@ -14655,23 +14687,23 @@
             }
         return a;
       }
-      function Af(e, t) {
-        var a = Object(r.useContext)(Rg.context);
+      function mf(e, t) {
+        var a = Object(r.useContext)(Mg.context);
         return void 0 === ne.GetTiers(e, a.snackData) ? t : t + 1;
       }
-      var uf,
-        mf = a(263);
-      function df(e) {
+      var df,
+        gf = a(263);
+      function ff(e) {
         var t = e.toString(),
           a = t.split(".");
         return "00" == a[1] ? a[0] : "0" === a[0] && a[1] ? "." + a[1] : t;
       }
-      function gf(e) {
+      function Ef(e) {
         return e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       }
-      var ff = ["title", "titleId"];
-      function Ef() {
-        return (Ef =
+      var vf = ["title", "titleId"];
+      function pf() {
+        return (pf =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -14681,7 +14713,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function vf(e, t) {
+      function hf(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -14701,13 +14733,13 @@
         }
         return r;
       }
-      function pf(e, t) {
+      function bf(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = vf(e, ff);
+          l = hf(e, vf);
         return (
           <svg
-            {...Ef(
+            {...pf(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -14721,8 +14753,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {uf ||
-              (uf = (
+            {df ||
+              (df = (
                 <image
                   id="_01-Rodeo_A"
                   data-name="01-Rodeo_A"
@@ -14736,11 +14768,11 @@
           </svg>
         );
       }
-      var hf,
-        bf = r.forwardRef(pf),
-        wf = (a.p, ["title", "titleId"]);
-      function Bf() {
-        return (Bf =
+      var wf,
+        Bf = r.forwardRef(bf),
+        yf = (a.p, ["title", "titleId"]);
+      function Cf() {
+        return (Cf =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -14750,7 +14782,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function yf(e, t) {
+      function Of(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -14770,13 +14802,13 @@
         }
         return r;
       }
-      function Cf(e, t) {
+      function If(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = yf(e, wf);
+          l = Of(e, yf);
         return (
           <svg
-            {...Bf(
+            {...Cf(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -14790,8 +14822,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {hf ||
-              (hf = (
+            {wf ||
+              (wf = (
                 <image
                   id="_01-Rodeo_B"
                   data-name="01-Rodeo_B"
@@ -14805,11 +14837,11 @@
           </svg>
         );
       }
-      var Of,
-        If = r.forwardRef(Cf),
-        Sf = (a.p, ["title", "titleId"]);
-      function Nf() {
-        return (Nf =
+      var Sf,
+        Nf = r.forwardRef(If),
+        kf = (a.p, ["title", "titleId"]);
+      function Tf() {
+        return (Tf =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -14819,7 +14851,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function kf(e, t) {
+      function Pf(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -14839,13 +14871,13 @@
         }
         return r;
       }
-      function Tf(e, t) {
+      function Df(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = kf(e, Sf);
+          l = Pf(e, kf);
         return (
           <svg
-            {...Nf(
+            {...Tf(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -14859,8 +14891,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Of ||
-              (Of = (
+            {Sf ||
+              (Sf = (
                 <image
                   id="_02-Loge_A"
                   data-name="02-Loge_A"
@@ -14874,11 +14906,11 @@
           </svg>
         );
       }
-      var Pf,
-        Df = r.forwardRef(Tf),
-        xf = (a.p, ["title", "titleId"]);
-      function Lf() {
-        return (Lf =
+      var xf,
+        Lf = r.forwardRef(Df),
+        Rf = (a.p, ["title", "titleId"]);
+      function Qf() {
+        return (Qf =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -14888,7 +14920,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Rf(e, t) {
+      function Mf(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -14908,13 +14940,13 @@
         }
         return r;
       }
-      function Qf(e, t) {
+      function jf(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Rf(e, xf);
+          l = Mf(e, Rf);
         return (
           <svg
-            {...Lf(
+            {...Qf(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -14928,8 +14960,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Pf ||
-              (Pf = (
+            {xf ||
+              (xf = (
                 <image
                   id="_02-Loge_B"
                   data-name="02-Loge_B"
@@ -14943,11 +14975,11 @@
           </svg>
         );
       }
-      var Mf,
-        jf = r.forwardRef(Qf),
-        Ff = (a.p, ["title", "titleId"]);
-      function Hf() {
-        return (Hf =
+      var Ff,
+        Hf = r.forwardRef(jf),
+        Vf = (a.p, ["title", "titleId"]);
+      function Gf() {
+        return (Gf =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -14957,7 +14989,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Vf(e, t) {
+      function Wf(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -14977,13 +15009,13 @@
         }
         return r;
       }
-      function Gf(e, t) {
+      function zf(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Vf(e, Ff);
+          l = Wf(e, Vf);
         return (
           <svg
-            {...Hf(
+            {...Gf(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -14997,8 +15029,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Mf ||
-              (Mf = (
+            {Ff ||
+              (Ff = (
                 <image
                   id="_03-Pine_A"
                   data-name="03-Pine_A"
@@ -15012,11 +15044,11 @@
           </svg>
         );
       }
-      var Wf,
-        zf = r.forwardRef(Gf),
-        Uf = (a.p, ["title", "titleId"]);
-      function Yf() {
-        return (Yf =
+      var Uf,
+        Yf = r.forwardRef(zf),
+        Jf = (a.p, ["title", "titleId"]);
+      function qf() {
+        return (qf =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -15026,7 +15058,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Jf(e, t) {
+      function Xf(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -15046,13 +15078,13 @@
         }
         return r;
       }
-      function qf(e, t) {
+      function Zf(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Jf(e, Uf);
+          l = Xf(e, Jf);
         return (
           <svg
-            {...Yf(
+            {...qf(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -15066,8 +15098,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Wf ||
-              (Wf = (
+            {Uf ||
+              (Uf = (
                 <image
                   id="_03-Pine_B"
                   data-name="03-Pine_B"
@@ -15081,11 +15113,11 @@
           </svg>
         );
       }
-      var Xf,
-        Zf = r.forwardRef(qf),
-        Kf = (a.p, ["title", "titleId"]);
-      function _f() {
-        return (_f =
+      var Kf,
+        _f = r.forwardRef(Zf),
+        $f = (a.p, ["title", "titleId"]);
+      function eE() {
+        return (eE =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -15095,7 +15127,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function $f(e, t) {
+      function tE(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -15115,13 +15147,13 @@
         }
         return r;
       }
-      function eE(e, t) {
+      function aE(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = $f(e, Kf);
+          l = tE(e, $f);
         return (
           <svg
-            {..._f(
+            {...eE(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -15135,8 +15167,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Xf ||
-              (Xf = (
+            {Kf ||
+              (Kf = (
                 <image
                   id="_04-Boreal_A"
                   data-name="04-Boreal_A"
@@ -15150,11 +15182,11 @@
           </svg>
         );
       }
-      var tE,
-        aE = r.forwardRef(eE),
-        nE = (a.p, ["title", "titleId"]);
-      function rE() {
-        return (rE =
+      var nE,
+        rE = r.forwardRef(aE),
+        lE = (a.p, ["title", "titleId"]);
+      function iE() {
+        return (iE =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -15164,7 +15196,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function lE(e, t) {
+      function oE(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -15184,13 +15216,13 @@
         }
         return r;
       }
-      function iE(e, t) {
+      function sE(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = lE(e, nE);
+          l = oE(e, lE);
         return (
           <svg
-            {...rE(
+            {...iE(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -15204,8 +15236,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {tE ||
-              (tE = (
+            {nE ||
+              (nE = (
                 <image
                   id="_04-Boreal_B"
                   data-name="04-Boreal_B"
@@ -15219,11 +15251,11 @@
           </svg>
         );
       }
-      var oE,
-        sE = r.forwardRef(iE),
-        cE = (a.p, ["title", "titleId"]);
-      function AE() {
-        return (AE =
+      var cE,
+        AE = r.forwardRef(sE),
+        uE = (a.p, ["title", "titleId"]);
+      function mE() {
+        return (mE =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -15233,7 +15265,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function uE(e, t) {
+      function dE(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -15253,13 +15285,13 @@
         }
         return r;
       }
-      function mE(e, t) {
+      function gE(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = uE(e, cE);
+          l = dE(e, uE);
         return (
           <svg
-            {...AE(
+            {...mE(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -15273,8 +15305,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {oE ||
-              (oE = (
+            {cE ||
+              (cE = (
                 <image
                   id="_05-Palmero_A"
                   data-name="05-Palmero_A"
@@ -15288,11 +15320,11 @@
           </svg>
         );
       }
-      var dE,
-        gE = r.forwardRef(mE),
-        fE = (a.p, ["title", "titleId"]);
-      function EE() {
-        return (EE =
+      var fE,
+        EE = r.forwardRef(gE),
+        vE = (a.p, ["title", "titleId"]);
+      function pE() {
+        return (pE =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -15302,7 +15334,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function vE(e, t) {
+      function hE(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -15322,13 +15354,13 @@
         }
         return r;
       }
-      function pE(e, t) {
+      function bE(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = vE(e, fE);
+          l = hE(e, vE);
         return (
           <svg
-            {...EE(
+            {...pE(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -15342,8 +15374,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {dE ||
-              (dE = (
+            {fE ||
+              (fE = (
                 <image
                   id="_05-Palmero_B"
                   data-name="05-Palmero_B"
@@ -15357,11 +15389,11 @@
           </svg>
         );
       }
-      var hE,
-        bE = r.forwardRef(pE),
-        wE = (a.p, ["title", "titleId"]);
-      function BE() {
-        return (BE =
+      var wE,
+        BE = r.forwardRef(bE),
+        yE = (a.p, ["title", "titleId"]);
+      function CE() {
+        return (CE =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -15371,7 +15403,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function yE(e, t) {
+      function OE(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -15391,13 +15423,13 @@
         }
         return r;
       }
-      function CE(e, t) {
+      function IE(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = yE(e, wE);
+          l = OE(e, yE);
         return (
           <svg
-            {...BE(
+            {...CE(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -15411,8 +15443,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {hE ||
-              (hE = (
+            {wE ||
+              (wE = (
                 <image
                   id="_06-Silverada_A"
                   data-name="06-Silverada_A"
@@ -15426,11 +15458,11 @@
           </svg>
         );
       }
-      var OE,
-        IE = r.forwardRef(CE),
-        SE = (a.p, ["title", "titleId"]);
-      function NE() {
-        return (NE =
+      var SE,
+        NE = r.forwardRef(IE),
+        kE = (a.p, ["title", "titleId"]);
+      function TE() {
+        return (TE =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -15440,7 +15472,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function kE(e, t) {
+      function PE(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -15460,13 +15492,13 @@
         }
         return r;
       }
-      function TE(e, t) {
+      function DE(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = kE(e, SE);
+          l = PE(e, kE);
         return (
           <svg
-            {...NE(
+            {...TE(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -15480,8 +15512,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {OE ||
-              (OE = (
+            {SE ||
+              (SE = (
                 <image
                   id="_06-Silverada_B"
                   data-name="06-Silverada_B"
@@ -15495,11 +15527,11 @@
           </svg>
         );
       }
-      var PE,
-        DE = r.forwardRef(TE),
-        xE = (a.p, ["title", "titleId"]);
-      function LE() {
-        return (LE =
+      var xE,
+        LE = r.forwardRef(DE),
+        RE = (a.p, ["title", "titleId"]);
+      function QE() {
+        return (QE =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -15509,7 +15541,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function RE(e, t) {
+      function ME(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -15529,13 +15561,13 @@
         }
         return r;
       }
-      function QE(e, t) {
+      function jE(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = RE(e, xE);
+          l = ME(e, RE);
         return (
           <svg
-            {...LE(
+            {...QE(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -15549,8 +15581,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {PE ||
-              (PE = (
+            {xE ||
+              (xE = (
                 <image
                   id="_07-Douglas_A"
                   data-name="07-Douglas_A"
@@ -15564,11 +15596,11 @@
           </svg>
         );
       }
-      var ME,
-        jE = r.forwardRef(QE),
-        FE = (a.p, ["title", "titleId"]);
-      function HE() {
-        return (HE =
+      var FE,
+        HE = r.forwardRef(jE),
+        VE = (a.p, ["title", "titleId"]);
+      function GE() {
+        return (GE =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -15578,7 +15610,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function VE(e, t) {
+      function WE(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -15598,13 +15630,13 @@
         }
         return r;
       }
-      function GE(e, t) {
+      function zE(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = VE(e, FE);
+          l = WE(e, VE);
         return (
           <svg
-            {...HE(
+            {...GE(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -15618,8 +15650,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {ME ||
-              (ME = (
+            {FE ||
+              (FE = (
                 <image
                   id="_07-Douglas_B"
                   data-name="07-Douglas_B"
@@ -15633,11 +15665,11 @@
           </svg>
         );
       }
-      var WE,
-        zE = r.forwardRef(GE),
-        UE = (a.p, ["title", "titleId"]);
-      function YE() {
-        return (YE =
+      var UE,
+        YE = r.forwardRef(zE),
+        JE = (a.p, ["title", "titleId"]);
+      function qE() {
+        return (qE =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -15647,7 +15679,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function JE(e, t) {
+      function XE(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -15667,13 +15699,13 @@
         }
         return r;
       }
-      function qE(e, t) {
+      function ZE(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = JE(e, UE);
+          l = XE(e, JE);
         return (
           <svg
-            {...YE(
+            {...qE(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -15687,8 +15719,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {WE ||
-              (WE = (
+            {UE ||
+              (UE = (
                 <image
                   id="_08-Hillcrest_A"
                   data-name="08-Hillcrest_A"
@@ -15702,11 +15734,11 @@
           </svg>
         );
       }
-      var XE,
-        ZE = r.forwardRef(qE),
-        KE = (a.p, ["title", "titleId"]);
-      function _E() {
-        return (_E =
+      var KE,
+        _E = r.forwardRef(ZE),
+        $E = (a.p, ["title", "titleId"]);
+      function ev() {
+        return (ev =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -15716,7 +15748,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function $E(e, t) {
+      function tv(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -15736,13 +15768,13 @@
         }
         return r;
       }
-      function ev(e, t) {
+      function av(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = $E(e, KE);
+          l = tv(e, $E);
         return (
           <svg
-            {..._E(
+            {...ev(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -15756,8 +15788,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {XE ||
-              (XE = (
+            {KE ||
+              (KE = (
                 <image
                   id="_08-Hillcrest_B"
                   data-name="08-Hillcrest_B"
@@ -15771,11 +15803,11 @@
           </svg>
         );
       }
-      var tv,
-        av = r.forwardRef(ev),
-        nv = (a.p, ["title", "titleId"]);
-      function rv() {
-        return (rv =
+      var nv,
+        rv = r.forwardRef(av),
+        lv = (a.p, ["title", "titleId"]);
+      function iv() {
+        return (iv =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -15785,7 +15817,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function lv(e, t) {
+      function ov(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -15805,13 +15837,13 @@
         }
         return r;
       }
-      function iv(e, t) {
+      function sv(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = lv(e, nv);
+          l = ov(e, lv);
         return (
           <svg
-            {...rv(
+            {...iv(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -15825,8 +15857,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {tv ||
-              (tv = (
+            {nv ||
+              (nv = (
                 <image
                   id="_09-Twede_A"
                   data-name="09-Twede_A"
@@ -15840,11 +15872,11 @@
           </svg>
         );
       }
-      var ov,
-        sv = r.forwardRef(iv),
-        cv = (a.p, ["title", "titleId"]);
-      function Av() {
-        return (Av =
+      var cv,
+        Av = r.forwardRef(sv),
+        uv = (a.p, ["title", "titleId"]);
+      function mv() {
+        return (mv =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -15854,7 +15886,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function uv(e, t) {
+      function dv(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -15874,13 +15906,13 @@
         }
         return r;
       }
-      function mv(e, t) {
+      function gv(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = uv(e, cv);
+          l = dv(e, uv);
         return (
           <svg
-            {...Av(
+            {...mv(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -15894,8 +15926,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {ov ||
-              (ov = (
+            {cv ||
+              (cv = (
                 <image
                   id="_09-Twede_B"
                   data-name="09-Twede_B"
@@ -15909,61 +15941,61 @@
           </svg>
         );
       }
-      var dv,
-        gv = r.forwardRef(mv);
+      var fv,
+        Ev = r.forwardRef(gv);
       a.p;
       !(function (e) {
         (e[(e.GameWidget = 0)] = "GameWidget"), (e[(e.TeamModal = 1)] = "TeamModal");
-      })(dv || (dv = {}));
-      var fv = function (e) {
+      })(fv || (fv = {}));
+      var vv = function (e) {
           return (
-            <div className={vv(e.style)} aria-label={e.stadium.nickname} style={{ background: e.stadium.mainColor }}>
-              <div className="Team-Stadium-IconA" aria-hidden={!0} style={{ filter: pv(e.stadium.secondaryColor) }}>
+            <div className={hv(e.style)} aria-label={e.stadium.nickname} style={{ background: e.stadium.mainColor }}>
+              <div className="Team-Stadium-IconA" aria-hidden={!0} style={{ filter: bv(e.stadium.secondaryColor) }}>
                 {(function (e) {
                   switch (e) {
                     case 0:
-                      return <gE />;
+                      return <EE />;
                     case 1:
-                      return <IE />;
+                      return <NE />;
                     case 2:
-                      return <jE />;
+                      return <HE />;
                     case 3:
-                      return <ZE />;
+                      return <_E />;
                     case 4:
-                      return <sv />;
+                      return <Av />;
                     case 5:
-                      return <bf />;
+                      return <Bf />;
                     case 6:
-                      return <Df />;
+                      return <Lf />;
                     case 7:
-                      return <zf />;
+                      return <Yf />;
                     case 8:
-                      return <aE />;
+                      return <rE />;
                   }
                   return <ce.d />;
                 })(e.index)}
               </div>
-              <div className="Team-Stadium-IconB" aria-hidden={!0} style={{ filter: pv(e.stadium.tertiaryColor) }}>
+              <div className="Team-Stadium-IconB" aria-hidden={!0} style={{ filter: bv(e.stadium.tertiaryColor) }}>
                 {(function (e) {
                   switch (e) {
                     case 0:
-                      return <bE />;
+                      return <BE />;
                     case 1:
-                      return <DE />;
+                      return <LE />;
                     case 2:
-                      return <zE />;
+                      return <YE />;
                     case 3:
-                      return <av />;
+                      return <rv />;
                     case 4:
-                      return <gv />;
+                      return <Ev />;
                     case 5:
-                      return <If />;
+                      return <Nf />;
                     case 6:
-                      return <jf />;
+                      return <Hf />;
                     case 7:
-                      return <Zf />;
+                      return <_f />;
                     case 8:
-                      return <sE />;
+                      return <AE />;
                   }
                   return <ce.d />;
                 })(e.index)}
@@ -15971,23 +16003,23 @@
             </div>
           );
         },
-        Ev = function (e) {
+        pv = function (e) {
           return (
-            <div className={vv(e.style)} style={{ background: "#b8b8b8" }}>
+            <div className={hv(e.style)} style={{ background: "#b8b8b8" }}>
               {String.fromCodePoint(Number("0x2753"))}
             </div>
           );
         };
-      function vv(e) {
+      function hv(e) {
         switch (e) {
-          case dv.GameWidget:
+          case fv.GameWidget:
             return "Team-Stadium-IconSmall";
-          case dv.TeamModal:
+          case fv.TeamModal:
             return "Team-Stadium-IconLarge";
         }
         return "";
       }
-      function pv(e) {
+      function bv(e) {
         switch (e) {
           case "#ab8287":
             return "brightness(0) saturate(100%) invert(75%) sepia(9%) saturate(1312%) hue-rotate(304deg) brightness(75%) contrast(69%)";
@@ -16093,15 +16125,15 @@
             return "";
         }
       }
-      var hv = function (e) {
+      var wv = function (e) {
         var t = e.stadium;
         return void 0 === t || null === t.model ? (
-          <Ev style={e.style} stadium={e.stadium} />
+          <pv style={e.style} stadium={e.stadium} />
         ) : (
-          <fv stadium={t} index={t.model} style={e.style} />
+          <vv stadium={t} index={t.model} style={e.style} />
         );
       };
-      function bv() {
+      function Bv() {
         return (
           <svg xmlns="http://www.w3.org/2000/svg" className="GameWidget-DunDun" viewBox="100 -20 312 412">
             <path
@@ -16112,7 +16144,7 @@
           </svg>
         );
       }
-      function wv(e) {
+      function yv(e) {
         var t,
           a,
           n = e.data,
@@ -16121,10 +16153,10 @@
           s = Object(r.useContext)(U.context).activeBets,
           A = Object(r.useContext)(oc.context),
           u = Object(r.useContext)(S.context),
-          g = Qv(n),
-          f = Mv(g),
+          g = jv(n),
+          f = Fv(g),
           E = Object(c.g)(),
-          v = Pv(n),
+          v = xv(n),
           p = null;
         if (g.started && o.isSignedIn) p = null;
         else if (g.started) p = <div />;
@@ -16187,11 +16219,11 @@
             N = n.homeTeamData.card <= -2;
           I &&
             !N &&
-            ((C = <hv stadium={I} style={dv.GameWidget} />),
+            ((C = <wv stadium={I} style={fv.GameWidget} />),
             (O = I.nickname),
             (y = (
               <div className="GameWidget-Upcoming-Body">
-                <mf.a className="GameWidget-Upcoming-Icon" style={{ filter: "invert(1)", padding: "5px" }} />
+                <gf.a className="GameWidget-Upcoming-Icon" style={{ filter: "invert(1)", padding: "5px" }} />
                 <div className="GameWidget-Upcoming-Label" aria-hidden="true">
                   BALLPARK
                 </div>
@@ -16213,8 +16245,8 @@
           D = ((null === P || void 0 === P ? void 0 : P.length) || 0) > 0 ? P[0] : void 0;
         if (g.started) {
           void 0 !== D && D.payout;
-          (k = void 0 !== D && D.targets[0] === n.homeTeam ? <Ov activeBet={D} /> : null),
-            (T = void 0 !== D && D.targets[0] === n.awayTeam ? <Ov activeBet={D} /> : null);
+          (k = void 0 !== D && D.targets[0] === n.homeTeam ? <Sv activeBet={D} /> : null),
+            (T = void 0 !== D && D.targets[0] === n.awayTeam ? <Sv activeBet={D} /> : null);
         }
         var L = !1;
         n.lastUpdate.includes("CONSUMER") && (L = !0);
@@ -16222,8 +16254,8 @@
         g.started &&
           (R = (
             <div className="Widget-Log" aria-label="Log">
-              {L ? <bv /> : null}
-              <Hv data={n} attack={L} withLedger={!1} />
+              {L ? <Bv /> : null}
+              <Gv data={n} attack={L} withLedger={!1} />
               <div className="Widget-Log-PlayCount" role="text" aria-label={"Play #" + g.playCount}>
                 {g.playCount}
               </div>
@@ -16236,7 +16268,7 @@
           F = void 0,
           H = void 0;
         void 0 !== A &&
-          Hg(u.sim, "SIM_SHOW_LEVELS") &&
+          Gg(u.sim, "SIM_SHOW_LEVELS") &&
           ((F = A.teams.find(function (e) {
             return e.id === n.homeTeam;
           })),
@@ -16253,7 +16285,7 @@
             aria-label={"".concat(i.awayTeamName, " versus ").concat(i.homeTeamName)}
           >
             <div className="Widget-Header-Wrapper">
-              <Cv
+              <Iv
                 statusDisplay={f}
                 started={g.started}
                 stadiumName={O}
@@ -16324,7 +16356,7 @@
                 })(n)}
               />
               <div role="group" aria-label="The Teams" className="Widget-ScoreBacking">
-                <Iv
+                <Nv
                   id={n.awayTeam}
                   color={n.awayTeamColor}
                   emoji={n.awayTeamEmoji}
@@ -16338,9 +16370,9 @@
                   odds={n.awayOdds}
                   betsSection={T}
                   score={i.awayTeamScore}
-                  style={yv(n.gameComplete, Wv(!1, n), n.state && n.state.postseason ? n.state.postseason.bracket : -1)}
+                  style={Ov(n.gameComplete, Uv(!1, n), n.state && n.state.postseason ? n.state.postseason.bracket : -1)}
                 />
-                <Iv
+                <Nv
                   id={n.homeTeam}
                   color={n.homeTeamColor}
                   emoji={n.homeTeamEmoji}
@@ -16354,11 +16386,11 @@
                   odds={n.homeOdds}
                   betsSection={k}
                   score={i.homeTeamScore}
-                  style={yv(n.gameComplete, Wv(!0, n), n.state && n.state.postseason ? n.state.postseason.bracket : -1)}
+                  style={Ov(n.gameComplete, Uv(!0, n), n.state && n.state.postseason ? n.state.postseason.bracket : -1)}
                 />
               </div>
             </div>
-            <Bv
+            <Cv
               statusInfo={g}
               activeBet={D}
               data={n}
@@ -16373,7 +16405,7 @@
           </li>
         );
       }
-      function Bv(e) {
+      function Cv(e) {
         var t = e.statusInfo,
           a = e.activeBet,
           n = e.data,
@@ -16455,7 +16487,7 @@
                    
                   <span
                     className="GameWidget-Outcome-Callout"
-                    style={{ color: o ? Mg(f()) : f(), background: o ? f() : "none", padding: o ? "0 4px" : "initial" }}
+                    style={{ color: o ? Fg(f()) : f(), background: o ? f() : "none", padding: o ? "0 4px" : "initial" }}
                   >
                     {g()}
                   </span>
@@ -16470,8 +16502,8 @@
                   <span
                     className="GameWidget-Outcome-Callout"
                     style={{
-                      color: o ? Mg(v(d())) : v(d()),
-                      background: o ? Qg(v(d()), 0.25) : "none",
+                      color: o ? Fg(v(d())) : v(d()),
+                      background: o ? jg(v(d()), 0.25) : "none",
                       padding: o ? "0 4px" : "initial",
                     }}
                   >
@@ -16491,8 +16523,8 @@
                   <span
                     className="GameWidget-Outcome-Callout"
                     style={{
-                      color: o ? Mg(v(a.targets[0])) : v(a.targets[0]),
-                      background: o ? Qg(v(a.targets[0]), 0.25) : "none",
+                      color: o ? Fg(v(a.targets[0])) : v(a.targets[0]),
+                      background: o ? jg(v(a.targets[0]), 0.25) : "none",
                       padding: o ? "0 4px" : "initial",
                     }}
                   >
@@ -16531,9 +16563,9 @@
               <div className={"Widget-Display-Body" + (o ? " Widget-Display-Body-LightMode" : "")}>
                 {!t.complete && t.started && (
                   <l.a.Fragment>
-                    <kv baserunners={r} lightMode={o} baseNum={t.bases} />
-                    <jv status={t} />
-                    <Dv
+                    <Pv baserunners={r} lightMode={o} baseNum={t.bases} />
+                    <Hv status={t} />
+                    <Lv
                       topOfInning={n.topOfInning}
                       homePitcher={{ id: n.homePitcher, name: n.homePitcherName, mod: n.homePitcherMod }}
                       awayPitcher={{ id: n.awayPitcher, name: n.awayPitcherName, mod: n.awayPitcherMod }}
@@ -16546,7 +16578,7 @@
                       lightMode={o}
                     />
                     <div className="Widget-Log">
-                      <Hv data={n} attack={!1} withLedger={!1} />
+                      <Gv data={n} attack={!1} withLedger={!1} />
                     </div>
                   </l.a.Fragment>
                 )}
@@ -16560,7 +16592,7 @@
                 Game Information
               </div>
               <div className="GameWidget-Upcoming-InfoBody">
-                <Lv data={n} metaInfo={i} lightMode={o} />
+                <Qv data={n} metaInfo={i} lightMode={o} />
                 <div className="GameWidget-Upcoming-Body">
                   <ue.b className="GameWidget-Upcoming-Icon" />
                   <div className="GameWidget-Upcoming-Label" aria-hidden="true">
@@ -16584,20 +16616,20 @@
               <div className="GameWidget-Upcoming-Header" id={"chances" + e.index}>
                 Chances of Winning
               </div>
-              <Nv data={n} lightMode={o} />
+              <Tv data={n} lightMode={o} />
               <div className="GameWidget-Upcoming-BetButtons">{u}</div>
             </div>
           </l.a.Fragment>
         );
       }
-      function yv(e, t, a) {
+      function Ov(e, t, a) {
         if (!e || !t) return {};
         var n = "#fffffff";
         return (
           0 === a && (n = "#ffbe00"), 1 === a && (n = "#a16dc3"), { border: 2, borderColor: n, borderStyle: "solid" }
         );
       }
-      function Cv(e) {
+      function Iv(e) {
         var t = e.statusDisplay,
           a = e.started,
           n = e.stadiumName,
@@ -16661,7 +16693,7 @@
           </div>
         );
       }
-      function Ov(e) {
+      function Sv(e) {
         var t = e.activeBet,
           a = void 0 !== t ? t.payout : 0;
         return (
@@ -16681,7 +16713,7 @@
           </div>
         );
       }
-      function Iv(e) {
+      function Nv(e) {
         var t = e.id,
           a = e.color,
           n = e.secondaryColor,
@@ -16701,17 +16733,17 @@
             return e.id === t;
           });
         return void 0 === b || b.card <= -2 ? (
-          <Sv />
+          <kv />
         ) : (
           <d background={h} path={"/team/".concat(t)} className="GameWidget-ScoreLine">
             <div className="GameWidget-ScoreTeamColorBar" aria-hidden={!0} style={{ background: a }}>
-              {Jg(i)}
+              {Xg(i)}
             </div>
             <div className="GameWidget-ScoreTeam">
               <div
                 className="GameWidget-ScoreName"
                 style={{
-                  color: m ? Mg(a) : n,
+                  color: m ? Fg(a) : n,
                   background: m ? n : "none",
                   padding: m ? "2px 8px" : "initial",
                   lineHeight: m ? "1.6rem" : "initial",
@@ -16720,7 +16752,7 @@
                 {o}
                 {s ? <qs /> : null}
                 {A ? (
-                  <div style={{ fontSize: "14px", marginTop: "2px", marginLeft: "8px" }}>{Jg("0x1F389")}</div>
+                  <div style={{ fontSize: "14px", marginTop: "2px", marginLeft: "8px" }}>{Xg("0x1F389")}</div>
                 ) : null}
               </div>
               <div className="GameWidget-ScoreTeamInfo">
@@ -16752,7 +16784,7 @@
           </d>
         );
       }
-      function Sv() {
+      function kv() {
         return (
           <div className="GameWidget-ScoreLine">
             <div className="GameWidget-ScoreTeamColorBar" aria-hidden={!0} />
@@ -16764,7 +16796,7 @@
           </div>
         );
       }
-      function Nv(e) {
+      function Tv(e) {
         var t = e.data,
           a = e.lightMode,
           n = t.homeOdds > t.awayOdds,
@@ -16781,7 +16813,7 @@
               <div
                 className="GameWidget-Upcoming-Favorites-Team"
                 style={{
-                  color: a ? Mg(t.homeTeamSecondaryColor) : t.homeTeamSecondaryColor,
+                  color: a ? Fg(t.homeTeamSecondaryColor) : t.homeTeamSecondaryColor,
                   background: a ? t.homeTeamSecondaryColor : "none",
                   padding: a ? "2px 8px" : "initial",
                   lineHeight: a ? "1.6rem" : "initial",
@@ -16803,7 +16835,7 @@
               <div
                 className="GameWidget-Upcoming-Favorites-Team"
                 style={{
-                  color: a ? Mg(t.awayTeamSecondaryColor) : t.awayTeamSecondaryColor,
+                  color: a ? Fg(t.awayTeamSecondaryColor) : t.awayTeamSecondaryColor,
                   background: a ? t.awayTeamSecondaryColor : "none",
                   padding: a ? "2px 8px" : "initial",
                   lineHeight: a ? "1.6rem" : "initial",
@@ -16821,17 +16853,17 @@
           </div>
         );
       }
-      function kv(e) {
+      function Pv(e) {
         var t = e.baserunners,
           a = (e.lightMode, e.baseNum),
           n = [],
           r = [],
           i = [],
           o = [];
-        t.onFirst && (" first", (n = zv(t.modOnFirst))),
-          t.onSecond && (" second", (r = zv(t.modOnSecond))),
-          t.onThird && (" third", (i = zv(t.modOnThird))),
-          t.onFourth && (" fourth", (o = zv(t.modOnFourth)));
+        t.onFirst && (" first", (n = Yv(t.modOnFirst))),
+          t.onSecond && (" second", (r = Yv(t.modOnSecond))),
+          t.onThird && (" third", (i = Yv(t.modOnThird))),
+          t.onFourth && (" fourth", (o = Yv(t.modOnFourth)));
         var s = 0,
           c = "0 0 255 197";
         a > 4 && ((s = 30), (c = "0 0 285 197"));
@@ -16840,7 +16872,7 @@
           <div className="Widget-Bases">
             <div id="tooltip" style={{ display: "none", position: "absolute" }} />
             <svg role={A ? "group" : "text"} aria-label={A ? "Bases" : "No Runners on Base"} viewBox={c} version="1.1">
-              {Tv(
+              {Dv(
                 t.onFirst,
                 t.playerOnFirst,
                 t.modOnFirst,
@@ -16853,7 +16885,7 @@
                 "bottom-1",
                 "bottom"
               )}
-              {Tv(
+              {Dv(
                 t.onSecond,
                 t.playerOnSecond,
                 t.modOnSecond,
@@ -16866,7 +16898,7 @@
                 "top-1",
                 "top"
               )}
-              {Tv(
+              {Dv(
                 t.onThird,
                 t.playerOnThird,
                 t.modOnThird,
@@ -16880,7 +16912,7 @@
                 "bottom"
               )}
               {a > 4
-                ? Tv(
+                ? Dv(
                     t.playerOnFourth,
                     t.playerOnFourth,
                     t.modOnFourth,
@@ -16898,7 +16930,7 @@
           </div>
         );
       }
-      function Tv(e, t, a, n, r, i, o, s, c, A, u) {
+      function Dv(e, t, a, n, r, i, o, s, c, A, u) {
         return (
           <AA
             hover={
@@ -16924,7 +16956,7 @@
           />
         );
       }
-      function Pv(e) {
+      function xv(e) {
         for (
           var t = {
               onFirst: !1,
@@ -16963,7 +16995,7 @@
         }
         return t;
       }
-      function Dv(e) {
+      function Lv(e) {
         var t = e.topOfInning,
           a = e.homePitcher,
           n = e.awayPitcher,
@@ -17008,8 +17040,8 @@
               (w = r.id)),
           (
             <ul className="Widget-AtBat" aria-label="Current Pitcher and Batter">
-              <xv playerType="Pitching" name={m} id={b} mod={g} color={v} emoji={h} lightMode={u} noPlayer="" />
-              <xv
+              <Rv playerType="Pitching" name={m} id={b} mod={g} color={v} emoji={h} lightMode={u} noPlayer="" />
+              <Rv
                 playerType="Batting"
                 name={d}
                 id={w}
@@ -17023,7 +17055,7 @@
           )
         );
       }
-      function xv(e) {
+      function Rv(e) {
         var t = e.playerType,
           a = e.name,
           n = e.id,
@@ -17042,11 +17074,11 @@
               <div
                 className="Widget-PlayerLineNameWrapper"
                 aria-haspopup={!0}
-                style={{ background: Qg(i, s ? 0.25 : 0.5) }}
+                style={{ background: jg(i, s ? 0.25 : 0.5) }}
               >
                 {a ? (
                   <d background={u} path={"/player/".concat(n)} className="Widget-PlayerLineName">
-                    {Jg(o)} {a}
+                    {Xg(o)} {a}
                   </d>
                 ) : (
                   <div className="Widget-PlayerLineName" role="text" aria-label={A}>
@@ -17058,7 +17090,7 @@
           </li>
         );
       }
-      function Lv(e) {
+      function Qv(e) {
         var t = e.data,
           a = e.metaInfo,
           n = e.lightMode,
@@ -17072,7 +17104,7 @@
             </div>
             <div className="GameWidget-Upcoming-Content">
               {r ? null : (
-                <Rv
+                <Mv
                   name={t.awayPitcherName}
                   id={t.awayPitcher}
                   color={t.awayTeamColor}
@@ -17084,7 +17116,7 @@
               {i ? (
                 <div className="Widget-PlayerLine" style={{ background: "#000000" }} />
               ) : (
-                <Rv
+                <Mv
                   name={t.homePitcherName}
                   id={t.homePitcher}
                   color={t.homeTeamColor}
@@ -17097,7 +17129,7 @@
           </div>
         );
       }
-      function Rv(e) {
+      function Mv(e) {
         var t = e.name,
           a = e.id,
           n = e.color,
@@ -17107,16 +17139,16 @@
           s = Object(c.g)();
         return (
           <div className="Widget-PlayerLine" role="text">
-            <div className="GameWidget-Upcoming-Pitchers-Wrapper" style={{ background: Qg(n, o ? 0.25 : 0.5) }}>
+            <div className="GameWidget-Upcoming-Pitchers-Wrapper" style={{ background: jg(n, o ? 0.25 : 0.5) }}>
               <d background={s} path={"/player/".concat(a)} className="Widget-PlayerLineName">
-                {Jg(r)} {t}
+                {Xg(r)} {t}
                 <div className="sr-only" aria-label={"for the " + i} role="text" />
               </d>
             </div>
           </div>
         );
       }
-      function Qv(e) {
+      function jv(e) {
         return {
           started: e.gameStart,
           complete: e.gameComplete,
@@ -17134,7 +17166,7 @@
           playCount: e.playCount,
         };
       }
-      function Mv(e) {
+      function Fv(e) {
         var t, a, n;
         Object(r.useContext)(x.context).user;
         if (e.complete)
@@ -17160,7 +17192,7 @@
           </div>
         );
       }
-      function jv(e) {
+      function Hv(e) {
         for (var t = e.status, a = [], n = 0; n < t.ballsNeeded - 1; n++)
           a.push(
             <div className="Widget-Outs-Dots" aria-hidden="true" key={n}>
@@ -17196,23 +17228,23 @@
           </ul>
         );
       }
-      function Fv(e, t) {
+      function Vv(e, t) {
         var a, n;
         return (
           t && ((a = Qs(e.homeTeam, t)), (n = Qs(e.awayTeam, t))),
           {
             homeTeamName: e.homeTeamNickname,
             homeTeamRecord: a,
-            homeTeamScore: df(Vv(e)),
+            homeTeamScore: ff(Wv(e)),
             awayTeamName: e.awayTeamNickname,
             awayTeamRecord: n,
-            awayTeamScore: df(Gv(e)),
+            awayTeamScore: ff(zv(e)),
             seriesIndex: e.seriesIndex,
             seriesLength: e.seriesLength,
           }
         );
       }
-      function Hv(e) {
+      function Gv(e) {
         var t = e.data,
           a = e.attack,
           n = e.withLedger;
@@ -17246,17 +17278,17 @@
           </div>
         );
       }
-      function Vv(e) {
+      function Wv(e) {
         return e.homeScore;
       }
-      function Gv(e) {
+      function zv(e) {
         return e.awayScore;
       }
-      function Wv(e, t) {
+      function Uv(e, t) {
         var a,
           n,
-          r = Vv(t),
-          l = Gv(t);
+          r = Wv(t),
+          l = zv(t);
         return 1 ===
           (null === t ||
           void 0 === t ||
@@ -17273,17 +17305,17 @@
           ? r > l
           : l > r;
       }
-      function zv(e) {
+      function Yv(e) {
         Object(r.useContext)(x.context).user;
         var t = u.collection.find(function (t) {
           return t.id === e;
         });
         return t ? [t.background, t.color] : [];
       }
-      function Uv(e) {
+      function Jv(e) {
         var t = Object(r.useContext)(S.context),
           a = Object(r.useContext)(oc.context),
-          n = Fv(e.data, t.standings),
+          n = Vv(e.data, t.standings),
           i = Object(A.a)(
             Object(A.a)({}, e.data),
             {},
@@ -17296,9 +17328,9 @@
               }),
             }
           );
-        return <wv data={i} metaInfo={n} index={e.index} />;
+        return <yv data={i} metaInfo={n} index={e.index} />;
       }
-      function Yv(e) {
+      function qv(e) {
         var t = Object(r.useContext)(oc.context),
           a = (function (e, t) {
             var a = t.find(function (t) {
@@ -17309,11 +17341,11 @@
               homeTeamName: e.homeTeamNickname,
               homeTeamRecord:
                 void 0 === a ? new oe() : { wins: n ? a.homeWins : a.awayWins, nonlosses: 0, losses: 0, games: 0 },
-              homeTeamScore: df(Vv(e)),
+              homeTeamScore: ff(Wv(e)),
               awayTeamName: e.awayTeamNickname,
               awayTeamRecord:
                 void 0 === a ? new oe() : { wins: n ? a.awayWins : a.homeWins, nonlosses: 0, losses: 0, games: 0 },
-              awayTeamScore: df(Gv(e)),
+              awayTeamScore: ff(zv(e)),
               seriesIndex: void 0 === a ? -1 : a.gamesPlayed,
               seriesLength: void 0 === a ? -1 : a.gamesNeeded,
             };
@@ -17330,15 +17362,15 @@
               }),
             }
           );
-        return <wv data={n} metaInfo={a} index={e.index} />;
+        return <yv data={n} metaInfo={a} index={e.index} />;
       }
       a(239);
-      var Jv,
-        qv = a(125),
-        Xv = a(72),
-        Zv = (a(240), ["placement", "scheduleUpdate", "arrowProps", "outOfBoundaries", "show"]),
-        Kv = ["placement", "scheduleUpdate", "arrowProps", "outOfBoundaries", "show"],
-        _v = function (e) {
+      var Xv,
+        Zv = a(125),
+        Kv = a(72),
+        _v = (a(240), ["placement", "scheduleUpdate", "arrowProps", "outOfBoundaries", "show"]),
+        $v = ["placement", "scheduleUpdate", "arrowProps", "outOfBoundaries", "show"],
+        ep = function (e) {
           var t = Object(r.useRef)(null),
             a = e.content,
             n = e.children,
@@ -17378,10 +17410,10 @@
               }, 100);
             },
             O = (
-              <Xv.a target={t.current} show={g} placement="bottom">
+              <Kv.a target={t.current} show={g} placement="bottom">
                 {function (e) {
                   e.placement, e.scheduleUpdate, e.arrowProps, e.outOfBoundaries, e.show;
-                  var t = Object(qv.a)(e, Zv);
+                  var t = Object(Zv.a)(e, _v);
                   return (
                     <div
                       {...Object.assign({}, t, {
@@ -17396,15 +17428,15 @@
                     </div>
                   );
                 }}
-              </Xv.a>
+              </Kv.a>
             );
           return (
             p &&
               (O = (
-                <Xv.a target={t.current} show={g} placement="top">
+                <Kv.a target={t.current} show={g} placement="top">
                   {function (e) {
                     e.placement, e.scheduleUpdate, e.arrowProps, e.outOfBoundaries, e.show;
-                    var t = Object(qv.a)(e, Kv);
+                    var t = Object(Zv.a)(e, $v);
                     return (
                       <div
                         {...Object.assign({}, t, {
@@ -17423,7 +17455,7 @@
                       </div>
                     );
                   }}
-                </Xv.a>
+                </Kv.a>
               )),
             i ? (
               <l.a.Fragment>
@@ -17449,9 +17481,9 @@
             )
           );
         },
-        $v = ["title", "titleId"];
-      function ep() {
-        return (ep =
+        tp = ["title", "titleId"];
+      function ap() {
+        return (ap =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -17461,7 +17493,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function tp(e, t) {
+      function np(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -17481,13 +17513,13 @@
         }
         return r;
       }
-      function ap(e, t) {
+      function rp(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = tp(e, $v);
+          l = np(e, tp);
         return (
           <svg
-            {...ep(
+            {...ap(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -17501,31 +17533,31 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Jv || (Jv = <image id="account" x={37} y={29} width={182} height={198} xlinkHref="<img/png blob>" />)}
+            {Xv || (Xv = <image id="account" x={37} y={29} width={182} height={198} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var np = r.forwardRef(ap);
+      var lp = r.forwardRef(rp);
       a.p, a(144);
-      function rp() {
+      function ip() {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
-      var lp,
-        ip = function () {
+      var op,
+        sp = function () {
           return (
             <div
               className="ScrollToTop-Small"
               aria-label="Go To Top"
               role="button"
               onClick={function () {
-                return rp();
+                return ip();
               }}
             >
               <ee.a />
             </div>
           );
         },
-        op = function () {
+        cp = function () {
           var e = Object(r.useState)(!1),
             t = Object(s.a)(e, 2),
             a = t[0],
@@ -17552,7 +17584,7 @@
               className="ScrollToTop"
               style={{ display: a && !c ? "block" : "none" }}
               onClick={function () {
-                return rp();
+                return ip();
               }}
               aria-label="Go To Top"
               role="button"
@@ -17563,8 +17595,8 @@
         };
       !(function (e) {
         (e[(e.Blue = 0)] = "Blue"), (e[(e.Purple = 1)] = "Purple");
-      })(lp || (lp = {}));
-      var sp = function () {
+      })(op || (op = {}));
+      var Ap = function () {
           var e = Object(r.useContext)(x.context),
             t = e.user,
             a = (e.clearUser, e.setUser),
@@ -17600,7 +17632,7 @@
               return e.id === t.favoriteTeam;
             });
             if (I) {
-              var N = Yg(I);
+              var N = qg(I);
               O = (
                 <div
                   className="Navigation-FavoriteTeamEmoji"
@@ -17624,19 +17656,19 @@
           return (
             <l.a.Fragment>
               <div className="Navigation-User-Top">
-                <_v className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={B} url="/upcoming">
+                <ep className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={B} url="/upcoming">
                   <MA className="Navigation-Currency-Icon" aria-label="Coins" />
                    {t.coins}
-                </_v>
+                </ep>
                 {t.unlockedElection ? (
-                  <_v className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={y} url="/shop">
+                  <ep className="CoinOverlay" buttonClassname="Navigation-CurrencyButton" content={y} url="/shop">
                     <Jn className="Navigation-Currency-Icon" aria-label="Votes" />
                      {void 0 !== t.snacks[ne.VOTES] ? t.snacks[ne.VOTES] : 0}
-                  </_v>
+                  </ep>
                 ) : null}
                 {void 0 !== t.snacks.Peanuts ? (
                   <div className="Peanut-Container">
-                    <_v
+                    <ep
                       className="CoinOverlay"
                       buttonClassname="Navigation-CurrencyButton"
                       content={C}
@@ -17738,13 +17770,13 @@
                         </span>
                          {t.snacks.Peanuts}
                       </span>
-                    </_v>
+                    </ep>
                     <div className={u ? "Peanut-Eating" : "Peanut"}>
                       <Rr className="Navigation-Currency-Icon" />
                     </div>
                   </div>
                 ) : null}
-                <_v
+                <ep
                   className="CoinOverlay"
                   content={
                     <div className="CoinOverlay-Content">
@@ -17753,13 +17785,13 @@
                   }
                 >
                   <d background={v} path="/account" className="Navigation-Inventory">
-                    <np className="Navigation-Icon" aria-label="Account" />
+                    <lp className="Navigation-Icon" aria-label="Account" />
                   </d>
-                </_v>
-                <ip />
+                </ep>
+                <sp />
               </div>
               <div className="Navigation-User-Bottom">
-                <_v
+                <ep
                   className="CoinOverlay"
                   content={
                     <div className="CoinOverlay-Content">
@@ -17768,8 +17800,8 @@
                   }
                 >
                   {O}
-                </_v>
-                <_v
+                </ep>
+                <ep
                   className="CoinOverlay"
                   content={
                     <div className="CoinOverlay-Content">
@@ -17778,7 +17810,7 @@
                   }
                 >
                   {k}
-                </_v>
+                </ep>
                 <a href="/auth/logout" className="Navigation-Button">
                   Log Out
                 </a>
@@ -17786,19 +17818,19 @@
             </l.a.Fragment>
           );
         },
-        cp = function () {
+        up = function () {
           return (
             <l.a.Fragment>
-              <up isModal={!0} path="/signup">
+              <dp isModal={!0} path="/signup">
                 Signup
-              </up>
-              <up isModal={!0} path="/login">
+              </dp>
+              <dp isModal={!0} path="/login">
                 Login
-              </up>
+              </dp>
             </l.a.Fragment>
           );
         };
-      function Ap(e) {
+      function mp(e) {
         var t = Object(r.useContext)(S.context),
           a = Object(r.useContext)(x.context).user,
           n = Object(r.useState)(!1),
@@ -17861,7 +17893,7 @@
                 V.push({ text: "Election", path: "/offseason", locked: !a.unlockedElection }),
                 V.push({ text: "Shop", path: "/shop", locked: !a.unlockedShop }),
                 V.push({ text: "Book", path: "/thebook" }),
-                V.push({ text: "The Hall", path: "/thehall", glow: lp.Blue }));
+                V.push({ text: "The Hall", path: "/thehall", glow: op.Blue }));
           else if (t.sim.phase === Q.SpecialEvent && void 0 !== t.sim.state.scheduled_game_event)
             H.push({ text: "Home", path: "/" }),
               a &&
@@ -17888,22 +17920,22 @@
                 H.push({
                   text: "Info",
                   path: "/thebook",
-                  subpaths: Hg(t.sim, "SIM_MUSEUM_REVEALED")
+                  subpaths: Gg(t.sim, "SIM_MUSEUM_REVEALED")
                     ? [
                         { text: "The Book", path: "/thebook" },
                         { text: "Library", path: "/library", ids: !0 },
                         { text: "Vault", path: "/vault" },
-                        { text: "Depth", path: "/depth", glow: lp.Purple },
-                        { text: "The Hall", path: "/thehall", glow: lp.Blue },
+                        { text: "Depth", path: "/depth", glow: op.Purple },
+                        { text: "The Hall", path: "/thehall", glow: op.Blue },
                       ]
                     : [
                         { text: "The Book", path: "/thebook" },
                         { text: "Library", path: "/library", ids: !0 },
-                        { text: "Depth", path: "/depth", glow: lp.Purple },
-                        { text: "The Hall", path: "/thehall", glow: lp.Blue },
+                        { text: "Depth", path: "/depth", glow: op.Purple },
+                        { text: "The Hall", path: "/thehall", glow: op.Blue },
                       ],
                 }));
-          else if (Hg(t.sim, "SIM_PANIC"))
+          else if (Gg(t.sim, "SIM_PANIC"))
             H.push({ text: "Home", path: "/" }),
               a &&
                 a.isSignedIn &&
@@ -17977,17 +18009,17 @@
                 H.push({
                   text: "Info",
                   path: "/thebook",
-                  subpaths: Hg(t.sim, "SIM_MUSEUM_REVEALED")
+                  subpaths: Gg(t.sim, "SIM_MUSEUM_REVEALED")
                     ? [
                         { text: "The Book", path: "/thebook" },
                         { text: "Library", path: "/library", ids: !0 },
                         { text: "Vault", path: "/vault" },
-                        { text: "The Hall", path: "/thehall", glow: lp.Blue },
+                        { text: "The Hall", path: "/thehall", glow: op.Blue },
                       ]
                     : [
                         { text: "The Book", path: "/thebook" },
                         { text: "Library", path: "/library", ids: !0 },
-                        { text: "The Hall", path: "/thehall", glow: lp.Blue },
+                        { text: "The Hall", path: "/thehall", glow: op.Blue },
                       ],
                 }));
           else if (t.sim.phase !== Q.SpecialEvent || void 0 === t.sim.state.scheduled_game_event) {
@@ -18071,19 +18103,19 @@
                 H.push({
                   text: "Info",
                   path: "/thebook",
-                  subpaths: Hg(t.sim, "SIM_MUSEUM_REVEALED")
+                  subpaths: Gg(t.sim, "SIM_MUSEUM_REVEALED")
                     ? [
                         { text: "The Book", path: "/thebook" },
                         { text: "Library", path: "/library", ids: !0 },
                         { text: "Vault", path: "/vault" },
-                        { text: "Depth", path: "/depth", glow: lp.Purple },
-                        { text: "The Hall", path: "/thehall", glow: lp.Blue },
+                        { text: "Depth", path: "/depth", glow: op.Purple },
+                        { text: "The Hall", path: "/thehall", glow: op.Blue },
                       ]
                     : [
                         { text: "The Book", path: "/thebook" },
                         { text: "Library", path: "/library", ids: !0 },
-                        { text: "Depth", path: "/depth", glow: lp.Purple },
-                        { text: "The Hall", path: "/thehall", glow: lp.Blue },
+                        { text: "Depth", path: "/depth", glow: op.Purple },
+                        { text: "The Hall", path: "/thehall", glow: op.Blue },
                       ],
                 });
           } else H.push({ text: "League", path: "/league" });
@@ -18099,7 +18131,7 @@
           Y = function () {
             w(!b);
           },
-          J = a.isFetching ? null : a.isSignedIn ? <sp /> : <cp />,
+          J = a.isFetching ? null : a.isSignedIn ? <Ap /> : <up />,
           q = (function (e, a) {
             var n = 0;
             return e.map(function (e, r) {
@@ -18121,9 +18153,9 @@
                           {e.text} <ee.i />
                         </div>
                       ) : (
-                        <up key={n} path={e.path} glow={e.glow} subpaths={e.subpaths} ids={e.ids}>
+                        <dp key={n} path={e.path} glow={e.glow} subpaths={e.subpaths} ids={e.ids}>
                           {e.text} <ee.i />
-                        </up>
+                        </dp>
                       )}
                       <div
                         className={"Navigation-Dropdown-Content Navigation-Dropdown-Content-" + e.text}
@@ -18147,9 +18179,9 @@
                               })),
                             (n += 1),
                             r ? (
-                              <up key={n} path={e.path} glow={e.glow} ids={e.ids}>
+                              <dp key={n} path={e.path} glow={e.glow} ids={e.ids}>
                                 {e.text} {e.locked ? <ee.f /> : null}
-                              </up>
+                              </dp>
                             ) : (
                               void 0
                             )
@@ -18163,9 +18195,9 @@
               return (
                 (n += 1),
                 (
-                  <up key={n} path={e.path} subpaths={e.subpaths} ids={e.ids}>
+                  <dp key={n} path={e.path} subpaths={e.subpaths} ids={e.ids}>
                     {e.text} {e.locked ? <ee.f /> : null}
-                  </up>
+                  </dp>
                 )
               );
             });
@@ -18205,7 +18237,7 @@
           </nav>
         );
       }
-      function up(e) {
+      function dp(e) {
         Object(r.useContext)(x.context).user;
         var t = e.path,
           a = e.isModal,
@@ -18245,8 +18277,8 @@
               className={
                 "Navigation-Button" +
                 (u ? " Navigation-Button-Current" : "") +
-                (i === lp.Blue && u ? " Navigation-Button-Blue" : "") +
-                (i === lp.Purple ? " Navigation-Button-Purple" : "")
+                (i === op.Blue && u ? " Navigation-Button-Blue" : "") +
+                (i === op.Purple ? " Navigation-Button-Purple" : "")
               }
             >
               {e.children}
@@ -18254,16 +18286,16 @@
           )
         );
       }
-      function mp() {
+      function gp() {
         return (
           <nav className="Navigation">
             <div className="Navigation-User">
-              <cp />
+              <up />
             </div>
           </nav>
         );
       }
-      function dp(e) {
+      function fp(e) {
         var t = Object(c.g)(),
           a = Object(r.useState)(""),
           n = Object(s.a)(a, 2),
@@ -18331,8 +18363,8 @@
         );
       }
       a(241);
-      var gp = a(123);
-      function fp(e) {
+      var Ep = a(123);
+      function vp(e) {
         var t;
         console.log(
           null ===
@@ -18347,9 +18379,9 @@
             ? void 0
             : t.REACT_APP_GOOGLE_TRACKING_ID
         ),
-          gp.a.event({ category: "Sponsor Clicked", action: "".concat(e) });
+          Ep.a.event({ category: "Sponsor Clicked", action: "".concat(e) });
       }
-      function Ep() {
+      function pp() {
         return (
           <div className="Advertisement-SiteHeader">
             <div className="Advertisement-SiteHeader-Line">This season is brought to you by</div>
@@ -18358,7 +18390,7 @@
                 className="Advertisement-SiteHeader-Callout"
                 href="https://houstonspies.cyou/special-operations/agitate-educate-operate.html"
                 onClick={function () {
-                  return fp("Spies Organize (MainPage/Title)");
+                  return vp("Spies Organize (MainPage/Title)");
                 }}
                 target="_blank"
               >
@@ -18368,45 +18400,21 @@
           </div>
         );
       }
-      function vp() {
+      function hp() {
         var e,
           t = Object(r.useContext)(S.context);
         return (
           <l.a.Fragment>
-            <Ep />
+            <pp />
             <div className="League-Nav">
               {9 !== (null === (e = t.sim) || void 0 === e ? void 0 : e.phase) ? (
                 <l.a.Fragment>
-                  <up path="/league">Watch Live</up>
-                  <up path="/upcoming">Place Bets</up>
-                  <up path="/standings">Standings</up>
-                  {Hg(t.sim, "UNLOCKED_IDOLS") ? <up path="/leaderboard">Idols</up> : null}
+                  <dp path="/league">Watch Live</dp>
+                  <dp path="/upcoming">Place Bets</dp>
+                  <dp path="/standings">Standings</dp>
+                  {Gg(t.sim, "UNLOCKED_IDOLS") ? <dp path="/leaderboard">Idols</dp> : null}
                 </l.a.Fragment>
               ) : null}
-            </div>
-          </l.a.Fragment>
-        );
-      }
-      function pp() {
-        return (
-          <l.a.Fragment>
-            <div className="League-Nav">
-              <up path="/league">Standings</up>
-              <up path="/leaderboard">Idols</up>
-            </div>
-          </l.a.Fragment>
-        );
-      }
-      function hp() {
-        return (
-          <l.a.Fragment>
-            <Ep />
-            <div className="League-Nav">
-              <up path="/league">Watch Live</up>
-              <up path="/upcoming">Place Bets</up>
-              <up path="/bracket">Postseason</up>
-              <up path="/standings">Standings</up>
-              <up path="/leaderboard">Idols</up>
             </div>
           </l.a.Fragment>
         );
@@ -18415,9 +18423,8 @@
         return (
           <l.a.Fragment>
             <div className="League-Nav">
-              <up path="/league">Postseason</up>
-              <up path="/standings">Standings</up>
-              <up path="/leaderboard">Idols</up>
+              <dp path="/league">Standings</dp>
+              <dp path="/leaderboard">Idols</dp>
             </div>
           </l.a.Fragment>
         );
@@ -18425,13 +18432,13 @@
       function wp() {
         return (
           <l.a.Fragment>
-            <Ep />
+            <pp />
             <div className="League-Nav">
-              <up path="/league">Watch Live</up>
-              <up path="/upcoming">Place Bets</up>
-              <up path="/bracket">Bracket</up>
-              <up path="/tournament">Teams</up>
-              <up path="/leaderboard">Idols</up>
+              <dp path="/league">Watch Live</dp>
+              <dp path="/upcoming">Place Bets</dp>
+              <dp path="/bracket">Postseason</dp>
+              <dp path="/standings">Standings</dp>
+              <dp path="/leaderboard">Idols</dp>
             </div>
           </l.a.Fragment>
         );
@@ -18440,9 +18447,9 @@
         return (
           <l.a.Fragment>
             <div className="League-Nav">
-              <up path="/league">Bracket</up>
-              <up path="/tournament">Teams</up>
-              <up path="/leaderboard">Idols</up>
+              <dp path="/league">Postseason</dp>
+              <dp path="/standings">Standings</dp>
+              <dp path="/leaderboard">Idols</dp>
             </div>
           </l.a.Fragment>
         );
@@ -18450,10 +18457,13 @@
       function yp() {
         return (
           <l.a.Fragment>
+            <pp />
             <div className="League-Nav">
-              <up path="/league">Events</up>
-              <up path="/standings">Standings</up>
-              <up path="/leaderboard">Idols</up>
+              <dp path="/league">Watch Live</dp>
+              <dp path="/upcoming">Place Bets</dp>
+              <dp path="/bracket">Bracket</dp>
+              <dp path="/tournament">Teams</dp>
+              <dp path="/leaderboard">Idols</dp>
             </div>
           </l.a.Fragment>
         );
@@ -18462,9 +18472,31 @@
         return (
           <l.a.Fragment>
             <div className="League-Nav">
-              <up path="/league">Champions</up>
-              <up path="/standings">Standings</up>
-              <up path="/leaderboard">Idols</up>
+              <dp path="/league">Bracket</dp>
+              <dp path="/tournament">Teams</dp>
+              <dp path="/leaderboard">Idols</dp>
+            </div>
+          </l.a.Fragment>
+        );
+      }
+      function Op() {
+        return (
+          <l.a.Fragment>
+            <div className="League-Nav">
+              <dp path="/league">Events</dp>
+              <dp path="/standings">Standings</dp>
+              <dp path="/leaderboard">Idols</dp>
+            </div>
+          </l.a.Fragment>
+        );
+      }
+      function Ip() {
+        return (
+          <l.a.Fragment>
+            <div className="League-Nav">
+              <dp path="/league">Champions</dp>
+              <dp path="/standings">Standings</dp>
+              <dp path="/leaderboard">Idols</dp>
             </div>
           </l.a.Fragment>
         );
@@ -18486,9 +18518,9 @@
           WDS_SOCKET_PORT: void 0,
           FAST_REFRESH: !0,
         }).REACT_APP_CLIENT_ANALYTICS_ENABLED) &&
-        gp.a.initialize("UA-171524925-1");
+        Ep.a.initialize("UA-171524925-1");
       a(242);
-      var Op = function (e) {
+      var Sp = function (e) {
           var t = e.dateString,
             a = Object(r.useState)(),
             n = Object(s.a)(a, 2),
@@ -18527,8 +18559,8 @@
             )
           );
         },
-        Ip = (a(112), l.a.createContext({ topIdols: [{ id: "", place: 0 }], risingStars: [], data: void 0 })),
-        Sp = function (e) {
+        Np = (a(112), l.a.createContext({ topIdols: [{ id: "", place: 0 }], risingStars: [], data: void 0 })),
+        kp = function (e) {
           var t = e.children,
             a = Object(c.g)().pathname,
             n = Object(r.useState)({ topIdols: [{ id: "", place: 0 }], risingStars: [], data: void 0 }),
@@ -18581,19 +18613,19 @@
               },
               [a]
             ),
-            (<Ip.Provider value={o}>{t}</Ip.Provider>)
+            (<Np.Provider value={o}>{t}</Np.Provider>)
           );
         };
-      Sp.context = Ip;
-      var Np = Sp;
-      function kp() {
+      kp.context = Np;
+      var Tp = kp;
+      function Pp() {
         var e,
           t,
           a,
           n,
           i = Object(r.useContext)(S.context),
           o = Object(r.useContext)(oc.context),
-          c = Object(r.useContext)(Np.context),
+          c = Object(r.useContext)(Tp.context),
           A = Object(r.useState)([]),
           u = Object(s.a)(A, 2),
           m = u[0],
@@ -18730,7 +18762,7 @@
           (m.length < 1 || void 0 === m) && (P = <wA />),
           0 === B &&
             (P = (
-              <Tp
+              <Dp
                 info={m}
                 playoffs={N}
                 icons={!1}
@@ -18739,10 +18771,10 @@
                 prepostseason={null === (n = O.sim) || void 0 === n ? void 0 : n.endseasonDate}
               />
             )),
-          1 === B && Hg(i.sim, "SIM_RISING_STARS") && (P = <Pp info={p} />),
+          1 === B && Gg(i.sim, "SIM_RISING_STARS") && (P = <xp info={p} />),
           (
             <l.a.Fragment>
-              {Hg(i.sim, "SIM_RISING_STARS") ? (
+              {Gg(i.sim, "SIM_RISING_STARS") ? (
                 <div className="League-Nav">
                   <button
                     role="link"
@@ -18779,7 +18811,7 @@
           )
         );
       }
-      function Tp(e) {
+      function Dp(e) {
         Object(r.useContext)(x.context).user;
         var t = [],
           a = [],
@@ -18788,10 +18820,10 @@
         if (void 0 !== e.lineIndex && e.line)
           for (var i = 0; i < e.info.length; i++)
             i <= e.lineIndex
-              ? t.push(<xp info={e.info[i]} key={e.info[i].place} showIcons={e.icons} numStyle={n} />)
-              : a.push(<xp info={e.info[i]} key={e.info[i].place} showIcons={e.icons} />);
+              ? t.push(<Rp info={e.info[i]} key={e.info[i].place} showIcons={e.icons} numStyle={n} />)
+              : a.push(<Rp info={e.info[i]} key={e.info[i].place} showIcons={e.icons} />);
         else
-          for (i = 0; i < e.info.length; i++) t.push(<xp info={e.info[i]} key={e.info[i].place} showIcons={e.icons} />);
+          for (i = 0; i < e.info.length; i++) t.push(<Rp info={e.info[i]} key={e.info[i].place} showIcons={e.icons} />);
         return (
           <l.a.Fragment>
             <h3 className="Leaderboard-Header">
@@ -18806,7 +18838,7 @@
               </div>
               <div className="Leaderboard-Description">Go to a Player's page to choose them as your Idol.</div>
             </div>
-            <Op dateString={e.prepostseason} />
+            <Sp dateString={e.prepostseason} />
             <div className="Leaderboard-List">
               <ul
                 className={"Leaderboard-Player-Container" + (e.icons ? " Leaderboard-Player-Container-WithIcon" : "")}
@@ -18814,7 +18846,7 @@
                 {t}
                 {e.line ? (
                   <l.a.Fragment>
-                    <Dp />
+                    <Lp />
                     {a}
                   </l.a.Fragment>
                 ) : (
@@ -18831,11 +18863,11 @@
           </l.a.Fragment>
         );
       }
-      function Pp(e) {
+      function xp(e) {
         Object(r.useContext)(x.context).user;
         var t = [];
         if (void 0 === e.info || e.info.length < 1) return <wA />;
-        for (var a = 0; a < e.info.length; a++) t.push(<Lp info={e.info[a]} key={e.info[a].place} />);
+        for (var a = 0; a < e.info.length; a++) t.push(<Qp info={e.info[a]} key={e.info[a].place} />);
         return (
           <l.a.Fragment>
             <h3 className="Leaderboard-Header">
@@ -18852,7 +18884,7 @@
           </l.a.Fragment>
         );
       }
-      function Dp() {
+      function Lp() {
         return (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -18872,7 +18904,7 @@
           </svg>
         );
       }
-      function xp(e) {
+      function Rp(e) {
         var t = Object(c.g)(),
           a = Object(r.useContext)(x.context).user,
           n = [],
@@ -18979,7 +19011,7 @@
                       aria-hidden="true"
                       style={{ background: void 0 !== e.info.team ? e.info.team.mainColor : "#999999" }}
                     >
-                      <div className="Leaderboard-Team-Emoji">{Yg(e.info.team)}</div>
+                      <div className="Leaderboard-Team-Emoji">{qg(e.info.team)}</div>
                     </div>
                     <div className="sr-only" aria-label=" of the " role="text" />
                     <div className="Leaderboard-Team-Name">
@@ -18999,7 +19031,7 @@
         }
         return null;
       }
-      function Lp(e) {
+      function Qp(e) {
         var t = Object(c.g)(),
           a = Object(r.useContext)(x.context).user;
         if (void 0 !== e.info && void 0 !== e.info.player) {
@@ -19055,7 +19087,7 @@
                       aria-hidden="true"
                       style={{ background: void 0 !== e.info.team ? e.info.team.mainColor : "#999999" }}
                     >
-                      <div className="Leaderboard-Team-Emoji">{Yg(e.info.team)}</div>
+                      <div className="Leaderboard-Team-Emoji">{qg(e.info.team)}</div>
                     </div>
                     <div
                       className="sr-only"
@@ -19118,9 +19150,9 @@
         }
         return null;
       }
-      var Rp;
+      var Mp;
       a(59);
-      function Qp() {
+      function jp() {
         var e = Object(r.useContext)(S.context),
           t = Object(r.useContext)(oc.context),
           a = Object(r.useContext)(Yc.context),
@@ -19133,7 +19165,7 @@
           g = Object(c.g)();
         if (
           (Object(r.useEffect)(function () {
-            Hg(e.sim, "SMBH") && m(Math.floor(8 * Math.random()));
+            Gg(e.sim, "SMBH") && m(Math.floor(8 * Math.random()));
           }, []),
           !e || !e.sim || !e.standings)
         )
@@ -19147,7 +19179,7 @@
         var E = [];
         if (t)
           for (var v = 0; v < f.subleagues.length; v++)
-            E.push(<Mp key={v} league={f} subleague={f.subleagues[v]} standings={e.standings} />);
+            E.push(<Fp key={v} league={f} subleague={f.subleagues[v]} standings={e.standings} />);
         var p = a.doc ? a.doc.zeta : "",
           h = null;
         h =
@@ -19178,13 +19210,13 @@
                 Info
               </d>
             </div>
-            {Hg(e.sim, "SUNSUN") ? (
+            {Gg(e.sim, "SUNSUN") ? (
               <div className="League-Sunsun">
                 <ut />
                 <Km />
               </div>
             ) : null}
-            {Hg(e.sim, "SUPERNOVA") || Hg(e.sim, "UBERHOLE") ? (
+            {Gg(e.sim, "SUPERNOVA") || Gg(e.sim, "UBERHOLE") ? (
               <div className="League-Supernova">
                 <div className="League-Supernova-Eclipse">
                   {h}
@@ -19201,13 +19233,13 @@
           </div>
         );
       }
-      function Mp(e) {
+      function Fp(e) {
         var t = Object(r.useContext)(oc.context).subleagues.find(function (t) {
           return t.id === e.subleague;
         });
         if (void 0 === t) return null;
         for (var a = [], n = 0; n < t.divisions.length; n++)
-          a.push(<jp key={n} league={e.league} division={t.divisions[n]} standings={e.standings} />);
+          a.push(<Hp key={n} league={e.league} division={t.divisions[n]} standings={e.standings} />);
         return (
           <div className="Standings-Subleague">
             <h4 className="Standings-Subleague-Header">{t.name}</h4>
@@ -19217,7 +19249,7 @@
           </div>
         );
       }
-      function jp(e) {
+      function Hp(e) {
         var t = Object(r.useContext)(oc.context),
           a = t.tiebreakers.find(function (t) {
             return t.id === e.league.tiebreakers;
@@ -19236,7 +19268,7 @@
         });
         var i = n.teams.map(function (t, a) {
           var n = Qs(t, e.standings);
-          return <Fp key={a} team={t} record={n} />;
+          return <Vp key={a} team={t} record={n} />;
         });
         return (
           <div className="Standings-Division">
@@ -19258,7 +19290,7 @@
           </div>
         );
       }
-      function Fp(e) {
+      function Vp(e) {
         var t = Object(c.g)(),
           a = Object(r.useContext)(oc.context),
           n = Object(r.useContext)(S.context),
@@ -19272,13 +19304,13 @@
           <d background={t} path={"/team/".concat(o.id)} className="Standings-Team">
             <div className="Standings-Team-Name-Container">
               <div className="Standings-Team-Color" aria-hidden="true" style={{ background: o.mainColor }}>
-                <div className="Standings-Team-Emoji">{Yg(o)}</div>
+                <div className="Standings-Team-Emoji">{qg(o)}</div>
               </div>
               <div className="Standings-Team-Name" style={Ws(i, o)}>
                 {o.fullName}
-                {Hg(n.sim, "SIM_SHOW_LEVELS") && o.level <= 4 ? <qs /> : null}
+                {Gg(n.sim, "SIM_SHOW_LEVELS") && o.level <= 4 ? <qs /> : null}
                 {o.seasAttr.includes("PARTY_TIME") ? (
-                  <div style={{ fontSize: "14px", marginTop: "2px", marginLeft: "8px" }}>{Jg("0x1F389")}</div>
+                  <div style={{ fontSize: "14px", marginTop: "2px", marginLeft: "8px" }}>{Xg("0x1F389")}</div>
                 ) : null}
               </div>
             </div>
@@ -19301,8 +19333,8 @@
           (e[(e.TheHall = 2)] = "TheHall"),
           (e[(e.Standings = 3)] = "Standings"),
           (e[(e.Leaderboard = 4)] = "Leaderboard");
-      })(Rp || (Rp = {}));
-      var Hp = function (e) {
+      })(Mp || (Mp = {}));
+      var Gp = function (e) {
         var t,
           a = e.path,
           n = Object(r.useContext)(S.context),
@@ -19312,19 +19344,19 @@
         function c() {
           switch (a) {
             case "/upcoming":
-              return Rp.Upcoming;
+              return Mp.Upcoming;
             case "/leaderboard":
-              return Rp.Leaderboard;
+              return Mp.Leaderboard;
             case "/standings":
-              return Rp.Standings;
+              return Mp.Standings;
             default:
-              return Rp.Live;
+              return Mp.Live;
           }
         }
         if (!n.sim) return null;
         var A,
-          u = c() === Rp.Upcoming ? { schedule: n.tomorrowSchedule, sort: 0 } : { schedule: n.schedule, sort: 1 },
-          m = c() === Rp.Upcoming ? n.sim.day + 1 : n.sim.day,
+          u = c() === Mp.Upcoming ? { schedule: n.tomorrowSchedule, sort: 0 } : { schedule: n.schedule, sort: 1 },
+          m = c() === Mp.Upcoming ? n.sim.day + 1 : n.sim.day,
           d =
             void 0 === u.schedule ? null : (
               <ul>
@@ -19360,7 +19392,7 @@
                   })(u.schedule, u.sort)) || void 0 === t
                   ? void 0
                   : t.map(function (e, t) {
-                      return <Uv index={t} key={t} data={e} />;
+                      return <Jv index={t} key={t} data={e} />;
                     })}
               </ul>
             ),
@@ -19370,7 +19402,7 @@
             ) : (
               <div>
                 <div className="League-Countdown">
-                  {c() === Rp.Upcoming ? <Op dateString={Fg().toString()} /> : null}
+                  {c() === Mp.Upcoming ? <Sp dateString={Vg().toString()} /> : null}
                   <div role="text" aria-label="Until Next Set of Games" className="sr-only" />
                 </div>
                 {d}
@@ -19378,14 +19410,14 @@
             ),
           f = void 0 !== n && void 0 !== n.sim ? n.sim.season : -1;
         switch (c()) {
-          case Rp.Leaderboard:
-            A = <kp />;
+          case Mp.Leaderboard:
+            A = <Pp />;
             break;
-          case Rp.Standings:
-            A = <Qp />;
+          case Mp.Standings:
+            A = <jp />;
             break;
-          case Rp.Live:
-          case Rp.Upcoming:
+          case Mp.Live:
+          case Mp.Upcoming:
             A = s ? <wA /> : g;
         }
         return (
@@ -19393,14 +19425,14 @@
             <h2 className="League-Header">
               Season<span className="League-Number">{f + 1}</span>Day<span className="League-Number">{m + 1}</span>
             </h2>
-            <vp />
+            <hp />
             {A}
-            <op />
+            <cp />
           </l.a.Fragment>
         );
       };
       a(243);
-      function Vp(e) {
+      function Wp(e) {
         var t,
           a,
           n,
@@ -19428,7 +19460,7 @@
           )
         );
       }
-      function Gp(e) {
+      function zp(e) {
         Object(r.useContext)(x.context).user;
         var t = Object(r.useContext)(S.context),
           a = t.postseasons[e.playoffIndex].round,
@@ -19458,7 +19490,7 @@
           (<div className="PlayoffSetup-Navigation">{i}</div>)
         );
       }
-      function Wp(e) {
+      function Up(e) {
         var t = Object(r.useContext)(S.context),
           a = t.postseasons[e.playoffIndex].allRounds,
           n = t.postseasons[e.playoffIndex].allMatchups;
@@ -19480,7 +19512,7 @@
           return (
             <div className="PlayoffSetup-Body">
               <div className="PlayoffSetup-MatchupGroup">
-                {Up(t.postseasons[e.playoffIndex], i.roundNumber, o, e.playoffIndex)}
+                {Jp(t.postseasons[e.playoffIndex], i.roundNumber, o, e.playoffIndex)}
               </div>
             </div>
           );
@@ -19490,22 +19522,22 @@
         return (
           <div className="PlayoffSetup-Body">
             <div className="PlayoffSetup-MatchupGroup">
-              {Up(t.postseasons[e.playoffIndex].playoffs, i.roundNumber, c, e.playoffIndex)}
+              {Jp(t.postseasons[e.playoffIndex].playoffs, i.roundNumber, c, e.playoffIndex)}
             </div>
             <div className="PlayoffSetup-MatchupGroup">
-              {Up(t.postseasons[e.playoffIndex].playoffs, i.roundNumber, A, e.playoffIndex)}
+              {Jp(t.postseasons[e.playoffIndex].playoffs, i.roundNumber, A, e.playoffIndex)}
             </div>
           </div>
         );
       }
-      function zp(e, t) {
+      function Yp(e, t) {
         return e
           ? (t.homeWins >= t.gamesNeeded && t.homeWins > t.awayWins) ||
               (t.homeWins <= -t.gamesNeeded && t.homeWins < t.awayWins)
           : (t.awayWins >= t.gamesNeeded && t.awayWins > t.homeWins) ||
               (t.awayWins <= -t.gamesNeeded && t.awayWins < t.homeWins);
       }
-      function Up(e, t, a, n) {
+      function Jp(e, t, a, n) {
         var i = Object(r.useContext)(oc.context),
           o = (Object(r.useContext)(S.context), Object(c.g)());
         Object(r.useContext)(x.context).user;
@@ -19534,7 +19566,7 @@
                       {void 0 !== s ? <div className="PlayoffSetup-Seed">{s + 1}</div> : null}
                       {a ? (
                         <div className="PlayoffSetup-MatchupTeam-Icon" style={{ background: a.mainColor }}>
-                          {Yg(a)}
+                          {qg(a)}
                         </div>
                       ) : null}
                       <div className="PlayoffSetup-MatchupTeam">
@@ -19559,7 +19591,7 @@
                       {void 0 !== s ? <div className="PlayoffSetup-Seed">{s + 1}</div> : null}
                       {a ? (
                         <div className="PlayoffSetup-MatchupTeam-Icon" style={{ background: a.mainColor }}>
-                          {Yg(a)}
+                          {qg(a)}
                         </div>
                       ) : null}
                       {a ? (
@@ -19575,9 +19607,9 @@
                     <div className="PlayoffSetup-MatchupTeam-Info">
                       <div
                         className={
-                          "PlayoffSetup-MatchupTeam-Wins" + (zp(!0, e) ? " PlayoffSetup-MatchupTeam-WinsComplete" : "")
+                          "PlayoffSetup-MatchupTeam-Wins" + (Yp(!0, e) ? " PlayoffSetup-MatchupTeam-WinsComplete" : "")
                         }
-                        style={yv(zp(!0, e), zp(!0, e), n)}
+                        style={Ov(Yp(!0, e), Yp(!0, e), n)}
                       >
                         {e.homeWins}
                       </div>
@@ -19592,7 +19624,7 @@
                       {void 0 !== c ? <div className="PlayoffSetup-Seed">{c + 1}</div> : null}
                       {r ? (
                         <div className="PlayoffSetup-MatchupTeam-Icon" style={{ background: r.mainColor }}>
-                          {Yg(r)}
+                          {qg(r)}
                         </div>
                       ) : null}
                       {r ? (
@@ -19608,9 +19640,9 @@
                     <div className="PlayoffSetup-MatchupTeam-Info">
                       <div
                         className={
-                          "PlayoffSetup-MatchupTeam-Wins" + (zp(!1, e) ? " PlayoffSetup-MatchupTeam-WinsComplete" : "")
+                          "PlayoffSetup-MatchupTeam-Wins" + (Yp(!1, e) ? " PlayoffSetup-MatchupTeam-WinsComplete" : "")
                         }
-                        style={yv(zp(!1, e), zp(!1, e), n)}
+                        style={Ov(Yp(!1, e), Yp(!1, e), n)}
                       >
                         {e.awayWins}
                       </div>
@@ -19620,8 +19652,8 @@
               );
             });
       }
-      var Yp,
-        Jp = function (e) {
+      var qp,
+        Xp = function (e) {
           var t = Object(r.useContext)(S.context),
             a = Object(r.useState)(t.postseasons[0].round ? t.postseasons[0].round.roundNumber : 0),
             n = Object(s.a)(a, 2),
@@ -19629,18 +19661,18 @@
             o = n[1];
           return void 0 === t || void 0 === t.postseasons[e.playoffIndex].round ? null : (
             <div className="PlayoffSetup">
-              <Vp playoffIndex={e.playoffIndex} />
-              <Gp playoffIndex={e.playoffIndex} index={i} setIndex={o} />
-              <Wp playoffIndex={e.playoffIndex} roundNumber={i} />
+              <Wp playoffIndex={e.playoffIndex} />
+              <zp playoffIndex={e.playoffIndex} index={i} setIndex={o} />
+              <Up playoffIndex={e.playoffIndex} roundNumber={i} />
             </div>
           );
         };
-      function qp(e) {
+      function Zp(e) {
         var t = e.playoffIndex,
           a = e.games;
         return a.length > 0 ? (
           <ul className="League-Games">
-            <Vp playoffIndex={t} />
+            <Wp playoffIndex={t} />
             {a}
           </ul>
         ) : null;
@@ -19651,8 +19683,8 @@
           (e[(e.Leaderboard = 2)] = "Leaderboard"),
           (e[(e.Standings = 3)] = "Standings"),
           (e[(e.Postseason = 4)] = "Postseason");
-      })(Yp || (Yp = {}));
-      var Xp = function (e) {
+      })(qp || (qp = {}));
+      var Kp = function (e) {
         var t,
           a,
           n,
@@ -19717,20 +19749,20 @@
         function b() {
           switch (g) {
             case "/upcoming":
-              return Yp.Upcoming;
+              return qp.Upcoming;
             case "/leaderboard":
-              return Yp.Leaderboard;
+              return qp.Leaderboard;
             case "/standings":
-              return Yp.Standings;
+              return qp.Standings;
             case "/bracket":
-              return Yp.Postseason;
+              return qp.Postseason;
             default:
-              return Yp.Live;
+              return qp.Live;
           }
         }
         if (!f.sim) return null;
         var w,
-          B = b() === Yp.Upcoming ? f.sim.day + 1 : f.sim.day,
+          B = b() === qp.Upcoming ? f.sim.day + 1 : f.sim.day,
           y = [],
           C = [],
           O = Object(Y.a)(f.postseasons);
@@ -19746,8 +19778,8 @@
         } finally {
           O.f();
         }
-        var N = b() === Yp.Live ? f.schedule : f.tomorrowSchedule,
-          k = b() === Yp.Live ? y : C,
+        var N = b() === qp.Live ? f.schedule : f.tomorrowSchedule,
+          k = b() === qp.Live ? y : C,
           T = null;
         if (void 0 !== N && N.length > 0) {
           var P,
@@ -19761,16 +19793,16 @@
             M = null !== (D = h(R)) && void 0 !== D ? D : [];
           T = (
             <ul>
-              <qp
+              <Zp
                 playoffIndex={0}
                 games={Q.map(function (e, t) {
-                  return <Yv index={t} key={t} data={e} matchups={k} />;
+                  return <qv index={t} key={t} data={e} matchups={k} />;
                 })}
               />
-              <qp
+              <Zp
                 playoffIndex={1}
                 games={M.map(function (e, t) {
-                  return <Yv index={t} key={t} data={e} matchups={k} />;
+                  return <qv index={t} key={t} data={e} matchups={k} />;
                 })}
               />
             </ul>
@@ -19815,17 +19847,17 @@
                 ? void 0
                 : A.roundNumber
               : -1,
-          V = (b() === Yp.Live ? F : H) + 1;
+          V = (b() === qp.Live ? F : H) + 1;
         switch (b()) {
-          case Yp.Postseason:
-            for (var G = [], W = 0; W < f.postseasons.length; W++) G.push(<Jp playoffIndex={W} />);
+          case qp.Postseason:
+            for (var G = [], W = 0; W < f.postseasons.length; W++) G.push(<Xp playoffIndex={W} />);
             j = <l.a.Fragment>{G}</l.a.Fragment>;
             break;
-          case Yp.Leaderboard:
-            j = <kp />;
+          case qp.Leaderboard:
+            j = <Pp />;
             break;
-          case Yp.Standings:
-            j = <Qp />;
+          case qp.Standings:
+            j = <jp />;
             break;
           default:
             j = p ? (
@@ -19835,7 +19867,7 @@
                 {null !== T ? (
                   <div>
                     <div className="League-Countdown">
-                      {b() === Yp.Upcoming ? <Op dateString={Fg().toString()} /> : null}
+                      {b() === qp.Upcoming ? <Sp dateString={Vg().toString()} /> : null}
                     </div>
                     {T}
                   </div>
@@ -19865,13 +19897,13 @@
               )}
               Day<span className="League-Number">{B + 1}</span>
             </h2>
-            <hp />
+            <wp />
             {j}
           </l.a.Fragment>
         );
       };
       a(145);
-      function Zp(e) {
+      function _p(e) {
         var t = e.playoffName,
           a = e.winner,
           n = Object(r.useContext)(x.context).user,
@@ -19901,7 +19933,7 @@
           )
         );
       }
-      var Kp = function (e) {
+      var $p = function (e) {
           var t = e.postseasons,
             a = e.teams;
           if (void 0 === t || void 0 === a) return null;
@@ -19928,10 +19960,10 @@
             n.length <= 0)
           )
             return null;
-          for (var s = [], c = 0; c < n.length; c++) void 0 !== n[c] && s.push(<Zp playoffName={o[c]} winner={n[c]} />);
+          for (var s = [], c = 0; c < n.length; c++) void 0 !== n[c] && s.push(<_p playoffName={o[c]} winner={n[c]} />);
           return <div className="League-Info-Body">{s}</div>;
         },
-        _p = function (e) {
+        eh = function (e) {
           var t,
             a,
             n = e.path,
@@ -19949,18 +19981,18 @@
                     : 0) + 1}{" "}
                   is over.
                 </div>
-                <Kp teams={o.teams} postseasons={i.postseasons} />
+                <$p teams={o.teams} postseasons={i.postseasons} />
                 <div className="League-Info-End">
                   <a href="/offseason">The Election ends soon! Go cast your Votes.</a>
                 </div>
               </div>
-              <pp />
-              {"/leaderboard" === n ? <kp /> : <Qp />}
+              <bp />
+              {"/leaderboard" === n ? <Pp /> : <jp />}
             </div>
           );
         };
       a(244);
-      function $p() {
+      function th() {
         var e = Object(r.useState)([]),
           t = Object(s.a)(e, 2),
           a = t[0],
@@ -20039,7 +20071,7 @@
         );
       }
       a(245);
-      var eh = function () {
+      var ah = function () {
           var e,
             t,
             a = Object(r.useContext)(S.context),
@@ -20102,7 +20134,7 @@
                         g(e > 9 ? 0 : e);
                       })(d + 1);
                     }}
-                    style={{ background: c, color: Mg(c), cursor: "pointer" }}
+                    style={{ background: c, color: Fg(c), cursor: "pointer" }}
                   >
                     BETA
                   </div>
@@ -20140,7 +20172,7 @@
                         target="_blank"
                         aria-label="Discord"
                       >
-                        <Ae.e aria-label="Discord Icon" />
+                        <Ae.g aria-label="Discord Icon" />
                       </a>
                       <a
                         className="Header-Social-Follow-Icon"
@@ -20148,7 +20180,7 @@
                         target="_blank"
                         aria-label="Twitter"
                       >
-                        <Ae.j aria-label="Twitter Icon" />
+                        <Ae.l aria-label="Twitter Icon" />
                       </a>
                       <a
                         className="Header-Social-Follow-Icon"
@@ -20156,7 +20188,7 @@
                         target="_blank"
                         aria-label="Instagram"
                       >
-                        <Ae.h aria-label="Instagram Icon" />
+                        <Ae.j aria-label="Instagram Icon" />
                       </a>
                       <a
                         className="Header-Social-Follow-Icon"
@@ -20164,7 +20196,7 @@
                         target="_blank"
                         aria-label="Twitch"
                       >
-                        <Ae.i aria-label="Twitch Icon" />
+                        <Ae.k aria-label="Twitch Icon" />
                       </a>
                       <a
                         className="Header-Social-Follow-Icon"
@@ -20172,18 +20204,18 @@
                         target="_blank"
                         aria-label="Youtube"
                       >
-                        <Ae.k aria-label="Youtube Icon" />
+                        <Ae.m aria-label="Youtube Icon" />
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              {(null === n || void 0 === n ? void 0 : n.isSignedIn) && <$p />}
+              {(null === n || void 0 === n ? void 0 : n.isSignedIn) && <th />}
             </header>
           );
         },
-        th = (a(246), l.a.createContext({ players: [], teams: [] })),
-        ah = function (e) {
+        nh = (a(246), l.a.createContext({ players: [], teams: [] })),
+        rh = function (e) {
           var t = e.children,
             a = Object(c.g)().pathname,
             n = Object(r.useState)({ players: [], teams: [] }),
@@ -20219,14 +20251,14 @@
               },
               [a]
             ),
-            (<th.Provider value={o}>{t}</th.Provider>)
+            (<nh.Provider value={o}>{t}</nh.Provider>)
           );
         };
-      ah.context = th;
-      var nh = ah;
-      function rh() {
+      rh.context = nh;
+      var lh = rh;
+      function ih() {
         var e = Object(r.useContext)(oc.context),
-          t = Object(r.useContext)(nh.context),
+          t = Object(r.useContext)(lh.context),
           a = Object(r.useState)([]),
           n = Object(s.a)(a, 2),
           i = n[0],
@@ -20317,8 +20349,8 @@
         void 0 !== h.sim.season && h.sim.season;
         var b = <wA />;
         return (
-          (i.length >= 1 || void 0 !== i) && 0 === v && (b = <lh playerInfo={i} showLine={!1} />),
-          (u.length >= 1 || void 0 !== u) && 1 === v && (b = <ih teamInfo={u} />),
+          (i.length >= 1 || void 0 !== i) && 0 === v && (b = <oh playerInfo={i} showLine={!1} />),
+          (u.length >= 1 || void 0 !== u) && 1 === v && (b = <sh teamInfo={u} />),
           (
             <div className="HallOfFlame">
               <div className="HallOfFlame-Header">
@@ -20357,21 +20389,21 @@
                 </button>
               </div>
               {b}
-              <op />
+              <cp />
             </div>
           )
         );
       }
-      function lh(e) {
+      function oh(e) {
         var t = [],
           a = [];
         if (void 0 === e.playerInfo || e.playerInfo.length < 1) return <wA />;
         for (var n = 0; n < e.playerInfo.length; n++)
           e.showLine
             ? n < 14
-              ? t.push(<oh playerInfo={e.playerInfo[n]} key={e.playerInfo[n].place} glow={!0} />)
-              : a.push(<oh playerInfo={e.playerInfo[n]} key={e.playerInfo[n].place} />)
-            : t.push(<oh playerInfo={e.playerInfo[n]} key={e.playerInfo[n].place} />);
+              ? t.push(<ch playerInfo={e.playerInfo[n]} key={e.playerInfo[n].place} glow={!0} />)
+              : a.push(<ch playerInfo={e.playerInfo[n]} key={e.playerInfo[n].place} />)
+            : t.push(<ch playerInfo={e.playerInfo[n]} key={e.playerInfo[n].place} />);
         return e.showLine ? (
           <div className="HallOfFlame-List">
             <ul className="HallOfFlame-Player-Container">
@@ -20396,17 +20428,17 @@
           </div>
         );
       }
-      function ih(e) {
+      function sh(e) {
         var t = [];
         if (void 0 === e.teamInfo || e.teamInfo.length < 1) return <wA />;
-        for (var a = 0; a < e.teamInfo.length; a++) t.push(<sh teamInfo={e.teamInfo[a]} key={e.teamInfo[a].place} />);
+        for (var a = 0; a < e.teamInfo.length; a++) t.push(<Ah teamInfo={e.teamInfo[a]} key={e.teamInfo[a].place} />);
         return (
           <div className="HallOfFlame-List">
             <ul className="HallOfFlame-Player-Container">{t}</ul>
           </div>
         );
       }
-      function oh(e) {
+      function ch(e) {
         var t,
           a,
           n,
@@ -20444,7 +20476,7 @@
           </d>
         ) : null;
       }
-      function sh(e) {
+      function Ah(e) {
         var t,
           a,
           n = Object(c.g)();
@@ -20465,7 +20497,7 @@
                   aria-hidden="true"
                   style={{ background: void 0 !== e.teamInfo.team ? e.teamInfo.team.mainColor : "#999999" }}
                 >
-                  <div className="Leaderboard-Team-Emoji">{Yg(e.teamInfo.team)}</div>
+                  <div className="Leaderboard-Team-Emoji">{qg(e.teamInfo.team)}</div>
                 </div>
                 {null === (a = e.teamInfo.team) || void 0 === a ? void 0 : a.fullName}
               </div>
@@ -20478,7 +20510,7 @@
         ) : null;
       }
       a(247);
-      function ch() {
+      function uh() {
         return (
           <div className="About-All">
             <div className="About-Header">Welcome to Blaseball.</div>
@@ -20523,7 +20555,7 @@
           </div>
         );
       }
-      function Ah() {
+      function mh() {
         var e = Object(c.g)();
         return (
           <div className="About-All">
@@ -20633,8 +20665,8 @@
           </div>
         );
       }
-      a(40);
-      var uh = function (e) {
+      a(41);
+      var dh = function (e) {
           return (
             <Ka.a
               key="bottom-1"
@@ -20649,7 +20681,7 @@
             </Ka.a>
           );
         },
-        mh = function (e) {
+        gh = function (e) {
           var t = (
               <span className="ModalItem-Help-Icon" style={{ margin: !0 === e.noMargin ? 0 : "0 10px" }}>
                 <ce.d />
@@ -20667,9 +20699,9 @@
                 })}
               </div>
             );
-          return <uh hover={t} children={a} />;
+          return <dh hover={t} children={a} />;
         },
-        dh = function (e) {
+        fh = function (e) {
           var t = 100 * e.value;
           return 50 === t ? (
             <div className="Team-Stadium-Progress-Bar progress">
@@ -20700,7 +20732,7 @@
             </div>
           );
         },
-        gh = function (e) {
+        Eh = function (e) {
           var t = "";
           return (
             (t =
@@ -20732,7 +20764,7 @@
             )
           );
         },
-        fh = function (e) {
+        vh = function (e) {
           var t = "";
           return (
             (t = e.value >= 0.75 ? "VERY HIGH" : e.value >= 0.5 ? "HIGH" : e.value >= 0.25 ? "MEDIUM" : "LOW"),
@@ -20757,7 +20789,7 @@
             )
           );
         },
-        Eh = function (e) {
+        ph = function (e) {
           var t = "";
           return (
             (t =
@@ -20791,7 +20823,7 @@
             )
           );
         },
-        vh = function (e) {
+        hh = function (e) {
           if (void 0 === e.stadium || void 0 === e.stadium.weather) return null;
           var t = e.stadium.weather[e.index];
           return void 0 === t || 0 === t ? null : (
@@ -20801,12 +20833,12 @@
                 <div className="Team-Stadium-Weather-Name">{Gm(e.index)}</div>
               </div>
               <div className="Player-Info-Line-Body">
-                <ph value={t} index={e.index} />
+                <bh value={t} index={e.index} />
               </div>
             </div>
           );
         },
-        ph = function (e) {
+        bh = function (e) {
           var t = [],
             a = "#ffffff",
             n = "#aaaaaa";
@@ -20823,12 +20855,12 @@
             </div>
           );
         },
-        hh = function (e) {
+        wh = function (e) {
           var t = e.team,
             a = e.stadium,
             n = e.user,
             i = Object(r.useContext)(S.context),
-            o = (Object(c.g)(), Ug(i.sim));
+            o = (Object(c.g)(), Jg(i.sim));
           if (n.favoriteTeam !== t.id) return null;
           var s = null === a.model && o;
           if (void 0 === n.snacks.Stadium_Access && s)
@@ -20863,7 +20895,7 @@
                   <BA.a className="Decrees-Submit-Button">
                     <m.b to={"/shop/".concat(ne.STADIUM)}>Go To Shop</m.b>
                   </BA.a>
-                  <mh
+                  <gh
                     lines={[
                       "To gain access to stadium renovations, you must own a Pizza Snack. Head to the shop to buy access.",
                     ]}
@@ -20880,7 +20912,7 @@
                   <BA.a variant="success" className="Offseason-Button">
                     <m.b to="/renovation">Contribute</m.b>
                   </BA.a>
-                  <mh lines={["The Construction phase is active! Go help your Team build its next Renovations."]} />
+                  <gh lines={["The Construction phase is active! Go help your Team build its next Renovations."]} />
                 </div>
               </div>
             );
@@ -20892,7 +20924,7 @@
                 <BA.a variant="secondary" disabled={!0} className="Offseason-Button">
                   Unavailable
                 </BA.a>
-                <mh
+                <gh
                   lines={[
                     "Construction is unavailable. Contribute to your Ballpark's Renovation between Days 27 (Earlsiesta) & 72 (Latesiesta).",
                   ]}
@@ -20901,7 +20933,7 @@
             </div>
           );
         },
-        bh = function (e) {
+        Bh = function (e) {
           var t = Object(r.useContext)(S.context),
             a = Object(r.useContext)(oc.context),
             n = Object(r.useContext)(x.context).user,
@@ -20933,80 +20965,80 @@
                     <div className="Player-Info-Line">
                       <div className="Player-Info-Line-Header">Grandiosity</div>
                       <div className="Player-Info-Line-Body">
-                        <dh value={o.grandiosity} color={o.secondaryColor} />
+                        <fh value={o.grandiosity} color={o.secondaryColor} />
                       </div>
                     </div>
                     <div className="Player-Info-Line">
                       <div className="Player-Info-Line-Header">Fortification</div>
                       <div className="Player-Info-Line-Body">
-                        <dh value={o.fortification} color={o.secondaryColor} />
+                        <fh value={o.fortification} color={o.secondaryColor} />
                       </div>
                     </div>
                     <div className="Player-Info-Line">
                       <div className="Player-Info-Line-Header">Obtuseness</div>
                       <div className="Player-Info-Line-Body">
-                        <dh value={o.obtuseness} color={o.secondaryColor} />
+                        <fh value={o.obtuseness} color={o.secondaryColor} />
                       </div>
                     </div>
                     <div className="Player-Info-Line">
                       <div className="Player-Info-Line-Header">Ominousness</div>
                       <div className="Player-Info-Line-Body">
-                        <dh value={o.ominousness} color={o.secondaryColor} />
+                        <fh value={o.ominousness} color={o.secondaryColor} />
                       </div>
                     </div>
                     <div className="Player-Info-Line">
                       <div className="Player-Info-Line-Header">Inconvenience</div>
                       <div className="Player-Info-Line-Body">
-                        <dh value={o.inconvenience} color={o.secondaryColor} />
+                        <fh value={o.inconvenience} color={o.secondaryColor} />
                       </div>
                     </div>
                     <div className="Player-Info-Line">
                       <div className="Player-Info-Line-Header">Viscosity</div>
                       <div className="Player-Info-Line-Body">
-                        <dh value={o.viscosity} color={o.secondaryColor} />
+                        <fh value={o.viscosity} color={o.secondaryColor} />
                       </div>
                     </div>
                     <div className="Player-Info-Line">
                       <div className="Player-Info-Line-Header">Forwardness</div>
                       <div className="Player-Info-Line-Body">
-                        <dh value={o.forwardness} color={o.secondaryColor} />
+                        <fh value={o.forwardness} color={o.secondaryColor} />
                       </div>
                     </div>
                     <div className="Player-Info-Line">
                       <div className="Player-Info-Line-Header">Mysticism</div>
                       <div className="Player-Info-Line-Body">
-                        <dh value={o.mysticism} color={o.secondaryColor} />
+                        <fh value={o.mysticism} color={o.secondaryColor} />
                       </div>
                     </div>
                     <div className="Player-Info-Line">
                       <div className="Player-Info-Line-Header">Elongation</div>
                       <div className="Player-Info-Line-Body">
-                        <dh value={o.elongation} color={o.secondaryColor} />
+                        <fh value={o.elongation} color={o.secondaryColor} />
                       </div>
                     </div>
                     <div className="Player-Info-Line">
                       <div className="Player-Info-Line-Header">Filthiness</div>
                       <div className="Player-Info-Line-Body">
-                        <gh value={o.filthiness} color={o.mainColor} secColor={o.secondaryColor} />
+                        <Eh value={o.filthiness} color={o.mainColor} secColor={o.secondaryColor} />
                       </div>
                     </div>
                     <div className="Player-Info-Line">
                       <div className="Player-Info-Line-Header">Luxuriousness</div>
                       <div className="Player-Info-Line-Body">
-                        <fh value={o.luxuriousness} color={o.mainColor} secColor={o.secondaryColor} />
+                        <vh value={o.luxuriousness} color={o.mainColor} secColor={o.secondaryColor} />
                       </div>
                     </div>
                     <div className="Player-Info-Line">
                       <div className="Player-Info-Line-Header">Hype</div>
                       <div className="Player-Info-Line-Body">
-                        <Eh value={o.hype} color={o.mainColor} secColor={o.secondaryColor} />
+                        <ph value={o.hype} color={o.mainColor} secColor={o.secondaryColor} />
                       </div>
                     </div>
                   </div>
                   <div className="ModalItem-Subheader">Weather</div>
                   <div className="Team-Section">
                     {Hm.map(function (e, t) {
-                      return <vh stadium={o} key={t} index={t} user={n} weather={e} />;
+                      return <hh stadium={o} key={t} index={t} user={n} weather={e} />;
                     })}
                   </div>
                 </l.a.Fragment>
@@ -21022,10 +21054,10 @@
               ) : (
                 <div className="Team-Stadium-Subheader">"{o.nickname}"</div>
               ),
-            m = Wg(o, "light_switch_toggle") ? (
+            m = Ug(o, "light_switch_toggle") ? (
               <div className="Player-Info-Line">
                 <div className="Player-Info-Line-Header">Light Switch</div>
-                {1 === zg(o, "light_switch_toggle") ? (
+                {1 === Yg(o, "light_switch_toggle") ? (
                   <div className="Team-Stadium-LightSwitch-On">
                     ON <re.a className="Team-Stadium-LightSwitch-On-Bulb" />
                   </div>
@@ -21037,10 +21069,10 @@
               </div>
             ) : null,
             d =
-              Wg(o, "birdhouses_mod") ||
-              Hg(t.sim, "BIRDHOUSES") ||
-              Wg(o, "bird_hotel_mod") ||
-              Hg(t.sim, "BIRD_HOTEL") ? (
+              Ug(o, "birdhouses_mod") ||
+              Gg(t.sim, "BIRDHOUSES") ||
+              Ug(o, "bird_hotel_mod") ||
+              Gg(t.sim, "BIRD_HOTEL") ? (
                 <div className="Player-Info-Line">
                   <div className="Player-Info-Line-Header">Birds</div>
                   <div className="Player-Info-Line-Body">{o.birds}</div>
@@ -21048,20 +21080,20 @@
               ) : null,
             g = o.state,
             f =
-              Wg(o, "air_balloons_mod") || Hg(t.sim, "AIR_BALLOONS") ? (
+              Ug(o, "air_balloons_mod") || Gg(t.sim, "AIR_BALLOONS") ? (
                 <div className="Player-Info-Line">
                   <div className="Player-Info-Line-Header">Balloons</div>
                   <div className="Player-Info-Line-Body">{g && g.air_balloons ? g.air_balloons : 0}</div>
                 </div>
               ) : null,
             E =
-              Wg(o, "flood_balloons_mod") || Hg(t.sim, "FLOOD_BALLOONS") ? (
+              Ug(o, "flood_balloons_mod") || Gg(t.sim, "FLOOD_BALLOONS") ? (
                 <div className="Player-Info-Line">
                   <div className="Player-Info-Line-Header">Flood Balloons</div>
                   <div className="Player-Info-Line-Body">{g && g.flood_balloons ? g.flood_balloons : 0}</div>
                 </div>
               ) : null,
-            v = Ug(t.sim),
+            v = Jg(t.sim),
             p =
               null !== o.model || v || n.favoriteTeam !== i.id ? null : (
                 <div className="Team-Stadium-Help">Construction of {o.nickname} will begin next Earlsiesta.</div>
@@ -21085,7 +21117,7 @@
                 <div className={"ModalItem-Content" + (s ? " ModalItem-Content-WithAttributes" : "")}>
                   <div className="Team-Stadium-Header-Line">
                     <div className="Player-Info-Line-Header">
-                      <hv stadium={o} style={dv.TeamModal} />
+                      <wv stadium={o} style={fv.TeamModal} />
                     </div>
                     <div className="Team-Stadium-Header">{o.name}</div>
                   </div>
@@ -21095,8 +21127,8 @@
                     {d}
                     {f}
                     {E}
-                    <hh stadium={o} team={i} user={n} />
-                    {Gg(i.nickname, a) ? h : null}
+                    <wh stadium={o} team={i} user={n} />
+                    {zg(i.nickname, a) ? h : null}
                   </div>
                   {A}
                   {p}
@@ -21105,7 +21137,7 @@
             );
           return <l.a.Fragment>{b}</l.a.Fragment>;
         };
-      function wh(e, t, a) {
+      function yh(e, t, a) {
         var n = (function (e, t) {
             var a = 6 + Math.round(10 * e.buoyancy),
               n = Math.PI * ((2 / a) * t + 0.5);
@@ -21176,7 +21208,7 @@
           </span>
         );
       }
-      function Bh(e, t, a) {
+      function Ch(e, t, a) {
         if (void 0 === t || void 0 === a || void 0 === t.sim) return "";
         var n = a.leagues.find(function (e) {
           var a;
@@ -21190,7 +21222,7 @@
         var l = r.order.indexOf(e);
         return "Ties #".concat(l + 1);
       }
-      function yh(e, t) {
+      function Oh(e, t) {
         var a = [],
           n = "Team-Info-Championships";
         t && (n += " Team-Info-Underchampionships");
@@ -21202,7 +21234,7 @@
           );
         return a;
       }
-      function Ch(e, t, a, n, r, i, o) {
+      function Ih(e, t, a, n, r, i, o) {
         return e.map(function (e) {
           var s = [];
           t.idol === e.id && s.push("Your Idol"),
@@ -21264,7 +21296,7 @@
               break;
             default:
               var u = <l.a.Fragment />;
-              (u = o ? Us(e) : i ? <l.a.Fragment>{nf(e, !0)}</l.a.Fragment> : <l.a.Fragment>{rf(e, !0)}</l.a.Fragment>),
+              (u = o ? Us(e) : i ? <l.a.Fragment>{lf(e, !0)}</l.a.Fragment> : <l.a.Fragment>{of(e, !0)}</l.a.Fragment>),
                 (c = (
                   <div className="Team-Player-Ratings" aria-hidden="true">
                     {u}
@@ -21300,7 +21332,7 @@
                 )}{" "}
                 {null === e || void 0 === e ? void 0 : e.name}
               </div>
-              <div className="sr-only" aria-label={"with " + sf(of(e)) + " Stars."} />
+              <div className="sr-only" aria-label={"with " + Af(cf(e)) + " Stars."} />
               <div className="sr-only" aria-label={s.length > 0 ? "Current Status: " + s.join(", ") + "." : ""} />
             </d>
           ) : (
@@ -21332,7 +21364,7 @@
                 {null === e || void 0 === e ? void 0 : e.name}
               </div>
               <div className="sr-only" aria-label=" with " />
-              <div className="Team-Player-Vibe">{wh(e, void 0 !== n ? n : -1, t)}</div>
+              <div className="Team-Player-Vibe">{yh(e, void 0 !== n ? n : -1, t)}</div>
               <div className="sr-only" aria-label=" and " />
               {c}
               <div className="sr-only" aria-label={s.length > 0 ? "Current Status: " + s.join(", ") + "." : ""} />
@@ -21340,7 +21372,7 @@
           );
         });
       }
-      function Oh(e) {
+      function Sh(e) {
         return (
           <div className="Player-Info-Line Team-Info-Line">
             <div className="Player-Info-Line-Header">{e.header}</div>
@@ -21348,7 +21380,7 @@
           </div>
         );
       }
-      var Ih = function (e) {
+      var Nh = function (e) {
         var t,
           a,
           n,
@@ -21391,7 +21423,7 @@
         var U = b.teams.find(function (e) {
             return e.id === p;
           }),
-          Y = Gg(p, b),
+          Y = zg(p, b),
           J = (function () {
             var e = Object(E.a)(
               f.a.mark(function e() {
@@ -21552,9 +21584,9 @@
           });
         if (void 0 === k) return <wA />;
         var te,
-          ae = Ch(k.lineup, B, H, null === (t = h.sim) || void 0 === t ? void 0 : t.day, C, !0, !1),
-          ne = Ch(k.rotation, B, H, null === (a = h.sim) || void 0 === a ? void 0 : a.day, C, !1, !1),
-          re = Ch(k.shadows, B, H, null === (n = h.sim) || void 0 === n ? void 0 : n.day, C, !0, !0),
+          ae = Ih(k.lineup, B, H, null === (t = h.sim) || void 0 === t ? void 0 : t.day, C, !0, !1),
+          ne = Ih(k.rotation, B, H, null === (a = h.sim) || void 0 === a ? void 0 : a.day, C, !1, !1),
+          re = Ih(k.shadows, B, H, null === (n = h.sim) || void 0 === n ? void 0 : n.day, C, !0, !0),
           le =
             void 0 !== U && U.deceased ? (
               <div className="ModalItem-Status">
@@ -21657,7 +21689,7 @@
             </div>
           ),
           se = Qs(U.id, h.standings),
-          ce = (Y && (js(se), Bh(p, h, b)), Y ? <div className="Team-Card"> {af(U.card).join(" ")} </div> : null),
+          ce = (Y && (js(se), Ch(p, h, b)), Y ? <div className="Team-Card"> {rf(U.card).join(" ")} </div> : null),
           ue = !1;
         ((null === (i = h.sim) || void 0 === i ? void 0 : i.phase) !== Q.Earlseason &&
           (null === (o = h.sim) || void 0 === o ? void 0 : o.phase) !== Q.Midseason &&
@@ -21677,7 +21709,7 @@
               className="ModalItem-Button-Flute"
               type="submit"
               variant="success"
-              style={{ background: U.mainColor, color: Mg(U.mainColor) }}
+              style={{ background: U.mainColor, color: Fg(U.mainColor) }}
             >
               <$n style={{ width: "20px", height: "20px" }} /> Choose Team
             </BA.a>
@@ -21687,7 +21719,7 @@
           ? (me = (
               <div
                 className="ModalItem-Button-Flute-Current"
-                style={{ background: U.mainColor, color: Mg(U.mainColor) }}
+                style={{ background: U.mainColor, color: Fg(U.mainColor) }}
               >
                 Favorite Team
               </div>
@@ -21695,7 +21727,7 @@
           : void 0 !== h &&
             void 0 !== h.sim &&
             h.sim.phase >= 3 &&
-            Gg(null !== (v = B.favoriteTeam) && void 0 !== v ? v : "", b)
+            zg(null !== (v = B.favoriteTeam) && void 0 !== v ? v : "", b)
           ? (me = (
               <Ka.a
                 placement="top"
@@ -21710,7 +21742,7 @@
                     disabled={!0}
                     className="ModalItem-Button-Idol"
                     variant="dark"
-                    style={{ background: Qg(U.mainColor, 0.8), color: Mg(U.mainColor), pointerEvents: "none" }}
+                    style={{ background: jg(U.mainColor, 0.8), color: Fg(U.mainColor), pointerEvents: "none" }}
                   >
                     <$n style={{ width: "20px", height: "20px" }} /> Choose Team
                   </BA.a>
@@ -21732,7 +21764,7 @@
                     disabled={!0}
                     className="ModalItem-Button-Idol"
                     variant="dark"
-                    style={{ background: Qg(U.mainColor, 0.8), color: Mg(U.mainColor), pointerEvents: "none" }}
+                    style={{ background: jg(U.mainColor, 0.8), color: Fg(U.mainColor), pointerEvents: "none" }}
                   >
                     <$n style={{ width: "20px", height: "20px" }} /> Choose Team
                   </BA.a>
@@ -21755,7 +21787,7 @@
                     disabled={!0}
                     className="ModalItem-Button-Idol"
                     variant="dark"
-                    style={{ background: Qg(U.mainColor, 0.8), color: Mg(U.mainColor), pointerEvents: "none" }}
+                    style={{ background: jg(U.mainColor, 0.8), color: Fg(U.mainColor), pointerEvents: "none" }}
                   >
                     <$n style={{ width: "20px", height: "20px" }} /> Choose Team
                   </BA.a>
@@ -21768,13 +21800,13 @@
             return e.id === B.favoriteTeam;
           });
           if (ge) {
-            var fe = Yg(ge),
+            var fe = qg(ge),
               Ee = encodeURIComponent("".concat(ge.slogan || "", " ").concat(fe, " #blaseball")),
               ve = "http://twitter.com/intent/tweet?text=".concat(Ee, "&url=https%3A%2F%2Fblaseball.com"),
               pe = { "--team-color": ge.secondaryColor };
             de = (
               <a target="_blank" href={ve} className="Team-Tweet" style={pe} aria-label="Tweet your favorite team.">
-                <Ae.j className="Team-Tweet-Icon" />
+                <Ae.l className="Team-Tweet-Icon" />
               </a>
             );
           }
@@ -21798,7 +21830,7 @@
                             : void 0
                         }
                       >
-                        {Yg(U)}
+                        {qg(U)}
                       </div>
                     </div>
                     <div className="ModalItem-Name-Wrapper">
@@ -21844,10 +21876,10 @@
                     <div className={"ModalItem-Content" + (ie ? " ModalItem-Content-WithAttributes" : "")}>
                       <div className="Team-Section">
                         <ul>
-                          <Oh header="Wins" body={Ms(se)} />
-                          <Oh header="Record" body={js(se)} />
-                          <Oh header="Runs" body={cf(U.id, null === h || void 0 === h ? void 0 : h.standings)} />
-                          {Y && Hg(h.sim, "SIM_SHOW_LEVELS") ? (
+                          <Sh header="Wins" body={Ms(se)} />
+                          <Sh header="Record" body={js(se)} />
+                          <Sh header="Runs" body={uf(U.id, null === h || void 0 === h ? void 0 : h.standings)} />
+                          {Y && Gg(h.sim, "SIM_SHOW_LEVELS") ? (
                             <div className="Player-Info-Line Team-Info-Line">
                               <Ka.a
                                 placement="top"
@@ -21913,17 +21945,17 @@
                             </div>
                           ) : null}
                           {Y ? (
-                            <Oh header="eDensity" body={<l.a.Fragment>{U.eDensity.toFixed(5)} bl/m³</l.a.Fragment>} />
+                            <Sh header="eDensity" body={<l.a.Fragment>{U.eDensity.toFixed(5)} bl/m³</l.a.Fragment>} />
                           ) : null}
-                          {Y ? <Oh header="Tiebreaker Place" body={Bh(p, h, b)} /> : null}
-                          {Y ? <Oh header="Tarot Card" body={af(U.card).join(" ")} /> : null}
-                          <Oh header="Championships" body={yh(U.championships, !1)} />
-                          <Oh header="Underchampionships" body={yh(U.underchampionships, !0)} />
-                          {Hg(h.sim, "SIM_EVOLUTION_CONCEPTUALIZED") ? (
-                            <Oh header="Times Evolved" body={U.evolution} />
+                          {Y ? <Sh header="Tiebreaker Place" body={Ch(p, h, b)} /> : null}
+                          {Y ? <Sh header="Tarot Card" body={rf(U.card).join(" ")} /> : null}
+                          <Sh header="Championships" body={Oh(U.championships, !1)} />
+                          <Sh header="Underchampionships" body={Oh(U.underchampionships, !0)} />
+                          {Gg(h.sim, "SIM_EVOLUTION_CONCEPTUALIZED") ? (
+                            <Sh header="Times Evolved" body={U.evolution} />
                           ) : null}
-                          <Oh header="Net Shame" body={U.totalShamings - U.totalShames} />
-                          <Oh
+                          <Sh header="Net Shame" body={U.totalShamings - U.totalShames} />
+                          <Sh
                             header="Number of Players"
                             body={U.rotation.length + U.lineup.length + U.shadows.length}
                           />
@@ -21933,7 +21965,7 @@
                   </CA.a.Pane>
                   {ee ? (
                     <CA.a.Pane eventKey="Stadium">
-                      <bh team={U} />
+                      <Bh team={U} />
                     </CA.a.Pane>
                   ) : null}
                   {U.card >= -1 ? (
@@ -21957,7 +21989,7 @@
         );
       };
       a(32), a(35);
-      var Sh = function (e) {
+      var kh = function (e) {
           var t = Object(cA.useToasts)().addToast,
             a = Object(r.useContext)(x.context),
             n = a.user,
@@ -21984,7 +22016,7 @@
             T = k[0],
             P = k[1],
             D = Object(r.useContext)(S.context),
-            L = Object(r.useContext)(Rg.context).snackData,
+            L = Object(r.useContext)(Mg.context).snackData,
             R = function (e) {
               var t = e.target.value;
               B(t);
@@ -22027,7 +22059,7 @@
                 i = e.name,
                 o = e.odds,
                 s = Object(r.useContext)(x.context).user,
-                c = { "--text-color": s.lightMode ? Mg(n) : n, "--team-color": n };
+                c = { "--text-color": s.lightMode ? Fg(n) : n, "--team-color": n };
               return (
                 <div
                   className={"ModalForm-Form-Team "
@@ -22207,8 +22239,8 @@
             )
           );
         },
-        Nh = a(52),
-        kh = function (e) {
+        Th = a(52),
+        Ph = function (e) {
           var t = Object(cA.useToasts)().addToast,
             a = Object(r.useContext)(x.context),
             n = a.user,
@@ -22303,7 +22335,7 @@
               (R = "Snacks"),
                 (L = (
                   <l.a.Fragment>
-                    <Nh.a
+                    <Th.a
                       onDragEnd={function (e) {
                         e.source;
                         var t = e.destination;
@@ -22315,13 +22347,13 @@
                         }
                       }}
                     >
-                      <Nh.c droppableId="Snacks" direction={Q}>
+                      <Th.c droppableId="Snacks" direction={Q}>
                         {function (e) {
                           return (
                             <div {...Object.assign({ className: "Reorder-Snacks", ref: e.innerRef }, e.droppableProps)}>
                               {C.map(function (e, t) {
                                 return (
-                                  <Nh.b key={e} draggableId={e} index={t}>
+                                  <Th.b key={e} draggableId={e} index={t}>
                                     {function (t, a) {
                                       return e.length > 1 ? (
                                         e.includes("E") ? (
@@ -22348,14 +22380,14 @@
                                             )}
                                           >
                                             {Vs(e)}
-                                            <div className="Reorder-Snacks-Amount">{Af(e, n.snacks[e])}</div>
+                                            <div className="Reorder-Snacks-Amount">{mf(e, n.snacks[e])}</div>
                                           </div>
                                         )
                                       ) : (
                                         <l.a.Fragment />
                                       );
                                     }}
-                                  </Nh.b>
+                                  </Th.b>
                                 );
                               })}
                               {e.placeholder}
@@ -22369,8 +22401,8 @@
                             </div>
                           );
                         }}
-                      </Nh.c>
-                    </Nh.a>
+                      </Th.c>
+                    </Th.a>
                     <Z.a
                       className="ModalForm-Form ModalForm-Form-Wrapper"
                       onSubmit={function (e) {
@@ -22442,7 +22474,7 @@
               (R = "Cards"),
                 (L = (
                   <l.a.Fragment>
-                    <Nh.a
+                    <Th.a
                       onDragEnd={function (e) {
                         e.source;
                         var t = e.destination;
@@ -22454,13 +22486,13 @@
                         }
                       }}
                     >
-                      <Nh.c droppableId="Spread" direction={Q}>
+                      <Th.c droppableId="Spread" direction={Q}>
                         {function (e) {
                           return (
                             <div {...Object.assign({ className: "Reorder-Spread", ref: e.innerRef }, e.droppableProps)}>
                               {b.map(function (e, t) {
                                 return (
-                                  <Nh.b key={e} draggableId={e.toString()} index={t}>
+                                  <Th.b key={e} draggableId={e.toString()} index={t}>
                                     {function (t, a) {
                                       return (
                                         <div
@@ -22477,22 +22509,22 @@
                                           )}
                                         >
                                           <div className="Reorder-Spread-Card-Number">
-                                            {af(Number(e.split("_")[0]))[0]}
+                                            {rf(Number(e.split("_")[0]))[0]}
                                           </div>
                                           <div className="Reorder-Spread-Card-Icon">
-                                            {Yg(
+                                            {qg(
                                               o.teams.filter(function (t) {
                                                 return t.card === Number(e);
                                               })[0]
                                             )}
                                           </div>
                                           <div className="Reorder-Spread-Card-Name">
-                                            {af(Number(e.split("_")[0]))[1]}
+                                            {rf(Number(e.split("_")[0]))[1]}
                                           </div>
                                         </div>
                                       );
                                     }}
-                                  </Nh.b>
+                                  </Th.b>
                                 );
                               })}
                               {e.placeholder}
@@ -22506,8 +22538,8 @@
                             </div>
                           );
                         }}
-                      </Nh.c>
-                    </Nh.a>
+                      </Th.c>
+                    </Th.a>
                     <Z.a
                       className="ModalForm-Form"
                       onSubmit={function (e) {
@@ -22566,7 +22598,7 @@
             </hA>
           );
         };
-      function Th() {
+      function Dh() {
         var e = Object(c.h)().id,
           t = Object(cA.useToasts)().addToast,
           a = Object(r.useState)(),
@@ -22576,7 +22608,7 @@
           u = o.user,
           m = o.setUser,
           g = Object(r.useContext)(oc.context).teams,
-          v = Object(r.useContext)(Rg.context),
+          v = Object(r.useContext)(Mg.context),
           p = v.snackData,
           h =
             (g.find(function (e) {
@@ -22619,7 +22651,7 @@
                 <a
                   href="https://houstonspies.cyou/special-operations/agitate-educate-operate.html"
                   onClick={function () {
-                    return fp("Spies Organize (ShopItem)");
+                    return vp("Spies Organize (ShopItem)");
                   }}
                   target="_blank"
                   className="Shop-Item-Link"
@@ -22645,7 +22677,7 @@
         if (
           (Object(r.useEffect)(
             function () {
-              V === ne.AD && (G(e), $(V), j(Ph(u, P)));
+              V === ne.AD && (G(e), $(V), j(xh(u, P)));
             },
             [e, I]
           ),
@@ -22657,7 +22689,7 @@
           ),
           Object(r.useEffect)(
             function () {
-              $(V), j(Ph(u, P));
+              $(V), j(xh(u, P));
             },
             [P, I]
           ),
@@ -22703,7 +22735,7 @@
                           params: { snackId: ne.VOTES },
                         });
                     if (void 0 !== e.favoriteTeam && null !== e.favoriteTeam && "" !== e.favoriteTeam) {
-                      var m = Gg(e.favoriteTeam, n) || void 0 !== e.snacks[ne.FLUTES] ? 2e3 : 0,
+                      var m = zg(e.favoriteTeam, n) || void 0 !== e.snacks[ne.FLUTES] ? 2e3 : 0,
                         d = ne.FLUTES;
                       void 0 !== e.snacks[d]
                         ? u.push({
@@ -22766,11 +22798,11 @@
                           description: (
                             <l.a.Fragment>
                               This invigorating oil allows you to place larger wagers on games. Your current limit is{" "}
-                              {Dh(v, e, a)}, it would increase to {Dh(p, e, a)}.
+                              {Lh(v, e, a)}, it would increase to {Lh(p, e, a)}.
                             </l.a.Fragment>
                           ),
                           amount: E.price,
-                          toast: "Max Bet is now ".concat(Dh(p, e, a), "!"),
+                          toast: "Max Bet is now ".concat(Lh(p, e, a), "!"),
                           available: s.includes(g),
                           icon: <vn className="Shop-Item-Icon" />,
                           buyUrl: "/api/buySnack",
@@ -22791,7 +22823,7 @@
                           description: (
                             <l.a.Fragment>
                               This invigorating oil allows you to place larger wagers on games. Your current limit is{" "}
-                              {Dh(h, e, a)}, you are maxed out.
+                              {Lh(h, e, a)}, you are maxed out.
                             </l.a.Fragment>
                           ),
                           icon: <vn className="Shop-Item-Icon" />,
@@ -22828,7 +22860,7 @@
                     }
                     if (
                       (u.push(
-                        xh(
+                        Rh(
                           ne.TEAM_WIN,
                           e,
                           t,
@@ -22843,7 +22875,7 @@
                         )
                       ),
                       u.push(
-                        xh(
+                        Rh(
                           ne.TEAM_LOSS,
                           e,
                           t,
@@ -22858,7 +22890,7 @@
                         )
                       ),
                       u.push(
-                        xh(
+                        Rh(
                           ne.BREAKFAST,
                           e,
                           t,
@@ -22873,7 +22905,7 @@
                         )
                       ),
                       u.push(
-                        xh(
+                        Rh(
                           ne.TEAM_SHAMING,
                           e,
                           t,
@@ -22888,7 +22920,7 @@
                         )
                       ),
                       u.push(
-                        xh(
+                        Rh(
                           ne.TEAM_SHAMED,
                           e,
                           t,
@@ -22903,7 +22935,7 @@
                         )
                       ),
                       u.push(
-                        xh(
+                        Rh(
                           ne.IDOL_STRIKEOUTS,
                           e,
                           t,
@@ -22919,7 +22951,7 @@
                         )
                       ),
                       u.push(
-                        xh(
+                        Rh(
                           ne.IDOL_SHUTOUTS,
                           e,
                           t,
@@ -22935,7 +22967,7 @@
                         )
                       ),
                       u.push(
-                        xh(
+                        Rh(
                           ne.IDOL_PITCHER_WIN,
                           e,
                           t,
@@ -22951,7 +22983,7 @@
                         )
                       ),
                       u.push(
-                        xh(
+                        Rh(
                           ne.IDOL_PITCHER_LOSS,
                           e,
                           t,
@@ -22967,7 +22999,7 @@
                         )
                       ),
                       u.push(
-                        xh(
+                        Rh(
                           ne.IDOL_HOMER_ALLOW,
                           e,
                           t,
@@ -22983,7 +23015,7 @@
                         )
                       ),
                       u.push(
-                        xh(
+                        Rh(
                           ne.IDOL_HOMERS,
                           e,
                           t,
@@ -22999,7 +23031,7 @@
                         )
                       ),
                       u.push(
-                        xh(
+                        Rh(
                           ne.IDOL_HITS,
                           e,
                           t,
@@ -23015,7 +23047,7 @@
                         )
                       ),
                       u.push(
-                        xh(
+                        Rh(
                           ne.IDOL_STEAL,
                           e,
                           t,
@@ -23031,7 +23063,7 @@
                         )
                       ),
                       u.push(
-                        xh(
+                        Rh(
                           ne.SLUSH_FUND,
                           e,
                           t,
@@ -23046,7 +23078,7 @@
                         )
                       ),
                       u.push(
-                        xh(
+                        Rh(
                           ne.INCINERATION,
                           e,
                           t,
@@ -23061,7 +23093,7 @@
                         )
                       ),
                       u.push(
-                        xh(
+                        Rh(
                           ne.CONSUMER,
                           e,
                           t,
@@ -23076,7 +23108,7 @@
                         )
                       ),
                       u.push(
-                        xh(
+                        Rh(
                           ne.BLACK_HOLE,
                           e,
                           t,
@@ -23091,7 +23123,7 @@
                         )
                       ),
                       u.push(
-                        xh(
+                        Rh(
                           ne.SUN_2,
                           e,
                           t,
@@ -23390,7 +23422,7 @@
                     return u;
                   })(u, m, h.sim, I, 0, O, p, X)
                 ),
-                j(Ph(u, P)));
+                j(xh(u, P)));
             },
             [u, I, p]
           ),
@@ -23759,7 +23791,7 @@
             </BA.a>
           );
         }
-        var oe = u.favoriteTeam && !Gg(u.favoriteTeam, I);
+        var oe = u.favoriteTeam && !zg(u.favoriteTeam, I);
         var se,
           ce = Math.floor(100 * ne.GetPackMultiplier(u, h.sim)),
           Ae =
@@ -23824,7 +23856,7 @@
                             );
                           })}
                         </div>
-                        {Hg(h.sim, "SIM_ALL_YOU_CAN_EAT") ? (
+                        {Gg(h.sim, "SIM_ALL_YOU_CAN_EAT") ? (
                           <div className="Shop-Icons-Section-Scale">
                             {u.snackOrder.length} Slots ={" "}
                             <span
@@ -23842,7 +23874,7 @@
                           </div>
                         ) : null}
                         <div className="Shop-Icons-Section-Pack-ButtonList">
-                          {Hg(h.sim, "SIM_ALL_YOU_CAN_EAT") ? (
+                          {Gg(h.sim, "SIM_ALL_YOU_CAN_EAT") ? (
                             <d
                               className="Shop-Item-Button Shop-Icons-Section-Pack-Button"
                               background={N}
@@ -23858,7 +23890,7 @@
                           >
                             Reorder
                           </d>
-                          {Hg(h.sim, "SIM_ALL_YOU_CAN_EAT") ? (
+                          {Gg(h.sim, "SIM_ALL_YOU_CAN_EAT") ? (
                             <d
                               className="Shop-Item-Button Shop-Icons-Section-Pack-Button"
                               background={N}
@@ -24029,7 +24061,7 @@
           </div>
         );
       }
-      function Ph(e, t) {
+      function xh(e, t) {
         var a = [];
         return (
           e.snackOrder.forEach(function (n) {
@@ -24043,17 +24075,17 @@
           a
         );
       }
-      function Dh(e, t, a) {
+      function Lh(e, t, a) {
         var n = "";
         n += e;
         var r = ne.GetPackMultiplier(t, a),
           i = Math.round(r * e),
           o = "Shop-CloseUp-Scale",
           s = <l.a.Fragment />;
-        if (i > e) (o += "-Up"), (s = <Ae.b />);
+        if (i > e) (o += "-Up"), (s = <Ae.d />);
         else {
           if (!(i < e)) return <l.a.Fragment>{n}</l.a.Fragment>;
-          (o += "-Down"), (s = <Ae.a />);
+          (o += "-Down"), (s = <Ae.c />);
         }
         return (
           <l.a.Fragment>
@@ -24066,7 +24098,7 @@
           </l.a.Fragment>
         );
       }
-      function xh(e, t, a, n, r, i, o, s, c, u, m) {
+      function Rh(e, t, a, n, r, i, o, s, c, u, m) {
         var d = arguments.length > 11 && void 0 !== arguments[11] && arguments[11];
         if (void 0 !== t.snacks[e]) {
           var g = r[Math.min(t.snacks[e], r.length - 1)],
@@ -24081,7 +24113,7 @@
               name: n,
               description: (
                 <l.a.Fragment>
-                  {p[0]} {Dh(v.toString(), t, o)} {h[0]} {Dh(E.toString(), t, o)} {h[1]}
+                  {p[0]} {Lh(v.toString(), t, o)} {h[0]} {Lh(E.toString(), t, o)} {h[1]}
                 </l.a.Fragment>
               ),
               amount: f.price,
@@ -24103,7 +24135,7 @@
             name: n,
             description: (
               <l.a.Fragment>
-                {w[0]} {Dh(b.toString(), t, o)} {w[1]}
+                {w[0]} {Lh(b.toString(), t, o)} {w[1]}
               </l.a.Fragment>
             ),
             maxed: !0,
@@ -24123,7 +24155,7 @@
             name: n,
             description: (
               <l.a.Fragment>
-                {y[0]} {Dh(B.amount, t, o)} {y[1]} {y[2] ? y[2] : ""}
+                {y[0]} {Lh(B.amount, t, o)} {y[1]} {y[2] ? y[2] : ""}
               </l.a.Fragment>
             ),
             amount: B.price,
@@ -24142,7 +24174,7 @@
           }
         );
       }
-      var Lh = function (e) {
+      var Qh = function (e) {
           var t = Object(cA.useToasts)().addToast,
             a = Object(r.useContext)(x.context),
             n = a.user,
@@ -24266,14 +24298,14 @@
             </hA>
           );
         },
-        Rh = function (e) {
+        Mh = function (e) {
           var t = Object(cA.useToasts)().addToast,
             a = Object(r.useContext)(oc.context),
             n = Object(r.useContext)(x.context),
             i = n.user,
             o = n.setUser,
             u = Object(c.f)(),
-            m = Object(r.useContext)(Rg.context),
+            m = Object(r.useContext)(Mg.context),
             d = Object(c.h)().id,
             g = ne.GetSellValue(d, i.snacks[d], i.snacks[d], m.snackData),
             v = Object(r.useState)(0 === g ? 1 : 0),
@@ -24290,7 +24322,7 @@
             },
             I = ne.GetSellValue(d, i.snacks[d], h, m.snackData);
           i.favoriteTeam &&
-            !Gg(i.favoriteTeam, a) &&
+            !zg(i.favoriteTeam, a) &&
             d === ne.FLUTES &&
             (I = i.snacks[ne.FLUTES] < 2 ? 0 : ne.GetSellValue(d, i.snacks[d] - 1, h, m.snackData));
           var S = C ? i.snacks[d] + 1 : i.snacks[d];
@@ -24418,7 +24450,7 @@
             </hA>
           );
         },
-        Qh = function (e) {
+        jh = function (e) {
           var t = Object(cA.useToasts)().addToast,
             a = Object(r.useContext)(S.context),
             n = Object(r.useContext)(x.context),
@@ -24498,7 +24530,7 @@
                                 return w(t);
                               }}
                             >
-                              <Ae.b />
+                              <Ae.d />
                             </div>
                           )}
                         </div>
@@ -24660,7 +24692,7 @@
           }
           return <hA {...Object.assign({}, e, { className: "BatchBuy" })}>{B}</hA>;
         };
-      var Mh = function (e) {
+      var Fh = function (e) {
         var t,
           a = e.event,
           n =
@@ -24700,11 +24732,11 @@
           </l.a.Fragment>
         );
       };
-      function jh(e) {
+      function Hh(e) {
         if (void 0 !== Vs(e)) return <span className="Events-List-Image">{Vs(e)}</span>;
       }
-      var Fh,
-        Hh = function (e) {
+      var Vh,
+        Gh = function (e) {
           var t = e.event,
             a = void 0 !== t.metadata.coinsBefore ? t.metadata.coinsAfter - t.metadata.coinsBefore : 0,
             n = void 0 !== t.metadata.snackBefore ? t.metadata.snackAfter - t.metadata.snackBefore : 0,
@@ -24797,7 +24829,7 @@
                           <span className="Events-List-Row">
                             <span className="Events-List-Row Events-List-Row-Group">
                               {c.snackBefore}
-                              {jh(c.snackId)}
+                              {Hh(c.snackId)}
                             </span>
                             <ce.b className="Events-List-Row-Group" />
                             <span
@@ -24807,7 +24839,7 @@
                               }
                             >
                               {c.snackAfter}
-                              {jh(c.snackId)}
+                              {Hh(c.snackId)}
                             </span>
                           </span>
                         )}
@@ -24843,7 +24875,7 @@
                           <span className="Events-List-Row">
                             <span className="Events-List-Row Events-List-Row-Group">
                               {c.snackBefore2}
-                              {jh(c.snackId2)}
+                              {Hh(c.snackId2)}
                             </span>
                             <ce.b className="Events-List-Row-Group" />
                             <span
@@ -24855,7 +24887,7 @@
                               }
                             >
                               {c.snackAfter2}
-                              {jh(c.snackId2)}
+                              {Hh(c.snackId2)}
                             </span>
                           </span>
                         </div>
@@ -24867,14 +24899,14 @@
                           <span className="Events-List-Row Events-List-Minor">
                             <span
                               className="Events-List-Row Events-List-Row-Group"
-                              style={i ? { color: s.lightMode ? Mg(i.secondaryColor) : i.secondaryColor } : {}}
+                              style={i ? { color: s.lightMode ? Fg(i.secondaryColor) : i.secondaryColor } : {}}
                             >
                               {i ? i.nickname : "None"}
                             </span>
                             <ce.b className="Events-List-Row-Group" />
                             <span
                               className="Events-List-Row Events-List-Row-Group"
-                              style={o ? { color: s.lightMode ? Mg(o.secondaryColor) : o.secondaryColor } : {}}
+                              style={o ? { color: s.lightMode ? Fg(o.secondaryColor) : o.secondaryColor } : {}}
                             >
                               {o ? o.nickname : "None"}
                             </span>
@@ -24903,10 +24935,10 @@
             </l.a.Fragment>
           );
         },
-        Vh = function (e) {
+        Wh = function (e) {
           switch (e.event.type) {
             case 2:
-              return Mh(e);
+              return Fh(e);
             case 3:
             case 4:
               return ud(e);
@@ -24923,21 +24955,21 @@
             case 13:
             case 14:
             case 15:
-              return Hh(e);
+              return Gh(e);
           }
           return <l.a.Fragment />;
         },
-        Gh = 30;
+        zh = 30;
       !(function (e) {
         (e[(e.NewestFirst = 0)] = "NewestFirst"),
           (e[(e.OldestFirst = 1)] = "OldestFirst"),
           (e[(e.Peanuts = 2)] = "Peanuts");
-      })(Fh || (Fh = {}));
-      var Wh = function e() {
+      })(Vh || (Vh = {}));
+      var Uh = function e() {
           Object(J.a)(this, e), (this.events = []), (this.loading = !0), (this.noMoreToLoad = !1);
         },
-        zh = { events: [], loading: !0, noMoreToLoad: !1 },
-        Uh = (function () {
+        Yh = { events: [], loading: !0, noMoreToLoad: !1 },
+        Jh = (function () {
           function e() {
             Object(J.a)(this, e), (this.byCategory = new Map());
           }
@@ -24964,7 +24996,7 @@
                     r = this.byCategory.get(e);
                   void 0 === r && (r = new Map());
                   var l = r.get(t);
-                  void 0 === l && (l = new Wh()),
+                  void 0 === l && (l = new Uh()),
                     (n = l.events).push.apply(n, Object(q.a)(a)),
                     r.set(t, l),
                     this.byCategory.set(e, r);
@@ -24974,30 +25006,30 @@
             e
           );
         })(),
-        Yh = function (e) {
+        qh = function (e) {
           var t,
             a,
             n,
             i,
             o = e.defaultCategory,
             c = e.defaultSort,
-            u = Object(r.useRef)(new Uh()),
+            u = Object(r.useRef)(new Jh()),
             m = Object(r.useState)(null !== o && void 0 !== o ? o : -1),
             d = Object(s.a)(m, 2),
             g = d[0],
             v = d[1],
-            p = Object(r.useState)(null !== c && void 0 !== c ? c : Fh.NewestFirst),
+            p = Object(r.useState)(null !== c && void 0 !== c ? c : Vh.NewestFirst),
             h = Object(s.a)(p, 2),
             b = h[0],
             w = h[1],
-            B = Object(r.useState)(zh),
+            B = Object(r.useState)(Yh),
             y = Object(s.a)(B, 2),
             C = y[0],
             O = y[1],
             I = null === (t = e.showButtons) || void 0 === t || t,
             S = null === (a = e.showSort) || void 0 === a || a,
             N = null === (n = e.showCategory) || void 0 === n || n,
-            k = null !== (i = e.sortOptions) && void 0 !== i ? i : [Fh.NewestFirst, Fh.OldestFirst],
+            k = null !== (i = e.sortOptions) && void 0 !== i ? i : [Vh.NewestFirst, Vh.OldestFirst],
             T = [-1, j.ShopTransactions, j.OtherTransactions, j.Rewards, j.Contributions];
           function P() {
             return (P = Object(E.a)(
@@ -25011,11 +25043,11 @@
                           e.next = 8;
                           break;
                         }
-                        return (t = new Wh()), (e.next = 5), lg(Gh, b, g);
+                        return (t = new Uh()), (e.next = 5), lg(zh, b, g);
                       case 5:
                         (a = e.sent),
                           (t.loading = !1),
-                          void 0 !== a && ((t.noMoreToLoad = a.length < Gh), (t.events = a), u.current.Set(g, b, t));
+                          void 0 !== a && ((t.noMoreToLoad = a.length < zh), (t.events = a), u.current.Set(g, b, t));
                       case 8:
                         O(t);
                       case 9:
@@ -25054,7 +25086,7 @@
                           u.current.Set(g, b, r),
                           O(r),
                           (e.next = 12),
-                          lg(Gh, b, g, a)
+                          lg(zh, b, g, a)
                         );
                       case 12:
                         if (void 0 !== (l = e.sent) && 0 !== l.length) {
@@ -25069,7 +25101,7 @@
                         );
                       case 18:
                         (o = C.events ? [].concat(Object(q.a)(C.events), Object(q.a)(l)) : l),
-                          ((s = Object(A.a)(Object(A.a)({}, C), {}, { events: o })).noMoreToLoad = l.length < Gh),
+                          ((s = Object(A.a)(Object(A.a)({}, C), {}, { events: o })).noMoreToLoad = l.length < zh),
                           O(s),
                           u.current.Set(g, b, s);
                       case 23:
@@ -25131,10 +25163,10 @@
                   >
                     {k.map(function (e) {
                       switch (e) {
-                        case Fh.NewestFirst:
-                          return <option value={Fh.NewestFirst}>Newest First</option>;
-                        case Fh.OldestFirst:
-                          return <option value={Fh.OldestFirst}>Oldest First</option>;
+                        case Vh.NewestFirst:
+                          return <option value={Vh.NewestFirst}>Newest First</option>;
+                        case Vh.OldestFirst:
+                          return <option value={Vh.OldestFirst}>Oldest First</option>;
                       }
                       return null;
                     })}
@@ -25165,14 +25197,14 @@
               <l.a.Fragment>
                 <div className="Events">
                   {L}
-                  <Jh events={C.events} />
+                  <Xh events={C.events} />
                   {x}
                 </div>
               </l.a.Fragment>
             )
           );
         },
-        Jh = function (e) {
+        Xh = function (e) {
           var t = e.events;
           return (
             <ul className="Events-List">
@@ -25187,14 +25219,14 @@
                         <div className="Events-List-Date">
                           {"".concat(n, "-").concat(r.toString().length > 1 ? r : "0" + r)}
                         </div>
-                        <Vh event={e} />
+                        <Wh event={e} />
                       </li>
                     );
                   })}
             </ul>
           );
         };
-      var qh = function (e) {
+      var Zh = function (e) {
           var t,
             a,
             n = Object(cA.useToasts)().addToast,
@@ -25350,7 +25382,7 @@
               <div className="Account-Section-Item">
                 <d background={p} path={"/team/".concat(j.id)}>
                   <div className="Account-Section-Item-Icon" style={{ background: j.mainColor }}>
-                    {Yg(j)}
+                    {qg(j)}
                   </div>
                 </d>
                 <d className="Account-Section-Item-Name" background={p} path={"/team/".concat(j.id)}>
@@ -25504,15 +25536,15 @@
                     {o.spread.map(function (e, t) {
                       return (
                         <div className="Account-Spread-Card">
-                          <div className="Account-Spread-Card-Number">{af(Number(e))[0]}</div>
+                          <div className="Account-Spread-Card-Number">{rf(Number(e))[0]}</div>
                           <div className="Account-Spread-Card-Icon">
-                            {Yg(
+                            {qg(
                               g.teams.filter(function (t) {
                                 return t.card === Number(e);
                               })[0]
                             )}
                           </div>
-                          <div className="Account-Spread-Card-Name">{af(Number(e))[1]}</div>
+                          <div className="Account-Spread-Card-Name">{rf(Number(e))[1]}</div>
                         </div>
                       );
                     })}
@@ -25615,7 +25647,7 @@
                         <div className="Account-Inventory-Item">
                           <div className="Account-Inventory-Number">{t + 1}</div>
                           {Vs(e)}
-                          <div className="Account-Inventory-Amount">{Af(e, o.snacks[e])}</div>
+                          <div className="Account-Inventory-Amount">{mf(e, o.snacks[e])}</div>
                         </div>
                       }
                     />
@@ -25829,7 +25861,7 @@
                     </CA.a.Pane>
                     <CA.a.Pane eventKey="UserFeed">
                       <div className="ModalItem-Content">
-                        <Yh defaultCategory={-1} showCategory={!0} />
+                        <qh defaultCategory={-1} showCategory={!0} />
                       </div>
                     </CA.a.Pane>
                   </CA.a.Content>
@@ -25838,7 +25870,7 @@
             )
           );
         },
-        Xh =
+        Kh =
           (a(249),
           function (e) {
             var t = Object(r.useContext)(x.context),
@@ -25890,7 +25922,7 @@
                       })
                       .map(function (e, t) {
                         if (
-                          !1 === Gg(e.id, i) &&
+                          !1 === zg(e.id, i) &&
                           !1 ===
                             (function (e, t) {
                               if (void 0 === t) return !1;
@@ -25914,13 +25946,13 @@
                             className={"Welcome-Team" + (a ? " Welcome-Team--Selected" : "")}
                           >
                             <div className="TeamLogo" style={{ background: e.mainColor }}>
-                              {Yg(e)}
+                              {qg(e)}
                             </div>
                             <div className="Welcome-Team-Name-Wrapper">
                               <div className="Welcome-Team-Name">{e.fullName}</div>
                             </div>
                             <div className="Welcome-Team-Overlay">
-                              <Ae.d />
+                              <Ae.f />
                             </div>
                           </div>
                         );
@@ -25936,7 +25968,7 @@
               </hA>
             );
           }),
-        Zh = function (e) {
+        _h = function (e) {
           var t = Object(r.useContext)(x.context).user,
             a = Object(r.useState)(!1),
             n = Object(s.a)(a, 2),
@@ -25949,7 +25981,7 @@
               t.isSignedIn && !t.isFetching && null === t.favoriteTeam ? o(!0) : o(!1);
             }, []),
             t && t.isSignedIn && i ? (
-              <Xh
+              <Kh
                 {...Object.assign({}, e, {
                   dismiss: Object(E.a)(
                     f.a.mark(function e() {
@@ -25970,7 +26002,7 @@
             ) : null
           );
         },
-        Kh =
+        $h =
           (a(67),
           function (e) {
             var t = Object(r.useContext)(x.context).initUser,
@@ -25992,7 +26024,7 @@
               B = Object(c.h)().code;
             return (
               <div className={"".concat(v ? "" : "Auth-SignupWrapper")}>
-                {!v && <Ah />}
+                {!v && <mh />}
                 <hA {...Object.assign({}, e, { className: "Auth" })}>
                   <header className="Auth-Header">{p ? "Login to Blaseball" : "Signup for Blaseball"}</header>
                   <form
@@ -26052,7 +26084,7 @@
                   </a>
                   <a className="Auth-SocialAuth" href={"auth/facebook?redirectUrl=".concat(E)}>
                     <div className="Auth-SocialAuth-Icon-Container">
-                      <Ae.f />
+                      <Ae.h />
                     </div>{" "}
                     Continue with Facebook
                   </a>
@@ -26069,7 +26101,7 @@
               </div>
             );
           }),
-        _h = function (e) {
+        eb = function (e) {
           var t = Object(c.h)().token,
             a = Object(r.useContext)(x.context).initUser,
             n = Object(c.f)(),
@@ -26111,7 +26143,7 @@
           }, []);
           return p ? (
             <div className={"".concat(w ? "" : "Auth-SignupWrapper")}>
-              {!w && !t && <Ah />}
+              {!w && !t && <mh />}
               <hA {...Object.assign({}, e, { className: "Auth" })}>
                 <header className="Auth-Header Auth-Header-Reset">Reset Password</header>
                 {t ? <div className="Auth-Instructions">Enter your new password below.</div> : null}
@@ -26155,7 +26187,7 @@
             </div>
           );
         },
-        $h = function (e) {
+        tb = function (e) {
           Object(r.useContext)(x.context).initUser;
           var t = Object(c.f)(),
             a = Object(cA.useToasts)().addToast,
@@ -26225,8 +26257,8 @@
             </hA>
           );
         },
-        eb = l.a.createContext({ blessings: [], decrees: [], wills: [], gifts: [], willsToPass: 0, decreesToPass: 0 }),
-        tb = function (e) {
+        ab = l.a.createContext({ blessings: [], decrees: [], wills: [], gifts: [], willsToPass: 0, decreesToPass: 0 }),
+        nb = function (e) {
           var t,
             a = e.children,
             n = Object(r.useContext)(S.context),
@@ -26273,15 +26305,15 @@
               },
               [null === (t = n.sim) || void 0 === t ? void 0 : t.phase]
             ),
-            (<eb.Provider value={c}>{a}</eb.Provider>)
+            (<ab.Provider value={c}>{a}</ab.Provider>)
           );
         };
-      tb.context = eb;
-      var ab,
-        nb = tb,
-        rb = ["title", "titleId"];
-      function lb() {
-        return (lb =
+      nb.context = ab;
+      var rb,
+        lb = nb,
+        ib = ["title", "titleId"];
+      function ob() {
+        return (ob =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -26291,7 +26323,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function ib(e, t) {
+      function sb(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -26311,13 +26343,13 @@
         }
         return r;
       }
-      function ob(e, t) {
+      function cb(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = ib(e, rb);
+          l = sb(e, ib);
         return (
           <svg
-            {...lb(
+            {...ob(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -26331,44 +26363,44 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {ab || (ab = <image id="blessings" x={62} y={46.5} width={132} height={163} xlinkHref="<img/png blob>" />)}
+            {rb || (rb = <image id="blessings" x={62} y={46.5} width={132} height={163} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var sb,
-        cb = r.forwardRef(ob);
+      var Ab,
+        ub = r.forwardRef(cb);
       a.p;
       !(function (e) {
         (e[(e.DECREE = 0)] = "DECREE"), (e[(e.BONUS = 1)] = "BONUS"), (e[(e.WILL = 2)] = "WILL");
-      })(sb || (sb = {}));
-      var Ab,
-        ub = function () {
+      })(Ab || (Ab = {}));
+      var mb,
+        db = function () {
           return (
             <a href="/login">
               <BA.a className="Blessings-Submit-Button">Login to Vote</BA.a>
             </a>
           );
         },
-        mb = function () {
+        gb = function () {
           return (
             <a href="/welcome">
               <BA.a className="Blessings-Submit-Button">Pick a Favorite Team to Vote</BA.a>
             </a>
           );
         },
-        db = function () {
+        fb = function () {
           return (
             <a href={"/shop/".concat(ne.VOTES)}>
               <BA.a className="Blessings-Submit-Button">Buy Another Vote</BA.a>
             </a>
           );
         },
-        gb = function (e) {
+        Eb = function (e) {
           Object(r.useContext)(x.context).user;
           var t = e.isActive;
           return <button className="Blessings-Option-Button">Select{t ? "ed" : ""}</button>;
         },
-        fb = function (e) {
+        vb = function (e) {
           e.isActive;
           var t = e.subheader;
           Object(r.useContext)(x.context).user;
@@ -26381,7 +26413,7 @@
               <div className="Blessings-Option-SubheaderIntro">{a}</div>
               <a
                 onClick={function () {
-                  return fp("".concat(n, " (Blessing)"));
+                  return vp("".concat(n, " (Blessing)"));
                 }}
                 className="Blessings-Option-SubheaderHyperlink"
                 href={i}
@@ -26392,7 +26424,7 @@
             </div>
           );
         },
-        Eb = function (e) {
+        pb = function (e) {
           var t = e.title,
             a = e.description,
             n = e.id,
@@ -26411,14 +26443,14 @@
               {t.split("\n").map(function (e) {
                 return <h4 className={"Blessings-Option-Header" + (i ? " ".concat(_c(i)) : "")}>{e}</h4>;
               })}
-              <fb isActive={o} subheader={c} r={!0} />
+              <vb isActive={o} subheader={c} r={!0} />
               <div className={"Blessings-Option-Description" + (i ? " ".concat(_c(i)) : "")}>{a}</div>
-              <gb isActive={o} />
+              <Eb isActive={o} />
             </li>
           );
         },
-        vb = function () {
-          var e = Object(r.useContext)(nb.context),
+        hb = function () {
+          var e = Object(r.useContext)(lb.context),
             t = Object(r.useContext)(oc.context),
             a = Object(r.useContext)(x.context).user,
             n = Object(r.useState)(),
@@ -26426,10 +26458,10 @@
             o = i[0],
             A = i[1],
             u = Object(c.g)(),
-            m = !!a.favoriteTeam && Gg(a.favoriteTeam, t),
-            g = <ub />;
-          a.isFetching || !a.isSignedIn || a.favoriteTeam || (g = <mb />),
-            !a.isFetching && a.isSignedIn && !a.snacks[ne.VOTES] && m && (g = <db />),
+            m = !!a.favoriteTeam && zg(a.favoriteTeam, t),
+            g = <db />;
+          a.isFetching || !a.isSignedIn || a.favoriteTeam || (g = <gb />),
+            !a.isFetching && a.isSignedIn && !a.snacks[ne.VOTES] && m && (g = <fb />),
             a.isFetching ||
               !a.isSignedIn ||
               m ||
@@ -26455,7 +26487,7 @@
                   {o ? (
                     <d
                       background={u}
-                      path={a.verified ? "/vote/".concat(sb.BONUS, "/").concat(o) : "/send-verification-email"}
+                      path={a.verified ? "/vote/".concat(Ab.BONUS, "/").concat(o) : "/send-verification-email"}
                     >
                       Submit Blessing Vote
                     </d>
@@ -26468,7 +26500,7 @@
             <div className="Blessings">
               <div className="Blessings-Header">
                 <div className="Blessings-Icon" style={{ background: "#9e0000" }}>
-                  <cb />
+                  <ub />
                 </div>
                 <div>
                   <h3 className="Blessings-Title">BLESSINGS</h3>
@@ -26480,7 +26512,7 @@
               <ul className="Blessings-Container">
                 {e.blessings.map(function (e, t) {
                   return (
-                    <Eb
+                    <pb
                       {...Object.assign({ key: t }, e, {
                         isActive: o === e.id,
                         onSelect: function (e) {
@@ -26495,9 +26527,9 @@
             </div>
           );
         },
-        pb = (a(146), ["title", "titleId"]);
-      function hb() {
-        return (hb =
+        bb = (a(146), ["title", "titleId"]);
+      function wb() {
+        return (wb =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -26507,7 +26539,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function bb(e, t) {
+      function Bb(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -26527,13 +26559,13 @@
         }
         return r;
       }
-      function wb(e, t) {
+      function yb(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = bb(e, pb);
+          l = Bb(e, bb);
         return (
           <svg
-            {...hb(
+            {...wb(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -26547,8 +26579,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Ab ||
-              (Ab = (
+            {mb ||
+              (mb = (
                 <image
                   id="_01-TitleBelt"
                   data-name="01-TitleBelt"
@@ -26562,11 +26594,11 @@
           </svg>
         );
       }
-      var Bb,
-        yb = r.forwardRef(wb),
-        Cb = (a.p, ["title", "titleId"]);
-      function Ob() {
-        return (Ob =
+      var Cb,
+        Ob = r.forwardRef(yb),
+        Ib = (a.p, ["title", "titleId"]);
+      function Sb() {
+        return (Sb =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -26576,7 +26608,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Ib(e, t) {
+      function Nb(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -26596,13 +26628,13 @@
         }
         return r;
       }
-      function Sb(e, t) {
+      function kb(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Ib(e, Cb);
+          l = Nb(e, Ib);
         return (
           <svg
-            {...Ob(
+            {...Sb(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -26616,8 +26648,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Bb ||
-              (Bb = (
+            {Cb ||
+              (Cb = (
                 <image
                   id="_03-Pennants"
                   data-name="03-Pennants"
@@ -26631,11 +26663,11 @@
           </svg>
         );
       }
-      var Nb,
-        kb = r.forwardRef(Sb),
-        Tb = (a.p, ["title", "titleId"]);
-      function Pb() {
-        return (Pb =
+      var Tb,
+        Pb = r.forwardRef(kb),
+        Db = (a.p, ["title", "titleId"]);
+      function xb() {
+        return (xb =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -26645,7 +26677,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Db(e, t) {
+      function Lb(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -26665,13 +26697,13 @@
         }
         return r;
       }
-      function xb(e, t) {
+      function Rb(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Db(e, Tb);
+          l = Lb(e, Db);
         return (
           <svg
-            {...Pb(
+            {...xb(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -26685,8 +26717,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Nb ||
-              (Nb = (
+            {Tb ||
+              (Tb = (
                 <image
                   id="_05-BirdRights"
                   data-name="05-BirdRights"
@@ -26700,11 +26732,11 @@
           </svg>
         );
       }
-      var Lb,
-        Rb = r.forwardRef(xb),
-        Qb = (a.p, ["title", "titleId"]);
-      function Mb() {
-        return (Mb =
+      var Qb,
+        Mb = r.forwardRef(Rb),
+        jb = (a.p, ["title", "titleId"]);
+      function Fb() {
+        return (Fb =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -26714,7 +26746,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function jb(e, t) {
+      function Hb(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -26734,13 +26766,13 @@
         }
         return r;
       }
-      function Fb(e, t) {
+      function Vb(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = jb(e, Qb);
+          l = Hb(e, jb);
         return (
           <svg
-            {...Mb(
+            {...Fb(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -26754,8 +26786,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Lb ||
-              (Lb = (
+            {Qb ||
+              (Qb = (
                 <image
                   id="_04-ForceField"
                   data-name="04-ForceField"
@@ -26769,11 +26801,11 @@
           </svg>
         );
       }
-      var Hb,
-        Vb = r.forwardRef(Fb),
-        Gb = (a.p, ["title", "titleId"]);
-      function Wb() {
-        return (Wb =
+      var Gb,
+        Wb = r.forwardRef(Vb),
+        zb = (a.p, ["title", "titleId"]);
+      function Ub() {
+        return (Ub =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -26783,7 +26815,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function zb(e, t) {
+      function Yb(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -26803,13 +26835,13 @@
         }
         return r;
       }
-      function Ub(e, t) {
+      function Jb(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = zb(e, Gb);
+          l = Yb(e, zb);
         return (
           <svg
-            {...Wb(
+            {...Ub(
               {
                 id: "Rations",
                 xmlns: "http://www.w3.org/2000/svg",
@@ -26824,15 +26856,15 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Hb || (Hb = <image id="l" x={213} y={116} width={1074} height={1267} xlinkHref="<img/png blob>" />)}
+            {Gb || (Gb = <image id="l" x={213} y={116} width={1074} height={1267} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var Yb,
-        Jb = r.forwardRef(Ub),
-        qb = (a.p, ["title", "titleId"]);
-      function Xb() {
-        return (Xb =
+      var qb,
+        Xb = r.forwardRef(Jb),
+        Zb = (a.p, ["title", "titleId"]);
+      function Kb() {
+        return (Kb =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -26842,7 +26874,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Zb(e, t) {
+      function _b(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -26862,13 +26894,13 @@
         }
         return r;
       }
-      function Kb(e, t) {
+      function $b(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Zb(e, qb);
+          l = _b(e, Zb);
         return (
           <svg
-            {...Xb(
+            {...Kb(
               {
                 id: "Slot_Machine",
                 "data-name": "Slot Machine",
@@ -26884,15 +26916,15 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Yb || (Yb = <image id="bulbs" x={167} y={62} width={1218} height={1367} xlinkHref="<img/png blob>" />)}
+            {qb || (qb = <image id="bulbs" x={167} y={62} width={1218} height={1367} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var _b,
-        $b = r.forwardRef(Kb),
-        ew = (a.p, ["title", "titleId"]);
-      function tw() {
-        return (tw =
+      var ew,
+        tw = r.forwardRef($b),
+        aw = (a.p, ["title", "titleId"]);
+      function nw() {
+        return (nw =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -26902,7 +26934,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function aw(e, t) {
+      function rw(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -26922,13 +26954,13 @@
         }
         return r;
       }
-      function nw(e, t) {
+      function lw(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = aw(e, ew);
+          l = rw(e, aw);
         return (
           <svg
-            {...tw(
+            {...nw(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -26942,15 +26974,15 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {_b || (_b = <image x={10} y={8} width={131} height={134} xlinkHref="<img/png blob>" />)}
+            {ew || (ew = <image x={10} y={8} width={131} height={134} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var rw,
-        lw = r.forwardRef(nw),
-        iw = (a.p, ["title", "titleId"]);
-      function ow() {
-        return (ow =
+      var iw,
+        ow = r.forwardRef(lw),
+        sw = (a.p, ["title", "titleId"]);
+      function cw() {
+        return (cw =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -26960,7 +26992,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function sw(e, t) {
+      function Aw(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -26980,13 +27012,13 @@
         }
         return r;
       }
-      function cw(e, t) {
+      function uw(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = sw(e, iw);
+          l = Aw(e, sw);
         return (
           <svg
-            {...ow(
+            {...cw(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -27000,15 +27032,15 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {rw || (rw = <image x={13} y={16} width={125} height={119} xlinkHref="<img/png blob>" />)}
+            {iw || (iw = <image x={13} y={16} width={125} height={119} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var Aw,
-        uw = r.forwardRef(cw),
-        mw = (a.p, ["title", "titleId"]);
-      function dw() {
-        return (dw =
+      var mw,
+        dw = r.forwardRef(uw),
+        gw = (a.p, ["title", "titleId"]);
+      function fw() {
+        return (fw =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -27018,7 +27050,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function gw(e, t) {
+      function Ew(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -27038,13 +27070,13 @@
         }
         return r;
       }
-      function fw(e, t) {
+      function vw(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = gw(e, mw);
+          l = Ew(e, gw);
         return (
           <svg
-            {...dw(
+            {...fw(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -27058,15 +27090,15 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Aw || (Aw = <image x={15} y={11} width={119} height={128} xlinkHref="<img/png blob>" />)}
+            {mw || (mw = <image x={15} y={11} width={119} height={128} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var Ew,
-        vw = r.forwardRef(fw),
-        pw = (a.p, ["title", "titleId"]);
-      function hw() {
-        return (hw =
+      var pw,
+        hw = r.forwardRef(vw),
+        bw = (a.p, ["title", "titleId"]);
+      function ww() {
+        return (ww =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -27076,7 +27108,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function bw(e, t) {
+      function Bw(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -27096,13 +27128,13 @@
         }
         return r;
       }
-      function ww(e, t) {
+      function yw(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = bw(e, pw);
+          l = Bw(e, bw);
         return (
           <svg
-            {...hw(
+            {...ww(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -27116,15 +27148,15 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Ew || (Ew = <image x={21} y={9} width={108} height={132} xlinkHref="<img/png blob>" />)}
+            {pw || (pw = <image x={21} y={9} width={108} height={132} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var Bw,
-        yw = r.forwardRef(ww),
-        Cw = (a.p, ["title", "titleId"]);
-      function Ow() {
-        return (Ow =
+      var Cw,
+        Ow = r.forwardRef(yw),
+        Iw = (a.p, ["title", "titleId"]);
+      function Sw() {
+        return (Sw =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -27134,7 +27166,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Iw(e, t) {
+      function Nw(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -27154,13 +27186,13 @@
         }
         return r;
       }
-      function Sw(e, t) {
+      function kw(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Iw(e, Cw);
+          l = Nw(e, Iw);
         return (
           <svg
-            {...Ow(
+            {...Sw(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -27174,15 +27206,15 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Bw || (Bw = <image x={14} y={12} width={122} height={127} xlinkHref="<img/png blob>" />)}
+            {Cw || (Cw = <image x={14} y={12} width={122} height={127} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var Nw,
-        kw = r.forwardRef(Sw),
-        Tw = (a.p, ["title", "titleId"]);
-      function Pw() {
-        return (Pw =
+      var Tw,
+        Pw = r.forwardRef(kw),
+        Dw = (a.p, ["title", "titleId"]);
+      function xw() {
+        return (xw =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -27192,7 +27224,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Dw(e, t) {
+      function Lw(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -27212,13 +27244,13 @@
         }
         return r;
       }
-      function xw(e, t) {
+      function Rw(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Dw(e, Tw);
+          l = Lw(e, Dw);
         return (
           <svg
-            {...Pw(
+            {...xw(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -27232,15 +27264,15 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Nw || (Nw = <image x={9} y={35} width={133} height={88} xlinkHref="<img/png blob>" />)}
+            {Tw || (Tw = <image x={9} y={35} width={133} height={88} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var Lw,
-        Rw = r.forwardRef(xw),
-        Qw = (a.p, ["title", "titleId"]);
-      function Mw() {
-        return (Mw =
+      var Qw,
+        Mw = r.forwardRef(Rw),
+        jw = (a.p, ["title", "titleId"]);
+      function Fw() {
+        return (Fw =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -27250,7 +27282,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function jw(e, t) {
+      function Hw(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -27270,13 +27302,13 @@
         }
         return r;
       }
-      function Fw(e, t) {
+      function Vw(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = jw(e, Qw);
+          l = Hw(e, jw);
         return (
           <svg
-            {...Mw(
+            {...Fw(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -27290,15 +27322,15 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Lw || (Lw = <image x={24} y={8} width={102} height={134} xlinkHref="<img/png blob>" />)}
+            {Qw || (Qw = <image x={24} y={8} width={102} height={134} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var Hw,
-        Vw = r.forwardRef(Fw),
-        Gw = (a.p, ["title", "titleId"]);
-      function Ww() {
-        return (Ww =
+      var Gw,
+        Ww = r.forwardRef(Vw),
+        zw = (a.p, ["title", "titleId"]);
+      function Uw() {
+        return (Uw =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -27308,7 +27340,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function zw(e, t) {
+      function Yw(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -27328,13 +27360,13 @@
         }
         return r;
       }
-      function Uw(e, t) {
+      function Jw(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = zw(e, Gw);
+          l = Yw(e, zw);
         return (
           <svg
-            {...Ww(
+            {...Uw(
               {
                 id: "Wrecking_Ball",
                 "data-name": "Wrecking Ball",
@@ -27350,15 +27382,15 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Hw || (Hw = <image id="l" x={111} y={-16} width={1327} height={1400} xlinkHref="<img/png blob>" />)}
+            {Gw || (Gw = <image id="l" x={111} y={-16} width={1327} height={1400} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var Yw,
-        Jw = r.forwardRef(Uw),
-        qw = (a.p, ["title", "titleId"]);
-      function Xw() {
-        return (Xw =
+      var qw,
+        Xw = r.forwardRef(Jw),
+        Zw = (a.p, ["title", "titleId"]);
+      function Kw() {
+        return (Kw =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -27368,7 +27400,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Zw(e, t) {
+      function _w(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -27388,13 +27420,13 @@
         }
         return r;
       }
-      function Kw(e, t) {
+      function $w(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Zw(e, qw);
+          l = _w(e, Zw);
         return (
           <svg
-            {...Xw(
+            {...Kw(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -27408,15 +27440,15 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Yw || (Yw = <image x={6} y={6} width={138} height={138} xlinkHref="<img/png blob>" />)}
+            {qw || (qw = <image x={6} y={6} width={138} height={138} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var _w,
-        $w = r.forwardRef(Kw),
-        eB = (a.p, ["title", "titleId"]);
-      function tB() {
-        return (tB =
+      var eB,
+        tB = r.forwardRef($w),
+        aB = (a.p, ["title", "titleId"]);
+      function nB() {
+        return (nB =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -27426,7 +27458,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function aB(e, t) {
+      function rB(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -27446,13 +27478,13 @@
         }
         return r;
       }
-      function nB(e, t) {
+      function lB(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = aB(e, eB);
+          l = rB(e, aB);
         return (
           <svg
-            {...tB(
+            {...nB(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -27466,15 +27498,15 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {_w || (_w = <image x={22} y={5} width={106} height={140} xlinkHref="<img/png blob>" />)}
+            {eB || (eB = <image x={22} y={5} width={106} height={140} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var rB,
-        lB = r.forwardRef(nB),
-        iB = (a.p, ["title", "titleId"]);
-      function oB() {
-        return (oB =
+      var iB,
+        oB = r.forwardRef(lB),
+        sB = (a.p, ["title", "titleId"]);
+      function cB() {
+        return (cB =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -27484,7 +27516,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function sB(e, t) {
+      function AB(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -27504,13 +27536,13 @@
         }
         return r;
       }
-      function cB(e, t) {
+      function uB(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = sB(e, iB);
+          l = AB(e, sB);
         return (
           <svg
-            {...oB(
+            {...cB(
               {
                 id: "Turntables_X",
                 "data-name": "Turntables X",
@@ -27526,15 +27558,15 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {rB || (rB = <image x={40} y={40} width={1420} height={1420} xlinkHref="<img/png blob>" />)}
+            {iB || (iB = <image x={40} y={40} width={1420} height={1420} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var AB,
-        uB = r.forwardRef(cB),
-        mB = (a.p, ["title", "titleId"]);
-      function dB() {
-        return (dB =
+      var mB,
+        dB = r.forwardRef(uB),
+        gB = (a.p, ["title", "titleId"]);
+      function fB() {
+        return (fB =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -27544,7 +27576,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function gB(e, t) {
+      function EB(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -27564,13 +27596,13 @@
         }
         return r;
       }
-      function fB(e, t) {
+      function vB(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = gB(e, mB);
+          l = EB(e, gB);
         return (
           <svg
-            {...dB(
+            {...fB(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -27584,15 +27616,15 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {AB || (AB = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
+            {mB || (mB = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var EB,
-        vB = r.forwardRef(fB),
-        pB = (a.p, ["title", "titleId"]);
-      function hB() {
-        return (hB =
+      var pB,
+        hB = r.forwardRef(vB),
+        bB = (a.p, ["title", "titleId"]);
+      function wB() {
+        return (wB =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -27602,7 +27634,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function bB(e, t) {
+      function BB(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -27622,13 +27654,13 @@
         }
         return r;
       }
-      function wB(e, t) {
+      function yB(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = bB(e, pB);
+          l = BB(e, bB);
         return (
           <svg
-            {...hB(
+            {...wB(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -27642,15 +27674,15 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {EB || (EB = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
+            {pB || (pB = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var BB,
-        yB = r.forwardRef(wB),
-        CB = (a.p, ["title", "titleId"]);
-      function OB() {
-        return (OB =
+      var CB,
+        OB = r.forwardRef(yB),
+        IB = (a.p, ["title", "titleId"]);
+      function SB() {
+        return (SB =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -27660,7 +27692,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function IB(e, t) {
+      function NB(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -27680,13 +27712,13 @@
         }
         return r;
       }
-      function SB(e, t) {
+      function kB(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = IB(e, CB);
+          l = NB(e, IB);
         return (
           <svg
-            {...OB(
+            {...SB(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -27700,15 +27732,15 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {BB || (BB = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
+            {CB || (CB = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var NB,
-        kB = r.forwardRef(SB),
-        TB = (a.p, ["title", "titleId"]);
-      function PB() {
-        return (PB =
+      var TB,
+        PB = r.forwardRef(kB),
+        DB = (a.p, ["title", "titleId"]);
+      function xB() {
+        return (xB =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -27718,7 +27750,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function DB(e, t) {
+      function LB(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -27738,13 +27770,13 @@
         }
         return r;
       }
-      function xB(e, t) {
+      function RB(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = DB(e, TB);
+          l = LB(e, DB);
         return (
           <svg
-            {...PB(
+            {...xB(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -27758,15 +27790,15 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {NB || (NB = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
+            {TB || (TB = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var LB,
-        RB = r.forwardRef(xB),
-        QB = (a.p, ["title", "titleId"]);
-      function MB() {
-        return (MB =
+      var QB,
+        MB = r.forwardRef(RB),
+        jB = (a.p, ["title", "titleId"]);
+      function FB() {
+        return (FB =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -27776,7 +27808,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function jB(e, t) {
+      function HB(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -27796,13 +27828,13 @@
         }
         return r;
       }
-      function FB(e, t) {
+      function VB(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = jB(e, QB);
+          l = HB(e, jB);
         return (
           <svg
-            {...MB(
+            {...FB(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -27816,8 +27848,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {LB ||
-              (LB = (
+            {QB ||
+              (QB = (
                 <image
                   id="Rounded_Rectangle_4_copy_4"
                   data-name="Rounded Rectangle 4 copy 4"
@@ -27830,58 +27862,58 @@
           </svg>
         );
       }
-      var HB,
-        VB = r.forwardRef(FB);
+      var GB,
+        WB = r.forwardRef(VB);
       a.p;
       !(function (e) {
         (e[(e.DECREE = 0)] = "DECREE"), (e[(e.BONUS = 1)] = "BONUS"), (e[(e.WILL = 2)] = "WILL");
-      })(HB || (HB = {}));
-      var GB = function () {
+      })(GB || (GB = {}));
+      var zB = function () {
           return (
             <a href="/login">
               <BA.a className="Decrees-Submit-Button">Login to Vote</BA.a>
             </a>
           );
         },
-        WB = function () {
+        UB = function () {
           return (
             <a href="/welcome">
               <BA.a className="Decrees-Submit-Button">Pick a Favorite Team to Vote</BA.a>
             </a>
           );
         },
-        zB = function () {
+        YB = function () {
           return (
             <m.b to={{ pathname: "/shop/".concat(ne.VOTES) }}>
               <BA.a className="Decrees-Submit-Button">Buy Another Vote</BA.a>
             </m.b>
           );
         },
-        UB = function (e) {
+        JB = function (e) {
           Object(r.useContext)(x.context).user;
           var t = e.isActive;
           return <button className="Decrees-Option-Button">Select{t ? "ed" : ""}</button>;
         };
-      function YB(e) {
+      function qB(e) {
         switch (e) {
           case "champion_penance":
-            return <kb className="Decrees-Option-Icon" />;
+            return <Pb className="Decrees-Option-Icon" />;
           case "champion_evolve":
             return <ye className="Decrees-Option-Icon" />;
           case "champion_belt":
-            return <yb className="Decrees-Option-Icon" />;
+            return <Ob className="Decrees-Option-Icon" />;
           case "bird_rights":
-            return <Rb className="Decrees-Option-Icon" />;
+            return <Mb className="Decrees-Option-Icon" />;
           case "force_fields":
-            return <Vb className="Decrees-Option-Icon" />;
+            return <Wb className="Decrees-Option-Icon" />;
           case "free_wills":
             return <ke className="Decrees-Option-Icon" />;
           case "meal_plan":
-            return <Jb className="Decrees-Option-Icon" />;
+            return <Xb className="Decrees-Option-Icon" />;
           case "all_you_can_eat":
             return <ve className="Decrees-Option-Icon" />;
           case "pot_luck":
-            return <$b className="Decrees-Option-Icon" />;
+            return <tw className="Decrees-Option-Icon" />;
           case "distribute_bats":
             return <ui className="Decrees-Option-Icon" />;
           case "distribute_caps":
@@ -27891,25 +27923,25 @@
           case "distribute_gloves":
             return <ki className="Decrees-Option-Icon" />;
           case "goodie_bags":
-            return <lw className="Decrees-Option-Icon" />;
+            return <ow className="Decrees-Option-Icon" />;
           case "gift_baskets":
-            return <uw className="Decrees-Option-Icon" />;
+            return <dw className="Decrees-Option-Icon" />;
           case "community_chest":
             return <Re className="Decrees-Option-Icon" />;
           case "build_smithy":
-            return <vw className="Decrees-Option-Icon" />;
+            return <hw className="Decrees-Option-Icon" />;
           case "build_library":
-            return <kw className="Decrees-Option-Icon" />;
+            return <Pw className="Decrees-Option-Icon" />;
           case "build_laboratory":
-            return <Rw className="Decrees-Option-Icon" />;
+            return <Mw className="Decrees-Option-Icon" />;
           case "build_monument":
-            return <yw className="Decrees-Option-Icon" />;
+            return <Ow className="Decrees-Option-Icon" />;
           case "build_fairgrounds":
             return <Ve className="Decrees-Option-Icon" />;
           case "build_forum":
-            return <Vw className="Decrees-Option-Icon" />;
+            return <Ww className="Decrees-Option-Icon" />;
           case "wrecking_ball":
-            return <Jw className="Decrees-Option-Icon" />;
+            return <Xw className="Decrees-Option-Icon" />;
           case "hype_train":
             return <yt className="Decrees-Option-Icon" />;
           case "ratification":
@@ -27917,11 +27949,11 @@
           case "on_the_house":
             return <$e className="Decrees-Option-Icon" />;
           case "climate_control":
-            return <$w className="Decrees-Option-Icon" />;
+            return <tB className="Decrees-Option-Icon" />;
           case "trust_fall":
-            return <lB className="Decrees-Option-Icon" />;
+            return <oB className="Decrees-Option-Icon" />;
           case "repeal_turntables":
-            return <uB className="Decrees-Option-Icon" />;
+            return <dB className="Decrees-Option-Icon" />;
           case "underachiever":
             return <vt className="Decrees-Option-Icon" />;
           case "sun_3":
@@ -27945,17 +27977,17 @@
           case "zero_sun":
             return <ka className="Decrees-Option-Icon" />;
           case "team_favor_roamless":
-            return <yB className="Decrees-Option-Icon" />;
+            return <OB className="Decrees-Option-Icon" />;
           case "team_favor_squiddish":
-            return <kB className="Decrees-Option-Icon" />;
+            return <PB className="Decrees-Option-Icon" />;
           case "team_favor_avoidance":
-            return <RB className="Decrees-Option-Icon" />;
+            return <MB className="Decrees-Option-Icon" />;
           case "team_favor_containment":
-            return <vB className="Decrees-Option-Icon" />;
+            return <hB className="Decrees-Option-Icon" />;
           case "dir_b2":
             return <div className="QuadrantChart-2 Decrees-Option-Icon" />;
           case "dir_b0":
-            return <VB className="Decrees-Option-Icon" />;
+            return <WB className="Decrees-Option-Icon" />;
           case "dir_bh":
             return <Ra className="Decrees-Option-Icon" />;
           case "dir_pu":
@@ -27963,8 +27995,8 @@
         }
         return <div />;
       }
-      var JB,
-        qB = function (e) {
+      var XB,
+        ZB = function (e) {
           var t = e.title,
             a = e.description,
             n = e.id,
@@ -27979,24 +28011,24 @@
                 return s(n);
               }}
             >
-              {YB(n)}
+              {qB(n)}
               <h4 className={"Decrees-Option-Header" + (void 0 !== i ? " ".concat(_c(i)) : "")}>{t}</h4>
               {a && <p className={"Decrees-Option-Description" + (void 0 !== i ? " ".concat(_c(i)) : "")}>{a}</p>}
-              <UB isActive={o} />
+              <JB isActive={o} />
             </li>
           );
         },
-        XB = function () {
-          var e = Object(r.useContext)(nb.context),
+        KB = function () {
+          var e = Object(r.useContext)(lb.context),
             t = Object(r.useContext)(x.context).user,
             a = Object(r.useState)(),
             n = Object(s.a)(a, 2),
             i = n[0],
             o = n[1],
             A = Object(c.g)(),
-            u = <GB />;
-          t.isFetching || !t.isSignedIn || t.favoriteTeam || (u = <WB />),
-            t.isFetching || !t.isSignedIn || t.snacks[ne.VOTES] || (u = <zB />),
+            u = <zB />;
+          t.isFetching || !t.isSignedIn || t.favoriteTeam || (u = <UB />),
+            t.isFetching || !t.isSignedIn || t.snacks[ne.VOTES] || (u = <YB />),
             !t.isFetching &&
               t.isSignedIn &&
               t.favoriteTeam &&
@@ -28013,7 +28045,7 @@
                   {i ? (
                     <d
                       background={A}
-                      path={t.verified ? "/vote/".concat(HB.DECREE, "/").concat(i) : "/send-verification-email"}
+                      path={t.verified ? "/vote/".concat(GB.DECREE, "/").concat(i) : "/send-verification-email"}
                     >
                       Submit Decree Vote
                     </d>
@@ -28040,7 +28072,7 @@
               <ul className="Decrees-Container">
                 {e.decrees.map(function (e, t) {
                   return (
-                    <qB
+                    <ZB
                       {...Object.assign({ key: t }, e, {
                         isActive: i === e.id,
                         onSelect: function (e) {
@@ -28055,9 +28087,9 @@
             </div>
           );
         },
-        ZB = ["title", "titleId"];
-      function KB() {
-        return (KB =
+        _B = ["title", "titleId"];
+      function $B() {
+        return ($B =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -28067,7 +28099,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function _B(e, t) {
+      function ey(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -28087,13 +28119,13 @@
         }
         return r;
       }
-      function $B(e, t) {
+      function ty(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = _B(e, ZB);
+          l = ey(e, _B);
         return (
           <svg
-            {...KB(
+            {...$B(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -28107,43 +28139,43 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {JB || (JB = <image id="wills" x={43} y={47} width={170} height={162} xlinkHref="<img/png blob>" />)}
+            {XB || (XB = <image id="wills" x={43} y={47} width={170} height={162} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var ey,
-        ty = r.forwardRef($B);
+      var ay,
+        ny = r.forwardRef(ty);
       a.p;
       !(function (e) {
         (e[(e.DECREE = 0)] = "DECREE"), (e[(e.BONUS = 1)] = "BONUS"), (e[(e.WILL = 2)] = "WILL");
-      })(ey || (ey = {}));
-      var ay = function () {
+      })(ay || (ay = {}));
+      var ry = function () {
           return (
             <a href="/login">
               <BA.a className="Wills-Submit-Button">Login to Vote</BA.a>
             </a>
           );
         },
-        ny = function () {
+        ly = function () {
           return (
             <a href="/welcome">
               <BA.a className="Wills-Submit-Button">Pick a Favorite Team to Vote</BA.a>
             </a>
           );
         },
-        ry = function () {
+        iy = function () {
           return (
             <a href={"/shop/".concat(ne.VOTES)}>
               <BA.a className="Wills-Submit-Button">Buy Another Vote</BA.a>
             </a>
           );
         },
-        ly = function (e) {
+        oy = function (e) {
           Object(r.useContext)(x.context).user;
           var t = e.isActive;
           return <button className="Wills-Option-Button">Select{t ? "ed" : ""}</button>;
         },
-        iy = function (e) {
+        sy = function (e) {
           e.isActive;
           var t = e.subheader;
           Object(r.useContext)(x.context).user;
@@ -28156,7 +28188,7 @@
               <div className="Wills-Option-SubheaderIntro">{a}</div>
               <a
                 onClick={function () {
-                  return fp("".concat(n, " (Will)"));
+                  return vp("".concat(n, " (Will)"));
                 }}
                 className="Wills-Option-SubheaderHyperlink"
                 href={i}
@@ -28167,7 +28199,7 @@
             </div>
           );
         },
-        oy = function (e) {
+        cy = function (e) {
           var t = e.title,
             a = e.description,
             n = e.id,
@@ -28184,14 +28216,14 @@
               }}
             >
               <h4 className={"Wills-Option-Header" + (void 0 !== i ? " ".concat(_c(i)) : "")}>{t}</h4>
-              <iy isActive={o} subheader={c} r={!0} />
+              <sy isActive={o} subheader={c} r={!0} />
               <div className={"Wills-Option-Description" + (void 0 !== i ? " ".concat(_c(i)) : "")}>{a}</div>
-              <ly isActive={o} />
+              <oy isActive={o} />
             </li>
           );
         },
-        sy = function () {
-          var e = Object(r.useContext)(nb.context),
+        Ay = function () {
+          var e = Object(r.useContext)(lb.context),
             t = Object(r.useContext)(oc.context),
             a = Object(r.useContext)(x.context).user,
             n = Object(r.useState)(),
@@ -28199,11 +28231,11 @@
             o = i[0],
             A = i[1],
             u = Object(c.g)(),
-            g = !!a.favoriteTeam && Gg(a.favoriteTeam, t);
+            g = !!a.favoriteTeam && zg(a.favoriteTeam, t);
           if (0 === e.wills.length || 0 === e.willsToPass) return null;
-          var f = <ay />;
-          a.isFetching || !a.isSignedIn || a.favoriteTeam || (f = <ny />),
-            !a.isFetching && a.isSignedIn && !a.snacks[ne.VOTES] && g && (f = <ry />),
+          var f = <ry />;
+          a.isFetching || !a.isSignedIn || a.favoriteTeam || (f = <ly />),
+            !a.isFetching && a.isSignedIn && !a.snacks[ne.VOTES] && g && (f = <iy />),
             a.isFetching ||
               !a.isSignedIn ||
               g ||
@@ -28231,7 +28263,7 @@
                   {o ? (
                     <d
                       background={u}
-                      path={a.verified ? "/vote/".concat(ey.WILL, "/").concat(o) : "/send-verification-email"}
+                      path={a.verified ? "/vote/".concat(ay.WILL, "/").concat(o) : "/send-verification-email"}
                     >
                       Submit Will Vote
                     </d>
@@ -28254,13 +28286,13 @@
               void 0 === a.snacks[ne.WILLS] ? (
                 <div className="Wills-Header">
                   <div className="Wills-Icon" style={{ background: "#9e0000" }}>
-                    <ty />
+                    <ny />
                   </div>
                   <h3 className="Wills-Title">
                     <ee.f aria-label="Locked" className="Wills-Locked" />
                     WILLS
                   </h3>
-                  <mh header="Wills" lines={E} />
+                  <gh header="Wills" lines={E} />
                   <BA.a className="Wills-Submit-Button Wills-Submit-Button-ToShop">
                     <m.b to={"/shop/".concat(ne.WILLS)}>Get Wills Access</m.b>
                   </BA.a>
@@ -28268,10 +28300,10 @@
               ) : (
                 <div className="Wills-Header">
                   <div className="Wills-Icon" style={{ background: "#9e0000" }}>
-                    <ty />
+                    <ny />
                   </div>
                   <h3 className="Wills-Title">WILLS</h3>
-                  <mh header="Wills" lines={E} />
+                  <gh header="Wills" lines={E} />
                 </div>
               )),
             (
@@ -28281,7 +28313,7 @@
                   {void 0 !== a.snacks[ne.WILLS]
                     ? e.wills.map(function (e, t) {
                         return (
-                          <oy
+                          <cy
                             {...Object.assign({ key: t }, e, {
                               isActive: o === e.id,
                               onSelect: function (e) {
@@ -28298,7 +28330,7 @@
             )
           );
         },
-        cy =
+        uy =
           (a(113),
           function (e) {
             var t = Object(r.useContext)(x.context).user,
@@ -28317,7 +28349,7 @@
                 </div>
                 <div className="Recap-Blessing-Content">
                   <div className="Recap-Blessing-Team" style={{ background: i.mainColor }}>
-                    {Yg(i)}
+                    {qg(i)}
                   </div>
                   <div className="Recap-Blessing-Description">{yd(e)}</div>
                 </div>
@@ -28337,7 +28369,7 @@
               </div>
             );
           }),
-        Ay = function (e) {
+        my = function (e) {
           var t = Object(r.useContext)(x.context).user,
             a = Object(r.useContext)(oc.context),
             n = e.event;
@@ -28360,7 +28392,7 @@
               </div>
               <div className="Recap-Decree-Content">
                 <div className="Recap-Blessing-Team" style={{ background: i.mainColor }}>
-                  {Yg(i)}
+                  {qg(i)}
                 </div>
                 <div className="Recap-Decree-Description">{yd(e)}</div>
               </div>
@@ -28381,7 +28413,7 @@
             </div>
           );
         },
-        uy = function (e) {
+        dy = function (e) {
           var t = Object(r.useContext)(x.context).user,
             a = e.event.metadata;
           return (
@@ -28393,13 +28425,13 @@
                 </div>
               </div>
               <div className="Recap-Blessing-Content">
-                <div className="Recap-Decree-Icon">{YB(a.id)}</div>
+                <div className="Recap-Decree-Icon">{qB(a.id)}</div>
                 <div className="Recap-Blessing-Description">{yd(e)}</div>
               </div>
             </div>
           );
         },
-        my = function (e) {
+        gy = function (e) {
           var t,
             a,
             n = Object(r.useContext)(x.context).user,
@@ -28431,7 +28463,7 @@
             </div>
           );
         },
-        dy = function (e) {
+        fy = function (e) {
           var t = e.subEvents;
           return void 0 === t ? null : (
             <div className="Recap-Decree-Container">
@@ -28443,7 +28475,7 @@
             </div>
           );
         };
-      function gy() {
+      function Ey() {
         var e,
           t,
           a = Object(r.useContext)(x.context).user,
@@ -28567,7 +28599,7 @@
                       (a = a.filter(function (e) {
                         return (e.teamTags && e.teamTags.includes(k)) || 0 === e.teamTags.length;
                       })),
-                    a.length > 0 ? <my event={e} subEvents={a} /> : null
+                    a.length > 0 ? <gy event={e} subEvents={a} /> : null
                   );
                 })}
               </div>
@@ -28590,7 +28622,7 @@
                     (a = a.filter(function (e) {
                       return e.teamTags && e.teamTags.includes(k);
                     })),
-                  a.length > 0 ? <uy event={e} subEvents={a} /> : null
+                  a.length > 0 ? <dy event={e} subEvents={a} /> : null
                 );
               })}
             </div>
@@ -28612,7 +28644,7 @@
                         return t.includes(e.id);
                       })
                     : [];
-                return <cy event={e} subEvents={a} />;
+                return <uy event={e} subEvents={a} />;
               })}
               {Q ? <div className="Recap-NoneFound">No Wills found...</div> : null}
             </div>
@@ -28644,7 +28676,7 @@
                     (a = a.filter(function (e) {
                       return e.teamTags && e.teamTags.includes(k);
                     })),
-                  (<Ay event={e} subEvents={a} />)
+                  (<my event={e} subEvents={a} />)
                 );
               })}
               {j ? <div className="Recap-NoneFound">No Blessings found...</div> : null}
@@ -28676,7 +28708,7 @@
                 >
                   Post Election
                 </h2>
-                <dy subEvents={H} />
+                <fy subEvents={H} />
               </div>
             ) : null,
           U = null === F && null === R ? <div className="Recap-Note">Nothing happened in this Election.</div> : null;
@@ -28734,20 +28766,20 @@
                 </div>
               </div>
             )}
-            <op />
+            <cp />
           </div>
         );
       }
-      function fy() {
+      function vy() {
         var e = Object(r.useContext)(x.context).user,
           t = Object(r.useContext)(S.context);
-        return t && t.sim ? 0 === t.sim.phase ? <gy /> : e.unlockedElection ? <Ey /> : <py /> : null;
+        return t && t.sim ? 0 === t.sim.phase ? <Ey /> : e.unlockedElection ? <py /> : <by /> : null;
       }
-      function Ey() {
+      function py() {
         var e,
           t = Object(r.useContext)(S.context),
           a = (Object(r.useContext)(x.context).user, void 0 !== t.sim && void 0 !== t.sim.season ? t.sim.season : -1);
-        return Hg(t.sim, "SIM_PANIC") ? (
+        return Gg(t.sim, "SIM_PANIC") ? (
           <div className="Offseason">
             <div className="Offseason-Info">
               <div className="Offseason-Header">
@@ -28755,7 +28787,7 @@
               </div>
             </div>
             <div className="Offseason-Body">
-              <vy />
+              <hy />
             </div>
           </div>
         ) : (
@@ -28768,26 +28800,26 @@
                 <div className="Offseason-Description">
                   In Light of Recent Events, the Season {a + 1} Election has been delayed by Executive Action.
                 </div>
-                <Op dateString={null === (e = t.sim) || void 0 === e ? void 0 : e.earlsiestaDate} />
+                <Sp dateString={null === (e = t.sim) || void 0 === e ? void 0 : e.earlsiestaDate} />
               </div>
             </div>
           </div>
         );
       }
-      function vy() {
+      function hy() {
         Object(r.useContext)(x.context).user;
-        var e = Object(r.useContext)(nb.context);
+        var e = Object(r.useContext)(lb.context);
         return void 0 === e || 0 === e.decrees.length ? (
           <wA />
         ) : (
           <l.a.Fragment>
-            <XB />
-            <sy />
-            <vb />
+            <KB />
+            <Ay />
+            <hb />
           </l.a.Fragment>
         );
       }
-      function py() {
+      function by() {
         var e = Object(r.useContext)(x.context),
           t = e.user,
           a = e.setUser,
@@ -28888,10 +28920,10 @@
           </div>
         );
       }
-      var hy,
-        by,
-        wy,
-        By = function (e) {
+      var wy,
+        By,
+        yy,
+        Cy = function (e) {
           var t = Object(cA.useToasts)().addToast,
             a = Object(r.useContext)(x.context),
             n = a.user,
@@ -29061,7 +29093,7 @@
           (e[(e.PositionDropdown = 3)] = "PositionDropdown"),
           (e[(e.RatingDropdown = 4)] = "RatingDropdown"),
           (e[(e.ItemDropdown = 5)] = "ItemDropdown");
-      })(hy || (hy = {})),
+      })(wy || (wy = {})),
         (function (e) {
           (e[(e.Batting = 0)] = "Batting"),
             (e[(e.Pitching = 1)] = "Pitching"),
@@ -29069,19 +29101,19 @@
             (e[(e.Baserunning = 3)] = "Baserunning"),
             (e[(e.Combined = 4)] = "Combined"),
             (e[(e.Overall = 5)] = "Overall");
-        })(by || (by = {})),
+        })(By || (By = {})),
         (function (e) {
           (e[(e.Lineup = 0)] = "Lineup"), (e[(e.Rotation = 1)] = "Rotation"), (e[(e.Shadows = 2)] = "Shadows");
-        })(wy || (wy = {}));
-      var yy = function (e) {
+        })(yy || (yy = {}));
+      var Oy = function (e) {
         var t = Object(cA.useToasts)().addToast,
           a = Object(r.useContext)(x.context),
           n = a.user,
           i = a.setUser,
           o = Object(c.f)(),
-          m = Object(r.useContext)(nb.context),
+          m = Object(r.useContext)(lb.context),
           d = Object(r.useContext)(oc.context),
-          g = Object(r.useContext)(Np.context),
+          g = Object(r.useContext)(Tp.context),
           v = Object(r.useState)(0),
           p = Object(s.a)(v, 2),
           h = p[0],
@@ -29214,42 +29246,42 @@
                 var e = 1,
                   t = n.favoriteTeam ? n.favoriteTeam : "";
                 T.info.forEach(function (a, r) {
-                  if (a.type === hy.TeamDropdown)
+                  if (a.type === wy.TeamDropdown)
                     F === [] || void 0 === F || F.length < 1
-                      ? H(qg(d, a, t, !0))
-                      : (W === [] || void 0 === W || W.length < 1) && z(qg(d, a, t, !0));
-                  else if (a.type === hy.PlayerDropdown) {
+                      ? H(Zg(d, a, t, !0))
+                      : (W === [] || void 0 === W || W.length < 1) && z(Zg(d, a, t, !0));
+                  else if (a.type === wy.PlayerDropdown) {
                     if ("myTeam" === a.filters.leagueLocation && void 0 === a.filters.equivalence) {
                       var l = n.favoriteTeam ? n.favoriteTeam : "";
                       Ze(l, a.filters.position, e, a.filters.hasMods);
                     }
                     e += 1;
-                  } else if (a.type === hy.ModDropdown && void 0 !== a.filters.mods) {
+                  } else if (a.type === wy.ModDropdown && void 0 !== a.filters.mods) {
                     var i = [];
                     u.collection.map(function (e) {
                       a.filters.mods.includes(e.id) && i.push(e);
                     }),
                       be(i);
-                  } else if (a.type === hy.PositionDropdown) {
+                  } else if (a.type === wy.PositionDropdown) {
                     var o = (function (e) {
                       var t = [];
-                      ("batter" !== e && "all" !== e && "any" !== e) || t.push({ id: wy.Lineup, name: "Lineup" });
-                      ("pitcher" !== e && "all" !== e && "any" !== e) || t.push({ id: wy.Rotation, name: "Rotation" });
-                      ("shadows" !== e && "any" !== e) || t.push({ id: wy.Shadows, name: "Shadows" });
+                      ("batter" !== e && "all" !== e && "any" !== e) || t.push({ id: yy.Lineup, name: "Lineup" });
+                      ("pitcher" !== e && "all" !== e && "any" !== e) || t.push({ id: yy.Rotation, name: "Rotation" });
+                      ("shadows" !== e && "any" !== e) || t.push({ id: yy.Shadows, name: "Shadows" });
                       return t;
                     })(a.filters.position);
                     Ne(o);
-                  } else if (a.type === hy.RatingDropdown) {
+                  } else if (a.type === wy.RatingDropdown) {
                     var s = (function (e) {
                       var t = [];
-                      (e === by.Batting || e >= 4) && t.push({ id: by.Batting, name: "Batting" });
-                      (e === by.Pitching || e >= 4) && t.push({ id: by.Pitching, name: "Pitching" });
-                      (e === by.Baserunning || e >= 4) && t.push({ id: by.Baserunning, name: "Baserunning" });
-                      (e === by.Defense || e >= 4) && t.push({ id: by.Defense, name: "Defense" });
+                      (e === By.Batting || e >= 4) && t.push({ id: By.Batting, name: "Batting" });
+                      (e === By.Pitching || e >= 4) && t.push({ id: By.Pitching, name: "Pitching" });
+                      (e === By.Baserunning || e >= 4) && t.push({ id: By.Baserunning, name: "Baserunning" });
+                      (e === By.Defense || e >= 4) && t.push({ id: By.Defense, name: "Defense" });
                       return t;
                     })(a.filters.ratings);
                     Qe(s);
-                  } else if (a.type === hy.ItemDropdown && "inputTeam" !== a.filters.leagueLocation) {
+                  } else if (a.type === wy.ItemDropdown && "inputTeam" !== a.filters.leagueLocation) {
                     var c;
                     _e(
                       a.filters.leagueLocation,
@@ -29266,7 +29298,7 @@
             function () {
               "2" === I &&
                 T.info.forEach(function (e, t) {
-                  if (e.type === hy.PlayerDropdown && "idolsBoard" === e.filters.leagueLocation) {
+                  if (e.type === wy.PlayerDropdown && "idolsBoard" === e.filters.leagueLocation) {
                     var a = [];
                     g.topIdols.forEach(function (e) {
                       return a.push(e.id);
@@ -29283,8 +29315,8 @@
                 t = "inLeague",
                 a = !0;
               T.info.map(function (n, r) {
-                if (n.type !== hy.PlayerDropdown || "inputTeam" !== n.filters.leagueLocation || !n.filters.position)
-                  return n.type === hy.ItemDropdown && "inputTeam" === n.filters.leagueLocation && n.filters.position
+                if (n.type !== wy.PlayerDropdown || "inputTeam" !== n.filters.leagueLocation || !n.filters.position)
+                  return n.type === wy.ItemDropdown && "inputTeam" === n.filters.leagueLocation && n.filters.position
                     ? ((t = n.filters.leagueLocation), void (a = !1))
                     : void 0;
                 e = n.filters.position;
@@ -29299,8 +29331,8 @@
                 t = "inLeague",
                 a = !0;
               T.info.map(function (n, r) {
-                if (n.type !== hy.PlayerDropdown || "inputTeam" !== n.filters.leagueLocation || !n.filters.position)
-                  return n.type === hy.ItemDropdown && "inputTeam" === n.filters.leagueLocation && n.filters.position
+                if (n.type !== wy.PlayerDropdown || "inputTeam" !== n.filters.leagueLocation || !n.filters.position)
+                  return n.type === wy.ItemDropdown && "inputTeam" === n.filters.leagueLocation && n.filters.position
                     ? ((t = n.filters.leagueLocation), void (a = !1))
                     : void 0;
                 e = n.filters.position;
@@ -29312,7 +29344,7 @@
           Object(r.useEffect)(
             function () {
               T.info.map(function (e, t) {
-                if (e.type === hy.ModDropdown && void 0 === e.filters.mods) {
+                if (e.type === wy.ModDropdown && void 0 === e.filters.mods) {
                   var a = [],
                     r = J.find(function (e) {
                       return e.id === ue;
@@ -29324,7 +29356,7 @@
                     be(a);
                 }
                 if (
-                  e.type === hy.PlayerDropdown &&
+                  e.type === wy.PlayerDropdown &&
                   void 0 !== e.filters.equivalence &&
                   "myTeam" === e.filters.leagueLocation
                 ) {
@@ -29354,12 +29386,12 @@
                           (o = d.teams.find(function (e) {
                             return e.id === t;
                           })),
-                          (s = Xg(o, a)),
+                          (s = Kg(o, a)),
                           (e.next = 4),
                           Kd(s)
                         );
                       case 4:
-                        (c = e.sent), (A = Zg(o, a, c, r, l, i)), Xe(n, A);
+                        (c = e.sent), (A = _g(o, a, c, r, l, i)), Xe(n, A);
                       case 7:
                       case "end":
                         return e.stop();
@@ -29384,7 +29416,7 @@
                         (n = e.sent),
                           (r = []),
                           n.forEach(function (e) {
-                            $g(e) &&
+                            tf(e) &&
                               r.push({
                                 id: e.id,
                                 fullName: e.name,
@@ -29422,13 +29454,13 @@
                           (r = d.teams.find(function (e) {
                             return e.id === n;
                           })),
-                          (l = Xg(r, a)),
+                          (l = Kg(r, a)),
                           (e.next = 4),
                           Kd(l)
                         );
                       case 4:
                         (i = e.sent),
-                          (o = Zg(r, a, i, !1, void 0, void 0)),
+                          (o = _g(r, a, i, !1, void 0, void 0)),
                           (s = []),
                           o.forEach(function (e) {
                             e.items.forEach(function (t) {
@@ -29489,7 +29521,7 @@
             "2" === I ? (
               <l.a.Fragment>
                 {T.info.map(function (e) {
-                  if (e.type === hy.TeamDropdown) {
+                  if (e.type === wy.TeamDropdown) {
                     if (1 === (st += 1))
                       return (
                         <Z.a.Group controlId="team selection">
@@ -29538,7 +29570,7 @@
                           </Z.a.Control>
                         </Z.a.Group>
                       );
-                  } else if (e.type === hy.PlayerDropdown) {
+                  } else if (e.type === wy.PlayerDropdown) {
                     if (1 === (ct += 1))
                       return (
                         <Z.a.Group controlId="team selection">
@@ -29590,7 +29622,7 @@
                         </Z.a.Group>
                       );
                   } else {
-                    if (e.type === hy.ModDropdown)
+                    if (e.type === wy.ModDropdown)
                       return (
                         <Z.a.Group controlId="team selection">
                           <Z.a.Label>{e.description}</Z.a.Label>
@@ -29614,7 +29646,7 @@
                           </Z.a.Control>
                         </Z.a.Group>
                       );
-                    if (e.type === hy.PositionDropdown)
+                    if (e.type === wy.PositionDropdown)
                       return (
                         <Z.a.Group controlId="team selection">
                           <Z.a.Label>{e.description}</Z.a.Label>
@@ -29638,7 +29670,7 @@
                           </Z.a.Control>
                         </Z.a.Group>
                       );
-                    if (e.type === hy.RatingDropdown)
+                    if (e.type === wy.RatingDropdown)
                       return (
                         <Z.a.Group controlId="team selection">
                           <Z.a.Label>{e.description}</Z.a.Label>
@@ -29662,7 +29694,7 @@
                           </Z.a.Control>
                         </Z.a.Group>
                       );
-                    if (e.type === hy.ItemDropdown)
+                    if (e.type === wy.ItemDropdown)
                       return (
                         <Z.a.Group controlId="team selection">
                           <Z.a.Label>{e.description}?</Z.a.Label>
@@ -29724,12 +29756,12 @@
                     m = 0;
                   if (
                     (T.info.forEach(function (e) {
-                      e.type === hy.TeamDropdown && (l += 1),
-                        e.type === hy.PlayerDropdown && (r += 1),
-                        e.type === hy.ModDropdown && (s += 1),
-                        e.type === hy.PositionDropdown && (c += 1),
-                        e.type === hy.RatingDropdown && (u += 1),
-                        e.type === hy.ItemDropdown && (m += 1);
+                      e.type === wy.TeamDropdown && (l += 1),
+                        e.type === wy.PlayerDropdown && (r += 1),
+                        e.type === wy.ModDropdown && (s += 1),
+                        e.type === wy.PositionDropdown && (c += 1),
+                        e.type === wy.RatingDropdown && (u += 1),
+                        e.type === wy.ItemDropdown && (m += 1);
                     }),
                     2 === l && ("" === ae || "" === oe))
                   )
@@ -29845,7 +29877,7 @@
           </hA>
         );
       };
-      function Cy(e) {
+      function Iy(e) {
         var t,
           a = e.path,
           n = Object(r.useContext)(oc.context),
@@ -29856,22 +29888,22 @@
           <div>
             <div className="GodsDay">
               <div className="GodsDay-Header">Blaseball Gods' Day</div>
-              <Kp teams={n.teams} postseasons={i.postseasons} />
-              <Op dateString={null === (t = i.sim) || void 0 === t ? void 0 : t.earlseasonDate} />
+              <$p teams={n.teams} postseasons={i.postseasons} />
+              <Sp dateString={null === (t = i.sim) || void 0 === t ? void 0 : t.earlseasonDate} />
               <div className="GodsDay-Body">
                 Welcome to Blaseball. Season {o + 2} will begin on July 19th at 8am PST. Check the{" "}
                 <a href="https://twitter.com/blaseball">Twitter</a> or <a href="https://discord.gg/3uFgJhu">Discord</a>{" "}
                 for updates!
               </div>
             </div>
-            <pp />
-            {"/leaderboard" === a ? <kp /> : <Qp />}
+            <bp />
+            {"/leaderboard" === a ? <Pp /> : <jp />}
           </div>
         );
       }
       a(250);
-      var Oy,
-        Iy = function () {
+      var Sy,
+        Ny = function () {
           return (
             <div className="Privacy">
               <h1 className="Privacy-Header">Privacy Policy</h1>
@@ -30244,7 +30276,7 @@
             </div>
           );
         },
-        Sy =
+        ky =
           (a(251),
           function () {
             l.a.Fragment;
@@ -30807,9 +30839,9 @@
               </div>
             );
           }),
-        Ny = ["title", "titleId"];
-      function ky() {
-        return (ky =
+        Ty = ["title", "titleId"];
+      function Py() {
+        return (Py =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -30819,7 +30851,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function Ty(e, t) {
+      function Dy(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -30839,13 +30871,13 @@
         }
         return r;
       }
-      function Py(e, t) {
+      function xy(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = Ty(e, Ny);
+          l = Dy(e, Ty);
         return (
           <svg
-            {...ky(
+            {...Py(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -30859,47 +30891,47 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Oy || (Oy = <image id="Ball" x={87} y={75} width={784} height={911} xlinkHref="<img/png blob>" />)}
+            {Sy || (Sy = <image id="Ball" x={87} y={75} width={784} height={911} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var Dy = r.forwardRef(Py);
+      var Ly = r.forwardRef(xy);
       a.p, a(252);
-      function xy(e) {
+      function Ry(e) {
         return void 0 !== e.element ? e.element : <h2 className="Stubs-Header">{e.text}</h2>;
       }
-      var Ly = function (e) {
+      var Qy = function (e) {
           var t,
             a = e.path,
             n = Object(r.useContext)(S.context),
             i = (void 0 !== n.sim && void 0 !== n.sim.season && n.sim.season, null);
           switch (a) {
             case "/leaderboard":
-              i = <kp />;
+              i = <Pp />;
               break;
             case "/league":
-              i = <Qp />;
+              i = <jp />;
           }
           return (
             <div>
-              <xy
+              <Ry
                 element={
                   <div className="Stubs-All">
                     <div className="Stubs-Header">The Season is Over!</div>
-                    <Op dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
+                    <Sp dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
                     <div className="Stubs-Body">The Wild Card teams will be chosen soon.</div>
                   </div>
                 }
                 text="Offseason. Check for updates on the Discord!"
               />
-              <pp />
+              <bp />
               {i}
             </div>
           );
         },
-        Ry = { notes: [] },
-        Qy = Object(r.createContext)(Ry),
-        My = function (e) {
+        My = { notes: [] },
+        jy = Object(r.createContext)(My),
+        Fy = function (e) {
           var t = e.children,
             a = Object(r.useContext)(x.context),
             n = a.user,
@@ -30997,19 +31029,19 @@
               [u]
             );
           var p = { notes: u };
-          return <Qy.Provider value={p}>{t}</Qy.Provider>;
+          return <jy.Provider value={p}>{t}</jy.Provider>;
         };
-      My.context = Qy;
-      var jy = My,
-        Fy = a(64),
-        Hy = function () {
+      Fy.context = jy;
+      var Hy = Fy,
+        Vy = a(64),
+        Gy = function () {
           return (
             <div className="ModalItem-Content">
               <Bd entity="" source={Ed.Book} defaultCategory={4} defaultSort={vd.NewestFirst} showCategory={!1} />
             </div>
           );
         };
-      function Vy() {
+      function Wy() {
         var e = Object(r.useState)(0),
           t = Object(s.a)(e, 2),
           a = t[0],
@@ -31085,25 +31117,25 @@
               ];
               return <nav className="TheBook-Navigation">{e}</nav>;
             })()}
-            <Gy page={a} />
-            <op />
+            <zy page={a} />
+            <cp />
           </div>
         );
       }
-      function Gy(e) {
+      function zy(e) {
         switch (e.page) {
           case 0:
-            return <Wy />;
-          case 1:
-            return <zy />;
-          case 2:
-            return <Hy />;
-          case -1:
             return <Uy />;
+          case 1:
+            return <Yy />;
+          case 2:
+            return <Gy />;
+          case -1:
+            return <Jy />;
         }
         return null;
       }
-      function Wy() {
+      function Uy() {
         return (
           <l.a.Fragment>
             <h3 className="TheBook-Subheader" aria-label="Page 1: Official Rulebook">
@@ -31387,7 +31419,7 @@
           </l.a.Fragment>
         );
       }
-      function zy() {
+      function Yy() {
         Object(r.useContext)(x.context).user;
         return (
           <l.a.Fragment>
@@ -31582,11 +31614,11 @@
           </l.a.Fragment>
         );
       }
-      function Uy() {
+      function Jy() {
         return (
           <l.a.Fragment>
             <h3 className="TheBook-Subheader">Glossary</h3>
-            {Fy.glossary.map(function (e, t) {
+            {Vy.glossary.map(function (e, t) {
               return (
                 <div
                   className="TheBook-Glossary-Item"
@@ -31603,15 +31635,15 @@
           </l.a.Fragment>
         );
       }
-      function Yy(e) {
-        var t = Fy.glossary.find(function (t) {
+      function qy(e) {
+        var t = Vy.glossary.find(function (t) {
           return t.name === e;
         });
         return void 0 === t ? [""] : t.definition;
       }
       a(114);
-      var Jy = a(122);
-      function qy() {
+      var Xy = a(122);
+      function Zy() {
         var e = Object(c.h)(),
           t = e.book,
           a = e.chapter,
@@ -31620,12 +31652,12 @@
         return (
           <div className="Library" id="Main-Body">
             <h2 className="Library-Header">Library</h2>
-            <kw className="Library-Librarian" />
+            <Pw className="Library-Librarian" />
             <h4 className="Stubs-Body Library-Description">
               Welcome to the Library. Collections will be made available pending approval from the League Historian.
             </h4>
             <div className="League-Nav">
-              {Jy.books.map(function (e, t) {
+              {Xy.books.map(function (e, t) {
                 var a = "/library" + (0 === t ? "" : "/".concat(t)),
                   n =
                     0 === t
@@ -31634,28 +31666,28 @@
                           return { text: "", path: "".concat(a, "/").concat(t) };
                         });
                 return (
-                  <up path={a} subpaths={n}>
+                  <dp path={a} subpaths={n}>
                     {e.title}
-                  </up>
+                  </dp>
                 );
               })}
             </div>
-            <Xy book={n} chapter={r} />
-            <op />
+            <Ky book={n} chapter={r} />
+            <cp />
           </div>
         );
       }
-      function Xy(e) {
+      function Ky(e) {
         var t = e.book,
           a = e.chapter,
-          n = Jy.books[t].chapters;
+          n = Xy.books[t].chapters;
         return (
           <div className="Library-Body">
             <div className={"Library-Wrapper " + (a > 0 ? "Library-Wrapper-Open" : "")}>
               <div className={"Library-Chapters " + (a > 0 ? "Library-Chapters-Open" : "")}>
                 {n.map(function (e, n) {
                   return (
-                    <Zy
+                    <_y
                       num={n + 1}
                       str={e.title}
                       book={t}
@@ -31681,7 +31713,7 @@
           </div>
         );
       }
-      function Zy(e) {
+      function _y(e) {
         var t = e.num,
           a = e.str,
           n = e.book,
@@ -31710,15 +31742,15 @@
         );
       }
       a(253);
-      var Ky,
-        _y,
-        $y,
+      var $y,
         eC,
-        tC = a(159),
-        aC = a(160),
-        nC = ["title", "titleId"];
-      function rC() {
-        return (rC =
+        tC,
+        aC,
+        nC = a(159),
+        rC = a(160),
+        lC = ["title", "titleId"];
+      function iC() {
+        return (iC =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -31728,7 +31760,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function lC(e, t) {
+      function oC(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -31748,13 +31780,13 @@
         }
         return r;
       }
-      function iC(e, t) {
+      function sC(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = lC(e, nC);
+          l = oC(e, lC);
         return (
           <svg
-            {...rC(
+            {...iC(
               {
                 id: "Layer_1",
                 xmlns: "http://www.w3.org/2000/svg",
@@ -31771,14 +31803,14 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Ky ||
-              (Ky = r.createElement(
+            {$y ||
+              ($y = r.createElement(
                 "style",
                 { type: "text/css" },
                 "\n\t.st0{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}\n\t.st1{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}\n"
               ))}
-            {_y ||
-              (_y = (
+            {eC ||
+              (eC = (
                 <rect
                   id="base2"
                   x={84.83}
@@ -31789,8 +31821,8 @@
                   height={70.31}
                 />
               ))}
-            {$y ||
-              ($y = (
+            {tC ||
+              (tC = (
                 <rect
                   id="base1"
                   x={141.95}
@@ -31801,8 +31833,8 @@
                   height={70.31}
                 />
               ))}
-            {eC ||
-              (eC = (
+            {aC ||
+              (aC = (
                 <rect
                   id="base3"
                   x={27.38}
@@ -31816,9 +31848,9 @@
           </svg>
         );
       }
-      var oC = r.forwardRef(iC);
+      var cC = r.forwardRef(sC);
       a.p;
-      function sC() {
+      function AC() {
         var e,
           t,
           a = Object(r.useContext)(S.context),
@@ -31827,7 +31859,7 @@
           o = Object(r.useContext)(oc.context),
           A = Object(r.useContext)(Yc.context),
           u = Object(r.useRef)(null),
-          g = Object(r.useState)(Fy.glossary[Math.floor(Math.random() * Fy.glossary.length)]),
+          g = Object(r.useState)(Vy.glossary[Math.floor(Math.random() * Vy.glossary.length)]),
           v = Object(s.a)(g, 1)[0],
           p = Object(r.useState)(0),
           h = Object(s.a)(p, 2),
@@ -31891,7 +31923,7 @@
               </div>
               <h2 className="Bulletin-Item-Header-Title">
                 Blaseball Cares
-                <mh
+                <gh
                   header="Blaseball Cares"
                   lines={[
                     "Sundays are #BlaseballCares Day. Each week, The Game Band and Division Ambassadors highlight important work being done in their communities.",
@@ -31944,9 +31976,9 @@
                 </h2>
               </div>
               <div className="Bulletin-Item-Contents Bulletin-Item-ImageGrid">
-                {cC.map(function (e) {
+                {uC.map(function (e) {
                   return (
-                    <tC.a
+                    <nC.a
                       id={e}
                       options={{ theme: n.lightMode ? "light" : "dark", conversation: "none", dnt: !0 }}
                       className="Bulletin-Tweet"
@@ -31974,11 +32006,11 @@
                   <span className="League-Number">{a.sim.day + 1}</span>
                 </h3>
               )}
-              <Ep />
-              <oC className="Bulletin-Item-League-Icon" />
+              <pp />
+              <cC className="Bulletin-Item-League-Icon" />
               {L ? null : (
                 <l.a.Fragment>
-                  {Hg(a.sim, "SIM_COMMUNITY_CHEST") ? Ks(<Re />, "LeagueInfo-Bar", b, 3e3) : null}
+                  {Gg(a.sim, "SIM_COMMUNITY_CHEST") ? Ks(<Re />, "LeagueInfo-Bar", b, 3e3) : null}
                   <d
                     background={i}
                     path="/leagueinfo"
@@ -32053,12 +32085,12 @@
                         ref={a ? u : null}
                       >
                         <span className="Bulletin-Schedule-Date" aria-hidden="true">
-                          {AC(e.datetime)}
+                          {mC(e.datetime)}
                         </span>
                         <span className="Bulletin-Schedule-Name" role="text">
-                          {e.name} <span className="sr-only" aria-label={" starts at " + uC(e.datetime)} role="text" />
+                          {e.name} <span className="sr-only" aria-label={" starts at " + dC(e.datetime)} role="text" />
                         </span>
-                        <mh header={e.name} lines={Yy(e.name)} noMargin={!0} />
+                        <gh header={e.name} lines={qy(e.name)} noMargin={!0} />
                       </div>
                     )
                   );
@@ -32068,13 +32100,13 @@
                   aria-hidden={a.sim.phase > 13}
                 >
                   <span className="Bulletin-Schedule-Date" aria-hidden="true">
-                    {AC(a.sim.electionDate)}
+                    {mC(a.sim.electionDate)}
                   </span>
                   <span className="Bulletin-Schedule-Name" role="text">
                     Election
-                    <span className="sr-only" aria-label={" starts at " + uC(a.sim.electionDate)} role="text" />
+                    <span className="sr-only" aria-label={" starts at " + dC(a.sim.electionDate)} role="text" />
                   </span>
-                  <mh header="Election" lines={Yy("Election")} noMargin={!0} />
+                  <gh header="Election" lines={qy("Election")} noMargin={!0} />
                 </div>
               </div>
             )}
@@ -32172,7 +32204,7 @@
           n.unlockedShop &&
             n.trackers.SNACK_UPGRADES < 3 &&
             (function (e) {
-              for (var t = Object(r.useContext)(Rg.context), a = Object.keys(e), n = a.length - 1; n >= 0; n--) {
+              for (var t = Object(r.useContext)(Mg.context), a = Object.keys(e), n = a.length - 1; n >= 0; n--) {
                 var l = ne.GetTiers(a[n], t.snackData);
                 if (void 0 !== l && void 0 !== l[e[a[n]] + 1]) return !0;
               }
@@ -32300,12 +32332,12 @@
                 <div className="Bulletin-Widget-NoGame">
                   <d background={i} path={"/team/".concat(G.id)} className="Bulletin-Widget-Team">
                     <div className="Bulletin-Widget-ScoreTeamColorBar" style={{ background: G.mainColor }}>
-                      {Jg(G.emoji)}
+                      {Xg(G.emoji)}
                     </div>
                     <div
                       className="Bulletin-Widget-ScoreName"
                       style={{
-                        color: n.lightMode ? Mg(G.secondaryColor) : G.secondaryColor,
+                        color: n.lightMode ? Fg(G.secondaryColor) : G.secondaryColor,
                         background: n.lightMode ? G.secondaryColor : "none",
                         padding: n.lightMode ? "2px 8px" : "initial",
                       }}
@@ -32331,15 +32363,15 @@
             J = V.awayScore,
             q = Y > J && V.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {},
             X = J > Y && V.gameComplete ? { border: 2, borderColor: "#fffffff", borderStyle: "solid" } : {},
-            Z = Fv(V, a.standings),
-            K = Qv(V),
+            Z = Vv(V, a.standings),
+            K = jv(V),
             $ = null,
             ee = "";
           if (null !== V.stadiumId) {
             var te = o.stadiums.find(function (e) {
               return e.id === V.stadiumId;
             });
-            te && (($ = <hv stadium={te} style={dv.GameWidget} />), (ee = te.nickname));
+            te && (($ = <wv stadium={te} style={fv.GameWidget} />), (ee = te.nickname));
           }
           T = (
             <div
@@ -32350,7 +32382,7 @@
               <div className="Bulletin-Widget-Header-Wrapper">
                 <div className="Widget-Header" role="group" aria-label="Game Status Bar">
                   <div className="Widget-StatusBar-WithStadium">
-                    {Mv(K)}
+                    {Fv(K)}
                     <div className="Widget-StadiumLabel">
                       {K.started ? (
                         <Ka.a
@@ -32377,13 +32409,13 @@
                       aria-hidden={!0}
                       style={{ background: V.awayTeamColor }}
                     >
-                      {Jg(V.awayTeamEmoji)}
+                      {Xg(V.awayTeamEmoji)}
                     </div>
                     <div className="GameWidget-ScoreTeam">
                       <div
                         className="GameWidget-ScoreName"
                         style={{
-                          color: n.lightMode ? Mg(V.awayTeamSecondaryColor) : V.awayTeamSecondaryColor,
+                          color: n.lightMode ? Fg(V.awayTeamSecondaryColor) : V.awayTeamSecondaryColor,
                           background: n.lightMode ? V.awayTeamSecondaryColor : "none",
                           padding: n.lightMode ? "2px 8px" : "initial",
                           lineHeight: n.lightMode ? "1.6rem" : "initial",
@@ -32404,7 +32436,7 @@
                           className="GameWidget-WinChance"
                           aria-label={"".concat(Math.round(100 * V.awayOdds), "% Chance of Winning")}
                           style={{
-                            color: n.lightMode ? Mg(V.awayTeamSecondaryColor) : V.awayTeamSecondaryColor,
+                            color: n.lightMode ? Fg(V.awayTeamSecondaryColor) : V.awayTeamSecondaryColor,
                             background: n.lightMode ? V.awayTeamSecondaryColor : "none",
                             padding: n.lightMode ? "2px 8px" : "initial",
                             lineHeight: n.lightMode ? "1.2rem" : "initial",
@@ -32424,13 +32456,13 @@
                       aria-hidden={!0}
                       style={{ background: V.homeTeamColor }}
                     >
-                      {Jg(V.homeTeamEmoji)}
+                      {Xg(V.homeTeamEmoji)}
                     </div>
                     <div className="GameWidget-ScoreTeam">
                       <div
                         className="GameWidget-ScoreName"
                         style={{
-                          color: n.lightMode ? Mg(V.homeTeamSecondaryColor) : V.homeTeamSecondaryColor,
+                          color: n.lightMode ? Fg(V.homeTeamSecondaryColor) : V.homeTeamSecondaryColor,
                           background: n.lightMode ? V.homeTeamSecondaryColor : "none",
                           padding: n.lightMode ? "2px 8px" : "initial",
                           lineHeight: n.lightMode ? "1.6rem" : "initial",
@@ -32451,7 +32483,7 @@
                           className="GameWidget-WinChance"
                           aria-label={"".concat(Math.round(100 * V.homeOdds), "% Chance of Winning")}
                           style={{
-                            color: n.lightMode ? Mg(V.homeTeamSecondaryColor) : V.homeTeamSecondaryColor,
+                            color: n.lightMode ? Fg(V.homeTeamSecondaryColor) : V.homeTeamSecondaryColor,
                             background: n.lightMode ? V.homeTeamSecondaryColor : "none",
                             padding: n.lightMode ? "2px 8px" : "initial",
                             lineHeight: n.lightMode ? "1.2rem" : "initial",
@@ -32608,13 +32640,13 @@
           ae
         );
       }
-      var cC = (function (e) {
+      var uC = (function (e) {
         var t,
           a = [];
         for (; a.length <= 2; ) (t = Math.floor(Math.random() * e.length)), a.includes(t) || a.push(t);
         return [e[a[0]], e[a[1]], e[a[2]]];
-      })(aC.collection);
-      function AC(e) {
+      })(rC.collection);
+      function mC(e) {
         var t = new Date(e),
           a = (t.getMonth() + 1).toString(),
           n = t.getDate().toString(),
@@ -32628,7 +32660,7 @@
           a + "." + n + " " + r + ":" + l + i
         );
       }
-      function uC(e) {
+      function dC(e) {
         var t = new Date(e),
           a = (t.getMonth() + 1).toString(),
           n = t.getDate().toString(),
@@ -32642,9 +32674,9 @@
           a + "/" + n + " " + r + i
         );
       }
-      var mC = { player: void 0, item: void 0 };
-      var dC,
-        gC = function (e) {
+      var gC = { player: void 0, item: void 0 };
+      var fC,
+        EC = function (e) {
           var t,
             a,
             n,
@@ -32654,7 +32686,7 @@
             u = Object(s.a)(A, 2),
             m = u[0],
             d = u[1],
-            g = Object(r.useState)(mC),
+            g = Object(r.useState)(gC),
             v = Object(s.a)(g, 2),
             p = v[0],
             h = v[1];
@@ -32832,7 +32864,7 @@
                           className="Player-Team-Logo"
                           style={{ background: void 0 !== w ? w.mainColor : "#999999" }}
                         >
-                          <div className="Player-Team-Emoji">{Yg(w)}</div>
+                          <div className="Player-Team-Emoji">{qg(w)}</div>
                         </div>
                         <div className="Player-Team-Name">
                           {null === (n = p.player) || void 0 === n ? void 0 : n.name}
@@ -32846,7 +32878,7 @@
             );
           return <hA {...Object.assign({}, e, { className: "ModalItem Item" })}>{M}</hA>;
         },
-        fC = function (e) {
+        vC = function (e) {
           var t = Object(r.useContext)(oc.context),
             a = Object(r.useState)(void 0),
             n = Object(s.a)(a, 2),
@@ -32927,29 +32959,29 @@
             );
           return <hA {...Object.assign({}, e, { className: "ModalItem" })}>{b}</hA>;
         },
-        EC = function (e) {
+        pC = function (e) {
           var t,
             a = e.path,
             n = Object(r.useContext)(S.context),
             i = void 0 !== n.sim && void 0 !== n.sim.season ? n.sim.season : -1;
           return (
             <div>
-              <xy
+              <Ry
                 element={
                   <div className="Stubs-All">
                     <div className="Stubs-Header">It's the Pre-Season.</div>
-                    <Op dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
+                    <Sp dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
                     <div className="Stubs-Body">Season {i + 1} will begin soon.</div>
                   </div>
                 }
                 text="Offseason. Check for updates on the Discord!"
               />
-              <pp />
-              {"/leaderboard" === a ? <kp /> : <Qp />}
+              <bp />
+              {"/leaderboard" === a ? <Pp /> : <jp />}
             </div>
           );
         },
-        vC = function (e) {
+        hC = function (e) {
           var t,
             a = e.path,
             n = Object(r.useContext)(S.context),
@@ -32957,33 +32989,33 @@
             o = null;
           switch (a) {
             case "/leaderboard":
-              o = <kp />;
+              o = <Pp />;
               break;
             case "/standings":
-              o = <Qp />;
+              o = <jp />;
               break;
             case "/league":
-              for (var s = [], c = 0; c < n.postseasons.length; c++) s.push(<Jp playoffIndex={c} />);
+              for (var s = [], c = 0; c < n.postseasons.length; c++) s.push(<Xp playoffIndex={c} />);
               o = <l.a.Fragment>{s}</l.a.Fragment>;
           }
           return (
             <div>
-              <xy
+              <Ry
                 element={
                   <div className="Stubs-All">
                     <div className="Stubs-Header">The Season is Over!</div>
-                    <Op dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
+                    <Sp dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
                     <div className="Stubs-Body">Postseason {i + 1} will begin soon.</div>
                   </div>
                 }
                 text="Offseason. Check for updates on the Discord!"
               />
-              <bp />
+              <Bp />
               {o}
             </div>
           );
         },
-        pC =
+        bC =
           (a(254),
           function () {
             var e = (
@@ -34081,14 +34113,14 @@
                   {n}
                   <h3 className="FAQ-Return">
                     <a href="#root" className="FAQ-Question-Link">
-                      <Ae.b /> Back to Top.
+                      <Ae.d /> Back to Top.
                     </a>
                   </h3>
                 </div>
               </div>
             );
           }),
-        hC = function (e) {
+        wC = function (e) {
           var t,
             a = e.path,
             n = Object(r.useContext)(S.context),
@@ -34096,22 +34128,22 @@
             o = null;
           switch (a) {
             case "/leaderboard":
-              o = <kp />;
+              o = <Pp />;
               break;
             case "/standings":
-              o = <Qp />;
+              o = <jp />;
               break;
             case "/league":
-              for (var s = [], c = 0; c < n.postseasons.length; c++) s.push(<Jp playoffIndex={c} />);
+              for (var s = [], c = 0; c < n.postseasons.length; c++) s.push(<Xp playoffIndex={c} />);
               o = <l.a.Fragment>{s}</l.a.Fragment>;
           }
           return (
             <div>
-              <xy
+              <Ry
                 element={
                   <div className="Stubs-All">
                     <div className="Stubs-Header">Wild Card Evening</div>
-                    <Op dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
+                    <Sp dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
                     <div className="Stubs-Body">
                       The Wild Card round has ended. Postseason {i + 1} will continue soon.
                     </div>
@@ -34119,14 +34151,14 @@
                 }
                 text="Offseason. Check for updates on the Discord!"
               />
-              <bp />
+              <Bp />
               {o}
             </div>
           );
         },
-        bC = (a(147), a(17)),
-        wC = a(126);
-      function BC(e) {
+        BC = (a(147), a(17)),
+        yC = a(126);
+      function CC(e) {
         var t,
           a,
           n,
@@ -34158,7 +34190,7 @@
               weather: m.weather,
               playCount: m.playCount,
             }),
-          b = Mv(h),
+          b = Fv(h),
           w = Object(c.g)(),
           B = Object(r.useState)([]),
           y = Object(s.a)(B, 2),
@@ -34254,7 +34286,7 @@
             },
             [p.stats.sunsun]
           );
-        var te = Pv(g),
+        var te = xv(g),
           ae =
             (g.topOfInning ? g.homePitcherMod : g.awayPitcherMod,
             g.topOfInning ? g.awayBatterMod : g.homeBatterMod,
@@ -34263,10 +34295,10 @@
           re =
             (h.complete ||
               !h.started ||
-              (Qg(ne, 0.5),
+              (jg(ne, 0.5),
               "/player/".concat(g.topOfInning ? g.homePitcher : g.awayPitcher),
               g.topOfInning ? g.homePitcherName : g.awayPitcherName,
-              Qg(ae, 0.5),
+              jg(ae, 0.5),
               (g.homeBatterName || g.awayBatterName) &&
                 ("/player/".concat(g.topOfInning ? g.awayBatter : g.homeBatter),
                 g.topOfInning ? g.awayBatterName : g.homeBatterName)),
@@ -34276,8 +34308,8 @@
         h.started &&
           (le = (
             <div className="BossFightWidget-Log" aria-label="Log">
-              {re ? <bv /> : null}
-              <Hv data={g} attack={re} withLedger={!1} />
+              {re ? <Bv /> : null}
+              <Gv data={g} attack={re} withLedger={!1} />
               <div className="Widget-Log-PlayCount" role="text" aria-label={"Play #" + h.playCount}>
                 {h.playCount}
               </div>
@@ -34291,11 +34323,11 @@
             return e.id === g.stadiumId;
           });
           ce &&
-            ((oe = <hv stadium={ce} style={dv.GameWidget} />),
+            ((oe = <wv stadium={ce} style={fv.GameWidget} />),
             (se = ce.nickname),
             (ie = (
               <div className="GameWidget-Upcoming-Body">
-                <mf.a className="GameWidget-Upcoming-Icon" style={{ filter: "invert(1)", padding: "5px" }} />
+                <gf.a className="GameWidget-Upcoming-Icon" style={{ filter: "invert(1)", padding: "5px" }} />
                 <div className="GameWidget-Upcoming-Label" aria-hidden="true">
                   BALLPARK
                 </div>
@@ -34311,18 +34343,18 @@
               </div>
             )));
         }
-        var Ae = CC(g.homeHp, g.homeMaxHp),
-          ue = CC(g.awayHp, g.awayMaxHp),
+        var Ae = IC(g.homeHp, g.homeMaxHp),
+          ue = IC(g.awayHp, g.awayMaxHp),
           me = (
             <div className={"BossFightWidget-ScoreTeamColorBar" + N} style={{ background: g.homeTeamColor }}>
-              {Jg(g.homeTeamEmoji)}
+              {Xg(g.homeTeamEmoji)}
             </div>
           ),
           de = (
             <div
               className={"BossFightWidget-ScoreName" + N}
               style={{
-                color: E.lightMode ? Mg(g.homeTeamColor) : g.homeTeamSecondaryColor,
+                color: E.lightMode ? Fg(g.homeTeamColor) : g.homeTeamSecondaryColor,
                 background: E.lightMode ? g.homeTeamColor : "none",
                 padding: E.lightMode ? "5px 8px" : "initial",
                 lineHeight: E.lightMode ? "1.6rem" : "initial",
@@ -34333,14 +34365,14 @@
           ),
           ge = (
             <div className={"BossFightWidget-ScoreTeamColorBar" + D} style={{ background: g.awayTeamColor }}>
-              {Jg(g.awayTeamEmoji)}
+              {Xg(g.awayTeamEmoji)}
             </div>
           ),
           fe = (
             <div
               className={"BossFightWidget-ScoreName" + D}
               style={{
-                color: E.lightMode ? Mg(g.awayTeamColor) : g.awayTeamSecondaryColor,
+                color: E.lightMode ? Fg(g.awayTeamColor) : g.awayTeamSecondaryColor,
                 background: E.lightMode ? g.awayTeamColor : "none",
                 padding: E.lightMode ? "5px 8px" : "initial",
                 lineHeight: E.lightMode ? "1.6rem" : "initial",
@@ -34416,7 +34448,7 @@
               </div>
               <div className="BossFightWidget-Container">
                 <div className="BossFightWidget-Header-Wrapper">
-                  <Cv
+                  <Iv
                     statusDisplay={b}
                     started={h.started}
                     stadiumName={se}
@@ -34440,16 +34472,16 @@
                         {fe}
                         {void 0 !== g.awayHp ? (
                           <div className="BossFightWidget-Names-Spirit">
-                            <wC.a
+                            <yC.a
                               now={ue}
-                              label={gf(g.awayHp)}
-                              variant={OC(ue)}
+                              label={Ef(g.awayHp)}
+                              variant={SC(ue)}
                               className="BossFightWidget-SpiritBar"
                             />
                           </div>
                         ) : null}
                       </div>
-                      <yC score={df(g.awayScore)} />
+                      <OC score={ff(g.awayScore)} />
                     </d>
                   </div>
                   <div className="BossFightWidget-Names">
@@ -34459,22 +34491,22 @@
                         {de}
                         {void 0 !== g.homeHp ? (
                           <div className="BossFightWidget-Names-Spirit">
-                            <wC.a
+                            <yC.a
                               now={Ae}
-                              label={gf(g.homeHp)}
-                              variant={OC(Ae)}
+                              label={Ef(g.homeHp)}
+                              variant={SC(Ae)}
                               className="BossFightWidget-SpiritBar"
                             />
                           </div>
                         ) : null}
                       </div>
-                      <yC score={df(g.homeScore)} />
+                      <OC score={ff(g.homeScore)} />
                     </d>
                   </div>
                 </div>
                 <div className="BossFightWidget-Log-Container">
                   <div className={pe ? " BossFightWidget-Log-Container-Max" : ""}>
-                    <Bv
+                    <Cv
                       statusInfo={h}
                       activeBet={void 0}
                       data={g}
@@ -34493,7 +34525,7 @@
           )
         );
       }
-      function yC(e) {
+      function OC(e) {
         var t = e.score,
           a = e.damageResults,
           n = e.team;
@@ -34505,39 +34537,39 @@
                 r = {},
                 i =
                   ((a = {}),
-                  Object(bC.a)(a, G.Steal, "Steal"),
-                  Object(bC.a)(a, G.HomeSteal, "Steal Home"),
-                  Object(bC.a)(a, G.Run, "Run"),
-                  Object(bC.a)(a, G.HomeRun, "Home Run"),
-                  Object(bC.a)(a, G.Strike, "Strike"),
-                  Object(bC.a)(a, G.FoulBall, "Foul"),
-                  Object(bC.a)(a, G.StrikeOut, "Strike Out"),
-                  Object(bC.a)(a, G.FlyOut, "Fly Out"),
-                  Object(bC.a)(a, G.GroundOut, "Ground Out"),
-                  Object(bC.a)(a, G.Single, "Single"),
-                  Object(bC.a)(a, G.Double, "Double"),
-                  Object(bC.a)(a, G.Triple, "Triple"),
-                  Object(bC.a)(a, G.Quadruple, "Quadruple"),
-                  Object(bC.a)(a, G.Walk, "Walk"),
-                  Object(bC.a)(a, G.CaughtStealing, "Caught Stealing"),
-                  Object(bC.a)(a, G.Ball, "Ball"),
-                  Object(bC.a)(a, G.SacrificeFly, "Sacrifice Fly"),
-                  Object(bC.a)(a, G.Out, "Out"),
-                  Object(bC.a)(a, G.CurseOfCrows, "Crows"),
-                  Object(bC.a)(a, G.GiveSpirit, "Give Spirit"),
-                  Object(bC.a)(a, G.BigPeanut, "Big Peanut"),
-                  Object(bC.a)(a, G.BloodDrain, "Blooddrain"),
-                  Object(bC.a)(a, G.PeanutSwallowed, "Allergy"),
-                  Object(bC.a)(a, G.Incineration, "Incineration"),
-                  Object(bC.a)(a, G.Feedback, "Feedback"),
-                  Object(bC.a)(a, G.Reverb, "Reverb"),
-                  Object(bC.a)(a, G.Unshelled, "Unshelled"),
-                  Object(bC.a)(a, G.Partying, "Partying"),
-                  Object(bC.a)(a, G.LoveSpell, "Love Spell"),
-                  Object(bC.a)(a, G.PeanutYummy, "Yummy"),
-                  Object(bC.a)(a, G.SuperPeanutYummy, "Super Yummy"),
-                  Object(bC.a)(a, G.SuperPeanutAllergic, "Super Allergy"),
-                  Object(bC.a)(a, G.Rebirth, "Rise"),
+                  Object(BC.a)(a, G.Steal, "Steal"),
+                  Object(BC.a)(a, G.HomeSteal, "Steal Home"),
+                  Object(BC.a)(a, G.Run, "Run"),
+                  Object(BC.a)(a, G.HomeRun, "Home Run"),
+                  Object(BC.a)(a, G.Strike, "Strike"),
+                  Object(BC.a)(a, G.FoulBall, "Foul"),
+                  Object(BC.a)(a, G.StrikeOut, "Strike Out"),
+                  Object(BC.a)(a, G.FlyOut, "Fly Out"),
+                  Object(BC.a)(a, G.GroundOut, "Ground Out"),
+                  Object(BC.a)(a, G.Single, "Single"),
+                  Object(BC.a)(a, G.Double, "Double"),
+                  Object(BC.a)(a, G.Triple, "Triple"),
+                  Object(BC.a)(a, G.Quadruple, "Quadruple"),
+                  Object(BC.a)(a, G.Walk, "Walk"),
+                  Object(BC.a)(a, G.CaughtStealing, "Caught Stealing"),
+                  Object(BC.a)(a, G.Ball, "Ball"),
+                  Object(BC.a)(a, G.SacrificeFly, "Sacrifice Fly"),
+                  Object(BC.a)(a, G.Out, "Out"),
+                  Object(BC.a)(a, G.CurseOfCrows, "Crows"),
+                  Object(BC.a)(a, G.GiveSpirit, "Give Spirit"),
+                  Object(BC.a)(a, G.BigPeanut, "Big Peanut"),
+                  Object(BC.a)(a, G.BloodDrain, "Blooddrain"),
+                  Object(BC.a)(a, G.PeanutSwallowed, "Allergy"),
+                  Object(BC.a)(a, G.Incineration, "Incineration"),
+                  Object(BC.a)(a, G.Feedback, "Feedback"),
+                  Object(BC.a)(a, G.Reverb, "Reverb"),
+                  Object(BC.a)(a, G.Unshelled, "Unshelled"),
+                  Object(BC.a)(a, G.Partying, "Partying"),
+                  Object(BC.a)(a, G.LoveSpell, "Love Spell"),
+                  Object(BC.a)(a, G.PeanutYummy, "Yummy"),
+                  Object(BC.a)(a, G.SuperPeanutYummy, "Super Yummy"),
+                  Object(BC.a)(a, G.SuperPeanutAllergic, "Super Allergy"),
+                  Object(BC.a)(a, G.Rebirth, "Rise"),
                   a);
               if (
                 (e.forEach(function (e) {
@@ -34561,7 +34593,7 @@
                 <l.a.Fragment>
                   <span className={"BossFightWidget-Log-Damage-" + s + (c ? "-Heal" : "-Hurt")}>
                     {c ? "+" : "-"}
-                    {gf(Math.abs(n))}
+                    {Ef(Math.abs(n))}
                   </span>{" "}
                   ({o[0].toUpperCase()}
                   {o[1] > 1 ? " x".concat(o[1]) : ""})
@@ -34575,26 +34607,26 @@
           </div>
         );
       }
-      function CC(e, t) {
+      function IC(e, t) {
         var a = (e / t) * 100;
         return e >= 1e3 && a < 8 ? 8 : e >= 100 && a < 6 ? 6 : e >= 10 && a < 4 ? 4 : a < 2.5 ? 2.5 : a;
       }
-      function OC(e) {
+      function SC(e) {
         return e > 70 ? "success" : e > 20 ? "warning" : "danger";
       }
-      function IC(e) {
+      function NC(e) {
         var t = Object(r.useContext)(S.context),
-          a = Fv(e.data, t.standings);
-        return <BC data={e.data} metaInfo={a} />;
+          a = Vv(e.data, t.standings);
+        return <CC data={e.data} metaInfo={a} />;
       }
       !(function (e) {
         (e[(e.Live = 0)] = "Live"),
           (e[(e.Upcoming = 1)] = "Upcoming"),
           (e[(e.Standings = 2)] = "Standings"),
           (e[(e.Leaderboard = 3)] = "Leaderboard");
-      })(dC || (dC = {}));
-      var SC,
-        NC = function (e) {
+      })(fC || (fC = {}));
+      var kC,
+        TC = function (e) {
           var t,
             a = e.path,
             n = Object(r.useContext)(oc.context),
@@ -34610,7 +34642,7 @@
                   {null === (t = i.schedule) || void 0 === t
                     ? void 0
                     : t.map(function (e) {
-                        return <IC data={e} />;
+                        return <NC data={e} />;
                       })}
                 </ul>
               ),
@@ -34620,28 +34652,28 @@
               ) : void 0 === i.sim.state.scheduled_game_event ? (
                 <div> {u} </div>
               ) : (
-                <Kp teams={n.teams} postseasons={i.postseasons} />
+                <$p teams={n.teams} postseasons={i.postseasons} />
               );
           void 0 !== i && void 0 !== i.sim && i.sim.season;
           switch (
             (function () {
               switch (a) {
                 case "/leaderboard":
-                  return dC.Leaderboard;
+                  return fC.Leaderboard;
                 case "/standings":
-                  return dC.Standings;
+                  return fC.Standings;
                 default:
-                  return dC.Live;
+                  return fC.Live;
               }
             })()
           ) {
-            case dC.Leaderboard:
-              s = <kp />;
+            case fC.Leaderboard:
+              s = <Pp />;
               break;
-            case dC.Standings:
-              s = <Qp />;
+            case fC.Standings:
+              s = <jp />;
               break;
-            case dC.Live:
+            case fC.Live:
               s = o ? <wA /> : m;
           }
           return (
@@ -34655,16 +34687,16 @@
                   <Ja id="LEGENDARY" />
                 </div>
               </h2>
-              <Ep />
+              <pp />
               {void 0 === i.sim.state.scheduled_game_event ? (
                 <div> {u} </div>
               ) : (
                 <l.a.Fragment>
                   <div className="League-Body">
                     The Semi Centennial will begin in{" "}
-                    <Op dateString={new Date(i.sim.state.scheduled_game_event).toString()} />.
+                    <Sp dateString={new Date(i.sim.state.scheduled_game_event).toString()} />.
                   </div>
-                  <Cp />
+                  <Ip />
                   {s}
                 </l.a.Fragment>
               )}
@@ -34672,19 +34704,19 @@
           );
         };
       a(83);
-      function kC() {
+      function PC() {
         var e = Object(r.useContext)(S.context);
         if (!e || !e.sim) return null;
         var t = e.tournament;
         return t ? (
           <div className="Tournament-List">
-            <TC teams={null === t || void 0 === t ? void 0 : t.teams} />
+            <DC teams={null === t || void 0 === t ? void 0 : t.teams} />
           </div>
         ) : null;
       }
-      function TC(e) {
+      function DC(e) {
         var t = e.teams.map(function (e, t) {
-          return <PC key={t} team={e} />;
+          return <xC key={t} team={e} />;
         });
         return (
           <div className="Standings-Division">
@@ -34692,7 +34724,7 @@
           </div>
         );
       }
-      function PC(e) {
+      function xC(e) {
         var t = Object(c.g)(),
           a = Object(r.useContext)(oc.context),
           n = Object(r.useContext)(x.context).user,
@@ -34707,7 +34739,7 @@
           >
             <div className="Standings-Team-Name-Container">
               <div className="Standings-Team-Color" style={{ background: i.mainColor }}>
-                <div className="Standings-Team-Emoji">{Yg(i)}</div>
+                <div className="Standings-Team-Emoji">{qg(i)}</div>
               </div>
               <div
                 className={"Standings-Team-Name" + (n.lightMode ? " Standings-Team-Name-LightMode" : "")}
@@ -34729,9 +34761,9 @@
           (e[(e.Tournament = 2)] = "Tournament"),
           (e[(e.Leaderboard = 3)] = "Leaderboard"),
           (e[(e.Bracket = 4)] = "Bracket");
-      })(SC || (SC = {}));
-      var DC,
-        xC = function (e) {
+      })(kC || (kC = {}));
+      var LC,
+        RC = function (e) {
           var t,
             a = e.path,
             n = Object(r.useContext)(S.context),
@@ -34743,22 +34775,22 @@
           function A() {
             switch (a) {
               case "/upcoming":
-                return SC.Upcoming;
+                return kC.Upcoming;
               case "/leaderboard":
-                return SC.Leaderboard;
+                return kC.Leaderboard;
               case "/tournament":
-                return SC.Tournament;
+                return kC.Tournament;
               case "/bracket":
-                return SC.Bracket;
+                return kC.Bracket;
               default:
-                return SC.Live;
+                return kC.Live;
             }
           }
           if (!n.sim) return null;
           var u,
-            m = A() === SC.Upcoming ? n.tomorrowSchedule : n.schedule,
-            d = A() === SC.Live ? n.postseasons[0].matchups : n.postseasons[0].tomorrowMatchups,
-            g = A() === SC.Upcoming ? n.sim.day + 1 : n.sim.day,
+            m = A() === kC.Upcoming ? n.tomorrowSchedule : n.schedule,
+            d = A() === kC.Live ? n.postseasons[0].matchups : n.postseasons[0].tomorrowMatchups,
+            g = A() === kC.Upcoming ? n.sim.day + 1 : n.sim.day,
             f =
               void 0 === m ? null : (
                 <ul>
@@ -34793,7 +34825,7 @@
                     })(m)) || void 0 === t
                     ? void 0
                     : t.map(function (e, t) {
-                        return <Yv index={t} key={t} data={e} matchups={d} />;
+                        return <qv index={t} key={t} data={e} matchups={d} />;
                       })}
                 </ul>
               ),
@@ -34803,36 +34835,36 @@
               ) : (
                 <div>
                   <div className="League-Countdown">
-                    {A() === SC.Upcoming ? <Op dateString={Fg().toString()} /> : null}
+                    {A() === kC.Upcoming ? <Sp dateString={Vg().toString()} /> : null}
                   </div>
                   {f}
                 </div>
               );
           void 0 !== n && void 0 !== n.sim && n.sim.season;
           switch (A()) {
-            case SC.Leaderboard:
-              u = <kp />;
+            case kC.Leaderboard:
+              u = <Pp />;
               break;
-            case SC.Tournament:
-              u = <kC />;
+            case kC.Tournament:
+              u = <PC />;
               break;
-            case SC.Bracket:
-              for (var v = [], p = 0; p < n.postseasons.length; p++) v.push(<Jp playoffIndex={p} />);
+            case kC.Bracket:
+              for (var v = [], p = 0; p < n.postseasons.length; p++) v.push(<Xp playoffIndex={p} />);
               u = <l.a.Fragment>{v}</l.a.Fragment>;
               break;
-            case SC.Live:
-            case SC.Upcoming:
+            case kC.Live:
+            case kC.Upcoming:
               u = s ? <wA /> : E;
           }
           return (
             <div>
               <h2 className="League-Header">{null === c || void 0 === c ? void 0 : c.name}</h2>
-              <wp />
+              <yp />
               {u}
             </div>
           );
         },
-        LC = function (e) {
+        QC = function (e) {
           var t,
             a = e.path,
             n = Object(r.useContext)(S.context),
@@ -34841,22 +34873,22 @@
           var o = null;
           switch (a) {
             case "/leaderboard":
-              o = <kp />;
+              o = <Pp />;
               break;
             case "/tournament":
-              o = <kC />;
+              o = <PC />;
               break;
             case "/league":
-              for (var s = [], c = 0; c < n.postseasons.length; c++) s.push(<Jp playoffIndex={c} />);
+              for (var s = [], c = 0; c < n.postseasons.length; c++) s.push(<Xp playoffIndex={c} />);
               o = <l.a.Fragment>{s}</l.a.Fragment>;
           }
           return (
             <l.a.Fragment>
-              <xy
+              <Ry
                 element={
                   <div className="Stubs-All">
                     <h2 className="League-Header">{null === i || void 0 === i ? void 0 : i.name}</h2>
-                    <Op dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
+                    <Sp dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
                     <div className="Stubs-Body">
                       {null === i || void 0 === i ? void 0 : i.name} will begin soon. Cool!
                     </div>
@@ -34864,13 +34896,13 @@
                 }
                 text="Offseason. Check for updates on the Discord!"
               />
-              <Ep />
-              <Bp />
+              <pp />
+              <Cp />
               {o}
             </l.a.Fragment>
           );
         },
-        RC = function (e) {
+        MC = function (e) {
           var t,
             a = e.path,
             n = Object(r.useContext)(S.context),
@@ -34879,22 +34911,22 @@
           var o = null;
           switch (a) {
             case "/leaderboard":
-              o = <kp />;
+              o = <Pp />;
               break;
             case "/tournament":
-              o = <kC />;
+              o = <PC />;
               break;
             case "/league":
-              for (var s = [], c = 0; c < n.postseasons.length; c++) s.push(<Jp playoffIndex={c} />);
+              for (var s = [], c = 0; c < n.postseasons.length; c++) s.push(<Xp playoffIndex={c} />);
               o = <l.a.Fragment>{s}</l.a.Fragment>;
           }
           return (
             <l.a.Fragment>
-              <xy
+              <Ry
                 element={
                   <div className="Stubs-All">
                     <h2 className="League-Header">{null === i || void 0 === i ? void 0 : i.name}</h2>
-                    <Op dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
+                    <Sp dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
                     <div className="Stubs-Body">
                       Coffee Break! {null === i || void 0 === i ? void 0 : i.name} will continue soon. Cool!
                     </div>
@@ -34902,13 +34934,13 @@
                 }
                 text="Offseason. Check for updates on the Discord!"
               />
-              <Ep />
-              <Bp />
+              <pp />
+              <Cp />
               {o}
             </l.a.Fragment>
           );
         },
-        QC = function (e) {
+        jC = function (e) {
           var t = e.path,
             a = Object(r.useContext)(S.context),
             n = a.tournament,
@@ -34917,13 +34949,13 @@
           var o = null;
           switch (t) {
             case "/leaderboard":
-              o = <kp />;
+              o = <Pp />;
               break;
             case "/tournament":
-              o = <kC />;
+              o = <PC />;
               break;
             case "/league":
-              for (var s = [], c = 0; c < a.postseasons.length; c++) s.push(<Jp playoffIndex={c} />);
+              for (var s = [], c = 0; c < a.postseasons.length; c++) s.push(<Xp playoffIndex={c} />);
               o = <l.a.Fragment>{s}</l.a.Fragment>;
           }
           var A = [],
@@ -34952,7 +34984,7 @@
           for (var g = [], f = 0; f < A.length; f++)
             g.push(
               <l.a.Fragment>
-                <xy
+                <Ry
                   element={
                     <div className="Stubs-All">
                       <h2 className="League-Header">{null === n || void 0 === n ? void 0 : n.name}</h2>
@@ -34967,13 +34999,13 @@
                   }
                   text="Offseason. Check for updates on the Discord!"
                 />
-                <Bp />
+                <Cp />
                 {o}
               </l.a.Fragment>
             );
           return <l.a.Fragment>{g}</l.a.Fragment>;
         };
-      function MC() {
+      function FC() {
         var e = Object(r.useContext)(oc.context),
           t = Object(r.useContext)(S.context);
         return void 0 === e || void 0 === t ? null : (
@@ -34985,13 +35017,13 @@
                 events that are happening in the meantime.
               </div>
             </div>
-            <Qp />
+            <jp />
           </div>
         );
       }
-      var jC = ["title", "titleId"];
-      function FC() {
-        return (FC =
+      var HC = ["title", "titleId"];
+      function VC() {
+        return (VC =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -35001,7 +35033,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function HC(e, t) {
+      function GC(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -35021,13 +35053,13 @@
         }
         return r;
       }
-      function VC(e, t) {
+      function WC(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = HC(e, jC);
+          l = GC(e, HC);
         return (
           <svg
-            {...FC(
+            {...VC(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -35041,13 +35073,13 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {DC || (DC = <image id="siesta" x={9.5} y={55} width={237} height={146} xlinkHref="<img/png blob>" />)}
+            {LC || (LC = <image id="siesta" x={9.5} y={55} width={237} height={146} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var GC,
-        WC = r.forwardRef(VC),
-        zC =
+      var zC,
+        UC = r.forwardRef(WC),
+        YC =
           (a.p,
           function (e) {
             Object(r.useContext)(x.context).user;
@@ -35069,7 +35101,7 @@
                 </div>
                 <div className="Recap-Decree-Content Events-Container">
                   <div className="Recap-Blessing-Team" style={{ background: s.team.mainColor }}>
-                    {Yg(s.team)}
+                    {qg(s.team)}
                   </div>
                   <div className="Recap-Decree-Description">
                     {s.description.split("\n").map(function (e) {
@@ -35086,7 +35118,7 @@
               </div>
             );
           }),
-        UC = function (e) {
+        JC = function (e) {
           Object(r.useContext)(x.context).user;
           var t = Object(r.useContext)(oc.context),
             a = e.event;
@@ -35111,7 +35143,7 @@
               </div>
               <div className="Events-Solo-Content">
                 <div className="Recap-Blessing-Team" style={{ background: n.mainColor }}>
-                  {Yg(n)}
+                  {qg(n)}
                 </div>
                 <nc entity="" event={a} source={Ed.ParentEvent} />
               </div>
@@ -35119,7 +35151,7 @@
             </div>
           );
         },
-        YC = function (e) {
+        qC = function (e) {
           var t = Object(r.useContext)(x.context).user,
             a = Object(r.useContext)(oc.context),
             n = e.event;
@@ -35138,16 +35170,16 @@
                       return (
                         <div className="Account-Spread-Card Recap-Earlsiesta-Card" key={t}>
                           <div className="Account-Spread-Card-Number Recap-Earlsiesta-Card-Number">
-                            {af(Number(e))[0]}
+                            {rf(Number(e))[0]}
                           </div>
                           <div className="Recap-Earlsiesta-Card-Icon">
-                            {Yg(
+                            {qg(
                               a.teams.filter(function (t) {
                                 return t.card === Number(e);
                               })[0]
                             )}
                           </div>
-                          <div className="Account-Spread-Card-Name Recap-Earlsiesta-Card-Text">{af(Number(e))[1]}</div>
+                          <div className="Account-Spread-Card-Name Recap-Earlsiesta-Card-Text">{rf(Number(e))[1]}</div>
                         </div>
                       );
                     })}
@@ -35158,7 +35190,7 @@
             </div>
           );
         },
-        JC = function (e) {
+        XC = function (e) {
           var t = e.event,
             a = Object(r.useContext)(oc.context),
             n = void 0;
@@ -35173,7 +35205,7 @@
                 <div className="Recap-Decree-Content">
                   {n ? (
                     <div className="Recap-Blessing-Team" style={{ background: n.mainColor }}>
-                      {Yg(n)}
+                      {qg(n)}
                     </div>
                   ) : null}
                   <div className="Recap-Decree-Description">
@@ -35184,23 +35216,23 @@
             )
           );
         },
-        qC = function (e) {
+        ZC = function (e) {
           var t = e.event;
           switch (t.type) {
             case 56:
             case 57:
-              return <zC event={t} />;
-            case 81:
               return <YC event={t} />;
+            case 81:
+              return <qC event={t} />;
             case 106:
             case 107:
             case 146:
             case 147:
-              return <UC event={t} />;
+              return <JC event={t} />;
           }
-          return <JC event={t} />;
+          return <XC event={t} />;
         },
-        XC = function (e) {
+        KC = function (e) {
           var t,
             a = e.path,
             n = Object(r.useContext)(S.context),
@@ -35237,10 +35269,10 @@
             d = null;
           switch (a) {
             case "/leaderboard":
-              d = <kp />;
+              d = <Pp />;
               break;
             case "/standings":
-              d = <Qp />;
+              d = <jp />;
               break;
             case "/league":
               d = (
@@ -35256,10 +35288,10 @@
                                   return a.includes(e.id);
                                 })
                               : [];
-                          return n.length > 0 ? <my event={e} subEvents={n} /> : null;
+                          return n.length > 0 ? <gy event={e} subEvents={n} /> : null;
                         }
                         return (null === (t = e.metadata) || void 0 === t ? void 0 : t.parent) ? null : (
-                          <qC event={e} />
+                          <ZC event={e} />
                         );
                       })
                     ) : (
@@ -35273,24 +35305,24 @@
           }
           return (
             <div>
-              <xy
+              <Ry
                 element={
                   <div className="Stubs-All">
-                    <WC style={{ width: "250px", height: "250px" }} />
+                    <UC style={{ width: "250px", height: "250px" }} />
                     <div className="Stubs-Header">Earlsiesta</div>
-                    <Ep />
-                    <Op dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
+                    <pp />
+                    <Sp dateString={null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime} />
                     <div className="Stubs-Body">Midseason {i + 1} will begin soon.</div>
                   </div>
                 }
                 text=""
               />
-              <yp />
+              <Op />
               {d}
             </div>
           );
         },
-        ZC = function (e) {
+        _C = function (e) {
           Object(r.useContext)(x.context).user;
           var t = Object(r.useContext)(oc.context),
             a = e.event;
@@ -35308,14 +35340,14 @@
               </div>
               <div className="Recap-Decree-Content">
                 <div className="Recap-Blessing-Team" style={{ background: n.mainColor }}>
-                  {Yg(n)}
+                  {qg(n)}
                 </div>
                 <div className="Recap-Decree-Description">{yd(e)}</div>
               </div>
             </div>
           );
         },
-        KC = function (e) {
+        $C = function (e) {
           var t,
             a,
             n = e.path,
@@ -35405,7 +35437,7 @@
                     />
                   </Z.a>
                   {D.map(function (e) {
-                    return v && !e.teamTags.includes(P) ? null : (Q && (Q = !1), (<qC event={e} />));
+                    return v && !e.teamTags.includes(P) ? null : (Q && (Q = !1), (<ZC event={e} />));
                   })}
                   {Q ? <div className="Recap-NoneFound">No events found...</div> : null}
                 </div>
@@ -35458,7 +35490,7 @@
                           </div>
                           <div className="Recap-Decree-Content">
                             <div className="Recap-Blessing-Team" style={{ background: n.mainColor }}>
-                              {Yg(n)}
+                              {qg(n)}
                             </div>
                             <div className="Recap-Decree-Description">
                               Top Contributers:
@@ -35467,7 +35499,7 @@
                                   return (
                                     <li className="Events-List-Item Recap-Gift-Contributer-Wrapper">
                                       <div className="Recap-Gift-Contributer" style={{ background: e.team.mainColor }}>
-                                        {Yg(e.team)}
+                                        {qg(e.team)}
                                       </div>
                                       <div className="Recap-Gift-Description">
                                         {e.team.nickname} - {Math.round((e.coins / a.totalBenefactorCoins) * 100)}%.
@@ -35495,7 +35527,7 @@
                                         return t.includes(e.id);
                                       })
                                     : [];
-                                return <ZC event={e} subEvents={a} />;
+                                return <_C event={e} subEvents={a} />;
                               })}
                         </div>
                       </div>
@@ -35516,7 +35548,7 @@
                         return I(!O);
                       }}
                     />
-                    <dy subEvents={R} />
+                    <fy subEvents={R} />
                   </div>
                 ) : null}
               </div>
@@ -35524,36 +35556,36 @@
             F = null;
           switch (n) {
             case "/leaderboard":
-              F = <kp />;
+              F = <Pp />;
               break;
             case "/standings":
-              F = <Qp />;
+              F = <jp />;
               break;
             case "/league":
               F = j;
           }
           return (
             <div>
-              <xy
+              <Ry
                 element={
                   <div className="Stubs-All">
-                    <WC style={{ width: "250px", height: "250px" }} />
+                    <UC style={{ width: "250px", height: "250px" }} />
                     <div className="Stubs-Header">Latesiesta</div>
-                    <Ep />
-                    <Op dateString={null === (a = i.sim) || void 0 === a ? void 0 : a.nextPhaseTime} />
+                    <pp />
+                    <Sp dateString={null === (a = i.sim) || void 0 === a ? void 0 : a.nextPhaseTime} />
                     <div className="Stubs-Body">Lateseason {o + 1} will begin soon.</div>
                   </div>
                 }
                 text=""
               />
-              <yp />
+              <Op />
               {F}
-              <op />
+              <cp />
             </div>
           );
         },
-        _C = a(161),
-        $C = function (e) {
+        eO = a(161),
+        tO = function (e) {
           var t = Object(cA.useToasts)().addToast,
             a = Object(r.useContext)(x.context),
             n = a.user,
@@ -35665,14 +35697,14 @@
             )
           );
         },
-        eO = function (e) {
+        aO = function (e) {
           var t = e.stadium,
             a =
               (Object(r.useContext)(x.context).user,
               null !== t.model ? (
                 <div className="Team-Stadium-Header-Line">
                   <div className="Player-Info-Line-Header">
-                    <hv stadium={t} style={dv.TeamModal} />
+                    <wv stadium={t} style={fv.TeamModal} />
                   </div>
                   <div className="Team-Stadium-Header">{t.name}</div>
                 </div>
@@ -35686,7 +35718,7 @@
               : (i.push("The top chosen Renovation(s) will be implemented for your Team's Ballpark."),
                 i.push("The more Coins contributed to your Ballpark, the more Renovations will be built.")),
             i.push("All Ballpark construction goes into effect in the Latesiesta, after Day 72.");
-          var o = <mh header={n} lines={i} noMargin={!0} />;
+          var o = <gh header={n} lines={i} noMargin={!0} />;
           return (
             <div className="Offseason-Info">
               <div className="Offseason-Header">
@@ -35699,7 +35731,7 @@
             </div>
           );
         },
-        tO = function (e) {
+        nO = function (e) {
           var t = e.loading,
             a = e.progress,
             n = e.stadium;
@@ -35719,7 +35751,7 @@
                       aria-valuemin={0}
                       aria-valuemax={100}
                       style={{
-                        color: Mg(n.mainColor),
+                        color: Fg(n.mainColor),
                         backgroundColor: n.mainColor,
                         width: "".concat(Math.floor(100 * (null === a || void 0 === a ? void 0 : a.toNext)), "%"),
                       }}
@@ -35764,7 +35796,7 @@
             )
           );
         },
-        aO = function (e) {
+        rO = function (e) {
           var t = e.loading,
             a = e.renovations,
             n = e.user,
@@ -35774,8 +35806,8 @@
             s = e.renoStats;
           return t || !a ? null : null === r.model ? (
             <div className="Team-Construction-Options">
-              {_C.collection.map(function (e, t) {
-                return <rO prefab={e} stadium={r} index={t} selected={i} setSelected={o} user={n} />;
+              {eO.collection.map(function (e, t) {
+                return <iO prefab={e} stadium={r} index={t} selected={i} setSelected={o} user={n} />;
               })}
             </div>
           ) : (
@@ -35785,7 +35817,7 @@
                 : a.map(function (e) {
                     var t;
                     return (
-                      <nO
+                      <lO
                         stadium={r}
                         reno={e}
                         selected={i}
@@ -35805,7 +35837,7 @@
             </div>
           );
         },
-        nO = function (e) {
+        lO = function (e) {
           var t = e.reno,
             a = e.selected,
             n = e.setSelected,
@@ -35817,8 +35849,8 @@
           var c = t.description;
           return (
             4 === t.type &&
-              Wg(o, t.id) &&
-              (c = 1 === zg(o, "light_switch_toggle") ? t.data.toggleOffDescription : t.data.toggleOnDescription),
+              Ug(o, t.id) &&
+              (c = 1 === Yg(o, "light_switch_toggle") ? t.data.toggleOffDescription : t.data.toggleOnDescription),
             (
               <div
                 className={s}
@@ -35852,7 +35884,7 @@
             )
           );
         },
-        rO = function (e) {
+        iO = function (e) {
           var t = e.index,
             a = e.stadium,
             n = e.prefab,
@@ -35872,7 +35904,7 @@
                 }}
               >
                 <div className="Team-Construction-Prefab-Icon">
-                  <fv index={t} stadium={a} style={dv.TeamModal} />
+                  <vv index={t} stadium={a} style={fv.TeamModal} />
                 </div>
                 <div className="Team-Construction-Prefab-Title">{n.name}</div>
                 <div className="Team-Construction-Renovation-Description">{n.description}</div>
@@ -35880,16 +35912,16 @@
             )
           );
         },
-        lO = function (e) {
+        oO = function (e) {
           var t = e.stadiumId,
             a = e.selected,
             n = e.setSelected,
             r = e.user,
             i = Object(c.g)(),
-            o = <iO />;
+            o = <sO />;
           if (
-            (r.isFetching || !r.isSignedIn || r.favoriteTeam || (o = <oO />),
-            !r.isFetching && r.isSignedIn && (r.coins <= 0 || !r.coins) && (o = <sO />),
+            (r.isFetching || !r.isSignedIn || r.favoriteTeam || (o = <cO />),
+            !r.isFetching && r.isSignedIn && (r.coins <= 0 || !r.coins) && (o = <AO />),
             !r.isFetching && r.isSignedIn && r.favoriteTeam && r.coins > 0)
           ) {
             var s = r.coins >= 25;
@@ -35934,28 +35966,28 @@
           }
           return o;
         },
-        iO = function () {
+        sO = function () {
           return (
             <a href="/login">
               <BA.a className="Blessings-Submit-Button">Login to Vote</BA.a>
             </a>
           );
         },
-        oO = function () {
+        cO = function () {
           return (
             <a href="/welcome">
               <BA.a className="Blessings-Submit-Button">Pick a Favorite Team to Vote</BA.a>
             </a>
           );
         },
-        sO = function () {
+        AO = function () {
           return (
             <a href={"/shop/".concat(ne.BEG)}>
               <BA.a className="Blessings-Submit-Button">No Coins</BA.a>
             </a>
           );
         },
-        cO = function (e) {
+        uO = function (e) {
           var t = Object(r.useContext)(S.context),
             a = Object(r.useContext)(oc.context),
             n = Object(r.useState)(void 0),
@@ -35979,7 +36011,7 @@
             N = I[0],
             k = I[1],
             T = Object(r.useContext)(x.context).user,
-            P = Ug(t.sim),
+            P = Jg(t.sim),
             D = a.teams.find(function (e) {
               return e.id === T.favoriteTeam;
             });
@@ -36048,10 +36080,10 @@
             <wA />
           ) : d ? (
             <div className="Renovation-Body">
-              <tO loading={y} progress={d} stadium={Q} />
-              <aO loading={y} renovations={o} renoStats={h} user={T} stadium={Q} selected={N} setSelected={k} />
+              <nO loading={y} progress={d} stadium={Q} />
+              <rO loading={y} renovations={o} renoStats={h} user={T} stadium={Q} selected={N} setSelected={k} />
               <div className="Team-Construction-Bottom">
-                <lO stadiumId={Q.id} selected={N} setSelected={k} user={T} />
+                <oO stadiumId={Q.id} selected={N} setSelected={k} user={T} />
               </div>
             </div>
           ) : (
@@ -36062,7 +36094,7 @@
             P ||
               (M = (
                 <l.a.Fragment>
-                  <eO stadium={Q} />
+                  <aO stadium={Q} />
                   <div className="Renovation-Body">
                     <div className="Offseason-Info">
                       <div className="Offseason-Description">
@@ -36077,7 +36109,7 @@
               void 0 === T.snacks.Stadium_Access &&
               (M = (
                 <l.a.Fragment>
-                  <eO stadium={Q} />
+                  <aO stadium={Q} />
                   <div className="Renovation-Body">
                     <div className="Offseason-Info">
                       <div className="Offseason-Description">
@@ -36095,14 +36127,14 @@
               void 0 !== T.snacks.Stadium_Access &&
               (M = (
                 <l.a.Fragment>
-                  <eO stadium={Q} />
+                  <aO stadium={Q} />
                   {R}
                 </l.a.Fragment>
               )),
             (<div className="Renovation">{M}</div>)
           );
         },
-        AO = function (e) {
+        mO = function (e) {
           var t = e.percent,
             a = e.color;
           return (
@@ -36113,15 +36145,15 @@
                 aria-valuenow={t}
                 aria-valuemin={0}
                 aria-valuemax={100}
-                style={{ backgroundColor: a, color: Mg(a), width: "".concat(t, "%") }}
+                style={{ backgroundColor: a, color: Fg(a), width: "".concat(t, "%") }}
               >
                 {t}%
               </div>
             </div>
           );
         },
-        uO = function (e) {
-          var t = Object(r.useContext)(nb.context),
+        dO = function (e) {
+          var t = Object(r.useContext)(lb.context),
             a = Object(r.useContext)(S.context),
             n = Object(r.useContext)(oc.context),
             i = Object(r.useContext)(x.context),
@@ -36147,7 +36179,7 @@
             function () {
               if ((void 0 === v && D(), T.length < 1)) {
                 var e,
-                  t = qg(n, { filters: {} }, null !== (e = o.favoriteTeam) && void 0 !== e ? e : "", !1);
+                  t = Zg(n, { filters: {} }, null !== (e = o.favoriteTeam) && void 0 !== e ? e : "", !1);
                 P(t);
               }
             },
@@ -36198,7 +36230,7 @@
             G = n.teams.find(function (e) {
               return e.id === o.favoriteTeam;
             }),
-            W = Ug(a.sim),
+            W = Jg(a.sim),
             z = (
               <l.a.Fragment>
                 <div className="Offseason-Header">Gift Shop</div>
@@ -36208,7 +36240,7 @@
                       style={{ backgroundColor: void 0 !== G ? G.mainColor : "#ffffff" }}
                       className="Player-Team-Logo"
                     >
-                      {Yg(G)}
+                      {qg(G)}
                     </div>
                   </div>
                   <div className="Team-Stadium-Header">{void 0 !== G ? G.fullName : "Null Team"}</div>
@@ -36391,12 +36423,12 @@
                       <li className="Player-Info-Line GiftShop-Gifts-Item" key={e.id}>
                         <div className="Player-Info-Line-Header GiftShop-Gifts-Item-Header">
                           <div className="GiftShop-Gifts-TeamLogo" style={{ background: e.mainColor }}>
-                            {Yg(e)}
+                            {qg(e)}
                           </div>
                           {e.nickname}
                         </div>
                         <div className="Player-Info-Line-Body GiftShop-Gifts-Item-Body">
-                          {Jg("0x1F381")} {q(e.id)}
+                          {Xg("0x1F381")} {q(e.id)}
                           <span className="GiftShop-Gifts-Item-Bonus">
                             {(function (e, t) {
                               return (
@@ -36410,7 +36442,7 @@
                               ? "(+1)"
                               : ""}
                           </span>
-                          <AO percent={J(e.id)} color={e.mainColor} />
+                          <mO percent={J(e.id)} color={e.mainColor} />
                         </div>
                         <button
                           className={
@@ -36480,10 +36512,10 @@
             )
           );
         },
-        mO = function (e) {
+        gO = function (e) {
           var t = Object(r.useContext)(x.context),
             a = t.user,
-            n = (t.setUser, Object(r.useContext)(nb.context)),
+            n = (t.setUser, Object(r.useContext)(lb.context)),
             i = e.color,
             o =
               (e.index,
@@ -36511,9 +36543,9 @@
             </Ka.a>
           );
         },
-        dO = function (e) {
+        fO = function (e) {
           var t = Object(r.useContext)(x.context),
-            a = (t.user, t.setUser, Object(r.useContext)(nb.context)),
+            a = (t.user, t.setUser, Object(r.useContext)(lb.context)),
             n = (e.color, e.index);
           return void 0 ===
             a.gifts.find(function (t) {
@@ -36522,11 +36554,11 @@
             <l.a.Fragment />
           ) : (
             <div className="Gift-List-Item">
-              <strong>{n}.</strong> <span className="Gift-List-Item-Emoji">{Jg("0x1F381")}</span>
+              <strong>{n}.</strong> <span className="Gift-List-Item-Emoji">{Xg("0x1F381")}</span>
             </div>
           );
         },
-        gO = function (e) {
+        EO = function (e) {
           var t,
             a,
             n = Object(c.h)().teamId,
@@ -36536,7 +36568,7 @@
             m = o.setUser,
             d = Object(c.f)(),
             g = Object(r.useContext)(oc.context),
-            v = (Object(r.useContext)(nb.context), Object(r.useState)(0)),
+            v = (Object(r.useContext)(lb.context), Object(r.useState)(0)),
             p = Object(s.a)(v, 2),
             h = p[0],
             b = p[1],
@@ -36603,7 +36635,7 @@
                 <div className="Gift-List">
                   <div className="Player-Team-Line" style={{ justifyContent: "center" }}>
                     <div className="Player-Team-Logo" style={{ background: void 0 !== S ? S.mainColor : "#999999" }}>
-                      <div className="Player-Team-Emoji">{Yg(S)}</div>
+                      <div className="Player-Team-Emoji">{qg(S)}</div>
                     </div>
                     <div className="Player-Team-Name">{void 0 !== S ? S.fullName : "Null Team"}'s Wishlist</div>
                   </div>
@@ -36613,7 +36645,7 @@
                       : t.map(function (e, t) {
                           var a;
                           return (
-                            <dO
+                            <fO
                               index={t + 1}
                               id={e}
                               color={
@@ -36629,7 +36661,7 @@
                       : a.map(function (e, t) {
                           var a;
                           return (
-                            <mO
+                            <gO
                               index={t + 1}
                               id={e}
                               color={
@@ -36649,7 +36681,7 @@
                       if (
                         (e.preventDefault(),
                         C(!0),
-                        Gg(n, g) || (i("Team not accepting gifts", { appearance: "error" }), d.goBack()),
+                        zg(n, g) || (i("Team not accepting gifts", { appearance: "error" }), d.goBack()),
                         h < 25)
                       )
                         i("The minimum Gift contribution is 25 Coins.", { appearance: "error" });
@@ -36721,13 +36753,13 @@
             )
           );
         },
-        fO = function (e) {
+        vO = function (e) {
           var t = Object(cA.useToasts)().addToast,
             a = Object(r.useContext)(x.context),
             n = a.user,
             i = a.setUser,
             o = Object(c.f)(),
-            u = Object(r.useContext)(nb.context),
+            u = Object(r.useContext)(lb.context),
             m = (Object(c.h)().id, Object(r.useState)(25)),
             d = Object(s.a)(m, 2),
             g = d[0],
@@ -36842,9 +36874,9 @@
             </hA>
           );
         },
-        EO = ["title", "titleId"];
-      function vO() {
-        return (vO =
+        pO = ["title", "titleId"];
+      function hO() {
+        return (hO =
           Object.assign ||
           function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -36854,7 +36886,7 @@
             return e;
           }).apply(this, arguments);
       }
-      function pO(e, t) {
+      function bO(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -36874,13 +36906,13 @@
         }
         return r;
       }
-      function hO(e, t) {
+      function wO(e, t) {
         var a = e.title,
           n = e.titleId,
-          l = pO(e, EO);
+          l = bO(e, pO);
         return (
           <svg
-            {...vO(
+            {...hO(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -36894,131 +36926,184 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {GC || (GC = <image x={56} y={56} width={389} height={389} xlinkHref="<img/png blob>" />)}
+            {zC || (zC = <image x={56} y={56} width={389} height={389} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var bO = r.forwardRef(hO);
+      var BO = r.forwardRef(wO);
       a.p;
-      function wO() {
-        return Hg(Object(r.useContext)(S.context).sim, "SIM_PANIC")
+      function yO() {
+        return Gg(Object(r.useContext)(S.context).sim, "SIM_PANIC")
           ? (function () {
               var e,
                 t,
                 a,
                 n,
-                i = Object(r.useContext)(x.context),
-                o = i.user,
-                A = (i.setUser, Object(r.useContext)(S.context)),
-                u = Object(r.useState)([]),
-                m = Object(s.a)(u, 2),
-                g = m[0],
-                f = m[1],
-                E = Object(c.g)(),
-                v = Object(r.useState)(null !== (e = o.motion) && void 0 !== e && e),
-                p = Object(s.a)(v, 2),
-                h = p[0],
-                b = (p[1], Object(r.useState)(!1)),
-                w = Object(s.a)(b, 2),
-                B = w[0],
-                y = w[1],
-                C = Object(r.useContext)(oc.context);
+                i,
+                o = Object(r.useContext)(x.context),
+                A = o.user,
+                u = (o.setUser, Object(r.useContext)(S.context)),
+                m = Object(r.useState)([]),
+                g = Object(s.a)(m, 2),
+                f = g[0],
+                E = g[1],
+                v = Object(c.g)(),
+                p = Object(r.useState)(null !== (e = A.motion) && void 0 !== e && e),
+                h = Object(s.a)(p, 2),
+                b = h[0],
+                w = (h[1], Object(r.useState)(!1)),
+                B = Object(s.a)(w, 2),
+                y = B[0],
+                C = B[1],
+                O = Object(r.useContext)(oc.context),
+                I = Object(r.useState)(
+                  null !== (t = null === u || void 0 === u || null === (a = u.sim) || void 0 === a ? void 0 : a.day) &&
+                    void 0 !== t
+                    ? t
+                    : -1
+                ),
+                N = Object(s.a)(I, 2),
+                k = N[0],
+                T = N[1];
               Object(r.useEffect)(function () {
                 document.body.classList.add("no-x");
                 var e = window.matchMedia("(max-width: 1080px)");
-                e.addListener(O), O(e);
+                e.addListener(P), P(e);
                 window.matchMedia("(prefers-reduced-motion: reduce)");
                 return function () {
-                  e.removeListener(O);
+                  e.removeListener(P);
                 };
               }, []);
-              var O = function (e) {
-                e.matches ? y(!0) : y(!1);
+              var P = function (e) {
+                e.matches ? C(!0) : C(!1);
               };
               Object(r.useEffect)(
                 function () {
-                  if (g.length < 1) {
+                  if (f.length < 1) {
                     var e,
-                      t = qg(C, { filters: {} }, null !== (e = o.favoriteTeam) && void 0 !== e ? e : "", !1);
-                    f(t);
+                      t = Zg(O, { filters: {} }, null !== (e = A.favoriteTeam) && void 0 !== e ? e : "", !1);
+                    E(t);
                   }
                 },
-                [C]
-              );
+                [O]
+              ),
+                Object(r.useEffect)(
+                  function () {
+                    if (u && u.sim && f.length > 1) {
+                      var e = f.map(function (e) {
+                        var t = e;
+                        if (void 0 !== e.state.imp_motion && e.state.imp_motion.length > 0) {
+                          var a = e.state.imp_motion.find(function (e) {
+                            return e.day === k;
+                          });
+                          a && (t.imPosition = a.imPosition);
+                        }
+                        return t;
+                      });
+                      E(e);
+                    }
+                  },
+                  [k]
+                );
               for (
-                var I =
-                    (null === A || void 0 === A || null === (t = A.sim) || void 0 === t ? void 0 : t.day) &&
-                    (null === A || void 0 === A || null === (a = A.sim) || void 0 === a ? void 0 : a.day) - 27 > 0
-                      ? 0.00625 *
-                        ((null === A || void 0 === A || null === (n = A.sim) || void 0 === n ? void 0 : n.day) - 27)
-                      : 0,
-                  N = [],
-                  k = [],
-                  T = B ? 16.5 : 19.25,
-                  P = B ? 7 : 14,
-                  D = B ? 7 : 14,
-                  L = 0;
-                L < D - 1;
-                L++
+                var D = k - 1 < 31,
+                  L = (null === u || void 0 === u ? void 0 : u.sim) && k + 1 > u.sim.day,
+                  R = function () {
+                    D || T(k - 1);
+                  },
+                  Q = function () {
+                    L || T(k + 1);
+                  },
+                  M = k - 27 > 0 ? 0.00625 * (k - 27) : 0,
+                  j = [],
+                  F = [],
+                  H = y ? 16.5 : 19.25,
+                  V = y ? 7 : 14,
+                  G = y ? 7 : 14,
+                  W = 0;
+                W < G - 1;
+                W++
               )
-                k.push(
+                F.push(
                   <div
                     className="QuadrantChart-Line QuadrantChart-Line-Vertical"
-                    style={{ left: "".concat(L * T + T, "px") }}
+                    style={{ left: "".concat(W * H + H, "px") }}
                   />
                 );
-              for (var R = 0; R < P - 1; R++)
-                N.push(
+              for (var z = 0; z < V - 1; z++)
+                j.push(
                   <div
                     className="QuadrantChart-Line QuadrantChart-Line-Horizontal"
-                    style={{ top: "".concat((R + 1) * T, "px") }}
+                    style={{ top: "".concat((z + 1) * H, "px") }}
                   />
                 );
-              var Q = [],
-                M = [],
-                j = [],
-                F = [];
-              function H(e, t, a) {
+              var U = [],
+                Y = [],
+                J = [],
+                q = [];
+              function X(e, t, a) {
                 return e
                   .map(function (e, t) {
-                    return {
-                      team: e,
-                      x:
-                        e.imPosition[0] <= 0
-                          ? Math.max(Math.min(Math.round(D * Math.abs(e.imPosition[0])), D), 1)
-                          : Math.max(D - Math.min(Math.round(D * Math.abs(e.imPosition[0])), D), 1),
-                      y:
+                    var a = 0,
+                      n = 0;
+                    (a =
+                      e.imPosition[0] <= 0
+                        ? Math.max(Math.min(Math.round(G * Math.abs(e.imPosition[0])), G), 1)
+                        : Math.max(G - Math.min(Math.round(G * Math.abs(e.imPosition[0])), G), 1)),
+                      (n =
                         e.imPosition[1] <= 0
-                          ? Math.max(Math.min(Math.round(P * Math.abs(e.imPosition[1])), P), 1)
-                          : Math.max(P - Math.min(Math.round(P * Math.abs(e.imPosition[1])), P), 1),
-                    };
+                          ? Math.max(Math.min(Math.round(V * Math.abs(e.imPosition[1])), V), 1)
+                          : Math.max(V - Math.min(Math.round(V * Math.abs(e.imPosition[1])), V), 1));
+                    var r = e.state.imp_motion.find(function (e) {
+                      return e.day === k - 1;
+                    });
+                    return { team: e, x: a, y: n, previous: r };
                   })
                   .sort(function (e, t) {
                     return t.x - e.x || t.y - e.y;
                   });
               }
-              g.forEach(function (e) {
+              f.forEach(function (e) {
                 -1 === Math.sign(e.imPosition[0])
                   ? -1 === Math.sign(e.imPosition[1])
-                    ? Q.push(e)
-                    : F.push(e)
+                    ? U.push(e)
+                    : q.push(e)
                   : -1 === Math.sign(e.imPosition[1])
-                  ? j.push(e)
-                  : M.push(e);
+                  ? J.push(e)
+                  : Y.push(e);
               });
-              var V = H(Q, -1, -1),
-                G = H(M, 1, 1),
-                W = H(j, 1, -1),
-                z = H(F, -1, 1),
-                U = [];
+              var Z = X(U, -1, -1),
+                K = X(Y, 1, 1),
+                _ = X(J, 1, -1),
+                $ = X(q, -1, 1),
+                ee = [];
               return (
                 <div className="QuadrantChart" id="Main-Body">
-                  <Ep />
-                  <div className="QuadrantChart-Chart" style={{ transform: "rotate(".concat(I, "deg)") }}>
+                  <div
+                    className="League-Header"
+                    style={{ minWidth: "376.25px", justifyContent: D ? "flex-end" : "flex-start" }}
+                  >
+                    {D ? null : <Ae.a className="QuadrantChart-Arrows" style={{ marginRight: "10px" }} onClick={R} />}
+                    <div>
+                      Season
+                      <span className="League-Number">
+                        {(null !==
+                          (n =
+                            null === u || void 0 === u || null === (i = u.sim) || void 0 === i ? void 0 : i.season) &&
+                        void 0 !== n
+                          ? n
+                          : -1) + 1}
+                      </span>
+                      Day<span className="League-Number">{k + 1}</span>
+                    </div>
+                    {L ? null : <Ae.b className="QuadrantChart-Arrows" style={{ marginLeft: "10px" }} onClick={Q} />}
+                  </div>
+                  <pp />
+                  <div className="QuadrantChart-Chart" style={{ transform: "rotate(".concat(M, "deg)") }}>
                     <div className="QuadrantChart-Quadrant" style={{ gridColumn: 2, gridRow: 2 }}>
-                      {N}
-                      {k}
-                      {B
+                      {j}
+                      {F}
+                      {y
                         ? [
                             [2, 3],
                             [2, 7],
@@ -37031,7 +37116,7 @@
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="QuadrantChart-Quadrant-Locales-Small"
                                 viewBox="50 15 400 512"
-                                style={{ gridColumn: e[0], gridRow: e[1], transform: "rotate(".concat(-I, "deg)") }}
+                                style={{ gridColumn: e[0], gridRow: e[1], transform: "rotate(".concat(-M, "deg)") }}
                               >
                                 <g transform="translate(-1,-31)">
                                   <g>
@@ -37070,7 +37155,7 @@
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="QuadrantChart-Quadrant-Locales-Small"
                                 viewBox="50 15 400 512"
-                                style={{ gridColumn: e[0], gridRow: e[1], transform: "rotate(".concat(-I, "deg)") }}
+                                style={{ gridColumn: e[0], gridRow: e[1], transform: "rotate(".concat(-M, "deg)") }}
                               >
                                 <g transform="translate(-1,-31)">
                                   <g>
@@ -37089,241 +37174,328 @@
                               </svg>
                             );
                           })}
-                      {G.map(function (e, t) {
-                        var a = e.team.imPosition[0].toFixed(3),
-                          n = e.team.imPosition[1].toFixed(3);
+                      {K.map(function (e, t) {
+                        var a,
+                          n,
+                          r,
+                          i,
+                          o,
+                          s,
+                          c = e.team.imPosition[0].toFixed(3),
+                          A = e.team.imPosition[1].toFixed(3),
+                          u =
+                            null !==
+                              (a = null === (n = e.previous) || void 0 === n ? void 0 : n.imPosition[0].toFixed(3)) &&
+                            void 0 !== a
+                              ? a
+                              : "",
+                          m =
+                            null !==
+                              (r = null === (i = e.previous) || void 0 === i ? void 0 : i.imPosition[1].toFixed(3)) &&
+                            void 0 !== r
+                              ? r
+                              : "";
+                        0 !== t && K[t - 1].x === e.x && K[t - 1].y === e.y
+                          ? ee.push({
+                              nickname: K[t - 1].team.nickname,
+                              mainColor: K[t - 1].team.mainColor,
+                              xValue: K[t - 1].team.imPosition[0].toFixed(3),
+                              yValue: K[t - 1].team.imPosition[1].toFixed(3),
+                              prevXValue:
+                                null !== (o = K[t - 1].team.imPosition[0].toFixed(3)) && void 0 !== o ? o : "",
+                              prevYValue:
+                                null !== (s = K[t - 1].team.imPosition[1].toFixed(3)) && void 0 !== s ? s : "",
+                            })
+                          : (ee = []);
                         return (
-                          0 !== t && G[t - 1].x === e.x && G[t - 1].y === e.y
-                            ? (!0,
-                              U.push({
-                                nickname: G[t - 1].team.nickname,
-                                mainColor: G[t - 1].team.mainColor,
-                                xValue: G[t - 1].team.imPosition[0].toFixed(3),
-                                yValue: G[t - 1].team.imPosition[1].toFixed(3),
-                              }))
-                            : (U = []),
-                          (
-                            <Ka.a
-                              key={t}
-                              placement="top"
-                              overlay={
-                                <Za.a id={"tooltip-" + t.toString()} className="AttributeTooltip">
-                                  <div className="AttributeTooltip-Container">
-                                    <div
-                                      className="AttributeTooltip-Header"
-                                      style={{
-                                        color: Mg(e.team.mainColor),
-                                        backgroundColor: e.team.mainColor,
-                                        padding: "0 5px",
-                                      }}
-                                    >
-                                      {e.team.nickname}
-                                    </div>
-                                    <div className="AttributeTooltip-Description">X: {a}</div>
-                                    <div className="AttributeTooltip-Description">Y: {n}</div>
-                                    {U.reverse().map(function (e) {
-                                      return (
-                                        <l.a.Fragment>
-                                          <div style={{ height: "5px" }} />
-                                          <div
-                                            className="AttributeTooltip-Header"
-                                            style={{
-                                              color: Mg(e.mainColor),
-                                              backgroundColor: e.mainColor,
-                                              padding: "0 8px",
-                                            }}
-                                          >
-                                            {e.nickname}
-                                          </div>
-                                          <div className="AttributeTooltip-Description">X: {e.xValue}</div>
-                                          <div className="AttributeTooltip-Description">Y: {e.yValue}</div>
-                                        </l.a.Fragment>
-                                      );
-                                    })}
+                          <Ka.a
+                            key={t}
+                            placement="top"
+                            overlay={
+                              <Za.a id={"tooltip-" + t.toString()} className="AttributeTooltip">
+                                <div className="AttributeTooltip-Container">
+                                  <div
+                                    className="AttributeTooltip-Header"
+                                    style={{
+                                      color: Fg(e.team.mainColor),
+                                      backgroundColor: e.team.mainColor,
+                                      padding: "0 5px",
+                                    }}
+                                  >
+                                    {e.team.nickname}
                                   </div>
-                                </Za.a>
-                              }
+                                  <div className="AttributeTooltip-Description">X: {c}</div>
+                                  <div className="AttributeTooltip-Description">Y: {A}</div>
+                                  {"" !== u ? (
+                                    <div className="AttributeTooltip-Description">
+                                      <b>Day {k}:</b> {u}, {m}
+                                    </div>
+                                  ) : null}
+                                  {ee.reverse().map(function (e) {
+                                    return (
+                                      <l.a.Fragment>
+                                        <div style={{ height: "5px" }} />
+                                        <div
+                                          className="AttributeTooltip-Header"
+                                          style={{
+                                            color: Fg(e.mainColor),
+                                            backgroundColor: e.mainColor,
+                                            padding: "0 8px",
+                                          }}
+                                        >
+                                          {e.nickname}
+                                        </div>
+                                        <div className="AttributeTooltip-Description">X: {e.xValue}</div>
+                                        <div className="AttributeTooltip-Description">Y: {e.yValue}</div>
+                                        {"" !== e.prevXValue ? (
+                                          <div className="AttributeTooltip-Description">
+                                            <b>Day {k}:</b> {e.prevXValue}, {e.prevYValue}
+                                          </div>
+                                        ) : null}
+                                      </l.a.Fragment>
+                                    );
+                                  })}
+                                </div>
+                              </Za.a>
+                            }
+                          >
+                            <div
+                              style={{
+                                gridColumn: e.x,
+                                gridRow: e.y,
+                                height: "100%",
+                                width: "100%",
+                                animation: b ? "none" : "",
+                                transform: "rotate(".concat(-M, "deg)"),
+                                zIndex: 4,
+                              }}
                             >
-                              <div
-                                style={{
-                                  gridColumn: e.x,
-                                  gridRow: e.y,
-                                  height: "100%",
-                                  width: "100%",
-                                  animation: h ? "none" : "",
-                                  transform: "rotate(".concat(-I, "deg)"),
-                                  zIndex: 4,
-                                }}
-                              >
-                                <d background={E} path={"/team/".concat(e.team.id)} className="DepthChart-Team-Wrapper">
-                                  <div className="DepthChart-Team QuadrantChart-Team">{Yg(e.team)}</div>
-                                </d>
-                              </div>
-                            </Ka.a>
-                          )
+                              <d background={v} path={"/team/".concat(e.team.id)} className="DepthChart-Team-Wrapper">
+                                <div className="DepthChart-Team QuadrantChart-Team">{qg(e.team)}</div>
+                              </d>
+                            </div>
+                          </Ka.a>
                         );
                       })}
                     </div>
                     <div className="QuadrantChart-Quadrant" style={{ gridColumn: 3, gridRow: 2 }}>
-                      {N}
-                      {k}
-                      {z.map(function (e, t) {
-                        var a = e.team.imPosition[0].toFixed(3),
-                          n = e.team.imPosition[1].toFixed(3);
+                      {j}
+                      {F}
+                      {$.map(function (e, t) {
+                        var a,
+                          n,
+                          r,
+                          i,
+                          o,
+                          s,
+                          c = e.team.imPosition[0].toFixed(3),
+                          A = e.team.imPosition[1].toFixed(3),
+                          u =
+                            null !==
+                              (a = null === (n = e.previous) || void 0 === n ? void 0 : n.imPosition[0].toFixed(3)) &&
+                            void 0 !== a
+                              ? a
+                              : "",
+                          m =
+                            null !==
+                              (r = null === (i = e.previous) || void 0 === i ? void 0 : i.imPosition[1].toFixed(3)) &&
+                            void 0 !== r
+                              ? r
+                              : "";
+                        0 !== t && $[t - 1].x === e.x && $[t - 1].y === e.y
+                          ? ee.push({
+                              nickname: $[t - 1].team.nickname,
+                              mainColor: $[t - 1].team.mainColor,
+                              xValue: $[t - 1].team.imPosition[0].toFixed(3),
+                              yValue: $[t - 1].team.imPosition[1].toFixed(3),
+                              prevXValue:
+                                null !== (o = $[t - 1].team.imPosition[0].toFixed(3)) && void 0 !== o ? o : "",
+                              prevYValue:
+                                null !== (s = $[t - 1].team.imPosition[1].toFixed(3)) && void 0 !== s ? s : "",
+                            })
+                          : (ee = []);
                         return (
-                          0 !== t && z[t - 1].x === e.x && z[t - 1].y === e.y
-                            ? (!0,
-                              U.push({
-                                nickname: z[t - 1].team.nickname,
-                                mainColor: z[t - 1].team.mainColor,
-                                xValue: z[t - 1].team.imPosition[0].toFixed(3),
-                                yValue: z[t - 1].team.imPosition[1].toFixed(3),
-                              }))
-                            : (U = []),
-                          (
-                            <Ka.a
-                              key={t}
-                              placement="top"
-                              overlay={
-                                <Za.a id={"tooltip-" + t.toString()} className="AttributeTooltip">
-                                  <div className="AttributeTooltip-Container">
-                                    <div
-                                      className="AttributeTooltip-Header"
-                                      style={{
-                                        color: Mg(e.team.mainColor),
-                                        backgroundColor: e.team.mainColor,
-                                        padding: "0 5px",
-                                      }}
-                                    >
-                                      {e.team.nickname}
-                                    </div>
-                                    <div className="AttributeTooltip-Description">X: {a}</div>
-                                    <div className="AttributeTooltip-Description">Y: {n}</div>
-                                    {U.reverse().map(function (e) {
-                                      return (
-                                        <l.a.Fragment>
-                                          <div style={{ height: "5px" }} />
-                                          <div
-                                            className="AttributeTooltip-Header"
-                                            style={{
-                                              color: Mg(e.mainColor),
-                                              backgroundColor: e.mainColor,
-                                              padding: "0 8px",
-                                            }}
-                                          >
-                                            {e.nickname}
-                                          </div>
-                                          <div className="AttributeTooltip-Description">X: {e.xValue}</div>
-                                          <div className="AttributeTooltip-Description">Y: {e.yValue}</div>
-                                        </l.a.Fragment>
-                                      );
-                                    })}
+                          <Ka.a
+                            key={t}
+                            placement="top"
+                            overlay={
+                              <Za.a id={"tooltip-" + t.toString()} className="AttributeTooltip">
+                                <div className="AttributeTooltip-Container">
+                                  <div
+                                    className="AttributeTooltip-Header"
+                                    style={{
+                                      color: Fg(e.team.mainColor),
+                                      backgroundColor: e.team.mainColor,
+                                      padding: "0 5px",
+                                    }}
+                                  >
+                                    {e.team.nickname}
                                   </div>
-                                </Za.a>
-                              }
+                                  <div className="AttributeTooltip-Description">X: {c}</div>
+                                  <div className="AttributeTooltip-Description">Y: {A}</div>
+                                  {"" !== u ? (
+                                    <div className="AttributeTooltip-Description">
+                                      <b>Day {k}:</b> {u}, {m}
+                                    </div>
+                                  ) : null}
+                                  {ee.reverse().map(function (e) {
+                                    return (
+                                      <l.a.Fragment>
+                                        <div style={{ height: "5px" }} />
+                                        <div
+                                          className="AttributeTooltip-Header"
+                                          style={{
+                                            color: Fg(e.mainColor),
+                                            backgroundColor: e.mainColor,
+                                            padding: "0 8px",
+                                          }}
+                                        >
+                                          {e.nickname}
+                                        </div>
+                                        <div className="AttributeTooltip-Description">X: {e.xValue}</div>
+                                        <div className="AttributeTooltip-Description">Y: {e.yValue}</div>
+                                        {"" !== e.prevXValue ? (
+                                          <div className="AttributeTooltip-Description">
+                                            <b>Day {k}:</b> {e.prevXValue}, {e.prevYValue}
+                                          </div>
+                                        ) : null}
+                                      </l.a.Fragment>
+                                    );
+                                  })}
+                                </div>
+                              </Za.a>
+                            }
+                          >
+                            <div
+                              style={{
+                                gridColumn: e.x,
+                                gridRow: e.y,
+                                height: "100%",
+                                width: "100%",
+                                animation: b ? "none" : "",
+                                transform: "rotate(".concat(-M, "deg)"),
+                                zIndex: 4,
+                              }}
                             >
-                              <div
-                                style={{
-                                  gridColumn: e.x,
-                                  gridRow: e.y,
-                                  height: "100%",
-                                  width: "100%",
-                                  animation: h ? "none" : "",
-                                  transform: "rotate(".concat(-I, "deg)"),
-                                  zIndex: 4,
-                                }}
-                              >
-                                <d background={E} path={"/team/".concat(e.team.id)} className="DepthChart-Team-Wrapper">
-                                  <div className="DepthChart-Team QuadrantChart-Team">{Yg(e.team)}</div>
-                                </d>
-                              </div>
-                            </Ka.a>
-                          )
+                              <d background={v} path={"/team/".concat(e.team.id)} className="DepthChart-Team-Wrapper">
+                                <div className="DepthChart-Team QuadrantChart-Team">{qg(e.team)}</div>
+                              </d>
+                            </div>
+                          </Ka.a>
                         );
                       })}
                     </div>
                     <div className="QuadrantChart-Quadrant" style={{ gridColumn: 2, gridRow: 3 }}>
-                      {N}
-                      {k}
-                      {W.map(function (e, t) {
-                        var a = e.team.imPosition[0].toFixed(3),
-                          n = e.team.imPosition[1].toFixed(3);
+                      {j}
+                      {F}
+                      {_.map(function (e, t) {
+                        var a,
+                          n,
+                          r,
+                          i,
+                          o,
+                          s,
+                          c = e.team.imPosition[0].toFixed(3),
+                          A = e.team.imPosition[1].toFixed(3),
+                          u =
+                            null !==
+                              (a = null === (n = e.previous) || void 0 === n ? void 0 : n.imPosition[0].toFixed(3)) &&
+                            void 0 !== a
+                              ? a
+                              : "",
+                          m =
+                            null !==
+                              (r = null === (i = e.previous) || void 0 === i ? void 0 : i.imPosition[1].toFixed(3)) &&
+                            void 0 !== r
+                              ? r
+                              : "";
+                        0 !== t && _[t - 1].x === e.x && _[t - 1].y === e.y
+                          ? ee.push({
+                              nickname: _[t - 1].team.nickname,
+                              mainColor: _[t - 1].team.mainColor,
+                              xValue: _[t - 1].team.imPosition[0].toFixed(3),
+                              yValue: _[t - 1].team.imPosition[1].toFixed(3),
+                              prevXValue:
+                                null !== (o = _[t - 1].team.imPosition[0].toFixed(3)) && void 0 !== o ? o : "",
+                              prevYValue:
+                                null !== (s = _[t - 1].team.imPosition[1].toFixed(3)) && void 0 !== s ? s : "",
+                            })
+                          : (ee = []);
                         return (
-                          0 !== t && W[t - 1].x === e.x && W[t - 1].y === e.y
-                            ? (!0,
-                              U.push({
-                                nickname: W[t - 1].team.nickname,
-                                mainColor: W[t - 1].team.mainColor,
-                                xValue: W[t - 1].team.imPosition[0].toFixed(3),
-                                yValue: W[t - 1].team.imPosition[1].toFixed(3),
-                              }))
-                            : (U = []),
-                          (
-                            <Ka.a
-                              key={t}
-                              placement="top"
-                              overlay={
-                                <Za.a id={"tooltip-" + t.toString()} className="AttributeTooltip">
-                                  <div className="AttributeTooltip-Container">
-                                    <div
-                                      className="AttributeTooltip-Header"
-                                      style={{
-                                        color: Mg(e.team.mainColor),
-                                        backgroundColor: e.team.mainColor,
-                                        padding: "0 5px",
-                                      }}
-                                    >
-                                      {e.team.nickname}
-                                    </div>
-                                    <div className="AttributeTooltip-Description">X: {a}</div>
-                                    <div className="AttributeTooltip-Description">Y: {n}</div>
-                                    {U.reverse().map(function (e) {
-                                      return (
-                                        <l.a.Fragment>
-                                          <div style={{ height: "5px" }} />
-                                          <div
-                                            className="AttributeTooltip-Header"
-                                            style={{
-                                              color: Mg(e.mainColor),
-                                              backgroundColor: e.mainColor,
-                                              padding: "0 8px",
-                                            }}
-                                          >
-                                            {e.nickname}
-                                          </div>
-                                          <div className="AttributeTooltip-Description">X: {e.xValue}</div>
-                                          <div className="AttributeTooltip-Description">Y: {e.yValue}</div>
-                                        </l.a.Fragment>
-                                      );
-                                    })}
+                          <Ka.a
+                            key={t}
+                            placement="top"
+                            overlay={
+                              <Za.a id={"tooltip-" + t.toString()} className="AttributeTooltip">
+                                <div className="AttributeTooltip-Container">
+                                  <div
+                                    className="AttributeTooltip-Header"
+                                    style={{
+                                      color: Fg(e.team.mainColor),
+                                      backgroundColor: e.team.mainColor,
+                                      padding: "0 5px",
+                                    }}
+                                  >
+                                    {e.team.nickname}
                                   </div>
-                                </Za.a>
-                              }
+                                  <div className="AttributeTooltip-Description">X: {c}</div>
+                                  <div className="AttributeTooltip-Description">Y: {A}</div>
+                                  {"" !== u ? (
+                                    <div className="AttributeTooltip-Description">
+                                      <b>Day {k}:</b> {u}, {m}
+                                    </div>
+                                  ) : null}
+                                  {ee.reverse().map(function (e) {
+                                    return (
+                                      <l.a.Fragment>
+                                        <div style={{ height: "5px" }} />
+                                        <div
+                                          className="AttributeTooltip-Header"
+                                          style={{
+                                            color: Fg(e.mainColor),
+                                            backgroundColor: e.mainColor,
+                                            padding: "0 8px",
+                                          }}
+                                        >
+                                          {e.nickname}
+                                        </div>
+                                        <div className="AttributeTooltip-Description">X: {e.xValue}</div>
+                                        <div className="AttributeTooltip-Description">Y: {e.yValue}</div>
+                                        {"" !== e.prevXValue ? (
+                                          <div className="AttributeTooltip-Description">
+                                            <b>Day {k}:</b> {e.prevXValue}, {e.prevYValue}
+                                          </div>
+                                        ) : null}
+                                      </l.a.Fragment>
+                                    );
+                                  })}
+                                </div>
+                              </Za.a>
+                            }
+                          >
+                            <div
+                              style={{
+                                gridColumn: e.x,
+                                gridRow: e.y,
+                                height: "100%",
+                                width: "100%",
+                                animation: b ? "none" : "",
+                                transform: "rotate(".concat(-M, "deg)"),
+                                zIndex: 4,
+                              }}
                             >
-                              <div
-                                style={{
-                                  gridColumn: e.x,
-                                  gridRow: e.y,
-                                  height: "100%",
-                                  width: "100%",
-                                  animation: h ? "none" : "",
-                                  transform: "rotate(".concat(-I, "deg)"),
-                                  zIndex: 4,
-                                }}
-                              >
-                                <d background={E} path={"/team/".concat(e.team.id)} className="DepthChart-Team-Wrapper">
-                                  <div className="DepthChart-Team QuadrantChart-Team">{Yg(e.team)}</div>
-                                </d>
-                              </div>
-                            </Ka.a>
-                          )
+                              <d background={v} path={"/team/".concat(e.team.id)} className="DepthChart-Team-Wrapper">
+                                <div className="DepthChart-Team QuadrantChart-Team">{qg(e.team)}</div>
+                              </d>
+                            </div>
+                          </Ka.a>
                         );
                       })}
                     </div>
                     <div className="QuadrantChart-Quadrant" style={{ gridColumn: 3, gridRow: 3 }}>
-                      {N}
-                      {k}
-                      {B
+                      {j}
+                      {F}
+                      {y
                         ? [
                             [6, 2],
                             [2, 5],
@@ -37335,7 +37507,7 @@
                                 className="QuadrantChart-Quadrant-Locales-Smaller"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 512 512"
-                                style={{ gridColumn: e[0], gridRow: e[1], transform: "rotate(".concat(-I, "deg)") }}
+                                style={{ gridColumn: e[0], gridRow: e[1], transform: "rotate(".concat(-M, "deg)") }}
                               >
                                 <path d="M0 0h512v512H0z" fill="#000000" fill-opacity="0.01" />
                                 <g transform="translate(0,0)">
@@ -37362,7 +37534,7 @@
                                 className="QuadrantChart-Quadrant-Locales-Smaller"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 512 512"
-                                style={{ gridColumn: e[0], gridRow: e[1], transform: "rotate(".concat(-I, "deg)") }}
+                                style={{ gridColumn: e[0], gridRow: e[1], transform: "rotate(".concat(-M, "deg)") }}
                               >
                                 <path d="M0 0h512v512H0z" fill="#000000" fill-opacity="0.01" />
                                 <g transform="translate(0,0)">
@@ -37375,100 +37547,131 @@
                               </svg>
                             );
                           })}
-                      {V.map(function (e, t) {
-                        var a = e.team.imPosition[0].toFixed(3),
-                          n = e.team.imPosition[1].toFixed(3);
+                      {Z.map(function (e, t) {
+                        var a,
+                          n,
+                          r,
+                          i,
+                          o,
+                          s,
+                          c = e.team.imPosition[0].toFixed(3),
+                          A = e.team.imPosition[1].toFixed(3),
+                          u =
+                            null !==
+                              (a = null === (n = e.previous) || void 0 === n ? void 0 : n.imPosition[0].toFixed(3)) &&
+                            void 0 !== a
+                              ? a
+                              : "",
+                          m =
+                            null !==
+                              (r = null === (i = e.previous) || void 0 === i ? void 0 : i.imPosition[1].toFixed(3)) &&
+                            void 0 !== r
+                              ? r
+                              : "";
+                        0 !== t && Z[t - 1].x === e.x && Z[t - 1].y === e.y
+                          ? ee.push({
+                              nickname: Z[t - 1].team.nickname,
+                              mainColor: Z[t - 1].team.mainColor,
+                              xValue: Z[t - 1].team.imPosition[0].toFixed(3),
+                              yValue: Z[t - 1].team.imPosition[1].toFixed(3),
+                              prevXValue:
+                                null !== (o = Z[t - 1].team.imPosition[0].toFixed(3)) && void 0 !== o ? o : "",
+                              prevYValue:
+                                null !== (s = Z[t - 1].team.imPosition[1].toFixed(3)) && void 0 !== s ? s : "",
+                            })
+                          : (ee = []);
                         return (
-                          0 !== t && V[t - 1].x === e.x && V[t - 1].y === e.y
-                            ? (!0,
-                              U.push({
-                                nickname: V[t - 1].team.nickname,
-                                mainColor: V[t - 1].team.mainColor,
-                                xValue: V[t - 1].team.imPosition[0].toFixed(3),
-                                yValue: V[t - 1].team.imPosition[1].toFixed(3),
-                              }))
-                            : (U = []),
-                          (
-                            <Ka.a
-                              key={t}
-                              placement="top"
-                              overlay={
-                                <Za.a id={"tooltip-" + t.toString()} className="AttributeTooltip">
-                                  <div className="AttributeTooltip-Container">
-                                    <div
-                                      className="AttributeTooltip-Header"
-                                      style={{
-                                        color: Mg(e.team.mainColor),
-                                        backgroundColor: e.team.mainColor,
-                                        padding: "0 5px",
-                                      }}
-                                    >
-                                      {e.team.nickname}
-                                    </div>
-                                    <div className="AttributeTooltip-Description">X: {a}</div>
-                                    <div className="AttributeTooltip-Description">Y: {n}</div>
-                                    {U.reverse().map(function (e) {
-                                      return (
-                                        <l.a.Fragment>
-                                          <div style={{ height: "5px" }} />
-                                          <div
-                                            className="AttributeTooltip-Header"
-                                            style={{
-                                              color: Mg(e.mainColor),
-                                              backgroundColor: e.mainColor,
-                                              padding: "0 8px",
-                                            }}
-                                          >
-                                            {e.nickname}
-                                          </div>
-                                          <div className="AttributeTooltip-Description">X: {e.xValue}</div>
-                                          <div className="AttributeTooltip-Description">Y: {e.yValue}</div>
-                                        </l.a.Fragment>
-                                      );
-                                    })}
+                          <Ka.a
+                            key={t}
+                            placement="top"
+                            overlay={
+                              <Za.a id={"tooltip-" + t.toString()} className="AttributeTooltip">
+                                <div className="AttributeTooltip-Container">
+                                  <div
+                                    className="AttributeTooltip-Header"
+                                    style={{
+                                      color: Fg(e.team.mainColor),
+                                      backgroundColor: e.team.mainColor,
+                                      padding: "0 5px",
+                                    }}
+                                  >
+                                    {e.team.nickname}
                                   </div>
-                                </Za.a>
-                              }
+                                  <div className="AttributeTooltip-Description">X: {c}</div>
+                                  <div className="AttributeTooltip-Description">Y: {A}</div>
+                                  {"" !== u ? (
+                                    <div className="AttributeTooltip-Description">
+                                      <b>Day {k}:</b> {u}, {m}
+                                    </div>
+                                  ) : null}
+                                  {ee.reverse().map(function (e) {
+                                    return (
+                                      <l.a.Fragment>
+                                        <div style={{ height: "5px" }} />
+                                        <div
+                                          className="AttributeTooltip-Header"
+                                          style={{
+                                            color: Fg(e.mainColor),
+                                            backgroundColor: e.mainColor,
+                                            padding: "0 8px",
+                                          }}
+                                        >
+                                          {e.nickname}
+                                        </div>
+                                        <div className="AttributeTooltip-Description">X: {e.xValue}</div>
+                                        <div className="AttributeTooltip-Description">Y: {e.yValue}</div>
+                                        {"" !== e.prevXValue ? (
+                                          <div className="AttributeTooltip-Description">
+                                            <b>Day {k}:</b> {e.prevXValue}, {e.prevYValue}
+                                          </div>
+                                        ) : null}
+                                      </l.a.Fragment>
+                                    );
+                                  })}
+                                </div>
+                              </Za.a>
+                            }
+                          >
+                            <div
+                              style={{
+                                gridColumn: e.x,
+                                gridRow: e.y,
+                                height: "100%",
+                                width: "100%",
+                                animation: b ? "none" : "",
+                                transform: "rotate(".concat(-M, "deg)"),
+                                zIndex: 4,
+                              }}
                             >
-                              <div
-                                style={{
-                                  gridColumn: e.x,
-                                  gridRow: e.y,
-                                  height: "100%",
-                                  width: "100%",
-                                  animation: h ? "none" : "",
-                                  transform: "rotate(".concat(-I, "deg)"),
-                                  zIndex: 4,
-                                }}
-                              >
-                                <d background={E} path={"/team/".concat(e.team.id)} className="DepthChart-Team-Wrapper">
-                                  <div className="DepthChart-Team QuadrantChart-Team">{Yg(e.team)}</div>
-                                </d>
-                              </div>
-                            </Ka.a>
-                          )
+                              <d background={v} path={"/team/".concat(e.team.id)} className="DepthChart-Team-Wrapper">
+                                <div className="DepthChart-Team QuadrantChart-Team">{qg(e.team)}</div>
+                              </d>
+                            </div>
+                          </Ka.a>
                         );
                       })}
                     </div>
                     <div
                       className="QuadrantChart-2 QuadrantChart-Quadrant-Icon QuadrantChart-Quadrant-Icon-Small QuadrantChart-Quadrant-Icon-TopLeft"
-                      style={{ gridColumn: 1, gridRow: 1, transform: "rotate(".concat(-I, "deg)") }}
+                      style={{ gridColumn: 1, gridRow: 1, transform: "rotate(".concat(-M, "deg)") }}
                     />
                     <Va
                       className="QuadrantChart-Quadrant-Icon QuadrantChart-Quadrant-Icon-Right"
-                      style={{ gridColumn: 4, gridRow: 1, transform: "rotate(".concat(-I, "deg)") }}
+                      style={{ gridColumn: 4, gridRow: 1, transform: "rotate(".concat(-M, "deg)") }}
                     />
-                    <bO
+                    <BO
                       className="QuadrantChart-Quadrant-Icon QuadrantChart-Quadrant-Icon-Center"
-                      style={{ transform: "rotate(".concat(-I, "deg)") }}
+                      style={{ transform: "rotate(".concat(-M, "deg)") }}
                     />
-                    <Ra
-                      className="QuadrantChart-Quadrant-Icon QuadrantChart-Quadrant-Icon-Left"
-                      style={{ gridColumn: 1, gridRow: 4, transform: "rotate(".concat(-I, "deg)") }}
-                    />
-                    <VB
+                    <d background={v} path="/nullified">
+                      <Ra
+                        className="QuadrantChart-Quadrant-Icon QuadrantChart-Quadrant-Icon-Left"
+                        style={{ gridColumn: 1, gridRow: 4, transform: "rotate(".concat(-M, "deg)") }}
+                      />
+                    </d>
+                    <WB
                       className="QuadrantChart-Quadrant-Icon QuadrantChart-Quadrant-Icon-Tiny QuadrantChart-Quadrant-Icon-BottomRight"
-                      style={{ gridColumn: 4, gridRow: 4, transform: "rotate(".concat(-I, "deg)") }}
+                      style={{ gridColumn: 4, gridRow: 4, transform: "rotate(".concat(-M, "deg)") }}
                     />
                   </div>
                 </div>
@@ -37516,7 +37719,7 @@
                 function () {
                   if (m.length < 1) {
                     var e,
-                      t = qg(i, { filters: {} }, null !== (e = a.favoriteTeam) && void 0 !== e ? e : "", !1);
+                      t = Zg(i, { filters: {} }, null !== (e = a.favoriteTeam) && void 0 !== e ? e : "", !1);
                     g(t);
                   }
                 },
@@ -37692,7 +37895,7 @@
                     />
                   </svg>
                 ),
-                z = Hg(n.sim, "SIM_COIN_FLIP");
+                z = Gg(n.sim, "SIM_COIN_FLIP");
               o.doc && o.doc.zeta;
               return (
                 <div className="DepthChart" id="Main-Body">
@@ -37908,7 +38111,7 @@
                                       <div
                                         className="AttributeTooltip-Header"
                                         style={{
-                                          color: Mg(e.team.mainColor),
+                                          color: Fg(e.team.mainColor),
                                           backgroundColor: e.team.mainColor,
                                           padding: "0 5px",
                                         }}
@@ -37924,7 +38127,7 @@
                                             <div
                                               className="AttributeTooltip-Header"
                                               style={{
-                                                color: Mg(e.mainColor),
+                                                color: Fg(e.mainColor),
                                                 backgroundColor: e.mainColor,
                                                 padding: "0 8px",
                                               }}
@@ -37955,7 +38158,7 @@
                                     path={"/team/".concat(e.team.id)}
                                     className="DepthChart-Team-Wrapper"
                                   >
-                                    <div className={"DepthChart-Team " + r}>{Yg(e.team)}</div>
+                                    <div className={"DepthChart-Team " + r}>{qg(e.team)}</div>
                                   </d>
                                 </div>
                               </Ka.a>
@@ -37996,7 +38199,7 @@
                                     aria-hidden="true"
                                     style={{ background: e.mainColor }}
                                   >
-                                    <div className="DepthChart-Lists-Emoji">{Yg(e)}</div>
+                                    <div className="DepthChart-Lists-Emoji">{qg(e)}</div>
                                   </div>
                                   {e.fullName}
                                 </div>
@@ -38027,7 +38230,7 @@
                                     aria-hidden="true"
                                     style={{ background: e.mainColor }}
                                   >
-                                    <div className="DepthChart-Lists-Emoji">{Yg(e)}</div>
+                                    <div className="DepthChart-Lists-Emoji">{qg(e)}</div>
                                   </div>
                                   {e.fullName}
                                 </div>
@@ -38058,7 +38261,7 @@
                                     aria-hidden="true"
                                     style={{ background: e.mainColor }}
                                   >
-                                    <div className="DepthChart-Lists-Emoji">{Yg(e)}</div>
+                                    <div className="DepthChart-Lists-Emoji">{qg(e)}</div>
                                   </div>
                                   {e.fullName}
                                 </div>
@@ -38073,12 +38276,56 @@
                       </div>
                     </div>
                   </div>
-                  <op />
+                  <cp />
                 </div>
               );
             })();
       }
-      var BO = function (e) {
+      var CO = function (e) {
+          Object(c.g)();
+          var t = Object(r.useContext)(x.context),
+            a = (t.user, t.setUser, Object(r.useState)([])),
+            n = Object(s.a)(a, 2),
+            i = n[0],
+            o = n[1],
+            A = (function () {
+              var e = Object(E.a)(
+                f.a.mark(function e() {
+                  return f.a.wrap(function (e) {
+                    for (;;)
+                      switch ((e.prev = e.next)) {
+                        case 0:
+                          return (e.t0 = o), (e.next = 3), kg();
+                        case 3:
+                          (e.t1 = e.sent), (0, e.t0)(e.t1);
+                        case 5:
+                        case "end":
+                          return e.stop();
+                      }
+                  }, e);
+                })
+              );
+              return function () {
+                return e.apply(this, arguments);
+              };
+            })();
+          return (
+            Object(r.useEffect)(function () {
+              A();
+            }, []),
+            (
+              <hA {...Object.assign({}, e, { className: "ModalItem-Nullified" })}>
+                <div className="ModalItem-Subheader">Rules</div>
+                <div className="ModalItem-Attributes LeagueInfo-Attributes">
+                  {i.map(function (e, t) {
+                    return <en id={e} type={qa.League} key={t} context={Xa.League} />;
+                  })}
+                </div>
+              </hA>
+            )
+          );
+        },
+        OO = function (e) {
           var t,
             a,
             n,
@@ -38155,7 +38402,7 @@
                 e(), t();
                 var a = 0;
                 A.teams.forEach(function (e) {
-                  Gg(e.id, A) && (a += e.eDensity);
+                  zg(e.id, A) && (a += e.eDensity);
                 }),
                   v(Number(a.toFixed(5)));
               },
@@ -38170,7 +38417,7 @@
                     <div className="Team-Header">
                       <div className="Team-LogoLine-Wrapper" style={{ alignItems: "center" }}>
                         <div className="Team-LogoLine">
-                          <oC className="LeagueInfo-Header-Icon" />
+                          <cC className="LeagueInfo-Header-Icon" />
                         </div>
                         <div className="ModalItem-Name-Wrapper">
                           <h2 className="ModalItem-Name">{N.name}</h2>
@@ -38223,7 +38470,7 @@
                                 }}
                                 className="Team-Logo LeagueInfo-Team-Icon"
                               >
-                                {Yg(null === C || void 0 === C ? void 0 : C.over)}
+                                {qg(null === C || void 0 === C ? void 0 : C.over)}
                               </div>{" "}
                               {null === C || void 0 === C || null === (a = C.over) || void 0 === a
                                 ? void 0
@@ -38242,7 +38489,7 @@
                                 }}
                                 className="Team-Logo LeagueInfo-Team-Icon"
                               >
-                                {Yg(null === C || void 0 === C ? void 0 : C.under)}
+                                {qg(null === C || void 0 === C ? void 0 : C.under)}
                               </div>{" "}
                               {null === C || void 0 === C || null === (i = C.under) || void 0 === i
                                 ? void 0
@@ -38256,7 +38503,7 @@
                         </ul>
                       </div>
                       <div className="Team-Section">
-                        {Hg(o.sim, "SIM_COMMUNITY_CHEST") ? (
+                        {Gg(o.sim, "SIM_COMMUNITY_CHEST") ? (
                           <l.a.Fragment>
                             <div className="ModalItem-Subheader">Next Crate</div>
                             <ul className="Player-Info-Stats">
@@ -38274,7 +38521,7 @@
             (<hA {...Object.assign({}, e, { className: "ModalItem" })}>{I}</hA>)
           );
         },
-        yO = function (e) {
+        IO = function (e) {
           var t = Object(r.useContext)(x.context),
             a = (t.user, t.setUser, Object(c.f)()),
             n = Object(cA.useToasts)().addToast,
@@ -38341,7 +38588,7 @@
             </hA>
           );
         },
-        CO = function (e) {
+        SO = function (e) {
           var t = Object(c.h)().token,
             a = Object(r.useContext)(x.context),
             n = a.user,
@@ -38394,7 +38641,7 @@
             (<div>{g ? <wA /> : <l.a.Fragment />}</div>)
           );
         };
-      var OO = function (e) {
+      var NO = function (e) {
           Object(r.useContext)(x.context).initUser;
           var t = Object(c.f)(),
             a = Object(cA.useToasts)().addToast,
@@ -38473,7 +38720,7 @@
             </hA>
           );
         },
-        IO = function (e) {
+        kO = function (e) {
           var t = Object(c.h)().token,
             a = Object(r.useContext)(x.context),
             n = (a.user, a.initUser),
@@ -38521,7 +38768,7 @@
             (<div>{m ? <wA /> : <l.a.Fragment />}</div>)
           );
         },
-        SO = function (e) {
+        TO = function (e) {
           Object(r.useContext)(x.context).initUser;
           var t = Object(c.f)(),
             a = Object(cA.useToasts)().addToast,
@@ -38616,7 +38863,7 @@
             </hA>
           );
         },
-        NO = function (e) {
+        PO = function (e) {
           var t = Object(c.h)().token,
             a = Object(r.useContext)(x.context),
             n = (a.user, a.setUser),
@@ -38663,7 +38910,7 @@
             (<div>{m ? <wA /> : <l.a.Fragment />}</div>)
           );
         },
-        kO = function (e) {
+        DO = function (e) {
           var t = e.event,
             a = Object(r.useContext)(oc.context),
             n = (Object(c.g)(), Object(r.useContext)(x.context).user),
@@ -38716,7 +38963,7 @@
           );
         };
       a(255);
-      function TO() {
+      function xO() {
         var e = Object(r.useContext)(x.context),
           t = e.user,
           a = (e.setUser, Object(c.g)(), Object(r.useContext)(oc.context)),
@@ -38735,7 +38982,7 @@
                   for (;;)
                     switch ((e.prev = e.next)) {
                       case 0:
-                        return (e.t0 = A), (e.next = 3), kg();
+                        return (e.t0 = A), (e.next = 3), Pg();
                       case 3:
                         (e.t1 = e.sent), (0, e.t0)(e.t1);
                       case 5:
@@ -38834,16 +39081,16 @@
                           1);
                     })
                     .map(function (e) {
-                      return <PO player={e.player} team={e.team} />;
+                      return <LO player={e.player} team={e.team} />;
                     })}
                 </ul>
               </div>
-              <op />
+              <cp />
             </div>
           )
         );
       }
-      function PO(e) {
+      function LO(e) {
         var t = e.player,
           a = e.team,
           n = Object(c.g)(),
@@ -38856,7 +39103,7 @@
                 aria-hidden="true"
                 style={{ background: void 0 !== a ? a.mainColor : "#999999" }}
               >
-                <div className="Leaderboard-Team-Emoji">{Yg(a)}</div>
+                <div className="Leaderboard-Team-Emoji">{qg(a)}</div>
               </div>
               <div
                 className="sr-only"
@@ -38910,7 +39157,7 @@
           </d>
         ) : null;
       }
-      var DO = function (e) {
+      var RO = function (e) {
           var t = Object(c.h)().teamId,
             a = Object(cA.useToasts)().addToast,
             n = Object(r.useContext)(x.context),
@@ -38918,7 +39165,7 @@
             o = n.setUser,
             u = Object(c.f)(),
             m = Object(r.useContext)(oc.context),
-            d = (Object(r.useContext)(nb.context), Object(r.useState)(0)),
+            d = (Object(r.useContext)(lb.context), Object(r.useState)(0)),
             g = Object(s.a)(d, 2),
             v = g[0],
             p = g[1],
@@ -38970,7 +39217,7 @@
                 <div className="Gift-List">
                   <div className="Player-Team-Line" style={{ justifyContent: "center" }}>
                     <div className="Player-Team-Logo" style={{ background: void 0 !== O ? O.mainColor : "#999999" }}>
-                      <div className="Player-Team-Emoji">{Yg(O)}</div>
+                      <div className="Player-Team-Emoji">{qg(O)}</div>
                     </div>
                     <div className="Player-Team-Name">{void 0 !== O ? O.fullName : "Null Team"}</div>
                   </div>
@@ -38983,7 +39230,7 @@
                       if (
                         (e.preventDefault(),
                         B(!0),
-                        Gg(t, m) || (a("Team not accepting Aid", { appearance: "error" }), u.goBack()),
+                        zg(t, m) || (a("Team not accepting Aid", { appearance: "error" }), u.goBack()),
                         v < 25)
                       )
                         a("The minimum Aid contribution is 25 Coins.", { appearance: "error" });
@@ -39055,7 +39302,7 @@
             )
           );
         },
-        xO = function (e) {
+        QO = function (e) {
           var t = e.percent,
             a = e.color;
           return (
@@ -39066,15 +39313,15 @@
                 aria-valuenow={t}
                 aria-valuemin={0}
                 aria-valuemax={100}
-                style={{ backgroundColor: a, color: Mg(a), width: "".concat(t, "%") }}
+                style={{ backgroundColor: a, color: Fg(a), width: "".concat(t, "%") }}
               >
                 {t}%
               </div>
             </div>
           );
         },
-        LO = function (e) {
-          var t = Object(r.useContext)(nb.context),
+        MO = function (e) {
+          var t = Object(r.useContext)(lb.context),
             a = (Object(r.useContext)(S.context), Object(r.useContext)(oc.context)),
             n = Object(r.useContext)(x.context),
             i = n.user,
@@ -39098,7 +39345,7 @@
             function () {
               if ((void 0 === m && k(), I.length < 1)) {
                 var e,
-                  t = qg(a, { filters: {} }, null !== (e = i.favoriteTeam) && void 0 !== e ? e : "", !1);
+                  t = Zg(a, { filters: {} }, null !== (e = i.favoriteTeam) && void 0 !== e ? e : "", !1);
                 N(t);
               }
             },
@@ -39158,7 +39405,7 @@
                       style={{ backgroundColor: void 0 !== Q ? Q.mainColor : "#ffffff" }}
                       className="Player-Team-Logo"
                     >
-                      {Yg(Q)}
+                      {qg(Q)}
                     </div>
                   </div>
                   <div className="Team-Stadium-Header">{void 0 !== Q ? Q.fullName : "Null Team"}</div>
@@ -39226,13 +39473,13 @@
                       <li className="Player-Info-Line GiftShop-Gifts-Item" key={e.id}>
                         <div className="Player-Info-Line-Header GiftShop-Gifts-Item-Header">
                           <div className="GiftShop-Gifts-TeamLogo" style={{ background: e.mainColor }}>
-                            {Yg(e)}
+                            {qg(e)}
                           </div>
                           {e.nickname}
                         </div>
                         <div className="Player-Info-Line-Body GiftShop-Gifts-Item-Body">
-                          {Jg("0x1F680")}
-                          <xO percent={F(e.id)} color={e.mainColor} />
+                          {Xg("0x1F680")}
+                          <QO percent={F(e.id)} color={e.mainColor} />
                         </div>
                         <button
                           className={
@@ -39266,16 +39513,16 @@
             </div>
           );
         };
-      function RO() {
+      function jO() {
         var e = Object(r.useContext)(Yc.context);
         return (
           <div className={"Main" + (e && e.doc && e.doc.epsilon ? " Main-BigDeal" : "")}>
-            <eh />
-            <QO />
+            <ah />
+            <FO />
           </div>
         );
       }
-      function QO() {
+      function FO() {
         var e = Object(r.useContext)(x.context).user,
           t = Object(r.useState)(!1),
           a = Object(s.a)(t, 2),
@@ -39298,54 +39545,54 @@
             },
             [e]
           ),
-          void 0 !== e && e.isFetching ? <jO /> : n ? <HO /> : <MO />
+          void 0 !== e && e.isFetching ? <VO /> : n ? <WO /> : <HO />
         );
       }
-      function MO() {
+      function HO() {
         var e = Object(c.g)(),
           t = e.state && e.state.background;
         return (
           <div>
-            <mp />
+            <gp />
             <div className="Main-Body-Intro">
               <c.c location={t || e}>
                 <c.a path="/tos">
-                  <Sy />
+                  <ky />
                 </c.a>
                 <c.a path="/privacy">
-                  <Iy />
+                  <Ny />
                 </c.a>
                 <c.a path="/login">
-                  <Kh isLogin={!0} />
+                  <$h isLogin={!0} />
                 </c.a>
                 <c.a path="/reset-password/:token">
-                  <_h />
+                  <eb />
                 </c.a>
                 <c.a path="/signup/:code?">
-                  <Kh />
+                  <$h />
                 </c.a>
                 <c.a path="/faq">
-                  <pC />
+                  <bC />
                 </c.a>
                 <c.a path="/">
-                  <Ah />
+                  <mh />
                 </c.a>
               </c.c>
               {t && (
                 <l.a.Fragment>
-                  <c.a path="/signup" children={<Kh isModal={!0} />} />
-                  <c.a path="/login" children={<Kh isModal={!0} isLogin={!0} />} />
-                  <c.a path="/reset/:token" children={<_h isModal={!0} />} />
-                  <c.a path="/forgot" children={<$h isModal={!0} />} />
-                  <c.a path="/team/:nickname" children={<Ih isModal={!0} />} />
-                  <c.a path="/bet/:gameId" children={<Sh isModal={!0} />} />
-                  <c.a path="/vote/:voteType/:entityId" children={<yy isModal={!0} />} />
-                  <c.a path="/tribute/:entityId" children={<By isModal={!0} />} />
-                  <c.a path="/buy/:itemName" children={<Lh isModal={!0} />} />
-                  <c.a path="/sell/:id" children={<Rh isModal={!0} />} />
+                  <c.a path="/signup" children={<$h isModal={!0} />} />
+                  <c.a path="/login" children={<$h isModal={!0} isLogin={!0} />} />
+                  <c.a path="/reset/:token" children={<eb isModal={!0} />} />
+                  <c.a path="/forgot" children={<tb isModal={!0} />} />
+                  <c.a path="/team/:nickname" children={<Nh isModal={!0} />} />
+                  <c.a path="/bet/:gameId" children={<kh isModal={!0} />} />
+                  <c.a path="/vote/:voteType/:entityId" children={<Oy isModal={!0} />} />
+                  <c.a path="/tribute/:entityId" children={<Cy isModal={!0} />} />
+                  <c.a path="/buy/:itemName" children={<Qh isModal={!0} />} />
+                  <c.a path="/sell/:id" children={<Mh isModal={!0} />} />
                 </l.a.Fragment>
               )}
-              <Zh isModal={!0} dismissable={!1} />
+              <_h isModal={!0} dismissable={!1} />
             </div>
             <footer className="Main-Footer">
               <div className="Main-Footer-Links">
@@ -39361,26 +39608,26 @@
               </div>
               <div className="Main-Footer-Advertise">
                 <div className="Main-Footer-Advertise-Inner">
-                  <a className="Main-Footer-Advertise-Icon" href={VO()}>
+                  <a className="Main-Footer-Advertise-Icon" href={zO()}>
                     Become a Sponsor
                   </a>
                 </div>
               </div>
               <a href="https://twitter.com/thegameband" target="_blank" className="Main-Footer-Logo">
-                <Dy />
+                <Ly />
               </a>
             </footer>
           </div>
         );
       }
-      function jO() {
+      function VO() {
         return (
           <div>
             <div className="Main-Body" />
           </div>
         );
       }
-      function FO() {
+      function GO() {
         return (
           <div>
             <div className="Main-Body">
@@ -39389,7 +39636,7 @@
           </div>
         );
       }
-      function HO() {
+      function WO() {
         var e,
           t,
           a,
@@ -39410,7 +39657,7 @@
           b = Object(c.g)(),
           w = b.state && b.state.background,
           B = Object(r.useContext)(Yc.context);
-        if (B && B.doc && B.doc.epsilon) return <FO />;
+        if (B && B.doc && B.doc.epsilon) return <GO />;
         var y,
           C,
           O,
@@ -39425,39 +39672,39 @@
           M = function (e, t) {
             switch (e) {
               case 0:
-                return <Cy path={t} />;
+                return <Iy path={t} />;
               case 1:
-                return <EC path={t} />;
+                return <pC path={t} />;
               case 2:
               case 4:
               case 6:
-                return <Hp path={t} />;
+                return <Gp path={t} />;
               case 3:
-                return <XC path={t} />;
-              case 5:
                 return <KC path={t} />;
+              case 5:
+                return <$C path={t} />;
               case 8:
-                return <vC path={t} />;
+                return <hC path={t} />;
               case 7:
-                return <Ly path={t} />;
+                return <Qy path={t} />;
               case 9:
               case 11:
-                return <Xp path={t} />;
+                return <Kp path={t} />;
               case 10:
-                return <hC path={t} />;
+                return <wC path={t} />;
               case 12:
               case 13:
-                return <_p path={t} />;
+                return <eh path={t} />;
               case 14:
-                return <NC path={t} />;
+                return <TC path={t} />;
               case 15:
-                return <LC path={t} />;
-              case 16:
-                return <xC path={t} />;
-              case 17:
-                return <RC path={t} />;
-              case 18:
                 return <QC path={t} />;
+              case 16:
+                return <RC path={t} />;
+              case 17:
+                return <MC path={t} />;
+              case 18:
+                return <jC path={t} />;
             }
             return <div />;
           },
@@ -39476,7 +39723,7 @@
               </div>
               <div className="Main-Footer-Advertise">
                 <div className="Main-Footer-Advertise-Inner">
-                  <a className="Main-Footer-Advertise-Icon" href={VO()}>
+                  <a className="Main-Footer-Advertise-Icon" href={zO()}>
                     Become a Sponsor
                   </a>
                 </div>
@@ -39486,61 +39733,61 @@
                 target="_blank"
                 className={"Main-Footer-Logo" + (h.lightMode ? " Main-Footer-Logo-LightMode" : "")}
               >
-                <Dy role="img" aria-label="The Game Band Logo" />
+                <Ly role="img" aria-label="The Game Band Logo" />
               </a>
             </footer>
           );
         return p.sim && p.sim.phase === Q.SpecialEvent && void 0 === p.sim.state.scheduled_game_event ? (
           <qm value={[]}>
-            <jy>
+            <Hy>
               <U>
-                <Ap state={p} />
+                <mp state={p} />
                 <div className="Main-Body">
                   <c.c location={w || b}>
                     <c.a path="/tos">
-                      <Sy />
+                      <ky />
                     </c.a>
                     <c.a path="/privacy">
-                      <Iy />
+                      <Ny />
                     </c.a>
                     <c.a path="/about">
-                      <ch />
+                      <uh />
                     </c.a>
                     <c.a path="/account">
-                      <qh />
+                      <Zh />
                     </c.a>
                     <c.a path="/faq">
-                      <pC />
+                      <bC />
                     </c.a>
                     <c.a path="/login">
-                      <Kh isLogin={!0} />
+                      <$h isLogin={!0} />
                     </c.a>
                     <c.a path="/reset/:token">
-                      <_h />
+                      <eb />
                     </c.a>
                     <c.a path="/verify-account/:token">
-                      <CO />
+                      <SO />
                     </c.a>
                     <c.a path="/send-verification-email">
-                      <yO isModal={!0} />
+                      <IO isModal={!0} />
                     </c.a>
                     <c.a path="/change-email/:token">
-                      <IO />
+                      <kO />
                     </c.a>
                     <c.a path="/delete-account/:token">
-                      <NO />
+                      <PO />
                     </c.a>
                     <c.a path="/signup">
-                      <Kh />
+                      <$h />
                     </c.a>
                     <c.a path="/team/:nickname">
-                      <Ih />
+                      <Nh />
                     </c.a>
                     <c.a path="/player/:id">
                       <GA />
                     </c.a>
                     <c.a path="/item/:id">
-                      <gC
+                      <EC
                         item={
                           null === (y = b.state) || void 0 === y || null === (C = y.params) || void 0 === C
                             ? void 0
@@ -39554,29 +39801,29 @@
                       />
                     </c.a>
                     <c.a path="/game/:id">
-                      <fC />
+                      <vC />
                     </c.a>
                     <c.a path="/league">{p.sim && M(p.sim.phase, "/league")}</c.a>
                     <c.a path="/leagueinfo">
-                      <BO />
+                      <OO />
                     </c.a>
                     <c.a path="/">{p.sim && M(p.sim.phase, "/league")}</c.a>
                   </c.c>
                   {w && (
                     <l.a.Fragment>
-                      <c.a path="/signup" children={<Kh isModal={!0} />} />
-                      <c.a path="/login" children={<Kh isModal={!0} isLogin={!0} />} />
-                      <c.a path="/forgot" children={<_h isModal={!0} />} />
-                      <c.a path="/send-verification-email" children={<yO isModal={!0} />} />
-                      <c.a path="/send-email-change" children={<OO isModal={!0} />} />
-                      <c.a path="/send-delete-account" children={<SO isModal={!0} />} />
-                      <c.a path="/reset/:token" children={<_h isModal={!0} />} />
-                      <c.a path="/team/:nickname" children={<Ih isModal={!0} />} />
+                      <c.a path="/signup" children={<$h isModal={!0} />} />
+                      <c.a path="/login" children={<$h isModal={!0} isLogin={!0} />} />
+                      <c.a path="/forgot" children={<eb isModal={!0} />} />
+                      <c.a path="/send-verification-email" children={<IO isModal={!0} />} />
+                      <c.a path="/send-email-change" children={<NO isModal={!0} />} />
+                      <c.a path="/send-delete-account" children={<TO isModal={!0} />} />
+                      <c.a path="/reset/:token" children={<eb isModal={!0} />} />
+                      <c.a path="/team/:nickname" children={<Nh isModal={!0} />} />
                       <c.a path="/player/:id" children={<GA isModal={!0} />} />
                       <c.a
                         path="/item/:id"
                         children={
-                          <gC
+                          <EC
                             isModal={!0}
                             item={
                               null === (N = b.state) || void 0 === N || null === (k = N.params) || void 0 === k
@@ -39591,15 +39838,15 @@
                           />
                         }
                       />
-                      <c.a path="/game/:id" children={<fC isModal={!0} />} />
-                      <c.a path="/reorder/:type" children={<kh isModal={!0} />} />
-                      <c.a path="/settings" children={<qh isModal={!0} />} />
-                      <c.a path="/account" children={<qh isModal={!0} />} />
-                      <c.a path="/leagueinfo" children={<BO isModal={!0} />} />
+                      <c.a path="/game/:id" children={<vC isModal={!0} />} />
+                      <c.a path="/reorder/:type" children={<Ph isModal={!0} />} />
+                      <c.a path="/settings" children={<Zh isModal={!0} />} />
+                      <c.a path="/account" children={<Zh isModal={!0} />} />
+                      <c.a path="/leagueinfo" children={<OO isModal={!0} />} />
                       <c.a
                         path="/certificate"
                         children={
-                          <kO
+                          <DO
                             isModal={!0}
                             event={
                               null === (D = b.state) || void 0 === D || null === (L = D.params) || void 0 === L
@@ -39609,78 +39856,78 @@
                           />
                         }
                       />
-                      <c.a path="/search" children={<dp isModal={!0} />} />
+                      <c.a path="/search" children={<fp isModal={!0} />} />
                     </l.a.Fragment>
                   )}
-                  <Zh isModal={!0} dismissable={!1} />
+                  <_h isModal={!0} dismissable={!1} />
                 </div>
                 {j}
               </U>
-            </jy>
+            </Hy>
           </qm>
         ) : (
           <qm value={[]}>
-            <jy>
+            <Hy>
               <U>
-                <Ap state={p} />
+                <mp state={p} />
                 <div className="Main-Body">
                   <c.c location={w || b}>
                     <c.a path="/tos">
-                      <Sy />
+                      <ky />
                     </c.a>
                     <c.a path="/privacy">
-                      <Iy />
+                      <Ny />
                     </c.a>
                     <c.a path="/about">
-                      <ch />
+                      <uh />
                     </c.a>
                     <c.a path="/account">
-                      <qh />
+                      <Zh />
                     </c.a>
                     <c.a path="/faq">
-                      <pC />
+                      <bC />
                     </c.a>
                     <c.a path="/shop/:id?">
-                      <Th />
+                      <Dh />
                     </c.a>
                     <c.a path="/library/:book?/:chapter?">
-                      <qy />
+                      <Zy />
                     </c.a>
                     <c.a path="/thebook">
-                      <Vy />
+                      <Wy />
                     </c.a>
                     <c.a path="/offseason">
-                      <fy />
+                      <vy />
                     </c.a>
                     <c.a path="/login">
-                      <Kh isLogin={!0} />
+                      <$h isLogin={!0} />
                     </c.a>
                     <c.a path="/reset/:token">
-                      <_h />
+                      <eb />
                     </c.a>
                     <c.a path="/verify-account/:token">
-                      <CO />
+                      <SO />
                     </c.a>
                     <c.a path="/send-verification-email">
-                      <yO isModal={!0} />
+                      <IO isModal={!0} />
                     </c.a>
                     <c.a path="/change-email/:token">
-                      <IO />
+                      <kO />
                     </c.a>
                     <c.a path="/delete-account/:token">
-                      <NO />
+                      <PO />
                     </c.a>
                     <c.a path="/signup">
-                      <Kh />
+                      <$h />
                     </c.a>
                     <c.a path="/team/:nickname">
-                      <Ih />
+                      <Nh />
                     </c.a>
                     <c.a path="/player/:id">
                       <GA />
                     </c.a>
                     <c.a path="/item/:id">
-                      <gC
+                      <EC
                         item={
                           null === (e = b.state) || void 0 === e || null === (t = e.params) || void 0 === t
                             ? void 0
@@ -39694,74 +39941,74 @@
                       />
                     </c.a>
                     <c.a path="/game/:id">
-                      <fC />
+                      <vC />
                     </c.a>
-                    {Hg(p.sim, "UNLOCKED_HALL") ? (
+                    {Gg(p.sim, "UNLOCKED_HALL") ? (
                       <c.a path="/thehall">
-                        <nh>
-                          <rh />
-                        </nh>
+                        <lh>
+                          <ih />
+                        </lh>
                       </c.a>
                     ) : null}
                     <c.a path="/standings">{p.sim && M(p.sim.phase, "/standings")}</c.a>
                     <c.a path="/tournament">{p.sim && M(p.sim.phase, "/tournament")}</c.a>
                     <c.a path="/leaderboard">
-                      <Np>{p.sim && M(p.sim.phase, "/leaderboard")}</Np>
+                      <Tp>{p.sim && M(p.sim.phase, "/leaderboard")}</Tp>
                     </c.a>
                     <c.a path="/upcoming">{p.sim && M(p.sim.phase, "/upcoming")}</c.a>
                     <c.a path="/bracket">{p.sim && M(p.sim.phase, "/bracket")}</c.a>
                     {void 0 !== (R = p.sim) && R.phase >= 15 && R.phase <= 18 ? (
                       <c.a path="/league">
-                        <MC />
+                        <FC />
                       </c.a>
                     ) : null}
                     <c.a path="/league">{p.sim && M(p.sim.phase, "/league")}</c.a>
                     <c.a path="/leagueinfo">
-                      <BO />
+                      <OO />
                     </c.a>
                     <c.a path="/giftshop">
-                      {(null === (i = p.sim) || void 0 === i ? void 0 : i.attr.includes("SIM_PANIC")) ? <LO /> : <uO />}
+                      {(null === (i = p.sim) || void 0 === i ? void 0 : i.attr.includes("SIM_PANIC")) ? <MO /> : <dO />}
                     </c.a>
                     <c.a path="/gift/:teamid">
-                      <gO progress={null === (o = b.state) || void 0 === o ? void 0 : o.params} />
+                      <EO progress={null === (o = b.state) || void 0 === o ? void 0 : o.params} />
                     </c.a>
                     <c.a path="/fuel/:teamid">
-                      <DO progress={null === (s = b.state) || void 0 === s ? void 0 : s.params} />
+                      <RO progress={null === (s = b.state) || void 0 === s ? void 0 : s.params} />
                     </c.a>
                     <c.a path="/renovation">
-                      <cO />
+                      <uO />
                     </c.a>
-                    {Hg(p.sim, "SIM_DEPTH_CHART") ? (
+                    {Gg(p.sim, "SIM_DEPTH_CHART") ? (
                       <c.a path="/depth">
-                        <Np>
-                          <wO />
-                        </Np>
+                        <Tp>
+                          <yO />
+                        </Tp>
                       </c.a>
                     ) : null}
-                    {Hg(p.sim, "SIM_MUSEUM_REVEALED") ? (
+                    {Gg(p.sim, "SIM_MUSEUM_REVEALED") ? (
                       <c.a path="/vault">
-                        <TO />
+                        <xO />
                       </c.a>
                     ) : null}
                     <c.a path="/">
-                      <sC />
+                      <AC />
                     </c.a>
                   </c.c>
                   {w && (
                     <l.a.Fragment>
-                      <c.a path="/signup" children={<Kh isModal={!0} />} />
-                      <c.a path="/login" children={<Kh isModal={!0} isLogin={!0} />} />
-                      <c.a path="/forgot" children={<_h isModal={!0} />} />
-                      <c.a path="/send-verification-email" children={<yO isModal={!0} />} />
-                      <c.a path="/send-email-change" children={<OO isModal={!0} />} />
-                      <c.a path="/send-delete-account" children={<SO isModal={!0} />} />
-                      <c.a path="/reset/:token" children={<_h isModal={!0} />} />
-                      <c.a path="/team/:nickname" children={<Ih isModal={!0} />} />
+                      <c.a path="/signup" children={<$h isModal={!0} />} />
+                      <c.a path="/login" children={<$h isModal={!0} isLogin={!0} />} />
+                      <c.a path="/forgot" children={<eb isModal={!0} />} />
+                      <c.a path="/send-verification-email" children={<IO isModal={!0} />} />
+                      <c.a path="/send-email-change" children={<NO isModal={!0} />} />
+                      <c.a path="/send-delete-account" children={<TO isModal={!0} />} />
+                      <c.a path="/reset/:token" children={<eb isModal={!0} />} />
+                      <c.a path="/team/:nickname" children={<Nh isModal={!0} />} />
                       <c.a path="/player/:id" children={<GA isModal={!0} />} />
                       <c.a
                         path="/item/:id"
                         children={
-                          <gC
+                          <EC
                             isModal={!0}
                             item={
                               null === (A = b.state) || void 0 === A || null === (u = A.params) || void 0 === u
@@ -39776,44 +40023,44 @@
                           />
                         }
                       />
-                      <c.a path="/game/:id" children={<fC isModal={!0} />} />
-                      {void 0 !== h.snacks.Max_Bet ? <c.a path="/bet/:gameId" children={<Sh isModal={!0} />} /> : null}
+                      <c.a path="/game/:id" children={<vC isModal={!0} />} />
+                      {void 0 !== h.snacks.Max_Bet ? <c.a path="/bet/:gameId" children={<kh isModal={!0} />} /> : null}
                       <c.a
                         path="/vote/:voteType/:entityId"
                         children={
-                          <Np>
-                            <yy isModal={!0} />
-                          </Np>
+                          <Tp>
+                            <Oy isModal={!0} />
+                          </Tp>
                         }
                       />
-                      <c.a path="/reorder/:type" children={<kh isModal={!0} />} />
-                      <c.a path="/tribute/:entityId" children={<By isModal={!0} />} />
-                      <c.a path="/buy/:itemName" children={<Lh isModal={!0} />} />
-                      <c.a path="/sell/:id" children={<Rh isModal={!0} />} />
-                      <c.a path="/pack/:ver" children={<Qh isModal={!0} />} />
-                      <c.a path="/settings" children={<qh isModal={!0} />} />
+                      <c.a path="/reorder/:type" children={<Ph isModal={!0} />} />
+                      <c.a path="/tribute/:entityId" children={<Cy isModal={!0} />} />
+                      <c.a path="/buy/:itemName" children={<Qh isModal={!0} />} />
+                      <c.a path="/sell/:id" children={<Mh isModal={!0} />} />
+                      <c.a path="/pack/:ver" children={<jh isModal={!0} />} />
+                      <c.a path="/settings" children={<Zh isModal={!0} />} />
                       {void 0 !== h.snacks.Stadium_Access ? (
-                        <c.a path="/contribute/:stadiumId/:renovationId" children={<$C isModal={!0} />} />
+                        <c.a path="/contribute/:stadiumId/:renovationId" children={<tO isModal={!0} />} />
                       ) : null}
-                      <c.a path="/account" children={<qh isModal={!0} />} />
-                      <c.a path="/leagueinfo" children={<BO isModal={!0} />} />
+                      <c.a path="/account" children={<Zh isModal={!0} />} />
+                      <c.a path="/leagueinfo" children={<OO isModal={!0} />} />
                       <c.a
                         path="/gift/:teamId"
                         children={
-                          <gO isModal={!0} progress={null === (g = b.state) || void 0 === g ? void 0 : g.params} />
+                          <EO isModal={!0} progress={null === (g = b.state) || void 0 === g ? void 0 : g.params} />
                         }
                       />
                       <c.a
                         path="/fuel/:teamId"
                         children={
-                          <DO isModal={!0} progress={null === (f = b.state) || void 0 === f ? void 0 : f.params} />
+                          <RO isModal={!0} progress={null === (f = b.state) || void 0 === f ? void 0 : f.params} />
                         }
                       />
-                      <c.a path="/wish/:entityId" children={<fO isModal={!0} />} />
+                      <c.a path="/wish/:entityId" children={<vO isModal={!0} />} />
                       <c.a
                         path="/certificate"
                         children={
-                          <kO
+                          <DO
                             isModal={!0}
                             event={
                               null === (E = b.state) || void 0 === E || null === (v = E.params) || void 0 === v
@@ -39823,26 +40070,27 @@
                           />
                         }
                       />
-                      <c.a path="/search" children={<dp isModal={!0} />} />
+                      <c.a path="/search" children={<fp isModal={!0} />} />
+                      <c.a path="/nullified" children={<CO isModal={!0} />} />
                     </l.a.Fragment>
                   )}
-                  <Zh isModal={!0} dismissable={!1} />
+                  <_h isModal={!0} dismissable={!1} />
                 </div>
                 {j}
               </U>
-            </jy>
+            </Hy>
           </qm>
         );
       }
-      function VO() {
+      function zO() {
         return "mailto:sponsors@thegameband.com?subject=".concat(
           encodeURIComponent("I\u2019d like to sponsor a season of Blaseball")
         );
       }
-      var GO = function () {
+      var UO = function () {
         return (
           <x>
-            <RO />
+            <jO />
           </x>
         );
       };
@@ -39851,8 +40099,8 @@
           "[::1]" === window.location.hostname ||
           window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
       );
-      var WO = { sim: void 0, standings: void 0, season: void 0 },
-        zO = l.a.createContext({ menu: [], snackData: {} });
+      var YO = { sim: void 0, standings: void 0, season: void 0 },
+        JO = l.a.createContext({ menu: [], snackData: {} });
       "serviceWorker" in navigator &&
         navigator.serviceWorker.ready
           .then(function (e) {
@@ -39865,18 +40113,18 @@
           <l.a.StrictMode>
             <cA.ToastProvider autoDismiss={!0} autoDismissTimeout={3e3} placement="bottom-right">
               <C value={{}}>
-                <S value={WO}>
+                <S value={YO}>
                   <oc value={{}}>
                     <Yc value={{}}>
-                      <nb
+                      <lb
                         value={{ blessings: [], decrees: [], wills: [], gifts: [], willsToPass: 0, decreesToPass: 0 }}
                       >
-                        <Rg value={zO}>
+                        <Mg value={JO}>
                           <m.a>
-                            <GO />
+                            <UO />
                           </m.a>
-                        </Rg>
-                      </nb>
+                        </Mg>
+                      </lb>
                     </Yc>
                   </oc>
                 </S>
@@ -39886,10 +40134,9 @@
           document.getElementById("root")
         );
     },
-    27: function (e, t, a) {},
     32: function (e, t, a) {},
     35: function (e, t, a) {},
-    37: function (e) {
+    38: function (e) {
       e.exports = {
         collection: [
           {
@@ -42438,8 +42685,8 @@
         ],
       };
     },
-    39: function (e, t, a) {},
     40: function (e, t, a) {},
+    41: function (e, t, a) {},
     53: function (e, t, a) {},
     59: function (e, t, a) {},
     64: function (e) {
