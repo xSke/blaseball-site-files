@@ -8418,15 +8418,20 @@
       }
       function eA(e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          a = Object(r.useContext)(x.context),
-          n = a.user;
+          a = Object(r.useContext)(S.context),
+          n = Object(r.useContext)(x.context),
+          i = n.user;
         switch (e) {
           case 0:
             return <_.Jc />;
           case 1:
-            return <jc style={{ filter: n.lightMode ? "invert(1)" : "none" }} />;
+            return <jc style={{ filter: i.lightMode ? "invert(1)" : "none" }} />;
           case 2:
-            return <div className="BigDeal-Equity" />;
+            return Gg(a.sim, "SIM_COIN_SCATTERED") ? (
+              <div className="BigDeal-Equity BigDeal-Equity-Scattered" />
+            ) : (
+              <div className="BigDeal-Equity" />
+            );
           case 4:
             return <Dc />;
           case 5:
@@ -19298,33 +19303,44 @@
           o = a.teams.find(function (t) {
             return t.id === e.team;
           });
-        return void 0 === o ? null : o.card < -1 ? (
-          <div className="Standings-Team-Blank" />
-        ) : (
-          <d background={t} path={"/team/".concat(o.id)} className="Standings-Team">
-            <div className="Standings-Team-Name-Container">
-              <div className="Standings-Team-Color" aria-hidden="true" style={{ background: o.mainColor }}>
-                <div className="Standings-Team-Emoji">{qg(o)}</div>
+        if (void 0 === o) return null;
+        if (o.card < -1) return <div className="Standings-Team-Blank" />;
+        var s = [];
+        return (
+          o.deceased && s.push("Dead"),
+          o.permAttr.includes("SCATTERED") && s.push("Scattered"),
+          (
+            <d background={t} path={"/team/".concat(o.id)} className="Standings-Team">
+              <div className="Standings-Team-Name-Container">
+                <div className="Standings-Team-Color" aria-hidden="true" style={{ background: o.mainColor }}>
+                  <div className="Standings-Team-Emoji">{qg(o)}</div>
+                </div>
+                <div className="Standings-Team-Name" style={Ws(i, o)}>
+                  {o.deceased ? (
+                    <div
+                      className="Leaderboard-Player-Deceased-Icon"
+                      style={{ filter: i.lightMode ? "invert(1)" : "initial", marginRight: "5px" }}
+                    />
+                  ) : null}
+                  {o.permAttr.includes("SCATTERED") ? Ys(o.fullName) : o.fullName}
+                  {Gg(n.sim, "SIM_SHOW_LEVELS") && o.level <= 4 ? <qs /> : null}
+                  {o.seasAttr.includes("PARTY_TIME") ? (
+                    <div style={{ fontSize: "14px", marginTop: "2px", marginLeft: "8px" }}>{Xg("0x1F389")}</div>
+                  ) : null}
+                </div>
               </div>
-              <div className="Standings-Team-Name" style={Ws(i, o)}>
-                {o.fullName}
-                {Gg(n.sim, "SIM_SHOW_LEVELS") && o.level <= 4 ? <qs /> : null}
-                {o.seasAttr.includes("PARTY_TIME") ? (
-                  <div style={{ fontSize: "14px", marginTop: "2px", marginLeft: "8px" }}>{Xg("0x1F389")}</div>
-                ) : null}
+              <div className="Standings-Team-Wins" aria-label={" with " + e.record.wins + " Wins,"} role="text">
+                {Ms(e.record)}
               </div>
-            </div>
-            <div className="Standings-Team-Wins" aria-label={" with " + e.record.wins + " Wins,"} role="text">
-              {Ms(e.record)}
-            </div>
-            <div
-              className="Standings-Team-Record"
-              aria-label={e.record.nonlosses + " Non-Losses, and " + e.record.losses + " Losses"}
-              role="text"
-            >
-              {js(e.record)}
-            </div>
-          </d>
+              <div
+                className="Standings-Team-Record"
+                aria-label={e.record.nonlosses + " Non-Losses, and " + e.record.losses + " Losses"}
+                role="text"
+              >
+                {js(e.record)}
+              </div>
+            </d>
+          )
         );
       }
       !(function (e) {
