@@ -2479,5 +2479,13 @@
         "background": "#000000",
         "title": "Pulsar (Pulsar)",
         "description": ""
+    },
+    {
+        "id": "ROGUE",
+        "color": "#5988ff",
+        "textColor": "#5988ff",
+        "background": "#001959",
+        "title": "Rogue",
+        "description": "This Team is Out for a Surprise Attack."
     }
 ]
