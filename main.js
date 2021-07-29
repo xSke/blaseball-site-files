@@ -38448,12 +38448,6 @@
                           <div className="Player-Info-Line-Header LeagueInfo-Line-Header">Historian</div>
                           <div className="LeagueInfo-Icon">{eA(5)}</div>
                         </li>
-                        <li className="LeagueInfo-Line-Box">
-                          <div className="Player-Info-Line-Header LeagueInfo-Line-Header">
-                            Food, Beverage, Tourism, and Gift Shop Director
-                          </div>
-                          <div className="LeagueInfo-Icon">{eA(1)}</div>
-                        </li>
                       </div>
                       <div className="Team-Section">
                         <div className="ModalItem-Subheader">Active Rules</div>
