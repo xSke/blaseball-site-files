@@ -28796,31 +28796,46 @@
       function py() {
         var e,
           t = Object(r.useContext)(S.context),
-          a = (Object(r.useContext)(x.context).user, void 0 !== t.sim && void 0 !== t.sim.season ? t.sim.season : -1);
-        return Gg(t.sim, "SIM_PANIC") ? (
+          a = Object(r.useContext)(oc.context),
+          n = Object(r.useContext)(x.context).user,
+          i = void 0 !== t.sim && void 0 !== t.sim.season ? t.sim.season : -1;
+        if (!Gg(t.sim, "SIM_PANIC"))
+          return (
+            <div className="Offseason">
+              <div className="Offseason-Info">
+                <div className="Offseason-Header">
+                  Season <span className="Offseason-Number">{i + 1}</span> Election
+                </div>
+                <div role="text" style={{ textAlign: "center" }}>
+                  <div className="Offseason-Description">
+                    In Light of Recent Events, the Season {i + 1} Election has been delayed by Executive Action.
+                  </div>
+                  <Sp dateString={null === (e = t.sim) || void 0 === e ? void 0 : e.earlsiestaDate} />
+                </div>
+              </div>
+            </div>
+          );
+        var o = a.teams.find(function (e) {
+          return e.id === n.favoriteTeam;
+        });
+        return (
           <div className="Offseason">
             <div className="Offseason-Info">
               <div className="Offseason-Header">
-                Season <span className="Offseason-Number">{a + 1}</span> Election
+                Season <span className="Offseason-Number">{i + 1}</span> Election
               </div>
             </div>
-            <div className="Offseason-Body">
-              <hy />
-            </div>
-          </div>
-        ) : (
-          <div className="Offseason">
-            <div className="Offseason-Info">
-              <div className="Offseason-Header">
-                Season <span className="Offseason-Number">{a + 1}</span> Election
+            {o && o.card > -2 ? (
+              <div className="Offseason-Body">
+                <hy />
               </div>
+            ) : (
               <div role="text" style={{ textAlign: "center" }}>
                 <div className="Offseason-Description">
-                  In Light of Recent Events, the Season {a + 1} Election has been delayed by Executive Action.
+                  Your Team is Elsewhere. They have passed through the Event Horizon.
                 </div>
-                <Sp dateString={null === (e = t.sim) || void 0 === e ? void 0 : e.earlsiestaDate} />
               </div>
-            </div>
+            )}
           </div>
         );
       }
@@ -39475,7 +39490,7 @@
                       ? r - l
                       : a - n;
                   }).map(function (e, t) {
-                    return (
+                    return e.card <= -2 ? null : (
                       <li className="Player-Info-Line GiftShop-Gifts-Item" key={e.id}>
                         <div className="Player-Info-Line-Header GiftShop-Gifts-Item-Header">
                           <div className="GiftShop-Gifts-TeamLogo" style={{ background: e.mainColor }}>
