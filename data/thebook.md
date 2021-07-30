@@ -13,19 +13,19 @@
 * f. Party Time: A Team will enter Party Time if receiving 1 Win per remaining game would not land them in the Postseason.
 
 ### 2. Postseasons
-* a. Each Postseason of Blaseball shall consist of two brackets: an Overbracket and an Underbracket.
-* b. The winner of the Overbracket shall receive a Championship. The winner of the Underbracket shall receive an Underchampionship. `The two are of equal but opposite values.`
-* c. An Overbracket Birth will be awarded to the following Teams from each Sub-League: the 2 Division winners, the next 2 highest finishers, and 1 randomly selected Wild Card.
-* d. An Underbracket Birth will be awarded to the following Teams from each Sub-League: the 2 Division losers, the next 2 lowest finishers, and 1 randomly selected Wild Card.
+* a. Each Postseason of Blaseball shall consist of ~~two~~ brackets: an Overbracket ~~and an Underbracket~~.
+* b. The winner of the Overbracket shall receive a Championship. ~~The winner of the Underbracket shall receive an Underchampionship. ~~`The two are of equal but opposite values.`
+* c. An Overbracket Birth will be awarded to the following Teams from each Sub-League: the 2 Division winners, the next 2 highest finishers, ~~and 1 randomly selected Wild Card.~~
+* d. ~~An Underbracket Birth will be awarded to the following Teams from each Sub-League: the 2 Division losers, the next 2 lowest finishers, and 1 randomly selected Wild Card.~~
 * e. All Postseason teams will be removed from Party Time, if applicable.
-* f. Following the Wild Card draw, all Postseason teams will be seeded 1-5 in their Sub-League. The highest seeds in the Overbracket will be awarded to the highest finishing Teams, and the highest seeds in the Underbracket will be awarded to the lowest finishing Teams.
-* g. The Wild Card Round, a 2-Win series, shall be played by the 4th and 5th seeds in each Bracket's Sub-Leagues.
+* f. ~~Following the Wild Card draw,~~ all Postseason teams will be seeded 1-5 in their Sub-League. The highest seeds in the Overbracket will be awarded to the highest finishing Teams, ~~and the highest seeds in the Underbracket will be awarded to the lowest finishing Teams.~~
+* g. ~~The Wild Card Round, a 2-Win series, shall be played by the 4th and 5th seeds in each Bracket's Sub-Leagues.~~
 * h. All other Postseason series shall be 3-Win series.
 * i. Postseason series are decided when, at the conclusion of a game, the Absolute Value of either Team's Win count is greater than the specified Win count and is greater than the Absolute Value of their opponent's Win count.
 * j. The home team in each Postseason game shall be `the |||||||||||, if the |||||||||||||||||||.`
-* k. The first two Rounds should begin after the end of the Regular Season. One full `|||||` hour shall be skipped, and then the Wild Card Round shall begin at the top of the next available `|||||` hour.
+* k. The first two Rounds should begin after the end of the Regular Season. One full `|||||` hour shall be skipped, ~~and then the Wild Card Round shall begin at the top of the next available ~~`|||||`~~ hour.~~
 * l. The Postseason shall continue early on a "Saturday" and conclude within the same day. If the Postseason lasts into the following day, no `||||| shall be ||||||||, and both teams shall be |||||||||| |||||||| ||||||||||||.`
-* m. If a Round of either Bracket finishes, the next Round will not begin until the other Bracket has also finished its current Round.
+* m. ~~If a Round of either Bracket finishes, the next Round will not begin until the other Bracket has also finished its current Round.~~
 
 ### 3. Elections
 * a. Participants should be allowed to Vote on the rules, rosters, and other effects of the game of Blaseball. `The content of such Votes shall be ||||||||||||||| ||||||||||||||||||| ||||||||| entertainment`.
@@ -48,9 +48,9 @@
 * f. The pitcher must throw the ball `with their hands.`, unless `that doesn't make sense.`
 * g. Once the ball is in play, `||| |||| || ||| |||||||||| ||||| |||||||||| the outcome of the play. ||| |||| ||||||| || ||||||||||||||||` immaterial plane `|||||||||||||| ||||||| ||||||| ||||||||| ||||||||||||||| |||||||||||||||| |||||||| |||||||| unfathomable.`
 * h. The team with the most runs will win the game.
-* i. Turntables: Any Win earned from a non-loss during the Regular Season will be converted into an Unwin.
+* i. ~~Turntables: Any Win earned from a non-loss during the Regular Season will be converted into an Unwin.~~
 * j. Shame Phase: If the home team scores the winning run in the bottom of the final inning, the away team must complete the game in shame, despite being mathematically eliminated.
-* k. Hotel Motel: Games during the Earlseason will have a chance of being Holiday Innings, during which Teams Party instead of Score.
+* k. ~~Hotel Motel: Games during the Earlseason will have a chance of being Holiday Innings, during which Teams Party instead of Score.~~
 * l. ~~Nothing truly matters.~~
 * m. Crying in Blaseball is `||||||||||.`
 
@@ -60,8 +60,8 @@
 * c. ~~When teams are sent to~~ `||||||||||| |||||||||||||`, ~~they shall return once~~ `|||||||||||||||| |||||||||||||||||||||| ||||||` ~~the Under.~~ When teams are sent to `||||||||| |||`, they shall return once `|||| ||| |||||||||| ||| ||||| |||||||||| ||||| || ||||||||||` Blasphemy.
 * d. Divine Favor: the `||||` have an internal ranking of favored teams. The list is decided `|||||||||` each season, and determines all standings tiebreakers.
 * e. ~~If at any time the Fans have angered the Blaseball Gods, they may atone by eating one million Peanuts.~~ STRIKE TWO
-* h. Eat The Rich: Every season, immediately before the Election, the Wealthiest 1% of Fans will have their Coins removed and distributed evenly to the other 99% of Fans.
-* i. Based Evolution: Every Third Championship a Team wins will cause the Team and its Players to Evolve. Players that round the phylogenic Bases will get to go Home.
+* h. ~~Eat The Rich: Every season, immediately before the Election, the Wealthiest 1% of Fans will have their ~~`|||||`~~ removed and distributed evenly to the other 99% of Fans.~~
+* i. ~~Based Evolution: Every Third Championship a Team wins will cause the Team and its Players to Evolve. Players that round the phylogenic Bases will get to go Home.~~
 * j. ~~Blood Bath: ~~`||||| ||||||, ||||||||||| |||||| ||| ||||||||, ||| ||||| |||| |||| ||||||| ||| ||||||. ||||| |||| || |||||||||||| ||||| || |||| |||||| ||||| |||||||||||||`
 * f. Sunglasses `shall be |||||||||| ||||||||||||| |||||||||||||||||. They shall provide |||||||||||||| may be ||||||||||||||||||||.`
 * g. Splortsmanship, splortsmanship, is BACK.
@@ -102,10 +102,18 @@
 ### 5. Deface - Wills
 * a. Fans shall bend the Election to their Will.
 * b. Wills shall be added to the Election, allowing Fans to name Beneficiaries.
-* c. In the spirit of `||||||||`, each Team shall win the same base number of Wills, unless affected by Free Will. Wills will be decided by random selection from each Team's Votes.
-* d. Free Wills: Each season, The bottom four finishing Teams in the league will receive an extra Will in that season's Election.
+* c. In the spirit of `||||||||`, each Team shall win the same base number of Wills, ~~unless affected by Free Will.~~ Wills will be decided by random selection from each Team's Votes.
+* d. ~~Free Wills: Each season, The bottom four finishing Teams in the league will receive an extra Will in that season's Election.~~
 * e. Wills will be Executed in order of League Standings.
 * f. `|| ||| |||||, | |||| |||| |||||| |` Wont.
+
+### ~~6. Eat - Concessions~~
+* ~~a. The League shall sell Concessions to the Fans.~~
+* ~~b. Fans will be provided a Snack Pack to hold their Snacks.~~
+* ~~c. Snackholders are granted access to Compensation, Betting, Exclusive Areas and Democratic Processes.~~
+* ~~d. Seasonal Menus will be updated according to Market Trends.~~
+* ~~e. Snackholders may sell a Snack back to the Food & Beverage Director. ~~`|||| ||||| || | |||||.`
+* ~~f. Fans will be able to freely buy and sell Snack Slots at any time. The less Snack Slots a Fan owns, the higher the Payout Modifier for the Snacks in them.~~
 
 ### 6. Eat - Concessions
 * a. The League shall sell Concessions to the Fans.
@@ -113,7 +121,7 @@
 * c. Snackholders are granted access to Compensation, Betting, Exclusive Areas and Democratic Processes.
 * d. Seasonal Menus will be updated according to Market Trends.
 * e. Snackholders may sell a Snack back to the Food & Beverage Director. `|||| ||||| || | |||||.`
-* f. Fans will be able to freely buy and sell Snack Slots at any time. The less Snack Slots a Fan owns, the higher the Payout Modifier for the Snacks in them.
+* f. ~~Fans will be able to freely buy and sell Snack Slots at any time. The less Snack Slots a Fan owns, the higher the Payout Modifier for the Snacks in them.~~
 
 ### 7. Freeze - `||||||||||||||`
 * a. `|| |||||| |||| ||| |||||| |||| |||| |||||| || ||| ||||||| ||` improvements.

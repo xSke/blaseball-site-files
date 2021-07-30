@@ -1457,7 +1457,11 @@
         "textColor": "#ffffff",
         "background": "#000000",
         "title": "Force",
-        "description": "This Player is Forced into position. They cannot leave their current Location."
+        "description": "This Player is Forced into position. They cannot leave their current Location.",
+        "descriptions": {
+            "player": "This Player is Forced into position. They cannot leave their current Location.",
+            "team": "This Team is Forced into position. They cannot leave their current Location."
+        }
     },
     {
         "id": "PSYCHOACOUSTICS",
@@ -1729,7 +1733,11 @@
         "textColor": "#d285ff",
         "background": "#ffffff",
         "title": "Entangled",
-        "description": "Whenever this Player would return from Elsewhere, their Alternate will return instead."
+        "description": "Whenever this Player would return from Elsewhere, their Alternate will return instead.",
+        "descriptions": {
+            "team": "Whenever this Team would return from Elsewhere, their Alternate will return instead.",
+            "player": "Whenever this Player would return from Elsewhere, their Alternate will return instead."
+        }
     },
     {
         "id": "OFFWORLD",
