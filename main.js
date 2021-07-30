@@ -20230,7 +20230,7 @@
             v = E[0],
             p = E[1];
           Object(r.useEffect)(function () {
-            Math.random() > 0.7 && zg(a.sim, "SIM_GAMMA") && g(!0);
+            Math.random() > 0.7 && g(!0);
           }, []);
           return (
             <header className="Header">
@@ -20242,7 +20242,7 @@
                   <div
                     className="Header-Logo-Tag"
                     onClick={function (e) {
-                      return d
+                      return d && zg(a.sim, "SIM_GAMMA")
                         ? (function (e) {
                             switch (e) {
                               case 1:
@@ -40003,6 +40003,8 @@
             <div className="Credits-Line">iam8bit</div>
             <div className="Credits-Line">blaseballcares</div>
             <div className="Credits-Line">The Society for Internet Blaseball Research</div>
+            <div className="Credits-Line">Blaseball.wiki</div>
+            <div className="Credits-Line">All the casters and journalists</div>
             <div className="Credits-Line">Developers of the Columbia River Salmon Passage (CRiSP) Harvest Model</div>
             <div className="Credits-Line">David Bedard, Sweet Baby Inc.</div>
             <div className="Credits-Line">Maria Beck</div>
