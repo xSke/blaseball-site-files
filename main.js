@@ -40125,6 +40125,10 @@
               }
               text="Blaseball is Elsewhere..."
             />
+            <div className="League-Body">
+              Blaseball is now on Siesta! Games are not running, and we are preparing for the next Era. Please check
+              back here for updates or sign up and choose a favorite team to be notified when we are Live again.
+            </div>
             <SO noHeader={!0} />
             <Fy
               element={
@@ -40591,9 +40595,11 @@
                     ) : null}
                     <c.a path="/standings">{b.sim && F(b.sim.phase, "/standings")}</c.a>
                     <c.a path="/tournament">{b.sim && F(b.sim.phase, "/tournament")}</c.a>
-                    <c.a path="/leaderboard">
-                      <Dp>{b.sim && F(b.sim.phase, "/leaderboard")}</Dp>
-                    </c.a>
+                    {zg(b.sim, "SIM_GAMMA") ? null : (
+                      <c.a path="/leaderboard">
+                        <Dp>{b.sim && F(b.sim.phase, "/leaderboard")}</Dp>
+                      </c.a>
+                    )}
                     <c.a path="/upcoming">{b.sim && F(b.sim.phase, "/upcoming")}</c.a>
                     <c.a path="/bracket">{b.sim && F(b.sim.phase, "/bracket")}</c.a>
                     {void 0 !== (j = b.sim) && j.phase >= 15 && j.phase <= 18 ? (
@@ -40601,7 +40607,7 @@
                         <WC />
                       </c.a>
                     ) : null}
-                    <c.a path="/league">{b.sim && F(b.sim.phase, "/league")}</c.a>
+                    {zg(b.sim, "SIM_GAMMA") ? null : <c.a path="/league">{b.sim && F(b.sim.phase, "/league")}</c.a>}
                     <c.a path="/leagueinfo">
                       <PO />
                     </c.a>
