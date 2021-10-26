@@ -25344,223 +25344,216 @@
               : null
           );
         },
-        op =
-          (n(114),
-          function (e) {
-            var t = Object(r.useContext)(k.context).initUser,
-              n = Object(o.f)(),
-              a = Object(Ir.useToasts)().addToast,
-              s = Object(r.useState)(!1),
-              i = Object(l.a)(s, 2),
-              c = i[0],
-              A = i[1],
-              d = Object(r.useState)(null),
-              u = Object(l.a)(d, 2),
-              m = (u[0], u[1], Object(o.g)()),
-              h = m.state && m.state.background ? m.state.background.pathname : "",
-              v = e.isModal,
-              O = e.isLogin,
-              f = e.clickTracker,
-              p = e.setClickTracker,
-              x = Object(r.useRef)(null),
-              w = Object(r.useRef)(null),
-              B = Object(r.useRef)(null),
-              E = Object(r.useRef)(null),
-              y = Object(r.useRef)(null),
-              C = Object(o.h)().code;
-            return Object(g.jsxs)("div", {
-              className: "".concat(v ? "" : "Auth-SignupWrapper"),
-              children: [
-                !v && Object(g.jsx)(ff, {}),
-                Object(g.jsxs)(
-                  zr,
-                  Object(j.a)(
-                    Object(j.a)({}, e),
-                    {},
-                    {
-                      className: "Auth",
-                      children: [
-                        Object(g.jsx)("header", {
-                          className: "Auth-Header",
-                          children: O ? "Login to Blaseball" : "Signup for Blaseball",
-                        }),
-                        Object(g.jsxs)("form", {
-                          onSubmit: function (e) {
-                            var r, s, i;
-                            e.preventDefault(), A(!0);
-                            var c = {
-                              username: x.current.value.trim(),
-                              password: B.current.value.trim(),
-                              passwordConfirm:
-                                null === (r = E.current) || void 0 === r || null === (s = r.value) || void 0 === s
-                                  ? void 0
-                                  : s.trim(),
-                              actualUsername: w.current ? w.current.value.trim() : "",
-                              playedBefore: null === (i = y.current) || void 0 === i ? void 0 : i.checked,
-                              code: C,
-                              isLogin: O,
-                            };
-                            wl("".concat("https://api.blaseball.com", "/auth/local"), JSON.stringify(c)).then(function (
-                              e
-                            ) {
-                              A(!1),
-                                e.ok && e.status && 200 === e.status
-                                  ? (O || a("Account Created", { appearance: "success" }),
-                                    t(),
-                                    n.push("/"),
-                                    (window.location.href = "/"))
-                                  : e.json().then(function (e) {
-                                      a(e.error || "Error", { appearance: "error" });
-                                    });
-                            });
-                          },
-                          children: [
-                            O
-                              ? Object(g.jsx)("div", {
-                                  children: Object(g.jsx)("input", {
-                                    ref: x,
-                                    className: "Auth-Input",
-                                    placeholder: "Email",
-                                    type: "text",
-                                    name: "email",
-                                    required: !0,
-                                  }),
-                                })
-                              : Object(g.jsxs)(g.Fragment, {
-                                  children: [
-                                    Object(g.jsx)("div", {
-                                      children: Object(g.jsx)("input", {
-                                        ref: x,
-                                        className: "Auth-Input",
-                                        placeholder: "Email",
-                                        type: "email",
-                                        name: "email",
-                                        required: !0,
-                                      }),
-                                    }),
-                                    Object(g.jsx)("div", {
-                                      children: Object(g.jsx)("input", {
-                                        ref: w,
-                                        className: "Auth-Input",
-                                        placeholder: "Username",
-                                        type: "text",
-                                        name: "username",
-                                        required: !0,
-                                      }),
-                                    }),
-                                  ],
-                                }),
-                            Object(g.jsx)("div", {
-                              children: Object(g.jsx)("input", {
-                                ref: B,
-                                className: "Auth-Input",
-                                placeholder: "Password",
-                                type: "password",
-                                name: "password",
-                                required: !0,
-                              }),
-                            }),
-                            O
-                              ? null
-                              : Object(g.jsxs)("div", {
-                                  children: [
-                                    Object(g.jsx)("input", {
-                                      ref: E,
-                                      className: "Auth-Input",
-                                      placeholder: "Confirm Password",
-                                      type: "password",
-                                      name: "passwordConfirm",
-                                    }),
-                                    Object(g.jsx)("input", {
-                                      ref: y,
-                                      type: "checkbox",
-                                      id: "playedBefore",
-                                      name: "playedBefore",
-                                    }),
-                                    " ",
-                                    Object(g.jsx)("label", {
-                                      htmlFor: "playedBefore",
-                                      children: "I have played Blaseball before",
-                                    }),
-                                  ],
-                                }),
-                            Object(g.jsx)("div", {
-                              children: c
-                                ? Object(g.jsx)(Gr, {})
-                                : Object(g.jsx)("input", {
-                                    className: "Auth-Submit",
-                                    type: "submit",
-                                    value: "Continue",
-                                  }),
-                            }),
-                            O
-                              ? Object(g.jsx)(b, {
-                                  background: m.state,
-                                  path: "/forgot",
-                                  className: "Auth-CTA",
-                                  children: "Forgot password?",
-                                })
-                              : null,
-                          ],
-                        }),
-                        Object(g.jsxs)("div", {
-                          children: [
-                            Object(g.jsx)("div", { className: "Auth-Divider", children: "OR" }),
-                            Object(g.jsxs)("a", {
-                              className: "Auth-SocialAuth",
-                              href: "auth/apple?redirectUrl=".concat(h),
-                              children: [
-                                Object(g.jsx)("div", {
-                                  className: "Auth-SocialAuth-Icon-Container",
-                                  children: Object(g.jsx)(Zn.g, { className: "Auth-SocialAuth-Icon" }),
-                                }),
-                                "Continue with Apple",
-                              ],
-                            }),
-                            Object(g.jsxs)("a", {
-                              className: "Auth-SocialAuth",
-                              href: "auth/facebook?redirectUrl=".concat(h),
-                              children: [
-                                Object(g.jsx)("div", {
-                                  className: "Auth-SocialAuth-Icon-Container",
-                                  children: Object(g.jsx)(ie.e, {}),
-                                }),
-                                " Continue with Facebook",
-                              ],
-                            }),
-                            Object(g.jsxs)("a", {
-                              className: "Auth-SocialAuth",
-                              href: "auth/google?redirectUrl=".concat(h),
-                              children: [
-                                Object(g.jsx)("div", {
-                                  className: "Auth-SocialAuth-Icon-Container",
-                                  children: Object(g.jsx)(Zn.h, { className: "Auth-SocialAuth-Icon" }),
-                                }),
-                                "Continue with Google",
-                              ],
-                            }),
-                          ],
-                        }),
-                        Object(g.jsx)("a", {
-                          className: "Auth-CTA",
-                          href: O ? "/signup" : "/login",
-                          children: O
-                            ? Object(g.jsx)(g.Fragment, { children: "Not on Blaseball yet? Signup" })
-                            : Object(g.jsx)("div", {
-                                onClick: function () {
-                                  return ib(f, p, "SignUp", "SignUp.ContinueExistingUser");
-                                },
-                                children: "Already a member? Log in",
-                              }),
-                        }),
-                      ],
-                    }
-                  )
-                ),
-              ],
-            });
-          }),
+        op = (n(114), "https://api.blaseball.com"),
         Ap = function (e) {
+          var t = Object(r.useContext)(k.context).initUser,
+            n = Object(o.f)(),
+            a = Object(Ir.useToasts)().addToast,
+            s = Object(r.useState)(!1),
+            i = Object(l.a)(s, 2),
+            c = i[0],
+            A = i[1],
+            d = Object(r.useState)(null),
+            u = Object(l.a)(d, 2),
+            m = (u[0], u[1], Object(o.g)()),
+            h = m.state && m.state.background ? m.state.background.pathname : "",
+            v = e.isModal,
+            O = e.isLogin,
+            f = e.clickTracker,
+            p = e.setClickTracker,
+            x = Object(r.useRef)(null),
+            w = Object(r.useRef)(null),
+            B = Object(r.useRef)(null),
+            E = Object(r.useRef)(null),
+            y = Object(r.useRef)(null),
+            C = Object(o.h)().code;
+          return Object(g.jsxs)("div", {
+            className: "".concat(v ? "" : "Auth-SignupWrapper"),
+            children: [
+              !v && Object(g.jsx)(ff, {}),
+              Object(g.jsxs)(
+                zr,
+                Object(j.a)(
+                  Object(j.a)({}, e),
+                  {},
+                  {
+                    className: "Auth",
+                    children: [
+                      Object(g.jsx)("header", {
+                        className: "Auth-Header",
+                        children: O ? "Login to Blaseball" : "Signup for Blaseball",
+                      }),
+                      Object(g.jsxs)("form", {
+                        onSubmit: function (e) {
+                          var r, s, i;
+                          e.preventDefault(), A(!0);
+                          var c = {
+                            username: x.current.value.trim(),
+                            password: B.current.value.trim(),
+                            passwordConfirm:
+                              null === (r = E.current) || void 0 === r || null === (s = r.value) || void 0 === s
+                                ? void 0
+                                : s.trim(),
+                            actualUsername: w.current ? w.current.value.trim() : "",
+                            playedBefore: null === (i = y.current) || void 0 === i ? void 0 : i.checked,
+                            code: C,
+                            isLogin: O,
+                          };
+                          wl("".concat(op, "/auth/local"), JSON.stringify(c)).then(function (e) {
+                            A(!1),
+                              e.ok && e.status && 200 === e.status
+                                ? (O || a("Account Created", { appearance: "success" }),
+                                  t(),
+                                  n.push("/"),
+                                  (window.location.href = "/"))
+                                : e.json().then(function (e) {
+                                    a(e.error || "Error", { appearance: "error" });
+                                  });
+                          });
+                        },
+                        children: [
+                          O
+                            ? Object(g.jsx)("div", {
+                                children: Object(g.jsx)("input", {
+                                  ref: x,
+                                  className: "Auth-Input",
+                                  placeholder: "Email",
+                                  type: "text",
+                                  name: "email",
+                                  required: !0,
+                                }),
+                              })
+                            : Object(g.jsxs)(g.Fragment, {
+                                children: [
+                                  Object(g.jsx)("div", {
+                                    children: Object(g.jsx)("input", {
+                                      ref: x,
+                                      className: "Auth-Input",
+                                      placeholder: "Email",
+                                      type: "email",
+                                      name: "email",
+                                      required: !0,
+                                    }),
+                                  }),
+                                  Object(g.jsx)("div", {
+                                    children: Object(g.jsx)("input", {
+                                      ref: w,
+                                      className: "Auth-Input",
+                                      placeholder: "Username",
+                                      type: "text",
+                                      name: "username",
+                                      required: !0,
+                                    }),
+                                  }),
+                                ],
+                              }),
+                          Object(g.jsx)("div", {
+                            children: Object(g.jsx)("input", {
+                              ref: B,
+                              className: "Auth-Input",
+                              placeholder: "Password",
+                              type: "password",
+                              name: "password",
+                              required: !0,
+                            }),
+                          }),
+                          O
+                            ? null
+                            : Object(g.jsxs)("div", {
+                                children: [
+                                  Object(g.jsx)("input", {
+                                    ref: E,
+                                    className: "Auth-Input",
+                                    placeholder: "Confirm Password",
+                                    type: "password",
+                                    name: "passwordConfirm",
+                                  }),
+                                  Object(g.jsx)("input", {
+                                    ref: y,
+                                    type: "checkbox",
+                                    id: "playedBefore",
+                                    name: "playedBefore",
+                                  }),
+                                  " ",
+                                  Object(g.jsx)("label", {
+                                    htmlFor: "playedBefore",
+                                    children: "I have played Blaseball before",
+                                  }),
+                                ],
+                              }),
+                          Object(g.jsx)("div", {
+                            children: c
+                              ? Object(g.jsx)(Gr, {})
+                              : Object(g.jsx)("input", { className: "Auth-Submit", type: "submit", value: "Continue" }),
+                          }),
+                          O
+                            ? Object(g.jsx)(b, {
+                                background: m.state,
+                                path: "/forgot",
+                                className: "Auth-CTA",
+                                children: "Forgot password?",
+                              })
+                            : null,
+                        ],
+                      }),
+                      Object(g.jsxs)("div", {
+                        children: [
+                          Object(g.jsx)("div", { className: "Auth-Divider", children: "OR" }),
+                          Object(g.jsxs)("a", {
+                            className: "Auth-SocialAuth",
+                            href: "".concat(op, "/auth/apple?redirectUrl=").concat(h),
+                            children: [
+                              Object(g.jsx)("div", {
+                                className: "Auth-SocialAuth-Icon-Container",
+                                children: Object(g.jsx)(Zn.g, { className: "Auth-SocialAuth-Icon" }),
+                              }),
+                              "Continue with Apple",
+                            ],
+                          }),
+                          Object(g.jsxs)("a", {
+                            className: "Auth-SocialAuth",
+                            href: "".concat(op, "/auth/facebook?redirectUrl=").concat(h),
+                            children: [
+                              Object(g.jsx)("div", {
+                                className: "Auth-SocialAuth-Icon-Container",
+                                children: Object(g.jsx)(ie.e, {}),
+                              }),
+                              " Continue with Facebook",
+                            ],
+                          }),
+                          Object(g.jsxs)("a", {
+                            className: "Auth-SocialAuth",
+                            href: "".concat(op, "/auth/google?redirectUrl=").concat(h),
+                            children: [
+                              Object(g.jsx)("div", {
+                                className: "Auth-SocialAuth-Icon-Container",
+                                children: Object(g.jsx)(Zn.h, { className: "Auth-SocialAuth-Icon" }),
+                              }),
+                              "Continue with Google",
+                            ],
+                          }),
+                        ],
+                      }),
+                      Object(g.jsx)("a", {
+                        className: "Auth-CTA",
+                        href: O ? "/signup" : "/login",
+                        children: O
+                          ? Object(g.jsx)(g.Fragment, { children: "Not on Blaseball yet? Signup" })
+                          : Object(g.jsx)("div", {
+                              onClick: function () {
+                                return ib(f, p, "SignUp", "SignUp.ContinueExistingUser");
+                              },
+                              children: "Already a member? Log in",
+                            }),
+                      }),
+                    ],
+                  }
+                )
+              ),
+            ],
+          });
+        },
+        dp = function (e) {
           var t = Object(o.h)().token,
             n = Object(r.useContext)(k.context).initUser,
             a = Object(o.f)(),
@@ -25700,7 +25693,7 @@
                 ),
               });
         },
-        dp = function (e) {
+        up = function (e) {
           Object(r.useContext)(k.context).initUser;
           var t = Object(o.f)(),
             n = Object(Ir.useToasts)().addToast,
@@ -25799,7 +25792,7 @@
             )
           );
         },
-        up = function (e) {
+        jp = function (e) {
           var t = Object(r.useContext)(k.context),
             n = t.user,
             a = t.setUser,
@@ -25886,7 +25879,7 @@
             )
           );
         },
-        jp = function (e) {
+        mp = function (e) {
           var t = Object(r.useContext)(k.context).user,
             n = Object(r.useState)(!1),
             a = Object(l.a)(n, 2),
@@ -25902,7 +25895,7 @@
             ),
             t && t.isSignedIn && s
               ? Object(g.jsx)(
-                  up,
+                  jp,
                   Object(j.a)(
                     Object(j.a)({}, e),
                     {},
@@ -25927,7 +25920,7 @@
               : null
           );
         },
-        mp = s.a.createContext({
+        gp = s.a.createContext({
           blessings: [],
           decrees: [],
           wills: [],
@@ -25936,7 +25929,7 @@
           decreesToPass: 0,
           decreeExecutionType: 0,
         }),
-        gp = function (e) {
+        bp = function (e) {
           var t,
             n = e.children,
             a = Object(r.useContext)(I.context),
@@ -25984,16 +25977,16 @@
               },
               [null === (t = a.sim) || void 0 === t ? void 0 : t.phase]
             ),
-            Object(g.jsx)(mp.Provider, { value: c, children: n })
+            Object(g.jsx)(gp.Provider, { value: c, children: n })
           );
         };
-      gp.context = mp;
-      var bp,
-        hp = gp,
-        vp = ["title", "titleId"];
-      function Op() {
+      bp.context = gp;
+      var hp,
+        vp = bp,
+        Op = ["title", "titleId"];
+      function fp() {
         return (
-          (Op =
+          (fp =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -26002,71 +25995,10 @@
               }
               return e;
             }),
-          Op.apply(this, arguments)
+          fp.apply(this, arguments)
         );
-      }
-      function fp(e, t) {
-        if (null == e) return {};
-        var n,
-          a,
-          r = (function (e, t) {
-            if (null == e) return {};
-            var n,
-              a,
-              r = {},
-              s = Object.keys(e);
-            for (a = 0; a < s.length; a++) (n = s[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-            return r;
-          })(e, t);
-        if (Object.getOwnPropertySymbols) {
-          var s = Object.getOwnPropertySymbols(e);
-          for (a = 0; a < s.length; a++)
-            (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
-        }
-        return r;
       }
       function pp(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = fp(e, vp);
-        return (
-          <svg
-            {...Op(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {bp || (bp = <image x={38} y={12} width={75} height={126} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var xp,
-        wp = r.forwardRef(pp),
-        Bp = (n.p, ["title", "titleId"]);
-      function Ep() {
-        return (
-          (Ep =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          Ep.apply(this, arguments)
-        );
-      }
-      function yp(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -26085,49 +26017,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function xp(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = pp(e, Op);
+        return (
+          <svg
+            {...fp(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {hp || (hp = <image x={38} y={12} width={75} height={126} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var wp,
+        Bp = r.forwardRef(xp),
+        Ep = (n.p, ["title", "titleId"]);
+      function yp() {
+        return (
+          (yp =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          yp.apply(this, arguments)
+        );
       }
       function Cp(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = yp(e, Bp);
-        return (
-          <svg
-            {...Ep(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {xp || (xp = <image x={29} y={10} width={92} height={131} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var Ip,
-        Np = r.forwardRef(Cp),
-        Sp = (n.p, ["title", "titleId"]);
-      function Pp() {
-        return (
-          (Pp =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          Pp.apply(this, arguments)
-        );
-      }
-      function Dp(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -26146,49 +26078,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function Ip(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = Cp(e, Ep);
+        return (
+          <svg
+            {...yp(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {wp || (wp = <image x={29} y={10} width={92} height={131} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var Np,
+        Sp = r.forwardRef(Ip),
+        Pp = (n.p, ["title", "titleId"]);
+      function Dp() {
+        return (
+          (Dp =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          Dp.apply(this, arguments)
+        );
       }
       function Qp(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = Dp(e, Sp);
-        return (
-          <svg
-            {...Pp(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {Ip || (Ip = <image x={38} y={18} width={74} height={114} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var kp,
-        Tp = r.forwardRef(Qp),
-        Lp = (n.p, ["title", "titleId"]);
-      function Rp() {
-        return (
-          (Rp =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          Rp.apply(this, arguments)
-        );
-      }
-      function Mp(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -26207,49 +26139,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function kp(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = Qp(e, Pp);
+        return (
+          <svg
+            {...Dp(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {Np || (Np = <image x={38} y={18} width={74} height={114} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var Tp,
+        Lp = r.forwardRef(kp),
+        Rp = (n.p, ["title", "titleId"]);
+      function Mp() {
+        return (
+          (Mp =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          Mp.apply(this, arguments)
+        );
       }
       function zp(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = Mp(e, Lp);
-        return (
-          <svg
-            {...Rp(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {kp || (kp = <image x={38} y={18} width={74} height={114} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var Vp,
-        Gp = r.forwardRef(zp),
-        Hp = (n.p, ["title", "titleId"]);
-      function Wp() {
-        return (
-          (Wp =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          Wp.apply(this, arguments)
-        );
-      }
-      function Fp(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -26268,49 +26200,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function Vp(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = zp(e, Rp);
+        return (
+          <svg
+            {...Mp(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {Tp || (Tp = <image x={38} y={18} width={74} height={114} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var Gp,
+        Hp = r.forwardRef(Vp),
+        Wp = (n.p, ["title", "titleId"]);
+      function Fp() {
+        return (
+          (Fp =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          Fp.apply(this, arguments)
+        );
       }
       function Up(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = Fp(e, Hp);
-        return (
-          <svg
-            {...Wp(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {Vp || (Vp = <image x={44} y={11} width={63} height={128} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var Yp,
-        Jp = r.forwardRef(Up),
-        Xp = (n.p, ["title", "titleId"]);
-      function qp() {
-        return (
-          (qp =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          qp.apply(this, arguments)
-        );
-      }
-      function Zp(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -26329,49 +26261,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function Yp(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = Up(e, Wp);
+        return (
+          <svg
+            {...Fp(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {Gp || (Gp = <image x={44} y={11} width={63} height={128} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var Jp,
+        Xp = r.forwardRef(Yp),
+        qp = (n.p, ["title", "titleId"]);
+      function Zp() {
+        return (
+          (Zp =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          Zp.apply(this, arguments)
+        );
       }
       function Kp(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = Zp(e, Xp);
-        return (
-          <svg
-            {...qp(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {Yp || (Yp = <image x={41} y={12} width={68} height={127} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var _p,
-        $p = r.forwardRef(Kp),
-        ex = (n.p, ["title", "titleId"]);
-      function tx() {
-        return (
-          (tx =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          tx.apply(this, arguments)
-        );
-      }
-      function nx(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -26390,49 +26322,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function _p(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = Kp(e, qp);
+        return (
+          <svg
+            {...Zp(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {Jp || (Jp = <image x={41} y={12} width={68} height={127} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var $p,
+        ex = r.forwardRef(_p),
+        tx = (n.p, ["title", "titleId"]);
+      function nx() {
+        return (
+          (nx =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          nx.apply(this, arguments)
+        );
       }
       function ax(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = nx(e, ex);
-        return (
-          <svg
-            {...tx(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {_p || (_p = <image x={21} y={21} width={109} height={109} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var rx,
-        sx = r.forwardRef(ax),
-        ix = (n.p, ["title", "titleId"]);
-      function cx() {
-        return (
-          (cx =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          cx.apply(this, arguments)
-        );
-      }
-      function lx(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -26451,49 +26383,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function rx(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = ax(e, tx);
+        return (
+          <svg
+            {...nx(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {$p || ($p = <image x={21} y={21} width={109} height={109} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var sx,
+        ix = r.forwardRef(rx),
+        cx = (n.p, ["title", "titleId"]);
+      function lx() {
+        return (
+          (lx =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          lx.apply(this, arguments)
+        );
       }
       function ox(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = lx(e, ix);
-        return (
-          <svg
-            {...cx(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {rx || (rx = <image x={21} y={14} width={109} height={115} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var Ax,
-        dx = r.forwardRef(ox),
-        ux = (n.p, ["title", "titleId"]);
-      function jx() {
-        return (
-          (jx =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          jx.apply(this, arguments)
-        );
-      }
-      function mx(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -26513,13 +26445,74 @@
         }
         return r;
       }
-      function gx(e, t) {
+      function Ax(e, t) {
         var n = e.title,
           a = e.titleId,
-          s = mx(e, ux);
+          s = ox(e, cx);
         return (
           <svg
-            {...jx(
+            {...lx(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {sx || (sx = <image x={21} y={14} width={109} height={115} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var dx,
+        ux = r.forwardRef(Ax),
+        jx = (n.p, ["title", "titleId"]);
+      function mx() {
+        return (
+          (mx =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          mx.apply(this, arguments)
+        );
+      }
+      function gx(e, t) {
+        if (null == e) return {};
+        var n,
+          a,
+          r = (function (e, t) {
+            if (null == e) return {};
+            var n,
+              a,
+              r = {},
+              s = Object.keys(e);
+            for (a = 0; a < s.length; a++) (n = s[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+            return r;
+          })(e, t);
+        if (Object.getOwnPropertySymbols) {
+          var s = Object.getOwnPropertySymbols(e);
+          for (a = 0; a < s.length; a++)
+            (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+        }
+        return r;
+      }
+      function bx(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = gx(e, jx);
+        return (
+          <svg
+            {...mx(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -26533,23 +26526,23 @@
             )}
           >
             {n ? <title id={a}>{n}</title> : null}
-            {Ax || (Ax = <image id="blessings" x={62} y={46.5} width={132} height={163} xlinkHref="<img/png blob>" />)}
+            {dx || (dx = <image id="blessings" x={62} y={46.5} width={132} height={163} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var bx,
-        hx = r.forwardRef(gx);
+      var hx,
+        vx = r.forwardRef(bx);
       n.p;
       !(function (e) {
         (e[(e.DECREE = 0)] = "DECREE"), (e[(e.BONUS = 1)] = "BONUS"), (e[(e.WILL = 2)] = "WILL");
-      })(bx || (bx = {}));
-      var vx = function () {
+      })(hx || (hx = {}));
+      var Ox = function () {
           return Object(g.jsx)("a", {
             href: "/login",
             children: Object(g.jsx)(Hr.a, { className: "Blessings-Submit-Button", children: "Login to Vote" }),
           });
         },
-        Ox = function () {
+        fx = function () {
           return Object(g.jsx)("a", {
             href: "/welcome",
             children: Object(g.jsx)(Hr.a, {
@@ -26558,7 +26551,7 @@
             }),
           });
         },
-        fx = function (e) {
+        px = function (e) {
           Object(r.useContext)(k.context).user;
           var t = e.isActive;
           return Object(g.jsxs)("button", {
@@ -26566,7 +26559,7 @@
             children: ["Select", t ? "ed" : ""],
           });
         };
-      function px(e) {
+      function xx(e) {
         switch (e) {
           case "random_pitcher_new_arm_cannon":
             return Object(g.jsx)(em, { className: "Blessings-Option-SmallIcon" });
@@ -26577,26 +26570,26 @@
           case "random_batter_catchers_mitt":
             return Object(g.jsx)(ej, { className: "Blessings-Option-SmallIcon" });
           case "fire_blood_player":
-            return Object(g.jsx)(wp, { className: "Blessings-Option-SmallIcon" });
+            return Object(g.jsx)(Bp, { className: "Blessings-Option-SmallIcon" });
           case "electric_blood_player":
-            return Object(g.jsx)(Np, { className: "Blessings-Option-SmallIcon" });
+            return Object(g.jsx)(Sp, { className: "Blessings-Option-SmallIcon" });
           case "strike_blood_player":
-            return Object(g.jsx)(Tp, { className: "Blessings-Option-SmallIcon" });
+            return Object(g.jsx)(Lp, { className: "Blessings-Option-SmallIcon" });
           case "ball_blood_player":
-            return Object(g.jsx)(Gp, { className: "Blessings-Option-SmallIcon" });
+            return Object(g.jsx)(Hp, { className: "Blessings-Option-SmallIcon" });
           case "move_best_batter_first":
-            return Object(g.jsx)(Jp, { className: "Blessings-Option-SmallIcon" });
+            return Object(g.jsx)(Xp, { className: "Blessings-Option-SmallIcon" });
           case "worst_batter_pitcher_swap":
-            return Object(g.jsx)($p, { className: "Blessings-Option-SmallIcon" });
+            return Object(g.jsx)(ex, { className: "Blessings-Option-SmallIcon" });
           case "worst_pitchers_alternate_2":
-            return Object(g.jsx)(sx, { className: "Blessings-Option-SmallIcon" });
+            return Object(g.jsx)(ix, { className: "Blessings-Option-SmallIcon" });
           case "worst_batters_alternate_4":
-            return Object(g.jsx)(dx, { className: "Blessings-Option-SmallIcon" });
+            return Object(g.jsx)(ux, { className: "Blessings-Option-SmallIcon" });
         }
         return Object(g.jsx)("div", {});
       }
-      var xx,
-        wx = function (e) {
+      var wx,
+        Bx = function (e) {
           e.isActive;
           var t = e.subheader;
           Object(r.useContext)(k.context).user;
@@ -26620,7 +26613,7 @@
             ],
           });
         },
-        Bx = function (e) {
+        Ex = function (e) {
           var t = e.title,
             n = e.description,
             a = e.id,
@@ -26635,24 +26628,24 @@
               return c(a);
             },
             children: [
-              px(a),
+              xx(a),
               t.split("\n").map(function (e) {
                 return Object(g.jsx)("h4", {
                   className: "Blessings-Option-Header" + (s ? " ".concat(tr(s)) : ""),
                   children: e,
                 });
               }),
-              Object(g.jsx)(wx, { isActive: i, subheader: l, r: !0 }),
+              Object(g.jsx)(Bx, { isActive: i, subheader: l, r: !0 }),
               Object(g.jsx)("div", {
                 className: "Blessings-Option-Description" + (s ? " ".concat(tr(s)) : ""),
                 children: n,
               }),
-              Object(g.jsx)(fx, { isActive: i }),
+              Object(g.jsx)(px, { isActive: i }),
             ],
           });
         },
-        Ex = function () {
-          var e = Object(r.useContext)(hp.context),
+        yx = function () {
+          var e = Object(r.useContext)(vp.context),
             t = Object(r.useContext)(sa.context),
             n = Object(r.useContext)(k.context).user,
             a = Object(r.useState)(),
@@ -26661,8 +26654,8 @@
             c = s[1],
             A = Object(o.g)(),
             d = !!n.favoriteTeam && Dg(n.favoriteTeam, t),
-            u = Object(g.jsx)(vx, {});
-          n.isFetching || !n.isSignedIn || n.favoriteTeam || (u = Object(g.jsx)(Ox, {})),
+            u = Object(g.jsx)(Ox, {});
+          n.isFetching || !n.isSignedIn || n.favoriteTeam || (u = Object(g.jsx)(fx, {})),
             n.isFetching ||
               !n.isSignedIn ||
               d ||
@@ -26693,7 +26686,7 @@
                 children: i
                   ? Object(g.jsx)(b, {
                       background: A,
-                      path: n.verified ? "/vote/".concat(bx.BONUS, "/").concat(i) : "/send-verification-email",
+                      path: n.verified ? "/vote/".concat(hx.BONUS, "/").concat(i) : "/send-verification-email",
                       children: "Submit Distortion Vote",
                     })
                   : Object(g.jsx)(g.Fragment, { children: "Select a Distortion" }),
@@ -26709,7 +26702,7 @@
                       Object(g.jsx)("div", {
                         className: "Blessings-Icon",
                         style: { background: "#9e0000" },
-                        children: Object(g.jsx)(hx, {}),
+                        children: Object(g.jsx)(vx, {}),
                       }),
                       Object(g.jsx)("div", {
                         children: Object(g.jsx)("h3", { className: "Blessings-Title", children: "DISTORTIONS" }),
@@ -26736,7 +26729,7 @@
                     className: "Blessings-Container",
                     children: e.blessings.map(function (e, t) {
                       return Object(g.jsx)(
-                        Bx,
+                        Ex,
                         Object(j.a)(
                           Object(j.a)({}, e),
                           {},
@@ -26755,10 +26748,10 @@
                 ],
               });
         },
-        yx = ["title", "titleId"];
-      function Cx() {
+        Cx = ["title", "titleId"];
+      function Ix() {
         return (
-          (Cx =
+          (Ix =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -26767,10 +26760,10 @@
               }
               return e;
             }),
-          Cx.apply(this, arguments)
+          Ix.apply(this, arguments)
         );
       }
-      function Ix(e, t) {
+      function Nx(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -26790,13 +26783,13 @@
         }
         return r;
       }
-      function Nx(e, t) {
+      function Sx(e, t) {
         var n = e.title,
           a = e.titleId,
-          s = Ix(e, yx);
+          s = Nx(e, Cx);
         return (
           <svg
-            {...Cx(
+            {...Ix(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -26810,8 +26803,8 @@
             )}
           >
             {n ? <title id={a}>{n}</title> : null}
-            {xx ||
-              (xx = (
+            {wx ||
+              (wx = (
                 <image
                   id="_01-TitleBelt"
                   data-name="01-TitleBelt"
@@ -26825,12 +26818,12 @@
           </svg>
         );
       }
-      var Sx,
-        Px = r.forwardRef(Nx),
-        Dx = (n.p, ["title", "titleId"]);
-      function Qx() {
+      var Px,
+        Dx = r.forwardRef(Sx),
+        Qx = (n.p, ["title", "titleId"]);
+      function kx() {
         return (
-          (Qx =
+          (kx =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -26839,10 +26832,10 @@
               }
               return e;
             }),
-          Qx.apply(this, arguments)
+          kx.apply(this, arguments)
         );
       }
-      function kx(e, t) {
+      function Tx(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -26862,13 +26855,13 @@
         }
         return r;
       }
-      function Tx(e, t) {
+      function Lx(e, t) {
         var n = e.title,
           a = e.titleId,
-          s = kx(e, Dx);
+          s = Tx(e, Qx);
         return (
           <svg
-            {...Qx(
+            {...kx(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -26882,8 +26875,8 @@
             )}
           >
             {n ? <title id={a}>{n}</title> : null}
-            {Sx ||
-              (Sx = (
+            {Px ||
+              (Px = (
                 <image
                   id="_03-Pennants"
                   data-name="03-Pennants"
@@ -26897,12 +26890,12 @@
           </svg>
         );
       }
-      var Lx,
-        Rx = r.forwardRef(Tx),
-        Mx = (n.p, ["title", "titleId"]);
-      function zx() {
+      var Rx,
+        Mx = r.forwardRef(Lx),
+        zx = (n.p, ["title", "titleId"]);
+      function Vx() {
         return (
-          (zx =
+          (Vx =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -26911,10 +26904,10 @@
               }
               return e;
             }),
-          zx.apply(this, arguments)
+          Vx.apply(this, arguments)
         );
       }
-      function Vx(e, t) {
+      function Gx(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -26934,13 +26927,13 @@
         }
         return r;
       }
-      function Gx(e, t) {
+      function Hx(e, t) {
         var n = e.title,
           a = e.titleId,
-          s = Vx(e, Mx);
+          s = Gx(e, zx);
         return (
           <svg
-            {...zx(
+            {...Vx(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -26954,8 +26947,8 @@
             )}
           >
             {n ? <title id={a}>{n}</title> : null}
-            {Lx ||
-              (Lx = (
+            {Rx ||
+              (Rx = (
                 <image
                   id="_05-BirdRights"
                   data-name="05-BirdRights"
@@ -26969,12 +26962,12 @@
           </svg>
         );
       }
-      var Hx,
-        Wx = r.forwardRef(Gx),
-        Fx = (n.p, ["title", "titleId"]);
-      function Ux() {
+      var Wx,
+        Fx = r.forwardRef(Hx),
+        Ux = (n.p, ["title", "titleId"]);
+      function Yx() {
         return (
-          (Ux =
+          (Yx =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -26983,10 +26976,10 @@
               }
               return e;
             }),
-          Ux.apply(this, arguments)
+          Yx.apply(this, arguments)
         );
       }
-      function Yx(e, t) {
+      function Jx(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -27006,13 +26999,13 @@
         }
         return r;
       }
-      function Jx(e, t) {
+      function Xx(e, t) {
         var n = e.title,
           a = e.titleId,
-          s = Yx(e, Fx);
+          s = Jx(e, Ux);
         return (
           <svg
-            {...Ux(
+            {...Yx(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -27026,8 +27019,8 @@
             )}
           >
             {n ? <title id={a}>{n}</title> : null}
-            {Hx ||
-              (Hx = (
+            {Wx ||
+              (Wx = (
                 <image
                   id="_04-ForceField"
                   data-name="04-ForceField"
@@ -27041,12 +27034,12 @@
           </svg>
         );
       }
-      var Xx,
-        qx = r.forwardRef(Jx),
-        Zx = (n.p, ["title", "titleId"]);
-      function Kx() {
+      var qx,
+        Zx = r.forwardRef(Xx),
+        Kx = (n.p, ["title", "titleId"]);
+      function _x() {
         return (
-          (Kx =
+          (_x =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -27055,10 +27048,10 @@
               }
               return e;
             }),
-          Kx.apply(this, arguments)
+          _x.apply(this, arguments)
         );
       }
-      function _x(e, t) {
+      function $x(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -27078,13 +27071,13 @@
         }
         return r;
       }
-      function $x(e, t) {
+      function ew(e, t) {
         var n = e.title,
           a = e.titleId,
-          s = _x(e, Zx);
+          s = $x(e, Kx);
         return (
           <svg
-            {...Kx(
+            {..._x(
               {
                 id: "Rations",
                 xmlns: "http://www.w3.org/2000/svg",
@@ -27099,16 +27092,16 @@
             )}
           >
             {n ? <title id={a}>{n}</title> : null}
-            {Xx || (Xx = <image id="l" x={213} y={116} width={1074} height={1267} xlinkHref="<img/png blob>" />)}
+            {qx || (qx = <image id="l" x={213} y={116} width={1074} height={1267} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var ew,
-        tw = r.forwardRef($x),
-        nw = (n.p, ["title", "titleId"]);
-      function aw() {
+      var tw,
+        nw = r.forwardRef(ew),
+        aw = (n.p, ["title", "titleId"]);
+      function rw() {
         return (
-          (aw =
+          (rw =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -27117,10 +27110,10 @@
               }
               return e;
             }),
-          aw.apply(this, arguments)
+          rw.apply(this, arguments)
         );
       }
-      function rw(e, t) {
+      function sw(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -27140,13 +27133,13 @@
         }
         return r;
       }
-      function sw(e, t) {
+      function iw(e, t) {
         var n = e.title,
           a = e.titleId,
-          s = rw(e, nw);
+          s = sw(e, aw);
         return (
           <svg
-            {...aw(
+            {...rw(
               {
                 id: "Slot_Machine",
                 "data-name": "Slot Machine",
@@ -27162,16 +27155,16 @@
             )}
           >
             {n ? <title id={a}>{n}</title> : null}
-            {ew || (ew = <image id="bulbs" x={167} y={62} width={1218} height={1367} xlinkHref="<img/png blob>" />)}
+            {tw || (tw = <image id="bulbs" x={167} y={62} width={1218} height={1367} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var iw,
-        cw = r.forwardRef(sw),
-        lw = (n.p, ["title", "titleId"]);
-      function ow() {
+      var cw,
+        lw = r.forwardRef(iw),
+        ow = (n.p, ["title", "titleId"]);
+      function Aw() {
         return (
-          (ow =
+          (Aw =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -27180,71 +27173,10 @@
               }
               return e;
             }),
-          ow.apply(this, arguments)
+          Aw.apply(this, arguments)
         );
-      }
-      function Aw(e, t) {
-        if (null == e) return {};
-        var n,
-          a,
-          r = (function (e, t) {
-            if (null == e) return {};
-            var n,
-              a,
-              r = {},
-              s = Object.keys(e);
-            for (a = 0; a < s.length; a++) (n = s[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-            return r;
-          })(e, t);
-        if (Object.getOwnPropertySymbols) {
-          var s = Object.getOwnPropertySymbols(e);
-          for (a = 0; a < s.length; a++)
-            (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
-        }
-        return r;
       }
       function dw(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = Aw(e, lw);
-        return (
-          <svg
-            {...ow(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {iw || (iw = <image x={10} y={8} width={131} height={134} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var uw,
-        jw = r.forwardRef(dw),
-        mw = (n.p, ["title", "titleId"]);
-      function gw() {
-        return (
-          (gw =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          gw.apply(this, arguments)
-        );
-      }
-      function bw(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -27263,49 +27195,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function uw(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = dw(e, ow);
+        return (
+          <svg
+            {...Aw(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {cw || (cw = <image x={10} y={8} width={131} height={134} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var jw,
+        mw = r.forwardRef(uw),
+        gw = (n.p, ["title", "titleId"]);
+      function bw() {
+        return (
+          (bw =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          bw.apply(this, arguments)
+        );
       }
       function hw(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = bw(e, mw);
-        return (
-          <svg
-            {...gw(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {uw || (uw = <image x={13} y={16} width={125} height={119} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var vw,
-        Ow = r.forwardRef(hw),
-        fw = (n.p, ["title", "titleId"]);
-      function pw() {
-        return (
-          (pw =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          pw.apply(this, arguments)
-        );
-      }
-      function xw(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -27324,49 +27256,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function vw(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = hw(e, gw);
+        return (
+          <svg
+            {...bw(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {jw || (jw = <image x={13} y={16} width={125} height={119} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var Ow,
+        fw = r.forwardRef(vw),
+        pw = (n.p, ["title", "titleId"]);
+      function xw() {
+        return (
+          (xw =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          xw.apply(this, arguments)
+        );
       }
       function ww(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = xw(e, fw);
-        return (
-          <svg
-            {...pw(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {vw || (vw = <image x={15} y={11} width={119} height={128} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var Bw,
-        Ew = r.forwardRef(ww),
-        yw = (n.p, ["title", "titleId"]);
-      function Cw() {
-        return (
-          (Cw =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          Cw.apply(this, arguments)
-        );
-      }
-      function Iw(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -27385,49 +27317,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function Bw(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = ww(e, pw);
+        return (
+          <svg
+            {...xw(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {Ow || (Ow = <image x={15} y={11} width={119} height={128} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var Ew,
+        yw = r.forwardRef(Bw),
+        Cw = (n.p, ["title", "titleId"]);
+      function Iw() {
+        return (
+          (Iw =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          Iw.apply(this, arguments)
+        );
       }
       function Nw(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = Iw(e, yw);
-        return (
-          <svg
-            {...Cw(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {Bw || (Bw = <image x={21} y={9} width={108} height={132} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var Sw,
-        Pw = r.forwardRef(Nw),
-        Dw = (n.p, ["title", "titleId"]);
-      function Qw() {
-        return (
-          (Qw =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          Qw.apply(this, arguments)
-        );
-      }
-      function kw(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -27446,49 +27378,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function Sw(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = Nw(e, Cw);
+        return (
+          <svg
+            {...Iw(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {Ew || (Ew = <image x={21} y={9} width={108} height={132} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var Pw,
+        Dw = r.forwardRef(Sw),
+        Qw = (n.p, ["title", "titleId"]);
+      function kw() {
+        return (
+          (kw =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          kw.apply(this, arguments)
+        );
       }
       function Tw(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = kw(e, Dw);
-        return (
-          <svg
-            {...Qw(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {Sw || (Sw = <image x={14} y={12} width={122} height={127} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var Lw,
-        Rw = r.forwardRef(Tw),
-        Mw = (n.p, ["title", "titleId"]);
-      function zw() {
-        return (
-          (zw =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          zw.apply(this, arguments)
-        );
-      }
-      function Vw(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -27507,49 +27439,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function Lw(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = Tw(e, Qw);
+        return (
+          <svg
+            {...kw(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {Pw || (Pw = <image x={14} y={12} width={122} height={127} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var Rw,
+        Mw = r.forwardRef(Lw),
+        zw = (n.p, ["title", "titleId"]);
+      function Vw() {
+        return (
+          (Vw =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          Vw.apply(this, arguments)
+        );
       }
       function Gw(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = Vw(e, Mw);
-        return (
-          <svg
-            {...zw(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {Lw || (Lw = <image x={9} y={35} width={133} height={88} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var Hw,
-        Ww = r.forwardRef(Gw),
-        Fw = (n.p, ["title", "titleId"]);
-      function Uw() {
-        return (
-          (Uw =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          Uw.apply(this, arguments)
-        );
-      }
-      function Yw(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -27568,49 +27500,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function Hw(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = Gw(e, zw);
+        return (
+          <svg
+            {...Vw(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {Rw || (Rw = <image x={9} y={35} width={133} height={88} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var Ww,
+        Fw = r.forwardRef(Hw),
+        Uw = (n.p, ["title", "titleId"]);
+      function Yw() {
+        return (
+          (Yw =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          Yw.apply(this, arguments)
+        );
       }
       function Jw(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = Yw(e, Fw);
-        return (
-          <svg
-            {...Uw(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {Hw || (Hw = <image x={24} y={8} width={102} height={134} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var Xw,
-        qw = r.forwardRef(Jw),
-        Zw = (n.p, ["title", "titleId"]);
-      function Kw() {
-        return (
-          (Kw =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          Kw.apply(this, arguments)
-        );
-      }
-      function _w(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -27630,13 +27562,74 @@
         }
         return r;
       }
-      function $w(e, t) {
+      function Xw(e, t) {
         var n = e.title,
           a = e.titleId,
-          s = _w(e, Zw);
+          s = Jw(e, Uw);
         return (
           <svg
-            {...Kw(
+            {...Yw(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {Ww || (Ww = <image x={24} y={8} width={102} height={134} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var qw,
+        Zw = r.forwardRef(Xw),
+        Kw = (n.p, ["title", "titleId"]);
+      function _w() {
+        return (
+          (_w =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          _w.apply(this, arguments)
+        );
+      }
+      function $w(e, t) {
+        if (null == e) return {};
+        var n,
+          a,
+          r = (function (e, t) {
+            if (null == e) return {};
+            var n,
+              a,
+              r = {},
+              s = Object.keys(e);
+            for (a = 0; a < s.length; a++) (n = s[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+            return r;
+          })(e, t);
+        if (Object.getOwnPropertySymbols) {
+          var s = Object.getOwnPropertySymbols(e);
+          for (a = 0; a < s.length; a++)
+            (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+        }
+        return r;
+      }
+      function eB(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = $w(e, Kw);
+        return (
+          <svg
+            {..._w(
               {
                 id: "Wrecking_Ball",
                 "data-name": "Wrecking Ball",
@@ -27652,16 +27645,16 @@
             )}
           >
             {n ? <title id={a}>{n}</title> : null}
-            {Xw || (Xw = <image id="l" x={111} y={-16} width={1327} height={1400} xlinkHref="<img/png blob>" />)}
+            {qw || (qw = <image id="l" x={111} y={-16} width={1327} height={1400} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var eB,
-        tB = r.forwardRef($w),
-        nB = (n.p, ["title", "titleId"]);
-      function aB() {
+      var tB,
+        nB = r.forwardRef(eB),
+        aB = (n.p, ["title", "titleId"]);
+      function rB() {
         return (
-          (aB =
+          (rB =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -27670,71 +27663,10 @@
               }
               return e;
             }),
-          aB.apply(this, arguments)
+          rB.apply(this, arguments)
         );
-      }
-      function rB(e, t) {
-        if (null == e) return {};
-        var n,
-          a,
-          r = (function (e, t) {
-            if (null == e) return {};
-            var n,
-              a,
-              r = {},
-              s = Object.keys(e);
-            for (a = 0; a < s.length; a++) (n = s[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-            return r;
-          })(e, t);
-        if (Object.getOwnPropertySymbols) {
-          var s = Object.getOwnPropertySymbols(e);
-          for (a = 0; a < s.length; a++)
-            (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
-        }
-        return r;
       }
       function sB(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = rB(e, nB);
-        return (
-          <svg
-            {...aB(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {eB || (eB = <image x={6} y={6} width={138} height={138} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var iB,
-        cB = r.forwardRef(sB),
-        lB = (n.p, ["title", "titleId"]);
-      function oB() {
-        return (
-          (oB =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          oB.apply(this, arguments)
-        );
-      }
-      function AB(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -27753,49 +27685,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function iB(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = sB(e, aB);
+        return (
+          <svg
+            {...rB(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {tB || (tB = <image x={6} y={6} width={138} height={138} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var cB,
+        lB = r.forwardRef(iB),
+        oB = (n.p, ["title", "titleId"]);
+      function AB() {
+        return (
+          (AB =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          AB.apply(this, arguments)
+        );
       }
       function dB(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = AB(e, lB);
-        return (
-          <svg
-            {...oB(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {iB || (iB = <image x={22} y={5} width={106} height={140} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var uB,
-        jB = r.forwardRef(dB),
-        mB = (n.p, ["title", "titleId"]);
-      function gB() {
-        return (
-          (gB =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          gB.apply(this, arguments)
-        );
-      }
-      function bB(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -27815,13 +27747,74 @@
         }
         return r;
       }
-      function hB(e, t) {
+      function uB(e, t) {
         var n = e.title,
           a = e.titleId,
-          s = bB(e, mB);
+          s = dB(e, oB);
         return (
           <svg
-            {...gB(
+            {...AB(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {cB || (cB = <image x={22} y={5} width={106} height={140} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var jB,
+        mB = r.forwardRef(uB),
+        gB = (n.p, ["title", "titleId"]);
+      function bB() {
+        return (
+          (bB =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          bB.apply(this, arguments)
+        );
+      }
+      function hB(e, t) {
+        if (null == e) return {};
+        var n,
+          a,
+          r = (function (e, t) {
+            if (null == e) return {};
+            var n,
+              a,
+              r = {},
+              s = Object.keys(e);
+            for (a = 0; a < s.length; a++) (n = s[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+            return r;
+          })(e, t);
+        if (Object.getOwnPropertySymbols) {
+          var s = Object.getOwnPropertySymbols(e);
+          for (a = 0; a < s.length; a++)
+            (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+        }
+        return r;
+      }
+      function vB(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = hB(e, gB);
+        return (
+          <svg
+            {...bB(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -27835,16 +27828,16 @@
             )}
           >
             {n ? <title id={a}>{n}</title> : null}
-            {uB || (uB = <image id="decrees" x={35} y={36.5} width={186} height={183} xlinkHref="<img/png blob>" />)}
+            {jB || (jB = <image id="decrees" x={35} y={36.5} width={186} height={183} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var vB,
-        OB = r.forwardRef(hB),
-        fB = (n.p, ["title", "titleId"]);
-      function pB() {
+      var OB,
+        fB = r.forwardRef(vB),
+        pB = (n.p, ["title", "titleId"]);
+      function xB() {
         return (
-          (pB =
+          (xB =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -27853,10 +27846,10 @@
               }
               return e;
             }),
-          pB.apply(this, arguments)
+          xB.apply(this, arguments)
         );
       }
-      function xB(e, t) {
+      function wB(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -27876,13 +27869,13 @@
         }
         return r;
       }
-      function wB(e, t) {
+      function BB(e, t) {
         var n = e.title,
           a = e.titleId,
-          s = xB(e, fB);
+          s = wB(e, pB);
         return (
           <svg
-            {...pB(
+            {...xB(
               {
                 id: "Turntables_X",
                 "data-name": "Turntables X",
@@ -27898,16 +27891,16 @@
             )}
           >
             {n ? <title id={a}>{n}</title> : null}
-            {vB || (vB = <image x={40} y={40} width={1420} height={1420} xlinkHref="<img/png blob>" />)}
+            {OB || (OB = <image x={40} y={40} width={1420} height={1420} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var BB,
-        EB = r.forwardRef(wB),
-        yB = (n.p, ["title", "titleId"]);
-      function CB() {
+      var EB,
+        yB = r.forwardRef(BB),
+        CB = (n.p, ["title", "titleId"]);
+      function IB() {
         return (
-          (CB =
+          (IB =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -27916,71 +27909,10 @@
               }
               return e;
             }),
-          CB.apply(this, arguments)
+          IB.apply(this, arguments)
         );
-      }
-      function IB(e, t) {
-        if (null == e) return {};
-        var n,
-          a,
-          r = (function (e, t) {
-            if (null == e) return {};
-            var n,
-              a,
-              r = {},
-              s = Object.keys(e);
-            for (a = 0; a < s.length; a++) (n = s[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-            return r;
-          })(e, t);
-        if (Object.getOwnPropertySymbols) {
-          var s = Object.getOwnPropertySymbols(e);
-          for (a = 0; a < s.length; a++)
-            (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
-        }
-        return r;
       }
       function NB(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = IB(e, yB);
-        return (
-          <svg
-            {...CB(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {BB || (BB = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var SB,
-        PB = r.forwardRef(NB),
-        DB = (n.p, ["title", "titleId"]);
-      function QB() {
-        return (
-          (QB =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          QB.apply(this, arguments)
-        );
-      }
-      function kB(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -27999,49 +27931,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function SB(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = NB(e, CB);
+        return (
+          <svg
+            {...IB(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {EB || (EB = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var PB,
+        DB = r.forwardRef(SB),
+        QB = (n.p, ["title", "titleId"]);
+      function kB() {
+        return (
+          (kB =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          kB.apply(this, arguments)
+        );
       }
       function TB(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = kB(e, DB);
-        return (
-          <svg
-            {...QB(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {SB || (SB = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var LB,
-        RB = r.forwardRef(TB),
-        MB = (n.p, ["title", "titleId"]);
-      function zB() {
-        return (
-          (zB =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          zB.apply(this, arguments)
-        );
-      }
-      function VB(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -28060,49 +27992,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function LB(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = TB(e, QB);
+        return (
+          <svg
+            {...kB(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {PB || (PB = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var RB,
+        MB = r.forwardRef(LB),
+        zB = (n.p, ["title", "titleId"]);
+      function VB() {
+        return (
+          (VB =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          VB.apply(this, arguments)
+        );
       }
       function GB(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = VB(e, MB);
-        return (
-          <svg
-            {...zB(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {LB || (LB = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var HB,
-        WB = r.forwardRef(GB),
-        FB = (n.p, ["title", "titleId"]);
-      function UB() {
-        return (
-          (UB =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          UB.apply(this, arguments)
-        );
-      }
-      function YB(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -28121,49 +28053,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function HB(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = GB(e, zB);
+        return (
+          <svg
+            {...VB(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {RB || (RB = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var WB,
+        FB = r.forwardRef(HB),
+        UB = (n.p, ["title", "titleId"]);
+      function YB() {
+        return (
+          (YB =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          YB.apply(this, arguments)
+        );
       }
       function JB(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = YB(e, FB);
-        return (
-          <svg
-            {...UB(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {HB || (HB = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var XB,
-        qB = r.forwardRef(JB),
-        ZB = (n.p, ["title", "titleId"]);
-      function KB() {
-        return (
-          (KB =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          KB.apply(this, arguments)
-        );
-      }
-      function _B(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -28183,13 +28115,74 @@
         }
         return r;
       }
-      function $B(e, t) {
+      function XB(e, t) {
         var n = e.title,
           a = e.titleId,
-          s = _B(e, ZB);
+          s = JB(e, UB);
         return (
           <svg
-            {...KB(
+            {...YB(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {WB || (WB = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var qB,
+        ZB = r.forwardRef(XB),
+        KB = (n.p, ["title", "titleId"]);
+      function _B() {
+        return (
+          (_B =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          _B.apply(this, arguments)
+        );
+      }
+      function $B(e, t) {
+        if (null == e) return {};
+        var n,
+          a,
+          r = (function (e, t) {
+            if (null == e) return {};
+            var n,
+              a,
+              r = {},
+              s = Object.keys(e);
+            for (a = 0; a < s.length; a++) (n = s[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+            return r;
+          })(e, t);
+        if (Object.getOwnPropertySymbols) {
+          var s = Object.getOwnPropertySymbols(e);
+          for (a = 0; a < s.length; a++)
+            (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+        }
+        return r;
+      }
+      function eE(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = $B(e, KB);
+        return (
+          <svg
+            {..._B(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -28203,8 +28196,8 @@
             )}
           >
             {n ? <title id={a}>{n}</title> : null}
-            {XB ||
-              (XB = (
+            {qB ||
+              (qB = (
                 <image
                   id="Rounded_Rectangle_4_copy_4"
                   data-name="Rounded Rectangle 4 copy 4"
@@ -28217,12 +28210,12 @@
           </svg>
         );
       }
-      var eE,
-        tE = r.forwardRef($B),
-        nE = (n.p, ["title", "titleId"]);
-      function aE() {
+      var tE,
+        nE = r.forwardRef(eE),
+        aE = (n.p, ["title", "titleId"]);
+      function rE() {
         return (
-          (aE =
+          (rE =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -28231,71 +28224,10 @@
               }
               return e;
             }),
-          aE.apply(this, arguments)
+          rE.apply(this, arguments)
         );
-      }
-      function rE(e, t) {
-        if (null == e) return {};
-        var n,
-          a,
-          r = (function (e, t) {
-            if (null == e) return {};
-            var n,
-              a,
-              r = {},
-              s = Object.keys(e);
-            for (a = 0; a < s.length; a++) (n = s[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-            return r;
-          })(e, t);
-        if (Object.getOwnPropertySymbols) {
-          var s = Object.getOwnPropertySymbols(e);
-          for (a = 0; a < s.length; a++)
-            (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
-        }
-        return r;
       }
       function sE(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = rE(e, nE);
-        return (
-          <svg
-            {...aE(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {eE || (eE = <image x={9} y={23} width={132} height={88} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var iE,
-        cE = r.forwardRef(sE),
-        lE = (n.p, ["title", "titleId"]);
-      function oE() {
-        return (
-          (oE =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          oE.apply(this, arguments)
-        );
-      }
-      function AE(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -28314,49 +28246,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function iE(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = sE(e, aE);
+        return (
+          <svg
+            {...rE(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {tE || (tE = <image x={9} y={23} width={132} height={88} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var cE,
+        lE = r.forwardRef(iE),
+        oE = (n.p, ["title", "titleId"]);
+      function AE() {
+        return (
+          (AE =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          AE.apply(this, arguments)
+        );
       }
       function dE(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = AE(e, lE);
-        return (
-          <svg
-            {...oE(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {iE || (iE = <image x={31} y={4} width={94} height={139} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var uE,
-        jE = r.forwardRef(dE),
-        mE = (n.p, ["title", "titleId"]);
-      function gE() {
-        return (
-          (gE =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          gE.apply(this, arguments)
-        );
-      }
-      function bE(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -28375,49 +28307,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function uE(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = dE(e, oE);
+        return (
+          <svg
+            {...AE(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {cE || (cE = <image x={31} y={4} width={94} height={139} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var jE,
+        mE = r.forwardRef(uE),
+        gE = (n.p, ["title", "titleId"]);
+      function bE() {
+        return (
+          (bE =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          bE.apply(this, arguments)
+        );
       }
       function hE(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = bE(e, mE);
-        return (
-          <svg
-            {...gE(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {uE || (uE = <image x={10} y={15} width={130} height={119} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var vE,
-        OE = r.forwardRef(hE),
-        fE = (n.p, ["title", "titleId"]);
-      function pE() {
-        return (
-          (pE =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          pE.apply(this, arguments)
-        );
-      }
-      function xE(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -28436,49 +28368,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function vE(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = hE(e, gE);
+        return (
+          <svg
+            {...bE(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {jE || (jE = <image x={10} y={15} width={130} height={119} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var OE,
+        fE = r.forwardRef(vE),
+        pE = (n.p, ["title", "titleId"]);
+      function xE() {
+        return (
+          (xE =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          xE.apply(this, arguments)
+        );
       }
       function wE(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = xE(e, fE);
-        return (
-          <svg
-            {...pE(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {vE || (vE = <image x={15} y={8} width={116} height={134} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var BE,
-        EE = r.forwardRef(wE),
-        yE = (n.p, ["title", "titleId"]);
-      function CE() {
-        return (
-          (CE =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          CE.apply(this, arguments)
-        );
-      }
-      function IE(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -28497,49 +28429,49 @@
             (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
         }
         return r;
+      }
+      function BE(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = wE(e, pE);
+        return (
+          <svg
+            {...xE(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {OE || (OE = <image x={15} y={8} width={116} height={134} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var EE,
+        yE = r.forwardRef(BE),
+        CE = (n.p, ["title", "titleId"]);
+      function IE() {
+        return (
+          (IE =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          IE.apply(this, arguments)
+        );
       }
       function NE(e, t) {
-        var n = e.title,
-          a = e.titleId,
-          s = IE(e, yE);
-        return (
-          <svg
-            {...CE(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": a,
-              },
-              s
-            )}
-          >
-            {n ? <title id={a}>{n}</title> : null}
-            {BE || (BE = <image x={1} y={30} width={148} height={83} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var SE,
-        PE = r.forwardRef(NE),
-        DE = (n.p, ["title", "titleId"]);
-      function QE() {
-        return (
-          (QE =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
-              }
-              return e;
-            }),
-          QE.apply(this, arguments)
-        );
-      }
-      function kE(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -28559,13 +28491,13 @@
         }
         return r;
       }
-      function TE(e, t) {
+      function SE(e, t) {
         var n = e.title,
           a = e.titleId,
-          s = kE(e, DE);
+          s = NE(e, CE);
         return (
           <svg
-            {...QE(
+            {...IE(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -28579,23 +28511,84 @@
             )}
           >
             {n ? <title id={a}>{n}</title> : null}
-            {SE || (SE = <image x={1} y={30} width={148} height={83} xlinkHref="<img/png blob>" />)}
+            {EE || (EE = <image x={1} y={30} width={148} height={83} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var LE,
-        RE = r.forwardRef(TE);
+      var PE,
+        DE = r.forwardRef(SE),
+        QE = (n.p, ["title", "titleId"]);
+      function kE() {
+        return (
+          (kE =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          kE.apply(this, arguments)
+        );
+      }
+      function TE(e, t) {
+        if (null == e) return {};
+        var n,
+          a,
+          r = (function (e, t) {
+            if (null == e) return {};
+            var n,
+              a,
+              r = {},
+              s = Object.keys(e);
+            for (a = 0; a < s.length; a++) (n = s[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+            return r;
+          })(e, t);
+        if (Object.getOwnPropertySymbols) {
+          var s = Object.getOwnPropertySymbols(e);
+          for (a = 0; a < s.length; a++)
+            (n = s[a]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+        }
+        return r;
+      }
+      function LE(e, t) {
+        var n = e.title,
+          a = e.titleId,
+          s = TE(e, QE);
+        return (
+          <svg
+            {...kE(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": a,
+              },
+              s
+            )}
+          >
+            {n ? <title id={a}>{n}</title> : null}
+            {PE || (PE = <image x={1} y={30} width={148} height={83} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var RE,
+        ME = r.forwardRef(LE);
       n.p;
       !(function (e) {
         (e[(e.DECREE = 0)] = "DECREE"), (e[(e.BONUS = 1)] = "BONUS"), (e[(e.WILL = 2)] = "WILL");
-      })(LE || (LE = {}));
-      var ME = function () {
+      })(RE || (RE = {}));
+      var zE = function () {
           return Object(g.jsx)("a", {
             href: "/login",
             children: Object(g.jsx)(Hr.a, { className: "Decrees-Submit-Button", children: "Login to Vote" }),
           });
         },
-        zE = function () {
+        VE = function () {
           return Object(g.jsx)("a", {
             href: "/welcome",
             children: Object(g.jsx)(Hr.a, {
@@ -28604,31 +28597,31 @@
             }),
           });
         },
-        VE = function (e) {
+        GE = function (e) {
           Object(r.useContext)(k.context).user;
           var t = e.isActive;
           return Object(g.jsxs)(Hr.a, { className: "Decrees-Option-Button", children: ["Select", t ? "ed" : ""] });
         };
-      function GE(e) {
+      function HE(e) {
         switch (e) {
           case "champion_penance":
-            return Object(g.jsx)(Rx, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(Mx, { className: "Decrees-Option-Icon" });
           case "champion_evolve":
             return Object(g.jsx)(Oe, { className: "Decrees-Option-Icon" });
           case "champion_belt":
-            return Object(g.jsx)(Px, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(Dx, { className: "Decrees-Option-Icon" });
           case "bird_rights":
-            return Object(g.jsx)(Wx, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(Fx, { className: "Decrees-Option-Icon" });
           case "force_fields":
-            return Object(g.jsx)(qx, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(Zx, { className: "Decrees-Option-Icon" });
           case "free_wills":
             return Object(g.jsx)(Ee, { className: "Decrees-Option-Icon" });
           case "meal_plan":
-            return Object(g.jsx)(tw, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(nw, { className: "Decrees-Option-Icon" });
           case "all_you_can_eat":
             return Object(g.jsx)(je, { className: "Decrees-Option-Icon" });
           case "pot_luck":
-            return Object(g.jsx)(cw, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(lw, { className: "Decrees-Option-Icon" });
           case "distribute_bats":
             return Object(g.jsx)(Lu, { className: "Decrees-Option-Icon" });
           case "distribute_caps":
@@ -28638,25 +28631,25 @@
           case "distribute_gloves":
             return Object(g.jsx)(ej, { className: "Decrees-Option-Icon" });
           case "goodie_bags":
-            return Object(g.jsx)(jw, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(mw, { className: "Decrees-Option-Icon" });
           case "gift_baskets":
-            return Object(g.jsx)(Ow, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(fw, { className: "Decrees-Option-Icon" });
           case "community_chest":
             return Object(g.jsx)(Pe, { className: "Decrees-Option-Icon" });
           case "build_smithy":
-            return Object(g.jsx)(Ew, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(yw, { className: "Decrees-Option-Icon" });
           case "build_library":
-            return Object(g.jsx)(Rw, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(Mw, { className: "Decrees-Option-Icon" });
           case "build_laboratory":
-            return Object(g.jsx)(Ww, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(Fw, { className: "Decrees-Option-Icon" });
           case "build_monument":
-            return Object(g.jsx)(Pw, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(Dw, { className: "Decrees-Option-Icon" });
           case "build_fairgrounds":
             return Object(g.jsx)(Re, { className: "Decrees-Option-Icon" });
           case "build_forum":
-            return Object(g.jsx)(qw, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(Zw, { className: "Decrees-Option-Icon" });
           case "wrecking_ball":
-            return Object(g.jsx)(tB, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(nB, { className: "Decrees-Option-Icon" });
           case "hype_train":
             return Object(g.jsx)(Ot, { className: "Decrees-Option-Icon" });
           case "ratification":
@@ -28664,11 +28657,11 @@
           case "on_the_house":
             return Object(g.jsx)(qe, { className: "Decrees-Option-Icon" });
           case "climate_control":
-            return Object(g.jsx)(cB, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(lB, { className: "Decrees-Option-Icon" });
           case "trust_fall":
-            return Object(g.jsx)(jB, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(mB, { className: "Decrees-Option-Icon" });
           case "repeal_turntables":
-            return Object(g.jsx)(EB, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(yB, { className: "Decrees-Option-Icon" });
           case "underachiever":
             return Object(g.jsx)(jt, { className: "Decrees-Option-Icon" });
           case "sun_3":
@@ -28692,38 +28685,38 @@
           case "zero_sun":
             return Object(g.jsx)(yn, { className: "Decrees-Option-Icon" });
           case "team_favor_roamless":
-            return Object(g.jsx)(RB, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(MB, { className: "Decrees-Option-Icon" });
           case "team_favor_squiddish":
-            return Object(g.jsx)(WB, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(FB, { className: "Decrees-Option-Icon" });
           case "team_favor_avoidance":
-            return Object(g.jsx)(qB, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(ZB, { className: "Decrees-Option-Icon" });
           case "team_favor_containment":
-            return Object(g.jsx)(PB, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(DB, { className: "Decrees-Option-Icon" });
           case "dir_b2":
             return Object(g.jsx)("div", { className: "QuadrantChart-2 Decrees-Option-Icon" });
           case "dir_b0":
-            return Object(g.jsx)(tE, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(nE, { className: "Decrees-Option-Icon" });
           case "dir_bh":
             return Object(g.jsx)(Dn, { className: "Decrees-Option-Icon" });
           case "dir_pu":
             return Object(g.jsx)(Mn, { className: "Decrees-Option-Icon" });
           case "team_amplification_batting":
-            return Object(g.jsx)(OE, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(fE, { className: "Decrees-Option-Icon" });
           case "team_amplification_pitching":
-            return Object(g.jsx)(jE, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(mE, { className: "Decrees-Option-Icon" });
           case "team_amplification_baserunning":
-            return Object(g.jsx)(EE, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(yE, { className: "Decrees-Option-Icon" });
           case "team_amplification_defense":
-            return Object(g.jsx)(cE, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(lE, { className: "Decrees-Option-Icon" });
           case "circuit_0":
-            return Object(g.jsx)(PE, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(DE, { className: "Decrees-Option-Icon" });
           case "circuit_1":
-            return Object(g.jsx)(RE, { className: "Decrees-Option-Icon" });
+            return Object(g.jsx)(ME, { className: "Decrees-Option-Icon" });
         }
         return Object(g.jsx)("div", {});
       }
-      var HE,
-        WE = function (e) {
+      var WE,
+        FE = function (e) {
           var t = e.title,
             n = e.description,
             a = e.id,
@@ -28739,7 +28732,7 @@
             },
             style: { justifySelf: l ? "center" : "" },
             children: [
-              GE(a),
+              HE(a),
               Object(g.jsx)("h4", {
                 className: "Decrees-Option-Header" + (void 0 !== s ? " ".concat(tr(s)) : ""),
                 children: t,
@@ -28755,20 +28748,20 @@
                     className: "Decrees-Option-Description" + (void 0 !== s ? " ".concat(tr(s)) : ""),
                     children: n[0],
                   }),
-              Object(g.jsx)(VE, { isActive: i }),
+              Object(g.jsx)(GE, { isActive: i }),
             ],
           });
         },
-        FE = function () {
-          var e = Object(r.useContext)(hp.context),
+        UE = function () {
+          var e = Object(r.useContext)(vp.context),
             t = Object(r.useContext)(k.context).user,
             n = Object(r.useState)(),
             a = Object(l.a)(n, 2),
             s = a[0],
             i = a[1],
             c = Object(o.g)(),
-            A = Object(g.jsx)(ME, {});
-          t.isFetching || !t.isSignedIn || t.favoriteTeam || (A = Object(g.jsx)(zE, {})),
+            A = Object(g.jsx)(zE, {});
+          t.isFetching || !t.isSignedIn || t.favoriteTeam || (A = Object(g.jsx)(VE, {})),
             (void 0 === t.snacks[_.VOTES] || t.snacks[_.VOTES] < 1) &&
               (A = Object(g.jsx)(Hr.a, {
                 className: "Decrees-Submit-Button",
@@ -28789,7 +28782,7 @@
                 children: s
                   ? Object(g.jsxs)(b, {
                       background: c,
-                      path: t.verified ? "/vote/".concat(LE.DECREE, "/").concat(s) : "/send-verification-email",
+                      path: t.verified ? "/vote/".concat(RE.DECREE, "/").concat(s) : "/send-verification-email",
                       children: ["Submit ", 0 == e.decreeExecutionType ? "Circuit" : "Amplification", " Vote"],
                     })
                   : Object(g.jsxs)(g.Fragment, {
@@ -28807,7 +28800,7 @@
                     ? Object(g.jsx)("div", {
                         className: "Decrees-Icon",
                         style: { background: "#9e0000" },
-                        children: Object(g.jsx)(OB, {}),
+                        children: Object(g.jsx)(fB, {}),
                       })
                     : Object(g.jsx)("div", {
                         className: "Decrees-Icon",
@@ -28860,7 +28853,7 @@
                 style: { gridTemplateColumns: "repeat(".concat(d, ", 1fr)") },
                 children: e.decrees.map(function (e, t) {
                   return Object(g.jsx)(
-                    WE,
+                    FE,
                     Object(j.a)(
                       Object(j.a)({}, e),
                       {},
@@ -28880,10 +28873,10 @@
             ],
           });
         },
-        UE = ["title", "titleId"];
-      function YE() {
+        YE = ["title", "titleId"];
+      function JE() {
         return (
-          (YE =
+          (JE =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -28892,10 +28885,10 @@
               }
               return e;
             }),
-          YE.apply(this, arguments)
+          JE.apply(this, arguments)
         );
       }
-      function JE(e, t) {
+      function XE(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -28915,13 +28908,13 @@
         }
         return r;
       }
-      function XE(e, t) {
+      function qE(e, t) {
         var n = e.title,
           a = e.titleId,
-          s = JE(e, UE);
+          s = XE(e, YE);
         return (
           <svg
-            {...YE(
+            {...JE(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -28935,16 +28928,16 @@
             )}
           >
             {n ? <title id={a}>{n}</title> : null}
-            {HE || (HE = <image id="wills" x={43} y={47} width={170} height={162} xlinkHref="<img/png blob>" />)}
+            {WE || (WE = <image id="wills" x={43} y={47} width={170} height={162} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var qE,
-        ZE = r.forwardRef(XE),
-        KE = (n.p, ["title", "titleId"]);
-      function _E() {
+      var ZE,
+        KE = r.forwardRef(qE),
+        _E = (n.p, ["title", "titleId"]);
+      function $E() {
         return (
-          (_E =
+          ($E =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -28953,10 +28946,10 @@
               }
               return e;
             }),
-          _E.apply(this, arguments)
+          $E.apply(this, arguments)
         );
       }
-      function $E(e, t) {
+      function ey(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -28976,13 +28969,13 @@
         }
         return r;
       }
-      function ey(e, t) {
+      function ty(e, t) {
         var n = e.title,
           a = e.titleId,
-          s = $E(e, KE);
+          s = ey(e, _E);
         return (
           <svg
-            {..._E(
+            {...$E(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -28996,23 +28989,23 @@
             )}
           >
             {n ? <title id={a}>{n}</title> : null}
-            {qE || (qE = <image x={40} y={23} width={70} height={105} xlinkHref="<img/png blob>" />)}
+            {ZE || (ZE = <image x={40} y={23} width={70} height={105} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var ty,
-        ny = r.forwardRef(ey);
+      var ny,
+        ay = r.forwardRef(ty);
       n.p;
       !(function (e) {
         (e[(e.DECREE = 0)] = "DECREE"), (e[(e.BONUS = 1)] = "BONUS"), (e[(e.WILL = 2)] = "WILL");
-      })(ty || (ty = {}));
-      var ay = function () {
+      })(ny || (ny = {}));
+      var ry = function () {
           return Object(g.jsx)("a", {
             href: "/login",
             children: Object(g.jsx)(Hr.a, { className: "Wills-Submit-Button", children: "Login to Vote" }),
           });
         },
-        ry = function () {
+        sy = function () {
           return Object(g.jsx)("a", {
             href: "/welcome",
             children: Object(g.jsx)(Hr.a, {
@@ -29021,12 +29014,12 @@
             }),
           });
         },
-        sy = function (e) {
+        iy = function (e) {
           Object(r.useContext)(k.context).user;
           var t = e.isActive;
           return Object(g.jsxs)("button", { className: "Wills-Option-Button", children: ["Select", t ? "ed" : ""] });
         },
-        iy = function (e) {
+        cy = function (e) {
           e.isActive;
           var t = e.subheader;
           Object(r.useContext)(k.context).user;
@@ -29050,7 +29043,7 @@
             ],
           });
         },
-        cy = function (e) {
+        ly = function (e) {
           var t = e.title,
             n = e.description,
             a = e.id,
@@ -29067,22 +29060,22 @@
             },
             style: { justifySelf: o ? "center" : "" },
             children: [
-              "charge" === a ? Object(g.jsx)(ny, { className: "Decrees-Option-Icon" }) : null,
+              "charge" === a ? Object(g.jsx)(ay, { className: "Decrees-Option-Icon" }) : null,
               Object(g.jsx)("h4", {
                 className: "Wills-Option-Header" + (void 0 !== s ? " ".concat(tr(s)) : ""),
                 children: t,
               }),
-              Object(g.jsx)(iy, { isActive: i, subheader: l, r: !0 }),
+              Object(g.jsx)(cy, { isActive: i, subheader: l, r: !0 }),
               Object(g.jsx)("div", {
                 className: "Wills-Option-Description" + (void 0 !== s ? " ".concat(tr(s)) : ""),
                 children: n,
               }),
-              Object(g.jsx)(sy, { isActive: i }),
+              Object(g.jsx)(iy, { isActive: i }),
             ],
           });
         },
-        ly = function () {
-          var e = Object(r.useContext)(hp.context),
+        oy = function () {
+          var e = Object(r.useContext)(vp.context),
             t = Object(r.useContext)(sa.context),
             n = Object(r.useContext)(k.context).user,
             a = Object(r.useState)(),
@@ -29092,8 +29085,8 @@
             A = Object(o.g)(),
             d = !!n.favoriteTeam && Dg(n.favoriteTeam, t);
           if (0 === e.wills.length || 0 === e.willsToPass) return null;
-          var u = Object(g.jsx)(ay, {});
-          n.isFetching || !n.isSignedIn || n.favoriteTeam || (u = Object(g.jsx)(ry, {})),
+          var u = Object(g.jsx)(ry, {});
+          n.isFetching || !n.isSignedIn || n.favoriteTeam || (u = Object(g.jsx)(sy, {})),
             n.isFetching ||
               !n.isSignedIn ||
               d ||
@@ -29125,7 +29118,7 @@
                 children: i
                   ? Object(g.jsx)(b, {
                       background: A,
-                      path: n.verified ? "/vote/".concat(ty.WILL, "/").concat(i) : "/send-verification-email",
+                      path: n.verified ? "/vote/".concat(ny.WILL, "/").concat(i) : "/send-verification-email",
                       children: "Submit Charge Vote",
                     })
                   : Object(g.jsx)(g.Fragment, { children: "Select a Charge" }),
@@ -29140,7 +29133,7 @@
                   Object(g.jsx)("div", {
                     className: "Wills-Icon",
                     style: { background: "#9e0000" },
-                    children: Object(g.jsx)(ZE, {}),
+                    children: Object(g.jsx)(KE, {}),
                   }),
                   Object(g.jsx)("h3", { className: "Wills-Title", children: "CHARGES" }),
                 ],
@@ -29169,7 +29162,7 @@
                 style: { gridTemplateColumns: "repeat(".concat(h, ", 1fr)") },
                 children: e.wills.map(function (e, t) {
                   return Object(g.jsx)(
-                    cy,
+                    ly,
                     Object(j.a)(
                       Object(j.a)({}, e),
                       {},
@@ -29189,7 +29182,7 @@
             ],
           });
         },
-        oy =
+        Ay =
           (n(247),
           function (e) {
             var t = Object(r.useContext)(k.context).user,
@@ -29261,7 +29254,7 @@
                 })
               : null;
           }),
-        Ay = function (e) {
+        dy = function (e) {
           var t = Object(r.useContext)(k.context).user,
             n = Object(r.useContext)(sa.context),
             a = e.event;
@@ -29335,7 +29328,7 @@
             ],
           });
         },
-        dy = function (e) {
+        uy = function (e) {
           var t = Object(r.useContext)(k.context).user,
             n = e.event.metadata;
           return Object(g.jsxs)("div", {
@@ -29360,14 +29353,14 @@
               Object(g.jsxs)("div", {
                 className: "Recap-Blessing-Content",
                 children: [
-                  Object(g.jsx)("div", { className: "Recap-Decree-Icon", children: GE(n.id) }),
+                  Object(g.jsx)("div", { className: "Recap-Decree-Icon", children: HE(n.id) }),
                   Object(g.jsx)("div", { className: "Recap-Blessing-Description", children: ll(e) }),
                 ],
               }),
             ],
           });
         },
-        uy = function (e) {
+        jy = function (e) {
           var t,
             n,
             a = Object(r.useContext)(k.context).user,
@@ -29394,7 +29387,7 @@
             ],
           });
         },
-        jy = function (e) {
+        my = function (e) {
           var t = e.subEvents;
           return void 0 === t
             ? null
@@ -29409,14 +29402,14 @@
                 }),
               });
         };
-      function my() {
+      function gy() {
         var e,
           t = Object(r.useContext)(k.context).user,
           n = Object(r.useContext)(I.context),
           a = void 0 !== n.sim && void 0 !== n.sim.season ? n.sim.season : -1,
           i = Object(r.useRef)(null),
           c = Object(r.useRef)(null),
-          o = Object(r.useContext)(hp.context).decreeExecutionType,
+          o = Object(r.useContext)(vp.context).decreeExecutionType,
           A = Object(r.useState)({
             recap: void 0,
             eventResults: void 0,
@@ -29562,7 +29555,7 @@
                               (n = n.filter(function (e) {
                                 return (e.teamTags && e.teamTags.includes(X)) || 0 === e.teamTags.length;
                               })),
-                            n.length > 0 ? Object(g.jsx)(uy, { event: e, subEvents: n }) : null
+                            n.length > 0 ? Object(g.jsx)(jy, { event: e, subEvents: n }) : null
                           );
                         })
                       : null,
@@ -29598,7 +29591,7 @@
                               (n = n.filter(function (e) {
                                 return e.teamTags && e.teamTags.includes(X);
                               })),
-                            n.length > 0 ? Object(g.jsx)(dy, { event: e, subEvents: n }) : null
+                            n.length > 0 ? Object(g.jsx)(uy, { event: e, subEvents: n }) : null
                           );
                         })
                       : null,
@@ -29625,7 +29618,7 @@
                 (n = n.filter(function (e) {
                   return e.teamTags && e.teamTags.includes(X);
                 })),
-              Object(g.jsx)(oy, { event: e, subEvents: n })
+              Object(g.jsx)(Ay, { event: e, subEvents: n })
             );
           })),
           (re = Object(g.jsxs)("div", {
@@ -29672,7 +29665,7 @@
                 (n = n.filter(function (e) {
                   return e.teamTags && e.teamTags.includes(X);
                 })),
-              Object(g.jsx)(Ay, { event: e, subEvents: n })
+              Object(g.jsx)(dy, { event: e, subEvents: n })
             );
           })),
           (ce = Object(g.jsxs)("div", {
@@ -29727,7 +29720,7 @@
                       style: { marginTop: "-70px", paddingTop: "70px" },
                       children: "Post Election",
                     }),
-                    Object(g.jsx)(jy, { subEvents: oe }),
+                    Object(g.jsx)(my, { subEvents: oe }),
                   ],
                 })
               : null,
@@ -29788,7 +29781,7 @@
         });
       }
       n(1068);
-      var gy = function (e) {
+      var by = function (e) {
         var t = e.dateString,
           n = e.truncated,
           a = e.up,
@@ -29884,18 +29877,18 @@
               })
         );
       };
-      function by() {
+      function hy() {
         var e = Object(r.useContext)(k.context).user,
           t = Object(r.useContext)(I.context);
         return t && t.sim
           ? 0 === t.sim.phase
-            ? Object(g.jsx)(my, {})
+            ? Object(g.jsx)(gy, {})
             : e.unlockedElection || Sg(t.sim, "SIM_NO_COIN")
-            ? Object(g.jsx)(hy, {})
-            : Object(g.jsx)(Oy, {})
+            ? Object(g.jsx)(vy, {})
+            : Object(g.jsx)(fy, {})
           : null;
       }
-      function hy() {
+      function vy() {
         var e,
           t = Object(r.useContext)(I.context),
           n = Object(r.useContext)(sa.context),
@@ -29927,11 +29920,11 @@
                     "This Election will be run in:",
                   ],
                 }),
-                Object(g.jsx)(gy, { dateString: null === (e = t.sim) || void 0 === e ? void 0 : e.electionDate }),
+                Object(g.jsx)(by, { dateString: null === (e = t.sim) || void 0 === e ? void 0 : e.electionDate }),
               ],
             }),
             i && i.card > -2
-              ? Object(g.jsx)("div", { className: "Offseason-Body", children: Object(g.jsx)(vy, {}) })
+              ? Object(g.jsx)("div", { className: "Offseason-Body", children: Object(g.jsx)(Oy, {}) })
               : Object(g.jsx)("div", {
                   role: "text",
                   style: { textAlign: "center" },
@@ -29943,16 +29936,16 @@
           ],
         });
       }
-      function vy() {
+      function Oy() {
         Object(r.useContext)(k.context).user;
-        var e = Object(r.useContext)(hp.context);
+        var e = Object(r.useContext)(vp.context);
         return void 0 === e || 0 === e.decrees.length
           ? Object(g.jsx)(Gr, {})
           : Object(g.jsxs)(g.Fragment, {
-              children: [Object(g.jsx)(FE, {}), Object(g.jsx)(ly, {}), Object(g.jsx)(Ex, {})],
+              children: [Object(g.jsx)(UE, {}), Object(g.jsx)(oy, {}), Object(g.jsx)(yx, {})],
             });
       }
-      function Oy() {
+      function fy() {
         var e = Object(r.useContext)(k.context),
           t = e.user,
           n = e.setUser,
@@ -30064,10 +30057,10 @@
           }),
         });
       }
-      var fy,
-        py,
+      var py,
         xy,
-        wy = function (e) {
+        wy,
+        By = function (e) {
           var t = Object(Ir.useToasts)().addToast,
             n = Object(r.useContext)(k.context),
             a = n.user,
@@ -30258,7 +30251,7 @@
           (e[(e.PositionDropdown = 3)] = "PositionDropdown"),
           (e[(e.RatingDropdown = 4)] = "RatingDropdown"),
           (e[(e.ItemDropdown = 5)] = "ItemDropdown");
-      })(fy || (fy = {})),
+      })(py || (py = {})),
         (function (e) {
           (e[(e.Batting = 0)] = "Batting"),
             (e[(e.Pitching = 1)] = "Pitching"),
@@ -30266,17 +30259,17 @@
             (e[(e.Baserunning = 3)] = "Baserunning"),
             (e[(e.Combined = 4)] = "Combined"),
             (e[(e.Overall = 5)] = "Overall");
-        })(py || (py = {})),
+        })(xy || (xy = {})),
         (function (e) {
           (e[(e.Lineup = 0)] = "Lineup"), (e[(e.Rotation = 1)] = "Rotation"), (e[(e.Shadows = 2)] = "Shadows");
-        })(xy || (xy = {}));
-      var By = function (e) {
+        })(wy || (wy = {}));
+      var Ey = function (e) {
         var t = Object(Ir.useToasts)().addToast,
           n = Object(r.useContext)(k.context),
           a = n.user,
           s = n.setUser,
           i = Object(o.f)(),
-          c = Object(r.useContext)(hp.context),
+          c = Object(r.useContext)(vp.context),
           A = Object(r.useContext)(sa.context),
           m = Object(r.useState)(0),
           b = Object(l.a)(m, 2),
@@ -30434,42 +30427,42 @@
                 var t = 1,
                   n = a.favoriteTeam ? a.favoriteTeam : "";
                 N.info.forEach(function (e, r) {
-                  if (e.type === fy.TeamDropdown)
+                  if (e.type === py.TeamDropdown)
                     F === [] || void 0 === F || F.length < 1
                       ? U(Mg(A, e, n, !0))
                       : (X === [] || void 0 === X || X.length < 1) && q(Mg(A, e, n, !0));
-                  else if (e.type === fy.PlayerDropdown) {
+                  else if (e.type === py.PlayerDropdown) {
                     if ("myTeam" === e.filters.leagueLocation && void 0 === e.filters.equivalence) {
                       var s = a.favoriteTeam ? a.favoriteTeam : "";
                       et(s, e.filters.position, t, e.filters.hasMods);
                     }
                     t += 1;
-                  } else if (e.type === fy.ModDropdown && void 0 !== e.filters.mods) {
+                  } else if (e.type === py.ModDropdown && void 0 !== e.filters.mods) {
                     var i = [];
                     w.attributes.collection.map(function (t) {
                       e.filters.mods.includes(t.id) && i.push(t);
                     }),
                       Be(i);
-                  } else if (e.type === fy.PositionDropdown) {
+                  } else if (e.type === py.PositionDropdown) {
                     var c = (function (e) {
                       var t = [];
-                      ("batter" !== e && "all" !== e && "any" !== e) || t.push({ id: xy.Lineup, name: "Lineup" });
-                      ("pitcher" !== e && "all" !== e && "any" !== e) || t.push({ id: xy.Rotation, name: "Rotation" });
-                      ("shadows" !== e && "any" !== e) || t.push({ id: xy.Shadows, name: "Shadows" });
+                      ("batter" !== e && "all" !== e && "any" !== e) || t.push({ id: wy.Lineup, name: "Lineup" });
+                      ("pitcher" !== e && "all" !== e && "any" !== e) || t.push({ id: wy.Rotation, name: "Rotation" });
+                      ("shadows" !== e && "any" !== e) || t.push({ id: wy.Shadows, name: "Shadows" });
                       return t;
                     })(e.filters.position);
                     De(c);
-                  } else if (e.type === fy.RatingDropdown) {
+                  } else if (e.type === py.RatingDropdown) {
                     var l = (function (e) {
                       var t = [];
-                      (e === py.Batting || e >= 4) && t.push({ id: py.Batting, name: "Batting" });
-                      (e === py.Pitching || e >= 4) && t.push({ id: py.Pitching, name: "Pitching" });
-                      (e === py.Baserunning || e >= 4) && t.push({ id: py.Baserunning, name: "Baserunning" });
-                      (e === py.Defense || e >= 4) && t.push({ id: py.Defense, name: "Defense" });
+                      (e === xy.Batting || e >= 4) && t.push({ id: xy.Batting, name: "Batting" });
+                      (e === xy.Pitching || e >= 4) && t.push({ id: xy.Pitching, name: "Pitching" });
+                      (e === xy.Baserunning || e >= 4) && t.push({ id: xy.Baserunning, name: "Baserunning" });
+                      (e === xy.Defense || e >= 4) && t.push({ id: xy.Defense, name: "Defense" });
                       return t;
                     })(e.filters.ratings);
                     Ve(l);
-                  } else if (e.type === fy.ItemDropdown && "inputTeam" !== e.filters.leagueLocation) {
+                  } else if (e.type === py.ItemDropdown && "inputTeam" !== e.filters.leagueLocation) {
                     var o;
                     tt(
                       e.filters.leagueLocation,
@@ -30488,8 +30481,8 @@
                 t = "inLeague",
                 n = !0;
               N.info.map(function (a, r) {
-                if (a.type !== fy.PlayerDropdown || "inputTeam" !== a.filters.leagueLocation || !a.filters.position)
-                  return a.type === fy.ItemDropdown && "inputTeam" === a.filters.leagueLocation && a.filters.position
+                if (a.type !== py.PlayerDropdown || "inputTeam" !== a.filters.leagueLocation || !a.filters.position)
+                  return a.type === py.ItemDropdown && "inputTeam" === a.filters.leagueLocation && a.filters.position
                     ? ((t = a.filters.leagueLocation), void (n = !1))
                     : void 0;
                 e = a.filters.position;
@@ -30504,8 +30497,8 @@
                 t = "inLeague",
                 n = !0;
               N.info.map(function (a, r) {
-                if (a.type !== fy.PlayerDropdown || "inputTeam" !== a.filters.leagueLocation || !a.filters.position)
-                  return a.type === fy.ItemDropdown && "inputTeam" === a.filters.leagueLocation && a.filters.position
+                if (a.type !== py.PlayerDropdown || "inputTeam" !== a.filters.leagueLocation || !a.filters.position)
+                  return a.type === py.ItemDropdown && "inputTeam" === a.filters.leagueLocation && a.filters.position
                     ? ((t = a.filters.leagueLocation), void (n = !1))
                     : void 0;
                 e = a.filters.position;
@@ -30517,7 +30510,7 @@
           Object(r.useEffect)(
             function () {
               N.info.map(function (e, t) {
-                if (e.type === fy.ModDropdown && void 0 === e.filters.mods) {
+                if (e.type === py.ModDropdown && void 0 === e.filters.mods) {
                   var n = [],
                     r = $.find(function (e) {
                       return e.id === ge;
@@ -30529,7 +30522,7 @@
                     Be(n);
                 }
                 if (
-                  e.type === fy.PlayerDropdown &&
+                  e.type === py.PlayerDropdown &&
                   void 0 !== e.filters.equivalence &&
                   "myTeam" === e.filters.leagueLocation
                 ) {
@@ -30659,7 +30652,7 @@
             "2" === E
               ? Object(g.jsx)(g.Fragment, {
                   children: N.info.map(function (e) {
-                    if (e.type === fy.TeamDropdown) {
+                    if (e.type === py.TeamDropdown) {
                       if (1 === (dt += 1))
                         return Object(g.jsxs)(Jn.a.Group, {
                           controlId: "team selection",
@@ -30716,7 +30709,7 @@
                             }),
                           ],
                         });
-                    } else if (e.type === fy.PlayerDropdown) {
+                    } else if (e.type === py.PlayerDropdown) {
                       if (1 === (ut += 1))
                         return Object(g.jsxs)(Jn.a.Group, {
                           controlId: "team selection",
@@ -30780,7 +30773,7 @@
                           ],
                         });
                     } else {
-                      if (e.type === fy.ModDropdown)
+                      if (e.type === py.ModDropdown)
                         return Object(g.jsxs)(Jn.a.Group, {
                           controlId: "team selection",
                           children: [
@@ -30804,7 +30797,7 @@
                             }),
                           ],
                         });
-                      if (e.type === fy.PositionDropdown)
+                      if (e.type === py.PositionDropdown)
                         return Object(g.jsxs)(Jn.a.Group, {
                           controlId: "team selection",
                           children: [
@@ -30832,7 +30825,7 @@
                             }),
                           ],
                         });
-                      if (e.type === fy.RatingDropdown)
+                      if (e.type === py.RatingDropdown)
                         return Object(g.jsxs)(Jn.a.Group, {
                           controlId: "team selection",
                           children: [
@@ -30860,7 +30853,7 @@
                             }),
                           ],
                         });
-                      if (e.type === fy.ItemDropdown)
+                      if (e.type === py.ItemDropdown)
                         return Object(g.jsxs)(Jn.a.Group, {
                           controlId: "team selection",
                           children: [
@@ -30938,12 +30931,12 @@
                         m = 0;
                       if (
                         (N.info.forEach(function (e) {
-                          e.type === fy.TeamDropdown && (c += 1),
-                            e.type === fy.PlayerDropdown && (r += 1),
-                            e.type === fy.ModDropdown && (l += 1),
-                            e.type === fy.PositionDropdown && (o += 1),
-                            e.type === fy.RatingDropdown && (A += 1),
-                            e.type === fy.ItemDropdown && (m += 1);
+                          e.type === py.TeamDropdown && (c += 1),
+                            e.type === py.PlayerDropdown && (r += 1),
+                            e.type === py.ModDropdown && (l += 1),
+                            e.type === py.PositionDropdown && (o += 1),
+                            e.type === py.RatingDropdown && (A += 1),
+                            e.type === py.ItemDropdown && (m += 1);
                         }),
                         2 === c && ("" === ce || "" === de))
                       )
@@ -31081,7 +31074,7 @@
           )
         );
       };
-      function Ey(e) {
+      function yy(e) {
         e.path;
         var t,
           n = Object(r.useContext)(sa.context),
@@ -31095,7 +31088,7 @@
               children: [
                 Object(g.jsx)("div", { className: "GodsDay-Header", children: "Blaseball Gods' Day" }),
                 Object(g.jsx)(LO, { teams: n.teams, postseasons: a.postseasons }),
-                Object(g.jsx)(gy, { dateString: null === (t = a.sim) || void 0 === t ? void 0 : t.earlseasonDate }),
+                Object(g.jsx)(by, { dateString: null === (t = a.sim) || void 0 === t ? void 0 : t.earlseasonDate }),
                 Object(g.jsxs)("div", {
                   className: "GodsDay-Body",
                   children: [
@@ -31115,8 +31108,8 @@
         });
       }
       n(1069);
-      var yy,
-        Cy = function () {
+      var Cy,
+        Iy = function () {
           return Object(g.jsxs)("div", {
             className: "Privacy",
             children: [
@@ -31623,7 +31616,7 @@
             ],
           });
         },
-        Iy =
+        Ny =
           (n(1070),
           function () {
             g.Fragment;
@@ -32149,10 +32142,10 @@
               ],
             });
           }),
-        Ny = ["title", "titleId"];
-      function Sy() {
+        Sy = ["title", "titleId"];
+      function Py() {
         return (
-          (Sy =
+          (Py =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -32161,10 +32154,10 @@
               }
               return e;
             }),
-          Sy.apply(this, arguments)
+          Py.apply(this, arguments)
         );
       }
-      function Py(e, t) {
+      function Dy(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -32184,13 +32177,13 @@
         }
         return r;
       }
-      function Dy(e, t) {
+      function Qy(e, t) {
         var n = e.title,
           a = e.titleId,
-          s = Py(e, Ny);
+          s = Dy(e, Sy);
         return (
           <svg
-            {...Sy(
+            {...Py(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -32204,28 +32197,28 @@
             )}
           >
             {n ? <title id={a}>{n}</title> : null}
-            {yy || (yy = <image id="Ball" x={87} y={75} width={784} height={911} xlinkHref="<img/png blob>" />)}
+            {Cy || (Cy = <image id="Ball" x={87} y={75} width={784} height={911} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var Qy = r.forwardRef(Dy);
+      var ky = r.forwardRef(Qy);
       n.p, n(1071);
-      function ky(e) {
+      function Ty(e) {
         return void 0 !== e.element ? e.element : Object(g.jsx)("h2", { className: "Stubs-Header", children: e.text });
       }
-      var Ty = function (e) {
+      var Ly = function (e) {
           e.path;
           var t,
             n = Object(r.useContext)(I.context);
           void 0 !== n.sim && void 0 !== n.sim.season && n.sim.season;
           return Object(g.jsxs)("div", {
             children: [
-              Object(g.jsx)(ky, {
+              Object(g.jsx)(Ty, {
                 element: Object(g.jsxs)("div", {
                   className: "Stubs-All",
                   children: [
                     Object(g.jsx)("div", { className: "Stubs-Header", children: "The Season is Over!" }),
-                    Object(g.jsx)(gy, { dateString: null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime }),
+                    Object(g.jsx)(by, { dateString: null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime }),
                     Object(g.jsx)("div", {
                       className: "Stubs-Body",
                       children: "The Wild Card teams will be chosen soon.",
@@ -32238,9 +32231,9 @@
             ],
           });
         },
-        Ly = { notes: [] },
-        Ry = Object(r.createContext)(Ly),
-        My = function (e) {
+        Ry = { notes: [] },
+        My = Object(r.createContext)(Ry),
+        zy = function (e) {
           var t = e.children,
             n = Object(r.useContext)(k.context),
             a = n.user,
@@ -32342,11 +32335,11 @@
               [o]
             );
           var v = { notes: o };
-          return Object(g.jsx)(Ry.Provider, { value: v, children: t });
+          return Object(g.jsx)(My.Provider, { value: v, children: t });
         };
-      My.context = Ry;
-      var zy = My,
-        Vy = function () {
+      zy.context = My;
+      var Vy = zy,
+        Gy = function () {
           return Object(g.jsx)("div", {
             className: "ModalItem-Content",
             children: Object(g.jsx)(cl, {
@@ -32358,7 +32351,7 @@
             }),
           });
         };
-      function Gy(e) {
+      function Hy(e) {
         var t = Object(r.useContext)(ko.context),
           n = Object(r.useState)(0),
           a = Object(l.a)(n, 2),
@@ -32462,23 +32455,23 @@
                 Object(g.jsx)("nav", { className: "TheBook-Navigation", children: e })
               );
             })(),
-            Object(g.jsx)(Hy, { page: s, data: t.theBook.collection }),
+            Object(g.jsx)(Wy, { page: s, data: t.theBook.collection }),
             Object(g.jsx)(aO, {}),
           ],
         });
       }
-      function Hy(e) {
+      function Wy(e) {
         switch (e.page) {
           case -2:
-            return Object(g.jsx)(Vy, {});
+            return Object(g.jsx)(Gy, {});
           case -1:
-            return Object(g.jsx)(Uy, {});
+            return Object(g.jsx)(Yy, {});
           default:
-            return Object(g.jsx)(Wy, { data: e.data[e.page] });
+            return Object(g.jsx)(Fy, { data: e.data[e.page] });
         }
         return null;
       }
-      function Wy(e) {
+      function Fy(e) {
         var t = e.data;
         return t && t.sections
           ? Object(g.jsxs)(g.Fragment, {
@@ -32508,7 +32501,7 @@
                         return Object(g.jsxs)("li", {
                           className: "TheBook-Line TheBook-SubBullet",
                           role: "text",
-                          children: ["abcdefghijklmnopqrstuvwxyz"[t], ".", Fy(e)],
+                          children: ["abcdefghijklmnopqrstuvwxyz"[t], ".", Uy(e)],
                         });
                       }),
                     ],
@@ -32525,10 +32518,10 @@
                           role: "text",
                           children: t.footer.text.map(function (e, n) {
                             return 0 === n
-                              ? Object(g.jsxs)(g.Fragment, { children: [Fy(e), ", "] })
+                              ? Object(g.jsxs)(g.Fragment, { children: [Uy(e), ", "] })
                               : n === t.footer.text.length - 1
-                              ? Object(g.jsxs)(g.Fragment, { children: [" ", Fy(e)] })
-                              : Object(g.jsxs)(g.Fragment, { children: [" ", Fy(e), ", "] });
+                              ? Object(g.jsxs)(g.Fragment, { children: [" ", Uy(e)] })
+                              : Object(g.jsxs)(g.Fragment, { children: [" ", Uy(e), ", "] });
                           }),
                         }),
                       ],
@@ -32538,7 +32531,7 @@
             })
           : Object(g.jsx)(Gr, {});
       }
-      function Fy(e) {
+      function Uy(e) {
         var t = -1,
           n = !1,
           a = [],
@@ -32611,7 +32604,7 @@
           }
         });
       }
-      function Uy() {
+      function Yy() {
         Object(r.useContext)(I.context);
         var e = Object(r.useContext)(ko.context);
         return e.glossary
@@ -32638,7 +32631,7 @@
           : Object(g.jsx)(Gr, {});
       }
       n(1072);
-      function Yy(e) {
+      function Jy(e) {
         var t = Object(o.h)(),
           n = t.book,
           a = t.chapter,
@@ -32657,7 +32650,7 @@
             children: [
               Object(g.jsx)("div", { children: Object(g.jsx)(IO, {}) }),
               Object(g.jsx)("h2", { className: "Library-Header", children: "Library" }),
-              Object(g.jsx)(Rw, { className: "Library-Librarian" }),
+              Object(g.jsx)(Mw, { className: "Library-Librarian" }),
               Object(g.jsx)("h4", {
                 className: "Stubs-Body Library-Description",
                 children:
@@ -32680,14 +32673,14 @@
                     : Object(g.jsx)(Gr, {}),
               }),
               c && c.library
-                ? Object(g.jsx)(Jy, { book: s, chapter: i, libraryData: c.library })
+                ? Object(g.jsx)(Xy, { book: s, chapter: i, libraryData: c.library })
                 : Object(g.jsx)(Gr, {}),
               Object(g.jsx)(aO, {}),
             ],
           })
         );
       }
-      function Jy(e) {
+      function Xy(e) {
         var t = e.book,
           n = e.chapter,
           a = e.libraryData,
@@ -32701,7 +32694,7 @@
                 className: "Library-Chapters " + (n > 0 ? "Library-Chapters-Open" : ""),
                 children: r.map(function (e, a) {
                   return Object(g.jsx)(
-                    Xy,
+                    qy,
                     { num: a + 1, str: e.title, book: t, chapter: a, redacted: e.redacted, open: n === a + 1 },
                     a
                   );
@@ -32725,7 +32718,7 @@
           }),
         });
       }
-      function Xy(e) {
+      function qy(e) {
         var t = e.num,
           n = e.str,
           a = e.book,
@@ -32771,7 +32764,7 @@
             );
       }
       n(1073);
-      function qy() {
+      function Zy() {
         Object(o.g)();
         var e,
           t,
@@ -32838,14 +32831,14 @@
             children: Object(g.jsxs)("div", {
               className: "Bulletin-Rows",
               children: [
-                Object(g.jsx)(Zy, { row: "1", column: "1", children: Object(g.jsx)(aC, { info: c.theBeat }) }),
-                Object(g.jsx)(_y, { favTeam: y, lightMode: s.lightMode, siesta: P }),
-                Object(g.jsx)(Zy, { row: "1", column: "3", children: Object(g.jsx)(nC, { favTeam: y }) }),
-                Object(g.jsxs)(Zy, {
+                Object(g.jsx)(Ky, { row: "1", column: "1", children: Object(g.jsx)(rC, { info: c.theBeat }) }),
+                Object(g.jsx)($y, { favTeam: y, lightMode: s.lightMode, siesta: P }),
+                Object(g.jsx)(Ky, { row: "1", column: "3", children: Object(g.jsx)(aC, { favTeam: y }) }),
+                Object(g.jsxs)(Ky, {
                   row: "2",
                   column: "1",
                   children: [
-                    Object(g.jsx)(Ky, {
+                    Object(g.jsx)(_y, {
                       text: Object(g.jsx)(g.Fragment, { children: "Short Circuits" }),
                       icon: Object(g.jsx)(Ta, { style: { width: "20px", height: "20px", marginRight: "5px" } }),
                     }),
@@ -32857,18 +32850,18 @@
                     Object(g.jsxs)("div", {
                       className: "Bulletin-Item-Circuit",
                       children: [
-                        Object(g.jsx)(iC, { targetTime: j, startTime: O }),
-                        Object(g.jsx)(gy, { dateString: j, truncated: !0 }),
+                        Object(g.jsx)(cC, { targetTime: j, startTime: O }),
+                        Object(g.jsx)(by, { dateString: j, truncated: !0 }),
                       ],
                     }),
                   ],
                 }),
-                Object(g.jsxs)(Zy, {
+                Object(g.jsxs)(Ky, {
                   row: "2/4",
                   column: "2",
                   tall: !0,
                   children: [
-                    Object(g.jsx)(Ky, {
+                    Object(g.jsx)(_y, {
                       text: Object(g.jsx)(g.Fragment, { children: "Your Team's Results" }),
                       icon: Object(g.jsx)(g.Fragment, { children: Lg(y) }),
                     }),
@@ -32887,12 +32880,12 @@
                     }),
                   ],
                 }),
-                Object(g.jsxs)(Zy, {
+                Object(g.jsxs)(Ky, {
                   row: "2/4",
                   column: "3",
                   tall: !0,
                   children: [
-                    Object(g.jsx)(Ky, {
+                    Object(g.jsx)(_y, {
                       text: Object(g.jsx)(g.Fragment, { children: "Top Upshelled Events" }),
                       icon: Object(g.jsx)("div", {
                         className: "Events-Feed Events-Feed-PrevLiked",
@@ -32916,19 +32909,19 @@
                     }),
                   ],
                 }),
-                Object(g.jsx)(Zy, {
+                Object(g.jsx)(Ky, {
                   row: "3/5",
                   column: "1",
                   tall: !0,
                   sponsor: !0,
-                  children: Object(g.jsx)(rC, { info: c.sponsorData }),
+                  children: Object(g.jsx)(sC, { info: c.sponsorData }),
                 }),
-                Object(g.jsx)(Zy, {
+                Object(g.jsx)(Ky, {
                   row: "4",
                   column: "2",
-                  children: Object(g.jsx)($y, { phase: w, lightMode: s.lightMode }),
+                  children: Object(g.jsx)(eC, { phase: w, lightMode: s.lightMode }),
                 }),
-                Object(g.jsx)(Zy, { row: "4", column: "3", children: Object(g.jsx)(sC, { phase: w }) }),
+                Object(g.jsx)(Ky, { row: "4", column: "3", children: Object(g.jsx)(iC, { phase: w }) }),
               ],
             }),
           }),
@@ -32941,24 +32934,24 @@
                 children: [
                   Object(g.jsx)(Ta, { style: { width: "24px", height: "24px", marginRight: "5px" } }),
                   "The next Broadcast begins in",
-                  Object(g.jsx)(gy, { dateString: "2021-10-31T19:00:00.000Z", truncated: !0 }),
+                  Object(g.jsx)(by, { dateString: "2021-10-31T19:00:00.000Z", truncated: !0 }),
                 ],
               }),
               Object(g.jsxs)("div", {
                 className: "Bulletin-Rows Bulletin-Rows-Offseason",
                 children: [
-                  Object(g.jsx)(Zy, {
+                  Object(g.jsx)(Ky, {
                     row: "1/3",
                     column: "1/3",
                     tall: !0,
-                    children: Object(g.jsx)(aC, { info: c.theBeat, wide: !0 }),
+                    children: Object(g.jsx)(rC, { info: c.theBeat, wide: !0 }),
                   }),
-                  Object(g.jsx)(Zy, {
+                  Object(g.jsx)(Ky, {
                     row: "1/3",
                     column: "3",
                     tall: !0,
                     sponsor: !0,
-                    children: Object(g.jsx)(rC, { info: c.sponsorData }),
+                    children: Object(g.jsx)(sC, { info: c.sponsorData }),
                   }),
                 ],
               }),
@@ -32966,7 +32959,7 @@
           });
         return P ? T : Q;
       }
-      function Zy(e) {
+      function Ky(e) {
         var t = e.row,
           n = e.column,
           a = e.tall,
@@ -32978,10 +32971,10 @@
           Object(g.jsx)("div", { role: "article", className: s, style: { gridRow: t, gridColumn: n }, children: r })
         );
       }
-      function Ky(e) {
+      function _y(e) {
         return Object(g.jsxs)("h2", { className: "Bulletin-Item-Header", children: [Rg(e.icon), " ", e.text] });
       }
-      function _y(e) {
+      function $y(e) {
         var t = e.favTeam,
           n = e.lightMode,
           a = e.siesta,
@@ -33262,12 +33255,12 @@
           }),
         });
       }
-      function $y(e) {
+      function eC(e) {
         var t = e.phase,
           n = e.lightMode;
-        return 12 === t || 11 === t || 0 === t ? Object(g.jsx)(eC, { lightMode: n }) : Object(g.jsx)(tC, {});
+        return 12 === t || 11 === t || 0 === t ? Object(g.jsx)(tC, { lightMode: n }) : Object(g.jsx)(nC, {});
       }
-      function eC(e) {
+      function tC(e) {
         var t = e.lightMode,
           n = Object(r.useContext)(I.context),
           a = Object(r.useContext)(sa.context),
@@ -33349,7 +33342,7 @@
               children: "Keep watching this season to see who will win the Championship!",
             });
       }
-      function tC() {
+      function nC() {
         var e = Object(r.useState)(void 0),
           t = Object(l.a)(e, 2),
           n = t[0],
@@ -33393,7 +33386,7 @@
                 children: [
                   Object(g.jsx)("div", { className: "Bulletin-Item-Incin-Text", children: "The League has gone" }),
                   c
-                    ? Object(g.jsx)(gy, { dateString: n, truncated: !0, up: !0 })
+                    ? Object(g.jsx)(by, { dateString: n, truncated: !0, up: !0 })
                     : Object(g.jsxs)("div", {
                         className: "Countdown Countdown-Truncated",
                         children: [
@@ -33414,7 +33407,7 @@
               })
         );
       }
-      function nC(e) {
+      function aC(e) {
         var t = e.favTeam,
           n = Object(r.useContext)(k.context).user,
           a = Object(r.useContext)(sa.context),
@@ -33558,7 +33551,7 @@
         }
         return Object(g.jsx)(Gr, {});
       }
-      function aC(e) {
+      function rC(e) {
         var t = e.info,
           n = e.wide;
         if (t) {
@@ -33647,7 +33640,7 @@
             return n
               ? Object(g.jsxs)(g.Fragment, {
                   children: [
-                    Object(g.jsx)(Ky, {
+                    Object(g.jsx)(_y, {
                       text: Object(g.jsx)(g.Fragment, { children: "The Blaseball Beat" }),
                       icon: Object(g.jsx)(g.Fragment, { children: Rg("0x1f4f0") }),
                     }),
@@ -33656,7 +33649,7 @@
                 })
               : Object(g.jsxs)(g.Fragment, {
                   children: [
-                    Object(g.jsx)(Ky, {
+                    Object(g.jsx)(_y, {
                       text: Object(g.jsx)(g.Fragment, { children: "The Blaseball Beat" }),
                       icon: Object(g.jsx)(g.Fragment, { children: Rg("0x1f4f0") }),
                     }),
@@ -33666,7 +33659,7 @@
           }
           return Object(g.jsxs)(g.Fragment, {
             children: [
-              Object(g.jsx)(Ky, {
+              Object(g.jsx)(_y, {
                 text: Object(g.jsx)(g.Fragment, { children: "The Blaseball Beat" }),
                 icon: Object(g.jsx)(g.Fragment, { children: Rg("0x1f4f0") }),
               }),
@@ -33680,7 +33673,7 @@
         }
         return Object(g.jsxs)(g.Fragment, {
           children: [
-            Object(g.jsx)(Ky, {
+            Object(g.jsx)(_y, {
               text: Object(g.jsx)(g.Fragment, { children: "The Blaseball Beat" }),
               icon: Object(g.jsx)(g.Fragment, { children: Rg("0x1f4f0") }),
             }),
@@ -33688,7 +33681,7 @@
           ],
         });
       }
-      function rC(e) {
+      function sC(e) {
         var t = e.info;
         if (t) {
           return Object(g.jsxs)(g.Fragment, {
@@ -33722,7 +33715,7 @@
         }
         return Object(g.jsx)(Gr, {});
       }
-      function sC(e) {
+      function iC(e) {
         var t,
           n = e.phase,
           a = Object(r.useContext)(I.context);
@@ -33747,7 +33740,7 @@
                   className: "Bulletin-Item-Election-Header",
                   children: "The Election is coming in",
                 }),
-                Object(g.jsx)(gy, {
+                Object(g.jsx)(by, {
                   dateString: null === (t = a.sim) || void 0 === t ? void 0 : t.electionDate,
                   truncated: !0,
                 }),
@@ -33759,7 +33752,7 @@
               ],
             });
       }
-      function iC(e) {
+      function cC(e) {
         var t = new Date().getTime(),
           n = e.startTime.getTime(),
           a = e.targetTime.getTime(),
@@ -33801,9 +33794,9 @@
           ],
         });
       }
-      var cC = { player: void 0, item: void 0 };
-      var lC,
-        oC = function (e) {
+      var lC = { player: void 0, item: void 0 };
+      var oC,
+        AC = function (e) {
           var t,
             n,
             a,
@@ -33813,7 +33806,7 @@
             A = Object(l.a)(c, 2),
             m = A[0],
             b = A[1],
-            v = Object(r.useState)(cC),
+            v = Object(r.useState)(lC),
             O = Object(l.a)(v, 2),
             f = O[0],
             p = O[1];
@@ -34034,7 +34027,7 @@
             });
           return Object(g.jsx)(zr, Object(j.a)(Object(j.a)({}, e), {}, { className: "ModalItem Item", children: z }));
         },
-        AC = function (e) {
+        dC = function (e) {
           var t = Object(r.useContext)(sa.context),
             n = Object(r.useState)(void 0),
             a = Object(l.a)(n, 2),
@@ -34122,19 +34115,19 @@
             });
           return Object(g.jsx)(zr, Object(j.a)(Object(j.a)({}, e), {}, { className: "ModalItem", children: p }));
         },
-        dC = function (e) {
+        uC = function (e) {
           e.path;
           var t,
             n = Object(r.useContext)(I.context),
             a = void 0 !== n.sim && void 0 !== n.sim.season ? n.sim.season : -1;
           return Object(g.jsxs)("div", {
             children: [
-              Object(g.jsx)(ky, {
+              Object(g.jsx)(Ty, {
                 element: Object(g.jsxs)("div", {
                   className: "Stubs-All",
                   children: [
                     Object(g.jsx)("div", { className: "Stubs-Header", children: "It's the Pre-Season." }),
-                    Object(g.jsx)(gy, { dateString: null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime }),
+                    Object(g.jsx)(by, { dateString: null === (t = n.sim) || void 0 === t ? void 0 : t.nextPhaseTime }),
                     Object(g.jsxs)("div", {
                       className: "Stubs-Body",
                       children: ["Season ", a + 1, " will begin soon."],
@@ -34147,7 +34140,7 @@
             ],
           });
         },
-        uC = function (e) {
+        jC = function (e) {
           var t,
             n = e.path,
             a = Object(r.useContext)(I.context),
@@ -34163,12 +34156,12 @@
           }
           return Object(g.jsxs)("div", {
             children: [
-              Object(g.jsx)(ky, {
+              Object(g.jsx)(Ty, {
                 element: Object(g.jsxs)("div", {
                   className: "Stubs-All",
                   children: [
                     Object(g.jsx)("div", { className: "Stubs-Header", children: "The Season is Over!" }),
-                    Object(g.jsx)(gy, { dateString: null === (t = a.sim) || void 0 === t ? void 0 : t.nextPhaseTime }),
+                    Object(g.jsx)(by, { dateString: null === (t = a.sim) || void 0 === t ? void 0 : t.nextPhaseTime }),
                     Object(g.jsxs)("div", {
                       className: "Stubs-Body",
                       children: ["Postseason ", s + 1, " will begin soon."],
@@ -34181,7 +34174,7 @@
             ],
           });
         },
-        jC =
+        mC =
           (n(1074),
           function () {
             var e = Object(g.jsxs)(g.Fragment, {
@@ -35764,7 +35757,7 @@
               ],
             });
           }),
-        mC = function (e) {
+        gC = function (e) {
           var t,
             n = e.path,
             a = Object(r.useContext)(I.context),
@@ -35780,12 +35773,12 @@
           }
           return Object(g.jsxs)("div", {
             children: [
-              Object(g.jsx)(ky, {
+              Object(g.jsx)(Ty, {
                 element: Object(g.jsxs)("div", {
                   className: "Stubs-All",
                   children: [
                     Object(g.jsx)("div", { className: "Stubs-Header", children: "Wild Card Evening" }),
-                    Object(g.jsx)(gy, { dateString: null === (t = a.sim) || void 0 === t ? void 0 : t.nextPhaseTime }),
+                    Object(g.jsx)(by, { dateString: null === (t = a.sim) || void 0 === t ? void 0 : t.nextPhaseTime }),
                     Object(g.jsxs)("div", {
                       className: "Stubs-Body",
                       children: ["The Wild Card round has ended. Postseason ", s + 1, " will continue soon."],
@@ -35798,9 +35791,9 @@
             ],
           });
         },
-        gC = (n(345), n(23)),
-        bC = n(252);
-      function hC(e) {
+        bC = (n(345), n(23)),
+        hC = n(252);
+      function vC(e) {
         var t,
           n,
           a,
@@ -36001,8 +35994,8 @@
               ],
             })));
         }
-        var oe = OC(u.homeHp, u.homeMaxHp),
-          Ae = OC(u.awayHp, u.awayMaxHp),
+        var oe = fC(u.homeHp, u.homeMaxHp),
+          Ae = fC(u.awayHp, u.awayMaxHp),
           de = Object(g.jsx)("div", {
             className: "BossFightWidget-ScoreTeamColorBar" + y,
             style: { background: u.homeTeamColor },
@@ -36145,17 +36138,17 @@
                                 void 0 !== u.awayHp
                                   ? Object(g.jsx)("div", {
                                       className: "BossFightWidget-Names-Spirit",
-                                      children: Object(g.jsx)(bC.a, {
+                                      children: Object(g.jsx)(hC.a, {
                                         now: Ae,
                                         label: gb(u.awayHp),
-                                        variant: fC(Ae),
+                                        variant: pC(Ae),
                                         className: "BossFightWidget-SpiritBar",
                                       }),
                                     })
                                   : null,
                               ],
                             }),
-                            Object(g.jsx)(vC, { score: mb(u.awayScore) }),
+                            Object(g.jsx)(OC, { score: mb(u.awayScore) }),
                           ],
                         }),
                       }),
@@ -36174,17 +36167,17 @@
                                 void 0 !== u.homeHp
                                   ? Object(g.jsx)("div", {
                                       className: "BossFightWidget-Names-Spirit",
-                                      children: Object(g.jsx)(bC.a, {
+                                      children: Object(g.jsx)(hC.a, {
                                         now: oe,
                                         label: gb(u.homeHp),
-                                        variant: fC(oe),
+                                        variant: pC(oe),
                                         className: "BossFightWidget-SpiritBar",
                                       }),
                                     })
                                   : null,
                               ],
                             }),
-                            Object(g.jsx)(vC, { score: mb(u.homeScore) }),
+                            Object(g.jsx)(OC, { score: mb(u.homeScore) }),
                           ],
                         }),
                       }),
@@ -36216,64 +36209,64 @@
           })
         );
       }
-      function vC(e) {
+      function OC(e) {
         var t = e.score,
           n = e.damageResults,
           a = e.team;
         return void 0 !== n && void 0 !== a
-          ? Object(g.jsx)("div", { className: "BossFightWidget-SpiritDamage", children: pC(n, a) })
+          ? Object(g.jsx)("div", { className: "BossFightWidget-SpiritDamage", children: xC(n, a) })
           : Object(g.jsx)("div", {
               className: "GameWidget-ScoreNumber BossFightWidget-ScoreNumber",
               "aria-label": "".concat(t, " Runs"),
               children: t,
             });
       }
-      function OC(e, t) {
+      function fC(e, t) {
         var n = (e / t) * 100;
         return e >= 1e3 && n < 8 ? 8 : e >= 100 && n < 6 ? 6 : e >= 10 && n < 4 ? 4 : n < 2.5 ? 2.5 : n;
       }
-      function fC(e) {
+      function pC(e) {
         return e > 70 ? "success" : e > 20 ? "warning" : "danger";
       }
-      function pC(e, t) {
+      function xC(e, t) {
         var n,
           a = 0,
           r = {},
           s =
             ((n = {}),
-            Object(gC.a)(n, W.Steal, "Steal"),
-            Object(gC.a)(n, W.HomeSteal, "Steal Home"),
-            Object(gC.a)(n, W.Run, "Run"),
-            Object(gC.a)(n, W.HomeRun, "Home Run"),
-            Object(gC.a)(n, W.Strike, "Strike"),
-            Object(gC.a)(n, W.FoulBall, "Foul"),
-            Object(gC.a)(n, W.StrikeOut, "Strike Out"),
-            Object(gC.a)(n, W.FlyOut, "Fly Out"),
-            Object(gC.a)(n, W.GroundOut, "Ground Out"),
-            Object(gC.a)(n, W.Single, "Single"),
-            Object(gC.a)(n, W.Double, "Double"),
-            Object(gC.a)(n, W.Triple, "Triple"),
-            Object(gC.a)(n, W.Quadruple, "Quadruple"),
-            Object(gC.a)(n, W.Walk, "Walk"),
-            Object(gC.a)(n, W.CaughtStealing, "Caught Stealing"),
-            Object(gC.a)(n, W.Ball, "Ball"),
-            Object(gC.a)(n, W.SacrificeFly, "Sacrifice Fly"),
-            Object(gC.a)(n, W.Out, "Out"),
-            Object(gC.a)(n, W.CurseOfCrows, "Crows"),
-            Object(gC.a)(n, W.GiveSpirit, "Give Spirit"),
-            Object(gC.a)(n, W.BigPeanut, "Big Peanut"),
-            Object(gC.a)(n, W.BloodDrain, "Blooddrain"),
-            Object(gC.a)(n, W.PeanutSwallowed, "Allergy"),
-            Object(gC.a)(n, W.Incineration, "Incineration"),
-            Object(gC.a)(n, W.Feedback, "Feedback"),
-            Object(gC.a)(n, W.Reverb, "Reverb"),
-            Object(gC.a)(n, W.Unshelled, "Unshelled"),
-            Object(gC.a)(n, W.Partying, "Partying"),
-            Object(gC.a)(n, W.LoveSpell, "Love Spell"),
-            Object(gC.a)(n, W.PeanutYummy, "Yummy"),
-            Object(gC.a)(n, W.SuperPeanutYummy, "Super Yummy"),
-            Object(gC.a)(n, W.SuperPeanutAllergic, "Super Allergy"),
-            Object(gC.a)(n, W.Rebirth, "Rise"),
+            Object(bC.a)(n, W.Steal, "Steal"),
+            Object(bC.a)(n, W.HomeSteal, "Steal Home"),
+            Object(bC.a)(n, W.Run, "Run"),
+            Object(bC.a)(n, W.HomeRun, "Home Run"),
+            Object(bC.a)(n, W.Strike, "Strike"),
+            Object(bC.a)(n, W.FoulBall, "Foul"),
+            Object(bC.a)(n, W.StrikeOut, "Strike Out"),
+            Object(bC.a)(n, W.FlyOut, "Fly Out"),
+            Object(bC.a)(n, W.GroundOut, "Ground Out"),
+            Object(bC.a)(n, W.Single, "Single"),
+            Object(bC.a)(n, W.Double, "Double"),
+            Object(bC.a)(n, W.Triple, "Triple"),
+            Object(bC.a)(n, W.Quadruple, "Quadruple"),
+            Object(bC.a)(n, W.Walk, "Walk"),
+            Object(bC.a)(n, W.CaughtStealing, "Caught Stealing"),
+            Object(bC.a)(n, W.Ball, "Ball"),
+            Object(bC.a)(n, W.SacrificeFly, "Sacrifice Fly"),
+            Object(bC.a)(n, W.Out, "Out"),
+            Object(bC.a)(n, W.CurseOfCrows, "Crows"),
+            Object(bC.a)(n, W.GiveSpirit, "Give Spirit"),
+            Object(bC.a)(n, W.BigPeanut, "Big Peanut"),
+            Object(bC.a)(n, W.BloodDrain, "Blooddrain"),
+            Object(bC.a)(n, W.PeanutSwallowed, "Allergy"),
+            Object(bC.a)(n, W.Incineration, "Incineration"),
+            Object(bC.a)(n, W.Feedback, "Feedback"),
+            Object(bC.a)(n, W.Reverb, "Reverb"),
+            Object(bC.a)(n, W.Unshelled, "Unshelled"),
+            Object(bC.a)(n, W.Partying, "Partying"),
+            Object(bC.a)(n, W.LoveSpell, "Love Spell"),
+            Object(bC.a)(n, W.PeanutYummy, "Yummy"),
+            Object(bC.a)(n, W.SuperPeanutYummy, "Super Yummy"),
+            Object(bC.a)(n, W.SuperPeanutAllergic, "Super Allergy"),
+            Object(bC.a)(n, W.Rebirth, "Rise"),
             n);
         if (
           (e.forEach(function (e) {
@@ -36308,16 +36301,16 @@
           })
         );
       }
-      function xC(e) {
+      function wC(e) {
         var t = Object(r.useContext)(I.context),
           n = Yv(e.data, t.standings);
-        return Object(g.jsx)(hC, { data: e.data, metaInfo: n });
+        return Object(g.jsx)(vC, { data: e.data, metaInfo: n });
       }
       !(function (e) {
         (e[(e.Live = 0)] = "Live"), (e[(e.Upcoming = 1)] = "Upcoming"), (e[(e.Standings = 2)] = "Standings");
-      })(lC || (lC = {}));
-      var wC,
-        BC = function (e) {
+      })(oC || (oC = {}));
+      var BC,
+        EC = function (e) {
           var t,
             n = e.path,
             a = Object(r.useContext)(sa.context),
@@ -36335,7 +36328,7 @@
                       null === (t = s.schedule) || void 0 === t
                         ? void 0
                         : t.map(function (e) {
-                            return Object(g.jsx)(xC, { data: e });
+                            return Object(g.jsx)(wC, { data: e });
                           }),
                   }),
             d =
@@ -36348,11 +36341,11 @@
                 ? Object(g.jsxs)("div", { children: [" ", A, " "] })
                 : Object(g.jsx)(LO, { teams: a.teams, postseasons: s.postseasons });
           void 0 !== s && void 0 !== s.sim && s.sim.season;
-          switch ("/standings" === n ? lC.Standings : lC.Live) {
-            case lC.Standings:
+          switch ("/standings" === n ? oC.Standings : oC.Live) {
+            case oC.Standings:
               c = Object(g.jsx)(RO, {});
               break;
-            case lC.Live:
+            case oC.Live:
               c = i ? Object(g.jsx)(Gr, {}) : d;
           }
           return Object(g.jsxs)(g.Fragment, {
@@ -36381,7 +36374,7 @@
                         className: "League-Body",
                         children: [
                           "The Semi Centennial will begin in ",
-                          Object(g.jsx)(gy, { dateString: new Date(s.sim.state.scheduled_game_event).toString() }),
+                          Object(g.jsx)(by, { dateString: new Date(s.sim.state.scheduled_game_event).toString() }),
                           ".",
                         ],
                       }),
@@ -36392,27 +36385,27 @@
           });
         };
       n(181);
-      function EC() {
+      function yC() {
         var e = Object(r.useContext)(I.context);
         if (!e || !e.sim) return null;
         var t = e.tournament;
         return t
           ? Object(g.jsx)("div", {
               className: "Tournament-List",
-              children: Object(g.jsx)(yC, { teams: null === t || void 0 === t ? void 0 : t.teams }),
+              children: Object(g.jsx)(CC, { teams: null === t || void 0 === t ? void 0 : t.teams }),
             })
           : null;
       }
-      function yC(e) {
+      function CC(e) {
         var t = e.teams.map(function (e, t) {
-          return Object(g.jsx)(CC, { team: e }, t);
+          return Object(g.jsx)(IC, { team: e }, t);
         });
         return Object(g.jsx)("div", {
           className: "Standings-Division",
           children: Object(g.jsx)("ul", { className: "Standings-Team-Container", children: t }),
         });
       }
-      function CC(e) {
+      function IC(e) {
         var t = Object(o.g)(),
           n = Object(r.useContext)(sa.context),
           a = Object(r.useContext)(k.context).user;
@@ -36452,9 +36445,9 @@
           (e[(e.Upcoming = 1)] = "Upcoming"),
           (e[(e.Tournament = 2)] = "Tournament"),
           (e[(e.Bracket = 3)] = "Bracket");
-      })(wC || (wC = {}));
-      var IC,
-        NC = function (e) {
+      })(BC || (BC = {}));
+      var NC,
+        SC = function (e) {
           var t,
             n = e.path,
             a = Object(r.useContext)(I.context),
@@ -36466,20 +36459,20 @@
           function o() {
             switch (n) {
               case "/bets/available":
-                return wC.Upcoming;
+                return BC.Upcoming;
               case "/tournament":
-                return wC.Tournament;
+                return BC.Tournament;
               case "/bracket":
-                return wC.Bracket;
+                return BC.Bracket;
               default:
-                return wC.Live;
+                return BC.Live;
             }
           }
           if (!a.sim) return null;
           var A,
-            d = o() === wC.Upcoming ? a.tomorrowSchedule : a.schedule,
-            u = o() === wC.Live ? a.postseasons[0].matchups : a.postseasons[0].tomorrowMatchups,
-            j = o() === wC.Upcoming ? a.sim.day + 1 : a.sim.day,
+            d = o() === BC.Upcoming ? a.tomorrowSchedule : a.schedule,
+            u = o() === BC.Live ? a.postseasons[0].matchups : a.postseasons[0].tomorrowMatchups,
+            j = o() === BC.Upcoming ? a.sim.day + 1 : a.sim.day,
             m =
               void 0 === d
                 ? null
@@ -36529,22 +36522,22 @@
                     children: [
                       Object(g.jsx)("div", {
                         className: "League-Countdown",
-                        children: o() === wC.Upcoming ? Object(g.jsx)(gy, { dateString: Ng().toString() }) : null,
+                        children: o() === BC.Upcoming ? Object(g.jsx)(by, { dateString: Ng().toString() }) : null,
                       }),
                       m,
                     ],
                   });
           void 0 !== a && void 0 !== a.sim && a.sim.season;
           switch (o()) {
-            case wC.Tournament:
-              A = Object(g.jsx)(EC, {});
+            case BC.Tournament:
+              A = Object(g.jsx)(yC, {});
               break;
-            case wC.Bracket:
+            case BC.Bracket:
               for (var h = [], v = 0; v < a.postseasons.length; v++) h.push(Object(g.jsx)(JO, { playoffIndex: v }));
               A = Object(g.jsx)(g.Fragment, { children: h });
               break;
-            case wC.Live:
-            case wC.Upcoming:
+            case BC.Live:
+            case BC.Upcoming:
               A = c ? Object(g.jsx)(Gr, {}) : b;
           }
           return Object(g.jsxs)("div", {
@@ -36557,7 +36550,7 @@
             ],
           });
         },
-        SC = function (e) {
+        PC = function (e) {
           var t,
             n = e.path,
             a = Object(r.useContext)(I.context),
@@ -36566,7 +36559,7 @@
           var i = null;
           switch (n) {
             case "/tournament":
-              i = Object(g.jsx)(EC, {});
+              i = Object(g.jsx)(yC, {});
               break;
             case "/league":
               for (var c = [], l = 0; l < a.postseasons.length; l++) c.push(Object(g.jsx)(JO, { playoffIndex: l }));
@@ -36574,7 +36567,7 @@
           }
           return Object(g.jsxs)(g.Fragment, {
             children: [
-              Object(g.jsx)(ky, {
+              Object(g.jsx)(Ty, {
                 element: Object(g.jsxs)("div", {
                   className: "Stubs-All",
                   children: [
@@ -36582,7 +36575,7 @@
                       className: "League-Header",
                       children: null === s || void 0 === s ? void 0 : s.name,
                     }),
-                    Object(g.jsx)(gy, { dateString: null === (t = a.sim) || void 0 === t ? void 0 : t.nextPhaseTime }),
+                    Object(g.jsx)(by, { dateString: null === (t = a.sim) || void 0 === t ? void 0 : t.nextPhaseTime }),
                     Object(g.jsxs)("div", {
                       className: "Stubs-Body",
                       children: [null === s || void 0 === s ? void 0 : s.name, " will begin soon. Cool!"],
@@ -36596,7 +36589,7 @@
             ],
           });
         },
-        PC = function (e) {
+        DC = function (e) {
           var t,
             n = e.path,
             a = Object(r.useContext)(I.context),
@@ -36605,7 +36598,7 @@
           var i = null;
           switch (n) {
             case "/tournament":
-              i = Object(g.jsx)(EC, {});
+              i = Object(g.jsx)(yC, {});
               break;
             case "/league":
               for (var c = [], l = 0; l < a.postseasons.length; l++) c.push(Object(g.jsx)(JO, { playoffIndex: l }));
@@ -36613,7 +36606,7 @@
           }
           return Object(g.jsxs)(g.Fragment, {
             children: [
-              Object(g.jsx)(ky, {
+              Object(g.jsx)(Ty, {
                 element: Object(g.jsxs)("div", {
                   className: "Stubs-All",
                   children: [
@@ -36621,7 +36614,7 @@
                       className: "League-Header",
                       children: null === s || void 0 === s ? void 0 : s.name,
                     }),
-                    Object(g.jsx)(gy, { dateString: null === (t = a.sim) || void 0 === t ? void 0 : t.nextPhaseTime }),
+                    Object(g.jsx)(by, { dateString: null === (t = a.sim) || void 0 === t ? void 0 : t.nextPhaseTime }),
                     Object(g.jsxs)("div", {
                       className: "Stubs-Body",
                       children: [
@@ -36639,7 +36632,7 @@
             ],
           });
         },
-        DC = function (e) {
+        QC = function (e) {
           var t = e.path,
             n = Object(r.useContext)(I.context),
             a = n.tournament,
@@ -36649,7 +36642,7 @@
           var i = null;
           switch (t) {
             case "/tournament":
-              i = Object(g.jsx)(EC, {});
+              i = Object(g.jsx)(yC, {});
               break;
             case "/league":
               for (var c = [], l = 0; l < n.postseasons.length; l++) c.push(Object(g.jsx)(JO, { playoffIndex: l }));
@@ -36682,7 +36675,7 @@
             j.push(
               Object(g.jsxs)(g.Fragment, {
                 children: [
-                  Object(g.jsx)(ky, {
+                  Object(g.jsx)(Ty, {
                     element: Object(g.jsxs)("div", {
                       className: "Stubs-All",
                       children: [
@@ -36714,7 +36707,7 @@
             );
           return Object(g.jsx)(g.Fragment, { children: j });
         };
-      function QC() {
+      function kC() {
         var e = Object(r.useContext)(sa.context),
           t = Object(r.useContext)(I.context);
         return void 0 === e || void 0 === t
@@ -36736,10 +36729,10 @@
               ],
             });
       }
-      var kC = ["title", "titleId"];
-      function TC() {
+      var TC = ["title", "titleId"];
+      function LC() {
         return (
-          (TC =
+          (LC =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -36748,10 +36741,10 @@
               }
               return e;
             }),
-          TC.apply(this, arguments)
+          LC.apply(this, arguments)
         );
       }
-      function LC(e, t) {
+      function RC(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -36771,13 +36764,13 @@
         }
         return r;
       }
-      function RC(e, t) {
+      function MC(e, t) {
         var n = e.title,
           a = e.titleId,
-          s = LC(e, kC);
+          s = RC(e, TC);
         return (
           <svg
-            {...TC(
+            {...LC(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -36791,16 +36784,16 @@
             )}
           >
             {n ? <title id={a}>{n}</title> : null}
-            {IC || (IC = <image id="siesta" x={9.5} y={55} width={237} height={146} xlinkHref="<img/png blob>" />)}
+            {NC || (NC = <image id="siesta" x={9.5} y={55} width={237} height={146} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var MC,
-        zC,
+      var zC,
         VC,
         GC,
-        HC = r.forwardRef(RC),
-        WC =
+        HC,
+        WC = r.forwardRef(MC),
+        FC =
           (n.p,
           function (e) {
             Object(r.useContext)(k.context).user;
@@ -36854,7 +36847,7 @@
               ],
             });
           }),
-        FC = function (e) {
+        UC = function (e) {
           Object(r.useContext)(k.context).user;
           var t = Object(r.useContext)(sa.context),
             n = e.event;
@@ -36887,7 +36880,7 @@
                 ],
               });
         },
-        UC = function (e) {
+        YC = function (e) {
           var t = Object(r.useContext)(k.context).user,
             n = Object(r.useContext)(sa.context),
             a = e.event;
@@ -36939,7 +36932,7 @@
               })
             : null;
         },
-        YC = function (e) {
+        JC = function (e) {
           var t = e.event,
             n = Object(r.useContext)(sa.context);
           if (!n) return null;
@@ -36971,23 +36964,23 @@
             })
           );
         },
-        JC = function (e) {
+        XC = function (e) {
           var t = e.event;
           switch (t.type) {
             case 56:
             case 57:
-              return Object(g.jsx)(WC, { event: t });
+              return Object(g.jsx)(FC, { event: t });
             case 81:
-              return Object(g.jsx)(UC, { event: t });
+              return Object(g.jsx)(YC, { event: t });
             case 106:
             case 107:
             case 146:
             case 147:
-              return Object(g.jsx)(FC, { event: t });
+              return Object(g.jsx)(UC, { event: t });
           }
-          return Object(g.jsx)(YC, { event: t });
+          return Object(g.jsx)(JC, { event: t });
         },
-        XC = function (e) {
+        qC = function (e) {
           var t,
             n = e.path,
             a = Object(r.useContext)(I.context),
@@ -37042,11 +37035,11 @@
                                     return n.includes(e.id);
                                   })
                                 : [];
-                            return a.length > 0 ? Object(g.jsx)(uy, { event: e, subEvents: a }) : null;
+                            return a.length > 0 ? Object(g.jsx)(jy, { event: e, subEvents: a }) : null;
                           }
                           return (null === (t = e.metadata) || void 0 === t ? void 0 : t.parent)
                             ? null
-                            : Object(g.jsx)(JC, { event: e });
+                            : Object(g.jsx)(XC, { event: e });
                         })
                       : Object(g.jsx)("div", {
                           className: "Stubs-All",
@@ -37057,14 +37050,14 @@
           }
           return Object(g.jsxs)("div", {
             children: [
-              Object(g.jsx)(ky, {
+              Object(g.jsx)(Ty, {
                 element: Object(g.jsxs)("div", {
                   className: "Stubs-All",
                   children: [
-                    Object(g.jsx)(HC, { style: { width: "250px", height: "250px" } }),
+                    Object(g.jsx)(WC, { style: { width: "250px", height: "250px" } }),
                     Object(g.jsx)("div", { className: "Stubs-Header", children: "Earlsiesta" }),
                     Object(g.jsx)(rO, {}),
-                    Object(g.jsx)(gy, { dateString: null === (t = a.sim) || void 0 === t ? void 0 : t.nextPhaseTime }),
+                    Object(g.jsx)(by, { dateString: null === (t = a.sim) || void 0 === t ? void 0 : t.nextPhaseTime }),
                     Object(g.jsxs)("div", {
                       className: "Stubs-Body",
                       children: ["Midseason ", s + 1, " will begin soon."],
@@ -37077,7 +37070,7 @@
             ],
           });
         },
-        qC = function (e) {
+        ZC = function (e) {
           Object(r.useContext)(k.context).user;
           var t = Object(r.useContext)(sa.context),
             n = e.event;
@@ -37117,7 +37110,7 @@
               })
             : null;
         },
-        ZC = function (e) {
+        KC = function (e) {
           var t,
             n,
             a = e.path,
@@ -37212,7 +37205,7 @@
                           }),
                         }),
                         S.map(function (e) {
-                          return h && !e.teamTags.includes(N) ? null : (L && (L = !1), Object(g.jsx)(JC, { event: e }));
+                          return h && !e.teamTags.includes(N) ? null : (L && (L = !1), Object(g.jsx)(XC, { event: e }));
                         }),
                         L
                           ? Object(g.jsx)("div", { className: "Recap-NoneFound", children: "No events found..." })
@@ -37339,7 +37332,7 @@
                                               return t.includes(e.id);
                                             })
                                           : [];
-                                      return Object(g.jsx)(qC, { event: e, subEvents: n });
+                                      return Object(g.jsx)(ZC, { event: e, subEvents: n });
                                     }),
                               ],
                             }),
@@ -37351,7 +37344,7 @@
                       ],
                     }),
                 D.length > 0
-                  ? Object(g.jsx)("div", { className: "Recap-Results", children: Object(g.jsx)(jy, { subEvents: D }) })
+                  ? Object(g.jsx)("div", { className: "Recap-Results", children: Object(g.jsx)(my, { subEvents: D }) })
                   : null,
               ],
             }),
@@ -37365,14 +37358,14 @@
           }
           return Object(g.jsxs)("div", {
             children: [
-              Object(g.jsx)(ky, {
+              Object(g.jsx)(Ty, {
                 element: Object(g.jsxs)("div", {
                   className: "Stubs-All",
                   children: [
-                    Object(g.jsx)(HC, { style: { width: "250px", height: "250px" } }),
+                    Object(g.jsx)(WC, { style: { width: "250px", height: "250px" } }),
                     Object(g.jsx)("div", { className: "Stubs-Header", children: "Latesiesta" }),
                     Object(g.jsx)(rO, {}),
-                    Object(g.jsx)(gy, { dateString: null === (n = s.sim) || void 0 === n ? void 0 : n.nextPhaseTime }),
+                    Object(g.jsx)(by, { dateString: null === (n = s.sim) || void 0 === n ? void 0 : n.nextPhaseTime }),
                     Object(g.jsxs)("div", {
                       className: "Stubs-Body",
                       children: ["Lateseason ", i + 1, " will begin soon."],
@@ -37386,10 +37379,10 @@
             ],
           });
         },
-        KC = ["title", "titleId"];
-      function _C() {
+        _C = ["title", "titleId"];
+      function $C() {
         return (
-          (_C =
+          ($C =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -37398,10 +37391,10 @@
               }
               return e;
             }),
-          _C.apply(this, arguments)
+          $C.apply(this, arguments)
         );
       }
-      function $C(e, t) {
+      function eI(e, t) {
         if (null == e) return {};
         var n,
           a,
@@ -37421,13 +37414,13 @@
         }
         return r;
       }
-      function eI(e, t) {
+      function tI(e, t) {
         var n = e.title,
           a = e.titleId,
-          s = $C(e, KC);
+          s = eI(e, _C);
         return (
           <svg
-            {..._C(
+            {...$C(
               {
                 id: "Layer_1",
                 xmlns: "http://www.w3.org/2000/svg",
@@ -37444,14 +37437,14 @@
             )}
           >
             {n ? <title id={a}>{n}</title> : null}
-            {MC ||
-              (MC = r.createElement(
+            {zC ||
+              (zC = r.createElement(
                 "style",
                 { type: "text/css" },
                 "\n\t.st0{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}\n\t.st1{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}\n"
               ))}
-            {zC ||
-              (zC = (
+            {VC ||
+              (VC = (
                 <rect
                   id="base2"
                   x={84.83}
@@ -37462,8 +37455,8 @@
                   height={70.31}
                 />
               ))}
-            {VC ||
-              (VC = (
+            {GC ||
+              (GC = (
                 <rect
                   id="base1"
                   x={141.95}
@@ -37474,8 +37467,8 @@
                   height={70.31}
                 />
               ))}
-            {GC ||
-              (GC = (
+            {HC ||
+              (HC = (
                 <rect
                   id="base3"
                   x={27.38}
@@ -37489,8 +37482,8 @@
           </svg>
         );
       }
-      var tI = r.forwardRef(eI),
-        nI =
+      var nI = r.forwardRef(tI),
+        aI =
           (n.p,
           function (e) {
             var t,
@@ -37581,7 +37574,7 @@
                           children: [
                             Object(g.jsx)("div", {
                               className: "Team-LogoLine",
-                              children: Object(g.jsx)(tI, { className: "LeagueInfo-Header-Icon" }),
+                              children: Object(g.jsx)(nI, { className: "LeagueInfo-Header-Icon" }),
                             }),
                             Object(g.jsx)("div", {
                               className: "ModalItem-Name-Wrapper",
@@ -37737,7 +37730,7 @@
               Object(g.jsx)(zr, Object(j.a)(Object(j.a)({}, e), {}, { className: "ModalItem", children: w }))
             );
           }),
-        aI = function (e) {
+        rI = function (e) {
           var t = Object(r.useContext)(k.context),
             n = (t.user, t.setUser, Object(o.f)()),
             a = Object(Ir.useToasts)().addToast,
@@ -37828,7 +37821,7 @@
             )
           );
         },
-        rI = function (e) {
+        sI = function (e) {
           var t = Object(o.h)().token,
             n = Object(r.useContext)(k.context),
             a = n.user,
@@ -37889,7 +37882,7 @@
             Object(g.jsx)("div", { children: b ? Object(g.jsx)(Gr, {}) : Object(g.jsx)(g.Fragment, {}) })
           );
         };
-      var sI = function (e) {
+      var iI = function (e) {
           Object(r.useContext)(k.context).initUser;
           var t = Object(o.f)(),
             n = Object(Ir.useToasts)().addToast,
@@ -37993,7 +37986,7 @@
             )
           );
         },
-        iI = function (e) {
+        cI = function (e) {
           var t = Object(o.h)().token,
             n = Object(r.useContext)(k.context),
             a = (n.user, n.initUser),
@@ -38045,7 +38038,7 @@
             Object(g.jsx)("div", { children: j ? Object(g.jsx)(Gr, {}) : Object(g.jsx)(g.Fragment, {}) })
           );
         },
-        cI = function (e) {
+        lI = function (e) {
           Object(r.useContext)(k.context).initUser;
           var t = Object(o.f)(),
             n = Object(Ir.useToasts)().addToast,
@@ -38159,7 +38152,7 @@
             )
           );
         },
-        lI = function (e) {
+        oI = function (e) {
           var t = Object(o.h)().token,
             n = Object(r.useContext)(k.context),
             a = (n.user, n.setUser),
@@ -38210,10 +38203,10 @@
             Object(g.jsx)("div", { children: j ? Object(g.jsx)(Gr, {}) : Object(g.jsx)(g.Fragment, {}) })
           );
         },
-        oI = n(184),
-        AI = n(347);
-      var dI,
-        uI = function (e) {
+        AI = n(184),
+        dI = n(347);
+      var uI,
+        jI = function (e) {
           var t = Object(o.h)().id,
             n = Object(o.f)(),
             a = Object(r.useContext)(I.context),
@@ -38543,13 +38536,13 @@
                 }),
                 S
                   ? Object(g.jsx)(Gr, {})
-                  : Object(g.jsx)(oI.a, {
+                  : Object(g.jsx)(AI.a, {
                       className: "ModalItem-Content ModalItem-Scroll Watch-Event-List",
                       component: "ol",
                       children: h.map(function (e, n) {
                         var a = h.length - n - 1;
                         return Object(g.jsx)(
-                          AI.a,
+                          dI.a,
                           {
                             timeout: 300,
                             classNames: "Watch-Event",
@@ -38580,7 +38573,7 @@
           }
           return Object(g.jsx)(zr, Object(j.a)(Object(j.a)({}, e), {}, { className: "ModalItem Watch", children: ne }));
         },
-        jI = function (e) {
+        mI = function (e) {
           var t = e.event,
             n = Object(r.useContext)(sa.context),
             a = (Object(o.g)(), Object(r.useContext)(k.context).user);
@@ -38626,12 +38619,12 @@
             )
           );
         },
-        mI =
+        gI =
           (n(1075),
           function (e) {
             return Object(g.jsx)(EO, { path: "/thebeat/".concat(e.urlIndex), children: e.beatTitle });
           }),
-        gI = function (e) {
+        bI = function (e) {
           return Object(g.jsx)(g.Fragment, {
             children:
               void 0 != e.beat
@@ -38683,7 +38676,7 @@
                 : null,
           });
         },
-        bI = function () {
+        hI = function () {
           var e = Object(o.h)().beatNumber,
             t = Object(r.useContext)(ko.context);
           if (!t.theBeat) return Object(g.jsx)(Gr, {});
@@ -38705,11 +38698,11 @@
                         }),
                         t.theBeat.collection.map(function (e, t) {
                           var a = n - t;
-                          return Object(g.jsx)(mI, { beatTitle: e.title, urlIndex: a }, t);
+                          return Object(g.jsx)(gI, { beatTitle: e.title, urlIndex: a }, t);
                         }),
                       ],
                     }),
-                    Object(g.jsx)(gI, { beat: t.theBeat.collection[n - e] }),
+                    Object(g.jsx)(bI, { beat: t.theBeat.collection[n - e] }),
                   ],
                 }),
               }),
@@ -38721,8 +38714,8 @@
           (e[(e.Upcoming = 1)] = "Upcoming"),
           (e[(e.TheHall = 2)] = "TheHall"),
           (e[(e.Standings = 3)] = "Standings");
-      })(dI || (dI = {}));
-      var hI = function () {
+      })(uI || (uI = {}));
+      var vI = function () {
         var e,
           t,
           n,
@@ -38842,13 +38835,13 @@
             : Object(g.jsx)("div", { children: p });
         return A ? Object(g.jsx)(Gr, {}) : L;
       };
-      function vI(e) {
+      function OI(e) {
         e.playoffIndex;
         var t = e.games;
         return t.length > 0 ? Object(g.jsx)("ul", { className: "League-Games", children: t }) : null;
       }
-      var OI,
-        fI = function () {
+      var fI,
+        pI = function () {
           var e = Object(r.useContext)(I.context),
             t = Object(r.useContext)(k.context).user,
             n = Object(r.useContext)(Y.context),
@@ -38931,13 +38924,13 @@
               x = null !== (v = s(f)) && void 0 !== v ? v : [];
             m = Object(g.jsxs)("ul", {
               children: [
-                Object(g.jsx)(vI, {
+                Object(g.jsx)(OI, {
                   playoffIndex: 0,
                   games: p.map(function (e, t) {
                     return Object(g.jsx)(eO, { index: t, data: e, matchups: j }, t);
                   }),
                 }),
-                Object(g.jsx)(vI, {
+                Object(g.jsx)(OI, {
                   playoffIndex: 1,
                   games: x.map(function (e, t) {
                     return Object(g.jsx)(eO, { index: t, data: e, matchups: j }, t);
@@ -38962,7 +38955,7 @@
                       }),
               });
         },
-        pI = function () {
+        xI = function () {
           var e,
             t = Object(r.useContext)(I.context),
             n = Object(r.useState)(!1),
@@ -38997,13 +38990,13 @@
                 className: "League-Countdown",
                 style: { marginTop: "25px", paddingBottom: "25px" },
                 children: [
-                  Object(g.jsx)(gy, { dateString: Ng().toString() }),
+                  Object(g.jsx)(by, { dateString: Ng().toString() }),
                   Object(g.jsx)("div", { role: "text", "aria-label": "Until Next Set of Games", className: "sr-only" }),
                 ],
               }),
               (null === t || void 0 === t || null === (e = t.sim) || void 0 === e ? void 0 : e.phase) < 9
-                ? Object(g.jsx)(hI, {})
-                : Object(g.jsx)(fI, {}),
+                ? Object(g.jsx)(vI, {})
+                : Object(g.jsx)(pI, {}),
               Object(g.jsx)(aO, {}),
             ],
           });
@@ -39013,9 +39006,9 @@
           (e[(e.Upcoming = 1)] = "Upcoming"),
           (e[(e.TheHall = 2)] = "TheHall"),
           (e[(e.Standings = 3)] = "Standings");
-      })(OI || (OI = {}));
-      var xI,
-        wI = function () {
+      })(fI || (fI = {}));
+      var wI,
+        BI = function () {
           var e,
             t,
             n,
@@ -39153,7 +39146,7 @@
                 className: "League-Countdown",
                 style: { marginTop: "25px", paddingBottom: "25px" },
                 children: [
-                  Object(g.jsx)(gy, { dateString: Ng().toString() }),
+                  Object(g.jsx)(by, { dateString: Ng().toString() }),
                   Object(g.jsx)("div", { role: "text", "aria-label": "Until Next Set of Games", className: "sr-only" }),
                 ],
               }),
@@ -39167,8 +39160,8 @@
           (e[(e.Upcoming = 1)] = "Upcoming"),
           (e[(e.TheHall = 2)] = "TheHall"),
           (e[(e.Standings = 3)] = "Standings");
-      })(xI || (xI = {}));
-      var BI = function () {
+      })(wI || (wI = {}));
+      var EI = function () {
           var e,
             t,
             n,
@@ -39320,7 +39313,7 @@
                 className: "League-Countdown",
                 style: { marginTop: "25px", paddingBottom: "25px" },
                 children: [
-                  Object(g.jsx)(gy, { dateString: Ng().toString() }),
+                  Object(g.jsx)(by, { dateString: Ng().toString() }),
                   Object(g.jsx)("div", { role: "text", "aria-label": "Until Next Set of Games", className: "sr-only" }),
                 ],
               }),
@@ -39329,7 +39322,7 @@
             ],
           });
         },
-        EI =
+        yI =
           (n(1076),
           function (e) {
             var t = Object(r.useContext)(I.context),
@@ -39373,7 +39366,7 @@
               })
             );
           });
-      function yI() {
+      function CI() {
         var e = Object(r.useContext)(sa.context);
         Object(r.useContext)(I.context);
         if (!e || !e.leagues) return null;
@@ -39388,11 +39381,11 @@
               return e.fullName > t.fullName ? 1 : -1;
             })
             .map(function (e, t) {
-              return Object(g.jsx)(CI, { team: e }, t);
+              return Object(g.jsx)(II, { team: e }, t);
             }),
         });
       }
-      function CI(e) {
+      function II(e) {
         var t = e.team,
           n = Object(o.g)(),
           a = Object(r.useContext)(k.context).user;
@@ -39411,7 +39404,7 @@
           ],
         });
       }
-      var II = function () {
+      var NI = function () {
         var e = Object(r.useContext)(I.context),
           t = Object(r.useContext)(sa.context),
           n = Object(r.useContext)(qa.context),
@@ -39431,19 +39424,19 @@
             : Object(g.jsxs)("div", {
                 children: [
                   Object(g.jsx)("div", { className: "League-Info", children: Object(g.jsx)(IO, {}) }),
-                  i ? Object(g.jsx)(yI, {}) : Object(g.jsx)(RO, {}),
+                  i ? Object(g.jsx)(CI, {}) : Object(g.jsx)(RO, {}),
                 ],
               })
         );
       };
-      function NI() {
+      function SI() {
         var e = Object(r.useContext)(qa.context);
         return Object(g.jsxs)("div", {
           className: "Main" + (e && e.doc && e.doc.epsilon ? " Main-BigDeal" : ""),
-          children: [Object(g.jsx)(vf, {}), Object(g.jsx)(SI, {})],
+          children: [Object(g.jsx)(vf, {}), Object(g.jsx)(PI, {})],
         });
       }
-      function SI() {
+      function PI() {
         var e = Object(r.useContext)(k.context).user,
           t = Object(r.useState)(!1),
           n = Object(l.a)(t, 2),
@@ -39511,13 +39504,13 @@
             [e]
           ),
           void 0 !== e && e.isFetching
-            ? Object(g.jsx)(DI, {})
+            ? Object(g.jsx)(QI, {})
             : a
-            ? Object(g.jsx)(kI, { clickTracker: o, setClickTracker: A, setCurrentPath: x })
-            : Object(g.jsx)(PI, { clickTracker: o, setClickTracker: A, setCurrentPath: x })
+            ? Object(g.jsx)(TI, { clickTracker: o, setClickTracker: A, setCurrentPath: x })
+            : Object(g.jsx)(DI, { clickTracker: o, setClickTracker: A, setCurrentPath: x })
         );
       }
-      function PI(e) {
+      function DI(e) {
         var t = e.clickTracker,
           n = e.setClickTracker,
           a = e.setCurrentPath,
@@ -39536,19 +39529,19 @@
                   Object(g.jsxs)(o.c, {
                     location: i || s,
                     children: [
-                      Object(g.jsx)(o.a, { path: "/tos", children: Object(g.jsx)(Iy, {}) }),
-                      Object(g.jsx)(o.a, { path: "/privacy", children: Object(g.jsx)(Cy, {}) }),
+                      Object(g.jsx)(o.a, { path: "/tos", children: Object(g.jsx)(Ny, {}) }),
+                      Object(g.jsx)(o.a, { path: "/privacy", children: Object(g.jsx)(Iy, {}) }),
                       Object(g.jsx)(o.a, {
                         path: "/login",
-                        children: Object(g.jsx)(op, { isLogin: !0, clickTracker: t, setClickTracker: n }),
+                        children: Object(g.jsx)(Ap, { isLogin: !0, clickTracker: t, setClickTracker: n }),
                       }),
-                      Object(g.jsx)(o.a, { path: "/reset-password/:token", children: Object(g.jsx)(Ap, {}) }),
+                      Object(g.jsx)(o.a, { path: "/reset-password/:token", children: Object(g.jsx)(dp, {}) }),
                       Object(g.jsx)(o.a, {
                         path: "/signup/:code?",
-                        children: Object(g.jsx)(op, { clickTracker: t, setClickTracker: n }),
+                        children: Object(g.jsx)(Ap, { clickTracker: t, setClickTracker: n }),
                       }),
-                      Object(g.jsx)(o.a, { path: "/faq", children: Object(g.jsx)(jC, {}) }),
-                      Object(g.jsx)(o.a, { path: "/thebeat/:beatNumber?", children: Object(g.jsx)(bI, {}) }),
+                      Object(g.jsx)(o.a, { path: "/faq", children: Object(g.jsx)(mC, {}) }),
+                      Object(g.jsx)(o.a, { path: "/thebeat/:beatNumber?", children: Object(g.jsx)(hI, {}) }),
                       Object(g.jsx)(o.a, { path: "/", children: Object(g.jsx)(ff, {}) }),
                     ],
                   }),
@@ -39557,23 +39550,23 @@
                       children: [
                         Object(g.jsx)(o.a, {
                           path: "/signup",
-                          children: Object(g.jsx)(op, { isModal: !0, clickTracker: t, setClickTracker: n }),
+                          children: Object(g.jsx)(Ap, { isModal: !0, clickTracker: t, setClickTracker: n }),
                         }),
                         Object(g.jsx)(o.a, {
                           path: "/login",
-                          children: Object(g.jsx)(op, {
+                          children: Object(g.jsx)(Ap, {
                             isModal: !0,
                             isLogin: !0,
                             clickTracker: t,
                             setClickTracker: n,
                           }),
                         }),
-                        Object(g.jsx)(o.a, { path: "/reset/:token", children: Object(g.jsx)(Ap, { isModal: !0 }) }),
-                        Object(g.jsx)(o.a, { path: "/forgot", children: Object(g.jsx)(dp, { isModal: !0 }) }),
+                        Object(g.jsx)(o.a, { path: "/reset/:token", children: Object(g.jsx)(dp, { isModal: !0 }) }),
+                        Object(g.jsx)(o.a, { path: "/forgot", children: Object(g.jsx)(up, { isModal: !0 }) }),
                       ],
                     }),
                   Object(g.jsx)(lp, { isModal: !0, dismissable: !1 }),
-                  Object(g.jsx)(jp, { isModal: !0, dismissable: !1 }),
+                  Object(g.jsx)(mp, { isModal: !0, dismissable: !1 }),
                 ],
               }),
               Object(g.jsxs)("footer", {
@@ -39601,7 +39594,7 @@
                       className: "Main-Footer-Advertise-Inner",
                       children: Object(g.jsx)("a", {
                         className: "Main-Footer-Advertise-Icon",
-                        href: TI(),
+                        href: LI(),
                         children: "Become a Sponsor",
                       }),
                     }),
@@ -39610,7 +39603,7 @@
                     href: "https://twitter.com/thegameband",
                     target: "_blank",
                     className: "Main-Footer-Logo",
-                    children: Object(g.jsx)(Qy, {}),
+                    children: Object(g.jsx)(ky, {}),
                   }),
                 ],
               }),
@@ -39618,15 +39611,15 @@
           })
         );
       }
-      function DI() {
+      function QI() {
         return Object(g.jsx)("div", { children: Object(g.jsx)("div", { className: "Main-Body" }) });
       }
-      function QI() {
+      function kI() {
         return Object(g.jsx)("div", {
           children: Object(g.jsx)("div", { className: "Main-Body", children: Object(g.jsx)(_a, {}) }),
         });
       }
-      function kI(e) {
+      function TI(e) {
         var t,
           n,
           a,
@@ -39644,7 +39637,7 @@
           v = Object(o.g)(),
           O = v.state && v.state.background,
           f = Object(r.useContext)(qa.context);
-        if (f && f.doc && f.doc.epsilon) return Object(g.jsx)(QI, {});
+        if (f && f.doc && f.doc.epsilon) return Object(g.jsx)(kI, {});
         var p,
           x,
           w,
@@ -39669,36 +39662,36 @@
           U = function (e, t, n, a) {
             switch (e) {
               case 0:
-                return Object(g.jsx)(Ey, { path: t });
+                return Object(g.jsx)(yy, { path: t });
               case 1:
-                return Object(g.jsx)(dC, { path: t });
+                return Object(g.jsx)(uC, { path: t });
               case 2:
               case 4:
               case 6:
                 return Object(g.jsx)(AO, { path: t, clickTracker: n, setClickTracker: a });
               case 3:
-                return Object(g.jsx)(XC, { path: t });
+                return Object(g.jsx)(qC, { path: t });
               case 5:
-                return Object(g.jsx)(ZC, { path: t });
+                return Object(g.jsx)(KC, { path: t });
               case 8:
-                return Object(g.jsx)(uC, { path: t });
+                return Object(g.jsx)(jC, { path: t });
               case 7:
-                return Object(g.jsx)(Ty, { path: t });
+                return Object(g.jsx)(Ly, { path: t });
               case 9:
               case 11:
                 return Object(g.jsx)(qO, { path: t });
               case 10:
-                return Object(g.jsx)(mC, { path: t });
+                return Object(g.jsx)(gC, { path: t });
               case 14:
-                return Object(g.jsx)(BC, { path: t });
+                return Object(g.jsx)(EC, { path: t });
               case 15:
-                return Object(g.jsx)(SC, { path: t });
-              case 16:
-                return Object(g.jsx)(NC, { path: t });
-              case 17:
                 return Object(g.jsx)(PC, { path: t });
-              case 18:
+              case 16:
+                return Object(g.jsx)(SC, { path: t });
+              case 17:
                 return Object(g.jsx)(DC, { path: t });
+              case 18:
+                return Object(g.jsx)(QC, { path: t });
             }
             return Object(g.jsx)("div", {});
           },
@@ -39723,7 +39716,7 @@
                   className: "Main-Footer-Advertise-Inner",
                   children: Object(g.jsx)("a", {
                     className: "Main-Footer-Advertise-Icon",
-                    href: TI(),
+                    href: LI(),
                     children: "Become a Sponsor",
                   }),
                 }),
@@ -39732,14 +39725,14 @@
                 href: "https://twitter.com/thegameband",
                 target: "_blank",
                 className: "Main-Footer-Logo" + (h.lightMode ? " Main-Footer-Logo-LightMode" : ""),
-                children: Object(g.jsx)(Qy, { role: "img", "aria-label": "The Game Band Logo" }),
+                children: Object(g.jsx)(ky, { role: "img", "aria-label": "The Game Band Logo" }),
               }),
             ],
           });
         return f && f.doc && f.doc.delta
           ? Object(g.jsx)(xc, {
               value: [],
-              children: Object(g.jsx)(zy, {
+              children: Object(g.jsx)(Vy, {
                 children: Object(g.jsxs)(Y, {
                   children: [
                     Object(g.jsx)(BO, { state: b }),
@@ -39749,43 +39742,43 @@
                         Object(g.jsxs)(o.c, {
                           location: O || v,
                           children: [
-                            Object(g.jsx)(o.a, { path: "/tos", children: Object(g.jsx)(Iy, {}) }),
-                            Object(g.jsx)(o.a, { path: "/privacy", children: Object(g.jsx)(Cy, {}) }),
+                            Object(g.jsx)(o.a, { path: "/tos", children: Object(g.jsx)(Ny, {}) }),
+                            Object(g.jsx)(o.a, { path: "/privacy", children: Object(g.jsx)(Iy, {}) }),
                             Object(g.jsx)(o.a, { path: "/about", children: Object(g.jsx)(Of, {}) }),
                             Object(g.jsx)(o.a, { path: "/account", children: Object(g.jsx)(ip, {}) }),
-                            Object(g.jsx)(o.a, { path: "/faq", children: Object(g.jsx)(jC, {}) }),
+                            Object(g.jsx)(o.a, { path: "/faq", children: Object(g.jsx)(mC, {}) }),
                             Object(g.jsx)(o.a, {
                               path: "/library/:book?/:chapter?",
-                              children: Object(g.jsx)(Yy, { clickTracker: j, setClickTracker: m }),
+                              children: Object(g.jsx)(Jy, { clickTracker: j, setClickTracker: m }),
                             }),
                             Object(g.jsx)(o.a, {
                               path: "/thebook",
-                              children: Object(g.jsx)(Gy, { clickTracker: j, setClickTracker: m }),
+                              children: Object(g.jsx)(Hy, { clickTracker: j, setClickTracker: m }),
                             }),
                             Object(g.jsx)(o.a, {
                               path: "/login",
-                              children: Object(g.jsx)(op, { isLogin: !0, clickTracker: j, setClickTracker: m }),
+                              children: Object(g.jsx)(Ap, { isLogin: !0, clickTracker: j, setClickTracker: m }),
                             }),
-                            Object(g.jsx)(o.a, { path: "/reset/:token", children: Object(g.jsx)(Ap, {}) }),
+                            Object(g.jsx)(o.a, { path: "/reset/:token", children: Object(g.jsx)(dp, {}) }),
                             Object(g.jsx)(o.a, {
                               path: "/verify-account/:token",
-                              children: Object(g.jsx)(rI, { clickTracker: j, setClickTracker: m }),
+                              children: Object(g.jsx)(sI, { clickTracker: j, setClickTracker: m }),
                             }),
                             Object(g.jsx)(o.a, {
                               path: "/send-verification-email",
-                              children: Object(g.jsx)(aI, { isModal: !0, clickTracker: j, setClickTracker: m }),
+                              children: Object(g.jsx)(rI, { isModal: !0, clickTracker: j, setClickTracker: m }),
                             }),
-                            Object(g.jsx)(o.a, { path: "/change-email/:token", children: Object(g.jsx)(iI, {}) }),
-                            Object(g.jsx)(o.a, { path: "/delete-account/:token", children: Object(g.jsx)(lI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/change-email/:token", children: Object(g.jsx)(cI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/delete-account/:token", children: Object(g.jsx)(oI, {}) }),
                             Object(g.jsx)(o.a, {
                               path: "/signup",
-                              children: Object(g.jsx)(op, { clickTracker: j, setClickTracker: m }),
+                              children: Object(g.jsx)(Ap, { clickTracker: j, setClickTracker: m }),
                             }),
                             Object(g.jsx)(o.a, { path: "/team/:nickname", children: Object(g.jsx)(Gf, {}) }),
                             Object(g.jsx)(o.a, { path: "/player/:id", children: Object(g.jsx)(js, {}) }),
                             Object(g.jsx)(o.a, {
                               path: "/item/:id",
-                              children: Object(g.jsx)(oC, {
+                              children: Object(g.jsx)(AC, {
                                 item:
                                   null === (p = v.state) || void 0 === p || null === (x = p.params) || void 0 === x
                                     ? void 0
@@ -39796,10 +39789,10 @@
                                     : B.player,
                               }),
                             }),
-                            Object(g.jsx)(o.a, { path: "/game/:id", children: Object(g.jsx)(AC, {}) }),
-                            Object(g.jsx)(o.a, { path: "/standings", children: Object(g.jsx)(II, {}) }),
-                            Object(g.jsx)(o.a, { path: "/feed", children: Object(g.jsx)(EI, {}) }),
-                            Object(g.jsx)(o.a, { path: "/", children: Object(g.jsx)(qy, {}) }),
+                            Object(g.jsx)(o.a, { path: "/game/:id", children: Object(g.jsx)(dC, {}) }),
+                            Object(g.jsx)(o.a, { path: "/standings", children: Object(g.jsx)(NI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/feed", children: Object(g.jsx)(yI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/", children: Object(g.jsx)(Zy, {}) }),
                           ],
                         }),
                         O &&
@@ -39807,33 +39800,33 @@
                             children: [
                               Object(g.jsx)(o.a, {
                                 path: "/signup",
-                                children: Object(g.jsx)(op, { isModal: !0, clickTracker: j, setClickTracker: m }),
+                                children: Object(g.jsx)(Ap, { isModal: !0, clickTracker: j, setClickTracker: m }),
                               }),
                               Object(g.jsx)(o.a, {
                                 path: "/login",
-                                children: Object(g.jsx)(op, {
+                                children: Object(g.jsx)(Ap, {
                                   isModal: !0,
                                   isLogin: !0,
                                   clickTracker: j,
                                   setClickTracker: m,
                                 }),
                               }),
-                              Object(g.jsx)(o.a, { path: "/forgot", children: Object(g.jsx)(Ap, { isModal: !0 }) }),
+                              Object(g.jsx)(o.a, { path: "/forgot", children: Object(g.jsx)(dp, { isModal: !0 }) }),
                               Object(g.jsx)(o.a, {
                                 path: "/send-verification-email",
-                                children: Object(g.jsx)(aI, { isModal: !0, clickTracker: j, setClickTracker: m }),
+                                children: Object(g.jsx)(rI, { isModal: !0, clickTracker: j, setClickTracker: m }),
                               }),
                               Object(g.jsx)(o.a, {
                                 path: "/send-email-change",
-                                children: Object(g.jsx)(sI, { isModal: !0 }),
+                                children: Object(g.jsx)(iI, { isModal: !0 }),
                               }),
                               Object(g.jsx)(o.a, {
                                 path: "/send-delete-account",
-                                children: Object(g.jsx)(cI, { isModal: !0 }),
+                                children: Object(g.jsx)(lI, { isModal: !0 }),
                               }),
                               Object(g.jsx)(o.a, {
                                 path: "/reset/:token",
-                                children: Object(g.jsx)(Ap, { isModal: !0 }),
+                                children: Object(g.jsx)(dp, { isModal: !0 }),
                               }),
                               Object(g.jsx)(o.a, {
                                 path: "/team/:nickname",
@@ -39842,7 +39835,7 @@
                               Object(g.jsx)(o.a, { path: "/player/:id", children: Object(g.jsx)(js, { isModal: !0 }) }),
                               Object(g.jsx)(o.a, {
                                 path: "/item/:id",
-                                children: Object(g.jsx)(oC, {
+                                children: Object(g.jsx)(AC, {
                                   isModal: !0,
                                   item:
                                     null === (E = v.state) || void 0 === E || null === (y = E.params) || void 0 === y
@@ -39854,12 +39847,12 @@
                                       : N.player,
                                 }),
                               }),
-                              Object(g.jsx)(o.a, { path: "/game/:id", children: Object(g.jsx)(AC, { isModal: !0 }) }),
+                              Object(g.jsx)(o.a, { path: "/game/:id", children: Object(g.jsx)(dC, { isModal: !0 }) }),
                               Object(g.jsx)(o.a, { path: "/settings", children: Object(g.jsx)(ip, { isModal: !0 }) }),
                               Object(g.jsx)(o.a, { path: "/account", children: Object(g.jsx)(ip, { isModal: !0 }) }),
                               Object(g.jsx)(o.a, {
                                 path: "/certificate",
-                                children: Object(g.jsx)(jI, {
+                                children: Object(g.jsx)(mI, {
                                   isModal: !0,
                                   event:
                                     null === (S = v.state) || void 0 === S || null === (P = S.params) || void 0 === P
@@ -39874,7 +39867,7 @@
                             ],
                           }),
                         Object(g.jsx)(lp, { isModal: !0, dismissable: !1 }),
-                        Object(g.jsx)(jp, { isModal: !0, dismissable: !1 }),
+                        Object(g.jsx)(mp, { isModal: !0, dismissable: !1 }),
                       ],
                     }),
                     J,
@@ -39885,7 +39878,7 @@
           : b.sim && b.sim.phase === R.SpecialEvent && void 0 === b.sim.state.scheduled_game_event
           ? Object(g.jsx)(xc, {
               value: [],
-              children: Object(g.jsx)(zy, {
+              children: Object(g.jsx)(Vy, {
                 children: Object(g.jsxs)(Y, {
                   children: [
                     Object(g.jsx)(BO, { state: b }),
@@ -39895,36 +39888,36 @@
                         Object(g.jsxs)(o.c, {
                           location: O || v,
                           children: [
-                            Object(g.jsx)(o.a, { path: "/tos", children: Object(g.jsx)(Iy, {}) }),
-                            Object(g.jsx)(o.a, { path: "/privacy", children: Object(g.jsx)(Cy, {}) }),
+                            Object(g.jsx)(o.a, { path: "/tos", children: Object(g.jsx)(Ny, {}) }),
+                            Object(g.jsx)(o.a, { path: "/privacy", children: Object(g.jsx)(Iy, {}) }),
                             Object(g.jsx)(o.a, { path: "/about", children: Object(g.jsx)(Of, {}) }),
                             Object(g.jsx)(o.a, { path: "/account", children: Object(g.jsx)(ip, {}) }),
-                            Object(g.jsx)(o.a, { path: "/faq", children: Object(g.jsx)(jC, {}) }),
-                            Object(g.jsx)(o.a, { path: "/thebeat/:beatNumber?", children: Object(g.jsx)(bI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/faq", children: Object(g.jsx)(mC, {}) }),
+                            Object(g.jsx)(o.a, { path: "/thebeat/:beatNumber?", children: Object(g.jsx)(hI, {}) }),
                             Object(g.jsx)(o.a, {
                               path: "/login",
-                              children: Object(g.jsx)(op, { isLogin: !0, clickTracker: j, setClickTracker: m }),
+                              children: Object(g.jsx)(Ap, { isLogin: !0, clickTracker: j, setClickTracker: m }),
                             }),
-                            Object(g.jsx)(o.a, { path: "/reset/:token", children: Object(g.jsx)(Ap, {}) }),
+                            Object(g.jsx)(o.a, { path: "/reset/:token", children: Object(g.jsx)(dp, {}) }),
                             Object(g.jsx)(o.a, {
                               path: "/verify-account/:token",
-                              children: Object(g.jsx)(rI, { clickTracker: j, setClickTracker: m }),
+                              children: Object(g.jsx)(sI, { clickTracker: j, setClickTracker: m }),
                             }),
                             Object(g.jsx)(o.a, {
                               path: "/send-verification-email",
-                              children: Object(g.jsx)(aI, { isModal: !0, clickTracker: j, setClickTracker: m }),
+                              children: Object(g.jsx)(rI, { isModal: !0, clickTracker: j, setClickTracker: m }),
                             }),
-                            Object(g.jsx)(o.a, { path: "/change-email/:token", children: Object(g.jsx)(iI, {}) }),
-                            Object(g.jsx)(o.a, { path: "/delete-account/:token", children: Object(g.jsx)(lI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/change-email/:token", children: Object(g.jsx)(cI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/delete-account/:token", children: Object(g.jsx)(oI, {}) }),
                             Object(g.jsx)(o.a, {
                               path: "/signup",
-                              children: Object(g.jsx)(op, { clickTracker: j, setClickTracker: m }),
+                              children: Object(g.jsx)(Ap, { clickTracker: j, setClickTracker: m }),
                             }),
                             Object(g.jsx)(o.a, { path: "/team/:nickname", children: Object(g.jsx)(Gf, {}) }),
                             Object(g.jsx)(o.a, { path: "/player/:id", children: Object(g.jsx)(js, {}) }),
                             Object(g.jsx)(o.a, {
                               path: "/item/:id",
-                              children: Object(g.jsx)(oC, {
+                              children: Object(g.jsx)(AC, {
                                 item:
                                   null === (D = v.state) || void 0 === D || null === (Q = D.params) || void 0 === Q
                                     ? void 0
@@ -39935,10 +39928,10 @@
                                     : L.player,
                               }),
                             }),
-                            Object(g.jsx)(o.a, { path: "/game/:id", children: Object(g.jsx)(AC, {}) }),
+                            Object(g.jsx)(o.a, { path: "/game/:id", children: Object(g.jsx)(dC, {}) }),
                             Object(g.jsx)(o.a, { path: "/league", children: b.sim && U(b.sim.phase, "/league", j, m) }),
-                            Object(g.jsx)(o.a, { path: "/leagueinfo", children: Object(g.jsx)(nI, {}) }),
-                            Object(g.jsx)(o.a, { path: "/watch/:id", children: Object(g.jsx)(uI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/leagueinfo", children: Object(g.jsx)(aI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/watch/:id", children: Object(g.jsx)(jI, {}) }),
                             Object(g.jsx)(o.a, { path: "/", children: b.sim && U(b.sim.phase, "/league", j, m) }),
                           ],
                         }),
@@ -39947,33 +39940,33 @@
                             children: [
                               Object(g.jsx)(o.a, {
                                 path: "/signup",
-                                children: Object(g.jsx)(op, { isModal: !0, clickTracker: j, setClickTracker: m }),
+                                children: Object(g.jsx)(Ap, { isModal: !0, clickTracker: j, setClickTracker: m }),
                               }),
                               Object(g.jsx)(o.a, {
                                 path: "/login",
-                                children: Object(g.jsx)(op, {
+                                children: Object(g.jsx)(Ap, {
                                   isModal: !0,
                                   isLogin: !0,
                                   clickTracker: j,
                                   setClickTracker: m,
                                 }),
                               }),
-                              Object(g.jsx)(o.a, { path: "/forgot", children: Object(g.jsx)(Ap, { isModal: !0 }) }),
+                              Object(g.jsx)(o.a, { path: "/forgot", children: Object(g.jsx)(dp, { isModal: !0 }) }),
                               Object(g.jsx)(o.a, {
                                 path: "/send-verification-email",
-                                children: Object(g.jsx)(aI, { isModal: !0, clickTracker: j, setClickTracker: m }),
+                                children: Object(g.jsx)(rI, { isModal: !0, clickTracker: j, setClickTracker: m }),
                               }),
                               Object(g.jsx)(o.a, {
                                 path: "/send-email-change",
-                                children: Object(g.jsx)(sI, { isModal: !0 }),
+                                children: Object(g.jsx)(iI, { isModal: !0 }),
                               }),
                               Object(g.jsx)(o.a, {
                                 path: "/send-delete-account",
-                                children: Object(g.jsx)(cI, { isModal: !0 }),
+                                children: Object(g.jsx)(lI, { isModal: !0 }),
                               }),
                               Object(g.jsx)(o.a, {
                                 path: "/reset/:token",
-                                children: Object(g.jsx)(Ap, { isModal: !0 }),
+                                children: Object(g.jsx)(dp, { isModal: !0 }),
                               }),
                               Object(g.jsx)(o.a, {
                                 path: "/team/:nickname",
@@ -39982,7 +39975,7 @@
                               Object(g.jsx)(o.a, { path: "/player/:id", children: Object(g.jsx)(js, { isModal: !0 }) }),
                               Object(g.jsx)(o.a, {
                                 path: "/item/:id",
-                                children: Object(g.jsx)(oC, {
+                                children: Object(g.jsx)(AC, {
                                   isModal: !0,
                                   item:
                                     null === (M = v.state) || void 0 === M || null === (z = M.params) || void 0 === z
@@ -39994,18 +39987,18 @@
                                       : G.player,
                                 }),
                               }),
-                              Object(g.jsx)(o.a, { path: "/game/:id", children: Object(g.jsx)(AC, { isModal: !0 }) }),
-                              Object(g.jsx)(o.a, { path: "/watch/:id", children: Object(g.jsx)(uI, { isModal: !0 }) }),
+                              Object(g.jsx)(o.a, { path: "/game/:id", children: Object(g.jsx)(dC, { isModal: !0 }) }),
+                              Object(g.jsx)(o.a, { path: "/watch/:id", children: Object(g.jsx)(jI, { isModal: !0 }) }),
                               Object(g.jsx)(o.a, {
                                 path: "/reorder/:type",
                                 children: Object(g.jsx)(Ff, { isModal: !0 }),
                               }),
                               Object(g.jsx)(o.a, { path: "/settings", children: Object(g.jsx)(ip, { isModal: !0 }) }),
                               Object(g.jsx)(o.a, { path: "/account", children: Object(g.jsx)(ip, { isModal: !0 }) }),
-                              Object(g.jsx)(o.a, { path: "/leagueinfo", children: Object(g.jsx)(nI, { isModal: !0 }) }),
+                              Object(g.jsx)(o.a, { path: "/leagueinfo", children: Object(g.jsx)(aI, { isModal: !0 }) }),
                               Object(g.jsx)(o.a, {
                                 path: "/certificate",
-                                children: Object(g.jsx)(jI, {
+                                children: Object(g.jsx)(mI, {
                                   isModal: !0,
                                   event:
                                     null === (H = v.state) || void 0 === H || null === (W = H.params) || void 0 === W
@@ -40020,7 +40013,7 @@
                             ],
                           }),
                         Object(g.jsx)(lp, { isModal: !0, dismissable: !1 }),
-                        Object(g.jsx)(jp, { isModal: !0, dismissable: !1 }),
+                        Object(g.jsx)(mp, { isModal: !0, dismissable: !1 }),
                       ],
                     }),
                     J,
@@ -40030,7 +40023,7 @@
             })
           : Object(g.jsx)(xc, {
               value: [],
-              children: Object(g.jsx)(zy, {
+              children: Object(g.jsx)(Vy, {
                 children: Object(g.jsxs)(Y, {
                   children: [
                     Object(g.jsx)(BO, { state: b }),
@@ -40040,45 +40033,45 @@
                         Object(g.jsxs)(o.c, {
                           location: O || v,
                           children: [
-                            Object(g.jsx)(o.a, { path: "/tos", children: Object(g.jsx)(Iy, {}) }),
-                            Object(g.jsx)(o.a, { path: "/privacy", children: Object(g.jsx)(Cy, {}) }),
+                            Object(g.jsx)(o.a, { path: "/tos", children: Object(g.jsx)(Ny, {}) }),
+                            Object(g.jsx)(o.a, { path: "/privacy", children: Object(g.jsx)(Iy, {}) }),
                             Object(g.jsx)(o.a, { path: "/about", children: Object(g.jsx)(Of, {}) }),
                             Object(g.jsx)(o.a, { path: "/account", children: Object(g.jsx)(ip, {}) }),
-                            Object(g.jsx)(o.a, { path: "/faq", children: Object(g.jsx)(jC, {}) }),
-                            Object(g.jsx)(o.a, { path: "/thebeat/:beatNumber?", children: Object(g.jsx)(bI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/faq", children: Object(g.jsx)(mC, {}) }),
+                            Object(g.jsx)(o.a, { path: "/thebeat/:beatNumber?", children: Object(g.jsx)(hI, {}) }),
                             Object(g.jsx)(o.a, {
                               path: "/library/:book?/:chapter?",
-                              children: Object(g.jsx)(Yy, { clickTracker: j, setClickTracker: m }),
+                              children: Object(g.jsx)(Jy, { clickTracker: j, setClickTracker: m }),
                             }),
                             Object(g.jsx)(o.a, {
                               path: "/thebook",
-                              children: Object(g.jsx)(Gy, { clickTracker: j, setClickTracker: m }),
+                              children: Object(g.jsx)(Hy, { clickTracker: j, setClickTracker: m }),
                             }),
-                            Object(g.jsx)(o.a, { path: "/offseason", children: Object(g.jsx)(by, {}) }),
+                            Object(g.jsx)(o.a, { path: "/offseason", children: Object(g.jsx)(hy, {}) }),
                             Object(g.jsx)(o.a, {
                               path: "/login",
-                              children: Object(g.jsx)(op, { isLogin: !0, clickTracker: j, setClickTracker: m }),
+                              children: Object(g.jsx)(Ap, { isLogin: !0, clickTracker: j, setClickTracker: m }),
                             }),
-                            Object(g.jsx)(o.a, { path: "/reset/:token", children: Object(g.jsx)(Ap, {}) }),
+                            Object(g.jsx)(o.a, { path: "/reset/:token", children: Object(g.jsx)(dp, {}) }),
                             Object(g.jsx)(o.a, {
                               path: "/verify-account/:token",
-                              children: Object(g.jsx)(rI, { clickTracker: j, setClickTracker: m }),
+                              children: Object(g.jsx)(sI, { clickTracker: j, setClickTracker: m }),
                             }),
                             Object(g.jsx)(o.a, {
                               path: "/send-verification-email",
-                              children: Object(g.jsx)(aI, { isModal: !0, clickTracker: j, setClickTracker: m }),
+                              children: Object(g.jsx)(rI, { isModal: !0, clickTracker: j, setClickTracker: m }),
                             }),
-                            Object(g.jsx)(o.a, { path: "/change-email/:token", children: Object(g.jsx)(iI, {}) }),
-                            Object(g.jsx)(o.a, { path: "/delete-account/:token", children: Object(g.jsx)(lI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/change-email/:token", children: Object(g.jsx)(cI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/delete-account/:token", children: Object(g.jsx)(oI, {}) }),
                             Object(g.jsx)(o.a, {
                               path: "/signup",
-                              children: Object(g.jsx)(op, { clickTracker: j, setClickTracker: m }),
+                              children: Object(g.jsx)(Ap, { clickTracker: j, setClickTracker: m }),
                             }),
                             Object(g.jsx)(o.a, { path: "/team/:nickname", children: Object(g.jsx)(Gf, {}) }),
                             Object(g.jsx)(o.a, { path: "/player/:id", children: Object(g.jsx)(js, {}) }),
                             Object(g.jsx)(o.a, {
                               path: "/item/:id",
-                              children: Object(g.jsx)(oC, {
+                              children: Object(g.jsx)(AC, {
                                 item:
                                   null === (t = v.state) || void 0 === t || null === (n = t.params) || void 0 === n
                                     ? void 0
@@ -40089,27 +40082,27 @@
                                     : s.player,
                               }),
                             }),
-                            Object(g.jsx)(o.a, { path: "/game/:id", children: Object(g.jsx)(AC, {}) }),
-                            Object(g.jsx)(o.a, { path: "/watch/:id", children: Object(g.jsx)(uI, {}) }),
-                            Object(g.jsx)(o.a, { path: "/standings", children: Object(g.jsx)(II, {}) }),
+                            Object(g.jsx)(o.a, { path: "/game/:id", children: Object(g.jsx)(dC, {}) }),
+                            Object(g.jsx)(o.a, { path: "/watch/:id", children: Object(g.jsx)(jI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/standings", children: Object(g.jsx)(NI, {}) }),
                             Object(g.jsx)(o.a, {
                               path: "/tournament",
                               children: b.sim && U(b.sim.phase, "/tournament", j, m),
                             }),
-                            Object(g.jsx)(o.a, { path: "/bets/available", children: Object(g.jsx)(pI, {}) }),
-                            Object(g.jsx)(o.a, { path: "/bets/current", children: Object(g.jsx)(wI, {}) }),
-                            Object(g.jsx)(o.a, { path: "/bets/completed", children: Object(g.jsx)(BI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/bets/available", children: Object(g.jsx)(xI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/bets/current", children: Object(g.jsx)(BI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/bets/completed", children: Object(g.jsx)(EI, {}) }),
                             Object(g.jsx)(o.a, {
                               path: "/bracket",
                               children: b.sim && U(b.sim.phase, "/bracket", j, m),
                             }),
                             ((F = b.sim),
                             void 0 !== F && F.phase >= 15 && F.phase <= 18
-                              ? Object(g.jsx)(o.a, { path: "/league", children: Object(g.jsx)(QC, {}) })
+                              ? Object(g.jsx)(o.a, { path: "/league", children: Object(g.jsx)(kC, {}) })
                               : b.sim && U(b.sim.phase, "/league", j, m)),
-                            Object(g.jsx)(o.a, { path: "/leagueinfo", children: Object(g.jsx)(nI, {}) }),
-                            Object(g.jsx)(o.a, { path: "/feed", children: Object(g.jsx)(EI, {}) }),
-                            Object(g.jsx)(o.a, { path: "/", children: Object(g.jsx)(qy, {}) }),
+                            Object(g.jsx)(o.a, { path: "/leagueinfo", children: Object(g.jsx)(aI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/feed", children: Object(g.jsx)(yI, {}) }),
+                            Object(g.jsx)(o.a, { path: "/", children: Object(g.jsx)(Zy, {}) }),
                           ],
                         }),
                         O &&
@@ -40117,33 +40110,33 @@
                             children: [
                               Object(g.jsx)(o.a, {
                                 path: "/signup",
-                                children: Object(g.jsx)(op, { isModal: !0, clickTracker: j, setClickTracker: m }),
+                                children: Object(g.jsx)(Ap, { isModal: !0, clickTracker: j, setClickTracker: m }),
                               }),
                               Object(g.jsx)(o.a, {
                                 path: "/login",
-                                children: Object(g.jsx)(op, {
+                                children: Object(g.jsx)(Ap, {
                                   isModal: !0,
                                   isLogin: !0,
                                   clickTracker: j,
                                   setClickTracker: m,
                                 }),
                               }),
-                              Object(g.jsx)(o.a, { path: "/forgot", children: Object(g.jsx)(Ap, { isModal: !0 }) }),
+                              Object(g.jsx)(o.a, { path: "/forgot", children: Object(g.jsx)(dp, { isModal: !0 }) }),
                               Object(g.jsx)(o.a, {
                                 path: "/send-verification-email",
-                                children: Object(g.jsx)(aI, { isModal: !0, clickTracker: j, setClickTracker: m }),
+                                children: Object(g.jsx)(rI, { isModal: !0, clickTracker: j, setClickTracker: m }),
                               }),
                               Object(g.jsx)(o.a, {
                                 path: "/send-email-change",
-                                children: Object(g.jsx)(sI, { isModal: !0 }),
+                                children: Object(g.jsx)(iI, { isModal: !0 }),
                               }),
                               Object(g.jsx)(o.a, {
                                 path: "/send-delete-account",
-                                children: Object(g.jsx)(cI, { isModal: !0 }),
+                                children: Object(g.jsx)(lI, { isModal: !0 }),
                               }),
                               Object(g.jsx)(o.a, {
                                 path: "/reset/:token",
-                                children: Object(g.jsx)(Ap, { isModal: !0 }),
+                                children: Object(g.jsx)(dp, { isModal: !0 }),
                               }),
                               Object(g.jsx)(o.a, {
                                 path: "/team/:nickname",
@@ -40152,7 +40145,7 @@
                               Object(g.jsx)(o.a, { path: "/player/:id", children: Object(g.jsx)(js, { isModal: !0 }) }),
                               Object(g.jsx)(o.a, {
                                 path: "/item/:id",
-                                children: Object(g.jsx)(oC, {
+                                children: Object(g.jsx)(AC, {
                                   isModal: !0,
                                   item:
                                     null === (i = v.state) || void 0 === i || null === (c = i.params) || void 0 === c
@@ -40164,7 +40157,7 @@
                                       : A.player,
                                 }),
                               }),
-                              Object(g.jsx)(o.a, { path: "/game/:id", children: Object(g.jsx)(AC, { isModal: !0 }) }),
+                              Object(g.jsx)(o.a, { path: "/game/:id", children: Object(g.jsx)(dC, { isModal: !0 }) }),
                               void 0 === h.snacks.Max_Bet || Sg(b.sim, "SIM_NO_COIN")
                                 ? null
                                 : Object(g.jsx)(o.a, {
@@ -40173,7 +40166,7 @@
                                   }),
                               Object(g.jsx)(o.a, {
                                 path: "/vote/:voteType/:entityId",
-                                children: Object(g.jsx)(By, { isModal: !0, clickTracker: j, setClickTracker: m }),
+                                children: Object(g.jsx)(Ey, { isModal: !0, clickTracker: j, setClickTracker: m }),
                               }),
                               Object(g.jsx)(o.a, {
                                 path: "/reorder/:type",
@@ -40181,15 +40174,15 @@
                               }),
                               Object(g.jsx)(o.a, {
                                 path: "/tribute/:entityId",
-                                children: Object(g.jsx)(wy, { isModal: !0 }),
+                                children: Object(g.jsx)(By, { isModal: !0 }),
                               }),
                               Object(g.jsx)(o.a, { path: "/settings", children: Object(g.jsx)(ip, { isModal: !0 }) }),
                               Object(g.jsx)(o.a, { path: "/account", children: Object(g.jsx)(ip, { isModal: !0 }) }),
-                              Object(g.jsx)(o.a, { path: "/leagueinfo", children: Object(g.jsx)(nI, { isModal: !0 }) }),
-                              Object(g.jsx)(o.a, { path: "/watch/:id", children: Object(g.jsx)(uI, { isModal: !0 }) }),
+                              Object(g.jsx)(o.a, { path: "/leagueinfo", children: Object(g.jsx)(aI, { isModal: !0 }) }),
+                              Object(g.jsx)(o.a, { path: "/watch/:id", children: Object(g.jsx)(jI, { isModal: !0 }) }),
                               Object(g.jsx)(o.a, {
                                 path: "/certificate",
-                                children: Object(g.jsx)(jI, {
+                                children: Object(g.jsx)(mI, {
                                   isModal: !0,
                                   event:
                                     null === (d = v.state) || void 0 === d || null === (u = d.params) || void 0 === u
@@ -40204,7 +40197,7 @@
                             ],
                           }),
                         Object(g.jsx)(lp, { isModal: !0, dismissable: !1 }),
-                        Object(g.jsx)(jp, { isModal: !0, dismissable: !1 }),
+                        Object(g.jsx)(mp, { isModal: !0, dismissable: !1 }),
                       ],
                     }),
                     J,
@@ -40213,22 +40206,22 @@
               }),
             });
       }
-      function TI() {
+      function LI() {
         return "mailto:sponsors@thegameband.com?subject=".concat(
           encodeURIComponent("I\u2019d like to sponsor a season of Blaseball")
         );
       }
-      var LI = function () {
-        return Object(g.jsx)(k, { children: Object(g.jsx)(NI, {}) });
+      var RI = function () {
+        return Object(g.jsx)(k, { children: Object(g.jsx)(SI, {}) });
       };
       Boolean(
         "localhost" === window.location.hostname ||
           "[::1]" === window.location.hostname ||
           window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
       );
-      var RI = n(356),
-        MI = n.n(RI),
-        zI = (n(303), { sim: void 0, standings: void 0, season: void 0 });
+      var MI = n(356),
+        zI = n.n(MI),
+        VI = (n(303), { sim: void 0, standings: void 0, season: void 0 });
       "serviceWorker" in navigator &&
         navigator.serviceWorker.ready
           .then(function (e) {
@@ -40237,7 +40230,7 @@
           .catch(function (e) {
             console.error(e.message);
           }),
-        MI.a.polyfill(),
+        zI.a.polyfill(),
         c.a.render(
           Object(g.jsx)(s.a.StrictMode, {
             children: Object(g.jsx)(Ir.ToastProvider, {
@@ -40249,12 +40242,12 @@
                 children: Object(g.jsx)(ko, {
                   value: {},
                   children: Object(g.jsx)(I, {
-                    value: zI,
+                    value: VI,
                     children: Object(g.jsx)(sa, {
                       value: {},
                       children: Object(g.jsx)(qa, {
                         value: {},
-                        children: Object(g.jsx)(hp, {
+                        children: Object(g.jsx)(vp, {
                           value: {
                             blessings: [],
                             decrees: [],
@@ -40264,7 +40257,7 @@
                             decreesToPass: 0,
                             decreeExecutionType: 0,
                           },
-                          children: Object(g.jsx)(m.a, { children: Object(g.jsx)(LI, {}) }),
+                          children: Object(g.jsx)(m.a, { children: Object(g.jsx)(RI, {}) }),
                         }),
                       }),
                     }),
