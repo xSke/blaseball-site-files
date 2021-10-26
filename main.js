@@ -25367,41 +25367,7 @@
               B = Object(r.useRef)(null),
               E = Object(r.useRef)(null),
               y = Object(r.useRef)(null),
-              C = Object(o.h)().code,
-              I =
-                "production" ===
-                Object({
-                  NODE_ENV: "production",
-                  PUBLIC_URL: "https://www.blaseball.com",
-                  WDS_SOCKET_HOST: void 0,
-                  WDS_SOCKET_PATH: void 0,
-                  WDS_SOCKET_PORT: void 0,
-                  FAST_REFRESH: !0,
-                  REACT_APP_API_URL: "https://api.blaseball.com",
-                  REACT_APP_EVENT_URL: "https://api.blaseball.com/events/",
-                  REACT_APP_CLIENT_ANALYTICS_ENABLED: "true",
-                  REACT_APP_HIVE_TOKEN: "EPPuEJk9jCOEjc0Km99BLZsaWDhZHIn9",
-                  REACT_APP_HIVE_URL: "https://api.thehive.ai/api/v2/task/sync",
-                  REACT_APP_ENVIRONMENT: "prod",
-                }).ENVIRONMENT;
-            console.log(
-              "Env is: ".concat(
-                Object({
-                  NODE_ENV: "production",
-                  PUBLIC_URL: "https://www.blaseball.com",
-                  WDS_SOCKET_HOST: void 0,
-                  WDS_SOCKET_PATH: void 0,
-                  WDS_SOCKET_PORT: void 0,
-                  FAST_REFRESH: !0,
-                  REACT_APP_API_URL: "https://api.blaseball.com",
-                  REACT_APP_EVENT_URL: "https://api.blaseball.com/events/",
-                  REACT_APP_CLIENT_ANALYTICS_ENABLED: "true",
-                  REACT_APP_HIVE_TOKEN: "EPPuEJk9jCOEjc0Km99BLZsaWDhZHIn9",
-                  REACT_APP_HIVE_URL: "https://api.thehive.ai/api/v2/task/sync",
-                  REACT_APP_ENVIRONMENT: "prod",
-                }).ENVIRONMENT
-              )
-            );
+              C = Object(o.h)().code;
             return Object(g.jsxs)("div", {
               className: "".concat(v ? "" : "Auth-SignupWrapper"),
               children: [
@@ -25537,46 +25503,44 @@
                               : null,
                           ],
                         }),
-                        I
-                          ? Object(g.jsxs)("div", {
+                        Object(g.jsxs)("div", {
+                          children: [
+                            Object(g.jsx)("div", { className: "Auth-Divider", children: "OR" }),
+                            Object(g.jsxs)("a", {
+                              className: "Auth-SocialAuth",
+                              href: "auth/apple?redirectUrl=".concat(h),
                               children: [
-                                Object(g.jsx)("div", { className: "Auth-Divider", children: "OR" }),
-                                Object(g.jsxs)("a", {
-                                  className: "Auth-SocialAuth",
-                                  href: "auth/apple?redirectUrl=".concat(h),
-                                  children: [
-                                    Object(g.jsx)("div", {
-                                      className: "Auth-SocialAuth-Icon-Container",
-                                      children: Object(g.jsx)(Zn.g, { className: "Auth-SocialAuth-Icon" }),
-                                    }),
-                                    "Continue with Apple",
-                                  ],
+                                Object(g.jsx)("div", {
+                                  className: "Auth-SocialAuth-Icon-Container",
+                                  children: Object(g.jsx)(Zn.g, { className: "Auth-SocialAuth-Icon" }),
                                 }),
-                                Object(g.jsxs)("a", {
-                                  className: "Auth-SocialAuth",
-                                  href: "auth/facebook?redirectUrl=".concat(h),
-                                  children: [
-                                    Object(g.jsx)("div", {
-                                      className: "Auth-SocialAuth-Icon-Container",
-                                      children: Object(g.jsx)(ie.e, {}),
-                                    }),
-                                    " Continue with Facebook",
-                                  ],
-                                }),
-                                Object(g.jsxs)("a", {
-                                  className: "Auth-SocialAuth",
-                                  href: "auth/google?redirectUrl=".concat(h),
-                                  children: [
-                                    Object(g.jsx)("div", {
-                                      className: "Auth-SocialAuth-Icon-Container",
-                                      children: Object(g.jsx)(Zn.h, { className: "Auth-SocialAuth-Icon" }),
-                                    }),
-                                    "Continue with Google",
-                                  ],
-                                }),
+                                "Continue with Apple",
                               ],
-                            })
-                          : null,
+                            }),
+                            Object(g.jsxs)("a", {
+                              className: "Auth-SocialAuth",
+                              href: "auth/facebook?redirectUrl=".concat(h),
+                              children: [
+                                Object(g.jsx)("div", {
+                                  className: "Auth-SocialAuth-Icon-Container",
+                                  children: Object(g.jsx)(ie.e, {}),
+                                }),
+                                " Continue with Facebook",
+                              ],
+                            }),
+                            Object(g.jsxs)("a", {
+                              className: "Auth-SocialAuth",
+                              href: "auth/google?redirectUrl=".concat(h),
+                              children: [
+                                Object(g.jsx)("div", {
+                                  className: "Auth-SocialAuth-Icon-Container",
+                                  children: Object(g.jsx)(Zn.h, { className: "Auth-SocialAuth-Icon" }),
+                                }),
+                                "Continue with Google",
+                              ],
+                            }),
+                          ],
+                        }),
                         Object(g.jsx)("a", {
                           className: "Auth-CTA",
                           href: O ? "/signup" : "/login",
