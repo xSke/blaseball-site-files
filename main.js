@@ -3097,7 +3097,7 @@
         Jn = n(18),
         Xn = n(354),
         qn = n(1082),
-        Zn = n(34),
+        Zn = n(33),
         Kn = function (e) {
           var t = e.event;
           if (t.metadata && t.metadata.redacted) {
@@ -4812,7 +4812,7 @@
                 onClick: function () {
                   return d();
                 },
-                children: Object(g.jsx)(Zn.m, {}),
+                children: Object(g.jsx)(Zn.n, {}),
               }),
             i,
           ],
@@ -9905,7 +9905,7 @@
           case 176:
             return Object(g.jsx)(ae.kd, {});
           default:
-            return e.type <= 15 ? Object(g.jsx)(Zn.l, {}) : Object(g.jsx)(ae.Zc, {});
+            return e.type <= 15 ? Object(g.jsx)(Zn.m, {}) : Object(g.jsx)(ae.Zc, {});
         }
       }
       function jl(e) {
@@ -10063,7 +10063,7 @@
                     case 0:
                       return (
                         (e.prev = 0),
-                        (t = "https://blaseball-configs-qa.s3.us-west-2.amazonaws.com/"),
+                        (t = "https://blaseball-configs.s3.us-west-2.amazonaws.com/"),
                         (e.next = 4),
                         fetch("".concat(t, "attributes.json"))
                       );
@@ -20231,7 +20231,7 @@
                               className: "Navigation-Header Navigation-Header-Dropdown",
                               ref: s,
                               onClick: i,
-                              children: [e.text, " ", Object(g.jsx)(Zn.h, {})],
+                              children: [e.text, " ", Object(g.jsx)(Zn.i, {})],
                             })
                           : Object(g.jsxs)(
                               EO,
@@ -20239,7 +20239,7 @@
                                 path: e.path,
                                 glow: e.glow,
                                 subpaths: e.subpaths,
-                                children: [e.text, " ", Object(g.jsx)(Zn.h, {})],
+                                children: [e.text, " ", Object(g.jsx)(Zn.i, {})],
                               },
                               a
                             ),
@@ -20335,7 +20335,7 @@
                       path: "/search",
                       background: Y,
                       className: "Navigation-CurrencyButton Navigation-Search",
-                      children: Object(g.jsx)(Zn.o, {}),
+                      children: Object(g.jsx)(Zn.p, {}),
                     },
                     0
                   ),
@@ -20355,7 +20355,7 @@
                     path: "/search",
                     background: Y,
                     className: "Navigation-CurrencyButton Navigation-Search",
-                    children: Object(g.jsx)(Zn.o, {}),
+                    children: Object(g.jsx)(Zn.p, {}),
                   },
                   -1
                 ),
@@ -20460,7 +20460,7 @@
                       controlId: "exampleForm.ControlInput1",
                       className: "Search-Bar",
                       children: [
-                        Object(g.jsx)(Zn.o, { className: "Search-Icon" }),
+                        Object(g.jsx)(Zn.p, { className: "Search-Icon" }),
                         Object(g.jsx)(Jn.a.Control, {
                           type: "text",
                           autoComplete: "off",
@@ -20693,9 +20693,9 @@
           l = "";
         return (
           t.toLowerCase().includes("overbracket") &&
-            ((i = tr(2)), (l = "League-Info-Body-Overbracket"), (c = Object(g.jsx)(Zn.k, { className: i }))),
+            ((i = tr(2)), (l = "League-Info-Body-Overbracket"), (c = Object(g.jsx)(Zn.l, { className: i }))),
           t.toLowerCase().includes("underbracket") &&
-            ((i = tr(3)), (c = Object(g.jsx)(Zn.j, { className: i })), (l = "League-Info-Body-Underbracket")),
+            ((i = tr(3)), (c = Object(g.jsx)(Zn.k, { className: i })), (l = "League-Info-Body-Underbracket")),
           Object(g.jsxs)("div", {
             className: "League-Info-Body-Item " + l,
             children: [
@@ -20995,14 +20995,14 @@
             ? void 0
             : t.name.toLowerCase().includes("overbracket")) &&
             ((i = "BigDeal-Message-Style-2"),
-            (c = Object(g.jsx)(Zn.k, { className: i, style: { marginLeft: "10px" } })),
-            (l = Object(g.jsx)(Zn.k, { className: i, style: { marginRight: "10px" } }))),
+            (c = Object(g.jsx)(Zn.l, { className: i, style: { marginLeft: "10px" } })),
+            (l = Object(g.jsx)(Zn.l, { className: i, style: { marginRight: "10px" } }))),
           (null === s || void 0 === s || null === (n = s.playoffs) || void 0 === n
             ? void 0
             : n.name.toLowerCase().includes("underbracket")) &&
             ((i = "BigDeal-Message-Style-3"),
-            (c = Object(g.jsx)(Zn.j, { className: i, style: { marginLeft: "10px" } })),
-            (l = Object(g.jsx)(Zn.j, { className: i, style: { marginRight: "10px" } }))),
+            (c = Object(g.jsx)(Zn.k, { className: i, style: { marginLeft: "10px" } })),
+            (l = Object(g.jsx)(Zn.k, { className: i, style: { marginRight: "10px" } }))),
           Object(g.jsxs)("div", {
             className: i + " PlayoffSetup-Header",
             children: [
@@ -24732,7 +24732,7 @@
                                     className: "Account-Refresh-Button",
                                     type: "submit",
                                     variant: "link",
-                                    children: Object(g.jsx)(Zn.n, {}),
+                                    children: Object(g.jsx)(Zn.o, {}),
                                   }),
                                 }),
                           }),
@@ -24766,7 +24766,7 @@
                                     className: "Account-Refresh-Button",
                                     type: "submit",
                                     variant: "link",
-                                    children: Object(g.jsx)(Zn.n, {}),
+                                    children: Object(g.jsx)(Zn.o, {}),
                                   }),
                                 }),
                           }),
@@ -25501,6 +25501,17 @@
                           Object(g.jsx)("div", { className: "Auth-Divider", children: "OR" }),
                           Object(g.jsxs)("a", {
                             className: "Auth-SocialAuth",
+                            href: "".concat(op, "/auth/apple?redirectUrl=").concat(h),
+                            children: [
+                              Object(g.jsx)("div", {
+                                className: "Auth-SocialAuth-Icon-Container",
+                                children: Object(g.jsx)(Zn.g, { className: "Auth-SocialAuth-Icon" }),
+                              }),
+                              "Continue with Apple",
+                            ],
+                          }),
+                          Object(g.jsxs)("a", {
+                            className: "Auth-SocialAuth",
                             href: "".concat(op, "/auth/facebook?redirectUrl=").concat(h),
                             children: [
                               Object(g.jsx)("div", {
@@ -25516,7 +25527,7 @@
                             children: [
                               Object(g.jsx)("div", {
                                 className: "Auth-SocialAuth-Icon-Container",
-                                children: Object(g.jsx)(Zn.g, { className: "Auth-SocialAuth-Icon" }),
+                                children: Object(g.jsx)(Zn.h, { className: "Auth-SocialAuth-Icon" }),
                               }),
                               "Continue with Google",
                             ],
@@ -29528,7 +29539,7 @@
                       onClick: function () {
                         return J(!Y);
                       },
-                      children: ["Tidings ", Y ? Object(g.jsx)(Zn.i, {}) : Object(g.jsx)(Zn.h, {})],
+                      children: ["Tidings ", Y ? Object(g.jsx)(Zn.j, {}) : Object(g.jsx)(Zn.i, {})],
                     }),
                     Y
                       ? B.map(function (e) {
@@ -29563,7 +29574,7 @@
                       onClick: function () {
                         return T(!Q);
                       },
-                      children: [q, " ", Q ? Object(g.jsx)(Zn.i, {}) : Object(g.jsx)(Zn.h, {})],
+                      children: [q, " ", Q ? Object(g.jsx)(Zn.j, {}) : Object(g.jsx)(Zn.i, {})],
                     }),
                     Q
                       ? B.map(function (e) {
@@ -29622,7 +29633,7 @@
                 onClick: function () {
                   return W(!H);
                 },
-                children: [Z, " ", H ? Object(g.jsx)(Zn.i, {}) : Object(g.jsx)(Zn.h, {})],
+                children: [Z, " ", H ? Object(g.jsx)(Zn.j, {}) : Object(g.jsx)(Zn.i, {})],
               }),
               H
                 ? Object(g.jsx)(s.a.Fragment, {
@@ -29669,7 +29680,7 @@
                 onClick: function () {
                   return z(!M);
                 },
-                children: [K, " ", M ? Object(g.jsx)(Zn.i, {}) : Object(g.jsx)(Zn.h, {})],
+                children: [K, " ", M ? Object(g.jsx)(Zn.j, {}) : Object(g.jsx)(Zn.i, {})],
               }),
               M
                 ? Object(g.jsx)(s.a.Fragment, {
@@ -32744,7 +32755,7 @@
                     children: [
                       Object(g.jsx)(dg, { str: [n] }),
                       " ",
-                      i ? Object(g.jsx)(Zn.h, { className: "Library-Chapters-Item-Arrow" }) : null,
+                      i ? Object(g.jsx)(Zn.i, { className: "Library-Chapters-Item-Arrow" }) : null,
                     ],
                   }),
                 ],
