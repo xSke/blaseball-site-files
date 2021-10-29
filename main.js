@@ -29821,7 +29821,7 @@
             ? Object(g.jsxs)("span", {
                 className: "Countdown Countdown-Truncated",
                 children: [
-                  (null === c || void 0 === c ? void 0 : c.days) && (null === c || void 0 === c ? void 0 : c.days) > 1
+                  (null === c || void 0 === c ? void 0 : c.days) && (null === c || void 0 === c ? void 0 : c.days) >= 1
                     ? Object(g.jsxs)(g.Fragment, {
                         children: [
                           Object(g.jsx)("span", {
@@ -29842,7 +29842,7 @@
                     children: null === c || void 0 === c ? void 0 : c.minutes,
                   }),
                   "M",
-                  (null === c || void 0 === c ? void 0 : c.days) && (null === c || void 0 === c ? void 0 : c.days) > 1
+                  (null === c || void 0 === c ? void 0 : c.days) && (null === c || void 0 === c ? void 0 : c.days) >= 1
                     ? null
                     : Object(g.jsxs)(g.Fragment, {
                         children: [
