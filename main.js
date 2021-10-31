@@ -26906,9 +26906,9 @@
                                       {
                                         className: "Account-Info-List-Item",
                                         children: [
-                                          Object(b.jsx)("div", {
+                                          Object(b.jsxs)("div", {
                                             className: "Account-Info-List-Header",
-                                            children: e.name,
+                                            children: [e.name, " (Redeemable on Nov. 4th)"],
                                           }),
                                           Object(b.jsx)("div", {
                                             className: "Account-Info-List-Body",
@@ -41252,7 +41252,8 @@
                           }),
                           Object(b.jsx)("span", {
                             className: "Checkout-Center-Line",
-                            children: "Please check your Account page for your product key.",
+                            children:
+                              "Please check your Account page for your product key. Keys will be redeemable starting November 4th.",
                           }),
                           Object(b.jsx)("span", {
                             className: "Checkout-Center-Line",
