@@ -9326,15 +9326,24 @@ input[type="number"]::-webkit-outer-spin-button {
 .League-Schedule {
   grid-gap: 10px;
   gap: 10px;
-  width: 700px;
   overflow: hidden;
   overflow-x: scroll;
   display: flex;
+  scrollbar-width: thin;
 }
 .League-Schedule-Wrapper {
   position: relative;
   height: 90px;
   margin: 0 5px;
+}
+.League-Schedule-Live {
+  width: 700px;
+}
+.League-Schedule-Bets {
+  width: 515px;
+}
+.League-Schedule-Bets .League-Schedule-Day-Outline {
+  border-color: #69a4ff !important;
 }
 .League-Schedule-Scroll {
   width: 100%;
@@ -9374,9 +9383,14 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 100%;
   position: relative;
   display: flex;
+}
+.League-Schedule-Scroll-Wrapper-Live {
   margin: 20px 0 65px;
 }
-.League-Schedule-Live {
+.League-Schedule-Scroll-Wrapper-Bets {
+  margin-bottom: 20px;
+}
+.League-Schedule-LiveLabel {
   background: red;
   color: #fff;
   font-weight: 700;
@@ -9385,7 +9399,7 @@ input[type="number"]::-webkit-outer-spin-button {
   z-index: 2;
 }
 .League-Schedule-Arrow,
-.League-Schedule-Live {
+.League-Schedule-LiveLabel {
   padding: 0 5px;
   border-radius: 5px;
   width: 100%;
@@ -9418,6 +9432,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   align-items: center;
   flex-direction: column;
+  cursor: pointer;
 }
 .League-Schedule-Day-Num {
   font-weight: 700;
@@ -9440,6 +9455,22 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .theme-light .League-Schedule-Day-Outline {
   border-color: #000;
+}
+.theme-dark .League-Schedule-Day-BetPlaced {
+  background: #fff;
+}
+.theme-light .League-Schedule-Day-BetPlaced {
+  background: #000;
+}
+.theme-dark .League-Schedule-Day-BetPlaced {
+  color: #000;
+}
+.theme-light .League-Schedule-Day-BetPlaced {
+  color: #fff;
+}
+.League-Schedule-Day-BetPlaced-Check {
+  position: relative !important;
+  font-size: 26px;
 }
 .League-Schedule-Day-Live {
   margin-top: -3px;
@@ -9483,6 +9514,9 @@ input[type="number"]::-webkit-outer-spin-button {
   .League-Schedule-Wrapper {
     height: 75px;
   }
+  .League-Schedule-Bets {
+    width: 270px;
+  }
   .League-Schedule-Day {
     width: 45px;
     height: 55px;
@@ -9516,6 +9550,7 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
 }
 .Widget-Button:not(:first-child) {
   border-left: none;
@@ -9523,6 +9558,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .Widget-Button:hover {
   border: 1px solid #fff;
   background-color: #218838;
+}
+.Widget-Button svg {
+  font-size: 20px;
 }
 .Widget-Display {
   border-radius: 5px;
@@ -10014,6 +10052,9 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 18px;
   margin-left: 5px;
 }
+.GameWidget-BetStatus-Icon {
+  position: relative !important;
+}
 .GameWidget-ScoreBet {
   display: flex;
   flex-direction: row;
@@ -10057,19 +10098,16 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: row;
   margin: 0 10px;
-  padding: 0 10px;
+  padding-left: 10px;
   font-family: "Lora", "Courier New", monospace, serif;
   align-items: center;
   border-radius: 20px;
 }
 .theme-dark .GameWidget-UpcomingBet {
-  background: hsla(0, 0%, 39.6%, 0.6509803921568628);
+  background: #1f1f1f;
 }
 .theme-light .GameWidget-UpcomingBet {
-  background: hsla(0, 0%, 72.5%, 0.6509803921568628);
-}
-.GameWidget-UpcomingBet-Amount {
-  margin-left: 5px;
+  background: #ebebeb;
 }
 .GameWidget-ScoreName {
   font-size: 24px;
@@ -10143,6 +10181,18 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .theme-light .GameWidget-Upcoming-Bets {
   background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.GameWidget-Upcoming-Bets-NoGame {
+  margin: auto;
+  font-family: "Lora", "Courier New", monospace, serif;
+  padding: 0 40px;
+  text-align: center;
+}
+.theme-dark .GameWidget-Upcoming-Bets-NoGame {
+  color: #c4c4c4;
+}
+.theme-light .GameWidget-Upcoming-Bets-NoGame {
+  color: #272727;
 }
 .GameWidget-Upcoming-Odds {
   display: grid;
@@ -10847,6 +10897,7 @@ input[type="number"]::-webkit-outer-spin-button {
   width: auto;
   display: flex;
   align-items: center;
+  line-height: 1em;
 }
 .theme-dark .ModalItem-Help-Icon {
   color: #c4c4c4;
@@ -12886,7 +12937,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: 700;
 }
 .theme-dark .Events-List-PositiveText {
-  color: #4fe060;
+  color: #26ff40;
 }
 .theme-light .Events-List-PositiveText {
   color: #048c14;
@@ -12897,7 +12948,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .Events-List-NegativeText {
   font-weight: 700;
 }
-.theme-dark .Events-List-NegativeText,
+.theme-dark .Events-List-NegativeText {
+  color: #ff3838;
+}
 .theme-light .Events-List-NegativeText {
   color: #d94141;
 }
@@ -15461,965 +15514,1038 @@ input[type="number"]::-webkit-outer-spin-button {
 .Weather-Tooltip-Header {
   font-weight: 700;
 }
-#root .ModalForm {
+.Bet {
+  display: grid;
+  grid-template-columns: 340px auto;
+  grid-gap: 20px;
+  gap: 20px;
+}
+.Bet-Sidebar {
+  grid-gap: 20px;
+  gap: 20px;
+}
+.Bet-Info,
+.Bet-Sidebar {
   display: flex;
-  width: 460px;
-  max-width: 95vw;
-  justify-content: flex-start;
-  padding: 40px 20px 20px;
-  overflow: visible;
-  overflow: initial;
-}
-#root .ModalForm-Header {
-  font-size: 24px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-weight: 700;
-  padding-bottom: 12px;
-  text-align: center;
-  text-transform: capitalize;
-}
-#root .ModalForm-Type {
-  padding: 10px 0;
-}
-#root .ModalForm-Type-Name {
-  font-weight: 700;
-  text-transform: uppercase;
-}
-#root .ModalForm-Form {
-  padding: 10px 0;
-}
-#root .ModalForm-Form-Wrapper {
-  display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+}
+.Bet-Info {
+  margin-bottom: 37px;
   margin-top: 20px;
 }
-#root .ModalForm-Form-Teams {
-  width: 100%;
+.Bet-Info .Bet-CloseUp-Type {
   display: flex;
-  align-items: center;
+  margin-bottom: 0;
 }
-#root .ModalForm-Form-Team {
-  position: relative;
-  font-size: 18px;
+.Bet-Help {
   font-family: "Lora", "Courier New", monospace, serif;
-  white-space: nowrap;
-  width: 50%;
-  height: auto;
-  padding: 5px 10px;
-  border-radius: 12px;
-  border: 3px solid;
-  overflow: hidden;
 }
-.theme-dark #root .ModalForm-Form-Team {
-  background: rgba(31, 31, 31, 0.5);
-}
-.theme-light #root .ModalForm-Form-Team {
-  background: hsla(0, 0%, 92.2%, 0.5);
-}
-.theme-dark #root .ModalForm-Form-Team {
-  border-color: rgba(31, 31, 31, 0.5);
-}
-.theme-light #root .ModalForm-Form-Team {
-  border-color: hsla(0, 0%, 92.2%, 0.5);
-}
-#root .ModalForm-Form-Team-Background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  background-color: var(--team-color);
-}
-#root .ModalForm-Form-Team-Wrapper {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-#root .ModalForm-Form-Team.Home {
-  margin-right: 5px;
-}
-#root .ModalForm-Form-Team.Home .ModalForm-Form-Team-Wrapper {
-  align-items: flex-start;
-}
-#root .ModalForm-Form-Team.Away {
-  margin-left: 5px;
-}
-#root .ModalForm-Form-Team.Away .ModalForm-Form-Team-Wrapper {
-  align-items: flex-end;
-}
-#root .ModalForm-Form-Team:hover:not(.is-selected) {
-  border: 3px solid var(--team-color);
-  cursor: pointer;
-}
-#root
-  .ModalForm-Form-Team:hover:not(.is-selected)
-  .ModalForm-Form-Team-Background {
-  opacity: 0.15;
-}
-#root .ModalForm-Form-Team.is-selected {
-  border: 3px solid var(--team-color);
-}
-#root .ModalForm-Form-Team.is-selected .ModalForm-Form-Team-Background {
-  opacity: 0.5;
-}
-#root .ModalForm-Form-Team.is-selected .ModalForm-Form-Team-Name {
-  padding: 0 !important;
-  background: none !important;
-}
-.theme-dark #root .ModalForm-Form-Team.is-selected .ModalForm-Form-Team-Name {
-  color: #fff;
-}
-.theme-light #root .ModalForm-Form-Team.is-selected .ModalForm-Form-Team-Name {
-  color: #000;
-}
-.theme-dark #root .ModalForm-Form-Team.is-selected .ModalForm-Form-Team-Bar {
-  background: #fff;
-}
-.theme-light #root .ModalForm-Form-Team.is-selected .ModalForm-Form-Team-Bar {
-  background: #000;
-}
-.theme-dark
-  #root
-  .ModalForm-Form-Team.is-selected
-  .ModalForm-Form-Team-Percentage {
-  color: #fff;
-}
-.theme-light
-  #root
-  .ModalForm-Form-Team.is-selected
-  .ModalForm-Form-Team-Percentage {
-  color: #000;
-}
-#root .ModalForm-Form-Team.is-not-selected {
-  opacity: 0.35;
-}
-#root .ModalForm-Form-Team-Background {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-#root .ModalForm-Form-Team-Name {
+.Bet-Help-Header {
+  text-align: center;
   font-size: 24px;
-  color: var(--text-color);
-  margin-bottom: 2px;
-}
-#root .ModalForm-Form-Team-Bar {
-  height: 3px;
-  background-color: var(--team-color);
-}
-#root .ModalForm-Form-Team-Percentage {
-  font-size: 20px;
   font-weight: 700;
 }
-#root .ModalForm-Form-Team-Percentage-Mini {
-  font-size: 16px;
-}
-.theme-dark #root .ModalForm-Form-Team-Percentage-Mini {
-  color: #c4c4c4;
-}
-.theme-light #root .ModalForm-Form-Team-Percentage-Mini {
-  color: #272727;
-}
-#root .ModalForm-Form-Amount {
-  overflow: hidden;
-}
-#root .ModalForm-Form-Inputs {
-  display: flex;
-}
-#root .ModalForm-Form-Inputs-Right {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-#root .ModalForm-Form-Inputs-Info,
-#root .ModalForm-Form-Inputs-Label {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-#root .ModalForm-Form-Inputs-Info {
-  font-size: 14px;
-}
-#root .ModalForm-Form-Inputs-Amount {
-  display: flex;
-  flex-direction: column;
-  padding: 0 12px;
-  margin-bottom: 1rem;
-  position: relative;
-}
-.theme-dark #root .ModalForm-Form-Inputs-Amount {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light #root .ModalForm-Form-Inputs-Amount {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-#root .ModalForm-Form-Inputs-Amount-Icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.4;
-  font-size: 20px;
-  display: flex;
-  padding: 12px;
-}
-#root .ModalForm-Form-Inputs-Amount-Max {
-  position: absolute;
-  bottom: 14px;
-  right: 10px;
-  padding: 3px 10px;
-  font-size: 12px;
-  text-align: right;
-  font-weight: 700;
-  border-radius: 20px;
-  border: 1px solid;
-}
-.theme-dark #root .ModalForm-Form-Inputs-Amount-Max {
-  color: #fff;
-}
-.theme-light #root .ModalForm-Form-Inputs-Amount-Max {
-  color: #000;
-}
-.theme-dark #root .ModalForm-Form-Inputs-Amount-Max {
-  background: #0b0b0b;
-}
-.theme-light #root .ModalForm-Form-Inputs-Amount-Max {
-  background: #f2f2f2;
-}
-.theme-dark #root .ModalForm-Form-Inputs-Amount-Max {
-  border-color: #fff;
-}
-.theme-light #root .ModalForm-Form-Inputs-Amount-Max {
-  border-color: #000;
-}
-#root .ModalForm-Form-Inputs-Amount-Max:hover {
-  cursor: pointer;
-}
-.theme-dark #root .ModalForm-Form-Inputs-Amount-Max:hover {
-  background: #fff;
-}
-.theme-light #root .ModalForm-Form-Inputs-Amount-Max:hover {
-  background: #000;
-}
-.theme-dark #root .ModalForm-Form-Inputs-Amount-Max:hover {
-  color: #0b0b0b;
-}
-.theme-light #root .ModalForm-Form-Inputs-Amount-Max:hover {
-  color: #f2f2f2;
-}
-#root .ModalForm-Form-Inputs-Amount input[type="range"] {
-  height: 50px;
-  width: calc(100% - 105px);
-  display: flex;
-  align-items: center;
-  margin: 0;
-  position: relative;
-}
-#root .ModalForm-Form-Inputs-Amount input[type="number"] {
-  font-weight: 700;
-  outline: none;
-  height: 100%;
-  font-size: 40px;
-  display: flex;
-  text-align: center;
-  background: transparent;
-  border: none;
-}
-.theme-dark #root .ModalForm-Form-Inputs-Amount input[type="number"] {
-  color: #fff;
-}
-.theme-light #root .ModalForm-Form-Inputs-Amount input[type="number"] {
-  color: #000;
-}
-#root .ModalForm-Form-Inputs-Amount input[type="number"]:active,
-#root .ModalForm-Form-Inputs-Amount input[type="number"]:focus {
-  outline: none;
-  box-shadow: none;
-}
-.theme-dark #root .ModalForm-Input {
-  color: #fff;
-}
-.theme-light #root .ModalForm-Input {
-  color: #000;
-}
-#root .ModalForm-Ticket-Wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 6px 12px;
-  opacity: 0.6;
-}
-#root .ModalForm-Ticket-Icon {
-  padding-right: 5px;
-  width: 22px;
-  height: 22px;
-}
-#root .ModalForm-Coin-Wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 6px 12px;
-  opacity: 0.6;
-}
-#root .ModalForm-Coin-Icon {
-  padding-right: 5px;
-  height: 22px;
-  width: 22px;
-}
-#root .ModalForm-Outcome-Wrapper {
-  padding: 6px 0;
-  text-align: center;
-}
-#root .ModalForm-Outcome-Team {
-  font-size: 20px;
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-#root .ModalForm-Outcome-Winnings {
-  font-size: 24px;
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-#root .ModalForm-Submit {
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  border-radius: 20px;
-  color: #fff;
-}
-#root .ModalForm-Submit-Wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-#root .ModalForm label {
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-}
-#root .ModalForm label:not(:first-child) {
-  margin-top: 12px;
-}
-#root .ModalForm select {
-  border: none;
-  margin-top: 12px;
-  height: 40px;
-  line-height: 40px;
-  padding-left: 8px;
-}
-.theme-dark #root .ModalForm select {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light #root .ModalForm select {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.theme-dark #root .ModalForm select {
-  color: #fff;
-}
-.theme-light #root .ModalForm select {
-  color: #000;
-}
-#root .ModalForm-Switch {
-  line-height: 1.5em;
-}
-#root .ModalForm-Switch .custom-control-label {
-  font-size: 18px;
-  margin: 0;
-}
-.theme-dark #root .ModalForm-Switch .custom-control-label:before {
-  background: #000;
-}
-.theme-light #root .ModalForm-Switch .custom-control-label:before {
-  background: #fff;
-}
-#root
-  .ModalForm-Switch
-  .custom-control-input:checked
-  ~ .custom-control-label:before {
-  background-color: #28a745;
-}
-#root .ModalForm-Dropdown {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  border: 2px solid;
-  border-radius: 40px;
-  color: #000;
-  background-clip: border-box;
-  background-clip: initial;
-  padding: 0 10px;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
-}
-.theme-dark #root .ModalForm-Dropdown {
-  border-color: #fff;
-}
-.theme-light #root .ModalForm-Dropdown {
-  border-color: #000;
-}
-#root .Reorder-Number {
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  grid-row: 2;
-  text-align: center;
-  font-size: 12px;
-}
-.theme-dark #root .Reorder-Number {
-  color: hsla(0, 0%, 100%, 0.75);
-}
-.theme-light #root .Reorder-Number {
-  color: rgba(0, 0, 0, 0.75);
-}
-#root .Reorder-Spread {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: center;
-  border-radius: 10px;
-  padding: 10px;
-}
-.theme-dark #root .Reorder-Spread {
-  background: #0b0b0b;
-}
-.theme-light #root .Reorder-Spread {
-  background: #f2f2f2;
-}
-#root .Reorder-Spread-Card {
-  border-radius: 10px;
-  margin: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  padding: 15px;
-  height: 250px;
-  border: 1px solid;
-}
-.theme-dark #root .Reorder-Spread-Card {
-  border-color: #333;
-}
-.theme-light #root .Reorder-Spread-Card {
-  border-color: #c3c3c3;
-}
-.theme-dark #root .Reorder-Spread-Card {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light #root .Reorder-Spread-Card {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-#root .Reorder-Spread-Card-Name {
-  line-height: 1.2em;
-  overflow-wrap: break-word;
-}
-#root .Reorder-Spread-Card-Icon {
-  font-size: 60px;
-}
-#root .Reorder-Snacks {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  justify-content: center;
-  border-radius: 10px;
-  padding: 10px;
-}
-.theme-dark #root .Reorder-Snacks {
-  background: #0b0b0b;
-}
-.theme-light #root .Reorder-Snacks {
-  background: #f2f2f2;
-}
-#root .Reorder-Snacks-Item {
-  border-radius: 10px;
-  margin: 5px;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  text-align: right;
-  align-items: center;
-  width: 80px;
-  height: 80px;
-  border: 1px solid;
-}
-.theme-dark #root .Reorder-Snacks-Item {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light #root .Reorder-Snacks-Item {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.theme-dark #root .Reorder-Snacks-Item {
-  border-color: #333;
-}
-.theme-light #root .Reorder-Snacks-Item {
-  border-color: #c3c3c3;
-}
-#root .Reorder-Snacks-Item svg {
-  font-size: 60px;
-  width: 50px;
-  height: 50px;
-  margin: 15px 15px 0;
-}
-#root .Reorder-Snacks-Item-Title {
-  font-weight: 700;
-}
-.theme-dark #root .Reorder-Snacks-Item-Empty {
-  background: #000;
-}
-.theme-light #root .Reorder-Snacks-Item-Empty {
-  background: #fff;
-}
-#root .Reorder-Snacks-Amount {
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
-  padding: 0 10px 10px;
-  line-height: 1em;
-  align-self: flex-end;
-}
-#root .Sell-Buttons {
-  display: flex;
-  align-self: center;
-  justify-content: center;
-}
-#root .Sell-Buttons :first-child {
-  margin-right: 10px;
-}
-#root .Sell-Earnings {
-  text-align: center;
-  margin-bottom: 20px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 18px;
-}
-.theme-dark #root .Sell-Earnings,
-.theme-light #root .Sell-Earnings {
-  text-shadow: 0 0 2px #5988ff;
-}
-.theme-dark #root .Sell-Earnings,
-.theme-light #root .Sell-Earnings {
-  color: #5988ff;
-}
-#root .Sell-Earnings-Icon,
-.theme-dark #root .Sell-Earnings span {
-  color: #fff;
-}
-.theme-light #root .Sell-Earnings span {
-  color: #000;
-}
-#root .Sell-Question {
-  text-transform: lowercase;
-}
-.theme-dark #root .Sell-Question,
-.theme-light #root .Sell-Question {
-  text-shadow: 0 0 5px #5988ff;
-}
-.theme-dark #root .Sell-Question,
-.theme-light #root .Sell-Question {
-  color: #5988ff;
-}
-#root .BatchBuy {
-  overflow: hidden;
-}
-#root .Pack-Snacks {
-  display: flex;
-  justify-content: center;
-  border-radius: 10px;
-  padding: 10px 10px 0;
-  width: 600px;
-  flex-wrap: wrap;
-  margin: auto auto 10px;
-}
-.theme-dark #root .Pack-Snacks {
-  background: #0b0b0b;
-}
-.theme-light #root .Pack-Snacks {
-  background: #f2f2f2;
-}
-#root .Pack-Snacks-Wrapper {
-  display: grid;
-  grid-template-rows: 1fr 0.25fr;
+.Bet-Help-Text {
+  margin-left: 20px;
+  padding: 20px 30px 20px 0;
+}
+.Bet-Help-Text-Line {
+  list-style-type: disc;
+  padding-left: 5px;
+}
+.Bet-Help-Text-Line:not(:last-child) {
   margin-bottom: 10px;
 }
-#root .Pack-Snacks-Number {
-  text-align: center;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 12px;
-}
-.theme-dark #root .Pack-Snacks-Number {
-  color: hsla(0, 0%, 100%, 0.75);
-}
-.theme-light #root .Pack-Snacks-Number {
-  color: rgba(0, 0, 0, 0.75);
-}
-#root .Pack-Snacks-Item {
-  border-radius: 10px;
-  margin: 5px;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  text-align: right;
-  align-items: center;
-  width: 60px;
-  height: 60px;
-  border: 1px solid;
-}
-.theme-dark #root .Pack-Snacks-Item {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light #root .Pack-Snacks-Item {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.theme-dark #root .Pack-Snacks-Item {
-  border-color: #333;
-}
-.theme-light #root .Pack-Snacks-Item {
-  border-color: #c3c3c3;
-}
-#root .Pack-Snacks-Item svg {
-  font-size: 40px;
-  width: 35px;
-  height: 35px;
-}
-.theme-dark #root .Pack-Snacks-Item-Empty {
-  background: #000;
-}
-.theme-light #root .Pack-Snacks-Item-Empty {
-  background: #fff;
-}
-#root .Pack-Snacks-Scale {
-  font-weight: 700;
-}
-.theme-dark #root .Pack-Snacks-Scale-Up {
-  color: #4fe060 !important;
-}
-.theme-light #root .Pack-Snacks-Scale-Up {
-  color: #048c14 !important;
-}
-#root .Pack-Snacks-Scale-Down {
-  color: #d94141 !important;
-}
-#root .Pack-Selected {
-  transition: 0.5s;
-}
-.theme-dark #root .Pack-Selected {
-  box-shadow: 0 0 5px 4px #fff;
-}
-.theme-light #root .Pack-Selected {
-  box-shadow: 0 0 5px 4px #000;
-}
-#root .Pack-Sell {
-  grid-template-rows: 1fr 0.25fr 0.5fr;
-  justify-items: center;
-}
-#root .Pack-Sell .Pack-Snacks-Item-Empty {
-  cursor: pointer;
-}
-#root .Pack-Sell-Button {
-  border-radius: 50%;
-  font-size: 16px;
-  cursor: pointer;
-  padding: 5px;
-  height: 24px;
-  width: 24px;
-  margin-top: 5px;
-  border: none !important;
-  display: flex;
-}
-.theme-dark #root .Pack-Sell-Button {
-  background: #ffeb57;
-}
-.theme-light #root .Pack-Sell-Button {
-  background: #0014a8;
-}
-.theme-dark #root .Pack-Sell-Button {
-  color: #000;
-}
-.theme-light #root .Pack-Sell-Button {
-  color: #fff;
-}
-#root .Pack-Sell-Button:hover svg {
-  -webkit-animation: bounce 1.2s infinite;
-  animation: bounce 1.2s infinite;
-}
-#root .Pack-Sell-Button-Selected {
-  background: #28a745 !important;
-}
-#root .Pack-Sell-Button-Selected:hover svg {
-  -webkit-animation: none;
-  animation: none;
-}
-#root .Pack-Buttons {
-  margin-top: 10px;
-  display: flex;
-  align-self: center;
-  justify-content: center;
-}
-#root .Pack-Buttons :not(:last-child) {
-  margin-right: 10px;
-}
-#root .Vote {
-  max-height: 100vh;
-}
-#root .Bet .ModalForm-Form-Amount {
-  overflow: hidden;
-  max-height: 200px;
-  transition: max-height 0.3s ease-out;
-}
-#root .Bet .ModalForm-Form-Amount.is-hidden {
-  max-height: 0;
-}
-#root .Gift-List {
-  font-family: "Lora", "Courier New", monospace, serif;
-  max-width: 600px;
-  text-align: center;
-}
-.theme-dark #root .Gift-List {
-  border-color: #333;
-}
-.theme-light #root .Gift-List {
-  border-color: #c3c3c3;
-}
-#root .Gift-List-Header {
-  font-size: 20px;
-}
-#root .Gift-List-Items {
+.Bet-Navigation {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  align-items: center;
+  grid-gap: 5px;
+  gap: 5px;
+  width: 100%;
 }
-#root .Gift-List-Item {
-  font-size: 16px;
-  font-weight: 400;
-  margin-top: 8px;
-  height: 100%;
+.Bet-Navigation-Tab {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.theme-dark .Bet-Navigation-Tab {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .Bet-Navigation-Tab {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.theme-dark .Bet-Navigation-Tab-Active {
+  background: #fff;
+}
+.theme-light .Bet-Navigation-Tab-Active {
+  background: #000;
+}
+.theme-dark .Bet-Navigation-Tab-Active {
+  color: #000;
+}
+.theme-light .Bet-Navigation-Tab-Active {
+  color: #fff;
+}
+.Bet-Navigation-Tab:hover {
+  opacity: 0.8;
+}
+.Bet-Header {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 170px;
+  justify-content: center;
+}
+.theme-dark .Bet-Header {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .Bet-Header {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.Bet-Header-Title {
+  font-weight: 700;
+  font-size: 26px;
+}
+.Bet-Header-Desc,
+.Bet-Header-Title {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Bet-Header-Desc {
+  font-size: 14px;
+  margin: 10px 0;
+}
+.Bet-Header .btn-group > .btn:not(:first-child),
+.Bet-Header .btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
+  border-radius: 5px;
+}
+.Bet-Header-Types {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  gap: 10px;
+  margin: 10px 0;
+}
+.Bet-Header-Types-Button {
+  font-weight: 700;
+}
+.theme-dark .Bet-Header-Types-Button {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .Bet-Header-Types-Button {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.Bet-Header-Types-Button:focus {
+  box-shadow: 0 0 0 0.2rem #aaa;
+}
+.Bet-Header-Types-Button:hover {
+  opacity: 0.8;
+}
+.theme-dark .Bet-Header-Types-Button-Active,
+.theme-dark .Bet-Header-Types-Button:active {
+  background: #fff !important;
+}
+.theme-light .Bet-Header-Types-Button-Active,
+.theme-light .Bet-Header-Types-Button:active {
+  background: #000 !important;
+}
+.theme-dark .Bet-Header-Types-Button-Active,
+.theme-dark .Bet-Header-Types-Button:active {
+  color: #000 !important;
+}
+.theme-light .Bet-Header-Types-Button-Active,
+.theme-light .Bet-Header-Types-Button:active {
+  color: #fff !important;
+}
+.Bet-CloseUp {
+  width: 100%;
+  height: 440px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+}
+.Bet-CloseUp-None {
+  border: 2px dashed;
+}
+.theme-dark .Bet-CloseUp-None {
+  border-color: #1f1f1f;
+}
+.theme-light .Bet-CloseUp-None {
+  border-color: #ebebeb;
+}
+.theme-dark .Bet-CloseUp-Selected {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .Bet-CloseUp-Selected {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.Bet-CloseUp-Centered {
+  justify-content: center;
+}
+.Bet-CloseUp-Centered svg {
+  width: 26px;
+  height: 26px;
+  margin: 0 3px;
+}
+.Bet-CloseUp-ActiveText,
+.Bet-CloseUp-ActiveText-Callout,
+.Bet-CloseUp-Header,
+.Bet-CloseUp-Type {
+  text-align: center;
+  font-weight: 700;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Bet-CloseUp-Header {
+  font-size: 22px;
+  margin: 5px 0;
+}
+.Bet-CloseUp-Type {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.Bet-CloseUp-ActiveText {
+  font-size: 22px;
+}
+.Bet-CloseUp-ActiveText-Callout {
+  font-size: 32px;
+  margin: 10px 0;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+.Bet-CloseUp-Group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.Bet-CloseUp-Group-Wrapper {
+  margin: 0 10px;
+  border-radius: 5px;
+  height: 240px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+.theme-dark .Bet-CloseUp-Group-Wrapper {
+  background: #000;
+}
+.theme-light .Bet-CloseUp-Group-Wrapper {
+  background: #fff;
+}
+.Bet-CloseUp-Hint {
+  font-size: 12px;
   display: flex;
   justify-content: center;
-  vertical-align: top;
+  align-items: center;
+  height: 80px;
+  font-family: "Lora", "Courier New", monospace, serif;
 }
-#root .Gift-List-Item-Emoji {
-  margin: 2px 5px 0;
+.theme-dark .Bet-CloseUp-Hint {
+  color: #c4c4c4;
 }
-.form-control:disabled {
-  opacity: revert;
+.theme-light .Bet-CloseUp-Hint {
+  color: #272727;
 }
-@-webkit-keyframes bounce {
-  0% {
-    -webkit-transform: translateY(-0.5px);
-    transform: translateY(-0.5px);
-  }
-  25% {
-    -webkit-transform: translateY(0.5px);
-    transform: translateY(0.5px);
-  }
-  50% {
-    -webkit-transform: translateY(-0.5px);
-    transform: translateY(-0.5px);
-  }
-  75% {
-    -webkit-transform: translateY(0.5px);
-    transform: translateY(0.5px);
-  }
-  to {
-    -webkit-transform: translateY(-0.5px);
-    transform: translateY(-0.5px);
-  }
+.Bet-CloseUp-Team {
+  opacity: 0.5;
+  border-radius: 5px;
+  padding: 15px 5px;
+  height: 80px;
 }
-@keyframes bounce {
-  0% {
-    -webkit-transform: translateY(-0.5px);
-    transform: translateY(-0.5px);
-  }
-  25% {
-    -webkit-transform: translateY(0.5px);
-    transform: translateY(0.5px);
-  }
-  50% {
-    -webkit-transform: translateY(-0.5px);
-    transform: translateY(-0.5px);
-  }
-  75% {
-    -webkit-transform: translateY(0.5px);
-    transform: translateY(0.5px);
-  }
-  to {
-    -webkit-transform: translateY(-0.5px);
-    transform: translateY(-0.5px);
-  }
+.theme-dark .Bet-CloseUp-Team {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .Bet-CloseUp-Team {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.Bet-CloseUp-Team-Single {
+  height: 240px;
+}
+.Bet-CloseUp-Team-Header {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 70px auto;
+}
+.Bet-CloseUp-Team-Header .Bet-List-MatchUps-Team-Icon {
+  margin: 0;
+}
+.Bet-CloseUp-Team-Info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+  justify-content: space-between;
+  height: 150px;
+  margin-top: 10px;
+}
+.Bet-CloseUp-Team-Info-Header {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+.theme-dark .Bet-CloseUp-Team-Info-Header {
+  color: #c4c4c4;
+}
+.theme-light .Bet-CloseUp-Team-Info-Header {
+  color: #272727;
+}
+.Bet-CloseUp-Team-Info-Record :first-child {
+  font-size: 18px;
+  line-height: 18px;
+}
+.Bet-CloseUp-Team-Info-Runs {
+  display: flex;
+  align-items: center;
+}
+.Bet-CloseUp-Team-Info-Runs :first-child {
+  margin-left: 5px;
+}
+.Bet-CloseUp-Team-Info-Batting,
+.Bet-CloseUp-Team-Info-Pitching {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Bet-CloseUp-Team-Info-Pitching {
+  font-size: 16px;
+  line-height: 16px;
+}
+.Bet-CloseUp-Team-Info-Stars {
+  font-size: 18px;
+}
+.Bet-CloseUp-Team-Selected {
+  opacity: 1;
+}
+.theme-dark .Bet-CloseUp-Team-Selected {
+  background: #fff !important;
+}
+.theme-light .Bet-CloseUp-Team-Selected {
+  background: #000 !important;
+}
+.theme-dark .Bet-CloseUp-Team-Selected {
+  color: #000 !important;
+}
+.theme-light .Bet-CloseUp-Team-Selected {
+  color: #fff !important;
+}
+.theme-dark .Bet-CloseUp-Team-Selected .Bet-CloseUp-Team-Info-Header {
+  color: #333;
+}
+.theme-light .Bet-CloseUp-Team-Selected .Bet-CloseUp-Team-Info-Header {
+  color: #c3c3c3;
+}
+.Bet-CloseUp-Outcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lora", "Courier New", monospace, serif;
+  margin: 5px 0;
+}
+.Bet-CloseUp-Outcome-Payout,
+.Bet-CloseUp-Outcome-Percent {
+  font-size: 26px;
+  font-weight: 700;
+}
+.Bet-CloseUp-Outcome-Percent {
+  margin-right: 5px;
+}
+.Bet-CloseUp-Outcome-Payout {
+  margin-left: 5px;
+  color: gold;
+}
+.Bet-CloseUp-Outcome-Payout svg {
+  width: 24px;
+  height: 24px;
+}
+.Bet-CloseUp-Outcome-Desc {
+  font-size: 14px;
+  text-align: center;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.theme-dark .Bet-CloseUp-Outcome-Desc {
+  color: #c4c4c4;
+}
+.theme-light .Bet-CloseUp-Outcome-Desc {
+  color: #272727;
+}
+.Bet-CloseUp-Outcome-Submitted {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Lora", "Courier New", monospace, serif;
+  line-height: 18px;
+}
+.Bet-CloseUp-Outcome-Submitted svg {
+  position: relative;
+  margin: 0;
+  font-size: 20px;
+}
+.Bet-CloseUp-Outcome-NoButton {
+  margin: auto;
+}
+.Bet-CloseUp-Outcome-Button {
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 700;
+  margin: 10px auto 0;
+  color: #fff;
+}
+.Bet-CloseUp-Outcome-Button-Submit {
+  background: green;
+}
+.Bet-CloseUp-Outcome-Button-Submit:active,
+.Bet-CloseUp-Outcome-Button-Submit:focus,
+.Bet-CloseUp-Outcome-Button-Submit:hover {
+  background: green !important;
+  opacity: 0.8;
+}
+.Bet-CloseUp-Outcome-Button-Cancel {
+  background: #a00;
+}
+.Bet-CloseUp-Outcome-Button-Cancel:active,
+.Bet-CloseUp-Outcome-Button-Cancel:focus,
+.Bet-CloseUp-Outcome-Button-Cancel:hover {
+  background: #a00 !important;
+  opacity: 0.8;
+}
+.Bet-CloseUp-Outcome-Button-Clear {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -45px;
+  font-size: 14px;
+}
+.Bet-CloseUp-Summary {
+  font-size: 16px;
+  padding: 0 20px;
+  display: grid;
+  margin-top: 20px;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Bet-CloseUp-Summary-Header {
+  font-size: 18px;
+  font-weight: 700;
+}
+.Bet-CloseUp-Summary-Line {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  line-height: 1.2em;
+  align-items: center;
+}
+.Bet-CloseUp-Summary-Line-Num {
+  font-size: 26px;
+  font-weight: 700;
+  height: 20px;
+  display: flex;
+}
+.Bet-CloseUp-Summary-Line-Num svg {
+  width: 22px;
+  height: 22px;
+  margin-left: 5px;
+}
+.Bet-CloseUp-Summary-Line-Num .Bet-List-Placed-Bet-Odds-Percent {
+  margin-top: 1px;
+}
+.Bet-Schedule {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.Bet-Schedule-Date {
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Lora", "Courier New", monospace, serif;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.Bet-Schedule-Date-Line {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.Bet-Schedule-Date-Line:first-child {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+.Bet-Schedule-Date-Callout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  margin-left: 10px;
+  min-width: 28px;
+  height: 28px;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+.theme-dark .Bet-Schedule-Date-Callout {
+  background: #fff !important;
+}
+.theme-light .Bet-Schedule-Date-Callout {
+  background: #000 !important;
+}
+.theme-dark .Bet-Schedule-Date-Callout {
+  color: #000 !important;
+}
+.theme-light .Bet-Schedule-Date-Callout {
+  color: #fff !important;
+}
+.Bet-Submitted {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 5px;
+  color: #69a4ff;
+}
+.Bet-List {
+  display: flex;
+  flex-direction: column;
+}
+.Bet-List-Lost,
+.Bet-List-Won {
+  text-transform: uppercase;
+}
+.theme-dark .Bet-List-Lost {
+  color: #ff3838 !important;
+}
+.theme-light .Bet-List-Lost {
+  color: #d94141 !important;
+}
+.Bet-List-Won {
+  text-transform: uppercase;
+}
+.theme-dark .Bet-List-Won {
+  color: #26ff40 !important;
+}
+.theme-light .Bet-List-Won {
+  color: #048c14 !important;
+}
+.Bet-List-MatchUps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 15px;
+  gap: 15px;
+  position: relative;
+}
+.Bet-List-MatchUps-Group {
+  display: grid;
+  grid-template-columns: 75px 75px;
+  border-radius: 5px;
+}
+.Bet-List-MatchUps-Team {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  align-items: center;
+  height: 150px;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+.theme-dark .Bet-List-MatchUps-Team {
+  background: rgba(30, 30, 30, 0.6392156862745098) !important;
+}
+.theme-light .Bet-List-MatchUps-Team {
+  background: hsla(0, 0%, 89%, 0.7098039215686275) !important;
+}
+.theme-dark .Bet-List-MatchUps-Team:first-child {
+  background: #1f1f1f !important;
+}
+.theme-light .Bet-List-MatchUps-Team:first-child {
+  background: #ebebeb !important;
+}
+.theme-dark .Bet-List-MatchUps-Team-Selected {
+  background: #fff !important;
+}
+.theme-light .Bet-List-MatchUps-Team-Selected {
+  background: #000 !important;
+}
+.theme-dark .Bet-List-MatchUps-Team-Selected {
+  color: #000 !important;
+}
+.theme-light .Bet-List-MatchUps-Team-Selected {
+  color: #fff !important;
+}
+.theme-dark .Bet-List-MatchUps-Team-Selected:first-child {
+  background: #fff !important;
+}
+.theme-light .Bet-List-MatchUps-Team-Selected:first-child {
+  background: #000 !important;
+}
+.Bet-List-MatchUps-Team-Selected-Placed {
+  cursor: default;
+}
+.Bet-List-MatchUps-Team-Fade {
+  opacity: 0.5;
+  cursor: default;
+}
+.Bet-List-MatchUps-Team-Icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.Bet-List-MatchUps-Team-Odds {
+  font-size: 26px;
+  font-weight: 700;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Bet-List-Placed-Bet {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2.2fr 75px 120px;
+  border-radius: 5px;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.theme-dark .Bet-List-Placed-Bet {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .Bet-List-Placed-Bet {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.Bet-List-Placed-Bet:not(:first-child) {
+  margin-top: 10px;
+}
+.Bet-List-Placed-Bet-Type {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 0 10px 15px;
+}
+.Bet-List-Placed-Bet-Details {
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  grid-gap: 10px;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 12px;
+  align-content: center;
+}
+.theme-dark .Bet-List-Placed-Bet-Details {
+  background: #1f1f1f;
+}
+.theme-light .Bet-List-Placed-Bet-Details {
+  background: #ebebeb;
+}
+.Bet-List-Placed-Bet-Details-GameWinner {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 5px;
+  gap: 5px;
+}
+.Bet-List-Placed-Bet-Details-GameWinner-Done {
+  display: grid;
+  grid-template-columns: 30px 35px 80px 35px;
+  grid-gap: 5px;
+  gap: 5px;
+  justify-self: center;
+  align-items: center;
+}
+.Bet-List-Placed-Bet-Details-GameWinner-Done .Bet-List-Placed-Bet-Details-Icon {
+  margin: 0 !important;
+}
+.Bet-List-Placed-Bet-Details-Live {
+  background: red;
+  border-radius: 5px;
+  padding: 0 3px;
+  text-transform: uppercase;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Bet-List-Placed-Bet-Details-Text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Bet-List-Placed-Bet-Details-Text-Line {
+  line-height: 1.2em;
+}
+.Bet-List-Placed-Bet-Details-Text-Line:not(:first-child) {
+  margin-top: 10px;
+}
+.Bet-List-Placed-Bet-Details-GameOutcome {
+  font-size: 22px;
+}
+.Bet-List-Placed-Bet-Details-Team {
+  display: flex;
+  align-items: center;
+  line-height: 1.2em;
+  min-height: 40px;
+}
+.Bet-List-Placed-Bet-Details-Team-Faded {
+  opacity: 0.4;
+}
+.Bet-List-Placed-Bet-Details-Icon {
+  min-width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin-right: 5px;
+}
+.Bet-List-Placed-Bet-Details-Score {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Bet-List-Placed-Bet-Odds,
+.Bet-List-Placed-Bet-Payout {
+  font-weight: 700;
+  font-size: 24px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.Bet-List-Placed-Bet-Odds {
+  justify-self: center;
+}
+.Bet-List-Placed-Bet-Odds-Percent {
+  font-size: 16px;
+  margin-top: 5px;
+}
+.Bet-List-Placed-Bet-Payout {
+  justify-self: flex-end;
+  padding-right: 10px;
+  line-height: 1em;
+  text-align: right;
+}
+.Bet-List-Placed-Bet-Payout-Lost {
+  text-decoration: line-through;
+}
+.Bet-List-Placed-Bet-Payout svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
 }
 @media (max-width: 1080px) {
-  #root .ModalForm-Outcome-Wrapper {
+  .Bet {
+    display: flex;
+    flex-direction: column;
+  }
+  .Bet-ExpandedOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 2;
+  }
+  .Bet-Info {
+    margin: 0 10px 55px;
+  }
+  .Bet-Info .Bet-CloseUp-Type {
     font-size: 14px;
   }
-  #root .ModalForm-Outcome-Winnings {
-    font-size: 18px;
+  .Bet-Header {
+    padding: 5px 10px;
+    height: 70px;
   }
-  #root .ModalForm-Form-Team {
-    padding: 5px;
+  .Bet-Header-Title {
+    font-size: 24px;
   }
-  #root .ModalForm-Form-Team-Name {
-    font-size: 18px;
+  .Bet-Header-Desc {
+    margin: 0;
   }
-  #root .ModalForm-Form-Team-Percentage {
+  .Bet-Schedule {
+    align-items: flex-start;
+  }
+  .Bet-Schedule-Date {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 5px;
+  }
+  .Bet-Schedule-Date-Line {
+    flex-direction: column;
+  }
+  .Bet-Schedule-Date-Line:first-child {
+    margin: 0;
+  }
+  .Bet-Schedule-Date-Callout {
+    margin: 10px 0 0;
+  }
+  .Bet-Schedule .League-Schedule-Scroll-Wrapper {
+    margin: 10px 0 25px;
+  }
+  .Bet-CloseUp {
+    padding-bottom: 20px;
+    height: auto;
+  }
+  .Bet-CloseUp-Type {
     font-size: 16px;
   }
-  #root .Reorder-Spread {
-    grid-template-columns: auto;
+  .Bet-CloseUp-Mobile {
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
-  #root .Reorder-Spread-Card {
-    height: auto;
-    flex-direction: row;
+  .theme-dark .Bet-CloseUp-Mobile {
+    background: #000;
+  }
+  .theme-light .Bet-CloseUp-Mobile {
+    background: #fff;
+  }
+  .Bet-CloseUp-Mobile-Big {
+    position: fixed;
+    max-height: 0;
+    height: 100%;
+    transition: max-height 0.4s ease-in-out;
+    overflow: hidden;
+    z-index: 3;
+    bottom: 140px;
+    width: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    grid-column: 2;
   }
-  #root .Reorder-Spread-Card-Name {
-    width: 50%;
+  .theme-dark .Bet-CloseUp-Mobile-Big {
+    background: #000;
   }
-  #root .Reorder-Snacks {
-    grid-template-columns: auto;
-    align-items: center;
+  .theme-light .Bet-CloseUp-Mobile-Big {
+    background: #fff;
   }
-  #root .Reorder-Snacks-Number {
-    grid-column: 1;
-    margin-right: 10px;
+  .Bet-CloseUp-Mobile-Big-Expanded {
+    max-height: 335px;
   }
-  #root .Reorder-Snacks-Item {
-    width: 90px;
-    grid-column: 2;
-    height: 60px;
+  .Bet-CloseUp-Mobile-Big-Expanded .Bet-CloseUp-Group-Wrapper {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 0 10px;
   }
-  #root .Reorder-Snacks-Item svg {
-    font-size: 30px;
-    margin: 10px 5px 0;
-  }
-  #root .Reorder-Snacks-Amount {
-    font-size: 14px;
-    padding: 0 7px 7px;
-  }
-  #root .Pack-Snacks {
+  .Bet-CloseUp-Mobile-Big-Expanded .Bet-CloseUp-Header,
+  .Bet-CloseUp-Mobile-Big-Expanded .Bet-CloseUp-Type {
     width: 100%;
   }
-  #root .Gift-List {
-    display: none;
-  }
-  #root .Gift-List-Items {
+  .Bet-CloseUp-Mobile-Data {
+    position: relative;
     display: flex;
+    justify-content: space-between;
+    min-height: 70px;
+    padding: 0 10px 10px;
+  }
+  .Bet-CloseUp-Mobile-Data-Expanded {
+    height: 80px;
+    padding-top: 10px;
+  }
+  .Bet-CloseUp-Mobile-CanClick {
+    width: 100px;
+    height: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  .theme-dark .Bet-CloseUp-Mobile-CanClick {
+    background: #fff;
+  }
+  .theme-light .Bet-CloseUp-Mobile-CanClick {
+    background: #000;
+  }
+  .Bet-CloseUp-Mobile-None {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    font-family: "Lora", "Courier New", monospace, serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .Bet-CloseUp-Mobile-None-BigText {
+    font-size: 20px;
+  }
+  .Bet-CloseUp-Mobile-Selected .LoadingSpinner-Inline {
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Bet-CloseUp-Mobile-Selected .Bet-CloseUp-Outcome {
+    margin: 0;
     flex-wrap: wrap;
   }
-  #root .Gift-List-Item:not(:last-child) {
-    margin-bottom: 10px;
+  .Bet-CloseUp-Mobile-Selected .Bet-CloseUp-Outcome-Desc {
+    font-size: 12px;
   }
-}
-[type="range"] {
-  -webkit-appearance: none;
-  background: transparent;
-  margin: 10px 0;
-  width: 100%;
-}
-[type="range"]::-moz-focus-outer {
-  border: 0;
-}
-[type="range"]:focus {
-  outline: 0;
-}
-[type="range"]:focus::-webkit-slider-runnable-track {
-  background: #2b2b2b;
-}
-[type="range"]:focus::-ms-fill-lower {
-  background: #1e1e1e;
-}
-[type="range"]:focus::-ms-fill-upper {
-  background: #2b2b2b;
-}
-[type="range"]::-webkit-slider-runnable-track {
-  cursor: default;
-  height: 8px;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  width: 100%;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(13, 13, 13, 0.2);
-  background: #1e1e1e;
-  border: 0 solid #656565;
-  border-radius: 0;
-}
-[type="range"]::-webkit-slider-thumb {
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(13, 13, 13, 0.2);
-  background: #656565;
-  border: 0 solid #eceff1;
-  border-radius: 10px;
-  box-sizing: border-box;
-  cursor: default;
-  height: 20px;
-  width: 20px;
-  -webkit-appearance: none;
-  margin-top: -6px;
-}
-[type="range"]::-moz-range-track {
-  height: 8px;
-  -moz-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  width: 100%;
-  background: #1e1e1e;
-  border: 0 solid #656565;
-  border-radius: 0;
-  height: 4px;
-}
-[type="range"]::-moz-range-thumb,
-[type="range"]::-moz-range-track {
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(13, 13, 13, 0.2);
-  cursor: default;
-}
-[type="range"]::-moz-range-thumb {
-  background: #656565;
-  border: 0 solid #eceff1;
-  border-radius: 10px;
-  box-sizing: border-box;
-  height: 20px;
-  width: 20px;
-}
-[type="range"]::-ms-track {
-  cursor: default;
-  height: 8px;
-  -ms-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  width: 100%;
-  background: transparent;
-  border-color: transparent;
-  border-width: 10px 0;
-  color: transparent;
-}
-[type="range"]::-ms-fill-lower {
-  background: #111;
-}
-[type="range"]::-ms-fill-lower,
-[type="range"]::-ms-fill-upper {
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(13, 13, 13, 0.2);
-  border: 0 solid #656565;
-  border-radius: 0;
-}
-[type="range"]::-ms-fill-upper {
-  background: #1e1e1e;
-}
-[type="range"]::-ms-thumb {
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(13, 13, 13, 0.2);
-  background: #656565;
-  border: 0 solid #eceff1;
-  border-radius: 10px;
-  box-sizing: border-box;
-  cursor: default;
-  height: 20px;
-  width: 20px;
-  margin-top: 2px;
-}
-[type="range"]:disabled::-moz-range-thumb,
-[type="range"]:disabled::-ms-fill-lower,
-[type="range"]:disabled::-ms-fill-upper,
-[type="range"]:disabled::-ms-thumb,
-[type="range"]:disabled::-webkit-slider-runnable-track,
-[type="range"]:disabled::-webkit-slider-thumb {
-  cursor: not-allowed;
+  .Bet-CloseUp-Mobile-Selected .Bet-CloseUp-Outcome-Button {
+    font-size: 12px;
+    padding: 2px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin: auto;
+    z-index: 5;
+  }
+  .Bet-CloseUp-Mobile-Selected .Bet-CloseUp-Outcome-Payout,
+  .Bet-CloseUp-Mobile-Selected .Bet-CloseUp-Outcome-Percent {
+    font-size: 20px;
+  }
+  .Bet-CloseUp-Mobile-Selected .Bet-CloseUp-Outcome-Payout svg {
+    width: 22px;
+    height: 22px;
+  }
+  .Bet-CloseUp-Mobile-Selected .Bet-CloseUp-Outcome-Submitted {
+    font-size: 16px;
+  }
+  .Bet-CloseUp-Mobile-Selected .Bet-CloseUp-Outcome-Submitted svg {
+    font-size: 18px;
+  }
+  .Bet-CloseUp-Mobile-Group {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .Bet-CloseUp-Mobile-Team {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    border: 1px solid;
+    font-family: "Lora", "Courier New", monospace, serif;
+    font-weight: 700;
+  }
+  .theme-dark .Bet-CloseUp-Mobile-Team {
+    border-color: #000;
+  }
+  .theme-light .Bet-CloseUp-Mobile-Team {
+    border-color: #fff;
+  }
+  .Bet-CloseUp-Mobile-Text {
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+  .Bet-List-Placed-Bet {
+    grid-template-columns: 45% 55%;
+  }
+  .Bet-List-Placed-Bet:not(:first-child) {
+    margin-top: 20px;
+  }
+  .Bet-List-Placed-Bet-Type {
+    padding: 0;
+    margin-top: 5px;
+  }
+  .Bet-List-Placed-Bet-Info {
+    padding: 15px 0 10px;
+    justify-content: center;
+  }
+  .Bet-List-Placed-Bet-Info,
+  .Bet-List-Placed-Bet-Info-Details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Bet-List-Placed-Bet-Details-Text-Line {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .Bet-List-Placed-Bet-Details-Text-Line:not(:first-child) {
+    margin-top: 5px;
+  }
+  .Bet-List-Placed-Bet-Details-Text-Line-Big {
+    font-size: 20px;
+  }
+  .Bet-List-Placed-Bet-Details-Live {
+    margin: 0 10px 0 0;
+    font-size: 16px;
+    padding: 0 8px;
+  }
+  .Bet-List-Placed-Bet-Details-GameWinner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .Bet-List-Placed-Bet-Details-GameWinner-Done {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    align-content: center;
+  }
+  .Bet-List-Placed-Bet-Details-GameOutcome {
+    min-width: 22px;
+    align-self: center;
+  }
+  .Bet-List-Placed-Bet-Details-Icon {
+    position: relative;
+  }
+  .Bet-List-Placed-Bet-Details-Team-MatchUp {
+    display: flex;
+    padding: 5px;
+    border-radius: 5px;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 700;
+    align-items: center;
+  }
+  .theme-dark .Bet-List-Placed-Bet-Details-Team-MatchUp {
+    background: #1f1f1f;
+  }
+  .theme-light .Bet-List-Placed-Bet-Details-Team-MatchUp {
+    background: #ebebeb;
+  }
+  .Bet-List-Placed-Bet-Details-Team-Selected {
+    font-size: 14px;
+    margin-bottom: -5px;
+    margin-right: -5px;
+  }
+  .Bet-List-Placed-Bet-Details-Score {
+    font-size: 16px;
+    min-width: 60px;
+  }
+  .Bet-List-Placed-Bet-Results {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .Bet-List-Placed-Bet-Results .Bet-List-Placed-Bet-Odds,
+  .Bet-List-Placed-Bet-Results .Bet-List-Placed-Bet-Payout {
+    padding: 0;
+  }
+  .Bet-List-Placed-Bet-Results .Bet-List-Placed-Bet-Odds {
+    margin-right: 5px;
+  }
+  .Bet-List-Placed-Bet-Results .Bet-List-Placed-Bet-Payout {
+    margin-left: 5px;
+  }
 }
 .theme-dark .tooltip-inner {
   background: #000;
@@ -16706,7 +16832,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .Main-Footer {
     padding: 40px 0;
-    margin-bottom: 65px;
+    margin-bottom: 100px;
   }
   .ScrollToTop {
     display: none;
@@ -17599,7 +17725,9 @@ button:focus-visible {
 .theme-light .Record-Positive {
   color: #000;
 }
-.theme-dark .Record-Negative,
+.theme-dark .Record-Negative {
+  color: #ff3838;
+}
 .theme-light .Record-Negative {
   color: #d94141;
 }
@@ -18759,7 +18887,7 @@ button:focus-visible {
   margin: auto;
 }
 .theme-dark .GiftShop-Gifts-Item-View {
-  background: #4fe060;
+  background: #26ff40;
 }
 .theme-light .GiftShop-Gifts-Item-View {
   background: #048c14;
@@ -19278,6 +19406,966 @@ button:focus-visible {
     min-width: 22px;
     min-height: 22px;
   }
+}
+#root .ModalForm {
+  display: flex;
+  width: 460px;
+  max-width: 95vw;
+  justify-content: flex-start;
+  padding: 40px 20px 20px;
+  overflow: visible;
+  overflow: initial;
+}
+#root .ModalForm-Header {
+  font-size: 24px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+  padding-bottom: 12px;
+  text-align: center;
+  text-transform: capitalize;
+}
+#root .ModalForm-Type {
+  padding: 10px 0;
+}
+#root .ModalForm-Type-Name {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#root .ModalForm-Form {
+  padding: 10px 0;
+}
+#root .ModalForm-Form-Wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+#root .ModalForm-Form-Teams {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+#root .ModalForm-Form-Team {
+  position: relative;
+  font-size: 18px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  white-space: nowrap;
+  width: 50%;
+  height: auto;
+  padding: 5px 10px;
+  border-radius: 12px;
+  border: 3px solid;
+  overflow: hidden;
+}
+.theme-dark #root .ModalForm-Form-Team {
+  background: rgba(31, 31, 31, 0.5);
+}
+.theme-light #root .ModalForm-Form-Team {
+  background: hsla(0, 0%, 92.2%, 0.5);
+}
+.theme-dark #root .ModalForm-Form-Team {
+  border-color: rgba(31, 31, 31, 0.5);
+}
+.theme-light #root .ModalForm-Form-Team {
+  border-color: hsla(0, 0%, 92.2%, 0.5);
+}
+#root .ModalForm-Form-Team-Background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: var(--team-color);
+}
+#root .ModalForm-Form-Team-Wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+#root .ModalForm-Form-Team.Home {
+  margin-right: 5px;
+}
+#root .ModalForm-Form-Team.Home .ModalForm-Form-Team-Wrapper {
+  align-items: flex-start;
+}
+#root .ModalForm-Form-Team.Away {
+  margin-left: 5px;
+}
+#root .ModalForm-Form-Team.Away .ModalForm-Form-Team-Wrapper {
+  align-items: flex-end;
+}
+#root .ModalForm-Form-Team:hover:not(.is-selected) {
+  border: 3px solid var(--team-color);
+  cursor: pointer;
+}
+#root
+  .ModalForm-Form-Team:hover:not(.is-selected)
+  .ModalForm-Form-Team-Background {
+  opacity: 0.15;
+}
+#root .ModalForm-Form-Team.is-selected {
+  border: 3px solid var(--team-color);
+}
+#root .ModalForm-Form-Team.is-selected .ModalForm-Form-Team-Background {
+  opacity: 0.5;
+}
+#root .ModalForm-Form-Team.is-selected .ModalForm-Form-Team-Name {
+  padding: 0 !important;
+  background: none !important;
+}
+.theme-dark #root .ModalForm-Form-Team.is-selected .ModalForm-Form-Team-Name {
+  color: #fff;
+}
+.theme-light #root .ModalForm-Form-Team.is-selected .ModalForm-Form-Team-Name {
+  color: #000;
+}
+.theme-dark #root .ModalForm-Form-Team.is-selected .ModalForm-Form-Team-Bar {
+  background: #fff;
+}
+.theme-light #root .ModalForm-Form-Team.is-selected .ModalForm-Form-Team-Bar {
+  background: #000;
+}
+.theme-dark
+  #root
+  .ModalForm-Form-Team.is-selected
+  .ModalForm-Form-Team-Percentage {
+  color: #fff;
+}
+.theme-light
+  #root
+  .ModalForm-Form-Team.is-selected
+  .ModalForm-Form-Team-Percentage {
+  color: #000;
+}
+#root .ModalForm-Form-Team.is-not-selected {
+  opacity: 0.35;
+}
+#root .ModalForm-Form-Team-Background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#root .ModalForm-Form-Team-Name {
+  font-size: 24px;
+  color: var(--text-color);
+  margin-bottom: 2px;
+}
+#root .ModalForm-Form-Team-Bar {
+  height: 3px;
+  background-color: var(--team-color);
+}
+#root .ModalForm-Form-Team-Percentage {
+  font-size: 20px;
+  font-weight: 700;
+}
+#root .ModalForm-Form-Team-Percentage-Mini {
+  font-size: 16px;
+}
+.theme-dark #root .ModalForm-Form-Team-Percentage-Mini {
+  color: #c4c4c4;
+}
+.theme-light #root .ModalForm-Form-Team-Percentage-Mini {
+  color: #272727;
+}
+#root .ModalForm-Form-Amount {
+  overflow: hidden;
+}
+#root .ModalForm-Form-Inputs {
+  display: flex;
+}
+#root .ModalForm-Form-Inputs-Right {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+#root .ModalForm-Form-Inputs-Info,
+#root .ModalForm-Form-Inputs-Label {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+#root .ModalForm-Form-Inputs-Info {
+  font-size: 14px;
+}
+#root .ModalForm-Form-Inputs-Amount {
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.theme-dark #root .ModalForm-Form-Inputs-Amount {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light #root .ModalForm-Form-Inputs-Amount {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+#root .ModalForm-Form-Inputs-Amount-Icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  font-size: 20px;
+  display: flex;
+  padding: 12px;
+}
+#root .ModalForm-Form-Inputs-Amount-Max {
+  position: absolute;
+  bottom: 14px;
+  right: 10px;
+  padding: 3px 10px;
+  font-size: 12px;
+  text-align: right;
+  font-weight: 700;
+  border-radius: 20px;
+  border: 1px solid;
+}
+.theme-dark #root .ModalForm-Form-Inputs-Amount-Max {
+  color: #fff;
+}
+.theme-light #root .ModalForm-Form-Inputs-Amount-Max {
+  color: #000;
+}
+.theme-dark #root .ModalForm-Form-Inputs-Amount-Max {
+  background: #0b0b0b;
+}
+.theme-light #root .ModalForm-Form-Inputs-Amount-Max {
+  background: #f2f2f2;
+}
+.theme-dark #root .ModalForm-Form-Inputs-Amount-Max {
+  border-color: #fff;
+}
+.theme-light #root .ModalForm-Form-Inputs-Amount-Max {
+  border-color: #000;
+}
+#root .ModalForm-Form-Inputs-Amount-Max:hover {
+  cursor: pointer;
+}
+.theme-dark #root .ModalForm-Form-Inputs-Amount-Max:hover {
+  background: #fff;
+}
+.theme-light #root .ModalForm-Form-Inputs-Amount-Max:hover {
+  background: #000;
+}
+.theme-dark #root .ModalForm-Form-Inputs-Amount-Max:hover {
+  color: #0b0b0b;
+}
+.theme-light #root .ModalForm-Form-Inputs-Amount-Max:hover {
+  color: #f2f2f2;
+}
+#root .ModalForm-Form-Inputs-Amount input[type="range"] {
+  height: 50px;
+  width: calc(100% - 105px);
+  display: flex;
+  align-items: center;
+  margin: 0;
+  position: relative;
+}
+#root .ModalForm-Form-Inputs-Amount input[type="number"] {
+  font-weight: 700;
+  outline: none;
+  height: 100%;
+  font-size: 40px;
+  display: flex;
+  text-align: center;
+  background: transparent;
+  border: none;
+}
+.theme-dark #root .ModalForm-Form-Inputs-Amount input[type="number"] {
+  color: #fff;
+}
+.theme-light #root .ModalForm-Form-Inputs-Amount input[type="number"] {
+  color: #000;
+}
+#root .ModalForm-Form-Inputs-Amount input[type="number"]:active,
+#root .ModalForm-Form-Inputs-Amount input[type="number"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+.theme-dark #root .ModalForm-Input {
+  color: #fff;
+}
+.theme-light #root .ModalForm-Input {
+  color: #000;
+}
+#root .ModalForm-Ticket-Wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px 12px;
+  opacity: 0.6;
+}
+#root .ModalForm-Ticket-Icon {
+  padding-right: 5px;
+  width: 22px;
+  height: 22px;
+}
+#root .ModalForm-Coin-Wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px 12px;
+  opacity: 0.6;
+}
+#root .ModalForm-Coin-Icon {
+  padding-right: 5px;
+  height: 22px;
+  width: 22px;
+}
+#root .ModalForm-Outcome-Wrapper {
+  padding: 6px 0;
+  text-align: center;
+}
+#root .ModalForm-Outcome-Team {
+  font-size: 20px;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+#root .ModalForm-Outcome-Winnings {
+  font-size: 24px;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+#root .ModalForm-Submit {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 20px;
+  color: #fff;
+}
+#root .ModalForm-Submit-Wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+#root .ModalForm label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+#root .ModalForm label:not(:first-child) {
+  margin-top: 12px;
+}
+#root .ModalForm select {
+  border: none;
+  margin-top: 12px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 8px;
+}
+.theme-dark #root .ModalForm select {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light #root .ModalForm select {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.theme-dark #root .ModalForm select {
+  color: #fff;
+}
+.theme-light #root .ModalForm select {
+  color: #000;
+}
+#root .ModalForm-Switch {
+  line-height: 1.5em;
+}
+#root .ModalForm-Switch .custom-control-label {
+  font-size: 18px;
+  margin: 0;
+}
+.theme-dark #root .ModalForm-Switch .custom-control-label:before {
+  background: #000;
+}
+.theme-light #root .ModalForm-Switch .custom-control-label:before {
+  background: #fff;
+}
+#root
+  .ModalForm-Switch
+  .custom-control-input:checked
+  ~ .custom-control-label:before {
+  background-color: #28a745;
+}
+#root .ModalForm-Dropdown {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid;
+  border-radius: 40px;
+  color: #000;
+  background-clip: border-box;
+  background-clip: initial;
+  padding: 0 10px;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+.theme-dark #root .ModalForm-Dropdown {
+  border-color: #fff;
+}
+.theme-light #root .ModalForm-Dropdown {
+  border-color: #000;
+}
+#root .Reorder-Number {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  grid-row: 2;
+  text-align: center;
+  font-size: 12px;
+}
+.theme-dark #root .Reorder-Number {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.theme-light #root .Reorder-Number {
+  color: rgba(0, 0, 0, 0.75);
+}
+#root .Reorder-Spread {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 10px;
+}
+.theme-dark #root .Reorder-Spread {
+  background: #0b0b0b;
+}
+.theme-light #root .Reorder-Spread {
+  background: #f2f2f2;
+}
+#root .Reorder-Spread-Card {
+  border-radius: 10px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 15px;
+  height: 250px;
+  border: 1px solid;
+}
+.theme-dark #root .Reorder-Spread-Card {
+  border-color: #333;
+}
+.theme-light #root .Reorder-Spread-Card {
+  border-color: #c3c3c3;
+}
+.theme-dark #root .Reorder-Spread-Card {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light #root .Reorder-Spread-Card {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+#root .Reorder-Spread-Card-Name {
+  line-height: 1.2em;
+  overflow-wrap: break-word;
+}
+#root .Reorder-Spread-Card-Icon {
+  font-size: 60px;
+}
+#root .Reorder-Snacks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 10px;
+}
+.theme-dark #root .Reorder-Snacks {
+  background: #0b0b0b;
+}
+.theme-light #root .Reorder-Snacks {
+  background: #f2f2f2;
+}
+#root .Reorder-Snacks-Item {
+  border-radius: 10px;
+  margin: 5px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: right;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border: 1px solid;
+}
+.theme-dark #root .Reorder-Snacks-Item {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light #root .Reorder-Snacks-Item {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.theme-dark #root .Reorder-Snacks-Item {
+  border-color: #333;
+}
+.theme-light #root .Reorder-Snacks-Item {
+  border-color: #c3c3c3;
+}
+#root .Reorder-Snacks-Item svg {
+  font-size: 60px;
+  width: 50px;
+  height: 50px;
+  margin: 15px 15px 0;
+}
+#root .Reorder-Snacks-Item-Title {
+  font-weight: 700;
+}
+.theme-dark #root .Reorder-Snacks-Item-Empty {
+  background: #000;
+}
+.theme-light #root .Reorder-Snacks-Item-Empty {
+  background: #fff;
+}
+#root .Reorder-Snacks-Amount {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  padding: 0 10px 10px;
+  line-height: 1em;
+  align-self: flex-end;
+}
+#root .Sell-Buttons {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+#root .Sell-Buttons :first-child {
+  margin-right: 10px;
+}
+#root .Sell-Earnings {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 18px;
+}
+.theme-dark #root .Sell-Earnings,
+.theme-light #root .Sell-Earnings {
+  text-shadow: 0 0 2px #5988ff;
+}
+.theme-dark #root .Sell-Earnings,
+.theme-light #root .Sell-Earnings {
+  color: #5988ff;
+}
+#root .Sell-Earnings-Icon,
+.theme-dark #root .Sell-Earnings span {
+  color: #fff;
+}
+.theme-light #root .Sell-Earnings span {
+  color: #000;
+}
+#root .Sell-Question {
+  text-transform: lowercase;
+}
+.theme-dark #root .Sell-Question,
+.theme-light #root .Sell-Question {
+  text-shadow: 0 0 5px #5988ff;
+}
+.theme-dark #root .Sell-Question,
+.theme-light #root .Sell-Question {
+  color: #5988ff;
+}
+#root .BatchBuy {
+  overflow: hidden;
+}
+#root .Pack-Snacks {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 10px 10px 0;
+  width: 600px;
+  flex-wrap: wrap;
+  margin: auto auto 10px;
+}
+.theme-dark #root .Pack-Snacks {
+  background: #0b0b0b;
+}
+.theme-light #root .Pack-Snacks {
+  background: #f2f2f2;
+}
+#root .Pack-Snacks-Wrapper {
+  display: grid;
+  grid-template-rows: 1fr 0.25fr;
+  margin-bottom: 10px;
+}
+#root .Pack-Snacks-Number {
+  text-align: center;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 12px;
+}
+.theme-dark #root .Pack-Snacks-Number {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.theme-light #root .Pack-Snacks-Number {
+  color: rgba(0, 0, 0, 0.75);
+}
+#root .Pack-Snacks-Item {
+  border-radius: 10px;
+  margin: 5px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: right;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid;
+}
+.theme-dark #root .Pack-Snacks-Item {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light #root .Pack-Snacks-Item {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.theme-dark #root .Pack-Snacks-Item {
+  border-color: #333;
+}
+.theme-light #root .Pack-Snacks-Item {
+  border-color: #c3c3c3;
+}
+#root .Pack-Snacks-Item svg {
+  font-size: 40px;
+  width: 35px;
+  height: 35px;
+}
+.theme-dark #root .Pack-Snacks-Item-Empty {
+  background: #000;
+}
+.theme-light #root .Pack-Snacks-Item-Empty {
+  background: #fff;
+}
+#root .Pack-Snacks-Scale {
+  font-weight: 700;
+}
+.theme-dark #root .Pack-Snacks-Scale-Up {
+  color: #26ff40 !important;
+}
+.theme-light #root .Pack-Snacks-Scale-Up {
+  color: #048c14 !important;
+}
+#root .Pack-Snacks-Scale-Down {
+  color: #d94141 !important;
+}
+#root .Pack-Selected {
+  transition: 0.5s;
+}
+.theme-dark #root .Pack-Selected {
+  box-shadow: 0 0 5px 4px #fff;
+}
+.theme-light #root .Pack-Selected {
+  box-shadow: 0 0 5px 4px #000;
+}
+#root .Pack-Sell {
+  grid-template-rows: 1fr 0.25fr 0.5fr;
+  justify-items: center;
+}
+#root .Pack-Sell .Pack-Snacks-Item-Empty {
+  cursor: pointer;
+}
+#root .Pack-Sell-Button {
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+  height: 24px;
+  width: 24px;
+  margin-top: 5px;
+  border: none !important;
+  display: flex;
+}
+.theme-dark #root .Pack-Sell-Button {
+  background: #ffeb57;
+}
+.theme-light #root .Pack-Sell-Button {
+  background: #0014a8;
+}
+.theme-dark #root .Pack-Sell-Button {
+  color: #000;
+}
+.theme-light #root .Pack-Sell-Button {
+  color: #fff;
+}
+#root .Pack-Sell-Button:hover svg {
+  -webkit-animation: bounce 1.2s infinite;
+  animation: bounce 1.2s infinite;
+}
+#root .Pack-Sell-Button-Selected {
+  background: #28a745 !important;
+}
+#root .Pack-Sell-Button-Selected:hover svg {
+  -webkit-animation: none;
+  animation: none;
+}
+#root .Pack-Buttons {
+  margin-top: 10px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+#root .Pack-Buttons :not(:last-child) {
+  margin-right: 10px;
+}
+#root .Vote {
+  max-height: 100vh;
+}
+#root .Bet .ModalForm-Form-Amount {
+  overflow: hidden;
+  max-height: 200px;
+  transition: max-height 0.3s ease-out;
+}
+#root .Bet .ModalForm-Form-Amount.is-hidden {
+  max-height: 0;
+}
+#root .Gift-List {
+  font-family: "Lora", "Courier New", monospace, serif;
+  max-width: 600px;
+  text-align: center;
+}
+.theme-dark #root .Gift-List {
+  border-color: #333;
+}
+.theme-light #root .Gift-List {
+  border-color: #c3c3c3;
+}
+#root .Gift-List-Header {
+  font-size: 20px;
+}
+#root .Gift-List-Items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+#root .Gift-List-Item {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 8px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  vertical-align: top;
+}
+#root .Gift-List-Item-Emoji {
+  margin: 2px 5px 0;
+}
+.form-control:disabled {
+  opacity: revert;
+}
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-0.5px);
+    transform: translateY(-0.5px);
+  }
+  25% {
+    -webkit-transform: translateY(0.5px);
+    transform: translateY(0.5px);
+  }
+  50% {
+    -webkit-transform: translateY(-0.5px);
+    transform: translateY(-0.5px);
+  }
+  75% {
+    -webkit-transform: translateY(0.5px);
+    transform: translateY(0.5px);
+  }
+  to {
+    -webkit-transform: translateY(-0.5px);
+    transform: translateY(-0.5px);
+  }
+}
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-0.5px);
+    transform: translateY(-0.5px);
+  }
+  25% {
+    -webkit-transform: translateY(0.5px);
+    transform: translateY(0.5px);
+  }
+  50% {
+    -webkit-transform: translateY(-0.5px);
+    transform: translateY(-0.5px);
+  }
+  75% {
+    -webkit-transform: translateY(0.5px);
+    transform: translateY(0.5px);
+  }
+  to {
+    -webkit-transform: translateY(-0.5px);
+    transform: translateY(-0.5px);
+  }
+}
+@media (max-width: 1080px) {
+  #root .ModalForm-Outcome-Wrapper {
+    font-size: 14px;
+  }
+  #root .ModalForm-Outcome-Winnings {
+    font-size: 18px;
+  }
+  #root .ModalForm-Form-Team {
+    padding: 5px;
+  }
+  #root .ModalForm-Form-Team-Name {
+    font-size: 18px;
+  }
+  #root .ModalForm-Form-Team-Percentage {
+    font-size: 16px;
+  }
+  #root .Reorder-Spread {
+    grid-template-columns: auto;
+    align-items: center;
+  }
+  #root .Reorder-Spread-Card {
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    grid-column: 2;
+  }
+  #root .Reorder-Spread-Card-Name {
+    width: 50%;
+  }
+  #root .Reorder-Snacks {
+    grid-template-columns: auto;
+    align-items: center;
+  }
+  #root .Reorder-Snacks-Number {
+    grid-column: 1;
+    margin-right: 10px;
+  }
+  #root .Reorder-Snacks-Item {
+    width: 90px;
+    grid-column: 2;
+    height: 60px;
+  }
+  #root .Reorder-Snacks-Item svg {
+    font-size: 30px;
+    margin: 10px 5px 0;
+  }
+  #root .Reorder-Snacks-Amount {
+    font-size: 14px;
+    padding: 0 7px 7px;
+  }
+  #root .Pack-Snacks {
+    width: 100%;
+  }
+  #root .Gift-List {
+    display: none;
+  }
+  #root .Gift-List-Items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #root .Gift-List-Item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
+  margin: 10px 0;
+  width: 100%;
+}
+[type="range"]::-moz-focus-outer {
+  border: 0;
+}
+[type="range"]:focus {
+  outline: 0;
+}
+[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #2b2b2b;
+}
+[type="range"]:focus::-ms-fill-lower {
+  background: #1e1e1e;
+}
+[type="range"]:focus::-ms-fill-upper {
+  background: #2b2b2b;
+}
+[type="range"]::-webkit-slider-runnable-track {
+  cursor: default;
+  height: 8px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: 100%;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(13, 13, 13, 0.2);
+  background: #1e1e1e;
+  border: 0 solid #656565;
+  border-radius: 0;
+}
+[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(13, 13, 13, 0.2);
+  background: #656565;
+  border: 0 solid #eceff1;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: default;
+  height: 20px;
+  width: 20px;
+  -webkit-appearance: none;
+  margin-top: -6px;
+}
+[type="range"]::-moz-range-track {
+  height: 8px;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: 100%;
+  background: #1e1e1e;
+  border: 0 solid #656565;
+  border-radius: 0;
+  height: 4px;
+}
+[type="range"]::-moz-range-thumb,
+[type="range"]::-moz-range-track {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(13, 13, 13, 0.2);
+  cursor: default;
+}
+[type="range"]::-moz-range-thumb {
+  background: #656565;
+  border: 0 solid #eceff1;
+  border-radius: 10px;
+  box-sizing: border-box;
+  height: 20px;
+  width: 20px;
+}
+[type="range"]::-ms-track {
+  cursor: default;
+  height: 8px;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: 100%;
+  background: transparent;
+  border-color: transparent;
+  border-width: 10px 0;
+  color: transparent;
+}
+[type="range"]::-ms-fill-lower {
+  background: #111;
+}
+[type="range"]::-ms-fill-lower,
+[type="range"]::-ms-fill-upper {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(13, 13, 13, 0.2);
+  border: 0 solid #656565;
+  border-radius: 0;
+}
+[type="range"]::-ms-fill-upper {
+  background: #1e1e1e;
+}
+[type="range"]::-ms-thumb {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(13, 13, 13, 0.2);
+  background: #656565;
+  border: 0 solid #eceff1;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: default;
+  height: 20px;
+  width: 20px;
+  margin-top: 2px;
+}
+[type="range"]:disabled::-moz-range-thumb,
+[type="range"]:disabled::-ms-fill-lower,
+[type="range"]:disabled::-ms-fill-upper,
+[type="range"]:disabled::-ms-thumb,
+[type="range"]:disabled::-webkit-slider-runnable-track,
+[type="range"]:disabled::-webkit-slider-thumb {
+  cursor: not-allowed;
 }
 .Welcome {
   width: 480px;
@@ -22362,60 +23450,60 @@ button:focus-visible {
 }
 @-webkit-keyframes bang {
   to {
-    box-shadow: 66px -333.66667px #b3ff00, 94px -399.66667px #009dff,
-      136px -257.66667px #ff00d0, 7px -401.66667px #ffd000,
-      54px -290.66667px #00f7ff, -67px -106.66667px #4d00ff,
-      -158px -51.66667px #001aff, 1px 83.33333px #f90,
-      -158px -340.66667px #ff009d, -120px -164.66667px #ff006a,
-      -86px -114.66667px #f40, -7px 45.33333px #ff5e00, -102px 69.33333px #f50,
-      -187px -257.66667px #91ff00, -196px -35.66667px #10f,
-      145px -196.66667px #2f0, -118px -17.66667px #3f0,
-      -200px -229.66667px #00ff48, 202px -38.66667px #c0f,
-      -100px -50.66667px #0f2, -232px -229.66667px #2f0,
-      -210px -24.66667px #ff0062, -173px -213.66667px #ff2600,
-      50px -411.66667px #f08, 77px -307.66667px #00e1ff, 85px -50.66667px #df0,
-      -207px -0.66667px #00aeff, 64px -317.66667px #fff700,
-      127px -214.66667px #bf00ff, 247px -264.66667px #eaff00,
-      -169px -12.66667px #00c8ff, 47px 82.33333px #80f,
-      -58px -152.66667px #ff2b00, -155px -73.66667px #6f0,
-      245px -189.66667px #ff001e, 74px -71.66667px #a0f,
-      -24px -193.66667px #00ffe6, -154px -316.66667px #00ff40,
-      -184px -172.66667px #00ff37, -242px 81.33333px #f0a,
-      -230px -239.66667px #0f5, 100px -252.66667px #fb0,
-      -7px -212.66667px #ff002f, -205px -58.66667px #f04,
-      -80px -223.66667px #3f0, 91px 70.33333px #00ff9d,
-      -146px -232.66667px #00ff6f, 235px -285.66667px #f0e,
-      -65px -37.66667px #ff7300, 98px -145.66667px #00f7ff,
-      3px -237.66667px #ff0095;
+    box-shadow: 239px -226.66667px #5e00ff, 23px -340.66667px #04f,
+      -241px -299.66667px #ff6a00, -100px -95.66667px #ff0037,
+      -86px -211.66667px #ff00a2, 123px -52.66667px #00fff7,
+      174px -68.66667px #60f, 145px -389.66667px #b7ff00,
+      -90px -85.66667px #ff00f2, -131px -233.66667px #00b3ff,
+      63px -308.66667px #ff006a, 113px -341.66667px #ff001a,
+      129px -295.66667px #f90, 26px -411.66667px #ffd900,
+      193px -330.66667px #ff00c4, 8px -103.66667px #000dff,
+      12px -314.66667px #59ff00, -42px -164.66667px #00ffb7,
+      145px -93.66667px #ff004d, -156px 18.33333px #002bff,
+      219px -287.66667px #ff0080, 90px -268.66667px #a200ff,
+      158px 51.33333px #00a2ff, -181px -310.66667px #f06, 1px 47.33333px #0ff,
+      -51px -311.66667px #ff8c00, -122px 21.33333px #00bfff,
+      -106px -391.66667px #73ff00, -18px 34.33333px #1eff00,
+      189px -213.66667px #ea00ff, 72px 41.33333px #df0,
+      34px -165.66667px #26ff00, 38px -354.66667px #00aeff,
+      -84px -359.66667px #2b00ff, -39px -99.66667px #ff00e6,
+      88px -301.66667px #cf0, 144px -403.66667px #1e00ff,
+      93px -341.66667px #00ffc8, -15px -84.66667px #ff008c,
+      -211px -77.66667px #8000ff, -161px -26.66667px #0004ff,
+      -75px -190.66667px #48ff00, -186px -31.66667px #09ff00,
+      -96px -61.66667px #01f, 171px -368.66667px #e6ff00, 29px 73.33333px #f04,
+      62px -343.66667px #f0f, -223px -280.66667px #2f00ff,
+      -97px -330.66667px #00a6ff, 203px 35.33333px #006aff,
+      -3px -5.66667px #00fbff;
   }
 }
 @keyframes bang {
   to {
-    box-shadow: 66px -333.66667px #b3ff00, 94px -399.66667px #009dff,
-      136px -257.66667px #ff00d0, 7px -401.66667px #ffd000,
-      54px -290.66667px #00f7ff, -67px -106.66667px #4d00ff,
-      -158px -51.66667px #001aff, 1px 83.33333px #f90,
-      -158px -340.66667px #ff009d, -120px -164.66667px #ff006a,
-      -86px -114.66667px #f40, -7px 45.33333px #ff5e00, -102px 69.33333px #f50,
-      -187px -257.66667px #91ff00, -196px -35.66667px #10f,
-      145px -196.66667px #2f0, -118px -17.66667px #3f0,
-      -200px -229.66667px #00ff48, 202px -38.66667px #c0f,
-      -100px -50.66667px #0f2, -232px -229.66667px #2f0,
-      -210px -24.66667px #ff0062, -173px -213.66667px #ff2600,
-      50px -411.66667px #f08, 77px -307.66667px #00e1ff, 85px -50.66667px #df0,
-      -207px -0.66667px #00aeff, 64px -317.66667px #fff700,
-      127px -214.66667px #bf00ff, 247px -264.66667px #eaff00,
-      -169px -12.66667px #00c8ff, 47px 82.33333px #80f,
-      -58px -152.66667px #ff2b00, -155px -73.66667px #6f0,
-      245px -189.66667px #ff001e, 74px -71.66667px #a0f,
-      -24px -193.66667px #00ffe6, -154px -316.66667px #00ff40,
-      -184px -172.66667px #00ff37, -242px 81.33333px #f0a,
-      -230px -239.66667px #0f5, 100px -252.66667px #fb0,
-      -7px -212.66667px #ff002f, -205px -58.66667px #f04,
-      -80px -223.66667px #3f0, 91px 70.33333px #00ff9d,
-      -146px -232.66667px #00ff6f, 235px -285.66667px #f0e,
-      -65px -37.66667px #ff7300, 98px -145.66667px #00f7ff,
-      3px -237.66667px #ff0095;
+    box-shadow: 239px -226.66667px #5e00ff, 23px -340.66667px #04f,
+      -241px -299.66667px #ff6a00, -100px -95.66667px #ff0037,
+      -86px -211.66667px #ff00a2, 123px -52.66667px #00fff7,
+      174px -68.66667px #60f, 145px -389.66667px #b7ff00,
+      -90px -85.66667px #ff00f2, -131px -233.66667px #00b3ff,
+      63px -308.66667px #ff006a, 113px -341.66667px #ff001a,
+      129px -295.66667px #f90, 26px -411.66667px #ffd900,
+      193px -330.66667px #ff00c4, 8px -103.66667px #000dff,
+      12px -314.66667px #59ff00, -42px -164.66667px #00ffb7,
+      145px -93.66667px #ff004d, -156px 18.33333px #002bff,
+      219px -287.66667px #ff0080, 90px -268.66667px #a200ff,
+      158px 51.33333px #00a2ff, -181px -310.66667px #f06, 1px 47.33333px #0ff,
+      -51px -311.66667px #ff8c00, -122px 21.33333px #00bfff,
+      -106px -391.66667px #73ff00, -18px 34.33333px #1eff00,
+      189px -213.66667px #ea00ff, 72px 41.33333px #df0,
+      34px -165.66667px #26ff00, 38px -354.66667px #00aeff,
+      -84px -359.66667px #2b00ff, -39px -99.66667px #ff00e6,
+      88px -301.66667px #cf0, 144px -403.66667px #1e00ff,
+      93px -341.66667px #00ffc8, -15px -84.66667px #ff008c,
+      -211px -77.66667px #8000ff, -161px -26.66667px #0004ff,
+      -75px -190.66667px #48ff00, -186px -31.66667px #09ff00,
+      -96px -61.66667px #01f, 171px -368.66667px #e6ff00, 29px 73.33333px #f04,
+      62px -343.66667px #f0f, -223px -280.66667px #2f00ff,
+      -97px -330.66667px #00a6ff, 203px 35.33333px #006aff,
+      -3px -5.66667px #00fbff;
   }
 }
 @-webkit-keyframes gravity {
@@ -22785,15 +23873,6 @@ button:focus-visible {
     margin-top: 20px;
   }
 }
-.TeamLogo {
-  border-radius: 50%;
-  height: 44px;
-  width: 44px;
-  font-size: 26px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .LeagueFeed-EventFeed {
   padding: 20px 0;
 }
@@ -22808,4 +23887,343 @@ button:focus-visible {
 }
 .theme-light .LeagueFeed-EventFeed .Events-Dropdown {
   background: #fff;
+}
+.TeamLogo {
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Storefront {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 24px;
+}
+.Storefront-Empty {
+  display: flex;
+}
+.ProductListing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border-radius: 5px;
+}
+.theme-dark .ProductListing {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .ProductListing {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.theme-dark .ProductListing {
+  color: #fff;
+}
+.theme-light .ProductListing {
+  color: #000;
+}
+.theme-dark .ProductListing {
+  border: 1px solid #fff;
+}
+.theme-light .ProductListing {
+  border: 1px solid #000;
+}
+.ProductListing-ItemName {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+}
+.ProductListing-Image {
+  object-fit: cover;
+  max-height: auto;
+  width: 100%;
+  margin: 10px 0;
+}
+.ProductListing-Video {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  width: 100%;
+}
+.ProductListing-Video-Inside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.ProductListing-Blurb,
+.ProductListing-Description {
+  margin-bottom: 10px;
+}
+.ProductListing-Price {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+.theme-dark .ProductListing-Price {
+  color: #ffeb57;
+}
+.theme-light .ProductListing-Price {
+  color: #0014a8;
+}
+.ProductListing :last-child {
+  margin-top: auto;
+  margin-bottom: 5px;
+}
+.Checkout {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  grid-column-gap: 32px;
+}
+.Checkout-Center {
+  text-align: center;
+}
+.Checkout-Center,
+.Checkout-Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Checkout-Form {
+  grid-gap: 20px;
+  gap: 20px;
+}
+.Checkout-Form-Notes {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+  text-align: center;
+}
+.Checkout-Form-Disclaimer {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+.Checkout-Form-Disclaimer .Bulletin-Item-Link {
+  font-size: 18px !important;
+}
+.Checkout-Form-Box {
+  padding: 20px;
+  width: 100%;
+  border-radius: 5px;
+}
+.Checkout-Form-Box-Header {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.Checkout-Form-Box-Header,
+.Checkout-Form-Box-Subheader {
+  font-family: "Lora", "Courier New", monospace, serif;
+  text-align: center;
+}
+.theme-dark .Checkout-Form-Box {
+  background: #0b0b0b;
+}
+.theme-light .Checkout-Form-Box {
+  background: #f2f2f2;
+}
+.Checkout-Summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Checkout-Summary span:nth-child(4n - 3) {
+  text-align: left;
+}
+.Checkout-Summary span:nth-child(4n - 2) {
+  text-align: center;
+}
+.Checkout-Summary span:nth-child(4n - 1) {
+  text-align: right;
+}
+.Checkout-Summary-Header {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+}
+.theme-dark .Checkout-Summary-Header {
+  color: #c4c4c4;
+}
+.theme-light .Checkout-Summary-Header {
+  color: #272727;
+}
+.Checkout-Summary-Divider {
+  border: none;
+  height: 0;
+  width: 100%;
+  margin: 10px 0;
+  grid-column: 1/4;
+}
+.theme-dark .Checkout-Summary-Divider {
+  border: 1px solid #fff;
+}
+.theme-light .Checkout-Summary-Divider {
+  border: 1px solid #000;
+}
+.theme-dark .Checkout-Summary-Divider {
+  color: #fff;
+}
+.theme-light .Checkout-Summary-Divider {
+  color: #000;
+}
+.Checkout-Summary-Price {
+  font-weight: 700;
+}
+.theme-dark .Checkout-Summary-Price {
+  color: #ffeb57;
+}
+.theme-light .Checkout-Summary-Price {
+  color: #0014a8;
+}
+.Checkout-Summary-Total {
+  font-weight: 700;
+}
+.Stripe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.Stripe-Label {
+  display: flex;
+  align-self: start;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.Stripe-Label-Lock {
+  background-color: green;
+  color: #fff;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: 5px;
+  margin: 0 0 2px 10px;
+  padding: 0 5px;
+}
+.Stripe-Card {
+  width: 100%;
+}
+.Stripe-Card input:-webkit-autofill {
+  -webkit-text-fill-color: #e39f48;
+}
+.Stripe-Card .StripeElement {
+  padding: 10px;
+  border-radius: 5px;
+}
+.theme-dark .Stripe-Card .StripeElement {
+  background: #000 !important;
+}
+.theme-light .Stripe-Card .StripeElement {
+  background: #fff !important;
+}
+.theme-dark .Stripe-Card .StripeElement {
+  border: 1px solid #fff;
+}
+.theme-light .Stripe-Card .StripeElement {
+  border: 1px solid #000;
+}
+.Stripe-Card .StripeElement--invalid {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid red !important;
+}
+.theme-dark .Stripe-Card .StripeElement--invalid {
+  background: #000 !important;
+}
+.theme-light .Stripe-Card .StripeElement--invalid {
+  background: #fff !important;
+}
+.theme-dark .Stripe-Card .StripeElement--webkit-autofill {
+  background: #000 !important;
+}
+.theme-light .Stripe-Card .StripeElement--webkit-autofill {
+  background: #fff !important;
+}
+.Stripe-Email {
+  background: transparent;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+.theme-dark .Stripe-Email {
+  background: #000;
+}
+.theme-light .Stripe-Email {
+  background: #fff;
+}
+.theme-dark .Stripe-Email {
+  color: #fff;
+}
+.theme-light .Stripe-Email {
+  color: #000;
+}
+.theme-dark .Stripe-Email {
+  border: 1px solid #fff;
+}
+.theme-light .Stripe-Email {
+  border: 1px solid #000;
+}
+.Stripe-Email:invalid {
+  border: 1px solid red !important;
+}
+.Stripe-Button {
+  padding: 5px 10px;
+  margin-top: 12px;
+  border-radius: 5px;
+}
+.theme-dark .Stripe-Button {
+  background: #fff;
+}
+.theme-light .Stripe-Button {
+  background: #000;
+}
+.theme-dark .Stripe-Button {
+  color: #000;
+}
+.theme-light .Stripe-Button {
+  color: #fff;
+}
+.Stripe-Button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.Stripe-Error {
+  color: red;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 10px;
+}
+@media (max-width: 1080px) {
+  .Checkout,
+  .Storefront {
+    display: flex;
+    flex-direction: column;
+  }
+  .Checkout .ProductListing {
+    margin-bottom: 20px;
+  }
+  .Checkout-Form-Box {
+    padding: 10px;
+  }
+  .Checkout-Center {
+    text-align: center;
+  }
+  .Checkout-Center-Line:not(:first-child) {
+    margin-top: 20px;
+  }
+  .Stripe-Label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .Stripe-Label-Lock {
+    margin: 3px 0;
+  }
 }
