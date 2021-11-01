@@ -32342,7 +32342,7 @@
           c = Object(o.f)(),
           i = Object(r.useContext)(Zp.context),
           A = Object(r.useContext)(cn.context),
-          m = Object(r.useState)(0),
+          m = Object(r.useState)(n.snacks.Votes ? 1 : 0),
           g = Object(l.a)(m, 2),
           h = g[0],
           O = g[1],
