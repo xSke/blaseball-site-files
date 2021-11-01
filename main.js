@@ -18117,8 +18117,8 @@
                             case 0:
                               return (e.next = 2), bo();
                             case 2:
-                              if (void 0 !== (t = e.sent)) {
-                                for (n in ((a = {}), t)) parseInt(n) >= H && (a[n] = t[n]);
+                              if (void 0 !== (t = e.sent).games) {
+                                for (n in ((a = {}), t.games)) parseInt(n) >= H && (a[n] = t.games[n]);
                                 p(a), z(!1), A(!0);
                               }
                             case 4:
@@ -18302,7 +18302,7 @@
                             case 0:
                               return (e.next = 2), bo();
                             case 2:
-                              void 0 !== (t = e.sent) && (p(t), z(!1), A(!0));
+                              void 0 !== (t = e.sent) && (p(t.games), z(!1), A(!0));
                             case 4:
                             case "end":
                               return e.stop();
