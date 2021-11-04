@@ -18117,8 +18117,8 @@
                             case 0:
                               return (e.next = 2), bo();
                             case 2:
-                              if (void 0 !== (t = e.sent).games) {
-                                for (n in ((a = {}), t.games)) parseInt(n) >= H && (a[n] = t.games[n]);
+                              if (void 0 !== (t = e.sent)) {
+                                for (n in ((a = {}), t)) parseInt(n) >= H && (a[n] = t[n]);
                                 p(a), z(!1), A(!0);
                               }
                             case 4:
@@ -18302,7 +18302,7 @@
                             case 0:
                               return (e.next = 2), bo();
                             case 2:
-                              void 0 !== (t = e.sent) && (p(t.games), z(!1), A(!0));
+                              void 0 !== (t = e.sent) && (p(t), z(!1), A(!0));
                             case 4:
                             case "end":
                               return e.stop();
@@ -21737,22 +21737,18 @@
             f = Object(l.a)(O, 2),
             p = f[0],
             x = f[1],
-            w = Object(r.useState)(void 0),
+            w = Object(r.useState)(!0),
             B = Object(l.a)(w, 2),
             E = B[0],
-            y = B[1],
-            C = Object(r.useState)(!0),
-            N = Object(l.a)(C, 2),
-            S = N[0],
-            P = N[1];
-          function D(e, t) {
+            y = B[1];
+          function C(e, t) {
             e === t.sim.day + 1
               ? v({ schedule: t.schedule, sort: 1 })
               : e === t.sim.day + 2 && v({ schedule: t.tomorrowSchedule, sort: 1 });
           }
           if (
             (Object(r.useEffect)(function () {
-              Sg(t, a, "Home.League.WatchLive", "Home.League.WatchLive.Start"), P(!0);
+              Sg(t, a, "Home.League.WatchLive", "Home.League.WatchLive.Start"), y(!0);
             }, []),
             Object(r.useEffect)(
               function () {
@@ -21766,7 +21762,7 @@
                             case 0:
                               return (e.next = 2), bo();
                             case 2:
-                              void 0 !== (t = e.sent) && (x(t.games), y(t.odds), P(!1));
+                              void 0 !== (t = e.sent) && (x(t), y(!1));
                             case 4:
                             case "end":
                               return e.stop();
@@ -21778,13 +21774,13 @@
                     return e.apply(this, arguments);
                   };
                 })();
-                S && e();
+                E && e();
               },
-              [S]
+              [E]
             ),
             Object(r.useEffect)(
               function () {
-                n && n.sim && D(A, n);
+                n && n.sim && C(A, n);
               },
               [n]
             ),
@@ -21793,7 +21789,7 @@
                 n &&
                   n.sim &&
                   (A === n.sim.day + 1 || A === n.sim.day + 2
-                    ? D(A, n)
+                    ? C(A, n)
                     : v(p ? { schedule: p[A - 1], sort: 1 } : { schedule: [], sort: 1 }));
               },
               [A]
@@ -21801,19 +21797,19 @@
             !n.sim)
           )
             return Object(b.jsx)(Wr, {});
-          var Q = Object(b.jsxs)("div", {
+          var N = Object(b.jsxs)("div", {
             className: "League-Body",
             children: ["There are no season games scheduled for Day ", A, "."],
           });
           if (void 0 !== h.schedule && h.schedule.length > 0) {
-            var k,
-              L = void 0;
-            void 0 !== c[A - 1] && (L = c[A - 1]);
-            var R = gg(L, h.schedule);
-            Q = Object(b.jsx)("ul", {
+            var S,
+              P = void 0;
+            void 0 !== c[A - 1] && (P = c[A - 1]);
+            var D = gg(P, h.schedule);
+            N = Object(b.jsx)("ul", {
               children:
                 null ===
-                  (k = (function () {
+                  (S = (function () {
                     var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                       t = arguments.length > 1 ? arguments[1] : void 0;
                     if (!s || !c || void 0 === e) return e;
@@ -21860,32 +21856,22 @@
                         return Math.max(e.homeOdds, e.awayOdds) > Math.max(a.homeOdds, a.awayOdds) ? -1 : 1;
                       })
                     );
-                  })(h.schedule, h.sort)) || void 0 === k
+                  })(h.schedule, h.sort)) || void 0 === S
                   ? void 0
-                  : k.map(function (e, t) {
-                      var a = e;
-                      if (E && E[a.id]) {
-                        var n = E[a.id].find(function (e) {
-                            return e.teamId === a.homeTeam;
-                          }),
-                          r = E[a.id].find(function (e) {
-                            return e.teamId === a.awayTeam;
-                          });
-                        n && (a.homeOdds = n.odds), r && (a.awayOdds = r.odds);
-                      }
-                      return Object(b.jsx)(VO, { index: t, data: a, bet: L, wonBet: R }, t);
+                  : S.map(function (e, t) {
+                      return Object(b.jsx)(VO, { index: t, data: e, bet: P, wonBet: D }, t);
                     }),
             });
           }
-          var M = void 0 !== n && void 0 !== n.sim ? n.sim.season : -1,
-            z = n.postseasons.length > 0;
+          var Q = void 0 !== n && void 0 !== n.sim ? n.sim.season : -1,
+            k = n.postseasons.length > 0;
           return Object(b.jsxs)(b.Fragment, {
             children: [
               Object(b.jsxs)("h2", {
                 className: "League-Header",
                 children: [
                   "Season",
-                  Object(b.jsx)("span", { className: "League-Number", children: M + 1 }),
+                  Object(b.jsx)("span", { className: "League-Number", children: Q + 1 }),
                   "Day",
                   Object(b.jsx)("span", { className: "League-Number", children: A }),
                 ],
@@ -21895,13 +21881,13 @@
                 currentDay: A,
                 setCurrentDay: j,
                 schedule: p,
-                setLoadSchedule: P,
+                setLoadSchedule: y,
                 view: 0,
-                scheduleEnd: 98 + (z ? 1 : 0),
+                scheduleEnd: 98 + (k ? 1 : 0),
               }),
               void 0 === n.schedule || (void 0 === p && A !== n.sim.day + 1 && A !== n.sim.day + 2)
                 ? Object(b.jsx)(Wr, {})
-                : Q,
+                : N,
               Object(b.jsx)(fg, {}),
             ],
           });
