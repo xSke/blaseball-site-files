@@ -9063,6 +9063,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 32px;
   padding: 20px 0 10px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .League-Header-Group {
   white-space: nowrap;
@@ -9072,6 +9073,61 @@ input[type="number"]::-webkit-outer-spin-button {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+.League-Bracket {
+  overflow: hidden;
+}
+.League-Bracket-Header {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Lora", "Courier New", monospace, serif;
+  flex-direction: column;
+  line-height: 1.5em;
+  margin-bottom: 15px;
+}
+.League-Bracket-Header-Big {
+  font-size: 26px;
+}
+.League-Bracket-Button {
+  margin: auto;
+  background: none !important;
+  padding: 0;
+  font-family: "Lora", "Courier New", monospace, serif;
+  display: flex;
+  align-items: center;
+}
+.theme-dark .League-Bracket-Button {
+  color: #c4c4c4;
+}
+.theme-light .League-Bracket-Button {
+  color: #272727;
+}
+.League-Bracket .enter {
+  max-height: 0;
+  margin-top: 0;
+}
+.League-Bracket .exit {
+  max-height: 450px;
+  margin-top: 20px;
+}
+.League-Bracket .exit-done {
+  max-height: 0;
+  margin-top: 0;
+}
+.League-Bracket .exit-active {
+  max-height: 0;
+  transition: max-height 0.3s;
+  margin-top: 20px;
+}
+.League-Bracket .enter-active {
+  transition: max-height 0.3s;
+}
+.League-Bracket .enter-active,
+.League-Bracket .enter-done {
+  max-height: 450px;
+  margin-top: 20px;
 }
 .League-Name {
   padding: 20px 0 0 !important;
@@ -9179,6 +9235,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .theme-light .League-Body {
   color: #272727;
+}
+.League-Body-Alone {
+  margin-bottom: 150px;
 }
 .League-Button {
   display: flex;
@@ -9390,6 +9449,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .League-Schedule-Scroll-Wrapper-Bets {
   margin-bottom: 20px;
 }
+.League-Schedule-Scroll-Wrapper-Postseason {
+  margin-bottom: 35px;
+}
 .League-Schedule-LiveLabel {
   background: red;
   color: #fff;
@@ -9478,11 +9540,113 @@ input[type="number"]::-webkit-outer-spin-button {
 .League-Schedule-Day-Previous {
   opacity: 0.65;
 }
+.PostseasonBracket {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.PostseasonBracket-Big {
+  margin-top: 20px;
+}
+.PostseasonBracket-Body {
+  display: grid;
+  grid-gap: 20px;
+  gap: 20px;
+  align-items: center;
+}
+.PostseasonBracket-Matchup {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  border-radius: 5px;
+}
+.theme-dark .PostseasonBracket-Matchup {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .PostseasonBracket-Matchup {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.PostseasonBracket-Matchup:not(:last-child) {
+  margin-bottom: 20px;
+}
+.PostseasonBracket-Matchup-Single {
+  grid-template-rows: 1fr !important;
+}
+.PostseasonBracket-Matchup-Team {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+  padding: 10px;
+  min-height: 75px;
+  min-width: 105px;
+}
+.PostseasonBracket-Matchup-Team:not(:last-child) {
+  border-bottom: 3px solid;
+}
+.theme-dark .PostseasonBracket-Matchup-Team:not(:last-child) {
+  border-color: #333;
+}
+.theme-light .PostseasonBracket-Matchup-Team:not(:last-child) {
+  border-color: #c3c3c3;
+}
+.PostseasonBracket-Matchup-Team-Emoji {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+}
+.PostseasonBracket-Matchup-Team-Lost {
+  opacity: 0.5;
+}
 @media (max-width: 1080px) {
   .League-Header {
     font-size: 24px;
     height: auto !important;
     margin-bottom: 25px;
+  }
+  .League-Bracket-Header {
+    flex-direction: row;
+    align-items: flex-end;
+    font-size: 18px;
+  }
+  .League-Bracket-Header-Big {
+    font-size: 22px;
+  }
+  .League-Bracket-Header-Small {
+    line-height: 1.4em;
+    margin-left: 10px;
+  }
+  .League-Bracket .enter {
+    max-height: 0;
+    margin-top: 0;
+  }
+  .League-Bracket .exit {
+    max-height: 600px;
+    margin-top: 20px;
+  }
+  .League-Bracket .exit-done {
+    max-height: 0;
+    margin-top: 0;
+  }
+  .League-Bracket .exit-active {
+    max-height: 0;
+    transition: max-height 0.3s;
+    margin-top: 20px;
+  }
+  .League-Bracket .enter-active {
+    transition: max-height 0.3s;
+  }
+  .League-Bracket .enter-active,
+  .League-Bracket .enter-done {
+    max-height: 600px;
+    margin-top: 20px;
   }
   .League-Number {
     margin: 0 10px;
@@ -9511,6 +9675,9 @@ input[type="number"]::-webkit-outer-spin-button {
   .League-Schedule-Scroll-Wrapper {
     margin: 10px 0 55px;
   }
+  .League-Schedule-Scroll-Wrapper-Postseason {
+    margin: 10px 0 45px;
+  }
   .League-Schedule-Wrapper {
     height: 75px;
   }
@@ -9530,1115 +9697,495 @@ input[type="number"]::-webkit-outer-spin-button {
   .League-Schedule-Day-Wrapper {
     height: 100px;
   }
-}
-.Widget-Button {
-  color: #fff;
-  font-weight: 700;
-  font-size: 14px;
-  height: 32px;
-  display: flex;
-  border-radius: 30px;
-  white-space: nowrap;
-  align-items: center;
-  border: 1px solid #fff !important;
-  background-color: #28a745;
-  text-align: center;
-  padding: 0.375rem 0.75rem;
-  line-height: 1.5;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-}
-.Widget-Button:not(:first-child) {
-  border-left: none;
-}
-.Widget-Button:hover {
-  border: 1px solid #fff;
-  background-color: #218838;
-}
-.Widget-Button svg {
-  font-size: 20px;
-}
-.Widget-Display {
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-}
-.theme-dark .Widget-Display {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light .Widget-Display {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.Widget-Display-Visual {
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-.theme-dark .Widget-Display-Visual {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light .Widget-Display-Visual {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.Widget-Display-Visual-Max {
-  position: relative;
-  border: 1px solid #fff;
-}
-.theme-dark .Widget-Display-Visual-Max,
-.Widget-Display-Visual-Max {
-  box-shadow: 0 0 8px 2px #fff;
-}
-.theme-light .Widget-Display-Visual-Max {
-  box-shadow: 0 0 8px 2px #000;
-}
-.theme-dark .Widget-Display-Visual-Max {
-  border-color: #fff;
-}
-.theme-light .Widget-Display-Visual-Max {
-  border-color: #000;
-}
-.Widget-Display-Visual-Max:after {
-  position: absolute;
-  content: "MAXIMUM BLASEBALL";
-  top: -26px;
-  font-weight: 700;
-  font-size: 16px;
-  font-style: italic;
-}
-.theme-dark .Widget-Display-Visual-Max:after {
-  text-shadow: 0 0 2px #fff;
-}
-.theme-light .Widget-Display-Visual-Max:after {
-  text-shadow: 0 0 2px #000;
-}
-.Widget-Display-Body {
-  margin: auto;
-  display: grid;
-  padding: 10px;
-  grid-gap: 10px;
-  gap: 10px;
-  grid-template-columns: 120px auto;
-}
-.Widget-Display-Body .Widget-Bases {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-.Widget-Display-Body .Widget-Outs {
-  grid-column: 2/3;
-  grid-row: 1/2;
-}
-.Widget-Display-Body .Widget-AtBat {
-  justify-content: center;
-  grid-column: 1/3;
-  grid-row: 2/3;
-}
-.Widget-Display-Body .Widget-Log {
-  display: none;
-}
-.Widget-ScoreBacking {
-  display: flex;
-  flex: 1 0 auto;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 10px 0 10px 10px;
-}
-.Widget-StatusBar {
-  display: flex;
-  flex-direction: row;
-  height: 32px;
-  color: #fff;
-}
-.Widget-StatusBar-WithStadium {
-  display: flex;
-  grid-column: 2;
-}
-.Widget-StadiumLabel {
-  margin-right: 5px;
-}
-.Widget-StadiumLabel,
-.Widget-State {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
-}
-.Widget-State {
-  margin-left: 5px;
-}
-.Widget-State-Icon .AttributeIcon {
-  width: 24px;
-  height: 24px;
-  font-size: 18px;
-}
-.Widget-Status {
-  display: flex;
-  padding: 0 8px;
-  height: 100%;
-  border-radius: 5px;
-  align-items: center;
-}
-.theme-dark .Widget-Status--Live {
-  background: hsla(0, 0%, 39.6%, 0.6509803921568628);
-}
-.theme-light .Widget-Status--Live {
-  background: hsla(0, 0%, 72.5%, 0.6509803921568628);
-}
-.theme-dark .Widget-Status--Live {
-  color: #fff;
-}
-.theme-light .Widget-Status--Live {
-  color: #000;
-}
-.Widget-Status--Shame {
-  background: #800878;
-}
-.Widget-ScoreLabel {
-  padding-right: 6px;
-  justify-self: right;
-  display: flex;
-  align-items: center;
-}
-.Widget-ScoreLabel svg {
-  margin-left: 2px;
-}
-.Widget-Bases {
-  display: flex;
-  width: 100px;
-  margin-right: 10px;
-}
-.Widget-Bases.first #base1,
-.Widget-Bases.fourth #base4,
-.Widget-Bases.second #base2,
-.Widget-Bases.third #base3 {
-  fill: #fff;
-}
-.Widget-Bases svg {
-  height: 100%;
-  width: 100%;
-}
-.Widget-Bases-Icon {
-  font-size: 50.31px;
-}
-.Widget-Outs {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex: 1 0 auto;
-}
-.Widget-Outs-Label {
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 700;
-  width: 60px;
-}
-.Widget-Outs-DotList {
-  width: 60px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  margin-left: 10px;
-  height: 18px;
-  overflow: hidden;
-}
-.Widget-Outs-Dots {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 32px;
-  height: 52px;
-}
-.Widget-Outs-Row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 24px;
-}
-.Widget-Log {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  background: #111;
-  border-radius: 5px;
-  overflow: hidden;
-  min-height: 135px;
-}
-.theme-dark .Widget-Log {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light .Widget-Log {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.Widget-Log-PlayCount {
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
-  font-size: 14px;
-  color: #888;
-}
-.Widget-Log-Content {
-  padding: 10px;
-  overflow-y: visible;
-  height: 100%;
-  min-height: 50px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  align-self: stretch;
-  border-radius: 5px;
-  z-index: 1;
-}
-.Widget-Log-Score {
-  font-size: 18px;
-}
-.theme-dark .Widget-Log-Score {
-  color: #ffeb57;
-}
-.theme-light .Widget-Log-Score {
-  color: #0014a8;
-}
-.Widget-Log-Ledger {
-  margin-left: 10px;
-  font-size: 14px;
-  font-style: italic;
-}
-.theme-dark .Widget-Log-Ledger {
-  color: #c4c4c4;
-}
-.theme-light .Widget-Log-Ledger {
-  color: #272727;
-}
-.Widget-Log-Ledger-Tab {
-  margin-left: 10px;
-}
-.Widget-Log-IconButton {
-  font-size: 14px;
-}
-.theme-dark .Widget-Log-IconButton {
-  color: #c4c4c4;
-}
-.theme-light .Widget-Log-IconButton {
-  color: #272727;
-}
-.theme-dark .Widget-Log-IconButton :hover {
-  color: #fff;
-}
-.theme-light .Widget-Log-IconButton :hover {
-  color: #000;
-}
-.Widget-Log-UhOh {
-  text-align: center;
-  font-weight: 700;
-}
-.theme-dark .Widget-Log-UhOh {
-  text-shadow: 2px 2px 1px #000;
-}
-.theme-light .Widget-Log-UhOh {
-  text-shadow: 2px 2px 1px #fff;
-}
-.Widget-Log-UhOh:first-child {
-  margin-top: 30px;
-}
-.Widget-Loading {
-  width: 100%;
-  height: 160px;
-  margin: 0 0 20px;
-}
-.Widget-AtBat {
-  display: flex;
-  flex-direction: column;
-}
-.Widget-PlayerLine {
-  display: flex;
-  line-height: 32px;
-  align-items: center;
-  justify-content: space-between;
-}
-.Widget-PlayerStatusLabel {
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-right: 10px;
-}
-.Widget-PlayerStatusIcon {
-  height: 32px;
-  width: 32px;
-  flex-shrink: 0;
-  margin-right: 10px;
-  display: none;
-  background-size: contain;
-  background-position: 50%;
-  background-repeat: no-repeat;
-}
-.Widget-PlayerStatusIcon--Pitching {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAG0mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjAtMDQtMjdUMDE6NDc6MDItMDc6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmE0M2JhMTNkLTdhMDgtNDY4ZC04NmRjLTczYzU1OWI0OWQzNSIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjc3MDY0YWNmLTY2ODUtZTU0NC1iZjZhLWJlMGYxNjFhZGI5ZSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjExMmQ1MzYzLWY2ODEtNDM3NS1iZmIwLTY4ODNhZjljZjI0NSI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6MTEyZDUzNjMtZjY4MS00Mzc1LWJmYjAtNjg4M2FmOWNmMjQ1IiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAxOjQ3OjAyLTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZjAxMDU0YzgtM2I2OC00MDBjLWFiMmYtYmQwM2QxNmQ0NjdkIiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAxOjUzOjQ1LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YTQzYmExM2QtN2EwOC00NjhkLTg2ZGMtNzNjNTU5YjQ5ZDM1IiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBl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);
-}
-.Widget-PlayerStatusIcon--Batting {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFIGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjAtMDQtMjdUMDE6NDc6MzktMDc6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIwLTA0LTI3VDAxOjUyOjI2LTA3OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTA0LTI3VDAxOjUyOjI2LTA3OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmU4ZDlhZmI3LWIz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);
-}
-.Widget-PlayerLineNameWrapper {
-  font-size: 14px;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  line-height: 20px;
-  padding: 2px 10px;
-  border-radius: 15px;
-}
-.Widget-PlayerLineName-Callout {
-  font-weight: 700;
-}
-.Widget-Header {
-  height: 32px;
-  display: grid;
-  grid-template-columns: auto auto;
-  align-items: center;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  line-height: 1rem;
-  justify-content: space-between;
-}
-.theme-dark .Widget-Header {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light .Widget-Header {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.Widget-Header-Stadium-Name {
-  margin-right: 5px;
-  line-height: 1rem;
-  text-align: center;
-}
-.Widget-Header-Wrapper {
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.theme-dark .Widget-Header-Wrapper {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light .Widget-Header-Wrapper {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.Widget-PlayerAttributes {
-  display: flex;
-  align-items: center;
-}
-.Widget-PlayerAttributes .AttributeIcon {
-  font-size: inherit;
-  margin-right: 5px;
-  padding: 2px;
-}
-.Widget-PlayerAttributes .AttributeIcon:not(:last-child) {
-  margin-right: 5px;
-}
-.Widget-Icons-Wired {
-  color: #511c00;
-  background: #fff;
-}
-.Widget-Icons-Tired,
-.Widget-Icons-Wired {
-  border-radius: 5px;
-  padding: 2px;
-  margin-right: 5px;
-}
-.Widget-Icons-Tired {
-  background: #511c00;
-  color: #fff;
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-.theme-light .GameWidget-Upcoming-Icon--Pitcher,
-.theme-light .Widget-PlayerStatusIcon--Batting,
-.theme-light .Widget-PlayerStatusIcon--Pitching {
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
-}
-.GameWidget {
-  margin-bottom: 80px;
-}
-.GameWidget-WatchLink {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 15px;
-  border-radius: 5px;
-  font-weight: 700;
-  height: 100%;
-}
-.GameWidget-WatchLink--Live {
-  background: green;
-  color: #fff;
-}
-.GameWidget-WatchLink--Live:hover {
-  color: #fff;
-  opacity: 0.8;
-}
-.GameWidget-WatchLink--Live :last-child {
-  margin-left: 5px;
-}
-.GameWidget-WatchLink--Complete {
-  background: red;
-}
-.GameWidget-WatchLink--Upcoming {
-  background: #9a9531;
-}
-.GameWidget-DunDun {
-  height: 170px;
-  width: 180px;
-  position: absolute;
-  bottom: 0;
-  right: 25%;
-}
-.theme-dark .GameWidget-DunDun-DunDun {
-  fill: #000;
-}
-.theme-light .GameWidget-DunDun-DunDun {
-  fill: #fff;
-}
-.GameWidget-Full-Live,
-.GameWidget-Full-Upcoming {
-  display: grid;
-  grid-template-columns: 34% calc(32% - 20px) 34%;
-  grid-gap: 10px;
-  gap: 10px;
-  min-height: 170px;
-}
-.GameWidget-WinChance {
-  margin-left: 20px;
-  margin-right: 10px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  border-radius: 5px;
-  line-height: 1.2em;
-}
-.GameWidget-AllBetInfo {
-  display: flex;
-  flex-direction: row;
-}
-.GameWidget-BetStatus {
-  border: 1px solid;
-  border-radius: 5px;
-  padding: 0 5px;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-}
-.theme-dark .GameWidget-BetStatus {
-  color: #ffeb57;
-}
-.theme-light .GameWidget-BetStatus {
-  color: #0014a8;
-}
-.theme-dark .GameWidget-BetStatus {
-  border-color: #ffeb57;
-}
-.theme-light .GameWidget-BetStatus {
-  border-color: #0014a8;
-}
-.GameWidget-BetStatus svg {
-  width: 18px;
-  height: 18px;
-  margin-left: 5px;
-}
-.GameWidget-BetStatus-Icon {
-  position: relative !important;
-}
-.GameWidget-ScoreBet {
-  display: flex;
-  flex-direction: row;
-  font-family: "Lora", "Courier New", monospace, serif;
-  align-items: center;
-}
-.GameWidget-ScoreBet-Amount {
-  margin-left: 5px;
-}
-.GameWidget-ScoreBet-Bet {
-  padding-left: 10px;
-  padding-right: 5px;
-  border-radius: 20px 0 0 20px;
-  background: #979797;
-}
-.GameWidget-ScoreBet-Bet,
-.GameWidget-ScoreBet-Winnings {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: #fff;
-}
-.GameWidget-ScoreBet-Winnings {
-  padding-right: 10px;
-  border-radius: 0 20px 20px 0;
-  background-color: green;
-  width: 100%;
-}
-.GameWidget-ScoreBet-Triangle {
-  content: "";
-  position: relative;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-color: transparent transparent transparent #979797;
-  border-style: solid;
-  border-width: 12px 0 12px 12px;
-  margin-right: 5px;
-}
-.GameWidget-UpcomingBet {
-  display: flex;
-  flex-direction: row;
-  margin: 0 10px;
-  padding-left: 10px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  align-items: center;
-  border-radius: 20px;
-}
-.theme-dark .GameWidget-UpcomingBet {
-  background: #1f1f1f;
-}
-.theme-light .GameWidget-UpcomingBet {
-  background: #ebebeb;
-}
-.GameWidget-ScoreName {
-  font-size: 24px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.GameWidget-Outcome,
-.GameWidget-ScoreName {
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-}
-.GameWidget-Outcome {
-  flex-direction: column;
-  justify-content: space-between;
-  background: #111;
-  overflow: hidden;
-  padding: 5px;
-}
-.theme-dark .GameWidget-Outcome {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light .GameWidget-Outcome {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.GameWidget-Outcome-Blurb {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 12px;
-  line-height: 24px;
-  text-align: center;
-  height: 100%;
-  padding: 10px 0;
-}
-.GameWidget-Outcome-Callout {
-  font-size: 14px;
-  line-height: 24px;
-  margin-top: -2px;
-  white-space: nowrap;
-}
-.GameWidget-Upcoming-Info {
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.theme-dark .GameWidget-Upcoming-Info {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light .GameWidget-Upcoming-Info {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.GameWidget-Upcoming-InfoBody {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: auto;
-  height: 100%;
-}
-.GameWidget-Upcoming-Bets {
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-  overflow: hidden;
-  padding: 10px 0;
-}
-.theme-dark .GameWidget-Upcoming-Bets {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light .GameWidget-Upcoming-Bets {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.GameWidget-Upcoming-Bets-NoGame {
-  margin: auto;
-  font-family: "Lora", "Courier New", monospace, serif;
-  padding: 0 40px;
-  text-align: center;
-}
-.theme-dark .GameWidget-Upcoming-Bets-NoGame {
-  color: #c4c4c4;
-}
-.theme-light .GameWidget-Upcoming-Bets-NoGame {
-  color: #272727;
-}
-.GameWidget-Upcoming-Odds {
-  display: grid;
-  grid-template-columns: 1fr 0.75fr 1fr;
-  margin: 5px 0 auto;
-}
-.GameWidget-Upcoming-Odds-Subtitle {
-  text-transform: uppercase;
-  font-size: 12px;
-}
-.theme-dark .GameWidget-Upcoming-Odds-Subtitle {
-  color: #c4c4c4;
-}
-.theme-light .GameWidget-Upcoming-Odds-Subtitle {
-  color: #272727;
-}
-.GameWidget-Upcoming-OddsTeam {
-  width: auto;
-  height: auto;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  grid-gap: 5px;
-  gap: 5px;
-  grid-template-rows: 26px 32px auto;
-}
-.GameWidget-Upcoming-Box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  width: auto;
-  height: 100%;
-}
-.theme-dark .GameWidget-Upcoming-Box {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light .GameWidget-Upcoming-Box {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.GameWidget-Upcoming-Weather {
-  display: flex;
-  flex-display: row;
-  align-items: center;
-  justify-content: center;
-}
-.GameWidget-Upcoming-StadiumLabel,
-.GameWidget-Upcoming-WeatherLabel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  padding-right: 10px;
-}
-.GameWidget-Upcoming-Stadium {
-  display: flex;
-  flex-display: row;
-  align-items: center;
-  justify-content: center;
-}
-.GameWidget-Upcoming-Header {
-  width: 100%;
-  height: 32px;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-.theme-dark .GameWidget-Upcoming-Header {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light .GameWidget-Upcoming-Header {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.GameWidget-Upcoming-Body {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 40% 60%;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 5px;
-}
-.GameWidget-Upcoming-Body:last-child {
-  margin-bottom: 10px;
-}
-.GameWidget-Upcoming-Content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.GameWidget-Upcoming-Icon {
-  height: 32px;
-  width: 32px;
-  flex-shrink: 0;
-  margin-right: 10px;
-  display: none;
-  background-size: contain;
-  background-position: 50%;
-  background-repeat: no-repeat;
-}
-.GameWidget-Upcoming-Icon--Pitcher {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAG0mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjAtMDQtMjdUMDE6NDc6MDItMDc6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmE0M2JhMTNkLTdhMDgtNDY4ZC04NmRjLTczYzU1OWI0OWQzNSIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjc3MDY0YWNmLTY2ODUtZTU0NC1iZjZhLWJlMGYxNjFhZGI5ZSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjExMmQ1MzYzLWY2ODEtNDM3NS1iZmIwLTY4ODNhZjljZjI0NSI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6MTEyZDUzNjMtZjY4MS00Mzc1LWJmYjAtNjg4M2FmOWNmMjQ1IiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAxOjQ3OjAyLTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZjAxMDU0YzgtM2I2OC00MDBjLWFiMmYtYmQwM2QxNmQ0NjdkIiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAxOjUzOjQ1LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YTQzYmExM2QtN2EwOC00NjhkLTg2ZGMtNzNjNTU5YjQ5ZDM1IiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBl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);
-}
-.GameWidget-Upcoming-Label {
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: center;
-}
-.GameWidget-Upcoming-Pitchers-Wrapper {
-  font-size: 14px;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  line-height: 20px;
-  padding: 0 8px;
-  margin: 5px 0;
-  border-radius: 5px;
-}
-.GameWidget-Upcoming-Favorites-Team {
-  font-size: 18px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  border-radius: 5px;
-  font-weight: 700;
-}
-.GameWidget-Upcoming-Favorites-Percentage {
-  font-size: 28px;
-}
-.GameWidget-Upcoming-Favorites-Payout,
-.GameWidget-Upcoming-Favorites-Percentage {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-weight: 700;
-  line-height: 1em;
-}
-.GameWidget-Upcoming-Favorites-Payout {
-  font-size: 24px;
-}
-.GameWidget-Upcoming-Favorites-Payout-Icon {
-  width: 22px;
-  height: 22px;
-}
-.GameWidget-Upcoming-BetButtons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-.GameWidget-ScoreLine {
-  display: grid;
-  grid-template-columns: 60px auto 15%;
-  grid-gap: 10px;
-  gap: 10px;
-  width: 100%;
-  align-items: center;
-}
-.GameWidget-ScoreTeamColorBar {
-  width: 50px;
-  height: 50px;
-  font-size: 29px;
-  margin-left: 6px;
-}
-.GameWidget-ScoreNumber,
-.GameWidget-ScoreTeamColorBar {
-  display: flex;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-}
-.GameWidget-ScoreNumber {
-  font-size: 24px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  width: 46px;
-  height: 46px;
-  margin: 0 auto;
-}
-.GameWidget-ScoreTeam {
-  display: flex;
-  flex-direction: column;
-}
-.GameWidget-ScoreTeamInfo {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.GameWidget-ScoreRecord {
-  display: flex;
-  font-size: 16px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  line-height: 1.2em;
-}
-.theme-dark .GameWidget-ScoreRecord {
-  color: #c4c4c4;
-}
-.theme-light .GameWidget-ScoreRecord {
-  color: #272727;
-}
-.theme-dark .st0 {
-  stroke: #fff;
-}
-.theme-light .st0 {
-  stroke: #000;
-}
-.theme-dark .st1 {
-  fill: #fff;
-}
-.theme-light .st1 {
-  fill: #000;
-}
-.theme-dark .st1 {
-  stroke: #fff;
-}
-.theme-light .st1 {
-  stroke: #000;
-}
-@media (max-width: 1080px) {
-  .Widget-Display-Visual {
-    margin: 0;
-    grid-row: 2/4;
-    flex-direction: column;
-    padding: 0 10px 10px;
-    background: transparent;
-  }
-  .Widget-Display-Visual-Max:after {
-    top: auto;
-    bottom: 5px;
-    left: 7px;
-    font-size: 11px;
-  }
-  .Widget-Display-Body {
-    padding: 0;
-    width: 100%;
-  }
-  .Widget-Display-Body .Widget-Bases {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  .Widget-Display-Body .Widget-Outs {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-  .Widget-Display-Body .Widget-AtBat {
-    grid-column: 2/3;
-    grid-row: 1/2;
-  }
-  .Widget-Display-Body .Widget-Log {
-    display: block;
-    min-height: 92px;
-    padding: 5px 10px;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    font-size: 14px;
-  }
-  .theme-dark .Widget-Display-Body .Widget-Log {
-    background: rgba(30, 30, 30, 0.6392156862745098);
-  }
-  .theme-light .Widget-Display-Body .Widget-Log {
-    background: hsla(0, 0%, 89%, 0.7098039215686275);
-  }
-  .Widget-Header {
-    border-radius: 0;
-  }
-  .Widget-Header-Wrapper {
-    grid-column: 1/3;
-  }
-  .Widget-ScoreBacking {
-    padding: 10px 0;
-  }
-  .Widget-ScoreLabel--Series + .GameWidget-ScoreLabel--Score {
-    display: none;
-  }
-  .Widget-AtBat {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-  .Widget-Outs {
-    justify-content: flex-start;
-  }
-  .Widget-Outs-Label {
-    font-size: 12px;
-  }
-  .Widget-Outs-DotList {
-    align-items: flex-start;
-    height: 85%;
-  }
-  .Widget-Outs-Dots {
-    font-size: 24px;
-    line-height: 14px;
-  }
-  .Widget-Log {
-    grid-column: 2/3;
-    grid-row: 3/4;
-  }
-  .Widget-Log,
-  .Widget-Log-Header {
-    display: none;
-  }
-  .Widget-Log-Content {
-    font-size: 14px;
-    margin-bottom: 0;
-  }
-  .Widget-Log-Line {
-    margin: 0;
-  }
-  .Widget-Log-Score {
-    font-size: 16px;
-  }
-  .Widget-PlayerLine {
-    justify-content: flex-start;
-  }
-  .Widget-PlayerLine:first-child {
-    margin-bottom: 5px;
-  }
-  .Widget-PlayerStatusLabel {
-    display: none;
-  }
-  .Widget-PlayerStatusIcon {
-    display: block;
-  }
-  .Widget-PlayerLineName {
-    font-size: 14px;
-    line-height: 16px;
-    padding: 2px 0;
-  }
-  .GameWidget {
-    border-radius: 5px;
-  }
-  .theme-dark .GameWidget {
-    background: #0b0b0b;
-  }
-  .theme-light .GameWidget {
-    background: #f2f2f2;
-  }
-  .GameWidget-UpcomingBet {
-    font-size: 14px;
-  }
-  .GameWidget-Full-Live {
-    grid-template-columns: 100%;
-    grid-gap: 0;
-    gap: 0;
-  }
-  .GameWidget-Full-Upcoming {
-    grid-template-columns: 40% auto;
-  }
-  .GameWidget-Upcoming-Info {
-    grid-column: 1/3;
-    margin-left: 0;
-    background-color: transparent;
-  }
-  .GameWidget-Upcoming-OddsTeam {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .GameWidget-Upcoming-Odds-Subtitle {
-    font-size: 11px;
-  }
-  .GameWidget-Upcoming-Favorites-Team {
-    font-size: 16px;
-  }
-  .GameWidget-Upcoming-Favorites-Percentage {
-    font-size: 24px;
-  }
-  .GameWidget-Upcoming-Favorites-Payout {
-    font-size: 16px;
-  }
-  .GameWidget-Upcoming-Favorites-Payout-Icon {
-    width: 20px;
-    height: 20px;
-  }
-  .GameWidget-Upcoming-Full {
-    grid-column: 1/3;
+  .PostseasonBracket-Body {
+    grid-template-columns: auto auto;
     grid-gap: 10px;
     gap: 10px;
-    grid-template-columns: 100%;
   }
-  .GameWidget-Upcoming-Header {
-    display: none;
+  .PostseasonBracket-Body-Section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    grid-gap: 10px;
+    gap: 10px;
   }
-  .GameWidget-Upcoming-Body {
-    flex-direction: row;
-    width: 100%;
-    justify-content: flex-start;
-  }
-  .GameWidget-Upcoming-Body .GameWidget-PlayerLine + .GameWidget-PlayerLine {
-    margin-left: 10px;
-  }
-  .GameWidget-Upcoming-Label {
-    display: none;
-  }
-  .GameWidget-Upcoming-Icon {
-    display: block;
-    margin-left: 20px;
-  }
-  .GameWidget-Upcoming-Bets {
-    background-color: rgba(30, 30, 30, 0.6392156862745098);
-    display: block;
-    padding: 10px;
-    grid-column: 1/3;
-    border-radius: 0;
-  }
-  .theme-dark .GameWidget-Upcoming-Bets {
-    background: rgba(30, 30, 30, 0.6392156862745098);
-  }
-  .theme-light .GameWidget-Upcoming-Bets {
-    background: hsla(0, 0%, 89%, 0.7098039215686275);
-  }
-  .GameWidget-Upcoming-BetButtons {
-    margin-top: 10px;
+  .PostseasonBracket-Body-Section:not(:last-child),
+  .PostseasonBracket-Matchup:not(:last-child) {
     margin-bottom: 10px;
   }
-  .GameWidget-Outcome {
-    grid-column: 1/3;
-    background-color: rgba(30, 30, 30, 0.6392156862745098);
-    border-radius: 0;
+  .PostseasonBracket-Matchup-Team {
+    min-height: 45px;
+    min-width: 70px;
+    padding: 5px;
+    font-size: 26px;
   }
-  .theme-dark .GameWidget-Outcome {
-    background: rgba(30, 30, 30, 0.6392156862745098);
+  .PostseasonBracket-Matchup-Team-Emoji {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
   }
-  .theme-light .GameWidget-Outcome {
-    background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.LoadingSpinner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.LoadingSpinner-Inline svg {
+  width: 100%;
+}
+.LoadingSpinner-Inline svg,
+.LoadingSpinner svg {
+  -webkit-animation-name: spin;
+  animation-name: spin;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.LoadingSpinner svg {
+  width: 50px;
+  height: 50px;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  .GameWidget-ScoreName {
-    font-size: 18px;
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
   }
-  .GameWidget-ScoreNumber {
-    margin: 0 8px 0 0;
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
   }
-  .GameWidget-ScoreTeamColorBar {
-    width: 35px;
-    height: 35px;
-    font-size: 24px;
-    margin-left: 10px;
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  .GameWidget-ScoreLine {
-    grid-gap: 5px;
-    gap: 5px;
-    margin-bottom: 5px;
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
   }
-  .GameWidget.IsComplete .GameWidget-Log {
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+.PlayoffSetup {
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.PlayoffSetup-Navigation {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+.PlayoffSetup-Navigation,
+.PlayoffSetup-Navigation-Button {
+  display: flex;
+  font-weight: 700;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+}
+.PlayoffSetup-Navigation-Button {
+  font-size: 14px;
+  margin-right: 10px;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 2px solid transparent !important;
+  white-space: nowrap;
+  height: 40px;
+}
+.theme-dark .PlayoffSetup-Navigation-Button {
+  background: #000;
+}
+.theme-light .PlayoffSetup-Navigation-Button {
+  background: #fff;
+}
+.theme-dark .PlayoffSetup-Navigation-Button {
+  color: #fff;
+}
+.theme-light .PlayoffSetup-Navigation-Button {
+  color: #000;
+}
+.PlayoffSetup-Navigation-Button:hover {
+  border: 2px solid;
+}
+.theme-dark .PlayoffSetup-Navigation-Button:hover {
+  color: #fff;
+}
+.theme-light .PlayoffSetup-Navigation-Button:hover {
+  color: #000;
+}
+.theme-dark .PlayoffSetup-Navigation-Button:hover {
+  border-color: #fff;
+}
+.theme-light .PlayoffSetup-Navigation-Button:hover {
+  border-color: #000;
+}
+.theme-dark .PlayoffSetup-Navigation-Button-Current {
+  background: #fff;
+}
+.theme-light .PlayoffSetup-Navigation-Button-Current {
+  background: #000;
+}
+.theme-dark .PlayoffSetup-Navigation-Button-Current {
+  color: #000;
+}
+.theme-light .PlayoffSetup-Navigation-Button-Current {
+  color: #fff;
+}
+.theme-dark .PlayoffSetup-Navigation-Button-Current:hover {
+  color: #000;
+}
+.theme-light .PlayoffSetup-Navigation-Button-Current:hover {
+  color: #fff;
+}
+.PlayoffSetup-Matchup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  padding: 0 10px 0 0;
+}
+.theme-dark .PlayoffSetup-Matchup {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .PlayoffSetup-Matchup {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.PlayoffSetup-Matchup:nth-child(2n) {
+  margin-bottom: 20px;
+}
+.PlayoffSetup-Matchup-Divine {
+  max-width: 450px;
+  margin: 20px 0 30px;
+}
+.PlayoffSetup-Bye {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  margin-left: 10px;
+  font-style: italic;
+}
+.theme-dark .PlayoffSetup-Bye {
+  color: #c4c4c4;
+}
+.theme-light .PlayoffSetup-Bye {
+  color: #272727;
+}
+.PlayoffSetup-Seed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+}
+.PlayoffSetup-MatchupTeam {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  height: 50px;
+}
+.PlayoffSetup-MatchupTeam-Icon {
+  border-radius: 50%;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.PlayoffSetup-MatchupTeam-Mobile {
+  display: none;
+}
+.PlayoffSetup-MatchupTeam-Group {
+  justify-content: space-between;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.PlayoffSetup-MatchupTeam-Group,
+.PlayoffSetup-MatchupTeam-Info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.PlayoffSetup-MatchupTeam-Wins {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 18px;
+}
+.PlayoffSetup-MatchupTeam-WinsComplete {
+  border: 1px solid;
+  border-radius: 50%;
+}
+.theme-dark .PlayoffSetup-MatchupTeam-WinsComplete {
+  border-color: #fff;
+}
+.theme-light .PlayoffSetup-MatchupTeam-WinsComplete {
+  border-color: #000;
+}
+.PlayoffSetup-Header {
+  display: flex;
+  font-weight: 700;
+  padding-top: 10px;
+  align-items: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+.PlayoffSetup-MatchupGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  width: 400px;
+}
+.PlayoffSetup-Body {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  .PlayoffSetup {
+    width: 100%;
+  }
+  .PlayoffSetup-Body {
+    flex-direction: column;
+    width: 100%;
+  }
+  .PlayoffSetup-MatchupGroup {
+    width: 100%;
+    margin: 0;
+  }
+  .PlayoffSetup-MatchupTeam-Mobile {
+    display: block;
+  }
+  .PlayoffSetup-MatchupTeam-Desktop {
     display: none;
+  }
+  .PlayoffSetup-Navigation {
+    flex-wrap: wrap;
+  }
+  .PlayoffSetup-Navigation-Button {
+    padding: 5px 8px;
+    font-size: 12px;
+    height: 32px;
+    margin-right: 0;
+  }
+}
+.TheBook-All {
+  max-width: 550px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.TheBook-Section {
+  margin: 0;
+  padding: 0;
+}
+.TheBook-Serif {
+  font-weight: 700;
+  margin-right: 4px;
+}
+.TheBook-Highlight {
+  padding: 2px 10px;
+  border-radius: 30px;
+  margin: 0 6px;
+  font-weight: 700;
+}
+.theme-dark .TheBook-Highlight {
+  background: #ffeb57;
+}
+.theme-light .TheBook-Highlight {
+  background: #0014a8;
+}
+.theme-dark .TheBook-Highlight {
+  color: #000;
+}
+.theme-light .TheBook-Highlight {
+  color: #fff;
+}
+.TheBook-Header {
+  margin-top: 20px;
+  font-size: 32px;
+  font-weight: 700;
+}
+.TheBook-Subheader,
+.TheBook-Subheader-Sub {
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: 700;
+  width: 100%;
+}
+.TheBook-Subheader-Group,
+.TheBook-Subheader-Sub-Group {
+  white-space: nowrap;
+}
+.TheBook-Glossary-Item {
+  width: 100%;
+  margin: 10px 20px;
+  text-align: left;
+}
+.TheBook-Glossary-Term {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 2rem;
+}
+.TheBook-Glossary-Definition {
+  font-size: 18px;
+  margin-left: 5px;
+}
+.TheBook-Glossary-Definition-List {
+  padding-left: 5px;
+  margin: 0 0 0 20px;
+  font-size: 18px;
+}
+.TheBook-Glossary-Definition-Bullet {
+  display: list-item;
+  list-style-type: decimal;
+}
+.TheBook-New,
+.theme-dark .TheBook-New {
+  color: #3cc28a;
+}
+.theme-light .TheBook-New {
+  color: #1ba069;
+}
+.TheBook-Bad,
+.theme-dark .TheBook-Bad,
+.theme-light .TheBook-Bad {
+  color: red;
+}
+.TheBook-Line {
+  text-align: left;
+  font-size: 18px;
+  width: 100%;
+  display: inline-block;
+}
+.TheBook-Bullet {
+  margin: 10px;
+  font-weight: 700;
+  font-size: 24px;
+}
+.TheBook-SubBullet {
+  padding: 5px 20px;
+}
+.TheBook-RedactGroup {
+  display: inline;
+}
+.TheBook-Redacted {
+  background: hsla(0, 0%, 39.6%, 0.6509803921568628);
+  display: inline-block;
+}
+.TheBook-Redacted:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.TheBook-Redacted:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.TheBook-Navigation {
+  font-size: 24px;
+  flex-wrap: wrap;
+}
+.TheBook-Navigation,
+.TheBook-Navigation-Button {
+  display: flex;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+}
+.TheBook-Navigation-Button {
+  font-size: 14px;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 2px solid transparent !important;
+  white-space: nowrap;
+  height: 40px;
+}
+.theme-dark .TheBook-Navigation-Button {
+  color: #fff;
+}
+.theme-light .TheBook-Navigation-Button {
+  color: #000;
+}
+.theme-dark .TheBook-Navigation-Button {
+  background: #000;
+}
+.theme-light .TheBook-Navigation-Button {
+  background: #fff;
+}
+.TheBook-Navigation-Button:not(:last-child) {
+  margin-right: 10px;
+}
+.TheBook-Navigation-Button:hover {
+  border: 2px solid;
+  color: #fff;
+}
+.theme-dark .TheBook-Navigation-Button:hover {
+  color: #fff;
+}
+.theme-light .TheBook-Navigation-Button:hover {
+  color: #000;
+}
+.theme-dark .TheBook-Navigation-Button:hover {
+  border-color: #fff;
+}
+.theme-light .TheBook-Navigation-Button:hover {
+  border-color: #000;
+}
+.theme-dark .TheBook-Navigation-Button-Current {
+  color: #000;
+}
+.theme-light .TheBook-Navigation-Button-Current {
+  color: #fff;
+}
+.theme-dark .TheBook-Navigation-Button-Current {
+  background: #fff;
+}
+.theme-light .TheBook-Navigation-Button-Current {
+  background: #000;
+}
+.theme-dark .TheBook-Navigation-Button-Current:hover {
+  color: #000;
+}
+.theme-light .TheBook-Navigation-Button-Current:hover {
+  color: #fff;
+}
+.TheBook-Navigation-Button-Content:focus {
+  outline: none;
+}
+.TheBook-List {
+  margin: 20px 0;
+}
+@media (max-width: 1080px) {
+  .TheBook-Header {
+    font-size: 24px;
+  }
+  .TheBook-Subheader {
+    font-size: 18px;
   }
 }
 .AttributeIcon {
@@ -14577,206 +14124,6 @@ input[type="number"]::-webkit-outer-spin-button {
     animation: none;
   }
 }
-.TheBook-All {
-  max-width: 550px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.TheBook-Section {
-  margin: 0;
-  padding: 0;
-}
-.TheBook-Serif {
-  font-weight: 700;
-  margin-right: 4px;
-}
-.TheBook-Highlight {
-  padding: 2px 10px;
-  border-radius: 30px;
-  margin: 0 6px;
-  font-weight: 700;
-}
-.theme-dark .TheBook-Highlight {
-  background: #ffeb57;
-}
-.theme-light .TheBook-Highlight {
-  background: #0014a8;
-}
-.theme-dark .TheBook-Highlight {
-  color: #000;
-}
-.theme-light .TheBook-Highlight {
-  color: #fff;
-}
-.TheBook-Header {
-  margin-top: 20px;
-  font-size: 32px;
-  font-weight: 700;
-}
-.TheBook-Subheader,
-.TheBook-Subheader-Sub {
-  margin: 20px 0;
-  font-size: 24px;
-  font-weight: 700;
-  width: 100%;
-}
-.TheBook-Subheader-Group,
-.TheBook-Subheader-Sub-Group {
-  white-space: nowrap;
-}
-.TheBook-Glossary-Item {
-  width: 100%;
-  margin: 10px 20px;
-  text-align: left;
-}
-.TheBook-Glossary-Term {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 2rem;
-}
-.TheBook-Glossary-Definition {
-  font-size: 18px;
-  margin-left: 5px;
-}
-.TheBook-Glossary-Definition-List {
-  padding-left: 5px;
-  margin: 0 0 0 20px;
-  font-size: 18px;
-}
-.TheBook-Glossary-Definition-Bullet {
-  display: list-item;
-  list-style-type: decimal;
-}
-.TheBook-New,
-.theme-dark .TheBook-New {
-  color: #3cc28a;
-}
-.theme-light .TheBook-New {
-  color: #1ba069;
-}
-.TheBook-Bad,
-.theme-dark .TheBook-Bad,
-.theme-light .TheBook-Bad {
-  color: red;
-}
-.TheBook-Line {
-  text-align: left;
-  font-size: 18px;
-  width: 100%;
-  display: inline-block;
-}
-.TheBook-Bullet {
-  margin: 10px;
-  font-weight: 700;
-  font-size: 24px;
-}
-.TheBook-SubBullet {
-  padding: 5px 20px;
-}
-.TheBook-RedactGroup {
-  display: inline;
-}
-.TheBook-Redacted {
-  background: hsla(0, 0%, 39.6%, 0.6509803921568628);
-  display: inline-block;
-}
-.TheBook-Redacted:first-child {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-.TheBook-Redacted:last-child {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-.TheBook-Navigation {
-  font-size: 24px;
-  flex-wrap: wrap;
-}
-.TheBook-Navigation,
-.TheBook-Navigation-Button {
-  display: flex;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  align-items: center;
-  justify-content: center;
-}
-.TheBook-Navigation-Button {
-  font-size: 14px;
-  padding: 8px 16px;
-  text-decoration: none;
-  border-radius: 20px;
-  border: 2px solid transparent !important;
-  white-space: nowrap;
-  height: 40px;
-}
-.theme-dark .TheBook-Navigation-Button {
-  color: #fff;
-}
-.theme-light .TheBook-Navigation-Button {
-  color: #000;
-}
-.theme-dark .TheBook-Navigation-Button {
-  background: #000;
-}
-.theme-light .TheBook-Navigation-Button {
-  background: #fff;
-}
-.TheBook-Navigation-Button:not(:last-child) {
-  margin-right: 10px;
-}
-.TheBook-Navigation-Button:hover {
-  border: 2px solid;
-  color: #fff;
-}
-.theme-dark .TheBook-Navigation-Button:hover {
-  color: #fff;
-}
-.theme-light .TheBook-Navigation-Button:hover {
-  color: #000;
-}
-.theme-dark .TheBook-Navigation-Button:hover {
-  border-color: #fff;
-}
-.theme-light .TheBook-Navigation-Button:hover {
-  border-color: #000;
-}
-.theme-dark .TheBook-Navigation-Button-Current {
-  color: #000;
-}
-.theme-light .TheBook-Navigation-Button-Current {
-  color: #fff;
-}
-.theme-dark .TheBook-Navigation-Button-Current {
-  background: #fff;
-}
-.theme-light .TheBook-Navigation-Button-Current {
-  background: #000;
-}
-.theme-dark .TheBook-Navigation-Button-Current:hover {
-  color: #000;
-}
-.theme-light .TheBook-Navigation-Button-Current:hover {
-  color: #fff;
-}
-.TheBook-Navigation-Button-Content:focus {
-  outline: none;
-}
-.TheBook-List {
-  margin: 20px 0;
-}
-@media (max-width: 1080px) {
-  .TheBook-Header {
-    font-size: 24px;
-  }
-  .TheBook-Subheader {
-    font-size: 18px;
-  }
-}
 .BigDeal-All {
   margin: 0 auto;
   display: flex;
@@ -15408,59 +14755,6 @@ input[type="number"]::-webkit-outer-spin-button {
     top: 8px;
   }
 }
-.LoadingSpinner {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.LoadingSpinner-Inline svg {
-  width: 100%;
-}
-.LoadingSpinner-Inline svg,
-.LoadingSpinner svg {
-  -webkit-animation-name: spin;
-  animation-name: spin;
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-}
-.LoadingSpinner svg {
-  width: 50px;
-  height: 50px;
-}
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  50% {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-  to {
-    -webkit-transform: rotate(1turn);
-    transform: rotate(1turn);
-  }
-}
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  50% {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-  to {
-    -webkit-transform: rotate(1turn);
-    transform: rotate(1turn);
-  }
-}
 .WeatherIcon {
   display: flex;
   margin: 0;
@@ -15513,6 +14807,1164 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .Weather-Tooltip-Header {
   font-weight: 700;
+}
+.Advertisement-SiteHeader {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 20px 20px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.theme-dark .Advertisement-SiteHeader {
+  color: #c4c4c4;
+}
+.theme-light .Advertisement-SiteHeader {
+  color: #272727;
+}
+.Advertisement-SiteHeader-Line {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Advertisement-SiteHeader-Callout {
+  text-align: center;
+  padding: 0 5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.theme-dark .Advertisement-SiteHeader-Callout {
+  color: #ffeb57;
+}
+.theme-light .Advertisement-SiteHeader-Callout {
+  color: #0014a8;
+}
+.Advertisement-ShopItem {
+  background: url(https://blaseball-configs.s3.us-west-2.amazonaws.com/sponsor_image.jpg);
+  display: flex;
+  background-size: contain;
+  width: 150px;
+  height: 150px;
+}
+@media (max-width: 1080px) {
+  .Advertisement-SiteHeader {
+    display: block;
+    text-align: center;
+  }
+}
+.Widget-Button {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  height: 32px;
+  display: flex;
+  border-radius: 30px;
+  white-space: nowrap;
+  align-items: center;
+  border: 1px solid #fff !important;
+  background-color: #28a745;
+  text-align: center;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+.Widget-Button:not(:first-child) {
+  border-left: none;
+}
+.Widget-Button:hover {
+  border: 1px solid #fff;
+  background-color: #218838;
+}
+.Widget-Button svg {
+  font-size: 20px;
+}
+.Widget-Display {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.theme-dark .Widget-Display {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .Widget-Display {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.Widget-Display-Visual {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.theme-dark .Widget-Display-Visual {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .Widget-Display-Visual {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.Widget-Display-Visual-Max {
+  position: relative;
+  border: 1px solid #fff;
+}
+.theme-dark .Widget-Display-Visual-Max,
+.Widget-Display-Visual-Max {
+  box-shadow: 0 0 8px 2px #fff;
+}
+.theme-light .Widget-Display-Visual-Max {
+  box-shadow: 0 0 8px 2px #000;
+}
+.theme-dark .Widget-Display-Visual-Max {
+  border-color: #fff;
+}
+.theme-light .Widget-Display-Visual-Max {
+  border-color: #000;
+}
+.Widget-Display-Visual-Max:after {
+  position: absolute;
+  content: "MAXIMUM BLASEBALL";
+  top: -26px;
+  font-weight: 700;
+  font-size: 16px;
+  font-style: italic;
+}
+.theme-dark .Widget-Display-Visual-Max:after {
+  text-shadow: 0 0 2px #fff;
+}
+.theme-light .Widget-Display-Visual-Max:after {
+  text-shadow: 0 0 2px #000;
+}
+.Widget-Display-Body {
+  margin: auto;
+  display: grid;
+  padding: 10px;
+  grid-gap: 10px;
+  gap: 10px;
+  grid-template-columns: 120px auto;
+}
+.Widget-Display-Body .Widget-Bases {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.Widget-Display-Body .Widget-Outs {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.Widget-Display-Body .Widget-AtBat {
+  justify-content: center;
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.Widget-Display-Body .Widget-Log {
+  display: none;
+}
+.Widget-ScoreBacking {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px 0 10px 10px;
+}
+.Widget-StatusBar {
+  display: flex;
+  flex-direction: row;
+  height: 32px;
+  color: #fff;
+}
+.Widget-StatusBar-WithStadium {
+  display: flex;
+  grid-column: 2;
+}
+.Widget-StadiumLabel {
+  margin-right: 5px;
+}
+.Widget-StadiumLabel,
+.Widget-State {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.Widget-State {
+  margin-left: 5px;
+}
+.Widget-State-Icon .AttributeIcon {
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+}
+.Widget-Status {
+  display: flex;
+  padding: 0 8px;
+  height: 100%;
+  border-radius: 5px;
+  align-items: center;
+}
+.theme-dark .Widget-Status--Live {
+  background: hsla(0, 0%, 39.6%, 0.6509803921568628);
+}
+.theme-light .Widget-Status--Live {
+  background: hsla(0, 0%, 72.5%, 0.6509803921568628);
+}
+.theme-dark .Widget-Status--Live {
+  color: #fff;
+}
+.theme-light .Widget-Status--Live {
+  color: #000;
+}
+.Widget-Status--Shame {
+  background: #800878;
+}
+.Widget-ScoreLabel {
+  padding-right: 6px;
+  justify-self: right;
+  display: flex;
+  align-items: center;
+}
+.Widget-ScoreLabel svg {
+  margin-left: 2px;
+}
+.Widget-Bases {
+  display: flex;
+  width: 100px;
+  margin-right: 10px;
+}
+.Widget-Bases.first #base1,
+.Widget-Bases.fourth #base4,
+.Widget-Bases.second #base2,
+.Widget-Bases.third #base3 {
+  fill: #fff;
+}
+.Widget-Bases svg {
+  height: 100%;
+  width: 100%;
+}
+.Widget-Bases-Icon {
+  font-size: 50.31px;
+}
+.Widget-Outs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 auto;
+}
+.Widget-Outs-Label {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 60px;
+}
+.Widget-Outs-DotList {
+  width: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 10px;
+  height: 18px;
+  overflow: hidden;
+}
+.Widget-Outs-Dots {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 32px;
+  height: 52px;
+}
+.Widget-Outs-Row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 24px;
+}
+.Widget-Log {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #111;
+  border-radius: 5px;
+  overflow: hidden;
+  min-height: 135px;
+}
+.theme-dark .Widget-Log {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .Widget-Log {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.Widget-Log-PlayCount {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 14px;
+  color: #888;
+}
+.Widget-Log-Content {
+  padding: 10px;
+  overflow-y: visible;
+  height: 100%;
+  min-height: 50px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  align-self: stretch;
+  border-radius: 5px;
+  z-index: 1;
+}
+.Widget-Log-Score {
+  font-size: 18px;
+}
+.theme-dark .Widget-Log-Score {
+  color: #ffeb57;
+}
+.theme-light .Widget-Log-Score {
+  color: #0014a8;
+}
+.Widget-Log-Ledger {
+  margin-left: 10px;
+  font-size: 14px;
+  font-style: italic;
+}
+.theme-dark .Widget-Log-Ledger {
+  color: #c4c4c4;
+}
+.theme-light .Widget-Log-Ledger {
+  color: #272727;
+}
+.Widget-Log-Ledger-Tab {
+  margin-left: 10px;
+}
+.Widget-Log-IconButton {
+  font-size: 14px;
+}
+.theme-dark .Widget-Log-IconButton {
+  color: #c4c4c4;
+}
+.theme-light .Widget-Log-IconButton {
+  color: #272727;
+}
+.theme-dark .Widget-Log-IconButton :hover {
+  color: #fff;
+}
+.theme-light .Widget-Log-IconButton :hover {
+  color: #000;
+}
+.Widget-Log-UhOh {
+  text-align: center;
+  font-weight: 700;
+}
+.theme-dark .Widget-Log-UhOh {
+  text-shadow: 2px 2px 1px #000;
+}
+.theme-light .Widget-Log-UhOh {
+  text-shadow: 2px 2px 1px #fff;
+}
+.Widget-Log-UhOh:first-child {
+  margin-top: 30px;
+}
+.Widget-Loading {
+  width: 100%;
+  height: 160px;
+  margin: 0 0 20px;
+}
+.Widget-AtBat {
+  display: flex;
+  flex-direction: column;
+}
+.Widget-PlayerLine {
+  display: flex;
+  line-height: 32px;
+  align-items: center;
+  justify-content: space-between;
+}
+.Widget-PlayerStatusLabel {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.Widget-PlayerStatusIcon {
+  height: 32px;
+  width: 32px;
+  flex-shrink: 0;
+  margin-right: 10px;
+  display: none;
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.Widget-PlayerStatusIcon--Pitching {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAG0mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjAtMDQtMjdUMDE6NDc6MDItMDc6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmE0M2JhMTNkLTdhMDgtNDY4ZC04NmRjLTczYzU1OWI0OWQzNSIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjc3MDY0YWNmLTY2ODUtZTU0NC1iZjZhLWJlMGYxNjFhZGI5ZSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjExMmQ1MzYzLWY2ODEtNDM3NS1iZmIwLTY4ODNhZjljZjI0NSI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6MTEyZDUzNjMtZjY4MS00Mzc1LWJmYjAtNjg4M2FmOWNmMjQ1IiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAxOjQ3OjAyLTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZjAxMDU0YzgtM2I2OC00MDBjLWFiMmYtYmQwM2QxNmQ0NjdkIiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAxOjUzOjQ1LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YTQzYmExM2QtN2EwOC00NjhkLTg2ZGMtNzNjNTU5YjQ5ZDM1IiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5OhTfGAAAO/0lEQVR4nO2aeZRU1Z3Hv797X61d3dVLVe8bDd1AExBXFI2AHNQwMkYdFQI6jtuoKGeMkxnDmBHH6EzOeHLGaGJGE4/nqIxomEl0XKICwgACNovBwLD1Br1VV3d1VVdXvVf17v3NH9UNbdQYih56MvI9p86pelX33e/vU7+7vXuJmfFVlhhvA+OtMwDG28B46wyA8TYw3joDYLwNjLfOABhvA+OtMwDG28B46ysPwMimELM56r0AM33qeyINsMx8j+HFFqMGRBcAmA3wNIDKAeQNF4kB3AnQbwFsBWMHiNsy5QgAg6QGawkwAAIAApEGkT1yAUTuk46FslkNniSA8wEsBrAMEMVSZq4rlT5uHGBI6chc1wpg7gH4ZQBrwLTjjxXARQAvZ9BSKTOJZtvWYHdX185UKv127YSJJrMe/r1AS/Nht8OQl5eXV55nOF1+AFDKBhgvA/xjkvrD/w0AWTWBL5GDWfwdET0ECCmFiIZDXRsty3y2rKKq9ZM9TQf7BwbTdRProVQGgBACH27ZiLwczxOV1yye3N5ypNbtdt1eXFZ5mWa9FODFzHgUwOMA0mNpdqwBVAJ4UUrHXACwzMTaXU07nvH5PFvAZFZUTYDb40VOWn+mYE6ODx6vWwtp7O8Nde1n5nUff/zxBV+/dO69bm/OjSC5Sil7LoBlADrGyvBYjgLlAL1JJObG44PJXR9tXRGPRZYOxmLriITpdLr+4Bu5XG4QiVQsGt0c6Q8t3bJx3T1DQ/E4Ec0F4XUAZWNleqwAlAN4H0QzhJBb21tbrnzxheefKgoGrby8PBiGAdu2AYwaFT5HI/1ROp0GM8Obk4Oyyir13HM/fWbHti2XCCF3g+gcAO8P13nKGgsABkCvSumYKoXcGunvXbF7V9Omm2+5DQf278OWzZsR6ulBZVUV0ikTxJkAf1epVAoMhp22UD95Knw+H0Ldx/Dem29g2uTJKCjITwFwSiEhpdEI4CUA8lTNZwmAcGIIo4eJ6OJkMmGFe7u+lxiM7SSi+slTGr2R/j50dHQgMTSE3Lw82GkLZRWVKCwohFI2iAggArNGUSCA+oZGCEHw5eXD5XIhHA5h/77fonHatODEiQ0/BjCtN9TdmkgMJYloHoCHT3ihLzI79gBYi+GXPBcQDwgh4xvXvbfy12+9ub6iZuLd37rpL/YMDsbu1sqGy+U83gTS6TQqqqox66ILEY/1I2UlwcpG2krisssWoKa2DnbaBisb0pDo6uxBOBKjP7l2yW25/oJ5AHb+x7+/OuO9d9/+eyGEAsS3tTbO1lpC6+ySITsATGAmYtB3icgDYEMyMfjTUCiE//5kz+F0OjXkLwzc1zBlRo3WgGkmc0fKaqWglAKRgJVMQtuZCZFt21BKAQCICFrr8vjQIFwuTx2AeyzL7N+xZeN3Oo4eHUwlE88B+JCIcgCsBAO/p2v5vcpqIqQyHdrZIOyS0ohu3vDu9c2HDrxXFCzGoUMH8GdLbn62sqr2DgBrurs64XQ58h2SVjFj2+9UD7fbjc9J3yuYxPd7erp8HneOO1hcXBsOda3euun9pclkCoePHMa06Wct+OZ1i99RyhZgnANgtzROflTPbh5ADAA3E0kkE/Ftfb3d63Pz8lBbV0dJy5rucrmrmJm1VjeWlpVD2akNiaG4lvKzCTcyGRotZk5KacSrqyecN/wZbo93cvWESd8IFBatH4hGrKOtRzbEB6ObvTm5lzL0MgB7kEUeZJUBWqWrGWiS0hHc95ud14R7un5ZM7EelpmcNmnK9NVCyBkAoLXCYDTy/GBsYGUgWNIzkuKjJcRn266UBjramwvzi4I/8BcGbheUAaeUHWo5uG9+KpX65JO9u1AzoX7prIvnvaSU3QngIimN9pONJbvVIOgiIgpqbQ9VVdfuLykth8fjgda6OzbQ/3wiHg0KwxksLa++0zAMK78w0COEBInP63I+p/cmIFBS1i+kTAsiHNi392ddXcc+rq6usTyenDZ/fiEumbMAHq9nr1Z2iojKmfUsAKcHAIDzhZCIDvQdGegLtQtpIJ02UVpR1Rft73+yrbUFk+qnnAPgTghj+j8++ghKSoow86yzkDIz4z1rDcNhoG5SA6TDALQGSQmHlHj7rTfR0tyGv33o4UaAYJqJF9qaD24pDhahpLgU7e0tUFoj3W0eqqhWHxeXVJyvFF8I4LXTBWAqALS0NO/45S/WJF1uN4pLSjBr1mx0dXZi/br1uG/FpF4AEaVUFUF5DSkS/eFesOITAJwOpFIWDNZgrSGkREoreD1uCLDPttM1zMqcVN/Q0dPdgaNtR5GyNHbvbsKRwwcQi8WSy265c3txScX5AKZkE0i2ACYAQCjUu2vDB5tQVl6OstIwDuw/gFQqjba2Vny0Y6u6unpCv9ebM/Ev77r7T/fv2/tWXzgcy83JhR4O2DAckFJCSgkmgpAS0cGYbGxsLLt0zvx5Xm9OLUAD0Uj/16IDkdChQy0JrXfC58vBomtuBADUTqjbrLW+F8CkbALJbhhUdjuAKsuyViQSiacsM4nXVr+I2OAgHA5H/rU3LPlRZWXVFW6PJyCEEERCJ4biHXt2frj8WFvrG26Pd7gJONAwtRGGwwHWGray4fP57wgUlz3idLrKmDWYGUQCkf7w1pde+PnVqVQq7HQ6seKBB0fsnKdU+iOAwlIawZON5ZSWw6w12bYN07LgL8hH3cQ6WJblListDeT4cou0VqBMHyeEEAbrUbSJwMyIRSOZDGBGOp2GVjxUUBhUcLqYCKQ1oJWdjMVig5FIRNnpNGwyELcUfC4JBopH/pdsYsgWQFxKAxvWr7NWPvgdFAWDqK2pwTkzZ8KQovtXr7187Zz5l8+omlD/aiqVrgl3ddzQ1nJ4Q/ORQ+GCgkJofWLs11qDhmG4XC4ca29ZHY/0ryurqp4TLKta43Q6w/v37b72X5955r8sKw2nx4splYUYat6OBABfaR3c/mIw68HTCaAFwNTy8vJzrlp4JYpLShGNRfHOO+/g/gf+GtNnzDTdLmcLgPyhoXjr9x97dO3UyQ26uroStm2DmY8vfTNpngGgtYbfn4ftO5p6Dq1es/aRx3/Q7HQ6y0rKKtvvuu/bGOgPo/3YMUz1DiDU9DqikT7UL7jV5S0ohVK683QC2A9gYV1d3azly1e4TMuynnjin2GaSVRV1+SUlFUIO2VNJhJ+KWVTyrZ1JDqAGfnTYZrWcQBSSrhcbojhJiCFhNfrQXwoge7ePqW1OgBQnb+gaGZhoDShVSrlbNoWzfNNQq5vHoKpJHyByluHPe06nQA+0lohz58/yeV01Hb3dB2oq6tDUVFhrsPh/CGAWQzu0lrZHo/n6L88+TT6wyGI0RMhZpAQyM3zZyZIo7qHv3lwJR79h1XoC/e2FxQWQSu9SkqeEIvG/tNMJpb1QiI3kIuCYHnQcOeeq7UCgC2nDwDzhwz0SmkEDx3c39DdefTAkiVL4HQ4ZG5hUACYLgzHdGaGw3BUKUMtZq3fY6K+0QDwBSOQZVk1Vy68amGwpGQ+s4aQxkyAupl1MwsH3IZG3+EdSBVXBUvrL3AolY4BtD2bULIcBtMA8EMieb9pDr39q7WvXDUQGdDTGqdhxtnn5iul7skvKn4MyCxtlbKRMs0lIHrlU5UDMBwOgOhTyxit9W1uj/dnAGDbaRARBqORe5Km+XzH/u2WL9EG6S1A9ewbnnK4vMuZ9Y8A/NXI4/eTUZYZQADwIkPf7/Xmzg4ES+dEo9ENGzdtwrp16wfuundFnpQGlJ1+Mj4YbQWosrvr6C4pTlTHzCBB8PsLQII+lQ3M2KWV/WQyEf+Nv6DoLGm4VhBr/4Etb1heFQU8Aq68YIPL45uvlE1gvJBVHFkDyGgPgLXMfN2CKxfdn/hFbFso1JecNfuScwuKipemLPNof7jnJy6356CQEmYyCSmN4T0NQjqdAgC43W4YhgEiMWpk4N3MvNu2FQYi/Y3+gqLrcvLyb6xqmPnK4N5ftzrz6h1V5y+6RbOeCuDVYS9ZKctnggyAGcyPM+sEgHkut29pTU21a+Gib37P7XZXmsn4T0Jdxw6SAAzDON4BZnp8jcJAMWonTkZRoBRutxeME0tjIpGZHAmBcF/vgUQy+XPD4Zo58azZd+QHioXDlXMpAcuY2STwPxExiLJ7JJTd1pi2joNglo8C4qFUOjUUjw92BwLF1eHeng/Wvvpv1/f3haNV1bVYeNUidHceg9vtRcexNiRNC5cvvPrE/ZjR/tGbYMOL3OqvwU6Z8Pl86N/7NqxYCO7cQl/ZhYufEIZrqTnQ0+Xw5BYIhysAqMeI+KHjwdAfvvcwouwygHj4BQC8ipk3uN2enECgeCKA5q6Oo/e2tbZEy8orYJomerq7ABDqGqbCTqdhWhmAStnHnw4rMw6diqMgUAyRDGMo3I50MglPfjGGelriXdtee5q18nnyS+qlyxtg5g8ArMLxB4LZZcBY7AsoADcpZe9TygYAy7TSOZGBCG65/W5UV9fAMk9spgohPj0fGBYJAzSqk9RpC66CChSdtxiRnhASvUddBNZaa2hl7wPwLQD2qZofq52hDgDzAW7SWs2Y0jht081/fuvyUGe7kUwksr6pbSVgRjpQM2fJNxqu+e7rDCGY1S4ACwB0jYXxsdwb7AbjambekJub57vokrlP+wsDq/P8/kuZ2ZWyrC+/AzKtSqUtMGs4vP6pXn9wVdm0r7/IQDlr/S6ARQCymvd/nsZ6d7gTwBVKp1cSxEMOp/v6eQuuvDzU3bnBMs1ntbLbzGTiYGIo8ZnUtc0hgAGl7KA3v6SQnO47cgvLL9daT9daKWa1CqDHADrltB+tUz8goQWYReavYwaIQEKBtbwQwHIAy44fkEhZsZ7uzl0pW22sqa1rYtatAKqJhBjsbnZAGDd5C8umO5yuXAZKtLJB4JcAehqktrMmgE4kbeaAhB71eTxOiHwxgJFfXADgBoCWgqhUii87ImMDzAMAngdoDYF3AASQwh8rgJGqagA+D6CLATQCqAMQBJACEEWm+ewGeDNATQC3AQQaORPzfwnA/yd95c8JngEw3gbGW2cAjLeB8dYZAONtYLx1BsB4GxhvnQEw3gbGW195AP8DrnZWzhiq6qgAAAAASUVORK5CYII=);
+}
+.Widget-PlayerStatusIcon--Batting {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFIGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjAtMDQtMjdUMDE6NDc6MzktMDc6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIwLTA0LTI3VDAxOjUyOjI2LTA3OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTA0LTI3VDAxOjUyOjI2LTA3OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmU4ZDlhZmI3LWIz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);
+}
+.Widget-PlayerLineNameWrapper {
+  font-size: 14px;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  line-height: 20px;
+  padding: 2px 10px;
+  border-radius: 15px;
+}
+.Widget-PlayerLineName-Callout {
+  font-weight: 700;
+}
+.Widget-Header {
+  height: 32px;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1rem;
+  justify-content: space-between;
+}
+.theme-dark .Widget-Header {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .Widget-Header {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.Widget-Header-Stadium-Name {
+  margin-right: 5px;
+  line-height: 1rem;
+  text-align: center;
+}
+.Widget-Header-Wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.theme-dark .Widget-Header-Wrapper {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .Widget-Header-Wrapper {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.Widget-PlayerAttributes {
+  display: flex;
+  align-items: center;
+}
+.Widget-PlayerAttributes .AttributeIcon {
+  font-size: inherit;
+  margin-right: 5px;
+  padding: 2px;
+}
+.Widget-PlayerAttributes .AttributeIcon:not(:last-child) {
+  margin-right: 5px;
+}
+.Widget-Icons-Wired {
+  color: #511c00;
+  background: #fff;
+}
+.Widget-Icons-Tired,
+.Widget-Icons-Wired {
+  border-radius: 5px;
+  padding: 2px;
+  margin-right: 5px;
+}
+.Widget-Icons-Tired {
+  background: #511c00;
+  color: #fff;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.theme-light .GameWidget-Upcoming-Icon--Pitcher,
+.theme-light .Widget-PlayerStatusIcon--Batting,
+.theme-light .Widget-PlayerStatusIcon--Pitching {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+.GameWidget {
+  margin-bottom: 80px;
+}
+.GameWidget-WatchLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  border-radius: 5px;
+  font-weight: 700;
+  height: 100%;
+}
+.GameWidget-WatchLink--Live {
+  background: green;
+  color: #fff;
+}
+.GameWidget-WatchLink--Live:hover {
+  color: #fff;
+  opacity: 0.8;
+}
+.GameWidget-WatchLink--Live :last-child {
+  margin-left: 5px;
+}
+.GameWidget-WatchLink--Complete {
+  background: red;
+}
+.GameWidget-WatchLink--Upcoming {
+  background: #9a9531;
+}
+.GameWidget-DunDun {
+  height: 170px;
+  width: 180px;
+  position: absolute;
+  bottom: 0;
+  right: 25%;
+}
+.theme-dark .GameWidget-DunDun-DunDun {
+  fill: #000;
+}
+.theme-light .GameWidget-DunDun-DunDun {
+  fill: #fff;
+}
+.GameWidget-Full-Live,
+.GameWidget-Full-Upcoming {
+  display: grid;
+  grid-template-columns: 34% calc(32% - 20px) 34%;
+  grid-gap: 10px;
+  gap: 10px;
+  min-height: 170px;
+}
+.GameWidget-WinChance {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  border-radius: 5px;
+  line-height: 1.2em;
+}
+.GameWidget-AllBetInfo {
+  display: flex;
+  flex-direction: row;
+}
+.GameWidget-BetStatus {
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 0 5px;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.theme-dark .GameWidget-BetStatus {
+  color: #ffeb57;
+}
+.theme-light .GameWidget-BetStatus {
+  color: #0014a8;
+}
+.theme-dark .GameWidget-BetStatus {
+  border-color: #ffeb57;
+}
+.theme-light .GameWidget-BetStatus {
+  border-color: #0014a8;
+}
+.GameWidget-BetStatus svg {
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+}
+.GameWidget-BetStatus-Icon {
+  position: relative !important;
+}
+.GameWidget-ScoreBet {
+  display: flex;
+  flex-direction: row;
+  font-family: "Lora", "Courier New", monospace, serif;
+  align-items: center;
+}
+.GameWidget-ScoreBet-Amount {
+  margin-left: 5px;
+}
+.GameWidget-ScoreBet-Bet {
+  padding-left: 10px;
+  padding-right: 5px;
+  border-radius: 20px 0 0 20px;
+  background: #979797;
+}
+.GameWidget-ScoreBet-Bet,
+.GameWidget-ScoreBet-Winnings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+}
+.GameWidget-ScoreBet-Winnings {
+  padding-right: 10px;
+  border-radius: 0 20px 20px 0;
+  background-color: green;
+  width: 100%;
+}
+.GameWidget-ScoreBet-Triangle {
+  content: "";
+  position: relative;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-color: transparent transparent transparent #979797;
+  border-style: solid;
+  border-width: 12px 0 12px 12px;
+  margin-right: 5px;
+}
+.GameWidget-UpcomingBet {
+  display: flex;
+  flex-direction: row;
+  margin: 0 10px;
+  padding-left: 10px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  align-items: center;
+  border-radius: 20px;
+}
+.theme-dark .GameWidget-UpcomingBet {
+  background: #1f1f1f;
+}
+.theme-light .GameWidget-UpcomingBet {
+  background: #ebebeb;
+}
+.GameWidget-ScoreName {
+  font-size: 24px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.GameWidget-Outcome,
+.GameWidget-ScoreName {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.GameWidget-Outcome {
+  flex-direction: column;
+  justify-content: space-between;
+  background: #111;
+  overflow: hidden;
+  padding: 5px;
+}
+.theme-dark .GameWidget-Outcome {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .GameWidget-Outcome {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.GameWidget-Outcome-Blurb {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  height: 100%;
+  padding: 10px 0;
+}
+.GameWidget-Outcome-Callout {
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: -2px;
+  white-space: nowrap;
+}
+.GameWidget-Upcoming-Info {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.theme-dark .GameWidget-Upcoming-Info {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .GameWidget-Upcoming-Info {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.GameWidget-Upcoming-InfoBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  height: 100%;
+}
+.GameWidget-Upcoming-Bets {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 10px 0;
+}
+.theme-dark .GameWidget-Upcoming-Bets {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .GameWidget-Upcoming-Bets {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.GameWidget-Upcoming-Bets-NoGame {
+  margin: auto;
+  font-family: "Lora", "Courier New", monospace, serif;
+  padding: 0 40px;
+  text-align: center;
+}
+.theme-dark .GameWidget-Upcoming-Bets-NoGame {
+  color: #c4c4c4;
+}
+.theme-light .GameWidget-Upcoming-Bets-NoGame {
+  color: #272727;
+}
+.GameWidget-Upcoming-Odds {
+  display: grid;
+  grid-template-columns: 1fr 0.75fr 1fr;
+  margin: 5px 0 auto;
+}
+.GameWidget-Upcoming-Odds-Subtitle {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.theme-dark .GameWidget-Upcoming-Odds-Subtitle {
+  color: #c4c4c4;
+}
+.theme-light .GameWidget-Upcoming-Odds-Subtitle {
+  color: #272727;
+}
+.GameWidget-Upcoming-OddsTeam {
+  width: auto;
+  height: auto;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 5px;
+  gap: 5px;
+  grid-template-rows: 26px 32px auto;
+}
+.GameWidget-Upcoming-Box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: auto;
+  height: 100%;
+}
+.theme-dark .GameWidget-Upcoming-Box {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .GameWidget-Upcoming-Box {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.GameWidget-Upcoming-Weather {
+  display: flex;
+  flex-display: row;
+  align-items: center;
+  justify-content: center;
+}
+.GameWidget-Upcoming-StadiumLabel,
+.GameWidget-Upcoming-WeatherLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  padding-right: 10px;
+}
+.GameWidget-Upcoming-Stadium {
+  display: flex;
+  flex-display: row;
+  align-items: center;
+  justify-content: center;
+}
+.GameWidget-Upcoming-Header {
+  width: 100%;
+  height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.theme-dark .GameWidget-Upcoming-Header {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .GameWidget-Upcoming-Header {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.GameWidget-Upcoming-Body {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.GameWidget-Upcoming-Body:last-child {
+  margin-bottom: 10px;
+}
+.GameWidget-Upcoming-Content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.GameWidget-Upcoming-Icon {
+  height: 32px;
+  width: 32px;
+  flex-shrink: 0;
+  margin-right: 10px;
+  display: none;
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.GameWidget-Upcoming-Icon--Pitcher {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAG0mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjAtMDQtMjdUMDE6NDc6MDItMDc6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmE0M2JhMTNkLTdhMDgtNDY4ZC04NmRjLTczYzU1OWI0OWQzNSIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjc3MDY0YWNmLTY2ODUtZTU0NC1iZjZhLWJlMGYxNjFhZGI5ZSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjExMmQ1MzYzLWY2ODEtNDM3NS1iZmIwLTY4ODNhZjljZjI0NSI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6MTEyZDUzNjMtZjY4MS00Mzc1LWJmYjAtNjg4M2FmOWNmMjQ1IiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAxOjQ3OjAyLTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZjAxMDU0YzgtM2I2OC00MDBjLWFiMmYtYmQwM2QxNmQ0NjdkIiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAxOjUzOjQ1LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YTQzYmExM2QtN2EwOC00NjhkLTg2ZGMtNzNjNTU5YjQ5ZDM1IiBzdEV2dDp3aGVuPSIyMDIwLTA0LTI3VDAyOjEyOjA5LTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBl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);
+}
+.GameWidget-Upcoming-Label {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+.GameWidget-Upcoming-Pitchers-Wrapper {
+  font-size: 14px;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 20px;
+  padding: 0 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+.GameWidget-Upcoming-Favorites-Team {
+  font-size: 18px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.GameWidget-Upcoming-Favorites-Percentage {
+  font-size: 28px;
+}
+.GameWidget-Upcoming-Favorites-Payout,
+.GameWidget-Upcoming-Favorites-Percentage {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+  line-height: 1em;
+}
+.GameWidget-Upcoming-Favorites-Payout {
+  font-size: 24px;
+}
+.GameWidget-Upcoming-Favorites-Payout-Icon {
+  width: 22px;
+  height: 22px;
+}
+.GameWidget-Upcoming-BetButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.GameWidget-ScoreLine {
+  display: grid;
+  grid-template-columns: 60px auto 15%;
+  grid-gap: 10px;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+.GameWidget-ScoreTeamColorBar {
+  width: 50px;
+  height: 50px;
+  font-size: 29px;
+  margin-left: 6px;
+}
+.GameWidget-ScoreNumber,
+.GameWidget-ScoreTeamColorBar {
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.GameWidget-ScoreNumber {
+  font-size: 24px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  width: 46px;
+  height: 46px;
+  margin: 0 auto;
+}
+.GameWidget-ScoreTeam {
+  display: flex;
+  flex-direction: column;
+}
+.GameWidget-ScoreTeamInfo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.GameWidget-ScoreRecord {
+  display: flex;
+  font-size: 16px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  line-height: 1.2em;
+}
+.theme-dark .GameWidget-ScoreRecord {
+  color: #c4c4c4;
+}
+.theme-light .GameWidget-ScoreRecord {
+  color: #272727;
+}
+.theme-dark .st0 {
+  stroke: #fff;
+}
+.theme-light .st0 {
+  stroke: #000;
+}
+.theme-dark .st1 {
+  fill: #fff;
+}
+.theme-light .st1 {
+  fill: #000;
+}
+.theme-dark .st1 {
+  stroke: #fff;
+}
+.theme-light .st1 {
+  stroke: #000;
+}
+@media (max-width: 1080px) {
+  .Widget-Display-Visual {
+    margin: 0;
+    grid-row: 2/4;
+    flex-direction: column;
+    padding: 0 10px 10px;
+    background: transparent;
+  }
+  .Widget-Display-Visual-Max:after {
+    top: auto;
+    bottom: 5px;
+    left: 7px;
+    font-size: 11px;
+  }
+  .Widget-Display-Body {
+    padding: 0;
+    width: 100%;
+  }
+  .Widget-Display-Body .Widget-Bases {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .Widget-Display-Body .Widget-Outs {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .Widget-Display-Body .Widget-AtBat {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .Widget-Display-Body .Widget-Log {
+    display: block;
+    min-height: 92px;
+    padding: 5px 10px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 14px;
+  }
+  .theme-dark .Widget-Display-Body .Widget-Log {
+    background: rgba(30, 30, 30, 0.6392156862745098);
+  }
+  .theme-light .Widget-Display-Body .Widget-Log {
+    background: hsla(0, 0%, 89%, 0.7098039215686275);
+  }
+  .Widget-Header {
+    border-radius: 0;
+  }
+  .Widget-Header-Wrapper {
+    grid-column: 1/3;
+  }
+  .Widget-ScoreBacking {
+    padding: 10px 0;
+  }
+  .Widget-ScoreLabel--Series + .GameWidget-ScoreLabel--Score {
+    display: none;
+  }
+  .Widget-AtBat {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .Widget-Outs {
+    justify-content: flex-start;
+  }
+  .Widget-Outs-Label {
+    font-size: 12px;
+  }
+  .Widget-Outs-DotList {
+    align-items: flex-start;
+    height: 85%;
+  }
+  .Widget-Outs-Dots {
+    font-size: 24px;
+    line-height: 14px;
+  }
+  .Widget-Log {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  .Widget-Log,
+  .Widget-Log-Header {
+    display: none;
+  }
+  .Widget-Log-Content {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .Widget-Log-Line {
+    margin: 0;
+  }
+  .Widget-Log-Score {
+    font-size: 16px;
+  }
+  .Widget-PlayerLine {
+    justify-content: flex-start;
+  }
+  .Widget-PlayerLine:first-child {
+    margin-bottom: 5px;
+  }
+  .Widget-PlayerStatusLabel {
+    display: none;
+  }
+  .Widget-PlayerStatusIcon {
+    display: block;
+  }
+  .Widget-PlayerLineName {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 2px 0;
+  }
+  .GameWidget {
+    border-radius: 5px;
+  }
+  .theme-dark .GameWidget {
+    background: #0b0b0b;
+  }
+  .theme-light .GameWidget {
+    background: #f2f2f2;
+  }
+  .GameWidget-UpcomingBet {
+    font-size: 14px;
+  }
+  .GameWidget-Full-Live {
+    grid-template-columns: 100%;
+    grid-gap: 0;
+    gap: 0;
+  }
+  .GameWidget-Full-Upcoming {
+    grid-template-columns: 40% auto;
+  }
+  .GameWidget-Upcoming-Info {
+    grid-column: 1/3;
+    margin-left: 0;
+    background-color: transparent;
+  }
+  .GameWidget-Upcoming-OddsTeam {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .GameWidget-Upcoming-Odds-Subtitle {
+    font-size: 11px;
+  }
+  .GameWidget-Upcoming-Favorites-Team {
+    font-size: 16px;
+  }
+  .GameWidget-Upcoming-Favorites-Percentage {
+    font-size: 24px;
+  }
+  .GameWidget-Upcoming-Favorites-Payout {
+    font-size: 16px;
+  }
+  .GameWidget-Upcoming-Favorites-Payout-Icon {
+    width: 20px;
+    height: 20px;
+  }
+  .GameWidget-Upcoming-Full {
+    grid-column: 1/3;
+    grid-gap: 10px;
+    gap: 10px;
+    grid-template-columns: 100%;
+  }
+  .GameWidget-Upcoming-Header {
+    display: none;
+  }
+  .GameWidget-Upcoming-Body {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .GameWidget-Upcoming-Body .GameWidget-PlayerLine + .GameWidget-PlayerLine {
+    margin-left: 10px;
+  }
+  .GameWidget-Upcoming-Label {
+    display: none;
+  }
+  .GameWidget-Upcoming-Icon {
+    display: block;
+    margin-left: 20px;
+  }
+  .GameWidget-Upcoming-Bets {
+    background-color: rgba(30, 30, 30, 0.6392156862745098);
+    display: block;
+    padding: 10px;
+    grid-column: 1/3;
+    border-radius: 0;
+  }
+  .theme-dark .GameWidget-Upcoming-Bets {
+    background: rgba(30, 30, 30, 0.6392156862745098);
+  }
+  .theme-light .GameWidget-Upcoming-Bets {
+    background: hsla(0, 0%, 89%, 0.7098039215686275);
+  }
+  .GameWidget-Upcoming-BetButtons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .GameWidget-Outcome {
+    grid-column: 1/3;
+    background-color: rgba(30, 30, 30, 0.6392156862745098);
+    border-radius: 0;
+  }
+  .theme-dark .GameWidget-Outcome {
+    background: rgba(30, 30, 30, 0.6392156862745098);
+  }
+  .theme-light .GameWidget-Outcome {
+    background: hsla(0, 0%, 89%, 0.7098039215686275);
+  }
+  .GameWidget-ScoreName {
+    font-size: 18px;
+  }
+  .GameWidget-ScoreNumber {
+    margin: 0 8px 0 0;
+  }
+  .GameWidget-ScoreTeamColorBar {
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
+    margin-left: 10px;
+  }
+  .GameWidget-ScoreLine {
+    grid-gap: 5px;
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+  .GameWidget.IsComplete .GameWidget-Log {
+    display: none;
+  }
 }
 .Bet {
   display: grid;
@@ -16841,52 +17293,393 @@ input[type="number"]::-webkit-outer-spin-button {
     display: flex;
   }
 }
-.Advertisement-SiteHeader {
-  display: flex;
-  flex-direction: column;
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 0 20px 20px;
-  justify-content: flex-end;
-  align-items: center;
+.EventTicker-Display {
+  width: calc(100% - 40px);
+  height: 30px;
+  margin: 0 15px 15px;
+  line-height: 30px;
+  overflow: hidden;
+  border-radius: 4px;
 }
-.theme-dark .Advertisement-SiteHeader {
-  color: #c4c4c4;
+.theme-dark .EventTicker-Display {
+  background: rgba(30, 30, 30, 0.6392156862745098);
 }
-.theme-light .Advertisement-SiteHeader {
-  color: #272727;
+.theme-light .EventTicker-Display {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
 }
-.Advertisement-SiteHeader-Line {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.Advertisement-SiteHeader-Callout {
-  text-align: center;
+.EventTicker-News {
+  width: 60px;
   padding: 0 5px;
-  font-size: 18px;
+  position: absolute;
+  background: red;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
   font-weight: 700;
+  text-align: center;
+  display: none;
 }
-.theme-dark .Advertisement-SiteHeader-Callout {
-  color: #ffeb57;
+.theme-dark .EventTicker-News {
+  color: #fff;
 }
-.theme-light .Advertisement-SiteHeader-Callout {
-  color: #0014a8;
+.theme-light .EventTicker-News {
+  color: #000;
 }
-.Advertisement-ShopItem {
-  background: url(https://blaseball-configs.s3.us-west-2.amazonaws.com/sponsor_image.jpg);
-  display: flex;
-  background-size: contain;
-  width: 150px;
-  height: 150px;
+.EventTicker-Scroll {
+  box-sizing: content-box;
+  padding-left: 100%;
+  padding-top: 2px;
+  line-height: 22px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.EventTicker-Group {
+  display: inline-block;
+  padding-right: 100%;
+  box-sizing: content-box;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.EventTicker-Group-Animating-60 {
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 60s;
+  animation-duration: 60s;
+}
+.EventTicker-Group-Animating-120 {
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 120s;
+  animation-duration: 120s;
+}
+.EventTicker-Group-Animating-180 {
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 180s;
+  animation-duration: 180s;
+}
+.EventTicker-Group-Animating-240 {
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 240s;
+  animation-duration: 240s;
+}
+.EventTicker-Group-Animating-300 {
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 300s;
+  animation-duration: 300s;
+}
+.EventTicker-Item {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 2px 5px;
+}
+.theme-dark .EventTicker-Item {
+  color: #fff;
+}
+.theme-light .EventTicker-Item {
+  color: #000;
+}
+.theme-dark .EventTicker-Item {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .EventTicker-Item {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.EventTicker-Item:not(:first-child) {
+  margin-left: 100px;
+}
+.EventTicker-Item:not(:last-child) {
+  margin-right: 100px;
+}
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  to {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes ticker {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  to {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
 }
 @media (max-width: 1080px) {
-  .Advertisement-SiteHeader {
-    display: block;
-    text-align: center;
+  .EventTicker-Display {
+    width: calc(100% - 20px);
+    margin: 0 8px 10px;
+  }
+  .EventTicker-Group,
+  .EventTicker-News {
+    font-size: 12px;
+  }
+}
+.Header-Links {
+  display: flex;
+}
+.Header-Title {
+  font-size: 1em;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+}
+.Header-Title-Wrapper {
+  font-size: 60px;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.Header-Logo,
+.Header-Title-Wrapper {
+  display: flex;
+  text-transform: uppercase;
+}
+.Header-Logo {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.Header-Logo-Era {
+  font-size: 20px;
+  width: 100%;
+  left: 16px;
+  margin-top: -10px;
+}
+.Header-Logo-Era,
+.Header-Logo-SubEra {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+.Header-Logo-SubEra {
+  font-size: 16px;
+  left: 32px;
+}
+.Header-Logo-Tag {
+  margin: 10px;
+  padding: 5px;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 3px;
+}
+.theme-dark .Header-Logo-Tag {
+  background: hsla(0, 0%, 39.6%, 0.65098);
+}
+.theme-light .Header-Logo-Tag {
+  background: hsla(0, 0%, 72.5%, 0.65098);
+}
+.Header-Logo-Icon {
+  max-width: 340px;
+  margin-top: -10px;
+}
+.Header-Social {
+  display: flex;
+  margin-left: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.Header-Social-Faq {
+  margin-right: 10px;
+  font-size: 12px;
+  align-items: center;
+  line-height: 14px;
+}
+.theme-dark .Header-Social-Faq {
+  color: #c4c4c4;
+}
+.theme-light .Header-Social-Faq {
+  color: #272727;
+}
+.Header-Social-Faq-Inner {
+  margin: auto;
+  text-align: center;
+  padding: 10px 8px 9px;
+}
+.theme-dark .Header-Social-Faq-Inner {
+  background: #1f1f1f;
+}
+.theme-light .Header-Social-Faq-Inner {
+  background: #ebebeb;
+}
+.Header-Social-Faq-Icon {
+  font-size: 18px;
+  margin: 0 5px;
+}
+.theme-dark .Header-Social-Faq-Icon:hover {
+  color: #fff;
+}
+.theme-light .Header-Social-Faq-Icon:hover {
+  color: #000;
+}
+.Header-Social-Patreon {
+  font-size: 12px;
+  margin-right: 10px;
+}
+.Header-Social-Patreon-Inner {
+  margin: auto;
+  text-align: center;
+  padding: 8px 10px;
+  height: 34px;
+}
+.theme-dark .Header-Social-Patreon-Inner {
+  background: #1f1f1f;
+}
+.theme-light .Header-Social-Patreon-Inner {
+  background: #ebebeb;
+}
+.Header-Social-Patreon-Icon {
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+.theme-dark .Header-Social-Patreon-Icon {
+  color: #c4c4c4;
+}
+.theme-light .Header-Social-Patreon-Icon {
+  color: #272727;
+}
+.theme-dark .Header-Social-Patreon-Icon:hover {
+  color: #fff;
+}
+.theme-light .Header-Social-Patreon-Icon:hover {
+  color: #000;
+}
+.Header-Social-Follow {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  align-items: center;
+  line-height: 14px;
+}
+.theme-dark .Header-Social-Follow {
+  color: #c4c4c4;
+}
+.theme-light .Header-Social-Follow {
+  color: #272727;
+}
+.Header-Social-Follow-Inner {
+  width: 170px;
+  text-align: center;
+  padding: 5px;
+  height: 34px;
+}
+.theme-dark .Header-Social-Follow-Inner {
+  background: #1f1f1f;
+}
+.theme-light .Header-Social-Follow-Inner {
+  background: #ebebeb;
+}
+.Header-Social-Follow-Icon {
+  font-size: 24px;
+}
+.theme-dark .Header-Social-Follow-Icon:hover {
+  color: #fff;
+}
+.theme-light .Header-Social-Follow-Icon:hover {
+  color: #000;
+}
+.Header-Social-Follow-Icon:not(:last-child) {
+  margin-right: 3px;
+}
+.Header-Social-Follow-Icon:not(:first-child) {
+  margin-left: 3px;
+}
+@media (max-width: 1080px) {
+  .Header-Title-Wrapper {
+    font-size: 30px;
+    max-width: 200px;
+    overflow: visible;
+    flex-wrap: nowrap;
+  }
+  .Header-Logo {
+    font-size: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .Header-Logo-Era {
+    font-size: 14px;
+    margin-top: 0;
+  }
+  .Header-Logo-SubEra {
+    font-size: 14px;
+  }
+  .Header-Logo-Tag {
+    font-size: 12px;
+    margin: 0 5px;
+    padding: 5px 5px 2px;
+  }
+  .Header-Logo-Icon {
+    margin-top: auto;
+  }
+  .Header-Social-Faq {
+    margin-right: 5px;
+  }
+  .Header-Social-Faq-Inner {
+    padding: 6px 5px;
+  }
+  .Header-Social-Faq-Icon {
+    font-size: 12px;
+    margin: 0 3px;
+  }
+  .Header-Social-Patreon {
+    display: none;
+  }
+  .Header-Social-Follow {
+    margin-right: -10px;
+  }
+  .Header-Social-Follow-Inner {
+    display: flex;
+    height: auto;
+    width: 120px;
+  }
+  .Header-Social-Follow-Icon {
+    font-size: 16px;
+    margin: 0 3px;
+  }
+  .Header-Social-Follow-Triangle {
+    border-left-width: 40px;
+    border-right-width: 40px;
+    border-top-width: 16px;
   }
 }
 .CoinOverlay {
@@ -17535,983 +18328,6 @@ button:focus-visible {
 }
 .Overlay-Arrow-LightMode:after {
   border-bottom-color: #000;
-}
-.Leaderboard-Player-Deceased-Icon {
-  background-image: url(https://www.blaseball.com/static/media/player_deceased_icon.1527b182.svg);
-  background-repeat: no-repeat;
-  padding: 15px;
-  margin: 5px 0 5px 5px;
-  width: 25px;
-  height: 25px;
-  justify-content: center;
-  align-items: center;
-}
-.Standings-SingleList {
-  max-width: 400px;
-  margin: 30px auto 0;
-}
-.Standings-SingleList-Team {
-  display: grid !important;
-  grid-template-columns: 60px auto !important;
-}
-.Standings-League {
-  display: flex;
-  flex-direction: column;
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 32px;
-  align-items: center;
-}
-.Standings-League h3 {
-  font-weight: 700;
-}
-.Standings-League-Header {
-  flex-wrap: wrap;
-  text-align: center;
-}
-.Standings-League-Header,
-.Standings-Supernova-Eclipse {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.Standings-Supernova-Eclipse {
-  position: relative;
-}
-.Standings-Supernova-Eclipse .BigDeal-Equity {
-  position: absolute;
-  height: 50vh;
-  width: 50vh;
-}
-.Standings-Button {
-  height: 32px;
-}
-.Standings-Subleague {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 28px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 0 1 50%;
-  font-weight: 400;
-}
-.Standings-Subleague-Header {
-  font-size: 18px;
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.Standings-Subleague-Container {
-  display: flex;
-  flex-direction: row;
-  padding: 20px 0;
-  justify-content: center;
-}
-.Standings-Division {
-  width: 100%;
-  margin-bottom: 24px;
-}
-.Standings-Division-Header {
-  font-size: 18px;
-  font-family: "Lora", "Courier New", monospace, serif;
-  padding: 4px 12px;
-  margin: 6px;
-  color: #c4c4c4;
-}
-.theme-dark .Standings-Division-Header {
-  color: #c4c4c4;
-}
-.theme-light .Standings-Division-Header {
-  color: #272727;
-}
-.Standings-Division-LabelRow {
-  text-align: left;
-  display: grid;
-  grid-template-columns: auto 50px 60px;
-  margin: 0 6px 0 20px;
-  color: #c4c4c4;
-}
-.theme-dark .Standings-Division-LabelRow {
-  color: #c4c4c4;
-}
-.theme-light .Standings-Division-LabelRow {
-  color: #272727;
-}
-.Standings-Division-Label {
-  font-size: 14px;
-}
-.Standings-Division-Container {
-  display: flex;
-  flex-direction: column;
-  margin: 12px 0;
-  align-items: center;
-}
-.Standings-Team {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-size: 20px;
-  padding: 2px 0;
-  margin: 0 6px;
-  display: grid;
-  grid-template-columns: auto 60px 65px;
-  overflow: visible;
-  border-radius: 5px;
-}
-.theme-dark .Standings-Team:nth-child(odd) {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light .Standings-Team:nth-child(odd) {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.Standings-Team:hover,
-.theme-dark .Standings-Team:hover {
-  background: hsla(0, 0%, 39.6%, 0.6509803921568628);
-}
-.theme-light .Standings-Team:hover {
-  background: hsla(0, 0%, 72.5%, 0.6509803921568628);
-}
-.Standings-Team-Container {
-  display: flex;
-  flex-direction: column;
-}
-.Standings-Team-Blank {
-  min-height: 40px;
-}
-.theme-dark .Standings-Team-Blank {
-  background: #000;
-}
-.theme-light .Standings-Team-Blank {
-  background: #fff;
-}
-.Standings-Team-Color {
-  display: flex;
-  width: 30px;
-  height: 30px;
-  margin: 5px 5px 5px 10px;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-}
-.Standings-Team-Record,
-.Standings-Team-Wins {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: right;
-}
-.Standings-Team-Record {
-  font-size: 18px;
-  color: #c4c4c4;
-}
-.theme-dark .Standings-Team-Record {
-  color: #c4c4c4;
-}
-.theme-light .Standings-Team-Record {
-  color: #272727;
-}
-.Standings-Team-Emoji {
-  font-size: 14pt;
-}
-.Standings-Team-Name {
-  padding-left: 6px;
-}
-.Standings-Team-Name,
-.Standings-Team-Name-Container {
-  display: flex;
-  align-items: center;
-}
-.Standings-Team-Name-LightMode {
-  border-radius: 5px;
-}
-.theme-dark .Record-Positive {
-  color: #fff;
-}
-.theme-light .Record-Positive {
-  color: #000;
-}
-.theme-dark .Record-Negative {
-  color: #ff3838;
-}
-.theme-light .Record-Negative {
-  color: #d94141;
-}
-.BlinkingRedLight {
-  -webkit-animation: blink 3s infinite;
-  animation: blink 3s infinite;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #c80c0c;
-  opacity: 0.5;
-  margin-left: 10px;
-}
-@media screen and (prefers-reduced-motion: reduce) {
-  .BlinkingRedLight {
-    -webkit-animation: none;
-    animation: none;
-  }
-}
-@-webkit-keyframes blink {
-  0% {
-    opacity: 0.8;
-  }
-  10% {
-    opacity: 0.7;
-  }
-  20% {
-    opacity: 0.6;
-  }
-  30% {
-    opacity: 0.5;
-  }
-  40% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 0.3;
-  }
-  60% {
-    opacity: 0.4;
-  }
-  70% {
-    opacity: 0.5;
-  }
-  80% {
-    opacity: 0.6;
-  }
-  90% {
-    opacity: 0.7;
-  }
-  to {
-    opacity: 0.8;
-  }
-}
-@keyframes blink {
-  0% {
-    opacity: 0.8;
-  }
-  10% {
-    opacity: 0.7;
-  }
-  20% {
-    opacity: 0.6;
-  }
-  30% {
-    opacity: 0.5;
-  }
-  40% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 0.3;
-  }
-  60% {
-    opacity: 0.4;
-  }
-  70% {
-    opacity: 0.5;
-  }
-  80% {
-    opacity: 0.6;
-  }
-  90% {
-    opacity: 0.7;
-  }
-  to {
-    opacity: 0.8;
-  }
-}
-@media (max-width: 1080px) {
-  .Standings-League {
-    font-size: 24px;
-  }
-  .Standings-Subleague {
-    flex: 0 1 100%;
-  }
-  .Standings-Subleague-Container {
-    flex-direction: column;
-  }
-  .Standings-Team {
-    font-size: 18px;
-    margin: 0;
-  }
-}
-.GodsDay {
-  max-width: 550px;
-  margin: auto auto 20px;
-  flex-direction: column;
-}
-.GodsDay,
-.GodsDay-Header {
-  display: flex;
-  align-items: center;
-}
-.GodsDay-Header {
-  font-size: 32px;
-  font-weight: 700;
-  padding: 20px 0;
-}
-.GodsDay-Body,
-.GodsDay-Header {
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.GodsDay-Body {
-  margin: 20px;
-  font-size: 18px;
-  text-align: center;
-  color: #c4c4c4;
-}
-.theme-dark .GodsDay-Body {
-  color: #c4c4c4;
-}
-.theme-light .GodsDay-Body {
-  color: #272727;
-}
-.GodsDay-Votes {
-  margin: 24px 0;
-}
-.GodsDay-Votes-Header {
-  font-size: 18px;
-  margin-bottom: 4px;
-}
-.GodsDay-Votes-Description {
-  margin-bottom: 8px;
-}
-.GodsDay-Vote {
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid #fff;
-  margin-bottom: 24px;
-}
-.GodsDay-Vote-Header {
-  color: #ba7300;
-  font-weight: 700;
-}
-.GodsDay-Vote-Count {
-  color: #000;
-  font-size: 14px;
-  font-weight: 700;
-}
-.GodsDay-Vote-Button {
-  font-size: 14px;
-  font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 18px;
-  background: green;
-  color: #fff;
-}
-.GodsDay-Vote-Bar {
-  background: #fff;
-  display: flex;
-  margin: 12px -12px -12px;
-  height: 32px;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 12px;
-}
-@media (max-width: 768px) {
-  .GodsDay {
-    width: 100%;
-  }
-  .GodsDay-Header {
-    font-size: 24px;
-  }
-}
-.PlayoffSetup {
-  max-width: 700px;
-  margin: auto auto 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.PlayoffSetup-Navigation {
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 24px;
-  margin-bottom: 40px;
-  margin-top: 20px;
-}
-.PlayoffSetup-Navigation,
-.PlayoffSetup-Navigation-Button {
-  display: flex;
-  font-weight: 700;
-  text-transform: uppercase;
-  align-items: center;
-  justify-content: center;
-}
-.PlayoffSetup-Navigation-Button {
-  font-size: 14px;
-  margin-right: 10px;
-  padding: 8px 16px;
-  text-decoration: none;
-  border-radius: 20px;
-  border: 2px solid transparent !important;
-  white-space: nowrap;
-  height: 40px;
-}
-.theme-dark .PlayoffSetup-Navigation-Button {
-  background: #000;
-}
-.theme-light .PlayoffSetup-Navigation-Button {
-  background: #fff;
-}
-.theme-dark .PlayoffSetup-Navigation-Button {
-  color: #fff;
-}
-.theme-light .PlayoffSetup-Navigation-Button {
-  color: #000;
-}
-.PlayoffSetup-Navigation-Button:hover {
-  border: 2px solid;
-}
-.theme-dark .PlayoffSetup-Navigation-Button:hover {
-  color: #fff;
-}
-.theme-light .PlayoffSetup-Navigation-Button:hover {
-  color: #000;
-}
-.theme-dark .PlayoffSetup-Navigation-Button:hover {
-  border-color: #fff;
-}
-.theme-light .PlayoffSetup-Navigation-Button:hover {
-  border-color: #000;
-}
-.theme-dark .PlayoffSetup-Navigation-Button-Current {
-  background: #fff;
-}
-.theme-light .PlayoffSetup-Navigation-Button-Current {
-  background: #000;
-}
-.theme-dark .PlayoffSetup-Navigation-Button-Current {
-  color: #000;
-}
-.theme-light .PlayoffSetup-Navigation-Button-Current {
-  color: #fff;
-}
-.theme-dark .PlayoffSetup-Navigation-Button-Current:hover {
-  color: #000;
-}
-.theme-light .PlayoffSetup-Navigation-Button-Current:hover {
-  color: #fff;
-}
-.PlayoffSetup-Matchup {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 20px;
-  border-radius: 3px;
-  padding: 0 10px 0 0;
-}
-.theme-dark .PlayoffSetup-Matchup {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light .PlayoffSetup-Matchup {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.PlayoffSetup-Matchup:nth-child(2n) {
-  margin-bottom: 20px;
-}
-.PlayoffSetup-Matchup-Divine {
-  max-width: 450px;
-  margin: 20px 0 30px;
-}
-.PlayoffSetup-Bye {
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  margin-left: 10px;
-  font-style: italic;
-}
-.theme-dark .PlayoffSetup-Bye {
-  color: #c4c4c4;
-}
-.theme-light .PlayoffSetup-Bye {
-  color: #272727;
-}
-.PlayoffSetup-Seed {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-}
-.PlayoffSetup-MatchupTeam {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  height: 50px;
-}
-.PlayoffSetup-MatchupTeam-Icon {
-  border-radius: 50%;
-  font-size: 20px;
-  width: 30px;
-  height: 30px;
-  background: #fff;
-  margin-right: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.PlayoffSetup-MatchupTeam-Mobile {
-  display: none;
-}
-.PlayoffSetup-MatchupTeam-Group {
-  justify-content: space-between;
-  font-family: "Lora", "Courier New", monospace, serif;
-}
-.PlayoffSetup-MatchupTeam-Group,
-.PlayoffSetup-MatchupTeam-Info {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.PlayoffSetup-MatchupTeam-Wins {
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  font-size: 18px;
-}
-.PlayoffSetup-MatchupTeam-WinsComplete {
-  border: 1px solid;
-  border-radius: 50%;
-}
-.theme-dark .PlayoffSetup-MatchupTeam-WinsComplete {
-  border-color: #fff;
-}
-.theme-light .PlayoffSetup-MatchupTeam-WinsComplete {
-  border-color: #000;
-}
-.PlayoffSetup-Header {
-  display: flex;
-  font-weight: 700;
-  padding-top: 10px;
-  align-items: center;
-  font-size: 24px;
-  text-transform: uppercase;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-}
-.PlayoffSetup-MatchupGroup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 10px;
-  width: 400px;
-}
-.PlayoffSetup-Body {
-  display: flex;
-  flex-direction: row;
-}
-@media (max-width: 768px) {
-  .PlayoffSetup {
-    width: 100%;
-  }
-  .PlayoffSetup-Body {
-    flex-direction: column;
-    width: 100%;
-  }
-  .PlayoffSetup-MatchupGroup {
-    width: 100%;
-    margin: 0;
-  }
-  .PlayoffSetup-MatchupTeam-Mobile {
-    display: block;
-  }
-  .PlayoffSetup-MatchupTeam-Desktop {
-    display: none;
-  }
-  .PlayoffSetup-Navigation {
-    flex-wrap: wrap;
-  }
-  .PlayoffSetup-Navigation-Button {
-    padding: 5px 8px;
-    font-size: 12px;
-    height: 32px;
-    margin-right: 0;
-  }
-}
-.EventTicker-Display {
-  width: calc(100% - 40px);
-  height: 30px;
-  margin: 0 15px 15px;
-  line-height: 30px;
-  overflow: hidden;
-  border-radius: 4px;
-}
-.theme-dark .EventTicker-Display {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light .EventTicker-Display {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.EventTicker-News {
-  width: 60px;
-  padding: 0 5px;
-  position: absolute;
-  background: red;
-  border-radius: 5px;
-  font-size: 14px;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: center;
-  display: none;
-}
-.theme-dark .EventTicker-News {
-  color: #fff;
-}
-.theme-light .EventTicker-News {
-  color: #000;
-}
-.EventTicker-Scroll {
-  box-sizing: content-box;
-  padding-left: 100%;
-  padding-top: 2px;
-  line-height: 22px;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 4px;
-}
-.EventTicker-Group {
-  display: inline-block;
-  padding-right: 100%;
-  box-sizing: content-box;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-.EventTicker-Group-Animating-60 {
-  -webkit-animation-name: ticker;
-  animation-name: ticker;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-duration: 60s;
-  animation-duration: 60s;
-}
-.EventTicker-Group-Animating-120 {
-  -webkit-animation-name: ticker;
-  animation-name: ticker;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-duration: 120s;
-  animation-duration: 120s;
-}
-.EventTicker-Group-Animating-180 {
-  -webkit-animation-name: ticker;
-  animation-name: ticker;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-duration: 180s;
-  animation-duration: 180s;
-}
-.EventTicker-Group-Animating-240 {
-  -webkit-animation-name: ticker;
-  animation-name: ticker;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-duration: 240s;
-  animation-duration: 240s;
-}
-.EventTicker-Group-Animating-300 {
-  -webkit-animation-name: ticker;
-  animation-name: ticker;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-duration: 300s;
-  animation-duration: 300s;
-}
-.EventTicker-Item {
-  display: inline-block;
-  border-radius: 4px;
-  padding: 2px 5px;
-}
-.theme-dark .EventTicker-Item {
-  color: #fff;
-}
-.theme-light .EventTicker-Item {
-  color: #000;
-}
-.theme-dark .EventTicker-Item {
-  background: rgba(30, 30, 30, 0.6392156862745098);
-}
-.theme-light .EventTicker-Item {
-  background: hsla(0, 0%, 89%, 0.7098039215686275);
-}
-.EventTicker-Item:not(:first-child) {
-  margin-left: 100px;
-}
-.EventTicker-Item:not(:last-child) {
-  margin-right: 100px;
-}
-@-webkit-keyframes ticker {
-  0% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-  to {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-@keyframes ticker {
-  0% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-  to {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-@media (max-width: 1080px) {
-  .EventTicker-Display {
-    width: calc(100% - 20px);
-    margin: 0 8px 10px;
-  }
-  .EventTicker-Group,
-  .EventTicker-News {
-    font-size: 12px;
-  }
-}
-.Header-Links {
-  display: flex;
-}
-.Header-Title {
-  font-size: 1em;
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-weight: 700;
-}
-.Header-Title-Wrapper {
-  font-size: 60px;
-  flex-direction: row;
-  align-items: flex-end;
-  flex-wrap: wrap;
-}
-.Header-Logo,
-.Header-Title-Wrapper {
-  display: flex;
-  text-transform: uppercase;
-}
-.Header-Logo {
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-.Header-Logo-Era {
-  font-size: 20px;
-  width: 100%;
-  left: 16px;
-  margin-top: -10px;
-}
-.Header-Logo-Era,
-.Header-Logo-SubEra {
-  font-family: "Lora", "Courier New", monospace, serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  position: relative;
-}
-.Header-Logo-SubEra {
-  font-size: 16px;
-  left: 32px;
-}
-.Header-Logo-Tag {
-  margin: 10px;
-  padding: 5px;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  font-weight: 700;
-  border-radius: 3px;
-}
-.theme-dark .Header-Logo-Tag {
-  background: hsla(0, 0%, 39.6%, 0.65098);
-}
-.theme-light .Header-Logo-Tag {
-  background: hsla(0, 0%, 72.5%, 0.65098);
-}
-.Header-Logo-Icon {
-  max-width: 340px;
-  margin-top: -10px;
-}
-.Header-Social {
-  display: flex;
-  margin-left: auto;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.Header-Social-Faq {
-  margin-right: 10px;
-  font-size: 12px;
-  align-items: center;
-  line-height: 14px;
-}
-.theme-dark .Header-Social-Faq {
-  color: #c4c4c4;
-}
-.theme-light .Header-Social-Faq {
-  color: #272727;
-}
-.Header-Social-Faq-Inner {
-  margin: auto;
-  text-align: center;
-  padding: 10px 8px 9px;
-}
-.theme-dark .Header-Social-Faq-Inner {
-  background: #1f1f1f;
-}
-.theme-light .Header-Social-Faq-Inner {
-  background: #ebebeb;
-}
-.Header-Social-Faq-Icon {
-  font-size: 18px;
-  margin: 0 5px;
-}
-.theme-dark .Header-Social-Faq-Icon:hover {
-  color: #fff;
-}
-.theme-light .Header-Social-Faq-Icon:hover {
-  color: #000;
-}
-.Header-Social-Patreon {
-  font-size: 12px;
-  margin-right: 10px;
-}
-.Header-Social-Patreon-Inner {
-  margin: auto;
-  text-align: center;
-  padding: 8px 10px;
-  height: 34px;
-}
-.theme-dark .Header-Social-Patreon-Inner {
-  background: #1f1f1f;
-}
-.theme-light .Header-Social-Patreon-Inner {
-  background: #ebebeb;
-}
-.Header-Social-Patreon-Icon {
-  font-size: 14px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-}
-.theme-dark .Header-Social-Patreon-Icon {
-  color: #c4c4c4;
-}
-.theme-light .Header-Social-Patreon-Icon {
-  color: #272727;
-}
-.theme-dark .Header-Social-Patreon-Icon:hover {
-  color: #fff;
-}
-.theme-light .Header-Social-Patreon-Icon:hover {
-  color: #000;
-}
-.Header-Social-Follow {
-  display: flex;
-  flex-direction: column;
-  font-size: 12px;
-  align-items: center;
-  line-height: 14px;
-}
-.theme-dark .Header-Social-Follow {
-  color: #c4c4c4;
-}
-.theme-light .Header-Social-Follow {
-  color: #272727;
-}
-.Header-Social-Follow-Inner {
-  width: 170px;
-  text-align: center;
-  padding: 5px;
-  height: 34px;
-}
-.theme-dark .Header-Social-Follow-Inner {
-  background: #1f1f1f;
-}
-.theme-light .Header-Social-Follow-Inner {
-  background: #ebebeb;
-}
-.Header-Social-Follow-Icon {
-  font-size: 24px;
-}
-.theme-dark .Header-Social-Follow-Icon:hover {
-  color: #fff;
-}
-.theme-light .Header-Social-Follow-Icon:hover {
-  color: #000;
-}
-.Header-Social-Follow-Icon:not(:last-child) {
-  margin-right: 3px;
-}
-.Header-Social-Follow-Icon:not(:first-child) {
-  margin-left: 3px;
-}
-@media (max-width: 1080px) {
-  .Header-Title-Wrapper {
-    font-size: 30px;
-    max-width: 200px;
-    overflow: visible;
-    flex-wrap: nowrap;
-  }
-  .Header-Logo {
-    font-size: 20px;
-    margin-bottom: 10px;
-    width: 100%;
-    align-items: flex-start;
-  }
-  .Header-Logo-Era {
-    font-size: 14px;
-    margin-top: 0;
-  }
-  .Header-Logo-SubEra {
-    font-size: 14px;
-  }
-  .Header-Logo-Tag {
-    font-size: 12px;
-    margin: 0 5px;
-    padding: 5px 5px 2px;
-  }
-  .Header-Logo-Icon {
-    margin-top: auto;
-  }
-  .Header-Social-Faq {
-    margin-right: 5px;
-  }
-  .Header-Social-Faq-Inner {
-    padding: 6px 5px;
-  }
-  .Header-Social-Faq-Icon {
-    font-size: 12px;
-    margin: 0 3px;
-  }
-  .Header-Social-Patreon {
-    display: none;
-  }
-  .Header-Social-Follow {
-    margin-right: -10px;
-  }
-  .Header-Social-Follow-Inner {
-    display: flex;
-    height: auto;
-    width: 120px;
-  }
-  .Header-Social-Follow-Icon {
-    font-size: 16px;
-    margin: 0 3px;
-  }
-  .Header-Social-Follow-Triangle {
-    border-left-width: 40px;
-    border-right-width: 40px;
-    border-top-width: 16px;
-  }
 }
 .About-All {
   max-width: 800px;
@@ -20991,6 +20807,384 @@ button:focus-visible {
     min-width: 32px;
   }
 }
+.GodsDay {
+  max-width: 550px;
+  margin: auto auto 20px;
+  flex-direction: column;
+}
+.GodsDay,
+.GodsDay-Header {
+  display: flex;
+  align-items: center;
+}
+.GodsDay-Header {
+  font-size: 32px;
+  font-weight: 700;
+  padding: 20px 0;
+}
+.GodsDay-Body,
+.GodsDay-Header {
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.GodsDay-Body {
+  margin: 20px;
+  font-size: 18px;
+  text-align: center;
+  color: #c4c4c4;
+}
+.theme-dark .GodsDay-Body {
+  color: #c4c4c4;
+}
+.theme-light .GodsDay-Body {
+  color: #272727;
+}
+.GodsDay-Votes {
+  margin: 24px 0;
+}
+.GodsDay-Votes-Header {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+.GodsDay-Votes-Description {
+  margin-bottom: 8px;
+}
+.GodsDay-Vote {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #fff;
+  margin-bottom: 24px;
+}
+.GodsDay-Vote-Header {
+  color: #ba7300;
+  font-weight: 700;
+}
+.GodsDay-Vote-Count {
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+}
+.GodsDay-Vote-Button {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 18px;
+  background: green;
+  color: #fff;
+}
+.GodsDay-Vote-Bar {
+  background: #fff;
+  display: flex;
+  margin: 12px -12px -12px;
+  height: 32px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+}
+@media (max-width: 768px) {
+  .GodsDay {
+    width: 100%;
+  }
+  .GodsDay-Header {
+    font-size: 24px;
+  }
+}
+.Leaderboard-Player-Deceased-Icon {
+  background-image: url(https://www.blaseball.com/static/media/player_deceased_icon.1527b182.svg);
+  background-repeat: no-repeat;
+  padding: 15px;
+  margin: 5px 0 5px 5px;
+  width: 25px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+}
+.Standings-SingleList {
+  max-width: 400px;
+  margin: 30px auto 0;
+}
+.Standings-SingleList-Team {
+  display: grid !important;
+  grid-template-columns: 60px auto !important;
+}
+.Standings-League {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 32px;
+  align-items: center;
+}
+.Standings-League h3 {
+  font-weight: 700;
+}
+.Standings-League-Header {
+  flex-wrap: wrap;
+  text-align: center;
+}
+.Standings-League-Header,
+.Standings-Supernova-Eclipse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Standings-Supernova-Eclipse {
+  position: relative;
+}
+.Standings-Supernova-Eclipse .BigDeal-Equity {
+  position: absolute;
+  height: 50vh;
+  width: 50vh;
+}
+.Standings-Button {
+  height: 32px;
+}
+.Standings-Subleague {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 50%;
+  font-weight: 400;
+}
+.Standings-Subleague-Header {
+  font-size: 18px;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.Standings-Subleague-Container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0;
+  justify-content: center;
+}
+.Standings-Division {
+  width: 100%;
+  margin-bottom: 24px;
+}
+.Standings-Division-Header {
+  font-size: 18px;
+  font-family: "Lora", "Courier New", monospace, serif;
+  padding: 4px 12px;
+  margin: 6px;
+  color: #c4c4c4;
+}
+.theme-dark .Standings-Division-Header {
+  color: #c4c4c4;
+}
+.theme-light .Standings-Division-Header {
+  color: #272727;
+}
+.Standings-Division-LabelRow {
+  text-align: left;
+  display: grid;
+  grid-template-columns: auto 50px 60px;
+  margin: 0 6px 0 20px;
+  color: #c4c4c4;
+}
+.theme-dark .Standings-Division-LabelRow {
+  color: #c4c4c4;
+}
+.theme-light .Standings-Division-LabelRow {
+  color: #272727;
+}
+.Standings-Division-Label {
+  font-size: 14px;
+}
+.Standings-Division-Container {
+  display: flex;
+  flex-direction: column;
+  margin: 12px 0;
+  align-items: center;
+}
+.Standings-Team {
+  font-family: "Lora", "Courier New", monospace, serif;
+  font-size: 20px;
+  padding: 2px 0;
+  margin: 0 6px;
+  display: grid;
+  grid-template-columns: auto 60px 65px;
+  overflow: visible;
+  border-radius: 5px;
+}
+.theme-dark .Standings-Team:nth-child(odd) {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .Standings-Team:nth-child(odd) {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.Standings-Team:hover,
+.theme-dark .Standings-Team:hover {
+  background: hsla(0, 0%, 39.6%, 0.6509803921568628);
+}
+.theme-light .Standings-Team:hover {
+  background: hsla(0, 0%, 72.5%, 0.6509803921568628);
+}
+.Standings-Team-Container {
+  display: flex;
+  flex-direction: column;
+}
+.Standings-Team-Blank {
+  min-height: 40px;
+}
+.theme-dark .Standings-Team-Blank {
+  background: #000;
+}
+.theme-light .Standings-Team-Blank {
+  background: #fff;
+}
+.Standings-Team-Color {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  margin: 5px 5px 5px 10px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.Standings-Team-Record,
+.Standings-Team-Wins {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+}
+.Standings-Team-Record {
+  font-size: 18px;
+  color: #c4c4c4;
+}
+.theme-dark .Standings-Team-Record {
+  color: #c4c4c4;
+}
+.theme-light .Standings-Team-Record {
+  color: #272727;
+}
+.Standings-Team-Emoji {
+  font-size: 14pt;
+}
+.Standings-Team-Name {
+  padding-left: 6px;
+}
+.Standings-Team-Name,
+.Standings-Team-Name-Container {
+  display: flex;
+  align-items: center;
+}
+.Standings-Team-Name-LightMode {
+  border-radius: 5px;
+}
+.theme-dark .Record-Positive {
+  color: #fff;
+}
+.theme-light .Record-Positive {
+  color: #000;
+}
+.theme-dark .Record-Negative {
+  color: #ff3838;
+}
+.theme-light .Record-Negative {
+  color: #d94141;
+}
+.BlinkingRedLight {
+  -webkit-animation: blink 3s infinite;
+  animation: blink 3s infinite;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #c80c0c;
+  opacity: 0.5;
+  margin-left: 10px;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  .BlinkingRedLight {
+    -webkit-animation: none;
+    animation: none;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0.8;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0.8;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+@media (max-width: 1080px) {
+  .Standings-League {
+    font-size: 24px;
+  }
+  .Standings-Subleague {
+    flex: 0 1 100%;
+  }
+  .Standings-Subleague-Container {
+    flex-direction: column;
+  }
+  .Standings-Team {
+    font-size: 18px;
+    margin: 0;
+  }
+}
 .Privacy {
   font-size: 14px;
 }
@@ -23450,60 +23644,58 @@ button:focus-visible {
 }
 @-webkit-keyframes bang {
   to {
-    box-shadow: 174px -26.66667px #c400ff, -191px -216.66667px #1aff00,
-      226px -73.66667px #f03, 151px -405.66667px #ff00d5,
-      -50px -223.66667px #3c00ff, -53px -55.66667px #d0f,
-      160px -32.66667px #b3ff00, 107px -51.66667px #bfff00,
-      250px -329.66667px #9d00ff, -44px -349.66667px #ff0009,
-      -191px -139.66667px #90f, 119px -92.66667px #ff2600,
-      156px -197.66667px #0f5, 208px -126.66667px #00ffea,
-      33px -344.66667px #6aff00, 79px -413.66667px #f05,
-      -208px -14.66667px #09ff00, 62px -143.66667px #3f0,
-      193px -5.66667px #ff00a6, 146px 50.33333px #30f, 99px 77.33333px #00ff84,
-      -57px -371.66667px #7bff00, 78px 21.33333px #ffd500,
-      -107px -85.66667px #000dff, -101px -74.66667px #00ffb3,
-      -233px -300.66667px #62ff00, 73px 51.33333px #00ff26,
-      59px -291.66667px #ffc400, -132px -414.66667px #59ff00,
-      94px -91.66667px #f80, 75px -201.66667px #ff3c00,
-      146px -337.66667px #00ff2f, 153px -341.66667px #bf0,
-      -113px 68.33333px #005eff, 245px -121.66667px #ff6a00,
-      -101px -67.66667px #d900ff, -178px -341.66667px #0015ff,
-      -126px -133.66667px #ff9d00, 226px -44.66667px #ff2f00,
-      85px -254.66667px #00ff62, -40px -412.66667px red,
-      49px -407.66667px #00ff1e, -22px -391.66667px #002fff,
-      177px -343.66667px #f0c, -133px -304.66667px #00ff8c,
-      -144px -168.66667px #ffb700, -9px 17.33333px #0ff,
-      57px -39.66667px #ff001a, 206px -392.66667px #ff00d0,
-      -90px 39.33333px #f06, 112px -158.66667px #f700ff;
+    box-shadow: -224px -45.66667px #fc0, 183px -331.66667px #0095ff,
+      -96px -392.66667px #00ffb7, 217px -362.66667px #ff00f2,
+      -72px 16.33333px #ff0048, -167px 22.33333px #ffbf00,
+      71px 41.33333px #8000ff, -72px -152.66667px #d9ff00,
+      31px -396.66667px #00ff80, 61px 43.33333px #ffea00,
+      -31px -61.66667px #00a2ff, -39px -184.66667px #0084ff,
+      4px -86.66667px #51ff00, 25px -189.66667px #ffd900,
+      163px -129.66667px #00ff1e, 153px -378.66667px #f06, 56px -30.66667px #fb0,
+      -35px -296.66667px #48ff00, -35px -98.66667px #a600ff,
+      148px -52.66667px #00aeff, -105px -228.66667px #10f,
+      -135px -390.66667px #00ff2f, 199px 64.33333px #0f9,
+      195px -224.66667px #fc0, 108px -156.66667px #00ff95,
+      -120px 28.33333px #ff00c4, -109px -58.66667px #0f4,
+      -155px -369.66667px #f70, 7px -344.66667px #00ff04,
+      -230px -308.66667px #f04, 116px 9.33333px #ef0, 46px 55.33333px #8f0,
+      157px -13.66667px #ff0040, -213px -221.66667px #7f0,
+      -141px -257.66667px #ff00b7, -48px 13.33333px #0f0, 93px -254.66667px #fd0,
+      47px -171.66667px #03f, 53px 20.33333px #4f0, 13px -8.66667px #ff0080,
+      160px -357.66667px #0051ff, -23px -122.66667px #ff0084,
+      139px -323.66667px #00ff15, 231px -402.66667px #3c00ff,
+      -201px -180.66667px #00ff51, -139px -125.66667px #15ff00,
+      96px -120.66667px #1500ff, 110px -222.66667px #f0d,
+      233px -281.66667px #00fff7, 186px -364.66667px #ffea00,
+      184px 23.33333px #ffbf00;
   }
 }
 @keyframes bang {
   to {
-    box-shadow: 174px -26.66667px #c400ff, -191px -216.66667px #1aff00,
-      226px -73.66667px #f03, 151px -405.66667px #ff00d5,
-      -50px -223.66667px #3c00ff, -53px -55.66667px #d0f,
-      160px -32.66667px #b3ff00, 107px -51.66667px #bfff00,
-      250px -329.66667px #9d00ff, -44px -349.66667px #ff0009,
-      -191px -139.66667px #90f, 119px -92.66667px #ff2600,
-      156px -197.66667px #0f5, 208px -126.66667px #00ffea,
-      33px -344.66667px #6aff00, 79px -413.66667px #f05,
-      -208px -14.66667px #09ff00, 62px -143.66667px #3f0,
-      193px -5.66667px #ff00a6, 146px 50.33333px #30f, 99px 77.33333px #00ff84,
-      -57px -371.66667px #7bff00, 78px 21.33333px #ffd500,
-      -107px -85.66667px #000dff, -101px -74.66667px #00ffb3,
-      -233px -300.66667px #62ff00, 73px 51.33333px #00ff26,
-      59px -291.66667px #ffc400, -132px -414.66667px #59ff00,
-      94px -91.66667px #f80, 75px -201.66667px #ff3c00,
-      146px -337.66667px #00ff2f, 153px -341.66667px #bf0,
-      -113px 68.33333px #005eff, 245px -121.66667px #ff6a00,
-      -101px -67.66667px #d900ff, -178px -341.66667px #0015ff,
-      -126px -133.66667px #ff9d00, 226px -44.66667px #ff2f00,
-      85px -254.66667px #00ff62, -40px -412.66667px red,
-      49px -407.66667px #00ff1e, -22px -391.66667px #002fff,
-      177px -343.66667px #f0c, -133px -304.66667px #00ff8c,
-      -144px -168.66667px #ffb700, -9px 17.33333px #0ff,
-      57px -39.66667px #ff001a, 206px -392.66667px #ff00d0,
-      -90px 39.33333px #f06, 112px -158.66667px #f700ff;
+    box-shadow: -224px -45.66667px #fc0, 183px -331.66667px #0095ff,
+      -96px -392.66667px #00ffb7, 217px -362.66667px #ff00f2,
+      -72px 16.33333px #ff0048, -167px 22.33333px #ffbf00,
+      71px 41.33333px #8000ff, -72px -152.66667px #d9ff00,
+      31px -396.66667px #00ff80, 61px 43.33333px #ffea00,
+      -31px -61.66667px #00a2ff, -39px -184.66667px #0084ff,
+      4px -86.66667px #51ff00, 25px -189.66667px #ffd900,
+      163px -129.66667px #00ff1e, 153px -378.66667px #f06, 56px -30.66667px #fb0,
+      -35px -296.66667px #48ff00, -35px -98.66667px #a600ff,
+      148px -52.66667px #00aeff, -105px -228.66667px #10f,
+      -135px -390.66667px #00ff2f, 199px 64.33333px #0f9,
+      195px -224.66667px #fc0, 108px -156.66667px #00ff95,
+      -120px 28.33333px #ff00c4, -109px -58.66667px #0f4,
+      -155px -369.66667px #f70, 7px -344.66667px #00ff04,
+      -230px -308.66667px #f04, 116px 9.33333px #ef0, 46px 55.33333px #8f0,
+      157px -13.66667px #ff0040, -213px -221.66667px #7f0,
+      -141px -257.66667px #ff00b7, -48px 13.33333px #0f0, 93px -254.66667px #fd0,
+      47px -171.66667px #03f, 53px 20.33333px #4f0, 13px -8.66667px #ff0080,
+      160px -357.66667px #0051ff, -23px -122.66667px #ff0084,
+      139px -323.66667px #00ff15, 231px -402.66667px #3c00ff,
+      -201px -180.66667px #00ff51, -139px -125.66667px #15ff00,
+      96px -120.66667px #1500ff, 110px -222.66667px #f0d,
+      233px -281.66667px #00fff7, 186px -364.66667px #ffea00,
+      184px 23.33333px #ffbf00;
   }
 }
 @-webkit-keyframes gravity {
