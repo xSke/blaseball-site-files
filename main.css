@@ -16087,6 +16087,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .Bet-Header-Types-Button {
   font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2em;
 }
 .theme-dark .Bet-Header-Types-Button {
   background: rgba(30, 30, 30, 0.6392156862745098);
@@ -16115,6 +16117,22 @@ input[type="number"]::-webkit-outer-spin-button {
 .theme-light .Bet-Header-Types-Button-Active,
 .theme-light .Bet-Header-Types-Button:active {
   color: #fff !important;
+}
+.Bet-Header-Types-Button-Disabled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  opacity: 0.8;
+  cursor: no-drop;
+}
+.theme-dark .Bet-Header-Types-Button-Disabled {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .Bet-Header-Types-Button-Disabled {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
 }
 .Bet-CloseUp {
   width: 100%;
@@ -16264,6 +16282,12 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
+.Bet-CloseUp-Team-Info-Batting .Bet-CloseUp-Team-Info-Stars,
+.Bet-CloseUp-Team-Info-Pitching .Bet-CloseUp-Team-Info-Stars {
+  text-align: left;
+  text-align: initial;
 }
 .Bet-CloseUp-Team-Info-Pitching {
   font-size: 16px;
@@ -16406,6 +16430,153 @@ input[type="number"]::-webkit-outer-spin-button {
 .Bet-CloseUp-Summary-Line-Num .Bet-List-Placed-Bet-Odds-Percent {
   margin-top: 1px;
 }
+.Bet-CloseUp-Champion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lora", "Courier New", monospace, serif;
+  margin: 10px 0;
+  padding: 0 30px;
+}
+.Bet-CloseUp-Champion-SmallHeader {
+  font-size: 14px;
+}
+.Bet-CloseUp-Champion-Team {
+  border-radius: 5px;
+  padding: 10px 5px;
+  min-height: 140px;
+  width: 100%;
+}
+.theme-dark .Bet-CloseUp-Champion-Team {
+  background: #fff;
+}
+.theme-light .Bet-CloseUp-Champion-Team {
+  background: #000;
+}
+.theme-dark .Bet-CloseUp-Champion-Team {
+  color: #000;
+}
+.theme-light .Bet-CloseUp-Champion-Team {
+  color: #fff;
+}
+.Bet-CloseUp-Champion-Team-Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1em;
+}
+.Bet-CloseUp-Champion-Team-Header .Bet-List-MatchUps-Team-Icon {
+  width: 55px;
+  height: 55px;
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+.Bet-CloseUp-Champion-Team-Data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1em;
+}
+.Bet-CloseUp-Champion-Team-Data-Section {
+  display: flex;
+  flex-direction: column;
+}
+.Bet-CloseUp-Champion-Team-Data-Section .Bet-CloseUp-Team-Info-Header {
+  margin-left: 5px;
+}
+.Bet-CloseUp-Champion-Team-Data-Section:last-child {
+  align-items: flex-end;
+}
+.Bet-CloseUp-Champion-Team-Data-Section:last-child
+  .Bet-CloseUp-Team-Info-Header {
+  margin-right: 5px;
+}
+.Bet-CloseUp-Champion-Team-Payout {
+  display: flex;
+}
+.Bet-CloseUp-Champion-Team-Payout-Small {
+  font-size: 14px !important;
+}
+.Bet-CloseUp-Champion-Team-Payout-Medium {
+  font-size: 16px !important;
+}
+.Bet-CloseUp-Champion-Team-Payout svg {
+  width: 26px;
+  height: 26px;
+  margin-left: 2px;
+}
+.Bet-CloseUp-Champion-Info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  gap: 15px;
+  align-items: center;
+  justify-items: center;
+  margin-top: 15px;
+}
+.Bet-CloseUp-Champion-Info-Standings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.Bet-CloseUp-Champion-Info-Standings-Line {
+  font-weight: 700;
+  line-height: 24px;
+}
+.Bet-CloseUp-Champion-Info-Standings-Line span {
+  font-size: 22px;
+}
+.Bet-CloseUp-Champion-Info-Stars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+}
+.Bet-CloseUp-Champion-Outcome {
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 26px 20px 5px;
+}
+.theme-dark .Bet-CloseUp-Champion-Outcome {
+  background: #000;
+}
+.theme-light .Bet-CloseUp-Champion-Outcome {
+  background: #fff;
+}
+.Bet-CloseUp-Champion-Outcome-Exists {
+  margin-top: 5px;
+}
+.Bet-CloseUp-Champion-Outcome-Payout {
+  display: flex;
+  font-family: "Lora", "Courier New", monospace, serif;
+}
+.theme-dark .Bet-CloseUp-Champion-Outcome-Payout {
+  color: #fff;
+}
+.theme-light .Bet-CloseUp-Champion-Outcome-Payout {
+  color: #000;
+}
+.Bet-CloseUp-Champion-Outcome-Payout svg {
+  width: 26px;
+  height: 26px;
+  margin-left: 2px;
+}
+.Bet-CloseUp-Champion-Outcome-Button {
+  margin: 0 auto;
+}
 .Bet-Schedule {
   display: flex;
   align-items: center;
@@ -16508,16 +16679,16 @@ input[type="number"]::-webkit-outer-spin-button {
   position: relative;
 }
 .theme-dark .Bet-List-MatchUps-Team {
-  background: rgba(30, 30, 30, 0.6392156862745098) !important;
+  background: rgba(30, 30, 30, 0.6392156862745098);
 }
 .theme-light .Bet-List-MatchUps-Team {
-  background: hsla(0, 0%, 89%, 0.7098039215686275) !important;
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
 }
 .theme-dark .Bet-List-MatchUps-Team:first-child {
-  background: #1f1f1f !important;
+  background: #1f1f1f;
 }
 .theme-light .Bet-List-MatchUps-Team:first-child {
-  background: #ebebeb !important;
+  background: #ebebeb;
 }
 .theme-dark .Bet-List-MatchUps-Team-Selected {
   background: #fff !important;
@@ -16538,11 +16709,11 @@ input[type="number"]::-webkit-outer-spin-button {
   background: #000 !important;
 }
 .Bet-List-MatchUps-Team-Selected-Placed {
-  cursor: default;
+  cursor: default !important;
 }
 .Bet-List-MatchUps-Team-Fade {
   opacity: 0.5;
-  cursor: default;
+  cursor: default !important;
 }
 .Bet-List-MatchUps-Team-Icon {
   width: 50px;
@@ -16558,6 +16729,34 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 26px;
   font-weight: 700;
   font-family: "Lora", "Courier New", monospace, serif;
+  display: flex;
+  align-items: center;
+}
+.Bet-List-Champions {
+  margin-top: 52px;
+}
+.Bet-List-Team {
+  display: grid;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  min-width: 150px;
+  min-height: 95px;
+  grid-template-columns: 50px auto;
+  justify-content: flex-start;
+  grid-gap: 10px;
+  gap: 10px;
+  position: relative;
+  cursor: pointer;
+}
+.theme-dark .Bet-List-Team {
+  background: rgba(30, 30, 30, 0.6392156862745098);
+}
+.theme-light .Bet-List-Team {
+  background: hsla(0, 0%, 89%, 0.7098039215686275);
+}
+.Bet-List-Team-Icon {
+  margin-bottom: 0;
 }
 .Bet-List-Placed-Bet {
   width: 100%;
@@ -16695,6 +16894,11 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 24px;
   margin-left: 5px;
 }
+.BigNumber {
+  font-size: 55px;
+  line-height: 22px;
+  margin-bottom: 5px;
+}
 @media (max-width: 1080px) {
   .Bet {
     display: flex;
@@ -16715,7 +16919,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .Bet-Header {
     padding: 5px 10px;
-    height: 70px;
+    height: 140px;
   }
   .Bet-Header-Title {
     font-size: 24px;
@@ -16749,6 +16953,13 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .Bet-CloseUp-Type {
     font-size: 16px;
+  }
+  .Bet-CloseUp-Champion-Outcome {
+    width: 100%;
+    flex-direction: column;
+  }
+  .Bet-CloseUp-Champion-Outcome-Exists {
+    padding: 0;
   }
   .Bet-CloseUp-Mobile {
     position: fixed;
@@ -16790,6 +17001,9 @@ input[type="number"]::-webkit-outer-spin-button {
   .Bet-CloseUp-Mobile-Big-Expanded {
     max-height: 335px;
   }
+  .Bet-CloseUp-Mobile-Big-Expanded-Champion {
+    max-height: 300px;
+  }
   .Bet-CloseUp-Mobile-Big-Expanded .Bet-CloseUp-Group-Wrapper {
     margin-bottom: 10px;
     width: 100%;
@@ -16809,6 +17023,11 @@ input[type="number"]::-webkit-outer-spin-button {
   .Bet-CloseUp-Mobile-Data-Expanded {
     height: 80px;
     padding-top: 10px;
+  }
+  .Bet-CloseUp-Mobile-Data-Champion {
+    height: 90px;
+    width: 100%;
+    padding-top: 0;
   }
   .Bet-CloseUp-Mobile-CanClick {
     width: 100px;
@@ -16895,6 +17114,9 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .theme-light .Bet-CloseUp-Mobile-Team {
     border-color: #fff;
+  }
+  .Bet-CloseUp-Mobile-Team-Champion {
+    position: relative;
   }
   .Bet-CloseUp-Mobile-Text {
     padding: 0 5px;
@@ -23644,62 +23866,60 @@ button:focus-visible {
 }
 @-webkit-keyframes bang {
   to {
-    box-shadow: -166px -79.66667px #00ffc4, -191px -294.66667px #7bff00,
-      2px -296.66667px #ff004d, 224px -186.66667px #08f,
-      -46px -76.66667px #ff0015, 83px -339.66667px #5e00ff,
-      190px -215.66667px #f01, -31px -394.66667px #7bff00,
-      109px -88.66667px #ff4800, -247px -393.66667px #08f,
-      -244px -214.66667px #ef0, -85px -309.66667px #f0d,
-      -90px -256.66667px #00ff7b, -235px -271.66667px #bfff00,
-      -109px -319.66667px #00ff0d, -45px -362.66667px #af0,
-      210px 61.33333px #cf0, -10px -353.66667px #0dff00,
-      -177px -400.66667px #f0a, -140px -74.66667px #fb00ff,
-      83px 21.33333px #ff002b, -94px -345.66667px #f40,
-      -103px -205.66667px #ff0095, 55px 0.33333px #009dff,
-      -217px -133.66667px #84ff00, 192px 3.33333px #84ff00,
-      -155px -411.66667px #ff00e1, 138px -282.66667px #f20,
-      -110px -361.66667px #ffae00, 208px 61.33333px #f06,
-      -226px -52.66667px #cf0, -220px -74.66667px #00ffe6,
-      130px 36.33333px #1500ff, -200px 58.33333px #51ff00,
-      194px -393.66667px #00ffc4, -174px 11.33333px #00d9ff,
-      -24px -27.66667px #f70, 121px -393.66667px #ff0084,
-      223px -239.66667px #f90, 170px 33.33333px #ff00e6,
-      -177px -29.66667px #00ffd5, 158px 62.33333px #0fd,
-      57px -55.66667px #2b00ff, 113px -85.66667px #9dff00,
-      118px 83.33333px #00ff0d, -193px -71.66667px #1e00ff,
-      125px -125.66667px #ff1a00, 45px -277.66667px #005eff,
-      -81px -249.66667px #ff00ae, -206px 56.33333px #00ff91,
-      -203px -407.66667px #d9ff00;
+    box-shadow: -205px 75.33333px #0091ff, 152px -267.66667px #f70,
+      58px -260.66667px #0073ff, -230px -220.66667px #70f,
+      84px -223.66667px #ff3c00, 55px -375.66667px #1e00ff,
+      -241px -111.66667px #0026ff, 210px -56.66667px #20f,
+      -62px -41.66667px #07f, 48px -342.66667px #15ff00,
+      -161px -341.66667px #2f0, 71px -98.66667px #e6ff00,
+      122px -70.66667px #ff00c4, 85px -210.66667px #26ff00,
+      -39px -289.66667px #0cf, 111px -205.66667px #002bff,
+      -156px -378.66667px #fa0, 73px -261.66667px #37ff00,
+      51px -43.66667px #ff1e00, -127px 31.33333px #0026ff,
+      192px -29.66667px #7b00ff, 241px -238.66667px #002bff,
+      126px -300.66667px #ff006a, 141px -108.66667px #ff6200,
+      -72px -337.66667px #00fff7, 230px -173.66667px #ff00d0,
+      -87px 59.33333px #b700ff, -241px -111.66667px #62ff00,
+      162px 27.33333px #ff0084, -153px -87.66667px #00b3ff,
+      -47px -44.66667px #a600ff, -78px -295.66667px #f700ff,
+      -228px -56.66667px #0f0, -39px -314.66667px #ff5900, -81px 60.33333px #f90,
+      -117px -175.66667px #00fff2, -196px -80.66667px #006aff,
+      143px -88.66667px #02f, -12px 3.33333px #8f0, 100px -80.66667px #a6ff00,
+      -241px -330.66667px #00d5ff, -157px -313.66667px #b3ff00,
+      -78px -77.66667px #9d00ff, 24px -143.66667px #ff4000,
+      -71px -395.66667px #ff0026, 119px -110.66667px #0062ff,
+      218px 83.33333px #00ff2f, 75px -361.66667px #6f00ff,
+      110px -175.66667px #eaff00, -192px -89.66667px #09ff00,
+      239px -103.66667px #5e00ff;
   }
 }
 @keyframes bang {
   to {
-    box-shadow: -166px -79.66667px #00ffc4, -191px -294.66667px #7bff00,
-      2px -296.66667px #ff004d, 224px -186.66667px #08f,
-      -46px -76.66667px #ff0015, 83px -339.66667px #5e00ff,
-      190px -215.66667px #f01, -31px -394.66667px #7bff00,
-      109px -88.66667px #ff4800, -247px -393.66667px #08f,
-      -244px -214.66667px #ef0, -85px -309.66667px #f0d,
-      -90px -256.66667px #00ff7b, -235px -271.66667px #bfff00,
-      -109px -319.66667px #00ff0d, -45px -362.66667px #af0,
-      210px 61.33333px #cf0, -10px -353.66667px #0dff00,
-      -177px -400.66667px #f0a, -140px -74.66667px #fb00ff,
-      83px 21.33333px #ff002b, -94px -345.66667px #f40,
-      -103px -205.66667px #ff0095, 55px 0.33333px #009dff,
-      -217px -133.66667px #84ff00, 192px 3.33333px #84ff00,
-      -155px -411.66667px #ff00e1, 138px -282.66667px #f20,
-      -110px -361.66667px #ffae00, 208px 61.33333px #f06,
-      -226px -52.66667px #cf0, -220px -74.66667px #00ffe6,
-      130px 36.33333px #1500ff, -200px 58.33333px #51ff00,
-      194px -393.66667px #00ffc4, -174px 11.33333px #00d9ff,
-      -24px -27.66667px #f70, 121px -393.66667px #ff0084,
-      223px -239.66667px #f90, 170px 33.33333px #ff00e6,
-      -177px -29.66667px #00ffd5, 158px 62.33333px #0fd,
-      57px -55.66667px #2b00ff, 113px -85.66667px #9dff00,
-      118px 83.33333px #00ff0d, -193px -71.66667px #1e00ff,
-      125px -125.66667px #ff1a00, 45px -277.66667px #005eff,
-      -81px -249.66667px #ff00ae, -206px 56.33333px #00ff91,
-      -203px -407.66667px #d9ff00;
+    box-shadow: -205px 75.33333px #0091ff, 152px -267.66667px #f70,
+      58px -260.66667px #0073ff, -230px -220.66667px #70f,
+      84px -223.66667px #ff3c00, 55px -375.66667px #1e00ff,
+      -241px -111.66667px #0026ff, 210px -56.66667px #20f,
+      -62px -41.66667px #07f, 48px -342.66667px #15ff00,
+      -161px -341.66667px #2f0, 71px -98.66667px #e6ff00,
+      122px -70.66667px #ff00c4, 85px -210.66667px #26ff00,
+      -39px -289.66667px #0cf, 111px -205.66667px #002bff,
+      -156px -378.66667px #fa0, 73px -261.66667px #37ff00,
+      51px -43.66667px #ff1e00, -127px 31.33333px #0026ff,
+      192px -29.66667px #7b00ff, 241px -238.66667px #002bff,
+      126px -300.66667px #ff006a, 141px -108.66667px #ff6200,
+      -72px -337.66667px #00fff7, 230px -173.66667px #ff00d0,
+      -87px 59.33333px #b700ff, -241px -111.66667px #62ff00,
+      162px 27.33333px #ff0084, -153px -87.66667px #00b3ff,
+      -47px -44.66667px #a600ff, -78px -295.66667px #f700ff,
+      -228px -56.66667px #0f0, -39px -314.66667px #ff5900, -81px 60.33333px #f90,
+      -117px -175.66667px #00fff2, -196px -80.66667px #006aff,
+      143px -88.66667px #02f, -12px 3.33333px #8f0, 100px -80.66667px #a6ff00,
+      -241px -330.66667px #00d5ff, -157px -313.66667px #b3ff00,
+      -78px -77.66667px #9d00ff, 24px -143.66667px #ff4000,
+      -71px -395.66667px #ff0026, 119px -110.66667px #0062ff,
+      218px 83.33333px #00ff2f, 75px -361.66667px #6f00ff,
+      110px -175.66667px #eaff00, -192px -89.66667px #09ff00,
+      239px -103.66667px #5e00ff;
   }
 }
 @-webkit-keyframes gravity {
