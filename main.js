@@ -18175,7 +18175,7 @@
                             case 0:
                               return (e.next = 2), Ho();
                             case 2:
-                              void 0 !== (t = e.sent) && L(t);
+                              void 0 !== (t = e.sent) && t.length > 0 && L(t);
                             case 4:
                             case "end":
                               return e.stop();
