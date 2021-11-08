@@ -18634,9 +18634,11 @@
               children: "There are no teams to Bet on at this time.",
             });
           else {
-            var Ie = T.sort(function (e, t) {
-              return e.odds === t.odds ? (e.teamId > t.teamId ? -1 : 1) : e.odds > t.odds ? -1 : 1;
-            });
+            var Ie = T
+              ? T.sort(function (e, t) {
+                  return e.odds === t.odds ? (e.teamId > t.teamId ? -1 : 1) : e.odds > t.odds ? -1 : 1;
+                })
+              : [];
             Ie &&
               (Ce = Object(O.jsxs)(O.Fragment, {
                 children: [
