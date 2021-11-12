@@ -17855,7 +17855,7 @@
                       }))
                   : b("Error cancelling bet. Please try again.", { appearance: "error" });
             },
-            ye = A.postseasons.length > 0 || 7 === A.sim.phase || 8 === A.sim.phase,
+            ye = (A.postseasons.length > 0 && A.sim.phase >= 9) || 7 === A.sim.phase || 8 === A.sim.phase,
             Ce = void 0 !== A && void 0 !== A.sim ? A.sim.season : -1,
             Ie = A.sim.day,
             Ne = Ie + 13;
