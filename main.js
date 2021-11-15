@@ -42477,15 +42477,19 @@
                         className: "Checkout-Form-Box Checkout-Center",
                         children: [
                           Object(O.jsx)("h2", { className: "Checkout-Form-Box-Header", children: "Checkout" }),
-                          Object(O.jsx)("p", {
-                            className: "Checkout-Form-Box-Subheader",
-                            children: "Please click below to complete this transaction using real money.",
-                          }),
                           p
-                            ? Object(O.jsx)("a", {
-                                className: "Stripe-Button",
-                                href: h,
-                                children: Object(O.jsx)("span", { children: "Checkout with Stripe" }),
+                            ? Object(O.jsxs)(O.Fragment, {
+                                children: [
+                                  Object(O.jsx)("p", {
+                                    className: "Checkout-Form-Box-Subheader",
+                                    children: "Please click below to complete this transaction using real money.",
+                                  }),
+                                  Object(O.jsx)("a", {
+                                    className: "Stripe-Button",
+                                    href: h,
+                                    children: Object(O.jsx)("span", { children: "Checkout with Stripe" }),
+                                  }),
+                                ],
                               })
                             : Object(O.jsxs)("p", {
                                 className: "Checkout-Form-Box-Subheader",
