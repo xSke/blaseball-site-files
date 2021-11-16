@@ -24332,7 +24332,10 @@
                     onClick: function (e) {
                       fetch("".concat("https://api.blaseball.com", "/auth/logout"), { credentials: "include" }).then(
                         function (e) {
-                          e.ok && e.status && 200 === e.status && (a(), s.push("/"), (window.location.href = "/"));
+                          e.ok &&
+                            e.status &&
+                            200 === e.status &&
+                            (a(), s.push("/landing"), (window.location.href = "/landing"));
                         }
                       );
                     },
@@ -24439,6 +24442,7 @@
           t.sim &&
           (G
             ? (Z.push({ text: "Home", path: "/" }),
+              Z.push({ text: t.sim.phase >= 1 ? "Vote" : "Results", path: "/offseason" }),
               Z.push({
                 text: "League",
                 path: "/standings",
@@ -36362,7 +36366,19 @@
                 children: [
                   Object(O.jsx)(zn, { style: { width: "24px", height: "24px", marginRight: "5px" } }),
                   "The next Broadcast begins in",
-                  Object(O.jsx)(mC, { dateString: "2021-10-31T19:00:00.000Z", truncated: !0 }),
+                  Object(O.jsx)(mC, { dateString: "2021-12-06T16:00:00.000Z", truncated: !0 }),
+                ],
+              }),
+              Object(O.jsxs)("div", {
+                className: "Bulletin-Header-Text",
+                children: [
+                  "If you participated in our last Circuit, ",
+                  Object(O.jsx)("a", {
+                    className: "Bulletin-Header-Text-Link",
+                    href: "https://ontqpyarm7q.typeform.com/to/Jq8e2OQo",
+                    target: "_blank",
+                    children: "please fill out the survey!",
+                  }),
                 ],
               }),
               Object(O.jsxs)("div", {
@@ -36979,29 +36995,24 @@
                     children: [
                       n.deeperContent
                         ? n.deeperContent.map(function (e, t) {
-                            return Object(O.jsxs)(
-                              "ul",
-                              {
-                                className: "Bulletin-Item-Beat-Section",
-                                children: [
-                                  Object(O.jsx)(
-                                    "li",
-                                    { className: "Bulletin-Item-Beat-Section-Header", children: e.header },
-                                    "beat-" + t.toString()
-                                  ),
-                                  e.text.length > 0
-                                    ? e.text.map(function (e, a) {
-                                        return Object(O.jsx)(
-                                          "div",
-                                          { className: "Bulletin-Item-Beat-Section-Text", children: e },
-                                          "beat-" + t.toString() + "-" + a.toString()
-                                        );
-                                      })
-                                    : null,
-                                ],
-                              },
-                              "list-beat-" + t.toString()
-                            );
+                            return Object(O.jsxs)(O.Fragment, {
+                              children: [
+                                Object(O.jsx)(
+                                  "li",
+                                  { className: "Bulletin-Item-Beat-Section-Header", children: e.header },
+                                  "beat-" + t.toString()
+                                ),
+                                e.text.length > 0
+                                  ? e.text.map(function (e, a) {
+                                      return Object(O.jsx)(
+                                        "div",
+                                        { className: "Bulletin-Item-Beat-Section-Text", children: e },
+                                        "beat-" + t.toString() + "-" + a.toString()
+                                      );
+                                    })
+                                  : null,
+                              ],
+                            });
                           })
                         : null,
                       r && "" !== n.beat
@@ -42679,48 +42690,49 @@
           s = a[1],
           c = Object(r.useState)(),
           i = Object(l.a)(c, 2),
-          o = i[0],
-          A = i[1],
-          d = Object(r.useState)(Date.now()),
-          u = Object(l.a)(d, 2),
-          j = u[0],
-          m = (u[1], Object(r.useState)(!1)),
-          b = Object(l.a)(m, 2),
-          h = b[0],
-          g = b[1],
-          v = Object(r.useState)(""),
-          f = Object(l.a)(v, 2),
-          p = f[0],
-          x = f[1],
-          w = Object(r.useState)(""),
-          B = Object(l.a)(w, 2),
-          E = B[0],
-          y = B[1];
+          A = i[0],
+          d = i[1],
+          u = Object(r.useState)(Date.now()),
+          j = Object(l.a)(u, 2),
+          m = j[0],
+          b = (j[1], Object(r.useState)(!1)),
+          h = Object(l.a)(b, 2),
+          g = h[0],
+          v = h[1],
+          f = Object(r.useState)(""),
+          p = Object(l.a)(f, 2),
+          x = p[0],
+          w = p[1],
+          B = Object(r.useState)(""),
+          E = Object(l.a)(B, 2),
+          y = E[0],
+          C = E[1];
+        Object(o.g)();
         return (
           Object(r.useEffect)(function () {
-            h || (A({ pageClickEvents: {}, sessionDuration: 0, timestamp: new Date(Date.now()) }), g(!0));
+            g || (d({ pageClickEvents: {}, sessionDuration: 0, timestamp: new Date(Date.now()) }), v(!0));
           }, []),
           Object(r.useEffect)(
             function () {
-              void 0 !== o &&
-                ("/league" === E && Th(o, A, "Home.League.WatchLive", "Home.League.WatchLive.End"),
-                "/signup" === E && ((o.sessionDuration = Math.floor((Date.now() - j) / 1e3)), Qh(o, A)),
-                y(p));
+              void 0 !== A &&
+                ("/league" === y && Th(A, d, "Home.League.WatchLive", "Home.League.WatchLive.End"),
+                "/signup" === y && ((A.sessionDuration = Math.floor((Date.now() - m) / 1e3)), Qh(A, d)),
+                C(x));
             },
-            [p]
+            [x]
           ),
           Object(r.useEffect)(
             function () {
-              if (h && void 0 !== o) {
+              if (g && void 0 !== A) {
                 var e = setInterval(function () {
-                  (o.sessionDuration = Math.floor((Date.now() - j) / 1e3)), Qh(o, A);
+                  (A.sessionDuration = Math.floor((Date.now() - m) / 1e3)), Qh(A, d);
                 }, 6e4);
                 return function () {
                   return clearInterval(e);
                 };
               }
             },
-            [o]
+            [A]
           ),
           Object(r.useEffect)(function () {
             document.body.classList.add("theme-dark");
@@ -42741,19 +42753,20 @@
           void 0 !== e && e.isFetching
             ? Object(O.jsx)(GN, {})
             : n
-            ? Object(O.jsx)(HN, { clickTracker: o, setClickTracker: A, setCurrentPath: x })
-            : Object(O.jsx)(zN, { clickTracker: o, setClickTracker: A, setCurrentPath: x })
+            ? Object(O.jsx)(HN, { clickTracker: A, setClickTracker: d, setCurrentPath: w })
+            : Object(O.jsx)(zN, { clickTracker: A, setClickTracker: d, setCurrentPath: w })
         );
       }
       function zN(e) {
         var t = e.clickTracker,
           a = e.setClickTracker,
           n = e.setCurrentPath,
-          s = Object(o.h)(),
-          c = s.state && s.state.background;
+          s = Object(r.useContext)(R.context).user,
+          c = Object(o.h)(),
+          i = c.state && c.state.background;
         return (
           Object(r.useEffect)(function () {
-            n(s.pathname);
+            n(c.pathname);
           }, []),
           Object(O.jsxs)("div", {
             children: [
@@ -42762,8 +42775,17 @@
                 className: "Main-Body-Intro",
                 children: [
                   Object(O.jsxs)(o.d, {
-                    location: c || s,
+                    location: i || c,
                     children: [
+                      Object(O.jsx)(o.b, {
+                        exact: !0,
+                        path: "/",
+                        render: function () {
+                          return void 0 !== s && !s.isFetching && s.isSignedIn
+                            ? null
+                            : Object(O.jsx)(o.a, { to: "/landing" });
+                        },
+                      }),
                       Object(O.jsx)(o.b, { path: "/tos", children: Object(O.jsx)(kC, {}) }),
                       Object(O.jsx)(o.b, { path: "/privacy", children: Object(O.jsx)(PC, {}) }),
                       Object(O.jsx)(o.b, {
@@ -42777,10 +42799,10 @@
                       }),
                       Object(O.jsx)(o.b, { path: "/faq", children: Object(O.jsx)(BI, {}) }),
                       Object(O.jsx)(o.b, { path: "/thebeat/:beatNumber?", children: Object(O.jsx)(EN, {}) }),
-                      Object(O.jsx)(o.b, { path: "/", children: Object(O.jsx)(ip, {}) }),
+                      Object(O.jsx)(o.b, { path: "/landing", children: Object(O.jsx)(ip, {}) }),
                     ],
                   }),
-                  c &&
+                  i &&
                     Object(O.jsxs)(O.Fragment, {
                       children: [
                         Object(O.jsx)(o.b, {
@@ -42978,6 +43000,15 @@
                         Object(O.jsxs)(o.d, {
                           location: v || g,
                           children: [
+                            Object(O.jsx)(o.b, {
+                              exact: !0,
+                              path: "/landing",
+                              render: function () {
+                                return void 0 !== h && !h.isFetching && h.isSignedIn
+                                  ? Object(O.jsx)(o.a, { to: "/" })
+                                  : null;
+                              },
+                            }),
                             Object(O.jsx)(o.b, { path: "/tos", children: Object(O.jsx)(kC, {}) }),
                             Object(O.jsx)(o.b, { path: "/privacy", children: Object(O.jsx)(PC, {}) }),
                             Object(O.jsx)(o.b, { path: "/about", children: Object(O.jsx)(cp, {}) }),
@@ -42991,6 +43022,7 @@
                               path: "/thebook",
                               children: Object(O.jsx)(_C, { clickTracker: j, setClickTracker: m }),
                             }),
+                            Object(O.jsx)(o.b, { path: "/offseason", children: Object(O.jsx)(bC, {}) }),
                             Object(O.jsx)(o.b, {
                               path: "/login",
                               children: Object(O.jsx)(Zp, { isLogin: !0, clickTracker: j, setClickTracker: m }),
@@ -43124,6 +43156,15 @@
                         Object(O.jsxs)(o.d, {
                           location: v || g,
                           children: [
+                            Object(O.jsx)(o.b, {
+                              exact: !0,
+                              path: "/landing",
+                              render: function () {
+                                return void 0 !== h && !h.isFetching && h.isSignedIn
+                                  ? Object(O.jsx)(o.a, { to: "/" })
+                                  : null;
+                              },
+                            }),
                             Object(O.jsx)(o.b, { path: "/tos", children: Object(O.jsx)(kC, {}) }),
                             Object(O.jsx)(o.b, { path: "/privacy", children: Object(O.jsx)(PC, {}) }),
                             Object(O.jsx)(o.b, { path: "/about", children: Object(O.jsx)(cp, {}) }),
@@ -43269,6 +43310,15 @@
                         Object(O.jsxs)(o.d, {
                           location: v || g,
                           children: [
+                            Object(O.jsx)(o.b, {
+                              exact: !0,
+                              path: "/landing",
+                              render: function () {
+                                return void 0 !== h && !h.isFetching && h.isSignedIn
+                                  ? Object(O.jsx)(o.a, { to: "/" })
+                                  : null;
+                              },
+                            }),
                             Object(O.jsx)(o.b, { path: "/tos", children: Object(O.jsx)(kC, {}) }),
                             Object(O.jsx)(o.b, { path: "/privacy", children: Object(O.jsx)(PC, {}) }),
                             Object(O.jsx)(o.b, { path: "/about", children: Object(O.jsx)(cp, {}) }),
