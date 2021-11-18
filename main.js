@@ -36370,18 +36370,6 @@
                 ],
               }),
               Object(O.jsxs)("div", {
-                className: "Bulletin-Header-Text",
-                children: [
-                  "If you participated in our last Circuit, ",
-                  Object(O.jsx)("a", {
-                    className: "Bulletin-Header-Text-Link",
-                    href: "https://ontqpyarm7q.typeform.com/to/Jq8e2OQo",
-                    target: "_blank",
-                    children: "please fill out the survey!",
-                  }),
-                ],
-              }),
-              Object(O.jsxs)("div", {
                 className: "Bulletin-Rows Bulletin-Rows-Offseason",
                 children: [
                   Object(O.jsx)(iI, {
