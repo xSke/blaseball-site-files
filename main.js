@@ -35389,9 +35389,9 @@
                           children: [
                             "The Game Band",
                             Object(O.jsx)("br", {}),
-                            "448 S Hill St. Suite 301",
+                            "2261 Market St #8848",
                             Object(O.jsx)("br", {}),
-                            "Los Angeles, CA 90013",
+                            "San Francisco, CA 94114",
                             Object(O.jsx)("br", {}),
                             Object(O.jsx)("a", {
                               href: "mailto:legal@thegameband.com",
