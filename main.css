@@ -20550,7 +20550,7 @@ button:focus-visible {
   left: 32px;
 }
 .Header-Logo-Tag {
-  margin: 10px;
+  margin: 30px 16px;
   padding: 5px;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
@@ -20565,7 +20565,9 @@ button:focus-visible {
   background: hsla(0, 0%, 72.5%, 0.65098);
 }
 .Header-Logo-Icon {
+  width: 340px;
   max-width: 340px;
+  margin-left: 10px;
   margin-top: -10px;
 }
 .Header-Social {
