@@ -37326,7 +37326,7 @@
             return Object(un.jsx)(OE, { className: "Blessings-Option-SmallIcon" });
           case "worst_batters_alternate_4":
             return Object(un.jsx)(BE, { className: "Blessings-Option-SmallIcon" });
-          case "peanut_favor":
+          case "peanut_blessing":
             return Object(un.jsx)(ws, { className: "Blessings-Option-SmallIcon" });
           case "caves_of_qud_item":
             return Object(un.jsx)("div", { className: "Blessings-Option-Qud Blessings-Option-SmallIcon" });
@@ -43025,36 +43025,39 @@
           Object(r.useEffect)(function () {
             w || (g({ pageClickEvents: {}, sessionDuration: 0, timestamp: new Date(Date.now()) }), B(!0));
           }, []),
-          Object(r.useEffect)(function () {
-            var e = (function () {
-              var e = Object(d.a)(
-                o.a.mark(function e() {
-                  return o.a.wrap(function (e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return (
-                            (e.next = 2),
-                            gb("".concat(qN, "/tutorial/restart"), JSON.stringify({})).then(function (e) {
-                              e.status &&
-                                200 === e.status &&
-                                e.ok &&
-                                ((t.tutorialComplete = !1), a(Object(A.a)({}, t)));
-                            })
-                          );
-                        case 2:
-                        case "end":
-                          return e.stop();
-                      }
-                  }, e);
-                })
-              );
-              return function () {
-                return e.apply(this, arguments);
-              };
-            })();
-            "/tutorial" === k.pathname && t && t.isSignedIn && !t.tutorialComplete && n && n.Onboarding && e();
-          }, []),
+          Object(r.useEffect)(
+            function () {
+              var e = (function () {
+                var e = Object(d.a)(
+                  o.a.mark(function e() {
+                    return o.a.wrap(function (e) {
+                      for (;;)
+                        switch ((e.prev = e.next)) {
+                          case 0:
+                            return (
+                              (e.next = 2),
+                              gb("".concat(qN, "/tutorial/restart"), JSON.stringify({})).then(function (e) {
+                                e.status &&
+                                  200 === e.status &&
+                                  e.ok &&
+                                  ((t.tutorialComplete = !1), a(Object(A.a)({}, t)));
+                              })
+                            );
+                          case 2:
+                          case "end":
+                            return e.stop();
+                        }
+                    }, e);
+                  })
+                );
+                return function () {
+                  return e.apply(this, arguments);
+                };
+              })();
+              "/tutorial" === k.pathname && t && t.tutorialComplete && t.isSignedIn && n && n.Onboarding && e();
+            },
+            [t.isSignedIn, n]
+          ),
           Object(r.useEffect)(
             function () {
               void 0 !== h &&
