@@ -30,10 +30,10 @@
         "description": ""
     },
     {
-        "name": "Snowy",
-        "background": "#68969e",
+        "name": "Snow",
+        "background": "#1F4F57",
         "color": "#ffffff",
-        "description": ""
+        "description": "WINTER STORM WARNING"
     },
     {
         "name": "Acidic",
