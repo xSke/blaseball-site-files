@@ -10229,6 +10229,14 @@ input[type="number"]::-webkit-outer-spin-button {
 .Player-Slogan {
   font-style: italic;
 }
+.Player-PeanutSlogan {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.theme-dark .Player-PeanutSlogan,
+.theme-light .Player-PeanutSlogan {
+  color: red;
+}
 .Player-Section:not(:last-child),
 .Player-Subheader {
   margin-bottom: 10px;
@@ -10441,6 +10449,14 @@ input[type="number"]::-webkit-outer-spin-button {
 .Team-Slogan {
   font-style: italic;
 }
+.Team-PeanutSlogan {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.theme-dark .Team-PeanutSlogan,
+.theme-light .Team-PeanutSlogan {
+  color: red;
+}
 .Team-Section-Shadows {
   display: flex;
   flex-direction: column;
@@ -10464,7 +10480,7 @@ input[type="number"]::-webkit-outer-spin-button {
   grid-template-columns: auto 100px 140px;
   min-height: 34px;
   align-items: center;
-  padding: 2px 20px 2px 40px;
+  padding: 0 20px 0 40px;
   line-height: 1.2em;
 }
 .theme-dark .Team-Player-Line-Blank:nth-child(odd),
@@ -10576,6 +10592,69 @@ input[type="number"]::-webkit-outer-spin-button {
   background: #bdb3c3;
   color: #000;
   box-shadow: 0 0 5px 4px #bdb3c3;
+}
+.Team-Player-Name {
+  padding: 2px;
+}
+.Team-Player-Name.Frozen {
+  background: linear-gradient(
+    128deg,
+    hsla(0, 0%, 100%, 0.2),
+    rgba(228, 241, 255, 0.35) 15%,
+    rgba(227, 240, 255, 0.25) 22%,
+    rgba(242, 248, 255, 0.2) 25%,
+    rgba(226, 240, 255, 0.2) 32%,
+    rgba(224, 239, 255, 0.3) 55%,
+    rgba(234, 244, 255, 0.4) 78%,
+    rgba(217, 235, 255, 0.35) 100%,
+    rgba(210, 231, 255, 0.35) 0,
+    rgba(198, 225, 255, 0.4) 0
+  );
+  border-radius: 3px;
+  border: 2px solid rgba(184, 218, 252, 0.25);
+}
+.Team-Player-Name.Frozen.Light {
+  background: linear-gradient(
+    128deg,
+    rgba(115, 179, 219, 0.2),
+    rgba(118, 160, 205, 0.6) 15%,
+    rgba(77, 128, 185, 0.6) 22%,
+    rgba(132, 168, 213, 0.7) 25%,
+    rgba(105, 141, 182, 0.2) 32%,
+    rgba(118, 160, 205, 0.6) 55%,
+    rgba(131, 165, 201, 0.5) 100%,
+    rgba(109, 162, 222, 0.6) 0
+  );
+  border-color: rgba(118, 160, 205, 0.5);
+}
+.Team-Player-Name.Frozen-Icon {
+  color: #8b9aaa;
+  position: absolute;
+  top: 93%;
+  left: 0.5rem;
+  height: 0.7em;
+}
+.Team-Player-Name.Frozen-Icon.Light {
+  color: #759eca;
+}
+.Team-Player-Name.Frozen-Line {
+  padding: 0;
+  position: absolute;
+  top: 4px;
+  height: 2px;
+  background: hsla(0, 0%, 100%, 0.4);
+  border-radius: 3px;
+}
+.Team-Player-Name.Frozen-Line.Light {
+  background: hsla(0, 0%, 100%, 0.8);
+}
+.Team-Player-Name.Frozen-Line.Left {
+  left: 3%;
+  width: 2%;
+}
+.Team-Player-Name.Frozen-Line.Right {
+  left: 7%;
+  width: 20%;
 }
 .Team-Player-Ratings {
   font-family: "Lora", "Courier New", monospace, serif;
@@ -17496,6 +17575,27 @@ button:focus-visible {
   width: 35px;
   height: 35px;
   margin-right: 5px;
+}
+#root .Bulletin-Item-Peanut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+#root .Bulletin-Item-Peanut-Image {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 10px 10px #000;
+  margin: 15px 0;
+}
+#root .Bulletin-Item-Peanut-Text {
+  font-size: 20px;
+  font-weight: 700;
+}
+.theme-dark #root .Bulletin-Item-Peanut-Text,
+.theme-light #root .Bulletin-Item-Peanut-Text {
+  color: #ff5353;
 }
 #root .Bulletin-Widget {
   display: flex;
