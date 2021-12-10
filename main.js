@@ -211,7 +211,7 @@
       var n,
         r = a(2),
         s = a.n(r),
-        c = a(46),
+        c = a(47),
         i = a.n(c),
         l = (a(610), a(4)),
         o = a.n(l),
@@ -18823,7 +18823,7 @@
                   })
             );
           }),
-        aO = (a(128), a(49));
+        aO = (a(128), a(42));
       !(function (e) {
         (e[(e.Live = 0)] = "Live"), (e[(e.Bets = 1)] = "Bets");
       })($g || ($g = {}));
@@ -20454,6 +20454,41 @@
             ),
             Object(r.useEffect)(
               function () {
+                var e = (function () {
+                  var e = Object(d.a)(
+                    o.a.mark(function e() {
+                      var t;
+                      return o.a.wrap(function (e) {
+                        for (;;)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return (
+                                (t = ie.length - 1),
+                                (e.next = 3),
+                                aO.scroller.scrollTo("Game-" + t.toString(), {
+                                  duration: 300,
+                                  delay: 0,
+                                  smooth: "easeInOutCubic",
+                                  containerId: "Bet-Container",
+                                })
+                              );
+                            case 3:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    })
+                  );
+                  return function () {
+                    return e.apply(this, arguments);
+                  };
+                })();
+                ie.length > 3 && e();
+              },
+              [y]
+            ),
+            Object(r.useEffect)(
+              function () {
                 if (y) {
                   if (ie.length > 0) {
                     var e = "",
@@ -20559,122 +20594,127 @@
                             );
                           })
                         : [],
-                      c = t.map(function (e) {
-                        var a,
-                          n,
-                          s = function (t) {
+                      c = t.map(function (e, a) {
+                        var n,
+                          s,
+                          c = function (t) {
                             void 0 === ne && jO(e.id, e.homeTeam, e.awayTeam, t, ie, le);
                           },
-                          c = ie.find(function (t) {
+                          i = ie.find(function (t) {
                             return t.teamId === e.awayTeam;
                           }),
-                          i = ie.find(function (t) {
+                          l = ie.find(function (t) {
                             return t.teamId === e.homeTeam;
                           }),
-                          l = $.find(function (t) {
+                          o = $.find(function (t) {
                             return t.gameId === e.id && t.teamId === e.awayTeam;
                           }),
-                          o = $.find(function (t) {
+                          A = $.find(function (t) {
                             return t.gameId === e.id && t.teamId === e.homeTeam;
                           });
-                        c ? r.push(l) : i && r.push(o), l || (l = { odds: 0 }), o || (o = { odds: 0 });
-                        var A = !1;
+                        i ? r.push(o) : l && r.push(A), o || (o = { odds: 0 }), A || (A = { odds: 0 });
+                        var d = !1;
                         t.length <= 1 &&
-                          ((A = !0),
-                          (a = h.teams.find(function (t) {
+                          ((d = !0),
+                          (n = h.teams.find(function (t) {
                             return t.id === e.awayTeam;
                           })),
-                          (n = h.teams.find(function (t) {
+                          (s = h.teams.find(function (t) {
                             return t.id === e.homeTeam;
                           })));
-                        var d = 0,
-                          u = 0;
-                        a && ((d = be[a.id]), e.awayPitcher && (u = pe[e.awayPitcher]));
-                        var m = 0,
-                          j = 0;
+                        var u = 0,
+                          m = 0;
+                        n && ((u = be[n.id]), e.awayPitcher && (m = pe[e.awayPitcher]));
+                        var j = 0,
+                          g = 0;
                         return (
-                          n && ((m = be[n.id]), e.homePitcher && (j = pe[e.homePitcher])),
-                          Object(mn.jsxs)("div", {
-                            className: "Bet-CloseUp-Group",
-                            children: [
-                              Object(mn.jsxs)(
-                                "div",
-                                {
-                                  className:
-                                    "Bet-CloseUp-Team" +
-                                    (c ? " Bet-CloseUp-Team-Selected" : "") +
-                                    (A ? " Bet-CloseUp-Team-Single" : ""),
-                                  onClick: function () {
-                                    return s(!0);
+                          s && ((j = be[s.id]), e.homePitcher && (g = pe[e.homePitcher])),
+                          Object(mn.jsxs)(
+                            aO.Element,
+                            {
+                              className: "Bet-CloseUp-Group",
+                              name: "Game-" + a.toString(),
+                              children: [
+                                Object(mn.jsxs)(
+                                  "div",
+                                  {
+                                    className:
+                                      "Bet-CloseUp-Team" +
+                                      (i ? " Bet-CloseUp-Team-Selected" : "") +
+                                      (d ? " Bet-CloseUp-Team-Single" : ""),
+                                    onClick: function () {
+                                      return c(!0);
+                                    },
+                                    children: [
+                                      Object(mn.jsxs)("div", {
+                                        className: "Bet-CloseUp-Team-Header",
+                                        children: [
+                                          Object(mn.jsx)("div", {
+                                            className: "Bet-List-MatchUps-Team-Icon",
+                                            style: { background: e.awayTeamColor },
+                                            children: Z(e.awayTeamEmoji),
+                                          }),
+                                          Object(mn.jsxs)("div", {
+                                            className: "Bet-List-MatchUps-Team-Odds",
+                                            children: [Math.round(100 * o.odds), "%"],
+                                          }),
+                                        ],
+                                      }),
+                                      n
+                                        ? Object(mn.jsx)(bO, {
+                                            teamId: e.awayTeam,
+                                            standings: b.standings,
+                                            battingRating: u,
+                                            pitcherName: e.awayPitcherName,
+                                            pitcherRating: m,
+                                          })
+                                        : null,
+                                    ],
                                   },
-                                  children: [
-                                    Object(mn.jsxs)("div", {
-                                      className: "Bet-CloseUp-Team-Header",
-                                      children: [
-                                        Object(mn.jsx)("div", {
-                                          className: "Bet-List-MatchUps-Team-Icon",
-                                          style: { background: e.awayTeamColor },
-                                          children: Z(e.awayTeamEmoji),
-                                        }),
-                                        Object(mn.jsxs)("div", {
-                                          className: "Bet-List-MatchUps-Team-Odds",
-                                          children: [Math.round(100 * l.odds), "%"],
-                                        }),
-                                      ],
-                                    }),
-                                    a
-                                      ? Object(mn.jsx)(bO, {
-                                          teamId: e.awayTeam,
-                                          standings: b.standings,
-                                          battingRating: d,
-                                          pitcherName: e.awayPitcherName,
-                                          pitcherRating: u,
-                                        })
-                                      : null,
-                                  ],
-                                },
-                                "awayTeam"
-                              ),
-                              Object(mn.jsxs)(
-                                "div",
-                                {
-                                  className:
-                                    "Bet-CloseUp-Team" +
-                                    (i ? " Bet-CloseUp-Team-Selected" : "") +
-                                    (A ? " Bet-CloseUp-Team-Single" : ""),
-                                  onClick: function () {
-                                    return s(!1);
+                                  "awayTeam"
+                                ),
+                                Object(mn.jsxs)(
+                                  "div",
+                                  {
+                                    className:
+                                      "Bet-CloseUp-Team" +
+                                      (l ? " Bet-CloseUp-Team-Selected" : "") +
+                                      (d ? " Bet-CloseUp-Team-Single" : ""),
+                                    onClick: function () {
+                                      return c(!1);
+                                    },
+                                    children: [
+                                      Object(mn.jsxs)("div", {
+                                        className: "Bet-CloseUp-Team-Header",
+                                        children: [
+                                          Object(mn.jsx)("div", {
+                                            className: "Bet-List-MatchUps-Team-Icon",
+                                            style: { background: e.homeTeamColor },
+                                            children: Z(e.homeTeamEmoji),
+                                          }),
+                                          Object(mn.jsxs)("div", {
+                                            className: "Bet-List-MatchUps-Team-Odds",
+                                            children: [Math.round(100 * A.odds), "%"],
+                                          }),
+                                        ],
+                                      }),
+                                      s
+                                        ? Object(mn.jsx)(bO, {
+                                            teamId: e.homeTeam,
+                                            standings: b.standings,
+                                            battingRating: j,
+                                            pitcherName: e.homePitcherName,
+                                            pitcherRating: g,
+                                          })
+                                        : null,
+                                    ],
                                   },
-                                  children: [
-                                    Object(mn.jsxs)("div", {
-                                      className: "Bet-CloseUp-Team-Header",
-                                      children: [
-                                        Object(mn.jsx)("div", {
-                                          className: "Bet-List-MatchUps-Team-Icon",
-                                          style: { background: e.homeTeamColor },
-                                          children: Z(e.homeTeamEmoji),
-                                        }),
-                                        Object(mn.jsxs)("div", {
-                                          className: "Bet-List-MatchUps-Team-Odds",
-                                          children: [Math.round(100 * o.odds), "%"],
-                                        }),
-                                      ],
-                                    }),
-                                    n
-                                      ? Object(mn.jsx)(bO, {
-                                          teamId: e.homeTeam,
-                                          standings: b.standings,
-                                          battingRating: m,
-                                          pitcherName: e.homePitcherName,
-                                          pitcherRating: j,
-                                        })
-                                      : null,
-                                  ],
-                                },
-                                "homeTeam"
-                              ),
-                            ],
-                          })
+                                  "homeTeam"
+                                ),
+                              ],
+                            },
+                            a
+                          )
                         );
                       }),
                       i = Object(mn.jsx)(Jd, {}),
@@ -20776,7 +20816,12 @@
                                 children: ["Day ", D + 1, " Bet"],
                               }),
                               Object(mn.jsx)("div", { className: "Bet-CloseUp-Type", children: e }),
-                              Object(mn.jsxs)("div", { className: "Bet-CloseUp-Group-Wrapper", children: [c, a] }),
+                              Object(mn.jsxs)(aO.Element, {
+                                className: "Bet-CloseUp-Group-Wrapper",
+                                id: "Bet-Container",
+                                name: "Container",
+                                children: [c, a],
+                              }),
                               A,
                               o,
                               i,
