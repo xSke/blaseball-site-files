@@ -41436,7 +41436,7 @@
           a = Object(m.h)();
         return t && t.sim
           ? e.tutorialComplete
-            ? t.sim.phase === v.RestPhase
+            ? t.sim.phase === v.Election
               ? Object(mn.jsx)(LS, {})
               : e.unlockedElection || G(t.sim, "SIM_NO_COIN")
               ? Object(mn.jsx)(RS, { id: a.state.id })
