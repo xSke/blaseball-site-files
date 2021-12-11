@@ -41109,7 +41109,7 @@
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (e.next = 2), xh(n, 13);
+                      return (e.next = 2), xh(n, 0);
                     case 2:
                       return (
                         (r = e.sent), w(r), (e.next = 6), Wb(null === (t = a.sim) || void 0 === t ? void 0 : t.season)
@@ -41156,8 +41156,8 @@
                     case 25:
                       l = e.sent;
                     case 26:
-                      b({ recap: s, eventResults: i, blessingResults: c, decreeResults: l });
-                    case 27:
+                      b({ recap: s, eventResults: i, blessingResults: c, decreeResults: l }), console.log(s);
+                    case 28:
                     case "end":
                       return e.stop();
                   }
