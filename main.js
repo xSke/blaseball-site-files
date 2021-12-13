@@ -32129,20 +32129,19 @@
           }
           if (!s.sim) return Object(mn.jsx)(Xd, {});
           if (void 0 === s.postseasons) return null;
-          var w = o >= 99,
-            B = s.sim.phase == v.Tournament,
-            E = s.sim.day,
-            y = void 0 !== s && void 0 !== s.sim ? s.sim.season : -1,
-            C = Object(mn.jsx)(Wx, { currentDay: o, schedule: b });
+          var w = s.sim.phase == v.Tournament,
+            B = s.sim.day,
+            E = void 0 !== s && void 0 !== s.sim ? s.sim.season : -1,
+            y = Object(mn.jsx)(Wx, { currentDay: o, schedule: b });
           return (
-            w && (C = Object(mn.jsx)(Ux, { currentDay: o, schedule: b, matchups: f })),
+            w && (y = Object(mn.jsx)(Ux, { currentDay: o, schedule: b, matchups: f })),
             Object(mn.jsxs)(mn.Fragment, {
               children: [
                 Object(mn.jsxs)("h2", {
                   className: "League-Header",
                   children: [
                     "Season",
-                    Object(mn.jsx)("span", { className: "League-Number", children: y + 1 }),
+                    Object(mn.jsx)("span", { className: "League-Number", children: E + 1 }),
                     "Day",
                     Object(mn.jsx)("span", { className: "League-Number", children: o + 1 }),
                   ],
@@ -32154,10 +32153,10 @@
                   schedule: c.schedule,
                   setLoadSchedule: c.setActivateRefresh,
                   view: 0,
-                  scheduleEnd: B ? E + 1 : null === (t = s.season) || void 0 === t ? void 0 : t.totalDaysInSeason,
+                  scheduleEnd: w ? B + 1 : null === (t = s.season) || void 0 === t ? void 0 : t.totalDaysInSeason,
                 }),
-                B ? Object(mn.jsx)(Fx, {}) : null,
-                C,
+                w ? Object(mn.jsx)(Fx, {}) : null,
+                y,
               ],
             })
           );
