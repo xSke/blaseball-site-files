@@ -41651,15 +41651,16 @@
         });
       }
       function rD() {
-        var e = Object(r.useContext)(wn.context).user,
-          t = Object(r.useContext)(Tn.context),
-          a = Object(m.h)();
-        return t && t.sim
-          ? e.tutorialComplete
-            ? t.sim.phase === v.Election
+        var e,
+          t = Object(r.useContext)(wn.context).user,
+          a = Object(r.useContext)(Tn.context),
+          n = Object(m.h)();
+        return a && a.sim
+          ? t.tutorialComplete
+            ? a.sim.phase === v.Election
               ? Object(mn.jsx)(nD, {})
-              : e.unlockedElection || G(t.sim, "SIM_NO_COIN")
-              ? Object(mn.jsx)(sD, { id: a.state.id })
+              : t.unlockedElection || G(a.sim, "SIM_NO_COIN")
+              ? Object(mn.jsx)(sD, { id: null === (e = n.state) || void 0 === e ? void 0 : e.id })
               : Object(mn.jsx)(lD, {})
             : Object(mn.jsx)(iD, {})
           : null;
