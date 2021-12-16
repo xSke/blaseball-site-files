@@ -24830,7 +24830,20 @@
           I = !1;
         G(u.sim, "SIM_SHOW_LEVELS") && ((C = n.homeTeamData.level <= 4), (I = n.awayTeamData.level <= 4));
         var N = n.homeTeamData.seasAttr.includes("PARTY_TIME"),
-          S = n.awayTeamData.seasAttr.includes("PARTY_TIME");
+          S = n.awayTeamData.seasAttr.includes("PARTY_TIME"),
+          D = s.homeTeamRecord,
+          P = s.awayTeamRecord;
+        if (n.isPostseason) {
+          (D = new ye()), (P = new ye());
+          var T = u.tournamentData.winners || [],
+            k = T.find(function (e) {
+              return e.roundNumber === n.tournamentRound && e.teamId == n.homeTeamData.id;
+            }),
+            L = T.find(function (e) {
+              return e.roundNumber === n.tournamentRound && e.teamId == n.awayTeamData.id;
+            });
+          (D.wins = k ? k.roundScore : 0), (P.wins = L ? L.roundScore : 0);
+        }
         return Object(mn.jsxs)("li", {
           className: "GameWidget ".concat(j.complete ? "IsComplete" : "", " ").concat(y),
           "aria-label": "".concat(s.awayTeamName, " versus ").concat(s.homeTeamName),
@@ -24864,7 +24877,7 @@
                       name: s.awayTeamName,
                       light: I,
                       partyTime: S,
-                      record: s.awayTeamRecord,
+                      record: P,
                       isPostseason: n.isPostseason,
                       odds: n.awayOdds,
                       betsSection: w,
@@ -24888,7 +24901,7 @@
                       name: s.homeTeamName,
                       light: C,
                       partyTime: N,
-                      record: s.homeTeamRecord,
+                      record: D,
                       isPostseason: n.isPostseason,
                       odds: n.homeOdds,
                       betsSection: x,
