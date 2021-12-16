@@ -20442,7 +20442,7 @@ button:focus-visible {
     margin-right: 0;
   }
 }
-.EventTicker-Display {
+.EventTicker {
   width: calc(100% - 40px);
   height: 30px;
   margin: 0 15px 15px;
@@ -20450,32 +20450,13 @@ button:focus-visible {
   overflow: hidden;
   border-radius: 4px;
 }
-.theme-dark .EventTicker-Display {
+.theme-dark .EventTicker {
   background: rgba(30, 30, 30, 0.6392156862745098);
 }
-.theme-light .EventTicker-Display {
+.theme-light .EventTicker {
   background: hsla(0, 0%, 89%, 0.7098039215686275);
 }
-.EventTicker-News {
-  width: 60px;
-  padding: 0 5px;
-  position: absolute;
-  background: red;
-  border-radius: 5px;
-  font-size: 14px;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: center;
-  display: none;
-}
-.theme-dark .EventTicker-News {
-  color: #fff;
-}
-.theme-light .EventTicker-News {
-  color: #000;
-}
-.EventTicker-Scroll {
+.EventTicker-Wrapper {
   box-sizing: content-box;
   padding-left: 100%;
   padding-top: 2px;
@@ -20484,70 +20465,15 @@ button:focus-visible {
   overflow: hidden;
   border-radius: 4px;
 }
-.EventTicker-Group {
-  display: inline-block;
-  padding-right: 100%;
-  box-sizing: content-box;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-.EventTicker-Group-Animating-60 {
-  -webkit-animation-name: ticker;
-  animation-name: ticker;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-duration: 60s;
-  animation-duration: 60s;
-}
-.EventTicker-Group-Animating-120 {
-  -webkit-animation-name: ticker;
-  animation-name: ticker;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-duration: 120s;
-  animation-duration: 120s;
-}
-.EventTicker-Group-Animating-180 {
-  -webkit-animation-name: ticker;
-  animation-name: ticker;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-duration: 180s;
-  animation-duration: 180s;
-}
-.EventTicker-Group-Animating-240 {
-  -webkit-animation-name: ticker;
-  animation-name: ticker;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-duration: 240s;
-  animation-duration: 240s;
-}
-.EventTicker-Group-Animating-300 {
-  -webkit-animation-name: ticker;
-  animation-name: ticker;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-duration: 300s;
-  animation-duration: 300s;
-}
 .EventTicker-Item {
   display: inline-block;
   border-radius: 4px;
   padding: 2px 5px;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
 }
 .theme-dark .EventTicker-Item {
   color: #fff;
@@ -20567,10 +20493,43 @@ button:focus-visible {
 .EventTicker-Item:not(:last-child) {
   margin-right: 100px;
 }
+.EventTicker-Scroll {
+  display: inline-block;
+  padding-right: 100%;
+  box-sizing: content-box;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  -webkit-animation: ticker 30s linear infinite;
+  animation: ticker 30s linear infinite;
+}
+.EventTicker-Scroll-60 {
+  -webkit-animation-duration: 60s;
+  animation-duration: 60s;
+}
+.EventTicker-Scroll-120 {
+  -webkit-animation-duration: 120s;
+  animation-duration: 120s;
+}
+.EventTicker-Scroll-180 {
+  -webkit-animation-duration: 180s;
+  animation-duration: 180s;
+}
+.EventTicker-Scroll-240 {
+  -webkit-animation-duration: 240s;
+  animation-duration: 240s;
+}
+.EventTicker-Scroll-300 {
+  -webkit-animation-duration: 300s;
+  animation-duration: 300s;
+}
 @-webkit-keyframes ticker {
   0% {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+    visibility: visible;
   }
   to {
     -webkit-transform: translate3d(-100%, 0, 0);
@@ -20581,6 +20540,7 @@ button:focus-visible {
   0% {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+    visibility: visible;
   }
   to {
     -webkit-transform: translate3d(-100%, 0, 0);
@@ -20588,12 +20548,11 @@ button:focus-visible {
   }
 }
 @media (max-width: 1080px) {
-  .EventTicker-Display {
+  .EventTicker {
     width: calc(100% - 20px);
     margin: 0 8px 10px;
   }
-  .EventTicker-Group,
-  .EventTicker-News {
+  .EventTicker-Item {
     font-size: 12px;
   }
 }
@@ -20795,7 +20754,7 @@ button:focus-visible {
     font-size: 14px;
   }
   .Header-Logo-Tag {
-    font-size: 12px;
+    font-size: 10px;
     margin: 0 5px;
     padding: 5px 5px 2px;
   }
