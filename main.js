@@ -24939,7 +24939,7 @@
       }
       function Ap(e) {
         var t = e.isPostseason
-          ? "first to +/-".concat(e.seriesLength)
+          ? "best of ".concat(e.seriesLength)
           : "".concat(e.seriesIndex, " of ").concat(e.seriesLength);
         return Object(mn.jsx)("div", {
           className: "Widget-ScoreLabel Widget-ScoreLabel--Series",
