@@ -16526,7 +16526,7 @@
                       return (
                         (e.prev = 0),
                         (e.next = 3),
-                        fetch("".concat(Tb, "/database/feedbyphase?phase=").concat(a, "&season=").concat(t), {
+                        fetch("".concat(Tb, "/database/mostrecentfeedbyphase?phase=").concat(a, "&season=").concat(t), {
                           credentials: "include",
                         })
                       );
@@ -41381,47 +41381,47 @@
           h = Object(r.useState)(!1),
           g = Object(u.a)(h, 2),
           O = g[0],
-          v = g[1],
-          f = Object(r.useState)([]),
-          p = Object(u.a)(f, 2),
-          x = p[0],
-          w = p[1],
-          B = Object(r.useState)(!0),
-          E = Object(u.a)(B, 2),
-          y = E[0],
-          C = E[1],
-          I = Object(r.useState)(!0),
-          N = Object(u.a)(I, 2),
-          S = N[0],
-          P = N[1],
-          T = Object(r.useState)(!0),
-          L = Object(u.a)(T, 2),
-          Q = L[0],
-          R = L[1],
-          z = Object(r.useState)(!0),
-          H = Object(u.a)(z, 2),
-          V = H[0],
-          G = H[1],
-          U = Object(r.useState)(!0),
-          W = Object(u.a)(U, 2),
-          F = W[0],
-          Y = W[1],
-          J = (Object(r.useContext)(nA.context), null !== (e = t.favoriteTeam) && void 0 !== e ? e : ""),
-          X = 0 === l ? "Circuits" : "Amplifications",
-          q = "Charges",
-          Z = "Distortions";
-        function K() {
-          return (K = Object(d.a)(
+          f = g[1],
+          p = Object(r.useState)([]),
+          x = Object(u.a)(p, 2),
+          w = x[0],
+          B = x[1],
+          E = Object(r.useState)(!0),
+          y = Object(u.a)(E, 2),
+          C = y[0],
+          I = y[1],
+          N = Object(r.useState)(!0),
+          S = Object(u.a)(N, 2),
+          P = S[0],
+          T = S[1],
+          L = Object(r.useState)(!0),
+          Q = Object(u.a)(L, 2),
+          R = Q[0],
+          z = Q[1],
+          H = Object(r.useState)(!0),
+          V = Object(u.a)(H, 2),
+          G = V[0],
+          U = V[1],
+          W = Object(r.useState)(!0),
+          F = Object(u.a)(W, 2),
+          Y = F[0],
+          J = F[1],
+          X = (Object(r.useContext)(nA.context), null !== (e = t.favoriteTeam) && void 0 !== e ? e : ""),
+          q = 0 === l ? "Circuits" : "Amplifications",
+          Z = "Charges",
+          K = "Distortions";
+        function _() {
+          return (_ = Object(d.a)(
             o.a.mark(function e() {
               var t, r, s, c, i, l, A, d, u;
               return o.a.wrap(function (e) {
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      return (e.next = 2), Bh(n, 0);
+                      return (e.next = 2), Bh(n, v.Election);
                     case 2:
                       return (
-                        (r = e.sent), w(r), (e.next = 6), Yb(null === (t = a.sim) || void 0 === t ? void 0 : t.season)
+                        (r = e.sent), B(r), (e.next = 6), Yb(null === (t = a.sim) || void 0 === t ? void 0 : t.season)
                       );
                     case 6:
                       if (((s = e.sent), (c = []), (i = []), (l = void 0), !s)) {
@@ -41465,8 +41465,8 @@
                     case 25:
                       l = e.sent;
                     case 26:
-                      b({ recap: s, eventResults: i, blessingResults: c, decreeResults: l }), console.log(s);
-                    case 28:
+                      b({ recap: s, eventResults: i, blessingResults: c, decreeResults: l });
+                    case 27:
                     case "end":
                       return e.stop();
                   }
@@ -41475,18 +41475,18 @@
           )).apply(this, arguments);
         }
         Object(r.useEffect)(function () {
-          v(!0),
+          f(!0),
             (function () {
-              return K.apply(this, arguments);
+              return _.apply(this, arguments);
             })().then(function () {
-              v(!1);
+              f(!1);
             });
         }, []);
-        var _ = function (e) {
+        var $ = function (e) {
           e.scrollIntoView({ behavior: "smooth", block: "start" });
         };
         if (!a || !a.sim || !j || !j.recap) return null;
-        var $ =
+        var ee =
             j.eventResults && j.recap && j.recap.eventResults.length > 0
               ? Object(bn.jsxs)("div", {
                   className: "Recap-Results",
@@ -41494,25 +41494,25 @@
                     Object(bn.jsxs)("button", {
                       className: "Recap-ResultsHeader",
                       id: "Tidings",
-                      "aria-label": Z,
+                      "aria-label": K,
                       onClick: function () {
-                        return Y(!F);
+                        return J(!Y);
                       },
-                      children: ["Tidings ", F ? Object(bn.jsx)(M.j, {}) : Object(bn.jsx)(M.i, {})],
+                      children: ["Tidings ", Y ? Object(bn.jsx)(M.j, {}) : Object(bn.jsx)(M.i, {})],
                     }),
-                    F
-                      ? x.map(function (e) {
+                    Y
+                      ? w.map(function (e) {
                           if (176 !== e.type) return null;
                           var t = e.metadata.children,
                             a = t
-                              ? x.filter(function (e) {
+                              ? w.filter(function (e) {
                                   return t.includes(e.id);
                                 })
                               : [];
                           return (
-                            y &&
+                            C &&
                               (a = a.filter(function (e) {
-                                return (e.teamTags && e.teamTags.includes(J)) || 0 === e.teamTags.length;
+                                return (e.teamTags && e.teamTags.includes(X)) || 0 === e.teamTags.length;
                               })),
                             a.length > 0 ? Object(bn.jsx)(sD, { event: e, subEvents: a }) : null
                           );
@@ -41521,7 +41521,7 @@
                   ],
                 })
               : null,
-          ee =
+          te =
             j.decreeResults && j.recap.decreeResults && j.recap.decreeResults.length > 0
               ? Object(bn.jsxs)("div", {
                   className: "Recap-Results",
@@ -41529,26 +41529,26 @@
                     Object(bn.jsxs)("button", {
                       className: "Recap-ResultsHeader",
                       id: "Decrees",
-                      "aria-label": X,
+                      "aria-label": q,
                       onClick: function () {
-                        return P(!S);
+                        return T(!P);
                       },
-                      children: [X, " ", S ? Object(bn.jsx)(M.j, {}) : Object(bn.jsx)(M.i, {})],
+                      children: [q, " ", P ? Object(bn.jsx)(M.j, {}) : Object(bn.jsx)(M.i, {})],
                     }),
-                    S
-                      ? x.map(function (e) {
+                    P
+                      ? w.map(function (e) {
                           if (59 !== e.type) return null;
                           var t = e.metadata.children,
                             a = t
-                              ? x.filter(function (e) {
+                              ? w.filter(function (e) {
                                   return t.includes(e.id);
                                 })
                               : [];
                           return (
                             1 === l &&
-                              y &&
+                              C &&
                               (a = a.filter(function (e) {
-                                return e.teamTags && e.teamTags.includes(J);
+                                return e.teamTags && e.teamTags.includes(X);
                               })),
                             a.length > 0 ? Object(bn.jsx)(rD, { event: e, subEvents: a }) : null
                           );
@@ -41557,30 +41557,30 @@
                   ],
                 })
               : null,
-          te = x.filter(function (e) {
+          ae = w.filter(function (e) {
             return 61 === e.type;
           }),
-          ae = [],
-          ne = null;
-        te.length > 0 &&
-          ((ae = te.map(function (e) {
+          ne = [],
+          re = null;
+        ae.length > 0 &&
+          ((ne = ae.map(function (e) {
             if (null === e.teamTags) return null;
-            if (y && !e.teamTags.includes(J)) return null;
+            if (C && !e.teamTags.includes(X)) return null;
             var t = e.metadata.children,
               a = t
-                ? x.filter(function (e) {
+                ? w.filter(function (e) {
                     return t.includes(e.id);
                   })
                 : [];
             return (
-              y &&
+              C &&
                 (a = a.filter(function (e) {
-                  return e.teamTags && e.teamTags.includes(J);
+                  return e.teamTags && e.teamTags.includes(X);
                 })),
               Object(bn.jsx)(aD, { event: e, subEvents: a })
             );
           })),
-          (ne = Object(bn.jsxs)("div", {
+          (re = Object(bn.jsxs)("div", {
             className: "Recap-Results",
             ref: c,
             style: { marginTop: "-70px", paddingTop: "70px" },
@@ -41588,46 +41588,46 @@
               Object(bn.jsxs)("button", {
                 className: "Recap-ResultsHeader",
                 id: "Wills",
-                "aria-label": q,
+                "aria-label": Z,
                 onClick: function () {
-                  return G(!V);
+                  return U(!G);
                 },
-                children: [q, " ", V ? Object(bn.jsx)(M.j, {}) : Object(bn.jsx)(M.i, {})],
+                children: [Z, " ", G ? Object(bn.jsx)(M.j, {}) : Object(bn.jsx)(M.i, {})],
               }),
-              V
+              G
                 ? Object(bn.jsx)(s.a.Fragment, {
                     children:
-                      ae.length <= 0
-                        ? Object(bn.jsxs)("div", { className: "Recap-NoneFound", children: ["No ", q, " found..."] })
-                        : ae,
+                      ne.length <= 0
+                        ? Object(bn.jsxs)("div", { className: "Recap-NoneFound", children: ["No ", Z, " found..."] })
+                        : ne,
                   })
                 : null,
             ],
           })));
-        var re = x.filter(function (e) {
+        var se = w.filter(function (e) {
             return 60 === e.type;
           }),
-          se = [],
-          ce = null;
-        re.length > 0 &&
-          ((se = re.map(function (e) {
+          ce = [],
+          ie = null;
+        se.length > 0 &&
+          ((ce = se.map(function (e) {
             if (null === e.teamTags) return null;
-            if (y && !e.teamTags.includes(J)) return null;
+            if (C && !e.teamTags.includes(X)) return null;
             var t = e.metadata.children,
               a = t
-                ? x.filter(function (e) {
+                ? w.filter(function (e) {
                     return t.includes(e.id);
                   })
                 : [];
             return (
-              y &&
+              C &&
                 (a = a.filter(function (e) {
-                  return e.teamTags && e.teamTags.includes(J);
+                  return e.teamTags && e.teamTags.includes(X);
                 })),
               Object(bn.jsx)(nD, { event: e, subEvents: a })
             );
           })),
-          (ce = Object(bn.jsxs)("div", {
+          (ie = Object(bn.jsxs)("div", {
             className: "Recap-Results",
             ref: i,
             style: { marginTop: "-70px", paddingTop: "70px" },
@@ -41635,41 +41635,41 @@
               Object(bn.jsxs)("button", {
                 className: "Recap-ResultsHeader",
                 id: "Blessings",
-                "aria-label": Z,
+                "aria-label": K,
                 onClick: function () {
-                  return R(!Q);
+                  return z(!R);
                 },
-                children: [Z, " ", Q ? Object(bn.jsx)(M.j, {}) : Object(bn.jsx)(M.i, {})],
+                children: [K, " ", R ? Object(bn.jsx)(M.j, {}) : Object(bn.jsx)(M.i, {})],
               }),
-              Q
+              R
                 ? Object(bn.jsx)(s.a.Fragment, {
                     children:
-                      se.length <= 0
-                        ? Object(bn.jsxs)("div", { className: "Recap-NoneFound", children: ["No ", Z, " found..."] })
-                        : se,
+                      ce.length <= 0
+                        ? Object(bn.jsxs)("div", { className: "Recap-NoneFound", children: ["No ", K, " found..."] })
+                        : ce,
                   })
                 : null,
             ],
           })));
-        var ie,
-          le = [],
-          oe = Object(D.a)(x);
+        var le,
+          oe = [],
+          Ae = Object(D.a)(w);
         try {
-          for (oe.s(); !(ie = oe.n()).done; ) {
-            var Ae,
-              de = ie.value;
-            if (null !== de.teamTags)
-              if (!y || de.teamTags.includes(J))
-                if (60 !== de.type && 61 !== de.type && 59 !== de.type && 176 !== de.type && -1 !== de.type)
-                  void 0 === (null === (Ae = de.metadata) || void 0 === Ae ? void 0 : Ae.parent) && le.push(de);
+          for (Ae.s(); !(le = Ae.n()).done; ) {
+            var de,
+              ue = le.value;
+            if (null !== ue.teamTags)
+              if (!C || ue.teamTags.includes(X))
+                if (60 !== ue.type && 61 !== ue.type && 59 !== ue.type && 176 !== ue.type && -1 !== ue.type)
+                  void 0 === (null === (de = ue.metadata) || void 0 === de ? void 0 : de.parent) && oe.push(ue);
           }
-        } catch (je) {
-          oe.e(je);
+        } catch (be) {
+          Ae.e(be);
         } finally {
-          oe.f();
+          Ae.f();
         }
-        var ue =
-            le.length > 0
+        var me =
+            oe.length > 0
               ? Object(bn.jsxs)("div", {
                   className: "Recap-Results",
                   children: [
@@ -41679,12 +41679,12 @@
                       style: { marginTop: "-70px", paddingTop: "70px" },
                       children: "Post Election",
                     }),
-                    Object(bn.jsx)(cD, { subEvents: le }),
+                    Object(bn.jsx)(cD, { subEvents: oe }),
                   ],
                 })
               : null,
-          me =
-            null === ce && null === ee
+          je =
+            null === ie && null === te
               ? Object(bn.jsx)("div", { className: "Recap-Note", children: "Nothing happened in this Election." })
               : null;
         return Object(bn.jsxs)("div", {
@@ -41700,24 +41700,24 @@
                     Object(bn.jsxs)(k.a, {
                       className: "Recap-Filters",
                       children: [
-                        te.length > 0
-                          ? Object(bn.jsxs)(Bd.a, {
-                              className: "Recap-Filters-Button",
-                              "aria-label": "Go To ".concat(q),
-                              onClick: function () {
-                                _(c.current);
-                              },
-                              children: ["Go To ", q],
-                            })
-                          : null,
-                        re.length > 0
+                        ae.length > 0
                           ? Object(bn.jsxs)(Bd.a, {
                               className: "Recap-Filters-Button",
                               "aria-label": "Go To ".concat(Z),
                               onClick: function () {
-                                _(i.current);
+                                $(c.current);
                               },
                               children: ["Go To ", Z],
+                            })
+                          : null,
+                        se.length > 0
+                          ? Object(bn.jsxs)(Bd.a, {
+                              className: "Recap-Filters-Button",
+                              "aria-label": "Go To ".concat(K),
+                              onClick: function () {
+                                $(i.current);
+                              },
+                              children: ["Go To ", K],
                             })
                           : null,
                         Object(bn.jsx)(k.a.Check, {
@@ -41725,14 +41725,14 @@
                           type: "switch",
                           id: "favteam",
                           label: "Favorite Team's Results Only",
-                          checked: y,
+                          checked: C,
                           onChange: function () {
-                            return C(!y);
+                            return I(!C);
                           },
                         }),
                       ],
                     }),
-                    Object(bn.jsxs)("div", { className: "Recap-Body", children: [ee, $, ne, ce, ue, me] }),
+                    Object(bn.jsxs)("div", { className: "Recap-Body", children: [te, ee, re, ie, me, je] }),
                   ],
                 }),
             Object(bn.jsx)(Cg, {}),
