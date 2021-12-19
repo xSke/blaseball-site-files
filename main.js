@@ -26851,11 +26851,15 @@
           id: "Main-Body",
           children: [
             Object(bn.jsxs)("div", {
-              className: "Bulletin-Header-Countdown",
+              className: "Bulletin-Header-Text",
               children: [
-                Object(bn.jsx)(kA, { style: { width: "24px", height: "24px", marginRight: "5px" } }),
-                "The next Broadcast begins in",
-                Object(bn.jsx)(mO, { dateString: "2021-12-06T16:00:00.000Z", truncated: !0 }),
+                "If you participated in our last Circuit, ",
+                Object(bn.jsx)("a", {
+                  className: "Bulletin-Header-Text-Link",
+                  href: "https://ontqpyarm7q.typeform.com/to/A0fSUBym",
+                  target: "_blank",
+                  children: "please fill out the survey!",
+                }),
               ],
             }),
             Object(bn.jsxs)("div", {
