@@ -41553,30 +41553,64 @@
           (a(1121),
           function (e) {
             var t = Object(r.useContext)(En.context).user,
-              a = Object(r.useContext)(nA.context),
-              n = e.event;
-            if (0 === n.teamTags.length) return null;
-            if (!a) return null;
-            var s = a.teams.find(function (e) {
-              return e.id === n.teamTags[0];
-            });
-            if (void 0 === s) return null;
-            var c = n.metadata;
-            return c
+              a = e.event,
+              n = Object(r.useState)(void 0),
+              s = Object(u.a)(n, 2),
+              c = s[0],
+              i = s[1];
+            if (
+              (Object(r.useEffect)(function () {
+                var e = (function () {
+                  var e = Object(d.a)(
+                    o.a.mark(function e() {
+                      var t, n;
+                      return o.a.wrap(function (e) {
+                        for (;;)
+                          switch ((e.prev = e.next)) {
+                            case 0:
+                              return (
+                                (e.next = 2),
+                                fetch(
+                                  "".concat("https://api.blaseball.com", "/database/team?id=").concat(a.teamTags[0])
+                                )
+                              );
+                            case 2:
+                              return (t = e.sent), (e.next = 5), t.json();
+                            case 5:
+                              (n = e.sent), i(n);
+                            case 7:
+                            case "end":
+                              return e.stop();
+                          }
+                      }, e);
+                    })
+                  );
+                  return function () {
+                    return e.apply(this, arguments);
+                  };
+                })();
+                e();
+              }, []),
+              0 === a.teamTags.length)
+            )
+              return null;
+            if (void 0 === c) return null;
+            var l = a.metadata;
+            return l
               ? Object(bn.jsxs)("div", {
                   className: "Recap-Decree-Container" + (t.lightMode ? " Recap-Decree-Container-LightMode" : ""),
                   children: [
                     Object(bn.jsx)("div", {
                       className: "Recap-Blessing-Info",
-                      children: Object(bn.jsx)("div", { className: "Recap-Blessing-Header", children: c.title }),
+                      children: Object(bn.jsx)("div", { className: "Recap-Blessing-Header", children: l.title }),
                     }),
                     Object(bn.jsxs)("div", {
                       className: "Recap-Blessing-Content",
                       children: [
                         Object(bn.jsx)("div", {
                           className: "Recap-Blessing-Team",
-                          style: { background: s.mainColor },
-                          children: K(s),
+                          style: { background: c.mainColor },
+                          children: K(c),
                         }),
                         Object(bn.jsx)("div", { className: "Recap-Blessing-Description", children: xb(e) }),
                       ],
@@ -41587,11 +41621,11 @@
                         className: "Recap-Blessing-Votes",
                         children: [
                           "This Filing - ",
-                          Math.round((c.dataVotes / c.willVotes) * 100),
+                          Math.round((l.dataVotes / l.willVotes) * 100),
                           "% of ",
-                          null === s || void 0 === s ? void 0 : s.nickname,
+                          null === c || void 0 === c ? void 0 : c.nickname,
                           " ",
-                          c.title,
+                          l.title,
                           " Votes",
                         ],
                       }),
