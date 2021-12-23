@@ -32735,8 +32735,8 @@
         }, []),
           Object(r.useEffect)(
             function () {
-              ND &&
-                ND.subscribe("ticker").bind("ticker-message", function (e) {
+              SD &&
+                SD.subscribe("ticker").bind("ticker-message", function (e) {
                   s([].concat(Object(P.a)(n), [e.message]));
                 });
             },
@@ -37154,145 +37154,145 @@
             )
           );
         },
-        FE =
-          (a(380),
-          function (e) {
-            var t = Object(r.useContext)(En.context),
-              a = t.user,
-              n = t.setUser,
-              s = Object(r.useContext)(nA.context),
-              c = Object(r.useContext)(Qn.context),
-              i = Object(r.useState)(null),
-              l = Object(u.a)(i, 2),
-              m = l[0],
-              j = l[1],
-              b = Object(r.useState)([]),
-              h = Object(u.a)(b, 2),
-              g = h[0],
-              O = h[1];
-            Object(r.useEffect)(
-              function () {
-                g.length < 1 && s && s.teams && O(zo(s.teams));
-              },
-              [s]
-            );
-            var v = (function () {
-              var t = Object(d.a)(
-                o.a.mark(function t() {
-                  return o.a.wrap(function (t) {
+        FE = (a(380), "https://api.blaseball.com"),
+        YE = function (e) {
+          var t = Object(r.useContext)(En.context),
+            a = t.user,
+            n = t.setUser,
+            s = (Object(r.useContext)(nA.context), Object(r.useContext)(Qn.context), Object(r.useState)(null)),
+            c = Object(u.a)(s, 2),
+            i = c[0],
+            l = c[1],
+            m = Object(r.useState)([]),
+            j = Object(u.a)(m, 2),
+            b = j[0],
+            h = j[1];
+          Object(r.useEffect)(function () {
+            var e = (function () {
+              var e = Object(d.a)(
+                o.a.mark(function e() {
+                  var t, a;
+                  return o.a.wrap(function (e) {
                     for (;;)
-                      switch ((t.prev = t.next)) {
+                      switch ((e.prev = e.next)) {
                         case 0:
-                          return (
-                            (t.next = 2),
-                            Qb(
-                              "".concat("https://api.blaseball.com", "/api/setFavoriteTeam"),
-                              JSON.stringify({ teamId: m })
-                            ).then(function (e) {
-                              e.status && 200 === e.status && e.ok && ((a.favoriteTeam = m), n(Object(A.a)({}, a)));
-                            })
-                          );
+                          return (e.next = 2), fetch("".concat(FE, "/database/teams"));
                         case 2:
-                          void 0 !== e.stepNum && void 0 !== e.setStepNum && e.setStepNum(e.stepNum + 1), e.dismiss();
-                        case 4:
+                          return (t = e.sent), (e.next = 5), t.json();
+                        case 5:
+                          (a = e.sent), h(zo(a));
+                        case 7:
                         case "end":
-                          return t.stop();
+                          return e.stop();
                       }
-                  }, t);
+                  }, e);
                 })
               );
               return function () {
-                return t.apply(this, arguments);
+                return e.apply(this, arguments);
               };
             })();
-            return s && c && s.teams
-              ? Object(bn.jsxs)(
-                  Xd,
-                  Object(A.a)(
-                    Object(A.a)({}, e),
-                    {},
-                    {
-                      className: "Welcome",
-                      children: [
-                        Object(bn.jsx)("div", {
-                          className: "Welcome-Teams-Wrapper",
-                          children: Object(bn.jsx)("div", {
-                            className: "Welcome-Teams",
-                            "aria-label": "Choose a Team",
-                            role: "list",
-                            children: g.map(function (e, t) {
-                              if (
-                                !1 === Y(e.id, s) &&
-                                !1 ===
-                                  (function (e, t) {
-                                    if (void 0 === t) return !1;
-                                    var a = !1;
-                                    return (
-                                      t.teams.forEach(function (t) {
-                                        t === e && (a = !0);
-                                      }),
-                                      a
-                                    );
-                                  })(e.id, c.tournament)
-                              )
-                                return null;
-                              var a = m === e.id;
-                              return Object(bn.jsxs)(
-                                "div",
-                                {
-                                  onClick: function () {
-                                    return j(e.id);
-                                  },
-                                  className: "Welcome-Team" + (a ? " Welcome-Team--Selected" : ""),
-                                  role: "button",
-                                  "aria-label": e.fullName + ", Slogan: " + e.slogan + ". Click to select.",
-                                  children: [
-                                    Object(bn.jsx)("div", {
-                                      className: "Welcome-Team-Name",
-                                      "aria-hidden": !0,
-                                      style: { color: e.secondaryColor },
-                                      children: e.fullName,
-                                    }),
-                                    Object(bn.jsx)("div", {
-                                      className: "Welcome-Team-Logo",
-                                      "aria-hidden": !0,
-                                      style: { background: e.mainColor },
-                                      children: K(e),
-                                    }),
-                                    Object(bn.jsx)("div", {
-                                      className: "Welcome-Team-Motto",
-                                      "aria-hidden": !0,
-                                      children: e.slogan,
-                                    }),
-                                    Object(bn.jsx)("div", {
-                                      className: "Welcome-Team-Stamp",
-                                      "aria-hidden": !0,
-                                      children: "ILBT",
-                                    }),
-                                  ],
-                                },
-                                t
-                              );
-                            }),
-                          }),
-                        }),
-                        Object(bn.jsx)("div", { className: "Welcome-Message", children: "" }),
-                        Object(bn.jsx)("div", {
-                          className: "Welcome-Submit-Wrapper",
-                          children: Object(bn.jsx)("button", {
-                            onClick: v,
-                            disabled: !m,
-                            className: "Welcome-Submit" + (m ? " Welcome-Submit--Ready" : ""),
-                            children: "Submit",
-                          }),
-                        }),
-                      ],
+            e();
+          }, []);
+          var g = (function () {
+            var t = Object(d.a)(
+              o.a.mark(function t() {
+                return o.a.wrap(function (t) {
+                  for (;;)
+                    switch ((t.prev = t.next)) {
+                      case 0:
+                        return (
+                          (t.next = 2),
+                          Qb("".concat(FE, "/api/setFavoriteTeam"), JSON.stringify({ teamId: i })).then(function (e) {
+                            e.status && 200 === e.status && e.ok && ((a.favoriteTeam = i), n(Object(A.a)({}, a)));
+                          })
+                        );
+                      case 2:
+                        void 0 !== e.stepNum && void 0 !== e.setStepNum && e.setStepNum(e.stepNum + 1), e.dismiss();
+                      case 4:
+                      case "end":
+                        return t.stop();
                     }
-                  )
+                }, t);
+              })
+            );
+            return function () {
+              return t.apply(this, arguments);
+            };
+          })();
+          return b
+            ? Object(bn.jsxs)(
+                Xd,
+                Object(A.a)(
+                  Object(A.a)({}, e),
+                  {},
+                  {
+                    className: "Welcome",
+                    children: [
+                      Object(bn.jsx)("div", {
+                        className: "Welcome-Teams-Wrapper",
+                        children: Object(bn.jsx)("div", {
+                          className: "Welcome-Teams",
+                          "aria-label": "Choose a Team",
+                          role: "list",
+                          children: b.map(function (e, t) {
+                            var a = i === e.id;
+                            return Object(bn.jsxs)(
+                              "div",
+                              {
+                                onClick: function () {
+                                  return l(e.id);
+                                },
+                                className: "Welcome-Team" + (a ? " Welcome-Team--Selected" : ""),
+                                role: "button",
+                                "aria-label": e.fullName + ", Slogan: " + e.slogan + ". Click to select.",
+                                children: [
+                                  Object(bn.jsx)("div", {
+                                    className: "Welcome-Team-Name",
+                                    "aria-hidden": !0,
+                                    style: { color: e.secondaryColor },
+                                    children: e.fullName,
+                                  }),
+                                  Object(bn.jsx)("div", {
+                                    className: "Welcome-Team-Logo",
+                                    "aria-hidden": !0,
+                                    style: { background: e.mainColor },
+                                    children: K(e),
+                                  }),
+                                  Object(bn.jsx)("div", {
+                                    className: "Welcome-Team-Motto",
+                                    "aria-hidden": !0,
+                                    children: e.slogan,
+                                  }),
+                                  Object(bn.jsx)("div", {
+                                    className: "Welcome-Team-Stamp",
+                                    "aria-hidden": !0,
+                                    children: "ILBT",
+                                  }),
+                                ],
+                              },
+                              t
+                            );
+                          }),
+                        }),
+                      }),
+                      Object(bn.jsx)("div", { className: "Welcome-Message", children: "" }),
+                      Object(bn.jsx)("div", {
+                        className: "Welcome-Submit-Wrapper",
+                        children: Object(bn.jsx)("button", {
+                          onClick: g,
+                          disabled: !i,
+                          className: "Welcome-Submit" + (i ? " Welcome-Submit--Ready" : ""),
+                          children: "Submit",
+                        }),
+                      }),
+                    ],
+                  }
                 )
-              : Object(bn.jsx)(Zd, {});
-          }),
-        YE = function (e) {
+              )
+            : Object(bn.jsx)(Zd, {});
+        },
+        JE = function (e) {
           var t = e.step,
             a = Object(r.useContext)(En.context).user,
             n = Object(r.useState)(!1),
@@ -37315,7 +37315,7 @@
             ),
             a && a.isSignedIn && c
               ? Object(bn.jsx)(
-                  FE,
+                  YE,
                   Object(A.a)(
                     Object(A.a)({}, e),
                     {},
@@ -37340,7 +37340,7 @@
               : null
           );
         },
-        JE = function (e) {
+        XE = function (e) {
           var t = e.step,
             a = Object(r.useContext)(En.context),
             n = a.user,
@@ -37464,8 +37464,8 @@
               )
             : null;
         },
-        XE = "https://api.blaseball.com",
-        qE = function (e) {
+        qE = "https://api.blaseball.com",
+        ZE = function (e) {
           var t = Object(r.useContext)(En.context).initUser,
             a = Object(m.g)(),
             n = Object(md.useToasts)().addToast,
@@ -37519,7 +37519,7 @@
                             code: E,
                             isLogin: g,
                           };
-                          Qb("".concat(XE, "/auth/local"), JSON.stringify(i)).then(function (e) {
+                          Qb("".concat(qE, "/auth/local"), JSON.stringify(i)).then(function (e) {
                             l(!1),
                               e.ok && e.status && 200 === e.status
                                 ? (g || n("Account Created", { appearance: "success" }),
@@ -37626,7 +37626,7 @@
                           Object(bn.jsx)("div", { className: "Auth-Divider", children: "OR" }),
                           Object(bn.jsxs)("a", {
                             className: "Auth-SocialAuth",
-                            href: "".concat(XE, "/auth/apple?redirectUrl=").concat(b),
+                            href: "".concat(qE, "/auth/apple?redirectUrl=").concat(b),
                             children: [
                               Object(bn.jsx)("div", {
                                 className: "Auth-SocialAuth-Icon-Container",
@@ -37637,7 +37637,7 @@
                           }),
                           Object(bn.jsxs)("a", {
                             className: "Auth-SocialAuth",
-                            href: "".concat(XE, "/auth/facebook?redirectUrl=").concat(b),
+                            href: "".concat(qE, "/auth/facebook?redirectUrl=").concat(b),
                             children: [
                               Object(bn.jsx)("div", {
                                 className: "Auth-SocialAuth-Icon-Container",
@@ -37648,7 +37648,7 @@
                           }),
                           Object(bn.jsxs)("a", {
                             className: "Auth-SocialAuth",
-                            href: "".concat(XE, "/auth/google?redirectUrl=").concat(b),
+                            href: "".concat(qE, "/auth/google?redirectUrl=").concat(b),
                             children: [
                               Object(bn.jsx)("div", {
                                 className: "Auth-SocialAuth-Icon-Container",
@@ -37678,7 +37678,7 @@
             ],
           });
         },
-        ZE = function (e) {
+        KE = function (e) {
           var t = Object(m.i)().token,
             a = Object(r.useContext)(En.context).initUser,
             n = Object(m.g)(),
@@ -37818,7 +37818,7 @@
                 ),
               });
         },
-        KE = function (e) {
+        _E = function (e) {
           Object(r.useContext)(En.context).initUser;
           var t = Object(m.g)(),
             a = Object(md.useToasts)().addToast,
@@ -37917,7 +37917,7 @@
             )
           );
         },
-        _E = function (e) {
+        $E = function (e) {
           var t = Object(r.useContext)(En.context),
             a = t.user,
             n = t.setUser,
@@ -38004,7 +38004,7 @@
             )
           );
         },
-        $E = function (e) {
+        ey = function (e) {
           var t = Object(r.useContext)(En.context).user,
             a = Object(r.useState)(!1),
             n = Object(u.a)(a, 2),
@@ -38020,7 +38020,7 @@
             ),
             t && t.isSignedIn && s
               ? Object(bn.jsx)(
-                  _E,
+                  $E,
                   Object(A.a)(
                     Object(A.a)({}, e),
                     {},
@@ -38045,7 +38045,7 @@
               : null
           );
         },
-        ey = s.a.createContext({
+        ty = s.a.createContext({
           blessings: [],
           decrees: [],
           wills: [],
@@ -38054,7 +38054,7 @@
           decreesToPass: 0,
           decreeExecutionType: 0,
         }),
-        ty = function (e) {
+        ay = function (e) {
           var t,
             a = e.children,
             n = Object(r.useContext)(Qn.context),
@@ -38102,16 +38102,16 @@
               },
               [null === (t = n.sim) || void 0 === t ? void 0 : t.phase]
             ),
-            Object(bn.jsx)(ey.Provider, { value: i, children: a })
+            Object(bn.jsx)(ty.Provider, { value: i, children: a })
           );
         };
-      ty.context = ey;
-      var ay,
-        ny = ty,
-        ry = ["title", "titleId"];
-      function sy() {
+      ay.context = ty;
+      var ny,
+        ry = ay,
+        sy = ["title", "titleId"];
+      function cy() {
         return (
-          (sy =
+          (cy =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -38120,71 +38120,10 @@
               }
               return e;
             }),
-          sy.apply(this, arguments)
+          cy.apply(this, arguments)
         );
-      }
-      function cy(e, t) {
-        if (null == e) return {};
-        var a,
-          n,
-          r = (function (e, t) {
-            if (null == e) return {};
-            var a,
-              n,
-              r = {},
-              s = Object.keys(e);
-            for (n = 0; n < s.length; n++) (a = s[n]), t.indexOf(a) >= 0 || (r[a] = e[a]);
-            return r;
-          })(e, t);
-        if (Object.getOwnPropertySymbols) {
-          var s = Object.getOwnPropertySymbols(e);
-          for (n = 0; n < s.length; n++)
-            (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
-        }
-        return r;
       }
       function iy(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = cy(e, ry);
-        return (
-          <svg
-            {...sy(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {ay || (ay = <image x={38} y={12} width={75} height={126} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var ly,
-        oy = r.forwardRef(iy),
-        Ay = (a.p, ["title", "titleId"]);
-      function dy() {
-        return (
-          (dy =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          dy.apply(this, arguments)
-        );
-      }
-      function uy(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -38203,49 +38142,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function ly(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = iy(e, sy);
+        return (
+          <svg
+            {...cy(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {ny || (ny = <image x={38} y={12} width={75} height={126} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var oy,
+        Ay = r.forwardRef(ly),
+        dy = (a.p, ["title", "titleId"]);
+      function uy() {
+        return (
+          (uy =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          uy.apply(this, arguments)
+        );
       }
       function my(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = uy(e, Ay);
-        return (
-          <svg
-            {...dy(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {ly || (ly = <image x={29} y={10} width={92} height={131} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var jy,
-        by = r.forwardRef(my),
-        hy = (a.p, ["title", "titleId"]);
-      function gy() {
-        return (
-          (gy =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          gy.apply(this, arguments)
-        );
-      }
-      function Oy(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -38264,49 +38203,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function jy(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = my(e, dy);
+        return (
+          <svg
+            {...uy(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {oy || (oy = <image x={29} y={10} width={92} height={131} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var by,
+        hy = r.forwardRef(jy),
+        gy = (a.p, ["title", "titleId"]);
+      function Oy() {
+        return (
+          (Oy =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          Oy.apply(this, arguments)
+        );
       }
       function vy(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = Oy(e, hy);
-        return (
-          <svg
-            {...gy(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {jy || (jy = <image x={38} y={18} width={74} height={114} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var fy,
-        py = r.forwardRef(vy),
-        xy = (a.p, ["title", "titleId"]);
-      function wy() {
-        return (
-          (wy =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          wy.apply(this, arguments)
-        );
-      }
-      function By(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -38325,49 +38264,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function fy(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = vy(e, gy);
+        return (
+          <svg
+            {...Oy(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {by || (by = <image x={38} y={18} width={74} height={114} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var py,
+        xy = r.forwardRef(fy),
+        wy = (a.p, ["title", "titleId"]);
+      function By() {
+        return (
+          (By =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          By.apply(this, arguments)
+        );
       }
       function Ey(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = By(e, xy);
-        return (
-          <svg
-            {...wy(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {fy || (fy = <image x={38} y={18} width={74} height={114} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var yy,
-        Cy = r.forwardRef(Ey),
-        Iy = (a.p, ["title", "titleId"]);
-      function Ny() {
-        return (
-          (Ny =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          Ny.apply(this, arguments)
-        );
-      }
-      function Sy(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -38386,49 +38325,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function yy(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = Ey(e, wy);
+        return (
+          <svg
+            {...By(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {py || (py = <image x={38} y={18} width={74} height={114} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var Cy,
+        Iy = r.forwardRef(yy),
+        Ny = (a.p, ["title", "titleId"]);
+      function Sy() {
+        return (
+          (Sy =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          Sy.apply(this, arguments)
+        );
       }
       function Dy(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = Sy(e, Iy);
-        return (
-          <svg
-            {...Ny(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {yy || (yy = <image x={44} y={11} width={63} height={128} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var Py,
-        ky = r.forwardRef(Dy),
-        Ty = (a.p, ["title", "titleId"]);
-      function Ly() {
-        return (
-          (Ly =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          Ly.apply(this, arguments)
-        );
-      }
-      function Qy(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -38447,49 +38386,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function Py(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = Dy(e, Ny);
+        return (
+          <svg
+            {...Sy(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {Cy || (Cy = <image x={44} y={11} width={63} height={128} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var ky,
+        Ty = r.forwardRef(Py),
+        Ly = (a.p, ["title", "titleId"]);
+      function Qy() {
+        return (
+          (Qy =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          Qy.apply(this, arguments)
+        );
       }
       function Ry(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = Qy(e, Ty);
-        return (
-          <svg
-            {...Ly(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {Py || (Py = <image x={41} y={12} width={68} height={127} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var My,
-        zy = r.forwardRef(Ry),
-        Hy = (a.p, ["title", "titleId"]);
-      function Vy() {
-        return (
-          (Vy =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          Vy.apply(this, arguments)
-        );
-      }
-      function Gy(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -38508,49 +38447,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function My(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = Ry(e, Ly);
+        return (
+          <svg
+            {...Qy(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {ky || (ky = <image x={41} y={12} width={68} height={127} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var zy,
+        Hy = r.forwardRef(My),
+        Vy = (a.p, ["title", "titleId"]);
+      function Gy() {
+        return (
+          (Gy =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          Gy.apply(this, arguments)
+        );
       }
       function Uy(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = Gy(e, Hy);
-        return (
-          <svg
-            {...Vy(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {My || (My = <image x={21} y={21} width={109} height={109} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var Wy,
-        Fy = r.forwardRef(Uy),
-        Yy = (a.p, ["title", "titleId"]);
-      function Jy() {
-        return (
-          (Jy =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          Jy.apply(this, arguments)
-        );
-      }
-      function Xy(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -38570,13 +38509,13 @@
         }
         return r;
       }
-      function qy(e, t) {
+      function Wy(e, t) {
         var a = e.title,
           n = e.titleId,
-          s = Xy(e, Yy);
+          s = Uy(e, Vy);
         return (
           <svg
-            {...Jy(
+            {...Gy(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -38590,23 +38529,84 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {Wy || (Wy = <image x={21} y={14} width={109} height={115} xlinkHref="<img/png blob>" />)}
+            {zy || (zy = <image x={21} y={21} width={109} height={109} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var Zy,
-        Ky = r.forwardRef(qy);
+      var Fy,
+        Yy = r.forwardRef(Wy),
+        Jy = (a.p, ["title", "titleId"]);
+      function Xy() {
+        return (
+          (Xy =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          Xy.apply(this, arguments)
+        );
+      }
+      function qy(e, t) {
+        if (null == e) return {};
+        var a,
+          n,
+          r = (function (e, t) {
+            if (null == e) return {};
+            var a,
+              n,
+              r = {},
+              s = Object.keys(e);
+            for (n = 0; n < s.length; n++) (a = s[n]), t.indexOf(a) >= 0 || (r[a] = e[a]);
+            return r;
+          })(e, t);
+        if (Object.getOwnPropertySymbols) {
+          var s = Object.getOwnPropertySymbols(e);
+          for (n = 0; n < s.length; n++)
+            (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
+        }
+        return r;
+      }
+      function Zy(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = qy(e, Jy);
+        return (
+          <svg
+            {...Xy(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {Fy || (Fy = <image x={21} y={14} width={109} height={115} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var Ky,
+        _y = r.forwardRef(Zy);
       a.p;
       !(function (e) {
         (e[(e.DECREE = 0)] = "DECREE"), (e[(e.BONUS = 1)] = "BONUS"), (e[(e.WILL = 2)] = "WILL");
-      })(Zy || (Zy = {}));
-      var _y = function () {
+      })(Ky || (Ky = {}));
+      var $y = function () {
           return Object(bn.jsx)("a", {
             href: "/login",
             children: Object(bn.jsx)(Bd.a, { className: "Blessings-Submit-Button", children: "Login to Vote" }),
           });
         },
-        $y = function () {
+        eC = function () {
           return Object(bn.jsx)("a", {
             href: "/welcome",
             children: Object(bn.jsx)(Bd.a, {
@@ -38615,7 +38615,7 @@
             }),
           });
         },
-        eC = function (e) {
+        tC = function (e) {
           Object(r.useContext)(En.context).user;
           var t = e.isActive;
           return Object(bn.jsxs)("button", {
@@ -38623,7 +38623,7 @@
             children: ["Select", t ? "ed" : ""],
           });
         };
-      function tC(e) {
+      function aC(e) {
         switch (e) {
           case "random_pitcher_new_arm_cannon":
           case "random_pitcher_snow_blower":
@@ -38638,21 +38638,21 @@
           case "random_batter_catchers_mittens":
             return Object(bn.jsx)(fi, { className: "Blessings-Option-SmallIcon" });
           case "fire_blood_player":
-            return Object(bn.jsx)(oy, { className: "Blessings-Option-SmallIcon" });
+            return Object(bn.jsx)(Ay, { className: "Blessings-Option-SmallIcon" });
           case "electric_blood_player":
-            return Object(bn.jsx)(by, { className: "Blessings-Option-SmallIcon" });
+            return Object(bn.jsx)(hy, { className: "Blessings-Option-SmallIcon" });
           case "strike_blood_player":
-            return Object(bn.jsx)(py, { className: "Blessings-Option-SmallIcon" });
+            return Object(bn.jsx)(xy, { className: "Blessings-Option-SmallIcon" });
           case "ball_blood_player":
-            return Object(bn.jsx)(Cy, { className: "Blessings-Option-SmallIcon" });
+            return Object(bn.jsx)(Iy, { className: "Blessings-Option-SmallIcon" });
           case "move_best_batter_first":
-            return Object(bn.jsx)(ky, { className: "Blessings-Option-SmallIcon" });
+            return Object(bn.jsx)(Ty, { className: "Blessings-Option-SmallIcon" });
           case "worst_batter_pitcher_swap":
-            return Object(bn.jsx)(zy, { className: "Blessings-Option-SmallIcon" });
+            return Object(bn.jsx)(Hy, { className: "Blessings-Option-SmallIcon" });
           case "worst_pitchers_alternate_2":
-            return Object(bn.jsx)(Fy, { className: "Blessings-Option-SmallIcon" });
+            return Object(bn.jsx)(Yy, { className: "Blessings-Option-SmallIcon" });
           case "worst_batters_alternate_4":
-            return Object(bn.jsx)(Ky, { className: "Blessings-Option-SmallIcon" });
+            return Object(bn.jsx)(_y, { className: "Blessings-Option-SmallIcon" });
           case "peanut_blessing":
             return Object(bn.jsx)("img", {
               src: uO,
@@ -38664,8 +38664,8 @@
         }
         return Object(bn.jsx)("div", {});
       }
-      var aC,
-        nC = function (e) {
+      var nC,
+        rC = function (e) {
           e.isActive;
           var t = e.subheader;
           Object(r.useContext)(En.context).user;
@@ -38689,7 +38689,7 @@
             ],
           });
         },
-        rC = function (e) {
+        sC = function (e) {
           var t = e.title,
             a = e.description,
             n = e.id,
@@ -38706,24 +38706,24 @@
             role: "listitem",
             name: n,
             children: [
-              tC(n),
+              aC(n),
               t.split("\n").map(function (e) {
                 return Object(bn.jsx)("h4", {
                   className: "Blessings-Option-Header" + (s ? " ".concat($A(s)) : ""),
                   children: e,
                 });
               }),
-              Object(bn.jsx)(nC, { isActive: c, subheader: l, r: !0 }),
+              Object(bn.jsx)(rC, { isActive: c, subheader: l, r: !0 }),
               Object(bn.jsx)("div", {
                 className: "Blessings-Option-Description" + (s ? " ".concat($A(s)) : ""),
                 children: a,
               }),
-              Object(bn.jsx)(eC, { isActive: c }),
+              Object(bn.jsx)(tC, { isActive: c }),
             ],
           });
         },
-        sC = function (e) {
-          var t = Object(r.useContext)(ny.context),
+        cC = function (e) {
+          var t = Object(r.useContext)(ry.context),
             a = Object(r.useContext)(nA.context),
             n = Object(r.useContext)(En.context).user,
             s = Object(r.useState)(void 0),
@@ -38738,8 +38738,8 @@
             [e.id]
           );
           var d = !!n.favoriteTeam && Y(n.favoriteTeam, a),
-            j = Object(bn.jsx)(_y, {});
-          n.isFetching || !n.isSignedIn || n.favoriteTeam || (j = Object(bn.jsx)($y, {})),
+            j = Object(bn.jsx)($y, {});
+          n.isFetching || !n.isSignedIn || n.favoriteTeam || (j = Object(bn.jsx)(eC, {})),
             n.isFetching ||
               !n.isSignedIn ||
               d ||
@@ -38770,7 +38770,7 @@
                 children: i
                   ? Object(bn.jsx)(qo, {
                       background: o,
-                      path: n.verified ? "/vote/".concat(Zy.BONUS, "/").concat(i) : "/send-verification-email",
+                      path: n.verified ? "/vote/".concat(Ky.BONUS, "/").concat(i) : "/send-verification-email",
                       children: "Submit Distortion Vote",
                     })
                   : Object(bn.jsx)(bn.Fragment, { children: "Select a Distortion" }),
@@ -38813,7 +38813,7 @@
                 style: { gridTemplateColumns: "repeat(".concat(b, ", 1fr)") },
                 children: t.blessings.map(function (e, t) {
                   return Object(bn.jsx)(
-                    rC,
+                    sC,
                     Object(A.a)(
                       Object(A.a)({}, e),
                       {},
@@ -38832,10 +38832,10 @@
             ],
           });
         },
-        cC = ["title", "titleId"];
-      function iC() {
+        iC = ["title", "titleId"];
+      function lC() {
         return (
-          (iC =
+          (lC =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -38844,10 +38844,10 @@
               }
               return e;
             }),
-          iC.apply(this, arguments)
+          lC.apply(this, arguments)
         );
       }
-      function lC(e, t) {
+      function oC(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -38867,13 +38867,13 @@
         }
         return r;
       }
-      function oC(e, t) {
+      function AC(e, t) {
         var a = e.title,
           n = e.titleId,
-          s = lC(e, cC);
+          s = oC(e, iC);
         return (
           <svg
-            {...iC(
+            {...lC(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -38887,8 +38887,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {aC ||
-              (aC = (
+            {nC ||
+              (nC = (
                 <image
                   id="_01-TitleBelt"
                   data-name="01-TitleBelt"
@@ -38902,12 +38902,12 @@
           </svg>
         );
       }
-      var AC,
-        dC = r.forwardRef(oC),
-        uC = (a.p, ["title", "titleId"]);
-      function mC() {
+      var dC,
+        uC = r.forwardRef(AC),
+        mC = (a.p, ["title", "titleId"]);
+      function jC() {
         return (
-          (mC =
+          (jC =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -38916,10 +38916,10 @@
               }
               return e;
             }),
-          mC.apply(this, arguments)
+          jC.apply(this, arguments)
         );
       }
-      function jC(e, t) {
+      function bC(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -38939,13 +38939,13 @@
         }
         return r;
       }
-      function bC(e, t) {
+      function hC(e, t) {
         var a = e.title,
           n = e.titleId,
-          s = jC(e, uC);
+          s = bC(e, mC);
         return (
           <svg
-            {...mC(
+            {...jC(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -38959,8 +38959,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {AC ||
-              (AC = (
+            {dC ||
+              (dC = (
                 <image
                   id="_03-Pennants"
                   data-name="03-Pennants"
@@ -38974,12 +38974,12 @@
           </svg>
         );
       }
-      var hC,
-        gC = r.forwardRef(bC),
-        OC = (a.p, ["title", "titleId"]);
-      function vC() {
+      var gC,
+        OC = r.forwardRef(hC),
+        vC = (a.p, ["title", "titleId"]);
+      function fC() {
         return (
-          (vC =
+          (fC =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -38988,10 +38988,10 @@
               }
               return e;
             }),
-          vC.apply(this, arguments)
+          fC.apply(this, arguments)
         );
       }
-      function fC(e, t) {
+      function pC(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -39011,13 +39011,13 @@
         }
         return r;
       }
-      function pC(e, t) {
+      function xC(e, t) {
         var a = e.title,
           n = e.titleId,
-          s = fC(e, OC);
+          s = pC(e, vC);
         return (
           <svg
-            {...vC(
+            {...fC(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -39031,8 +39031,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {hC ||
-              (hC = (
+            {gC ||
+              (gC = (
                 <image
                   id="_05-BirdRights"
                   data-name="05-BirdRights"
@@ -39046,12 +39046,12 @@
           </svg>
         );
       }
-      var xC,
-        wC = r.forwardRef(pC),
-        BC = (a.p, ["title", "titleId"]);
-      function EC() {
+      var wC,
+        BC = r.forwardRef(xC),
+        EC = (a.p, ["title", "titleId"]);
+      function yC() {
         return (
-          (EC =
+          (yC =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39060,10 +39060,10 @@
               }
               return e;
             }),
-          EC.apply(this, arguments)
+          yC.apply(this, arguments)
         );
       }
-      function yC(e, t) {
+      function CC(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -39083,13 +39083,13 @@
         }
         return r;
       }
-      function CC(e, t) {
+      function IC(e, t) {
         var a = e.title,
           n = e.titleId,
-          s = yC(e, BC);
+          s = CC(e, EC);
         return (
           <svg
-            {...EC(
+            {...yC(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -39103,8 +39103,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {xC ||
-              (xC = (
+            {wC ||
+              (wC = (
                 <image
                   id="_04-ForceField"
                   data-name="04-ForceField"
@@ -39118,12 +39118,12 @@
           </svg>
         );
       }
-      var IC,
-        NC = r.forwardRef(CC),
-        SC = (a.p, ["title", "titleId"]);
-      function DC() {
+      var NC,
+        SC = r.forwardRef(IC),
+        DC = (a.p, ["title", "titleId"]);
+      function PC() {
         return (
-          (DC =
+          (PC =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39132,10 +39132,10 @@
               }
               return e;
             }),
-          DC.apply(this, arguments)
+          PC.apply(this, arguments)
         );
       }
-      function PC(e, t) {
+      function kC(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -39155,13 +39155,13 @@
         }
         return r;
       }
-      function kC(e, t) {
+      function TC(e, t) {
         var a = e.title,
           n = e.titleId,
-          s = PC(e, SC);
+          s = kC(e, DC);
         return (
           <svg
-            {...DC(
+            {...PC(
               {
                 id: "Rations",
                 xmlns: "http://www.w3.org/2000/svg",
@@ -39176,16 +39176,16 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {IC || (IC = <image id="l" x={213} y={116} width={1074} height={1267} xlinkHref="<img/png blob>" />)}
+            {NC || (NC = <image id="l" x={213} y={116} width={1074} height={1267} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var TC,
-        LC = r.forwardRef(kC),
-        QC = (a.p, ["title", "titleId"]);
-      function RC() {
+      var LC,
+        QC = r.forwardRef(TC),
+        RC = (a.p, ["title", "titleId"]);
+      function MC() {
         return (
-          (RC =
+          (MC =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39194,10 +39194,10 @@
               }
               return e;
             }),
-          RC.apply(this, arguments)
+          MC.apply(this, arguments)
         );
       }
-      function MC(e, t) {
+      function zC(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -39217,13 +39217,13 @@
         }
         return r;
       }
-      function zC(e, t) {
+      function HC(e, t) {
         var a = e.title,
           n = e.titleId,
-          s = MC(e, QC);
+          s = zC(e, RC);
         return (
           <svg
-            {...RC(
+            {...MC(
               {
                 id: "Slot_Machine",
                 "data-name": "Slot Machine",
@@ -39239,16 +39239,16 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {TC || (TC = <image id="bulbs" x={167} y={62} width={1218} height={1367} xlinkHref="<img/png blob>" />)}
+            {LC || (LC = <image id="bulbs" x={167} y={62} width={1218} height={1367} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var HC,
-        VC = r.forwardRef(zC),
-        GC = (a.p, ["title", "titleId"]);
-      function UC() {
+      var VC,
+        GC = r.forwardRef(HC),
+        UC = (a.p, ["title", "titleId"]);
+      function WC() {
         return (
-          (UC =
+          (WC =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39257,71 +39257,10 @@
               }
               return e;
             }),
-          UC.apply(this, arguments)
+          WC.apply(this, arguments)
         );
-      }
-      function WC(e, t) {
-        if (null == e) return {};
-        var a,
-          n,
-          r = (function (e, t) {
-            if (null == e) return {};
-            var a,
-              n,
-              r = {},
-              s = Object.keys(e);
-            for (n = 0; n < s.length; n++) (a = s[n]), t.indexOf(a) >= 0 || (r[a] = e[a]);
-            return r;
-          })(e, t);
-        if (Object.getOwnPropertySymbols) {
-          var s = Object.getOwnPropertySymbols(e);
-          for (n = 0; n < s.length; n++)
-            (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
-        }
-        return r;
       }
       function FC(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = WC(e, GC);
-        return (
-          <svg
-            {...UC(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {HC || (HC = <image x={10} y={8} width={131} height={134} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var YC,
-        JC = r.forwardRef(FC),
-        XC = (a.p, ["title", "titleId"]);
-      function qC() {
-        return (
-          (qC =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          qC.apply(this, arguments)
-        );
-      }
-      function ZC(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -39340,49 +39279,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function YC(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = FC(e, UC);
+        return (
+          <svg
+            {...WC(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {VC || (VC = <image x={10} y={8} width={131} height={134} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var JC,
+        XC = r.forwardRef(YC),
+        qC = (a.p, ["title", "titleId"]);
+      function ZC() {
+        return (
+          (ZC =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          ZC.apply(this, arguments)
+        );
       }
       function KC(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = ZC(e, XC);
-        return (
-          <svg
-            {...qC(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {YC || (YC = <image x={13} y={16} width={125} height={119} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var _C,
-        $C = r.forwardRef(KC),
-        eI = (a.p, ["title", "titleId"]);
-      function tI() {
-        return (
-          (tI =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          tI.apply(this, arguments)
-        );
-      }
-      function aI(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -39401,49 +39340,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function _C(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = KC(e, qC);
+        return (
+          <svg
+            {...ZC(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {JC || (JC = <image x={13} y={16} width={125} height={119} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var $C,
+        eI = r.forwardRef(_C),
+        tI = (a.p, ["title", "titleId"]);
+      function aI() {
+        return (
+          (aI =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          aI.apply(this, arguments)
+        );
       }
       function nI(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = aI(e, eI);
-        return (
-          <svg
-            {...tI(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {_C || (_C = <image x={15} y={11} width={119} height={128} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var rI,
-        sI = r.forwardRef(nI),
-        cI = (a.p, ["title", "titleId"]);
-      function iI() {
-        return (
-          (iI =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          iI.apply(this, arguments)
-        );
-      }
-      function lI(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -39462,49 +39401,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function rI(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = nI(e, tI);
+        return (
+          <svg
+            {...aI(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {$C || ($C = <image x={15} y={11} width={119} height={128} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var sI,
+        cI = r.forwardRef(rI),
+        iI = (a.p, ["title", "titleId"]);
+      function lI() {
+        return (
+          (lI =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          lI.apply(this, arguments)
+        );
       }
       function oI(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = lI(e, cI);
-        return (
-          <svg
-            {...iI(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {rI || (rI = <image x={21} y={9} width={108} height={132} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var AI,
-        dI = r.forwardRef(oI),
-        uI = (a.p, ["title", "titleId"]);
-      function mI() {
-        return (
-          (mI =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          mI.apply(this, arguments)
-        );
-      }
-      function jI(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -39523,49 +39462,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function AI(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = oI(e, iI);
+        return (
+          <svg
+            {...lI(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {sI || (sI = <image x={21} y={9} width={108} height={132} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var dI,
+        uI = r.forwardRef(AI),
+        mI = (a.p, ["title", "titleId"]);
+      function jI() {
+        return (
+          (jI =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          jI.apply(this, arguments)
+        );
       }
       function bI(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = jI(e, uI);
-        return (
-          <svg
-            {...mI(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {AI || (AI = <image x={9} y={35} width={133} height={88} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var hI,
-        gI = r.forwardRef(bI),
-        OI = (a.p, ["title", "titleId"]);
-      function vI() {
-        return (
-          (vI =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          vI.apply(this, arguments)
-        );
-      }
-      function fI(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -39584,49 +39523,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function hI(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = bI(e, mI);
+        return (
+          <svg
+            {...jI(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {dI || (dI = <image x={9} y={35} width={133} height={88} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var gI,
+        OI = r.forwardRef(hI),
+        vI = (a.p, ["title", "titleId"]);
+      function fI() {
+        return (
+          (fI =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          fI.apply(this, arguments)
+        );
       }
       function pI(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = fI(e, OI);
-        return (
-          <svg
-            {...vI(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {hI || (hI = <image x={24} y={8} width={102} height={134} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var xI,
-        wI = r.forwardRef(pI),
-        BI = (a.p, ["title", "titleId"]);
-      function EI() {
-        return (
-          (EI =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          EI.apply(this, arguments)
-        );
-      }
-      function yI(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -39646,13 +39585,74 @@
         }
         return r;
       }
-      function CI(e, t) {
+      function xI(e, t) {
         var a = e.title,
           n = e.titleId,
-          s = yI(e, BI);
+          s = pI(e, vI);
         return (
           <svg
-            {...EI(
+            {...fI(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {gI || (gI = <image x={24} y={8} width={102} height={134} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var wI,
+        BI = r.forwardRef(xI),
+        EI = (a.p, ["title", "titleId"]);
+      function yI() {
+        return (
+          (yI =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          yI.apply(this, arguments)
+        );
+      }
+      function CI(e, t) {
+        if (null == e) return {};
+        var a,
+          n,
+          r = (function (e, t) {
+            if (null == e) return {};
+            var a,
+              n,
+              r = {},
+              s = Object.keys(e);
+            for (n = 0; n < s.length; n++) (a = s[n]), t.indexOf(a) >= 0 || (r[a] = e[a]);
+            return r;
+          })(e, t);
+        if (Object.getOwnPropertySymbols) {
+          var s = Object.getOwnPropertySymbols(e);
+          for (n = 0; n < s.length; n++)
+            (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
+        }
+        return r;
+      }
+      function II(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = CI(e, EI);
+        return (
+          <svg
+            {...yI(
               {
                 id: "Wrecking_Ball",
                 "data-name": "Wrecking Ball",
@@ -39668,16 +39668,16 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {xI || (xI = <image id="l" x={111} y={-16} width={1327} height={1400} xlinkHref="<img/png blob>" />)}
+            {wI || (wI = <image id="l" x={111} y={-16} width={1327} height={1400} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var II,
-        NI = r.forwardRef(CI),
-        SI = (a.p, ["title", "titleId"]);
-      function DI() {
+      var NI,
+        SI = r.forwardRef(II),
+        DI = (a.p, ["title", "titleId"]);
+      function PI() {
         return (
-          (DI =
+          (PI =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39686,71 +39686,10 @@
               }
               return e;
             }),
-          DI.apply(this, arguments)
+          PI.apply(this, arguments)
         );
-      }
-      function PI(e, t) {
-        if (null == e) return {};
-        var a,
-          n,
-          r = (function (e, t) {
-            if (null == e) return {};
-            var a,
-              n,
-              r = {},
-              s = Object.keys(e);
-            for (n = 0; n < s.length; n++) (a = s[n]), t.indexOf(a) >= 0 || (r[a] = e[a]);
-            return r;
-          })(e, t);
-        if (Object.getOwnPropertySymbols) {
-          var s = Object.getOwnPropertySymbols(e);
-          for (n = 0; n < s.length; n++)
-            (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
-        }
-        return r;
       }
       function kI(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = PI(e, SI);
-        return (
-          <svg
-            {...DI(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {II || (II = <image x={6} y={6} width={138} height={138} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var TI,
-        LI = r.forwardRef(kI),
-        QI = (a.p, ["title", "titleId"]);
-      function RI() {
-        return (
-          (RI =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          RI.apply(this, arguments)
-        );
-      }
-      function MI(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -39769,49 +39708,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function TI(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = kI(e, DI);
+        return (
+          <svg
+            {...PI(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {NI || (NI = <image x={6} y={6} width={138} height={138} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var LI,
+        QI = r.forwardRef(TI),
+        RI = (a.p, ["title", "titleId"]);
+      function MI() {
+        return (
+          (MI =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          MI.apply(this, arguments)
+        );
       }
       function zI(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = MI(e, QI);
-        return (
-          <svg
-            {...RI(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {TI || (TI = <image x={22} y={5} width={106} height={140} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var HI,
-        VI = r.forwardRef(zI),
-        GI = (a.p, ["title", "titleId"]);
-      function UI() {
-        return (
-          (UI =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          UI.apply(this, arguments)
-        );
-      }
-      function WI(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -39831,13 +39770,74 @@
         }
         return r;
       }
-      function FI(e, t) {
+      function HI(e, t) {
         var a = e.title,
           n = e.titleId,
-          s = WI(e, GI);
+          s = zI(e, RI);
         return (
           <svg
-            {...UI(
+            {...MI(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {LI || (LI = <image x={22} y={5} width={106} height={140} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var VI,
+        GI = r.forwardRef(HI),
+        UI = (a.p, ["title", "titleId"]);
+      function WI() {
+        return (
+          (WI =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          WI.apply(this, arguments)
+        );
+      }
+      function FI(e, t) {
+        if (null == e) return {};
+        var a,
+          n,
+          r = (function (e, t) {
+            if (null == e) return {};
+            var a,
+              n,
+              r = {},
+              s = Object.keys(e);
+            for (n = 0; n < s.length; n++) (a = s[n]), t.indexOf(a) >= 0 || (r[a] = e[a]);
+            return r;
+          })(e, t);
+        if (Object.getOwnPropertySymbols) {
+          var s = Object.getOwnPropertySymbols(e);
+          for (n = 0; n < s.length; n++)
+            (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
+        }
+        return r;
+      }
+      function YI(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = FI(e, UI);
+        return (
+          <svg
+            {...WI(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -39851,16 +39851,16 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {HI || (HI = <image id="decrees" x={35} y={36.5} width={186} height={183} xlinkHref="<img/png blob>" />)}
+            {VI || (VI = <image id="decrees" x={35} y={36.5} width={186} height={183} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var YI,
-        JI = r.forwardRef(FI),
-        XI = (a.p, ["title", "titleId"]);
-      function qI() {
+      var JI,
+        XI = r.forwardRef(YI),
+        qI = (a.p, ["title", "titleId"]);
+      function ZI() {
         return (
-          (qI =
+          (ZI =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39869,10 +39869,10 @@
               }
               return e;
             }),
-          qI.apply(this, arguments)
+          ZI.apply(this, arguments)
         );
       }
-      function ZI(e, t) {
+      function KI(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -39892,13 +39892,13 @@
         }
         return r;
       }
-      function KI(e, t) {
+      function _I(e, t) {
         var a = e.title,
           n = e.titleId,
-          s = ZI(e, XI);
+          s = KI(e, qI);
         return (
           <svg
-            {...qI(
+            {...ZI(
               {
                 id: "Turntables_X",
                 "data-name": "Turntables X",
@@ -39914,16 +39914,16 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {YI || (YI = <image x={40} y={40} width={1420} height={1420} xlinkHref="<img/png blob>" />)}
+            {JI || (JI = <image x={40} y={40} width={1420} height={1420} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var _I,
-        $I = r.forwardRef(KI),
-        eN = (a.p, ["title", "titleId"]);
-      function tN() {
+      var $I,
+        eN = r.forwardRef(_I),
+        tN = (a.p, ["title", "titleId"]);
+      function aN() {
         return (
-          (tN =
+          (aN =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -39932,71 +39932,10 @@
               }
               return e;
             }),
-          tN.apply(this, arguments)
+          aN.apply(this, arguments)
         );
-      }
-      function aN(e, t) {
-        if (null == e) return {};
-        var a,
-          n,
-          r = (function (e, t) {
-            if (null == e) return {};
-            var a,
-              n,
-              r = {},
-              s = Object.keys(e);
-            for (n = 0; n < s.length; n++) (a = s[n]), t.indexOf(a) >= 0 || (r[a] = e[a]);
-            return r;
-          })(e, t);
-        if (Object.getOwnPropertySymbols) {
-          var s = Object.getOwnPropertySymbols(e);
-          for (n = 0; n < s.length; n++)
-            (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
-        }
-        return r;
       }
       function nN(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = aN(e, eN);
-        return (
-          <svg
-            {...tN(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {_I || (_I = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var rN,
-        sN = r.forwardRef(nN),
-        cN = (a.p, ["title", "titleId"]);
-      function iN() {
-        return (
-          (iN =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          iN.apply(this, arguments)
-        );
-      }
-      function lN(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -40015,49 +39954,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function rN(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = nN(e, tN);
+        return (
+          <svg
+            {...aN(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {$I || ($I = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var sN,
+        cN = r.forwardRef(rN),
+        iN = (a.p, ["title", "titleId"]);
+      function lN() {
+        return (
+          (lN =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          lN.apply(this, arguments)
+        );
       }
       function oN(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = lN(e, cN);
-        return (
-          <svg
-            {...iN(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {rN || (rN = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var AN,
-        dN = r.forwardRef(oN),
-        uN = (a.p, ["title", "titleId"]);
-      function mN() {
-        return (
-          (mN =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          mN.apply(this, arguments)
-        );
-      }
-      function jN(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -40076,49 +40015,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function AN(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = oN(e, iN);
+        return (
+          <svg
+            {...lN(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {sN || (sN = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var dN,
+        uN = r.forwardRef(AN),
+        mN = (a.p, ["title", "titleId"]);
+      function jN() {
+        return (
+          (jN =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          jN.apply(this, arguments)
+        );
       }
       function bN(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = jN(e, uN);
-        return (
-          <svg
-            {...mN(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {AN || (AN = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var hN,
-        gN = r.forwardRef(bN),
-        ON = (a.p, ["title", "titleId"]);
-      function vN() {
-        return (
-          (vN =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          vN.apply(this, arguments)
-        );
-      }
-      function fN(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -40137,49 +40076,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function hN(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = bN(e, mN);
+        return (
+          <svg
+            {...jN(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {dN || (dN = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var gN,
+        ON = r.forwardRef(hN),
+        vN = (a.p, ["title", "titleId"]);
+      function fN() {
+        return (
+          (fN =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          fN.apply(this, arguments)
+        );
       }
       function pN(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = fN(e, ON);
-        return (
-          <svg
-            {...vN(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {hN || (hN = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var xN,
-        wN = r.forwardRef(pN),
-        BN = (a.p, ["title", "titleId"]);
-      function EN() {
-        return (
-          (EN =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          EN.apply(this, arguments)
-        );
-      }
-      function yN(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -40199,13 +40138,74 @@
         }
         return r;
       }
-      function CN(e, t) {
+      function xN(e, t) {
         var a = e.title,
           n = e.titleId,
-          s = yN(e, BN);
+          s = pN(e, vN);
         return (
           <svg
-            {...EN(
+            {...fN(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {gN || (gN = <image x={12} y={16} width={126} height={118} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var wN,
+        BN = r.forwardRef(xN),
+        EN = (a.p, ["title", "titleId"]);
+      function yN() {
+        return (
+          (yN =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          yN.apply(this, arguments)
+        );
+      }
+      function CN(e, t) {
+        if (null == e) return {};
+        var a,
+          n,
+          r = (function (e, t) {
+            if (null == e) return {};
+            var a,
+              n,
+              r = {},
+              s = Object.keys(e);
+            for (n = 0; n < s.length; n++) (a = s[n]), t.indexOf(a) >= 0 || (r[a] = e[a]);
+            return r;
+          })(e, t);
+        if (Object.getOwnPropertySymbols) {
+          var s = Object.getOwnPropertySymbols(e);
+          for (n = 0; n < s.length; n++)
+            (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
+        }
+        return r;
+      }
+      function IN(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = CN(e, EN);
+        return (
+          <svg
+            {...yN(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -40219,8 +40219,8 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {xN ||
-              (xN = (
+            {wN ||
+              (wN = (
                 <image
                   id="Rounded_Rectangle_4_copy_4"
                   data-name="Rounded Rectangle 4 copy 4"
@@ -40233,12 +40233,12 @@
           </svg>
         );
       }
-      var IN,
-        NN = r.forwardRef(CN),
-        SN = (a.p, ["title", "titleId"]);
-      function DN() {
+      var NN,
+        SN = r.forwardRef(IN),
+        DN = (a.p, ["title", "titleId"]);
+      function PN() {
         return (
-          (DN =
+          (PN =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -40247,71 +40247,10 @@
               }
               return e;
             }),
-          DN.apply(this, arguments)
+          PN.apply(this, arguments)
         );
-      }
-      function PN(e, t) {
-        if (null == e) return {};
-        var a,
-          n,
-          r = (function (e, t) {
-            if (null == e) return {};
-            var a,
-              n,
-              r = {},
-              s = Object.keys(e);
-            for (n = 0; n < s.length; n++) (a = s[n]), t.indexOf(a) >= 0 || (r[a] = e[a]);
-            return r;
-          })(e, t);
-        if (Object.getOwnPropertySymbols) {
-          var s = Object.getOwnPropertySymbols(e);
-          for (n = 0; n < s.length; n++)
-            (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
-        }
-        return r;
       }
       function kN(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = PN(e, SN);
-        return (
-          <svg
-            {...DN(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {IN || (IN = <image x={9} y={23} width={132} height={88} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var TN,
-        LN = r.forwardRef(kN),
-        QN = (a.p, ["title", "titleId"]);
-      function RN() {
-        return (
-          (RN =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          RN.apply(this, arguments)
-        );
-      }
-      function MN(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -40330,49 +40269,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function TN(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = kN(e, DN);
+        return (
+          <svg
+            {...PN(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {NN || (NN = <image x={9} y={23} width={132} height={88} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var LN,
+        QN = r.forwardRef(TN),
+        RN = (a.p, ["title", "titleId"]);
+      function MN() {
+        return (
+          (MN =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          MN.apply(this, arguments)
+        );
       }
       function zN(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = MN(e, QN);
-        return (
-          <svg
-            {...RN(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {TN || (TN = <image x={31} y={4} width={94} height={139} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var HN,
-        VN = r.forwardRef(zN),
-        GN = (a.p, ["title", "titleId"]);
-      function UN() {
-        return (
-          (UN =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          UN.apply(this, arguments)
-        );
-      }
-      function WN(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -40391,49 +40330,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function HN(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = zN(e, RN);
+        return (
+          <svg
+            {...MN(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {LN || (LN = <image x={31} y={4} width={94} height={139} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var VN,
+        GN = r.forwardRef(HN),
+        UN = (a.p, ["title", "titleId"]);
+      function WN() {
+        return (
+          (WN =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          WN.apply(this, arguments)
+        );
       }
       function FN(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = WN(e, GN);
-        return (
-          <svg
-            {...UN(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {HN || (HN = <image x={10} y={15} width={130} height={119} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var YN,
-        JN = r.forwardRef(FN),
-        XN = (a.p, ["title", "titleId"]);
-      function qN() {
-        return (
-          (qN =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          qN.apply(this, arguments)
-        );
-      }
-      function ZN(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -40452,49 +40391,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function YN(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = FN(e, UN);
+        return (
+          <svg
+            {...WN(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {VN || (VN = <image x={10} y={15} width={130} height={119} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var JN,
+        XN = r.forwardRef(YN),
+        qN = (a.p, ["title", "titleId"]);
+      function ZN() {
+        return (
+          (ZN =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          ZN.apply(this, arguments)
+        );
       }
       function KN(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = ZN(e, XN);
-        return (
-          <svg
-            {...qN(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {YN || (YN = <image x={15} y={8} width={116} height={134} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var _N,
-        $N = r.forwardRef(KN),
-        eS = (a.p, ["title", "titleId"]);
-      function tS() {
-        return (
-          (tS =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          tS.apply(this, arguments)
-        );
-      }
-      function aS(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -40513,49 +40452,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function _N(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = KN(e, qN);
+        return (
+          <svg
+            {...ZN(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {JN || (JN = <image x={15} y={8} width={116} height={134} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var $N,
+        eS = r.forwardRef(_N),
+        tS = (a.p, ["title", "titleId"]);
+      function aS() {
+        return (
+          (aS =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          aS.apply(this, arguments)
+        );
       }
       function nS(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = aS(e, eS);
-        return (
-          <svg
-            {...tS(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {_N || (_N = <image x={2} y={34} width={147} height={76} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var rS,
-        sS = r.forwardRef(nS),
-        cS = (a.p, ["title", "titleId"]);
-      function iS() {
-        return (
-          (iS =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          iS.apply(this, arguments)
-        );
-      }
-      function lS(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -40574,49 +40513,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function rS(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = nS(e, tS);
+        return (
+          <svg
+            {...aS(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {$N || ($N = <image x={2} y={34} width={147} height={76} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var sS,
+        cS = r.forwardRef(rS),
+        iS = (a.p, ["title", "titleId"]);
+      function lS() {
+        return (
+          (lS =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          lS.apply(this, arguments)
+        );
       }
       function oS(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = lS(e, cS);
-        return (
-          <svg
-            {...iS(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {rS || (rS = <image x={1} y={30} width={148} height={83} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var AS,
-        dS = r.forwardRef(oS),
-        uS = (a.p, ["title", "titleId"]);
-      function mS() {
-        return (
-          (mS =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          mS.apply(this, arguments)
-        );
-      }
-      function jS(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -40635,49 +40574,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function AS(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = oS(e, iS);
+        return (
+          <svg
+            {...lS(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {sS || (sS = <image x={1} y={30} width={148} height={83} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var dS,
+        uS = r.forwardRef(AS),
+        mS = (a.p, ["title", "titleId"]);
+      function jS() {
+        return (
+          (jS =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          jS.apply(this, arguments)
+        );
       }
       function bS(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = jS(e, uS);
-        return (
-          <svg
-            {...mS(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {AS || (AS = <image x={2} y={34} width={147} height={76} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var hS,
-        gS = r.forwardRef(bS),
-        OS = (a.p, ["title", "titleId"]);
-      function vS() {
-        return (
-          (vS =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          vS.apply(this, arguments)
-        );
-      }
-      function fS(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -40696,49 +40635,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function hS(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = bS(e, mS);
+        return (
+          <svg
+            {...jS(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {dS || (dS = <image x={2} y={34} width={147} height={76} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var gS,
+        OS = r.forwardRef(hS),
+        vS = (a.p, ["title", "titleId"]);
+      function fS() {
+        return (
+          (fS =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          fS.apply(this, arguments)
+        );
       }
       function pS(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = fS(e, OS);
-        return (
-          <svg
-            {...vS(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {hS || (hS = <image x={1} y={30} width={148} height={83} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var xS,
-        wS = r.forwardRef(pS),
-        BS = (a.p, ["title", "titleId"]);
-      function ES() {
-        return (
-          (ES =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          ES.apply(this, arguments)
-        );
-      }
-      function yS(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -40757,49 +40696,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function xS(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = pS(e, vS);
+        return (
+          <svg
+            {...fS(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {gS || (gS = <image x={1} y={30} width={148} height={83} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var wS,
+        BS = r.forwardRef(xS),
+        ES = (a.p, ["title", "titleId"]);
+      function yS() {
+        return (
+          (yS =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          yS.apply(this, arguments)
+        );
       }
       function CS(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = yS(e, BS);
-        return (
-          <svg
-            {...ES(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {xS || (xS = <image x={7} y={40} width={137} height={71} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var IS,
-        NS = r.forwardRef(CS),
-        SS = (a.p, ["title", "titleId"]);
-      function DS() {
-        return (
-          (DS =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          DS.apply(this, arguments)
-        );
-      }
-      function PS(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -40818,49 +40757,49 @@
             (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
         }
         return r;
+      }
+      function IS(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = CS(e, ES);
+        return (
+          <svg
+            {...yS(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {wS || (wS = <image x={7} y={40} width={137} height={71} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var NS,
+        SS = r.forwardRef(IS),
+        DS = (a.p, ["title", "titleId"]);
+      function PS() {
+        return (
+          (PS =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          PS.apply(this, arguments)
+        );
       }
       function kS(e, t) {
-        var a = e.title,
-          n = e.titleId,
-          s = PS(e, SS);
-        return (
-          <svg
-            {...DS(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                xmlnsXlink: "http://www.w3.org/1999/xlink",
-                width: 150,
-                height: 150,
-                viewBox: "0 0 150 150",
-                ref: t,
-                "aria-labelledby": n,
-              },
-              s
-            )}
-          >
-            {a ? <title id={n}>{a}</title> : null}
-            {IS || (IS = <image x={5} y={38} width={137} height={74} xlinkHref="<img/png blob>" />)}
-          </svg>
-        );
-      }
-      var TS,
-        LS = r.forwardRef(kS),
-        QS = (a.p, ["title", "titleId"]);
-      function RS() {
-        return (
-          (RS =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var a = arguments[t];
-                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-              }
-              return e;
-            }),
-          RS.apply(this, arguments)
-        );
-      }
-      function MS(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -40880,13 +40819,13 @@
         }
         return r;
       }
-      function zS(e, t) {
+      function TS(e, t) {
         var a = e.title,
           n = e.titleId,
-          s = MS(e, QS);
+          s = kS(e, DS);
         return (
           <svg
-            {...RS(
+            {...PS(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -40900,23 +40839,84 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {TS || (TS = <image x={5} y={37} width={141} height={76} xlinkHref="<img/png blob>" />)}
+            {NS || (NS = <image x={5} y={38} width={137} height={74} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var HS,
-        VS = r.forwardRef(zS);
+      var LS,
+        QS = r.forwardRef(TS),
+        RS = (a.p, ["title", "titleId"]);
+      function MS() {
+        return (
+          (MS =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var a = arguments[t];
+                for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+              }
+              return e;
+            }),
+          MS.apply(this, arguments)
+        );
+      }
+      function zS(e, t) {
+        if (null == e) return {};
+        var a,
+          n,
+          r = (function (e, t) {
+            if (null == e) return {};
+            var a,
+              n,
+              r = {},
+              s = Object.keys(e);
+            for (n = 0; n < s.length; n++) (a = s[n]), t.indexOf(a) >= 0 || (r[a] = e[a]);
+            return r;
+          })(e, t);
+        if (Object.getOwnPropertySymbols) {
+          var s = Object.getOwnPropertySymbols(e);
+          for (n = 0; n < s.length; n++)
+            (a = s[n]), t.indexOf(a) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
+        }
+        return r;
+      }
+      function HS(e, t) {
+        var a = e.title,
+          n = e.titleId,
+          s = zS(e, RS);
+        return (
+          <svg
+            {...MS(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlnsXlink: "http://www.w3.org/1999/xlink",
+                width: 150,
+                height: 150,
+                viewBox: "0 0 150 150",
+                ref: t,
+                "aria-labelledby": n,
+              },
+              s
+            )}
+          >
+            {a ? <title id={n}>{a}</title> : null}
+            {LS || (LS = <image x={5} y={37} width={141} height={76} xlinkHref="<img/png blob>" />)}
+          </svg>
+        );
+      }
+      var VS,
+        GS = r.forwardRef(HS);
       a.p;
       !(function (e) {
         (e[(e.DECREE = 0)] = "DECREE"), (e[(e.BONUS = 1)] = "BONUS"), (e[(e.WILL = 2)] = "WILL");
-      })(HS || (HS = {}));
-      var GS = function () {
+      })(VS || (VS = {}));
+      var US = function () {
           return Object(bn.jsx)("a", {
             href: "/login",
             children: Object(bn.jsx)(Bd.a, { className: "Decrees-Submit-Button", children: "Login to Vote" }),
           });
         },
-        US = function () {
+        WS = function () {
           return Object(bn.jsx)("a", {
             href: "/welcome",
             children: Object(bn.jsx)(Bd.a, {
@@ -40925,31 +40925,31 @@
             }),
           });
         },
-        WS = function (e) {
+        FS = function (e) {
           Object(r.useContext)(En.context).user;
           var t = e.isActive;
           return Object(bn.jsxs)(Bd.a, { className: "Decrees-Option-Button", children: ["Select", t ? "ed" : ""] });
         };
-      function FS(e) {
+      function YS(e) {
         switch (e) {
           case "champion_penance":
-            return Object(bn.jsx)(gC, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(OC, { className: "Decrees-Option-Icon" });
           case "champion_evolve":
             return Object(bn.jsx)(We, { className: "Decrees-Option-Icon" });
           case "champion_belt":
-            return Object(bn.jsx)(dC, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(uC, { className: "Decrees-Option-Icon" });
           case "bird_rights":
-            return Object(bn.jsx)(wC, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(BC, { className: "Decrees-Option-Icon" });
           case "force_fields":
-            return Object(bn.jsx)(NC, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(SC, { className: "Decrees-Option-Icon" });
           case "free_wills":
             return Object(bn.jsx)(Ze, { className: "Decrees-Option-Icon" });
           case "meal_plan":
-            return Object(bn.jsx)(LC, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(QC, { className: "Decrees-Option-Icon" });
           case "all_you_can_eat":
             return Object(bn.jsx)(Me, { className: "Decrees-Option-Icon" });
           case "pot_luck":
-            return Object(bn.jsx)(VC, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(GC, { className: "Decrees-Option-Icon" });
           case "distribute_bats":
             return Object(bn.jsx)(ai, { className: "Decrees-Option-Icon" });
           case "distribute_caps":
@@ -40959,25 +40959,25 @@
           case "distribute_gloves":
             return Object(bn.jsx)(fi, { className: "Decrees-Option-Icon" });
           case "goodie_bags":
-            return Object(bn.jsx)(JC, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(XC, { className: "Decrees-Option-Icon" });
           case "gift_baskets":
-            return Object(bn.jsx)($C, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(eI, { className: "Decrees-Option-Icon" });
           case "community_chest":
             return Object(bn.jsx)(at, { className: "Decrees-Option-Icon" });
           case "build_smithy":
-            return Object(bn.jsx)(sI, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(cI, { className: "Decrees-Option-Icon" });
           case "build_library":
             return Object(bn.jsx)(iO, { className: "Decrees-Option-Icon" });
           case "build_laboratory":
-            return Object(bn.jsx)(gI, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(OI, { className: "Decrees-Option-Icon" });
           case "build_monument":
-            return Object(bn.jsx)(dI, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(uI, { className: "Decrees-Option-Icon" });
           case "build_fairgrounds":
             return Object(bn.jsx)(lt, { className: "Decrees-Option-Icon" });
           case "build_forum":
-            return Object(bn.jsx)(wI, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(BI, { className: "Decrees-Option-Icon" });
           case "wrecking_ball":
-            return Object(bn.jsx)(NI, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(SI, { className: "Decrees-Option-Icon" });
           case "hype_train":
             return Object(bn.jsx)(Wt, { className: "Decrees-Option-Icon" });
           case "ratification":
@@ -40985,11 +40985,11 @@
           case "on_the_house":
             return Object(bn.jsx)(ft, { className: "Decrees-Option-Icon" });
           case "climate_control":
-            return Object(bn.jsx)(LI, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(QI, { className: "Decrees-Option-Icon" });
           case "trust_fall":
-            return Object(bn.jsx)(VI, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(GI, { className: "Decrees-Option-Icon" });
           case "repeal_turntables":
-            return Object(bn.jsx)($I, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(eN, { className: "Decrees-Option-Icon" });
           case "underachiever":
             return Object(bn.jsx)(Mt, { className: "Decrees-Option-Icon" });
           case "sun_3":
@@ -41013,48 +41013,48 @@
           case "zero_sun":
             return Object(bn.jsx)(Za, { className: "Decrees-Option-Icon" });
           case "team_favor_roamless":
-            return Object(bn.jsx)(dN, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(uN, { className: "Decrees-Option-Icon" });
           case "team_favor_squiddish":
-            return Object(bn.jsx)(gN, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(ON, { className: "Decrees-Option-Icon" });
           case "team_favor_avoidance":
-            return Object(bn.jsx)(wN, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(BN, { className: "Decrees-Option-Icon" });
           case "team_favor_containment":
-            return Object(bn.jsx)(sN, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(cN, { className: "Decrees-Option-Icon" });
           case "dir_b2":
             return Object(bn.jsx)("div", { className: "QuadrantChart-2 Decrees-Option-Icon" });
           case "dir_b0":
-            return Object(bn.jsx)(NN, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(SN, { className: "Decrees-Option-Icon" });
           case "dir_bh":
             return Object(bn.jsx)(an, { className: "Decrees-Option-Icon" });
           case "dir_pu":
             return Object(bn.jsx)(on, { className: "Decrees-Option-Icon" });
           case "team_amplification_batting":
-            return Object(bn.jsx)(JN, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(XN, { className: "Decrees-Option-Icon" });
           case "team_amplification_pitching":
-            return Object(bn.jsx)(VN, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(GN, { className: "Decrees-Option-Icon" });
           case "team_amplification_baserunning":
-            return Object(bn.jsx)($N, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(eS, { className: "Decrees-Option-Icon" });
           case "team_amplification_defense":
-            return Object(bn.jsx)(LN, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(QN, { className: "Decrees-Option-Icon" });
           case "circuit00":
-            return Object(bn.jsx)(sS, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(cS, { className: "Decrees-Option-Icon" });
           case "circuit01":
-            return Object(bn.jsx)(dS, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(uS, { className: "Decrees-Option-Icon" });
           case "circuit10":
-            return Object(bn.jsx)(gS, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(OS, { className: "Decrees-Option-Icon" });
           case "circuit11":
-            return Object(bn.jsx)(wS, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(BS, { className: "Decrees-Option-Icon" });
           case "circuit100":
-            return Object(bn.jsx)(NS, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(SS, { className: "Decrees-Option-Icon" });
           case "circuit010":
-            return Object(bn.jsx)(LS, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(QS, { className: "Decrees-Option-Icon" });
           case "circuit001":
-            return Object(bn.jsx)(VS, { className: "Decrees-Option-Icon" });
+            return Object(bn.jsx)(GS, { className: "Decrees-Option-Icon" });
         }
         return Object(bn.jsx)("div", {});
       }
-      var YS,
-        JS = function (e) {
+      var JS,
+        XS = function (e) {
           var t = e.title,
             a = e.description,
             n = e.id,
@@ -41072,7 +41072,7 @@
             style: { justifySelf: l ? "center" : "" },
             name: n,
             children: [
-              FS(n),
+              YS(n),
               Object(bn.jsx)("h4", {
                 className: "Decrees-Option-Header" + (void 0 !== s ? " ".concat($A(s)) : ""),
                 children: t,
@@ -41088,11 +41088,11 @@
                     className: "Decrees-Option-Description" + (void 0 !== s ? " ".concat($A(s)) : ""),
                     children: a[0],
                   }),
-              Object(bn.jsx)(WS, { isActive: c }),
+              Object(bn.jsx)(FS, { isActive: c }),
             ],
           });
         },
-        XS = function () {
+        qS = function () {
           var e = Object(r.useState)(void 0),
             t = Object(u.a)(e, 2),
             a = t[0],
@@ -41115,7 +41115,7 @@
                   Object(bn.jsx)("div", {
                     className: "Decrees-Icon",
                     style: { background: "#9e0000" },
-                    children: Object(bn.jsx)(JI, {}),
+                    children: Object(bn.jsx)(XI, {}),
                   }),
                   Object(bn.jsx)("h3", { className: "Decrees-Title", children: "Decrees" }),
                 ],
@@ -41151,7 +41151,7 @@
                   { id: "tutorial3", title: "Flameout", description: "Incinerate the Champion's entire roster." },
                 ].map(function (e, t) {
                   return Object(bn.jsx)(
-                    JS,
+                    XS,
                     Object(A.a)(
                       Object(A.a)({}, e),
                       {},
@@ -41171,8 +41171,8 @@
             ],
           });
         },
-        qS = function (e) {
-          var t = Object(r.useContext)(ny.context),
+        ZS = function (e) {
+          var t = Object(r.useContext)(ry.context),
             a = Object(r.useContext)(En.context).user,
             n = Object(r.useState)(void 0),
             s = Object(u.a)(n, 2),
@@ -41185,8 +41185,8 @@
             },
             [e.id]
           );
-          var o = Object(bn.jsx)(GS, {});
-          a.isFetching || !a.isSignedIn || a.favoriteTeam || (o = Object(bn.jsx)(US, {})),
+          var o = Object(bn.jsx)(US, {});
+          a.isFetching || !a.isSignedIn || a.favoriteTeam || (o = Object(bn.jsx)(WS, {})),
             (void 0 === a.snacks[Be.VOTES] || a.snacks[Be.VOTES] < 1) &&
               (o = Object(bn.jsx)(Bd.a, {
                 className: "Decrees-Submit-Button",
@@ -41207,7 +41207,7 @@
                 children: c
                   ? Object(bn.jsxs)(qo, {
                       background: l,
-                      path: a.verified ? "/vote/".concat(HS.DECREE, "/").concat(c) : "/send-verification-email",
+                      path: a.verified ? "/vote/".concat(VS.DECREE, "/").concat(c) : "/send-verification-email",
                       children: ["Submit ", 0 == t.decreeExecutionType ? "Circuit" : "Amplification", " Vote"],
                     })
                   : Object(bn.jsxs)(bn.Fragment, {
@@ -41278,7 +41278,7 @@
                 style: { gridTemplateColumns: "repeat(".concat(d, ", 1fr)") },
                 children: t.decrees.map(function (e, t) {
                   return Object(bn.jsx)(
-                    JS,
+                    XS,
                     Object(A.a)(
                       Object(A.a)({}, e),
                       {},
@@ -41298,10 +41298,10 @@
             ],
           });
         },
-        ZS = ["title", "titleId"];
-      function KS() {
+        KS = ["title", "titleId"];
+      function _S() {
         return (
-          (KS =
+          (_S =
             Object.assign ||
             function (e) {
               for (var t = 1; t < arguments.length; t++) {
@@ -41310,10 +41310,10 @@
               }
               return e;
             }),
-          KS.apply(this, arguments)
+          _S.apply(this, arguments)
         );
       }
-      function _S(e, t) {
+      function $S(e, t) {
         if (null == e) return {};
         var a,
           n,
@@ -41333,13 +41333,13 @@
         }
         return r;
       }
-      function $S(e, t) {
+      function eD(e, t) {
         var a = e.title,
           n = e.titleId,
-          s = _S(e, ZS);
+          s = $S(e, KS);
         return (
           <svg
-            {...KS(
+            {..._S(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -41353,23 +41353,23 @@
             )}
           >
             {a ? <title id={n}>{a}</title> : null}
-            {YS || (YS = <image x={40} y={23} width={70} height={105} xlinkHref="<img/png blob>" />)}
+            {JS || (JS = <image x={40} y={23} width={70} height={105} xlinkHref="<img/png blob>" />)}
           </svg>
         );
       }
-      var eD,
-        tD = r.forwardRef($S);
+      var tD,
+        aD = r.forwardRef(eD);
       a.p;
       !(function (e) {
         (e[(e.DECREE = 0)] = "DECREE"), (e[(e.BONUS = 1)] = "BONUS"), (e[(e.WILL = 2)] = "WILL");
-      })(eD || (eD = {}));
-      var aD = function () {
+      })(tD || (tD = {}));
+      var nD = function () {
           return Object(bn.jsx)("a", {
             href: "/login",
             children: Object(bn.jsx)(Bd.a, { className: "Wills-Submit-Button", children: "Login to Vote" }),
           });
         },
-        nD = function () {
+        rD = function () {
           return Object(bn.jsx)("a", {
             href: "/welcome",
             children: Object(bn.jsx)(Bd.a, {
@@ -41378,12 +41378,12 @@
             }),
           });
         },
-        rD = function (e) {
+        sD = function (e) {
           Object(r.useContext)(En.context).user;
           var t = e.isActive;
           return Object(bn.jsxs)("button", { className: "Wills-Option-Button", children: ["Select", t ? "ed" : ""] });
         },
-        sD = function (e) {
+        cD = function (e) {
           e.isActive;
           var t = e.subheader;
           Object(r.useContext)(En.context).user;
@@ -41407,7 +41407,7 @@
             ],
           });
         },
-        cD = function (e) {
+        iD = function (e) {
           var t = e.title,
             a = e.description,
             n = e.id,
@@ -41426,22 +41426,22 @@
             style: { justifySelf: o ? "center" : "" },
             name: n,
             children: [
-              "charge" === n ? Object(bn.jsx)(tD, { className: "Decrees-Option-Icon" }) : null,
+              "charge" === n ? Object(bn.jsx)(aD, { className: "Decrees-Option-Icon" }) : null,
               Object(bn.jsx)("h4", {
                 className: "Wills-Option-Header" + (void 0 !== s ? " ".concat($A(s)) : ""),
                 children: t,
               }),
-              Object(bn.jsx)(sD, { isActive: c, subheader: l, r: !0 }),
+              Object(bn.jsx)(cD, { isActive: c, subheader: l, r: !0 }),
               Object(bn.jsx)("div", {
                 className: "Wills-Option-Description" + (void 0 !== s ? " ".concat($A(s)) : ""),
                 children: a,
               }),
-              Object(bn.jsx)(rD, { isActive: c }),
+              Object(bn.jsx)(sD, { isActive: c }),
             ],
           });
         },
-        iD = function (e) {
-          var t = Object(r.useContext)(ny.context),
+        lD = function (e) {
+          var t = Object(r.useContext)(ry.context),
             a = Object(r.useContext)(nA.context),
             n = Object(r.useContext)(En.context).user,
             s = Object(r.useState)(void 0),
@@ -41457,8 +41457,8 @@
           );
           var d = !!n.favoriteTeam && Y(n.favoriteTeam, a);
           if (0 === t.wills.length || 0 === t.willsToPass) return null;
-          var j = Object(bn.jsx)(aD, {});
-          n.isFetching || !n.isSignedIn || n.favoriteTeam || (j = Object(bn.jsx)(nD, {})),
+          var j = Object(bn.jsx)(nD, {});
+          n.isFetching || !n.isSignedIn || n.favoriteTeam || (j = Object(bn.jsx)(rD, {})),
             n.isFetching ||
               !n.isSignedIn ||
               d ||
@@ -41490,7 +41490,7 @@
                 children: i
                   ? Object(bn.jsx)(qo, {
                       background: o,
-                      path: n.verified ? "/vote/".concat(eD.WILL, "/").concat(i) : "/send-verification-email",
+                      path: n.verified ? "/vote/".concat(tD.WILL, "/").concat(i) : "/send-verification-email",
                       children: "Submit Charge Vote",
                     })
                   : Object(bn.jsx)(bn.Fragment, { children: "Select a Charge" }),
@@ -41534,7 +41534,7 @@
                 style: { gridTemplateColumns: "repeat(".concat(b, ", 1fr)") },
                 children: t.wills.map(function (e, t) {
                   return Object(bn.jsx)(
-                    cD,
+                    iD,
                     Object(A.a)(
                       Object(A.a)({}, e),
                       {},
@@ -41554,7 +41554,7 @@
             ],
           });
         },
-        lD =
+        oD =
           (a(1121),
           function (e) {
             var t = Object(r.useContext)(En.context).user,
@@ -41639,7 +41639,7 @@
                 })
               : null;
           }),
-        oD = function (e) {
+        AD = function (e) {
           var t = Object(r.useContext)(En.context).user,
             a = Object(r.useContext)(nA.context),
             n = e.event;
@@ -41713,7 +41713,7 @@
             ],
           });
         },
-        AD = function (e) {
+        dD = function (e) {
           var t = Object(r.useContext)(En.context).user,
             a = e.event.metadata;
           return Object(bn.jsxs)("div", {
@@ -41738,14 +41738,14 @@
               Object(bn.jsxs)("div", {
                 className: "Recap-Blessing-Content",
                 children: [
-                  Object(bn.jsx)("div", { className: "Recap-Decree-Icon", children: FS(a.id) }),
+                  Object(bn.jsx)("div", { className: "Recap-Decree-Icon", children: YS(a.id) }),
                   Object(bn.jsx)("div", { className: "Recap-Blessing-Description", children: xb(e) }),
                 ],
               }),
             ],
           });
         },
-        dD = function (e) {
+        uD = function (e) {
           var t,
             a,
             n = Object(r.useContext)(En.context).user,
@@ -41772,7 +41772,7 @@
             ],
           });
         },
-        uD = function (e) {
+        mD = function (e) {
           var t = e.subEvents;
           return void 0 === t
             ? null
@@ -41787,12 +41787,12 @@
                 }),
               });
         };
-      function mD(e) {
+      function jD(e) {
         var t,
           a = Object(r.useContext)(En.context).user,
           n = Object(r.useRef)(null),
           c = Object(r.useRef)(null),
-          i = Object(r.useContext)(ny.context).decreeExecutionType,
+          i = Object(r.useContext)(ry.context).decreeExecutionType,
           l = Object(r.useState)({
             recap: void 0,
             eventResults: void 0,
@@ -41936,7 +41936,7 @@
                               (a = a.filter(function (e) {
                                 return (e.teamTags && e.teamTags.includes(J)) || 0 === e.teamTags.length;
                               })),
-                            a.length > 0 ? Object(bn.jsx)(dD, { event: e, subEvents: a }) : null
+                            a.length > 0 ? Object(bn.jsx)(uD, { event: e, subEvents: a }) : null
                           );
                         })
                       : null,
@@ -41972,7 +41972,7 @@
                               (a = a.filter(function (e) {
                                 return e.teamTags && e.teamTags.includes(J);
                               })),
-                            a.length > 0 ? Object(bn.jsx)(AD, { event: e, subEvents: a }) : null
+                            a.length > 0 ? Object(bn.jsx)(dD, { event: e, subEvents: a }) : null
                           );
                         })
                       : null,
@@ -41999,7 +41999,7 @@
                 (a = a.filter(function (e) {
                   return e.teamTags && e.teamTags.includes(J);
                 })),
-              Object(bn.jsx)(lD, { event: e, subEvents: a })
+              Object(bn.jsx)(oD, { event: e, subEvents: a })
             );
           })),
           (ne = Object(bn.jsxs)("div", {
@@ -42046,7 +42046,7 @@
                 (a = a.filter(function (e) {
                   return e.teamTags && e.teamTags.includes(J);
                 })),
-              Object(bn.jsx)(oD, { event: e, subEvents: a })
+              Object(bn.jsx)(AD, { event: e, subEvents: a })
             );
           })),
           (ce = Object(bn.jsxs)("div", {
@@ -42101,7 +42101,7 @@
                       style: { marginTop: "-70px", paddingTop: "70px" },
                       children: "Post Election",
                     }),
-                    Object(bn.jsx)(uD, { subEvents: le }),
+                    Object(bn.jsx)(mD, { subEvents: le }),
                   ],
                 })
               : null,
@@ -42161,7 +42161,7 @@
           ],
         });
       }
-      function jD() {
+      function bD() {
         var e,
           t = Object(r.useContext)(En.context).user,
           a = Object(r.useContext)(Qn.context),
@@ -42169,14 +42169,14 @@
         return a && a.sim
           ? t.tutorialComplete
             ? a.sim.phase === v.Election
-              ? Object(bn.jsx)(mD, { season: a.sim.season })
+              ? Object(bn.jsx)(jD, { season: a.sim.season })
               : t.unlockedElection || W(a.sim, "SIM_NO_COIN")
-              ? Object(bn.jsx)(bD, { id: null === (e = n.state) || void 0 === e ? void 0 : e.id })
-              : Object(bn.jsx)(OD, {})
-            : Object(bn.jsx)(gD, {})
+              ? Object(bn.jsx)(hD, { id: null === (e = n.state) || void 0 === e ? void 0 : e.id })
+              : Object(bn.jsx)(vD, {})
+            : Object(bn.jsx)(OD, {})
           : null;
       }
-      function bD(e) {
+      function hD(e) {
         var t,
           a = Object(r.useContext)(Qn.context),
           n = Object(r.useContext)(nA.context),
@@ -42223,7 +42223,7 @@
               ],
             }),
             i && i.card > -2
-              ? Object(bn.jsx)("div", { className: "Offseason-Body", children: Object(bn.jsx)(hD, { id: e.id }) })
+              ? Object(bn.jsx)("div", { className: "Offseason-Body", children: Object(bn.jsx)(gD, { id: e.id }) })
               : Object(bn.jsx)("div", {
                   role: "text",
                   style: { textAlign: "center" },
@@ -42235,20 +42235,20 @@
           ],
         });
       }
-      function hD(e) {
+      function gD(e) {
         Object(r.useContext)(En.context).user;
-        var t = Object(r.useContext)(ny.context);
+        var t = Object(r.useContext)(ry.context);
         return void 0 === t || 0 === t.decrees.length
           ? Object(bn.jsx)(Zd, {})
           : Object(bn.jsxs)(bn.Fragment, {
               children: [
-                Object(bn.jsx)(qS, { id: e.id }),
-                Object(bn.jsx)(iD, { id: e.id }),
-                Object(bn.jsx)(sC, { id: e.id }),
+                Object(bn.jsx)(ZS, { id: e.id }),
+                Object(bn.jsx)(lD, { id: e.id }),
+                Object(bn.jsx)(cC, { id: e.id }),
               ],
             });
       }
-      function gD() {
+      function OD() {
         Object(r.useContext)(Qn.context);
         var e = Object(r.useContext)(nA.context);
         Object(r.useContext)(En.context).user;
@@ -42281,12 +42281,12 @@
                   Object(bn.jsx)(mO, { dateString: t }),
                 ],
               }),
-              Object(bn.jsx)("div", { className: "Offseason-Body", children: Object(bn.jsx)(XS, {}) }),
+              Object(bn.jsx)("div", { className: "Offseason-Body", children: Object(bn.jsx)(qS, {}) }),
             ],
           })
         );
       }
-      function OD() {
+      function vD() {
         var e = Object(r.useContext)(En.context),
           t = e.user,
           a = e.setUser,
@@ -42401,10 +42401,10 @@
           }),
         });
       }
-      var vD,
-        fD,
+      var fD,
         pD,
-        xD = function (e) {
+        xD,
+        wD = function (e) {
           var t = Object(md.useToasts)().addToast,
             a = Object(r.useContext)(En.context),
             n = a.user,
@@ -42595,7 +42595,7 @@
           (e[(e.PositionDropdown = 3)] = "PositionDropdown"),
           (e[(e.RatingDropdown = 4)] = "RatingDropdown"),
           (e[(e.ItemDropdown = 5)] = "ItemDropdown");
-      })(vD || (vD = {})),
+      })(fD || (fD = {})),
         (function (e) {
           (e[(e.Batting = 0)] = "Batting"),
             (e[(e.Pitching = 1)] = "Pitching"),
@@ -42603,17 +42603,17 @@
             (e[(e.Baserunning = 3)] = "Baserunning"),
             (e[(e.Combined = 4)] = "Combined"),
             (e[(e.Overall = 5)] = "Overall");
-        })(fD || (fD = {})),
+        })(pD || (pD = {})),
         (function (e) {
           (e[(e.Lineup = 0)] = "Lineup"), (e[(e.Rotation = 1)] = "Rotation"), (e[(e.Shadows = 2)] = "Shadows");
-        })(pD || (pD = {}));
-      var wD = function (e) {
+        })(xD || (xD = {}));
+      var BD = function (e) {
         var t = Object(md.useToasts)().addToast,
           a = Object(r.useContext)(En.context),
           n = a.user,
           s = a.setUser,
           c = Object(m.g)(),
-          i = Object(r.useContext)(ny.context),
+          i = Object(r.useContext)(ry.context),
           l = Object(r.useContext)(nA.context),
           j = Object(r.useState)(n.snacks.Votes ? 1 : 0),
           b = Object(u.a)(j, 2),
@@ -42771,42 +42771,42 @@
                 var t = 1,
                   a = n.favoriteTeam ? n.favoriteTeam : "";
                 I.info.forEach(function (e, r) {
-                  if (e.type === vD.TeamDropdown)
+                  if (e.type === fD.TeamDropdown)
                     U === [] || void 0 === U || U.length < 1
                       ? W($(l, e, a, !0))
                       : (J === [] || void 0 === J || J.length < 1) && X($(l, e, a, !0));
-                  else if (e.type === vD.PlayerDropdown) {
+                  else if (e.type === fD.PlayerDropdown) {
                     if ("myTeam" === e.filters.leagueLocation && void 0 === e.filters.equivalence) {
                       var s = n.favoriteTeam ? n.favoriteTeam : "";
                       at(s, e.filters.position, t, e.filters.hasMods);
                     }
                     t += 1;
-                  } else if (e.type === vD.ModDropdown && void 0 !== e.filters.mods) {
+                  } else if (e.type === fD.ModDropdown && void 0 !== e.filters.mods) {
                     var c = [];
                     x.attributes.collection.map(function (t) {
                       e.filters.mods.includes(t.id) && c.push(t);
                     }),
                       ye(c);
-                  } else if (e.type === vD.PositionDropdown) {
+                  } else if (e.type === fD.PositionDropdown) {
                     var i = (function (e) {
                       var t = [];
-                      ("batter" !== e && "all" !== e && "any" !== e) || t.push({ id: pD.Lineup, name: "Lineup" });
-                      ("pitcher" !== e && "all" !== e && "any" !== e) || t.push({ id: pD.Rotation, name: "Rotation" });
-                      ("shadows" !== e && "any" !== e) || t.push({ id: pD.Shadows, name: "Shadows" });
+                      ("batter" !== e && "all" !== e && "any" !== e) || t.push({ id: xD.Lineup, name: "Lineup" });
+                      ("pitcher" !== e && "all" !== e && "any" !== e) || t.push({ id: xD.Rotation, name: "Rotation" });
+                      ("shadows" !== e && "any" !== e) || t.push({ id: xD.Shadows, name: "Shadows" });
                       return t;
                     })(e.filters.position);
                     Te(i);
-                  } else if (e.type === vD.RatingDropdown) {
+                  } else if (e.type === fD.RatingDropdown) {
                     var o = (function (e) {
                       var t = [];
-                      (e === fD.Batting || e >= 4) && t.push({ id: fD.Batting, name: "Batting" });
-                      (e === fD.Pitching || e >= 4) && t.push({ id: fD.Pitching, name: "Pitching" });
-                      (e === fD.Baserunning || e >= 4) && t.push({ id: fD.Baserunning, name: "Baserunning" });
-                      (e === fD.Defense || e >= 4) && t.push({ id: fD.Defense, name: "Defense" });
+                      (e === pD.Batting || e >= 4) && t.push({ id: pD.Batting, name: "Batting" });
+                      (e === pD.Pitching || e >= 4) && t.push({ id: pD.Pitching, name: "Pitching" });
+                      (e === pD.Baserunning || e >= 4) && t.push({ id: pD.Baserunning, name: "Baserunning" });
+                      (e === pD.Defense || e >= 4) && t.push({ id: pD.Defense, name: "Defense" });
                       return t;
                     })(e.filters.ratings);
                     Ge(o);
-                  } else if (e.type === vD.ItemDropdown && "inputTeam" !== e.filters.leagueLocation) {
+                  } else if (e.type === fD.ItemDropdown && "inputTeam" !== e.filters.leagueLocation) {
                     var A;
                     nt(
                       e.filters.leagueLocation,
@@ -42825,8 +42825,8 @@
                 t = "inLeague",
                 a = !0;
               I.info.map(function (n, r) {
-                if (n.type !== vD.PlayerDropdown || "inputTeam" !== n.filters.leagueLocation || !n.filters.position)
-                  return n.type === vD.ItemDropdown && "inputTeam" === n.filters.leagueLocation && n.filters.position
+                if (n.type !== fD.PlayerDropdown || "inputTeam" !== n.filters.leagueLocation || !n.filters.position)
+                  return n.type === fD.ItemDropdown && "inputTeam" === n.filters.leagueLocation && n.filters.position
                     ? ((t = n.filters.leagueLocation), void (a = !1))
                     : void 0;
                 e = n.filters.position;
@@ -42841,8 +42841,8 @@
                 t = "inLeague",
                 a = !0;
               I.info.map(function (n, r) {
-                if (n.type !== vD.PlayerDropdown || "inputTeam" !== n.filters.leagueLocation || !n.filters.position)
-                  return n.type === vD.ItemDropdown && "inputTeam" === n.filters.leagueLocation && n.filters.position
+                if (n.type !== fD.PlayerDropdown || "inputTeam" !== n.filters.leagueLocation || !n.filters.position)
+                  return n.type === fD.ItemDropdown && "inputTeam" === n.filters.leagueLocation && n.filters.position
                     ? ((t = n.filters.leagueLocation), void (a = !1))
                     : void 0;
                 e = n.filters.position;
@@ -42854,7 +42854,7 @@
           Object(r.useEffect)(
             function () {
               I.info.map(function (e, t) {
-                if (e.type === vD.ModDropdown && void 0 === e.filters.mods) {
+                if (e.type === fD.ModDropdown && void 0 === e.filters.mods) {
                   var a = [],
                     r = K.find(function (e) {
                       return e.id === he;
@@ -42866,7 +42866,7 @@
                     ye(a);
                 }
                 if (
-                  e.type === vD.PlayerDropdown &&
+                  e.type === fD.PlayerDropdown &&
                   void 0 !== e.filters.equivalence &&
                   "myTeam" === e.filters.leagueLocation
                 ) {
@@ -42996,7 +42996,7 @@
             "2" === B
               ? Object(bn.jsx)(bn.Fragment, {
                   children: I.info.map(function (e) {
-                    if (e.type === vD.TeamDropdown) {
+                    if (e.type === fD.TeamDropdown) {
                       if (1 === (mt += 1))
                         return Object(bn.jsxs)(T.a.Group, {
                           controlId: "team selection",
@@ -43053,7 +43053,7 @@
                             }),
                           ],
                         });
-                    } else if (e.type === vD.PlayerDropdown) {
+                    } else if (e.type === fD.PlayerDropdown) {
                       if (1 === (jt += 1))
                         return Object(bn.jsxs)(T.a.Group, {
                           controlId: "team selection",
@@ -43117,7 +43117,7 @@
                           ],
                         });
                     } else {
-                      if (e.type === vD.ModDropdown)
+                      if (e.type === fD.ModDropdown)
                         return Object(bn.jsxs)(T.a.Group, {
                           controlId: "team selection",
                           children: [
@@ -43145,7 +43145,7 @@
                             }),
                           ],
                         });
-                      if (e.type === vD.PositionDropdown)
+                      if (e.type === fD.PositionDropdown)
                         return Object(bn.jsxs)(T.a.Group, {
                           controlId: "team selection",
                           children: [
@@ -43173,7 +43173,7 @@
                             }),
                           ],
                         });
-                      if (e.type === vD.RatingDropdown)
+                      if (e.type === fD.RatingDropdown)
                         return Object(bn.jsxs)(T.a.Group, {
                           controlId: "team selection",
                           children: [
@@ -43201,7 +43201,7 @@
                             }),
                           ],
                         });
-                      if (e.type === vD.ItemDropdown)
+                      if (e.type === fD.ItemDropdown)
                         return Object(bn.jsxs)(T.a.Group, {
                           controlId: "team selection",
                           children: [
@@ -43279,12 +43279,12 @@
                         j = 0;
                       if (
                         (I.info.forEach(function (e) {
-                          e.type === vD.TeamDropdown && (i += 1),
-                            e.type === vD.PlayerDropdown && (r += 1),
-                            e.type === vD.ModDropdown && (l += 1),
-                            e.type === vD.PositionDropdown && (u += 1),
-                            e.type === vD.RatingDropdown && (m += 1),
-                            e.type === vD.ItemDropdown && (j += 1);
+                          e.type === fD.TeamDropdown && (i += 1),
+                            e.type === fD.PlayerDropdown && (r += 1),
+                            e.type === fD.ModDropdown && (l += 1),
+                            e.type === fD.PositionDropdown && (u += 1),
+                            e.type === fD.RatingDropdown && (m += 1),
+                            e.type === fD.ItemDropdown && (j += 1);
                         }),
                         2 === i && ("" === le || "" === ue))
                       )
@@ -43438,7 +43438,7 @@
           )
         );
       };
-      function BD(e) {
+      function ED(e) {
         e.path;
         var t,
           a = Object(r.useContext)(nA.context),
@@ -43472,9 +43472,9 @@
         });
       }
       a(1122);
-      var ED,
-        yD,
-        CD = function () {
+      var yD,
+        CD,
+        ID = function () {
           return Object(bn.jsxs)("div", {
             className: "Privacy",
             children: [
@@ -43987,7 +43987,7 @@
             ],
           });
         },
-        ID =
+        ND =
           (a(1123),
           function () {
             bn.Fragment;
@@ -44515,9 +44515,9 @@
               ],
             });
           }),
-        ND = void 0;
+        SD = void 0;
       (null ===
-        (ED = Object({
+        (yD = Object({
           NODE_ENV: "production",
           PUBLIC_URL: "https://www.blaseball.com",
           WDS_SOCKET_HOST: void 0,
@@ -44532,12 +44532,12 @@
           REACT_APP_ENVIRONMENT: "prod",
           REACT_APP_PUSHER_KEY: "ddb8c477293f80ee9c63",
           REACT_APP_PUSHER_CLUSTER: "us3",
-        })) || void 0 === ED
+        })) || void 0 === yD
         ? void 0
-        : ED.REACT_APP_PUSHER_KEY) &&
-        (ND = new sg.a(
+        : yD.REACT_APP_PUSHER_KEY) &&
+        (SD = new sg.a(
           null ===
-            (yD = Object({
+            (CD = Object({
               NODE_ENV: "production",
               PUBLIC_URL: "https://www.blaseball.com",
               WDS_SOCKET_HOST: void 0,
@@ -44552,20 +44552,20 @@
               REACT_APP_ENVIRONMENT: "prod",
               REACT_APP_PUSHER_KEY: "ddb8c477293f80ee9c63",
               REACT_APP_PUSHER_CLUSTER: "us3",
-            })) || void 0 === yD
+            })) || void 0 === CD
             ? void 0
-            : yD.REACT_APP_PUSHER_KEY,
+            : CD.REACT_APP_PUSHER_KEY,
           { cluster: "us3" }
         ));
-      function SD() {
+      function DD() {
         var e = Object(r.useContext)(JA.context);
         return Object(bn.jsxs)("div", {
           className: "Main" + (e && e.doc && e.doc.epsilon ? " Main-BigDeal" : ""),
-          children: [Object(bn.jsx)(qB, {}), Object(bn.jsx)(Ag, { children: Object(bn.jsx)(PD, {}) })],
+          children: [Object(bn.jsx)(qB, {}), Object(bn.jsx)(Ag, { children: Object(bn.jsx)(kD, {}) })],
         });
       }
-      var DD = "https://api.blaseball.com";
-      function PD() {
+      var PD = "https://api.blaseball.com";
+      function kD() {
         var e = Object(r.useContext)(En.context),
           t = e.user,
           a = e.setUser,
@@ -44609,7 +44609,7 @@
                           case 0:
                             return (
                               (e.next = 2),
-                              Qb("".concat(DD, "/tutorial/restart"), JSON.stringify({})).then(function (e) {
+                              Qb("".concat(PD, "/tutorial/restart"), JSON.stringify({})).then(function (e) {
                                 e.status &&
                                   200 === e.status &&
                                   e.ok &&
@@ -44670,17 +44670,17 @@
             [t]
           ),
           void 0 !== t && t.isFetching
-            ? Object(bn.jsx)(LD, {})
+            ? Object(bn.jsx)(QD, {})
             : i
             ? !t.tutorialComplete && n && n.Onboarding
-              ? Object(bn.jsx)(RD, { clickTracker: h, setClickTracker: g, setCurrentPath: I })
+              ? Object(bn.jsx)(MD, { clickTracker: h, setClickTracker: g, setCurrentPath: I })
               : (null === n || void 0 === n ? void 0 : n.streamDataOff)
-              ? Object(bn.jsx)(kD, { clickTracker: h, setClickTracker: g, setCurrentPath: I })
-              : Object(bn.jsx)(MD, { clickTracker: h, setClickTracker: g, setCurrentPath: I })
-            : Object(bn.jsx)(TD, { clickTracker: h, setClickTracker: g, setCurrentPath: I })
+              ? Object(bn.jsx)(TD, { clickTracker: h, setClickTracker: g, setCurrentPath: I })
+              : Object(bn.jsx)(zD, { clickTracker: h, setClickTracker: g, setCurrentPath: I })
+            : Object(bn.jsx)(LD, { clickTracker: h, setClickTracker: g, setCurrentPath: I })
         );
       }
-      function kD(e) {
+      function TD(e) {
         var t,
           a,
           n = e.clickTracker,
@@ -44709,7 +44709,7 @@
                   className: "Main-Footer-Advertise-Inner",
                   children: Object(bn.jsx)("a", {
                     className: "Main-Footer-Advertise-Icon",
-                    href: zD(),
+                    href: HD(),
                     children: "Become a Sponsor",
                   }),
                 }),
@@ -44743,8 +44743,8 @@
                               : null;
                           },
                         }),
-                        Object(bn.jsx)(m.b, { path: "/tos", children: Object(bn.jsx)(ID, {}) }),
-                        Object(bn.jsx)(m.b, { path: "/privacy", children: Object(bn.jsx)(CD, {}) }),
+                        Object(bn.jsx)(m.b, { path: "/tos", children: Object(bn.jsx)(ND, {}) }),
+                        Object(bn.jsx)(m.b, { path: "/privacy", children: Object(bn.jsx)(ID, {}) }),
                         Object(bn.jsx)(m.b, { path: "/about", children: Object(bn.jsx)(ZB, {}) }),
                         Object(bn.jsx)(m.b, { path: "/account", children: Object(bn.jsx)(WE, {}) }),
                         Object(bn.jsx)(m.b, { path: "/faq", children: Object(bn.jsx)(Ox, {}) }),
@@ -44752,12 +44752,12 @@
                           path: "/tutorial/league",
                           children: Object(bn.jsx)(iw, { path: "", clickTracker: n, setClickTracker: s }),
                         }),
-                        Object(bn.jsx)(m.b, { path: "/tutorial/offseason", children: Object(bn.jsx)(jD, {}) }),
+                        Object(bn.jsx)(m.b, { path: "/tutorial/offseason", children: Object(bn.jsx)(bD, {}) }),
                         Object(bn.jsxs)(m.b, {
                           path: "/standings",
                           children: [Object(bn.jsx)(Yg, {}), Object(bn.jsx)(Hx, {})],
                         }),
-                        Object(bn.jsx)(m.b, { path: "/offseason", children: Object(bn.jsx)(mD, { season: 0 }) }),
+                        Object(bn.jsx)(m.b, { path: "/offseason", children: Object(bn.jsx)(jD, { season: 0 }) }),
                         Object(bn.jsx)(m.b, {
                           path: "/library/:book?/:chapter?",
                           children: Object(bn.jsx)(lO, { clickTracker: n, setClickTracker: s }),
@@ -44768,9 +44768,9 @@
                         }),
                         Object(bn.jsx)(m.b, {
                           path: "/login",
-                          children: Object(bn.jsx)(qE, { isLogin: !0, clickTracker: n, setClickTracker: s }),
+                          children: Object(bn.jsx)(ZE, { isLogin: !0, clickTracker: n, setClickTracker: s }),
                         }),
-                        Object(bn.jsx)(m.b, { path: "/reset/:token", children: Object(bn.jsx)(ZE, {}) }),
+                        Object(bn.jsx)(m.b, { path: "/reset/:token", children: Object(bn.jsx)(KE, {}) }),
                         Object(bn.jsx)(m.b, {
                           path: "/verify-account/:token",
                           children: Object(bn.jsx)(yx, { clickTracker: n, setClickTracker: s }),
@@ -44783,7 +44783,7 @@
                         Object(bn.jsx)(m.b, { path: "/delete-account/:token", children: Object(bn.jsx)(Sx, {}) }),
                         Object(bn.jsx)(m.b, {
                           path: "/signup",
-                          children: Object(bn.jsx)(qE, { clickTracker: n, setClickTracker: s }),
+                          children: Object(bn.jsx)(ZE, { clickTracker: n, setClickTracker: s }),
                         }),
                         Object(bn.jsx)(m.b, { path: "/team/:nickname", children: Object(bn.jsx)(lE, {}) }),
                         Object(bn.jsx)(m.b, { path: "/", children: Object(bn.jsx)(Wp, {}) }),
@@ -44794,18 +44794,18 @@
                         children: [
                           Object(bn.jsx)(m.b, {
                             path: "/signup",
-                            children: Object(bn.jsx)(qE, { isModal: !0, clickTracker: n, setClickTracker: s }),
+                            children: Object(bn.jsx)(ZE, { isModal: !0, clickTracker: n, setClickTracker: s }),
                           }),
                           Object(bn.jsx)(m.b, {
                             path: "/login",
-                            children: Object(bn.jsx)(qE, {
+                            children: Object(bn.jsx)(ZE, {
                               isModal: !0,
                               isLogin: !0,
                               clickTracker: n,
                               setClickTracker: s,
                             }),
                           }),
-                          Object(bn.jsx)(m.b, { path: "/forgot", children: Object(bn.jsx)(ZE, { isModal: !0 }) }),
+                          Object(bn.jsx)(m.b, { path: "/forgot", children: Object(bn.jsx)(KE, { isModal: !0 }) }),
                           Object(bn.jsx)(m.b, {
                             path: "/send-verification-email",
                             children: Object(bn.jsx)(Ex, { isModal: !0, clickTracker: n, setClickTracker: s }),
@@ -44818,7 +44818,7 @@
                             path: "/send-delete-account",
                             children: Object(bn.jsx)(Nx, { isModal: !0 }),
                           }),
-                          Object(bn.jsx)(m.b, { path: "/reset/:token", children: Object(bn.jsx)(ZE, { isModal: !0 }) }),
+                          Object(bn.jsx)(m.b, { path: "/reset/:token", children: Object(bn.jsx)(KE, { isModal: !0 }) }),
                           Object(bn.jsx)(m.b, {
                             path: "/team/:nickname",
                             children: Object(bn.jsx)(lE, { isModal: !0 }),
@@ -44837,8 +44837,8 @@
                           }),
                         ],
                       }),
-                    Object(bn.jsx)(YE, { isModal: !0, dismissable: !1 }),
-                    Object(bn.jsx)($E, { isModal: !0, dismissable: !1 }),
+                    Object(bn.jsx)(JE, { isModal: !0, dismissable: !1 }),
+                    Object(bn.jsx)(ey, { isModal: !0, dismissable: !1 }),
                   ],
                 }),
                 o,
@@ -44847,7 +44847,7 @@
           }),
         });
       }
-      function TD(e) {
+      function LD(e) {
         var t = e.clickTracker,
           a = e.setClickTracker,
           n = e.setCurrentPath,
@@ -44867,16 +44867,16 @@
                   Object(bn.jsxs)(m.d, {
                     location: i || c,
                     children: [
-                      Object(bn.jsx)(m.b, { path: "/tos", children: Object(bn.jsx)(ID, {}) }),
-                      Object(bn.jsx)(m.b, { path: "/privacy", children: Object(bn.jsx)(CD, {}) }),
+                      Object(bn.jsx)(m.b, { path: "/tos", children: Object(bn.jsx)(ND, {}) }),
+                      Object(bn.jsx)(m.b, { path: "/privacy", children: Object(bn.jsx)(ID, {}) }),
                       Object(bn.jsx)(m.b, {
                         path: "/login",
-                        children: Object(bn.jsx)(qE, { isLogin: !0, clickTracker: t, setClickTracker: a }),
+                        children: Object(bn.jsx)(ZE, { isLogin: !0, clickTracker: t, setClickTracker: a }),
                       }),
-                      Object(bn.jsx)(m.b, { path: "/reset-password/:token", children: Object(bn.jsx)(ZE, {}) }),
+                      Object(bn.jsx)(m.b, { path: "/reset-password/:token", children: Object(bn.jsx)(KE, {}) }),
                       Object(bn.jsx)(m.b, {
                         path: "/signup/:code?",
-                        children: Object(bn.jsx)(qE, { clickTracker: t, setClickTracker: a }),
+                        children: Object(bn.jsx)(ZE, { clickTracker: t, setClickTracker: a }),
                       }),
                       Object(bn.jsx)(m.b, { path: "/faq", children: Object(bn.jsx)(Ox, {}) }),
                       Object(bn.jsx)(m.b, { path: "/thebeat/:beatNumber?", children: Object(bn.jsx)(Rx, {}) }),
@@ -44896,23 +44896,23 @@
                       children: [
                         Object(bn.jsx)(m.b, {
                           path: "/signup",
-                          children: Object(bn.jsx)(qE, { isModal: !0, clickTracker: t, setClickTracker: a }),
+                          children: Object(bn.jsx)(ZE, { isModal: !0, clickTracker: t, setClickTracker: a }),
                         }),
                         Object(bn.jsx)(m.b, {
                           path: "/login",
-                          children: Object(bn.jsx)(qE, {
+                          children: Object(bn.jsx)(ZE, {
                             isModal: !0,
                             isLogin: !0,
                             clickTracker: t,
                             setClickTracker: a,
                           }),
                         }),
-                        Object(bn.jsx)(m.b, { path: "/reset/:token", children: Object(bn.jsx)(ZE, { isModal: !0 }) }),
-                        Object(bn.jsx)(m.b, { path: "/forgot", children: Object(bn.jsx)(KE, { isModal: !0 }) }),
+                        Object(bn.jsx)(m.b, { path: "/reset/:token", children: Object(bn.jsx)(KE, { isModal: !0 }) }),
+                        Object(bn.jsx)(m.b, { path: "/forgot", children: Object(bn.jsx)(_E, { isModal: !0 }) }),
                       ],
                     }),
-                  Object(bn.jsx)(YE, { isModal: !0, dismissable: !1 }),
-                  Object(bn.jsx)($E, { isModal: !0, dismissable: !1 }),
+                  Object(bn.jsx)(JE, { isModal: !0, dismissable: !1 }),
+                  Object(bn.jsx)(ey, { isModal: !0, dismissable: !1 }),
                 ],
               }),
               Object(bn.jsxs)("footer", {
@@ -44944,7 +44944,7 @@
                       className: "Main-Footer-Advertise-Inner",
                       children: Object(bn.jsx)("a", {
                         className: "Main-Footer-Advertise-Icon",
-                        href: zD(),
+                        href: HD(),
                         children: "Become a Sponsor",
                       }),
                     }),
@@ -44961,15 +44961,15 @@
           })
         );
       }
-      function LD() {
+      function QD() {
         return Object(bn.jsx)("div", { children: Object(bn.jsx)("div", { className: "Main-Body" }) });
       }
-      function QD() {
+      function RD() {
         return Object(bn.jsx)("div", {
           children: Object(bn.jsx)("div", { className: "Main-Body", children: Object(bn.jsx)(ZA, {}) }),
         });
       }
-      function RD(e) {
+      function MD(e) {
         var t,
           a,
           n,
@@ -44999,7 +44999,7 @@
                         case 0:
                           return (
                             (e.next = 2),
-                            fetch("".concat(DD, "/tutorial/onboardingA"), { credentials: "include" })
+                            fetch("".concat(PD, "/tutorial/onboardingA"), { credentials: "include" })
                               .then(function (e) {
                                 return e.json();
                               })
@@ -45065,7 +45065,7 @@
                   className: "Main-Footer-Advertise-Inner",
                   children: Object(bn.jsx)("a", {
                     className: "Main-Footer-Advertise-Icon",
-                    href: zD(),
+                    href: HD(),
                     children: "Become a Sponsor",
                   }),
                 }),
@@ -45101,21 +45101,21 @@
                               : null;
                           },
                         }),
-                        Object(bn.jsx)(m.b, { path: "/tos", children: Object(bn.jsx)(ID, {}) }),
-                        Object(bn.jsx)(m.b, { path: "/privacy", children: Object(bn.jsx)(CD, {}) }),
+                        Object(bn.jsx)(m.b, { path: "/tos", children: Object(bn.jsx)(ND, {}) }),
+                        Object(bn.jsx)(m.b, { path: "/privacy", children: Object(bn.jsx)(ID, {}) }),
                         Object(bn.jsx)(m.b, { path: "/about", children: Object(bn.jsx)(ZB, {}) }),
                         Object(bn.jsx)(m.b, { path: "/account", children: Object(bn.jsx)(WE, {}) }),
                         Object(bn.jsx)(m.b, { path: "/faq", children: Object(bn.jsx)(Ox, {}) }),
                         Object(bn.jsx)(m.b, {
                           path: "/login",
-                          children: Object(bn.jsx)(qE, { isLogin: !0, clickTracker: c, setClickTracker: i }),
+                          children: Object(bn.jsx)(ZE, { isLogin: !0, clickTracker: c, setClickTracker: i }),
                         }),
                         Object(bn.jsx)(m.b, {
                           path: "/tutorial/league",
                           children: Object(bn.jsx)(iw, { path: "", clickTracker: c, setClickTracker: i }),
                         }),
-                        Object(bn.jsx)(m.b, { path: "/tutorial/offseason", children: Object(bn.jsx)(jD, {}) }),
-                        Object(bn.jsx)(m.b, { path: "/reset/:token", children: Object(bn.jsx)(ZE, {}) }),
+                        Object(bn.jsx)(m.b, { path: "/tutorial/offseason", children: Object(bn.jsx)(bD, {}) }),
+                        Object(bn.jsx)(m.b, { path: "/reset/:token", children: Object(bn.jsx)(KE, {}) }),
                         Object(bn.jsx)(m.b, {
                           path: "/verify-account/:token",
                           children: Object(bn.jsx)(yx, { clickTracker: c, setClickTracker: i }),
@@ -45128,7 +45128,7 @@
                         Object(bn.jsx)(m.b, { path: "/delete-account/:token", children: Object(bn.jsx)(Sx, {}) }),
                         Object(bn.jsx)(m.b, {
                           path: "/signup",
-                          children: Object(bn.jsx)(qE, { clickTracker: c, setClickTracker: i }),
+                          children: Object(bn.jsx)(ZE, { clickTracker: c, setClickTracker: i }),
                         }),
                         Object(bn.jsx)(m.b, {
                           path: "/",
@@ -45143,18 +45143,18 @@
                         children: [
                           Object(bn.jsx)(m.b, {
                             path: "/signup",
-                            children: Object(bn.jsx)(qE, { isModal: !0, clickTracker: c, setClickTracker: i }),
+                            children: Object(bn.jsx)(ZE, { isModal: !0, clickTracker: c, setClickTracker: i }),
                           }),
                           Object(bn.jsx)(m.b, {
                             path: "/login",
-                            children: Object(bn.jsx)(qE, {
+                            children: Object(bn.jsx)(ZE, {
                               isModal: !0,
                               isLogin: !0,
                               clickTracker: c,
                               setClickTracker: i,
                             }),
                           }),
-                          Object(bn.jsx)(m.b, { path: "/forgot", children: Object(bn.jsx)(ZE, { isModal: !0 }) }),
+                          Object(bn.jsx)(m.b, { path: "/forgot", children: Object(bn.jsx)(KE, { isModal: !0 }) }),
                           Object(bn.jsx)(m.b, {
                             path: "/send-verification-email",
                             children: Object(bn.jsx)(Ex, { isModal: !0, clickTracker: c, setClickTracker: i }),
@@ -45167,7 +45167,7 @@
                             path: "/send-delete-account",
                             children: Object(bn.jsx)(Nx, { isModal: !0 }),
                           }),
-                          Object(bn.jsx)(m.b, { path: "/reset/:token", children: Object(bn.jsx)(ZE, { isModal: !0 }) }),
+                          Object(bn.jsx)(m.b, { path: "/reset/:token", children: Object(bn.jsx)(KE, { isModal: !0 }) }),
                           Object(bn.jsx)(m.b, {
                             path: "/team/:nickname",
                             children: Object(bn.jsx)(OE, { isModal: !0 }),
@@ -45191,7 +45191,7 @@
                           Object(bn.jsx)(m.b, { path: "/bets/help", children: Object(bn.jsx)(Mx, { isModal: !0 }) }),
                           Object(bn.jsx)(m.b, {
                             path: "/vote/:voteType/:entityId",
-                            children: Object(bn.jsx)(wD, { isModal: !0, clickTracker: c, setClickTracker: i }),
+                            children: Object(bn.jsx)(BD, { isModal: !0, clickTracker: c, setClickTracker: i }),
                           }),
                           Object(bn.jsx)(m.b, {
                             path: "/reorder/:type",
@@ -45206,8 +45206,8 @@
                           }),
                         ],
                       }),
-                    Object(bn.jsx)(YE, { isModal: !0, dismissable: !1, step: x[O], stepNum: O, setStepNum: v }),
-                    Object(bn.jsx)(JE, { isModal: !0, dismissable: !1, step: x[O] }),
+                    Object(bn.jsx)(JE, { isModal: !0, dismissable: !1, step: x[O], stepNum: O, setStepNum: v }),
+                    Object(bn.jsx)(XE, { isModal: !0, dismissable: !1, step: x[O] }),
                     Object(bn.jsx)(Ud, { step: x[O], stepNum: O, setStepNum: v, maxStep: x.length }),
                   ],
                 }),
@@ -45217,7 +45217,7 @@
           }),
         });
       }
-      function MD(e) {
+      function zD(e) {
         var t,
           a,
           n,
@@ -45236,7 +45236,7 @@
           f = Object(m.h)(),
           p = f.state && f.state.background,
           x = Object(r.useContext)(JA.context);
-        if (x && x.doc && x.doc.epsilon) return Object(bn.jsx)(QD, {});
+        if (x && x.doc && x.doc.epsilon) return Object(bn.jsx)(RD, {});
         var w,
           B,
           E,
@@ -45260,7 +45260,7 @@
           W = function (e, t, a, n) {
             switch (e) {
               case v.RestPhase:
-                return Object(bn.jsx)(BD, { path: t });
+                return Object(bn.jsx)(ED, { path: t });
               case v.Preseason:
                 return Object(bn.jsx)(gx, { path: t });
               case v.GamePhase:
@@ -45291,7 +45291,7 @@
                   className: "Main-Footer-Advertise-Inner",
                   children: Object(bn.jsx)("a", {
                     className: "Main-Footer-Advertise-Icon",
-                    href: zD(),
+                    href: HD(),
                     children: "Become a Sponsor",
                   }),
                 }),
@@ -45326,8 +45326,8 @@
                                   : null;
                               },
                             }),
-                            Object(bn.jsx)(m.b, { path: "/tos", children: Object(bn.jsx)(ID, {}) }),
-                            Object(bn.jsx)(m.b, { path: "/privacy", children: Object(bn.jsx)(CD, {}) }),
+                            Object(bn.jsx)(m.b, { path: "/tos", children: Object(bn.jsx)(ND, {}) }),
+                            Object(bn.jsx)(m.b, { path: "/privacy", children: Object(bn.jsx)(ID, {}) }),
                             Object(bn.jsx)(m.b, { path: "/about", children: Object(bn.jsx)(ZB, {}) }),
                             Object(bn.jsx)(m.b, { path: "/account", children: Object(bn.jsx)(WE, {}) }),
                             Object(bn.jsx)(m.b, { path: "/faq", children: Object(bn.jsx)(Ox, {}) }),
@@ -45339,12 +45339,12 @@
                               path: "/thebook",
                               children: Object(bn.jsx)(Kg, { clickTracker: u, setClickTracker: j }),
                             }),
-                            Object(bn.jsx)(m.b, { path: "/offseason", children: Object(bn.jsx)(jD, {}) }),
+                            Object(bn.jsx)(m.b, { path: "/offseason", children: Object(bn.jsx)(bD, {}) }),
                             Object(bn.jsx)(m.b, {
                               path: "/login",
-                              children: Object(bn.jsx)(qE, { isLogin: !0, clickTracker: u, setClickTracker: j }),
+                              children: Object(bn.jsx)(ZE, { isLogin: !0, clickTracker: u, setClickTracker: j }),
                             }),
-                            Object(bn.jsx)(m.b, { path: "/reset/:token", children: Object(bn.jsx)(ZE, {}) }),
+                            Object(bn.jsx)(m.b, { path: "/reset/:token", children: Object(bn.jsx)(KE, {}) }),
                             Object(bn.jsx)(m.b, {
                               path: "/verify-account/:token",
                               children: Object(bn.jsx)(yx, { clickTracker: u, setClickTracker: j }),
@@ -45357,7 +45357,7 @@
                             Object(bn.jsx)(m.b, { path: "/delete-account/:token", children: Object(bn.jsx)(Sx, {}) }),
                             Object(bn.jsx)(m.b, {
                               path: "/signup",
-                              children: Object(bn.jsx)(qE, { clickTracker: u, setClickTracker: j }),
+                              children: Object(bn.jsx)(ZE, { clickTracker: u, setClickTracker: j }),
                             }),
                             Object(bn.jsx)(m.b, { path: "/team/:nickname", children: Object(bn.jsx)(OE, {}) }),
                             Object(bn.jsx)(m.b, { path: "/player/:id", children: Object(bn.jsx)(pu, {}) }),
@@ -45391,18 +45391,18 @@
                             children: [
                               Object(bn.jsx)(m.b, {
                                 path: "/signup",
-                                children: Object(bn.jsx)(qE, { isModal: !0, clickTracker: u, setClickTracker: j }),
+                                children: Object(bn.jsx)(ZE, { isModal: !0, clickTracker: u, setClickTracker: j }),
                               }),
                               Object(bn.jsx)(m.b, {
                                 path: "/login",
-                                children: Object(bn.jsx)(qE, {
+                                children: Object(bn.jsx)(ZE, {
                                   isModal: !0,
                                   isLogin: !0,
                                   clickTracker: u,
                                   setClickTracker: j,
                                 }),
                               }),
-                              Object(bn.jsx)(m.b, { path: "/forgot", children: Object(bn.jsx)(ZE, { isModal: !0 }) }),
+                              Object(bn.jsx)(m.b, { path: "/forgot", children: Object(bn.jsx)(KE, { isModal: !0 }) }),
                               Object(bn.jsx)(m.b, {
                                 path: "/send-verification-email",
                                 children: Object(bn.jsx)(Ex, { isModal: !0, clickTracker: u, setClickTracker: j }),
@@ -45417,7 +45417,7 @@
                               }),
                               Object(bn.jsx)(m.b, {
                                 path: "/reset/:token",
-                                children: Object(bn.jsx)(ZE, { isModal: !0 }),
+                                children: Object(bn.jsx)(KE, { isModal: !0 }),
                               }),
                               Object(bn.jsx)(m.b, {
                                 path: "/team/:nickname",
@@ -45460,8 +45460,8 @@
                               }),
                             ],
                           }),
-                        Object(bn.jsx)(YE, { isModal: !0, dismissable: !1 }),
-                        Object(bn.jsx)($E, { isModal: !0, dismissable: !1 }),
+                        Object(bn.jsx)(JE, { isModal: !0, dismissable: !1 }),
+                        Object(bn.jsx)(ey, { isModal: !0, dismissable: !1 }),
                       ],
                     }),
                     F,
@@ -45492,17 +45492,17 @@
                                     : null;
                                 },
                               }),
-                              Object(bn.jsx)(m.b, { path: "/tos", children: Object(bn.jsx)(ID, {}) }),
-                              Object(bn.jsx)(m.b, { path: "/privacy", children: Object(bn.jsx)(CD, {}) }),
+                              Object(bn.jsx)(m.b, { path: "/tos", children: Object(bn.jsx)(ND, {}) }),
+                              Object(bn.jsx)(m.b, { path: "/privacy", children: Object(bn.jsx)(ID, {}) }),
                               Object(bn.jsx)(m.b, { path: "/about", children: Object(bn.jsx)(ZB, {}) }),
                               Object(bn.jsx)(m.b, { path: "/account", children: Object(bn.jsx)(WE, {}) }),
                               Object(bn.jsx)(m.b, { path: "/faq", children: Object(bn.jsx)(Ox, {}) }),
                               Object(bn.jsx)(m.b, { path: "/thebeat/:beatNumber?", children: Object(bn.jsx)(Rx, {}) }),
                               Object(bn.jsx)(m.b, {
                                 path: "/login",
-                                children: Object(bn.jsx)(qE, { isLogin: !0, clickTracker: u, setClickTracker: j }),
+                                children: Object(bn.jsx)(ZE, { isLogin: !0, clickTracker: u, setClickTracker: j }),
                               }),
-                              Object(bn.jsx)(m.b, { path: "/reset/:token", children: Object(bn.jsx)(ZE, {}) }),
+                              Object(bn.jsx)(m.b, { path: "/reset/:token", children: Object(bn.jsx)(KE, {}) }),
                               Object(bn.jsx)(m.b, {
                                 path: "/verify-account/:token",
                                 children: Object(bn.jsx)(yx, { clickTracker: u, setClickTracker: j }),
@@ -45515,7 +45515,7 @@
                               Object(bn.jsx)(m.b, { path: "/delete-account/:token", children: Object(bn.jsx)(Sx, {}) }),
                               Object(bn.jsx)(m.b, {
                                 path: "/signup",
-                                children: Object(bn.jsx)(qE, { clickTracker: u, setClickTracker: j }),
+                                children: Object(bn.jsx)(ZE, { clickTracker: u, setClickTracker: j }),
                               }),
                               Object(bn.jsx)(m.b, { path: "/team/:nickname", children: Object(bn.jsx)(OE, {}) }),
                               Object(bn.jsx)(m.b, { path: "/player/:id", children: Object(bn.jsx)(pu, {}) }),
@@ -45553,18 +45553,18 @@
                               children: [
                                 Object(bn.jsx)(m.b, {
                                   path: "/signup",
-                                  children: Object(bn.jsx)(qE, { isModal: !0, clickTracker: u, setClickTracker: j }),
+                                  children: Object(bn.jsx)(ZE, { isModal: !0, clickTracker: u, setClickTracker: j }),
                                 }),
                                 Object(bn.jsx)(m.b, {
                                   path: "/login",
-                                  children: Object(bn.jsx)(qE, {
+                                  children: Object(bn.jsx)(ZE, {
                                     isModal: !0,
                                     isLogin: !0,
                                     clickTracker: u,
                                     setClickTracker: j,
                                   }),
                                 }),
-                                Object(bn.jsx)(m.b, { path: "/forgot", children: Object(bn.jsx)(ZE, { isModal: !0 }) }),
+                                Object(bn.jsx)(m.b, { path: "/forgot", children: Object(bn.jsx)(KE, { isModal: !0 }) }),
                                 Object(bn.jsx)(m.b, {
                                   path: "/send-verification-email",
                                   children: Object(bn.jsx)(Ex, { isModal: !0, clickTracker: u, setClickTracker: j }),
@@ -45579,7 +45579,7 @@
                                 }),
                                 Object(bn.jsx)(m.b, {
                                   path: "/reset/:token",
-                                  children: Object(bn.jsx)(ZE, { isModal: !0 }),
+                                  children: Object(bn.jsx)(KE, { isModal: !0 }),
                                 }),
                                 Object(bn.jsx)(m.b, {
                                   path: "/team/:nickname",
@@ -45643,8 +45643,8 @@
                                 }),
                               ],
                             }),
-                          Object(bn.jsx)(YE, { isModal: !0, dismissable: !1 }),
-                          Object(bn.jsx)($E, { isModal: !0, dismissable: !1 }),
+                          Object(bn.jsx)(JE, { isModal: !0, dismissable: !1 }),
+                          Object(bn.jsx)(ey, { isModal: !0, dismissable: !1 }),
                         ],
                       }),
                       F,
@@ -45675,8 +45675,8 @@
                                     : null;
                                 },
                               }),
-                              Object(bn.jsx)(m.b, { path: "/tos", children: Object(bn.jsx)(ID, {}) }),
-                              Object(bn.jsx)(m.b, { path: "/privacy", children: Object(bn.jsx)(CD, {}) }),
+                              Object(bn.jsx)(m.b, { path: "/tos", children: Object(bn.jsx)(ND, {}) }),
+                              Object(bn.jsx)(m.b, { path: "/privacy", children: Object(bn.jsx)(ID, {}) }),
                               Object(bn.jsx)(m.b, { path: "/about", children: Object(bn.jsx)(ZB, {}) }),
                               Object(bn.jsx)(m.b, { path: "/account", children: Object(bn.jsx)(WE, {}) }),
                               Object(bn.jsx)(m.b, { path: "/faq", children: Object(bn.jsx)(Ox, {}) }),
@@ -45689,12 +45689,12 @@
                                 path: "/thebook",
                                 children: Object(bn.jsx)(Kg, { clickTracker: u, setClickTracker: j }),
                               }),
-                              Object(bn.jsx)(m.b, { path: "/offseason", children: Object(bn.jsx)(jD, {}) }),
+                              Object(bn.jsx)(m.b, { path: "/offseason", children: Object(bn.jsx)(bD, {}) }),
                               Object(bn.jsx)(m.b, {
                                 path: "/login",
-                                children: Object(bn.jsx)(qE, { isLogin: !0, clickTracker: u, setClickTracker: j }),
+                                children: Object(bn.jsx)(ZE, { isLogin: !0, clickTracker: u, setClickTracker: j }),
                               }),
-                              Object(bn.jsx)(m.b, { path: "/reset/:token", children: Object(bn.jsx)(ZE, {}) }),
+                              Object(bn.jsx)(m.b, { path: "/reset/:token", children: Object(bn.jsx)(KE, {}) }),
                               Object(bn.jsx)(m.b, {
                                 path: "/verify-account/:token",
                                 children: Object(bn.jsx)(yx, { clickTracker: u, setClickTracker: j }),
@@ -45707,7 +45707,7 @@
                               Object(bn.jsx)(m.b, { path: "/delete-account/:token", children: Object(bn.jsx)(Sx, {}) }),
                               Object(bn.jsx)(m.b, {
                                 path: "/signup",
-                                children: Object(bn.jsx)(qE, { clickTracker: u, setClickTracker: j }),
+                                children: Object(bn.jsx)(ZE, { clickTracker: u, setClickTracker: j }),
                               }),
                               Object(bn.jsx)(m.b, { path: "/team/:nickname", children: Object(bn.jsx)(OE, {}) }),
                               Object(bn.jsx)(m.b, { path: "/player/:id", children: Object(bn.jsx)(pu, {}) }),
@@ -45755,18 +45755,18 @@
                               children: [
                                 Object(bn.jsx)(m.b, {
                                   path: "/signup",
-                                  children: Object(bn.jsx)(qE, { isModal: !0, clickTracker: u, setClickTracker: j }),
+                                  children: Object(bn.jsx)(ZE, { isModal: !0, clickTracker: u, setClickTracker: j }),
                                 }),
                                 Object(bn.jsx)(m.b, {
                                   path: "/login",
-                                  children: Object(bn.jsx)(qE, {
+                                  children: Object(bn.jsx)(ZE, {
                                     isModal: !0,
                                     isLogin: !0,
                                     clickTracker: u,
                                     setClickTracker: j,
                                   }),
                                 }),
-                                Object(bn.jsx)(m.b, { path: "/forgot", children: Object(bn.jsx)(ZE, { isModal: !0 }) }),
+                                Object(bn.jsx)(m.b, { path: "/forgot", children: Object(bn.jsx)(KE, { isModal: !0 }) }),
                                 Object(bn.jsx)(m.b, {
                                   path: "/send-verification-email",
                                   children: Object(bn.jsx)(Ex, { isModal: !0, clickTracker: u, setClickTracker: j }),
@@ -45781,7 +45781,7 @@
                                 }),
                                 Object(bn.jsx)(m.b, {
                                   path: "/reset/:token",
-                                  children: Object(bn.jsx)(ZE, { isModal: !0 }),
+                                  children: Object(bn.jsx)(KE, { isModal: !0 }),
                                 }),
                                 Object(bn.jsx)(m.b, {
                                   path: "/team/:nickname",
@@ -45815,7 +45815,7 @@
                                 }),
                                 Object(bn.jsx)(m.b, {
                                   path: "/vote/:voteType/:entityId",
-                                  children: Object(bn.jsx)(wD, { isModal: !0, clickTracker: u, setClickTracker: j }),
+                                  children: Object(bn.jsx)(BD, { isModal: !0, clickTracker: u, setClickTracker: j }),
                                 }),
                                 Object(bn.jsx)(m.b, {
                                   path: "/reorder/:type",
@@ -45823,7 +45823,7 @@
                                 }),
                                 Object(bn.jsx)(m.b, {
                                   path: "/tribute/:entityId",
-                                  children: Object(bn.jsx)(xD, { isModal: !0 }),
+                                  children: Object(bn.jsx)(wD, { isModal: !0 }),
                                 }),
                                 Object(bn.jsx)(m.b, {
                                   path: "/settings",
@@ -45857,8 +45857,8 @@
                                 }),
                               ],
                             }),
-                          Object(bn.jsx)(YE, { isModal: !0, dismissable: !1 }),
-                          Object(bn.jsx)($E, { isModal: !0, dismissable: !1 }),
+                          Object(bn.jsx)(JE, { isModal: !0, dismissable: !1 }),
+                          Object(bn.jsx)(ey, { isModal: !0, dismissable: !1 }),
                         ],
                       }),
                       F,
@@ -45868,22 +45868,22 @@
               }),
             });
       }
-      function zD() {
+      function HD() {
         return "mailto:sponsors@thegameband.com?subject=".concat(
           encodeURIComponent("I\u2019d like to sponsor a season of Blaseball")
         );
       }
-      var HD = function () {
-        return Object(bn.jsx)(En, { children: Object(bn.jsx)(SD, {}) });
+      var VD = function () {
+        return Object(bn.jsx)(En, { children: Object(bn.jsx)(DD, {}) });
       };
       Boolean(
         "localhost" === window.location.hostname ||
           "[::1]" === window.location.hostname ||
           window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
       );
-      var VD = a(396),
-        GD = a.n(VD),
-        UD = (a(335), { sim: void 0, standings: void 0, season: void 0 });
+      var GD = a(396),
+        UD = a.n(GD),
+        WD = (a(335), { sim: void 0, standings: void 0, season: void 0 });
       "serviceWorker" in navigator &&
         navigator.serviceWorker.ready
           .then(function (e) {
@@ -45892,7 +45892,7 @@
           .catch(function (e) {
             console.error(e.message);
           }),
-        GD.a.polyfill(),
+        UD.a.polyfill(),
         i.a.render(
           Object(bn.jsx)(s.a.StrictMode, {
             children: Object(bn.jsx)(md.ToastProvider, {
@@ -45904,12 +45904,12 @@
                 children: Object(bn.jsx)(Gn, {
                   value: {},
                   children: Object(bn.jsx)(Qn, {
-                    value: UD,
+                    value: WD,
                     children: Object(bn.jsx)(nA, {
                       value: {},
                       children: Object(bn.jsx)(JA, {
                         value: {},
-                        children: Object(bn.jsx)(ny, {
+                        children: Object(bn.jsx)(ry, {
                           value: {
                             blessings: [],
                             decrees: [],
@@ -45919,7 +45919,7 @@
                             decreesToPass: 0,
                             decreeExecutionType: 0,
                           },
-                          children: Object(bn.jsx)(Xo.a, { children: Object(bn.jsx)(HD, {}) }),
+                          children: Object(bn.jsx)(Xo.a, { children: Object(bn.jsx)(VD, {}) }),
                         }),
                       }),
                     }),
