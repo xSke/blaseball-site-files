@@ -27659,53 +27659,73 @@
               ],
             }),
           }),
-          Q = Object(bn.jsx)("div", {
+          Q = Object(bn.jsxs)("div", {
             className: "Bulletin",
             id: "Main-Body",
-            children: Object(bn.jsxs)("div", {
+            children: [
+              Object(bn.jsxs)("div", {
+                className: "Bulletin-Header-Countdown",
+                children: [
+                  Object(bn.jsx)(TA, { style: { width: "24px", height: "24px", marginRight: "5px" } }),
+                  "The next Broadcast begins in",
+                  Object(bn.jsx)(mO, { dateString: "2022-01-17T16:00:00.000Z", truncated: !0 }),
+                ],
+              }),
+              Object(bn.jsxs)("div", {
+                className: "Bulletin-Rows Bulletin-Rows-Offseason",
+                children: [
+                  Object(bn.jsx)(qp, {
+                    row: "1/3",
+                    column: "1/3",
+                    tall: !0,
+                    children: Object(bn.jsx)(ax, { info: o.theBeat, wide: !0 }),
+                  }),
+                  Object(bn.jsx)(qp, {
+                    row: "1/3",
+                    column: "3",
+                    tall: !0,
+                    sponsor: !0,
+                    children: Object(bn.jsx)(nx, { info: o.sponsorData }),
+                  }),
+                ],
+              }),
+            ],
+          });
+        return D ? Q : void 0 !== s && s.tasteTheInfinite ? L : k;
+      }
+      function Xp() {
+        var e = Object(r.useContext)(Gn.context);
+        return Object(bn.jsxs)("div", {
+          className: "Bulletin",
+          id: "Main-Body",
+          children: [
+            Object(bn.jsxs)("div", {
+              className: "Bulletin-Header-Countdown",
+              children: [
+                Object(bn.jsx)(TA, { style: { width: "24px", height: "24px", marginRight: "5px" } }),
+                "The next Broadcast begins in",
+                Object(bn.jsx)(mO, { dateString: "2022-01-17T16:00:00.000Z", truncated: !0 }),
+              ],
+            }),
+            Object(bn.jsxs)("div", {
               className: "Bulletin-Rows Bulletin-Rows-Offseason",
               children: [
                 Object(bn.jsx)(qp, {
                   row: "1/3",
                   column: "1/3",
                   tall: !0,
-                  children: Object(bn.jsx)(ax, { info: o.theBeat, wide: !0 }),
+                  children: Object(bn.jsx)(ax, { info: e.theBeat, wide: !0 }),
                 }),
                 Object(bn.jsx)(qp, {
                   row: "1/3",
                   column: "3",
                   tall: !0,
                   sponsor: !0,
-                  children: Object(bn.jsx)(nx, { info: o.sponsorData }),
+                  children: Object(bn.jsx)(nx, { info: e.sponsorData }),
                 }),
               ],
             }),
-          });
-        return D ? Q : void 0 !== s && s.tasteTheInfinite ? L : k;
-      }
-      function Xp() {
-        var e = Object(r.useContext)(Gn.context);
-        return Object(bn.jsx)("div", {
-          className: "Bulletin",
-          id: "Main-Body",
-          children: Object(bn.jsxs)("div", {
-            className: "Bulletin-Rows Bulletin-Rows-Offseason",
-            children: [
-              Object(bn.jsx)(qp, {
-                row: "1/3",
-                column: "1/3",
-                tall: !0,
-                children: Object(bn.jsx)(ax, { info: e.theBeat, wide: !0 }),
-              }),
-              Object(bn.jsx)(qp, {
-                row: "1/3",
-                column: "3",
-                tall: !0,
-                sponsor: !0,
-                children: Object(bn.jsx)(nx, { info: e.sponsorData }),
-              }),
-            ],
-          }),
+          ],
         });
       }
       function qp(e) {
