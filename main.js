@@ -44462,7 +44462,7 @@
                       Object(bn.jsx)("li", { children: "We collect offline, or" }),
                       Object(bn.jsx)("li", {
                         children:
-                          "You provide to or is collected by any third party (see Third-Party Information Collection).",
+                          "You provide to or is collected by any third-party (see Third-Party Information Collection).",
                       }),
                     ],
                   }),
@@ -44495,7 +44495,7 @@
                     children: [
                       Object(bn.jsx)("li", {
                         children:
-                          "You, either directly when provide it to us or automatically when you use the Game; and",
+                          "You, either directly when providing it to us or automatically when you use the Game; and",
                       }),
                       Object(bn.jsx)("li", { children: "Third parties" }),
                     ],
@@ -44640,7 +44640,7 @@
                       Object(bn.jsx)("li", { children: "To our subsidiaries and affiliates." }),
                       Object(bn.jsx)("li", {
                         children:
-                          "To contractors, service providers, and other third parties we use to support our business.",
+                          "To contractors, service providers, and other third-parties we use to support our business.",
                       }),
                       Object(bn.jsx)("li", {
                         children:
@@ -44682,7 +44682,7 @@
                     className: "Privacy-Miniheader",
                     children: Object(bn.jsx)("b", { children: "Data Protection Rights" }),
                   }),
-                  "The laws of the European Economic Area and other territories provide their residents with certain data protection rights. If you are resident of the European Economic Area, these are your rights:",
+                  "The laws of the European Economic Area and other territories provide their residents with certain data protection rights. If you are a resident of the European Economic Area, these are your rights:",
                   Object(bn.jsxs)("ul", {
                     children: [
                       Object(bn.jsxs)("li", {
@@ -44737,7 +44737,7 @@
                   }),
                   Object(bn.jsx)("p", {
                     children:
-                      "We strive to provide you with choices regarding the personal information you provide to us. This section describes mechanisms we provide for you to control certain uses and disclosures of over your information.",
+                      "We strive to provide you with choices regarding the personal information you provide to us. This section describes mechanisms we provide for you to control certain uses and disclosures of your information.",
                   }),
                   Object(bn.jsxs)("ul", {
                     children: [
@@ -44750,7 +44750,7 @@
                       Object(bn.jsxs)("li", {
                         children: [
                           Object(bn.jsx)("b", { children: "Promotion by The Game Band." }),
-                          " If you do not want us to use your email address to promote our own or third parties' products or services, you can opt-out by clicking the unsubscribe link at the bottom of our emails and following the instructions provided.",
+                          " If you do not want us to use your email address to promote our own or third-parties' products or services, you can opt out by clicking the unsubscribe link at the bottom of our emails and following the instructions provided.",
                           " ",
                         ],
                       }),
@@ -44762,21 +44762,21 @@
                   }),
                   Object(bn.jsx)("p", {
                     children:
-                      "Some content in the Game is served by third-parties. When you use the Game or its content, certain third parties may use automatic information collection technologies to collect information about you or your device.",
+                      "Some content in the Game is served by third-parties. When you use the Game or its content, certain third-parties may use automatic information collection technologies to collect information about you or your device.",
                   }),
-                  Object(bn.jsx)("p", { children: "These third parties include:" }),
+                  Object(bn.jsx)("p", { children: "These third-parties include:" }),
                   Object(bn.jsxs)("ul", {
                     children: [
                       Object(bn.jsx)("li", {
                         children: Object(bn.jsx)("b", {
-                          children: "App marketplaces where you download or sign into the Game",
+                          children: "App marketplaces where you download or sign in to the Game",
                         }),
                       }),
                       Object(bn.jsxs)("ul", {
                         children: [
                           Object(bn.jsxs)("li", {
                             children: [
-                              "To Learn more about the Apple and how they collect and use your information, please visit",
+                              "To learn more about Apple and how they collect and use your information, please visit",
                               " ",
                               Object(bn.jsx)("a", {
                                 href: "https://www.apple.com/legal/privacy/en-ww/",
@@ -44786,7 +44786,7 @@
                           }),
                           Object(bn.jsxs)("li", {
                             children: [
-                              "To Learn more about Google Play and how they collect and use your information, please visit:",
+                              "To learn more about Google Play and how they collect and use your information, please visit:",
                               " ",
                               Object(bn.jsx)("a", {
                                 href: "https://play.google.com/about/privacy-security-deception/",
@@ -44796,7 +44796,7 @@
                           }),
                           Object(bn.jsxs)("li", {
                             children: [
-                              "To learn more about the Facebook and how they collect and use your information, please visit:",
+                              "To learn more about Facebook and how they collect and use your information, please visit:",
                               " ",
                               Object(bn.jsx)("a", {
                                 href: "https://www.facebook.com/privacy/explanation",
@@ -44806,7 +44806,7 @@
                           }),
                           Object(bn.jsxs)("li", {
                             children: [
-                              "To learn more about the Google and how they collect and use your information, please visit:",
+                              "To learn more about Google and how they collect and use your information, please visit:",
                               " ",
                               Object(bn.jsx)("a", {
                                 href: "https://policies.google.com/privacy?hl=en-US",
@@ -44856,7 +44856,7 @@
                         children: [
                           Object(bn.jsxs)("li", {
                             children: [
-                              "To learn more about the Twitter and how they collect and use your information, please visit:",
+                              "To learn more about Twitter and how they collect and use your information, please visit:",
                               " ",
                               Object(bn.jsx)("a", {
                                 href: "https://twitter.com/en/privacy",
@@ -44866,7 +44866,7 @@
                           }),
                           Object(bn.jsxs)("li", {
                             children: [
-                              "To learn more about the Facebook and how they collect and use your information, please visit:",
+                              "To learn more about Facebook and how they collect and use your information, please visit:",
                               " ",
                               Object(bn.jsx)("a", {
                                 href: "https://www.facebook.com/privacy/explanation",
@@ -44876,7 +44876,7 @@
                           }),
                           Object(bn.jsxs)("li", {
                             children: [
-                              "To learn more about the Instagram and how they collect and use your information, please visit:",
+                              "To learn more about Instagram and how they collect and use your information, please visit:",
                               " ",
                               Object(bn.jsx)("a", {
                                 href: "https://help.instagram.com/519522125107875",
@@ -44896,13 +44896,13 @@
                   }),
                   Object(bn.jsxs)("p", {
                     children: [
-                      "These third parties may use tracking technologies to collect information about you when you use the Game. The information they collect may be associated with your personal information or they may collect information, including personal information, about your online activities over time and across different websites, apps, and other online services websites. They may use this information to provide you with interest-based (behavioral) advertising or other targeted content.",
+                      "These third-parties may use tracking technologies to collect information about you when you use the Game. The information they collect may be associated with your personal information or they may collect information, including personal information, about your online activities over time and across different websites, apps, and other online services websites. They may use this information to provide you with interest-based (behavioral) advertising or other targeted content.",
                       " ",
                     ],
                   }),
                   Object(bn.jsx)("p", {
                     children:
-                      "We do not control these third parties' tracking technologies or how they may be used. We do not control third parties' collection or use of your information to serve interest-based advertising. However, these third parties may provide you with ways to choose not to have your information collected or used in this way. If you have any questions about an advertisement or other targeted content, you should contact the responsible provider directly.",
+                      "We do not control these third-parties' tracking technologies or how they may be used. We do not control third-parties' collection or use of your information to serve interest-based advertising. However, these third-parties may provide you with ways to choose not to have your information collected or used in this way. If you have any questions about an advertisement or other targeted content, you should contact the responsible provider directly.",
                   }),
                   Object(bn.jsx)("h2", { className: "Privacy-Subheader", children: "Changes to Our Privacy Policy" }),
                   Object(bn.jsx)("p", {
@@ -44923,9 +44923,9 @@
                     children: [
                       "The Game Band",
                       Object(bn.jsx)("br", {}),
-                      "448 S Hill St. Suite 301",
+                      "2261 Market St #8848",
                       Object(bn.jsx)("br", {}),
-                      "Los Angeles, CA 90013",
+                      "San Francisco, CA 94114",
                     ],
                   }),
                 ],
@@ -44951,44 +44951,44 @@
                     Object(bn.jsxs)("p", {
                       children: [
                         "Welcome to The Game Band! These Terms of Service (",
-                        Object(bn.jsx)("b", { children: "\u201cTerms\u201d" }),
+                        Object(bn.jsx)("b", { children: '"Terms"' }),
                         ") govern your use of our game, BLASEBALL (referred to herein as the",
                         " ",
-                        Object(bn.jsx)("b", { children: "\u201cGame\u201d" }),
+                        Object(bn.jsx)("b", { children: '"Game"' }),
                         ").",
                       ],
                     }),
                     Object(bn.jsxs)("p", {
                       children: [
                         "The Game is a copyrighted work belonging to The Game Band (",
-                        Object(bn.jsx)("b", { children: "\u201cThe Game Band\u201d" }),
+                        Object(bn.jsx)("b", { children: '"The Game Band"' }),
                         ", ",
-                        Object(bn.jsx)("b", { children: "\u201cus\u201d" }),
+                        Object(bn.jsx)("b", { children: '"us"' }),
                         ", ",
-                        Object(bn.jsx)("b", { children: "\u201cour\u201d" }),
+                        Object(bn.jsx)("b", { children: '"our"' }),
                         ", and ",
-                        Object(bn.jsx)("b", { children: "\u201cwe\u201d" }),
+                        Object(bn.jsx)("b", { children: '"we"' }),
                         "). Certain features of the Game may be subject to additional guidelines, terms, or rules, which will be posted in the Game in connection with such features. All such additional terms, guidelines, and rules are incorporated by reference into these Terms.",
                       ],
                     }),
                     Object(bn.jsxs)("p", {
                       children: [
                         "These Terms of Service (these ",
-                        Object(bn.jsx)("b", { children: "\u201cTerms\u201d" }),
+                        Object(bn.jsx)("b", { children: '"Terms"' }),
                         ") set forth the legally binding terms and conditions that govern your use of the Game.",
                       ],
                     }),
                     Object(bn.jsx)("p", {
                       children:
-                        "BY DOWNLOADING/INSTALLING/USING/ACCESSING THE GAME, YOU (A) ACKNOWLEDGE THATYOU HAVE READ AND UNDERSTAND THESE TERMS; (B) REPRESENT THAT YOU MEET THE ELIGIBLITY REQUIREMENTS IN SECTION 1.1 BELOW; AND (C) ACCEPT THIS AGREEMENT AND AGREE THAT YOU ARE LEGALLY BOUND BY ITS TERMS.",
+                        "BY DOWNLOADING/INSTALLING/USING/ACCESSING THE GAME, YOU (A) ACKNOWLEDGE THAT YOU HAVE READ AND UNDERSTAND THESE TERMS; (B) REPRESENT THAT YOU MEET THE ELIGIBILITY REQUIREMENTS IN SECTION 1.1 BELOW; AND (C) ACCEPT THIS AGREEMENT AND AGREE THAT YOU ARE LEGALLY BOUND BY ITS TERMS.",
                     }),
                     Object(bn.jsx)("p", {
                       children:
-                        "IF YOU DO NOT MEET THE ELIGIBLITY REQIREMENTS IN SECTION 1.1 BELOW OR IF YOU DO NOT AGREE TO THESE TERMS, DO NOT DOWNLOAD, INSTALL OR USE THE GAME  (IF YOU HAVE ALREADY DOWNLOADED THE GAME, PLEASE DELETE IT FROM YOUR DEVICE) AND DO NOT USE OR ACCESS THE SITE.",
+                        "IF YOU DO NOT MEET THE ELIGIBILITY REQUIREMENTS IN SECTION 1.1 BELOW OR IF YOU DO NOT AGREE TO THESE TERMS, DO NOT DOWNLOAD, INSTALL OR USE THE GAME  (IF YOU HAVE ALREADY DOWNLOADED THE GAME, PLEASE DELETE IT FROM YOUR DEVICE) AND DO NOT USE OR ACCESS THE SITE.",
                     }),
                     Object(bn.jsx)("p", {
                       children:
-                        "These terms require the use of arbitration (Section 15.2) on an individual basis to resolvedisputes, rather than jury trials or class actions, and also limit the remedies available to youin the event of a dispute.",
+                        "These terms require the use of arbitration (Section 15.2) on an individual basis to resolve disputes, rather than jury trials or class actions, and also limit the remedies available to you in the event of a dispute.",
                     }),
                     Object(bn.jsxs)("ol", {
                       className: "numbered",
@@ -45047,9 +45047,9 @@
                                       children: [
                                         Object(bn.jsxs)("li", {
                                           children: [
-                                            "download and install the Game for your personal, non-commercial use on a single gaming device owned or otherwise controlled by you (\u201c",
+                                            'download and install the Game for your personal, non-commercial use on a single gaming device owned or otherwise controlled by you ("',
                                             Object(bn.jsx)("b", { children: "Device" }),
-                                            "\u201d) strictly in accordance with the Game's documentation; and ",
+                                            "\") strictly in accordance with the Game's documentation; and ",
                                           ],
                                         }),
                                         Object(bn.jsx)("li", {
@@ -45068,7 +45068,7 @@
                                 Object(bn.jsxs)("li", {
                                   children: [
                                     Object(bn.jsx)("b", { children: "Modification." }),
-                                    " The Game Band reserves the right, at any time, to modify, suspend, or discontinue the Game (in whole or in part) with or without notice to you. You agree that The Game Band will not be liable to you or to any third party for any modification, suspension, or discontinuation of the Game or any part thereof.",
+                                    " The Game Band reserves the right, at any time, to modify, suspend, or discontinue the Game (in whole or in part) with or without notice to you. You agree that The Game Band will not be liable to you or to any third-party for any modification, suspension, or discontinuation of the Game or any part thereof.",
                                   ],
                                 }),
                                 Object(bn.jsxs)("li", {
@@ -45080,7 +45080,7 @@
                                 Object(bn.jsxs)("li", {
                                   children: [
                                     Object(bn.jsx)("b", { children: "Ownership." }),
-                                    " You acknowledge and agree that the Game is provided under license, and not sold, to you. You do not acquire any ownership interest in the Game under these Terms, or any other rights thereto other than to use the Game in accordance with these Terms. The Game Band and its licensors and service providers reserve and retain their entire right, title, and interest in and to the Game, including all copyrights, trademarks, and other intellectual property rights therein or relating thereto, except as expressly granted to you in these Terms. Neither these Terms (nor your access to the Game) transfers to you or any third party any rights, title or interest in or to such intellectual property rights, except for the limited access rights expressly set forth in Section 1.1. The Game Band and its suppliers reserve all rights not granted in these Terms. There are no implied licenses granted under these Terms.",
+                                    " You acknowledge and agree that the Game is provided under license, and not sold, to you. You do not acquire any ownership interest in the Game under these Terms, or any other rights thereto other than to use the Game in accordance with these Terms. The Game Band and its licensors and service providers reserve and retain their entire right, title, and interest in and to the Game, including all copyrights, trademarks, and other intellectual property rights therein or relating thereto, except as expressly granted to you in these Terms. Neither these Terms (nor your access to the Game) transfers to you or any third-party any rights, title or interest in or to such intellectual property rights, except for the limited access rights expressly set forth in Section 1.1. The Game Band and its suppliers reserve all rights not granted in these Terms. There are no implied licenses granted under these Terms.",
                                   ],
                                 }),
                               ],
@@ -45096,9 +45096,9 @@
                                 Object(bn.jsxs)("li", {
                                   children: [
                                     Object(bn.jsx)("b", { children: "Account Creation." }),
-                                    " In order to use certain features of the Game, you must register for an account (\u201c",
+                                    ' In order to use certain features of the Game, you must register for an account ("',
                                     Object(bn.jsx)("b", { children: "Account" }),
-                                    "\u201d) and provide certain information about yourself as prompted by the account registration form (including but not limited to your full name, email address and a unique password). You may not create more than one account. You represent and warrant that: (a) you meet all the eligibility requirements in Section 1.1, (b) you are creating your account for your own personal use and only you will access and use your account, (c) all required registration information you submit is truthful and accurate; (d) you will maintain the accuracy of such information; (e) you will not create more than one account; (f) you reside in the United States or, if you reside outside the United States, that your use of the Game will comply with applicable law in your jurisdiction; (g) you will not use the Game during any period in which we suspend your account; and (h) if we ban you from playing the Game and/or terminate your account, you will not use the Game. You may delete your Account at any time, for any reason, by following the instructions in the Game. The Game Band may suspend or terminate your Account in accordance with Section 14.",
+                                    '") and provide certain information about yourself as prompted by the account registration form (including but not limited to your full name, email address and a unique password). You may not create more than one account. You represent and warrant that: (a) you meet all the eligibility requirements in Section 1.1, (b) you are creating your account for your own personal use and only you will access and use your account, (c) all required registration information you submit is truthful and accurate; (d) you will maintain the accuracy of such information; (e) you will not create more than one account; (f) you reside in the United States or, if you reside outside the United States, that your use of the Game will comply with applicable law in your jurisdiction; (g) you will not use the Game during any period in which we suspend your account; and (h) if we ban you from playing the Game and/or terminate your account, you will not use the Game. You may delete your Account at any time, for any reason, by following the instructions in the Game. The Game Band may suspend or terminate your Account in accordance with Section 14.',
                                   ],
                                 }),
                                 Object(bn.jsxs)("li", {
@@ -45114,9 +45114,9 @@
                         Object(bn.jsxs)("li", {
                           children: [
                             Object(bn.jsx)("b", { children: "Feedback." }),
-                            " If you provide The Game Band with any feedback or suggestions regarding the Game (\u201c",
+                            ' If you provide The Game Band with any feedback or suggestions regarding the Game ("',
                             Object(bn.jsx)("b", { children: "Feedback" }),
-                            "\u201d), you hereby assign to The Game Band all rights in such Feedback and agree that The Game Band shall have the right to use and fully exploit such Feedback and related information in any manner it deems appropriate. The Game Band will treat any Feedback you provide to The Game Band as non-confidential and non-proprietary. You agree that you will not submit to The Game Band any information or ideas that you consider to be confidential or proprietary.",
+                            '"), you hereby assign to The Game Band all rights in such Feedback and agree that The Game Band shall have the right to use and fully exploit such Feedback and related information in any manner it deems appropriate. The Game Band will treat any Feedback you provide to The Game Band as non-confidential and non-proprietary. You agree that you will not submit to The Game Band any information or ideas that you consider to be confidential or proprietary.',
                           ],
                         }),
                         Object(bn.jsxs)("li", {
@@ -45130,25 +45130,25 @@
                         Object(bn.jsxs)("li", {
                           children: [
                             Object(bn.jsx)("b", { children: "Device Requirements." }),
-                            " The Game can only be used via certain devices, like your smartphone, a list of compatible devices is provided the third-party application marketplaces (\u201c",
+                            ' The Game can only be used via certain devices, like your smartphone, a list of compatible devices is provided the third-party application marketplaces ("',
                             Object(bn.jsx)("b", { children: "Marketplaces" }),
-                            "\u201d) where the Game can be downloaded. Your Device must also meet the system requirements listed on the Site and/or the Marketplaces",
+                            '") where the Game can be downloaded. Your Device must also meet the system requirements listed on the Site and/or the Marketplaces',
                           ],
                         }),
                         Object(bn.jsxs)("li", {
                           children: [
                             Object(bn.jsx)("b", { children: "Free Content." }),
-                            " Upon downloading the Game, users will have access to certain features of the game (\u201c",
+                            ' Upon downloading the Game, users will have access to certain features of the game ("',
                             Object(bn.jsx)("b", { children: "Free Features" }),
-                            "\u201d). The Game Band may add, remove, modify or otherwise change the free features at any time with or without notice to you.",
+                            '"). The Game Band may add, remove, modify or otherwise change the free features at any time with or without notice to you.',
                           ],
                         }),
                         Object(bn.jsxs)("li", {
                           children: [
                             Object(bn.jsx)("b", { children: "Updates." }),
-                            " The Game Band may from time to time in its sole discretion develop and provide Game updates, which may include upgrades, bug fixes, patches, other error corrections, and/or new features (collectively, including related documentation, \u201c",
+                            ' The Game Band may from time to time in its sole discretion develop and provide Game updates, which may include upgrades, bug fixes, patches, other error corrections, and/or new features (collectively, including related documentation, "',
                             Object(bn.jsx)("b", { children: "Updates" }),
-                            "\u201d). Updates may also modify or delete in their entirety certain features and functionality. You agree that The Game Band has no obligation to provide any Updates or to continue to provide or enable any particular features or functionality. Based on your Device settings, when your Device is connected to the internet either:",
+                            '"). Updates may also modify or delete in their entirety certain features and functionality. You agree that The Game Band has no obligation to provide any Updates or to continue to provide or enable any particular features or functionality. Based on your Device settings, when your Device is connected to the internet either:',
                             Object(bn.jsxs)("ol", {
                               className: "alphabetical",
                               children: [
@@ -45173,9 +45173,9 @@
                               children: [
                                 Object(bn.jsxs)("li", {
                                   children: [
-                                    "The Game may include virtual currencies such as virtual coins or items or services for use with the Game (collectively \u201c",
+                                    'The Game may include virtual currencies such as virtual coins or items or services for use with the Game (collectively "',
                                     Object(bn.jsx)("b", { children: "Virtual Items" }),
-                                    '"). Users may be able to earn Virtual Items within the Game. You agree that once earned, Virtual Items have no monetary value and can never be exchanged for real money, real goods or real services from us or anyone else. You also agree that you will obtain the Virtual Items only from us, and not from any third party. You agree that Virtual Items are not transferrable from one person to another or one account to another, and you will not transfer or attempt to transfer any Virtual Items to any other person or account.',
+                                    '"). Users may be able to earn Virtual Items within the Game. You agree that once earned, Virtual Items have no monetary value and can never be exchanged for real money, real goods or real services from us or anyone else. You also agree that you will obtain the Virtual Items only from us, and not from any third-party. You agree that Virtual Items are not transferrable from one person to another or one account to another, and you will not transfer or attempt to transfer any Virtual Items to any other person or account.',
                                   ],
                                 }),
                                 Object(bn.jsx)("li", {
@@ -45205,27 +45205,27 @@
                         Object(bn.jsxs)("li", {
                           children: [
                             Object(bn.jsx)("b", { children: "Indemnification." }),
-                            " You agree to indemnify and hold The Game Band (and its officers, employees, and agents) harmless, including costs and attorneys\u2019 fees, from any claim or demand made by any third party due to or arising out of (a) your use of the Game, (b) your violation of these Terms, or (c) your violation of applicable laws or regulations. The Game Band reserves the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify us, and you agree to cooperate with our defense of these claims. You agree not to settle any matter without the prior written consent of The Game Band. The Game Band will use reasonable efforts to notify you of any such claim, action or proceeding upon becoming aware of it.",
+                            " You agree to indemnify and hold The Game Band (and its officers, employees, and agents) harmless, including costs and attorneys\u2019 fees, from any claim or demand made by any third-party due to or arising out of (a) your use of the Game, (b) your violation of these Terms, or (c) your violation of applicable laws or regulations. The Game Band reserves the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify us, and you agree to cooperate with our defense of these claims. You agree not to settle any matter without the prior written consent of The Game Band. The Game Band will use reasonable efforts to notify you of any such claim, action or proceeding upon becoming aware of it.",
                           ],
                         }),
                         Object(bn.jsxs)("li", {
                           children: [
                             Object(bn.jsx)("b", { children: "Third Party Materials." }),
-                            " The Game may contain links to third-party websites and services, including through third party advertising (collectively, \u201c",
+                            ' The Game may contain links to third-party websites and services, including through third-party advertising (collectively, "',
                             Object(bn.jsx)("b", { children: "Third-Party Materials" }),
-                            "\u201d). Such Third Party Materials are not under the control of The Game Band, and The Game Band is not responsible for any Third Party Materials. The Game Band provides access to these Third Party Materials only as a convenience to you, and does not review, approve, monitor, endorse, warrant, or make any representations with respect to Third Party Materials. You acknowledge and agree that The Game Band is not responsible for Third Party Materials, including their accuracy, completeness, timeliness, validity, copyright compliance, legality, decency, quality, or any other aspect thereof. The Game Band does not assume and will not have any liability or responsibility to you or any other person or entity for any Third Party Materials. Third Party Materials and links thereto are provided solely as a convenience to you, and you access and use them entirely at your own risk and subject to such third parties' terms and conditions. You should make whatever investigation you feel necessary or appropriate before proceeding with any transaction in connection with such Third Party Materials.",
+                            "\"). Such Third Party Materials are not under the control of The Game Band, and The Game Band is not responsible for any Third Party Materials. The Game Band provides access to these Third Party Materials only as a convenience to you, and does not review, approve, monitor, endorse, warrant, or make any representations with respect to Third Party Materials. You acknowledge and agree that The Game Band is not responsible for Third Party Materials, including their accuracy, completeness, timeliness, validity, copyright compliance, legality, decency, quality, or any other aspect thereof. The Game Band does not assume and will not have any liability or responsibility to you or any other person or entity for any Third Party Materials. Third Party Materials and links thereto are provided solely as a convenience to you, and you access and use them entirely at your own risk and subject to such third-parties' terms and conditions. You should make whatever investigation you feel necessary or appropriate before proceeding with any transaction in connection with such Third Party Materials.",
                           ],
                         }),
                         Object(bn.jsxs)("li", {
                           children: [
                             Object(bn.jsx)("b", { children: "Release." }),
-                            " You hereby release and forever discharge The Game Band (and our officers, employees, agents, successors, and assigns) from, and hereby waive and relinquish, each and every past, present and future dispute, claim, controversy, demand, right, obligation, liability, action and cause of action of every kind and nature (including personal injuries, death, and property damage), that has arisen or arises directly or indirectly out of, or that relates directly or indirectly to, the Game (including any interactions with, or act or omission of, other Game users or any Third Party Materials). IF YOU ARE A CALIFORNIA RESIDENT, YOU HEREBY WAIVE CALIFORNIA CIVIL CODE SECTION 1542 IN CONNECTION WITH THE FOREGOING, WHICH STATES: \u201cA GENERAL RELEASE DOES NOT EXTEND TO CLAIMS WHICH THE CREDITOR DOES NOT KNOW OR SUSPECT TO EXIST IN HIS OR HER FAVOR AT THE TIME OF EXECUTING THE RELEASE, WHICH IF KNOWN BY HIM OR HER MUST HAVE MATERIALLY AFFECTED HIS OR HER SETTLEMENT WITH THE DEBTOR.\u201d",
+                            ' You hereby release and forever discharge The Game Band (and our officers, employees, agents, successors, and assigns) from, and hereby waive and relinquish, each and every past, present and future dispute, claim, controversy, demand, right, obligation, liability, action and cause of action of every kind and nature (including personal injuries, death, and property damage), that has arisen or arises directly or indirectly out of, or that relates directly or indirectly to, the Game (including any interactions with, or act or omission of, other Game users or any Third Party Materials). IF YOU ARE A CALIFORNIA RESIDENT, YOU HEREBY WAIVE CALIFORNIA CIVIL CODE SECTION 1542 IN CONNECTION WITH THE FOREGOING, WHICH STATES: "A GENERAL RELEASE DOES NOT EXTEND TO CLAIMS WHICH THE CREDITOR DOES NOT KNOW OR SUSPECT TO EXIST IN HIS OR HER FAVOR AT THE TIME OF EXECUTING THE RELEASE, WHICH IF KNOWN BY HIM OR HER MUST HAVE MATERIALLY AFFECTED HIS OR HER SETTLEMENT WITH THE DEBTOR."',
                           ],
                         }),
                         Object(bn.jsxs)("li", {
                           children: [
                             Object(bn.jsx)("b", { children: "Disclaimers." }),
-                            ' THE GAME IS PROVIDED TO YOU "AS IS" AND WITH ALL FAULTS AND DEFECTS WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED UNDER APPLICABLE LAW, THE GAME BAND, ON ITS OWN BEHALF AND ON BEHALF OF ITS AFFILIATES AND ITS AND THEIR RESPECTIVE LICENSORS AND SERVICE PROVIDERS, EXPRESSLY DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, WITH RESPECT TO THE GAME, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, QUIET ENJOYMENT AND NON-INFRINGEMENT, AND WARRANTIES THAT MAY ARISE OUT OF COURSE OF DEALING, COURSE OF PERFORMANCE, USAGE, OR TRADE PRACTICE. WITHOUT LIMITATION TO THE FOREGOING, THE GAME BAND PROVIDES NO WARRANTY OR UNDERTAKING, AND MAKES NO REPRESENTATION OF ANY KIND THAT THE GAME WILL MEET YOUR REQUIREMENTS, ACHIEVE ANY INTENDED RESULTS, BE COMPATIBLE, OR WORK WITH ANY OTHER SOFTWARE, GAMES, SYSTEMS, OR SERVICES, OPERATE WITHOUT INTERRUPTION, MEET ANY PERFORMANCE OR RELIABILITY STANDARDS, OR BE ERROR-FREE, ACCURATE, RELIABLE, FREE FROM HARMFUL CODE, COMPLETE, LEGAL, SAFE, ABAILABLE ON AN UNTERUPTED BASIS OR THAT ANY ERRORS OR DEFECTS CAN OR WILL BE CORRECTED.',
+                            ' THE GAME IS PROVIDED TO YOU "AS IS" AND WITH ALL FAULTS AND DEFECTS WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED UNDER APPLICABLE LAW, THE GAME BAND, ON ITS OWN BEHALF AND ON BEHALF OF ITS AFFILIATES AND ITS AND THEIR RESPECTIVE LICENSORS AND SERVICE PROVIDERS, EXPRESSLY DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, WITH RESPECT TO THE GAME, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, QUIET ENJOYMENT AND NON-INFRINGEMENT, AND WARRANTIES THAT MAY ARISE OUT OF COURSE OF DEALING, COURSE OF PERFORMANCE, USAGE, OR TRADE PRACTICE. WITHOUT LIMITATION TO THE FOREGOING, THE GAME BAND PROVIDES NO WARRANTY OR UNDERTAKING, AND MAKES NO REPRESENTATION OF ANY KIND THAT THE GAME WILL MEET YOUR REQUIREMENTS, ACHIEVE ANY INTENDED RESULTS, BE COMPATIBLE, OR WORK WITH ANY OTHER SOFTWARE, GAMES, SYSTEMS, OR SERVICES, OPERATE WITHOUT INTERRUPTION, MEET ANY PERFORMANCE OR RELIABILITY STANDARDS, OR BE ERROR-FREE, ACCURATE, RELIABLE, FREE FROM HARMFUL CODE, COMPLETE, LEGAL, SAFE, AVAILABLE ON AN UNTERUPTED BASIS OR THAT ANY ERRORS OR DEFECTS CAN OR WILL BE CORRECTED.',
                             Object(bn.jsx)("div", {
                               className: "spacer",
                               children:
@@ -45267,7 +45267,7 @@
                         Object(bn.jsxs)("li", {
                           children: [
                             Object(bn.jsx)("b", { children: "Term and Termination." }),
-                            " Subject to this Section, these Terms will remain in full force and effect while you use the Game. We may suspend or terminate your rights to use the Game (including your Account) at any time for any reason at our sole discretion, including for any use of the Game in violation of these Terms. Upon termination of your rights under these Terms, your Account and right to access and use the Game will terminate immediately. You understand that any termination of your Account may involve deletion of all information and Virtual Items associated with your Account from our live databases. The Game Band will not have any liability whatsoever to you for any termination of your rights under these Terms, including for termination of your Account or deletion of your information. Even after your rights under these Terms are terminated, the following provisions of these Terms will remain in effect: Sections 1.2, Section 3 and Sections 6 through 15.",
+                            " Subject to this Section, these Terms will remain in full force and effect while you use the Game. We may suspend or terminate your rights to use the Game (including your Account) at any time for any reason at our sole discretion, including for any use of the Game in violation of these Terms. Upon termination of your rights under these Terms, your Account and right to access and use the Game will terminate immediately. You understand that any termination of your account may involve deletion of all information and Virtual Items associated with your Account from our live databases. The Game Band will not have any liability whatsoever to you for any termination of your rights under these Terms, including for termination of your Account or deletion of your information. Even after your rights under these Terms are terminated, the following provisions of these Terms will remain in effect: Sections 1.2, Section 3 and Sections 6 through 15.",
                           ],
                         }),
                         Object(bn.jsxs)("li", {
@@ -45309,17 +45309,17 @@
                                             Object(bn.jsx)("i", {
                                               children: "Notice Requirement and Informal Dispute Resolution.",
                                             }),
-                                            " Before either party may seek arbitration, the party must first send to the other party a written Notice of Dispute (\u201c",
+                                            ' Before either party may seek arbitration, the party must first send to the other party a written Notice of Dispute ("',
                                             Object(bn.jsx)("b", { children: "Notice" }),
-                                            "\u201d) describing the nature and basis of the claim or dispute, and the requested relief. A Notice to The Game Band should be sent to The Game Band attn.: Terms of Service Dispute at the address listed in Section 15.12 (or such other address as may be provided by The Game Band for this purpose. After the Notice is received, you and The Game Band may attempt to resolve the claim or dispute informally. If you and The Game Band do not resolve the claim or dispute within thirty (30) days after the Notice is received, either party may begin an arbitration proceeding. The amount of any settlement offer made by any party may not be disclosed to the arbitrator until after the arbitrator has determined the amount of the award, if any, to which either party is entitled.",
+                                            '") describing the nature and basis of the claim or dispute, and the requested relief. A Notice to The Game Band should be sent to The Game Band attn.: Terms of Service Dispute at the address listed in Section 15.12 (or such other address as may be provided by The Game Band for this purpose. After the Notice is received, you and The Game Band may attempt to resolve the claim or dispute informally. If you and The Game Band do not resolve the claim or dispute within thirty (30) days after the Notice is received, either party may begin an arbitration proceeding. The amount of any settlement offer made by any party may not be disclosed to the arbitrator until after the arbitrator has determined the amount of the award, if any, to which either party is entitled.',
                                           ],
                                         }),
                                         Object(bn.jsxs)("li", {
                                           children: [
                                             Object(bn.jsx)("i", { children: "Arbitration." }),
-                                            " You agree that any dispute, claim or controversy arising hereunder or relating in any way to these Terms and not informally resolved shall be settled by binding arbitration in the Commonwealth of Massachusetts, in accordance with the commercial arbitration rules of Judicial Arbitration and Mediation Services (\u201c",
+                                            ' You agree that any dispute, claim or controversy arising hereunder or relating in any way to these Terms and not informally resolved shall be settled by binding arbitration in the Commonwealth of Massachusetts, in accordance with the commercial arbitration rules of Judicial Arbitration and Mediation Services ("',
                                             Object(bn.jsx)("b", { children: "JAMS" }),
-                                            "\u201d). The arbitrator shall issue a written decision specifying the basis for the award made. The party filing a claim or counterclaim in the arbitration proceeding shall pay the deposit(s) determined by JAMS with respect to such claim or counterclaim. All other costs associated with the arbitration and imposed by JAMS shall be paid as determined by the arbitrator(s) and, in absence of such determination, equally by each party to the arbitration.  In addition, unless the arbitrator awards payment of reasonable attorney and other fees to a party, each party to the arbitration shall be responsible for its own attorneys' fees and other professional fees incurred in connection with the arbitration. Determinations of the arbitrator will be final and binding upon the parties to the arbitration, and judgment upon the award rendered by the arbitrator may be entered in any court having jurisdiction, or application may be made to such court for a judicial acceptance of the award and an order of enforcement, as the case may be. The arbitrator shall apply the substantive law of the Commonwealth of Massachusetts, without giving effect to its conflict of laws rules.",
+                                            "\"). The arbitrator shall issue a written decision specifying the basis for the award made. The party filing a claim or counterclaim in the arbitration proceeding shall pay the deposit(s) determined by JAMS with respect to such claim or counterclaim. All other costs associated with the arbitration and imposed by JAMS shall be paid as determined by the arbitrator(s) and, in absence of such determination, equally by each party to the arbitration.  In addition, unless the arbitrator awards payment of reasonable attorney and other fees to a party, each party to the arbitration shall be responsible for its own attorneys' fees and other professional fees incurred in connection with the arbitration. Determinations of the arbitrator will be final and binding upon the parties to the arbitration, and judgment upon the award rendered by the arbitrator may be entered in any court having jurisdiction, or application may be made to such court for a judicial acceptance of the award and an order of enforcement, as the case may be. The arbitrator shall apply the substantive law of the Commonwealth of Massachusetts, without giving effect to its conflict of laws rules.",
                                           ],
                                         }),
                                         Object(bn.jsxs)("li", {
@@ -45379,7 +45379,7 @@
                                 Object(bn.jsxs)("li", {
                                   children: [
                                     Object(bn.jsx)("b", { children: "Export." }),
-                                    " The Game may be subject to U.S. export control laws and may be subject to export or import regulations in other countries. You agree not to export, reexport, or transfer, directly or indirectly, any U.S. technical data acquired from The Game Band, or any products utilizing such data, in violation of the United States export laws or regulations.",
+                                    " The Game may be subject to U.S. export control laws and may be subject to export or import regulations in other countries. You agree not to export, re-export, or transfer, directly or indirectly, any U.S. technical data acquired from The Game Band, or any products utilizing such data, in violation of the United States export laws or regulations.",
                                   ],
                                 }),
                                 Object(bn.jsxs)("li", {
@@ -45391,7 +45391,7 @@
                                 Object(bn.jsxs)("li", {
                                   children: [
                                     Object(bn.jsx)("b", { children: "Electronic Communications." }),
-                                    " The communications between you and The Game Band use electronic means, whether you use the Game or send us emails, or whether The Game Band posts notices in the Game or communicates with you via email. For contractual purposes, you (a) consent to receive communications from The Game Band in an electronic form; and (b) agree that all terms and conditions, agreements, notices, disclosures, and other communications that The Game Band provides to you electronically satisfy any legal requirement that such communications would satisfy if it were be in a hardcopy writing. The foregoing does not affect your non-waivable rights.",
+                                    " The communications between you and The Game Band use electronic means, whether you use the Game or send us emails, or whether The Game Band posts notices in the Game or communicates with you via email. For contractual purposes, you (a) consent to receive communications from The Game Band in an electronic form; and (b) agree that all terms and conditions, agreements, notices, disclosures, and other communications that The Game Band provides to you electronically satisfy any legal requirement that such communications would satisfy if it were to be in a hardcopy writing. The foregoing does not affect your non-waivable rights.",
                                   ],
                                 }),
                                 Object(bn.jsxs)("li", {
@@ -45421,15 +45421,15 @@
                                 Object(bn.jsxs)("li", {
                                   children: [
                                     Object(bn.jsx)("b", { children: "Entire Terms." }),
-                                    " These Terms constitute the entire agreement between you and us regarding the use of the Game. Our failure to exercise or enforce any right or provision of these Terms shall not operate as a waiver of such right or provision. The section titles in these Terms are for convenience only and have no legal or contractual effect. The word \u201cincluding\u201d means \u201cincluding without limitation\u201d. If any provision of these Terms is, for any reason, held to be invalid or unenforceable, the other provisions of these Terms will be unimpaired, and the invalid or unenforceable provision will be deemed modified so that it is valid and enforceable to the maximum extent permitted by law. Your relationship to The Game Band is that of an independent contractor, and neither party is an agent or partner of the other. These Terms, and your rights and obligations herein, may not be assigned, subcontracted, delegated, or otherwise transferred by you without The Game Band\u2019 prior written consent, and any attempted assignment, subcontract, delegation, or transfer in violation of the foregoing will be null and void. The Game Band may freely assign these Terms. The terms and conditions set forth in these Terms shall be binding upon assignees.",
+                                    ' These Terms constitute the entire agreement between you and us regarding the use of the Game. Our failure to exercise or enforce any right or provision of these Terms shall not operate as a waiver of such right or provision. The section titles in these Terms are for convenience only and have no legal or contractual effect. The word "including" means "including without limitation". If any provision of these Terms is, for any reason, held to be invalid or unenforceable, the other provisions of these Terms will be unimpaired, and the invalid or unenforceable provision will be deemed modified so that it is valid and enforceable to the maximum extent permitted by law. Your relationship to The Game Band is that of an independent contractor, and neither party is an agent or partner of the other. These Terms, and your rights and obligations herein, may not be assigned, subcontracted, delegated, or otherwise transferred by you without The Game Band\'s prior written consent, and any attempted assignment, subcontract, delegation, or transfer in violation of the foregoing will be null and void. The Game Band may freely assign these Terms. The terms and conditions set forth in these Terms shall be binding upon assignees.',
                                   ],
                                 }),
                                 Object(bn.jsxs)("li", {
                                   children: [
                                     Object(bn.jsx)("b", { children: "Copyright/Trademark Information." }),
-                                    " Copyright \xa9 2020 The Game Band. All rights reserved. All trademarks, logos and service marks (\u201c",
+                                    ' Copyright \xa9 2020 The Game Band. All rights reserved. All trademarks, logos and service marks ("',
                                     Object(bn.jsx)("b", { children: "Marks" }),
-                                    "\u201d) displayed in the Game are our property or the property of other third parties. You are not permitted to use these Marks without our prior written consent or the consent of such third party which may own the Marks.",
+                                    '") displayed in the Game are our property or the property of other third-parties. You are not permitted to use these Marks without our prior written consent or the consent of such third-party which may own the Marks.',
                                   ],
                                 }),
                                 Object(bn.jsx)("li", {
