@@ -27668,7 +27668,7 @@
                 children: [
                   Object(bn.jsx)(TA, { style: { width: "24px", height: "24px", marginRight: "5px" } }),
                   "The next Broadcast begins in",
-                  Object(bn.jsx)(mO, { dateString: "2022-01-17T16:00:00.000Z", truncated: !0 }),
+                  Object(bn.jsx)(mO, { dateString: "2022-01-24T16:00:00.000Z", truncated: !0 }),
                 ],
               }),
               Object(bn.jsxs)("div", {
@@ -27704,7 +27704,7 @@
               children: [
                 Object(bn.jsx)(TA, { style: { width: "24px", height: "24px", marginRight: "5px" } }),
                 "The next Broadcast begins in",
-                Object(bn.jsx)(mO, { dateString: "2022-01-17T16:00:00.000Z", truncated: !0 }),
+                Object(bn.jsx)(mO, { dateString: "2022-01-24T16:00:00.000Z", truncated: !0 }),
               ],
             }),
             Object(bn.jsxs)("div", {
